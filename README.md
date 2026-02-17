@@ -3,9 +3,9 @@
 
 ## My Website
 
-- Homepage: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/`
-- Pac-Man page: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/pacman.html`
-- arXiv page: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/arxiv.html`
+- Homepage: `https://johnsonw625.github.io/index.html`
+- Pac-Man page: `https://johnsonw625.github.io/pacman.html`
+- arXiv page: `https://johnsonw625.github.io/arxiv.html`
 
 ## Progress
 
@@ -16,26 +16,53 @@
   - Heart projectiles while powered-up
 - Problem 3 (arXiv auto-updating page): Completed
 
-## Problem 3 Report (Copilot CLI)
+## AI Copilot Report
 
-### What I built
+### Problem 1: GitHub Website for Coding Blog
 
-- A dedicated arXiv page at `arxiv.html` that loads papers from `data/arxiv.json`
-- A Python fetch script at `scripts/fetch_arxiv.py` that queries the arXiv API and writes structured JSON
-- A nightly GitHub Actions workflow at `.github/workflows/update-arxiv.yml` that refreshes the data at midnight UTC
-- Supporting workflow notes in `.github/README.md`
+**How I used Copilot CLI**
+- I asked Copilot to scaffold a clean static homepage with reusable styles and navigation links for all three problems.
+- I then iterated on the prompt to make the design more modern and expandable.
 
-### Copilot CLI prompts I used
+**Prompts I gave**
+1. "Create a stylish but simple `index.html` and `styles.css` for a coding blog homepage, with links to Pac-Man and arXiv pages."
+2. "Keep the page responsive and easy to expand for future assignments."
+3. "Adjust the visual style to look modern but still lightweight for GitHub Pages."
 
+**What worked well / required iteration**
+- Worked well: generating a complete starter layout quickly.
+- Iteration needed: polishing typography/colors and making navigation structure future-proof.
+
+### Problem 2: Valentine-themed Pac-Man
+
+**How I used Copilot CLI**
+- I decomposed the game into mechanics first (maze, movement, ghosts, lives), then added Valentine's features (rose + hearts).
+- I asked Copilot for a complete playable single-page implementation and then refined behavior.
+
+**Prompts I gave**
+1. "Build a full Pac-Man game in `pacman.html` with maze, pellets, ghost chasing logic, score, and lives."
+2. "Add a rose power-up that appears randomly; when eaten, Pac-Man enters a temporary powered-up mode."
+3. "During powered-up mode, continuously shoot heart projectiles in the facing direction; hearts should eliminate ghosts."
+
+**What worked well / required iteration**
+- Worked well: core gameplay loop and rendering in one file.
+- Iteration needed: balancing timing/speeds and checking edge cases like collision/reset/game-over flow.
+
+### Problem 3: Auto-updating arXiv Feed
+
+**How I used Copilot CLI**
+- I used Copilot to plan data flow first: fetch arXiv data -> store JSON -> render in webpage -> schedule automation.
+- I then implemented each component separately and connected them.
+
+**Prompts I gave**
 1. "Create a Python script using only the standard library to fetch latest arXiv papers by keyword and export title/authors/abstract/pdf link to JSON."
 2. "Build a static arXiv feed webpage that fetches local JSON and renders cards with loading, empty, and error states."
 3. "Create a GitHub Actions workflow to run every midnight, update the JSON file, and commit only when data changed."
 
-### What worked well / iterations
-
-- Keeping the pipeline dependency-free (stdlib Python) made CI setup simple and reliable.
-- Rendering from a generated JSON file was easier for GitHub Pages than fetching arXiv directly from browser JavaScript.
-- Iteration needed: add a manual workflow trigger (`workflow_dispatch`) so I can test updates immediately without waiting for nightly schedule.
+**What worked well / required iteration**
+- Worked well: dependency-free Python script made CI reliable.
+- Worked well: static JSON rendering fits GitHub Pages well.
+- Iteration needed: add `workflow_dispatch` for manual testing and clarify that cron runs at midnight UTC.
 
 The due date is Feb 17 at midnight. If you are using the late days, please note in the head of README.md that “I used XX late days this time, and I have XX days remaining”.
 
