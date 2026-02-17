@@ -1,0 +1,215 @@
+{
+  "generated_at_utc": "2026-02-17T22:19:18Z",
+  "query": "(all:\"large language model\" OR all:\"generative ai\")",
+  "max_results": 12,
+  "count": 12,
+  "papers": [
+    {
+      "id": "http://arxiv.org/abs/2602.15029v1",
+      "title": "Symmetry in language statistics shapes the geometry of model representations",
+      "authors": [
+        "Dhruva Karkada",
+        "Daniel J. Korchinski",
+        "Andres Nava",
+        "Matthieu Wyart",
+        "Yasaman Bahri"
+      ],
+      "summary": "Although learned representations underlie neural networks' success, their fundamental properties remain poorly understood. A striking example is the emergence of simple geometric structures in LLM representations: for example, calendar months organize into a circle, years form a smooth one-dimensional manifold, and cities' latitudes and longitudes can be decoded by a linear probe. We show that the statistics of language exhibit a translation symmetry -- e.g., the co-occurrence probability of two months depends only on the time interval between them -- and we prove that the latter governs the aforementioned geometric structures in high-dimensional word embedding models. Moreover, we find that these structures persist even when the co-occurrence statistics are strongly perturbed (for example, by removing all sentences in which two months appear together) and at moderate embedding dimension. We show that this robustness naturally emerges if the co-occurrence statistics are collectively controlled by an underlying continuous latent variable. We empirically validate this theoretical framework in word embedding models, text embedding models, and large language models.",
+      "published": "2026-02-16T18:59:55Z",
+      "updated": "2026-02-16T18:59:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15029v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.15028v1",
+      "title": "Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy and Personalization",
+      "authors": [
+        "Shangding Gu"
+      ],
+      "summary": "Large language models (LLMs) are increasingly deployed in privacy-critical and personalization-oriented scenarios, yet the role of context length in shaping privacy leakage and personalization effectiveness remains largely unexplored. We introduce a large-scale benchmark, PAPerBench, to systematically study how increasing context length influences both personalization quality and privacy protection in LLMs. The benchmark comprises approximately 29,000 instances with context lengths ranging from 1K to 256K tokens, yielding a total of 377K evaluation questions. It jointly evaluates personalization performance and privacy risks across diverse scenarios, enabling controlled analysis of long-context model behavior. Extensive evaluations across state-of-the-art LLMs reveal consistent performance degradation in both personalization and privacy as context length increases. We further provide a theoretical analysis of attention dilution under context scaling, explaining this behavior as an inherent limitation of soft attention in fixed-capacity Transformers. The empirical and theoretical findings together suggest a general scaling gap in current models -- long context, less focus. We release the benchmark to support reproducible evaluation and future research on scalable privacy and personalization. Code and data are available at https://github.com/SafeRL-Lab/PAPerBench",
+      "published": "2026-02-16T18:59:42Z",
+      "updated": "2026-02-16T18:59:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15028v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.15013v1",
+      "title": "Text Style Transfer with Parameter-efficient LLM Finetuning and Round-trip Translation",
+      "authors": [
+        "Ruoxi Liu",
+        "Philipp Koehn"
+      ],
+      "summary": "This paper proposes a novel method for Text Style Transfer (TST) based on parameter-efficient fine-tuning of Large Language Models (LLMs). Addressing the scarcity of parallel corpora that map between styles, the study employs roundtrip translation to synthesize such parallel datasets from monolingual corpora. This approach creates 'neutralized' text devoid of stylistic attributes, essentially creating a shared input style at training-time and inference-time. Experimental results demonstrate consistent superiority of this method over zero-shot prompting and fewshot ICL techniques measured by BLEU scores and style accuracy scores across four investigated domains. Furthermore, the integration of retrieval-augmented generation (RAG) for terminology and name knowledge enhances robustness and stylistic consistency.",
+      "published": "2026-02-16T18:52:43Z",
+      "updated": "2026-02-16T18:52:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15013v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.15005v1",
+      "title": "Learning User Interests via Reasoning and Distillation for Cross-Domain News Recommendation",
+      "authors": [
+        "Mengdan Zhu",
+        "Yufan Zhao",
+        "Tao Di",
+        "Yulan Yan",
+        "Liang Zhao"
+      ],
+      "summary": "News recommendation plays a critical role in online news platforms by helping users discover relevant content. Cross-domain news recommendation further requires inferring user's underlying information needs from heterogeneous signals that often extend beyond direct news consumption. A key challenge lies in moving beyond surface-level behaviors to capture deeper, reusable user interests while maintaining scalability in large-scale production systems. In this paper, we present a reinforcement learning framework that trains large language models to generate high-quality lists of interest-driven news search queries from cross-domain user signals. We formulate query-list generation as a policy optimization problem and employ GRPO with multiple reward signals. We systematically study two compute dimensions: inference-time sampling and model capacity, and empirically observe consistent improvements with increased compute that exhibit scaling-like behavior. Finally, we perform on-policy distillation to transfer the learned policy from a large, compute-intensive teacher to a compact student model suitable for scalable deployment. Extensive offline experiments, ablation studies and large-scale online A/B tests in a production news recommendation system demonstrate consistent gains in both interest modeling quality and downstream recommendation performance.",
+      "published": "2026-02-16T18:45:40Z",
+      "updated": "2026-02-16T18:45:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15005v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.01024v2",
+      "title": "Low-Latency Federated Fine-Tuning for Large Language Models Over Wireless Networks",
+      "authors": [
+        "Zhiwen Pang",
+        "Kang Wei",
+        "Long Shi",
+        "Zhe Wang",
+        "Jun Li",
+        "Feng Shu"
+      ],
+      "summary": "Recently, federated large language models (LLMs) have drawn significant attention thanks to coupled capabilities of LLMs and federated learning (FL) that address privacy concerns in collaborative fine-tuning. However, due to large-scale parameters of LLMs, existing federated LLM fine-tuning frameworks incur significant challenges in resource-constrained clients characterized by heterogeneous computing capabilities and random wireless channels. To address this issue, we propose a joint client-specific pruning and bandwidth allocation (JCPBA) framework for federated LLMs to improve the fine-tuning efficiency over the wireless networks. Specifically, we formulate a fine-tuning latency minimization problem by jointly optimizing pruning rates and bandwidth allocations. Furthermore, we solve this optimization problem using a block coordinate descent method. Extensive experiments on the datasets of Yahoo Answers and GSM8K demonstrate that the proposed framework significantly reduces wall-clock fine-tuning time compared with state-of-the-art baselines and gains equal or lower test loss at the cost of lower computation and communication overhead.",
+      "published": "2026-02-01T05:15:50Z",
+      "updated": "2026-02-16T18:21:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.01024v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.03837v2",
+      "title": "Accelerating Scientific Research with Gemini: Case Studies and Common Techniques",
+      "authors": [
+        "David P. Woodruff",
+        "Vincent Cohen-Addad",
+        "Lalit Jain",
+        "Jieming Mao",
+        "Song Zuo",
+        "MohammadHossein Bateni",
+        "Simina Branzei",
+        "Michael P. Brenner",
+        "Lin Chen",
+        "Ying Feng",
+        "Lance Fortnow",
+        "Gang Fu",
+        "Ziyi Guan",
+        "Zahra Hadizadeh",
+        "Mohammad T. Hajiaghayi",
+        "Mahdi JafariRaviz",
+        "Adel Javanmard",
+        "Karthik C. S.",
+        "Ken-ichi Kawarabayashi",
+        "Ravi Kumar",
+        "Silvio Lattanzi",
+        "Euiwoong Lee",
+        "Yi Li",
+        "Ioannis Panageas",
+        "Dimitris Paparas",
+        "Benjamin Przybocki",
+        "Bernardo Subercaseaux",
+        "Ola Svensson",
+        "Shayan Taherijam",
+        "Xuan Wu",
+        "Eylon Yogev",
+        "Morteza Zadimoghaddam",
+        "Samson Zhou",
+        "Yossi Matias",
+        "James Manyika",
+        "Vahab Mirrokni"
+      ],
+      "summary": "Recent advances in large language models (LLMs) have opened new avenues for accelerating scientific research. While models are increasingly capable of assisting with routine tasks, their ability to contribute to novel, expert-level mathematical discovery is less understood. We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variants), to solve open problems, refute conjectures, and generate new proofs across diverse areas in theoretical computer science, as well as other areas such as economics, optimization, and physics. Based on these experiences, we extract common techniques for effective human-AI collaboration in theoretical research, such as iterative refinement, problem decomposition, and cross-disciplinary knowledge transfer. While the majority of our results stem from this interactive, conversational methodology, we also highlight specific instances that push beyond standard chat interfaces. These include deploying the model as a rigorous adversarial reviewer to detect subtle flaws in existing proofs, and embedding it within a \"neuro-symbolic\" loop that autonomously writes and executes code to verify complex derivations. Together, these examples highlight the potential of AI not just as a tool for automation, but as a versatile, genuine partner in the creative process of scientific discovery.",
+      "published": "2026-02-03T18:56:17Z",
+      "updated": "2026-02-16T18:02:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.03837v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2503.08796v2",
+      "title": "Robust Multi-Objective Controlled Decoding of Large Language Models",
+      "authors": [
+        "Seongho Son",
+        "William Bankes",
+        "Sangwoong Yoon",
+        "Shyam Sundhar Ramesh",
+        "Xiaohang Tang",
+        "Ilija Bogunovic"
+      ],
+      "summary": "We introduce Robust Multi-Objective Decoding (RMOD), a novel inference-time algorithm that robustly aligns Large Language Models (LLMs) to multiple human objectives (e.g., instruction-following, helpfulness, safety) by maximizing the worst-case rewards. RMOD formulates the robust decoding problem as a maximin two-player game between adversarially computed reward weights and the sampling policy, solvable through a Nash equilibrium. We demonstrate that this game reduces to a convex optimization problem to identify the worst-case reward weights, with the optimal sampling policy analytically derived. For practical applications, we propose an efficient algorithm of RMOD tailored for contemporary LLMs, introducing minimal computational overhead compared to standard non-robust Controlled Decoding methods. Experimental results across a range of popular alignment datasets with up to 10 objectives show the effectiveness of RMOD and its distilled version, consistently outperforming baselines in worst-case rewards and win rates.",
+      "published": "2025-03-11T18:15:26Z",
+      "updated": "2026-02-16T17:58:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.08796v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.14970v1",
+      "title": "Counterfactual Fairness Evaluation of LLM-Based Contact Center Agent Quality Assurance System",
+      "authors": [
+        "Kawin Mayilvaghanan",
+        "Siddhant Gupta",
+        "Ayush Kumar"
+      ],
+      "summary": "Large Language Models (LLMs) are increasingly deployed in contact-center Quality Assurance (QA) to automate agent performance evaluation and coaching feedback. While LLMs offer unprecedented scalability and speed, their reliance on web-scale training data raises concerns regarding demographic and behavioral biases that may distort workforce assessment. We present a counterfactual fairness evaluation of LLM-based QA systems across 13 dimensions spanning three categories: Identity, Context, and Behavioral Style. Fairness is quantified using the Counterfactual Flip Rate (CFR), the frequency of binary judgment reversals, and the Mean Absolute Score Difference (MASD), the average shift in coaching or confidence scores across counterfactual pairs. Evaluating 18 LLMs on 3,000 real-world contact center transcripts, we find systematic disparities, with CFR ranging from 5.4% to 13.0% and consistent MASD shifts across confidence, positive, and improvement scores. Larger, more strongly aligned models show lower unfairness, though fairness does not track accuracy. Contextual priming of historical performance induces the most severe degradations (CFR up to 16.4%), while implicit linguistic identity cues remain a persistent bias source. Finally, we analyze the efficacy of fairness-aware prompting, finding that explicit instructions yield only modest improvements in evaluative consistency. Our findings underscore the need for standardized fairness auditing pipelines prior to deploying LLMs in high-stakes workforce evaluation.",
+      "published": "2026-02-16T17:56:18Z",
+      "updated": "2026-02-16T17:56:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.14970v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2402.15751v2",
+      "title": "Sparse MeZO: Less Parameters for Better Performance in Zeroth-Order LLM Fine-Tuning",
+      "authors": [
+        "Yong Liu",
+        "Zirui Zhu",
+        "Chaoyu Gong",
+        "Minhao Cheng",
+        "Cho-Jui Hsieh",
+        "Yang You"
+      ],
+      "summary": "While fine-tuning large language models (LLMs) for specific tasks often yields impressive results, it comes at the cost of memory inefficiency due to back-propagation in gradient-based training. Memory-efficient Zeroth-order (MeZO) optimizers, recently proposed to address this issue, only require forward passes during training, making them more memory-friendly. However, compared with exact gradients, ZO-based gradients usually exhibit an estimation error, which can significantly hurt the optimization process, leading to slower convergence and suboptimal solutions. In addition, we find that the estimation error will hurt more when adding to large weights instead of small weights. Based on this observation, this paper introduces Sparse MeZO, a novel memory-efficient zeroth-order optimization approach that applies ZO only to a carefully chosen subset of parameters. We propose a simple yet effective parameter selection scheme that yields significant performance gains with Sparse-MeZO. Additionally, we develop a memory-optimized implementation for sparse masking, ensuring the algorithm requires only inference-level memory consumption, allowing Sparse-MeZO to fine-tune LLaMA-30b on a single A100 GPU. Experimental results illustrate that Sparse-MeZO consistently improves both performance and convergence speed over MeZO without any overhead. For example, it achieves a 9\\% absolute accuracy improvement and 3.5x speedup over MeZO on the RTE task. Code is available at https://github.com/NUS-HPC-AI-Lab/SparseMeZO.",
+      "published": "2024-02-24T07:22:04Z",
+      "updated": "2026-02-16T17:54:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2402.15751v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2601.02744v3",
+      "title": "SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation",
+      "authors": [
+        "Hanqi Jiang",
+        "Junhao Chen",
+        "Yi Pan",
+        "Ling Chen",
+        "Weihang You",
+        "Yifan Zhou",
+        "Ruidong Zhang",
+        "Andrea Sikora",
+        "Lin Zhao",
+        "Yohannes Abate",
+        "Tianming Liu"
+      ],
+      "summary": "While Large Language Models (LLMs) excel at generalized reasoning, standard retrieval-augmented approaches fail to address the disconnected nature of long-term agentic memory. To bridge this gap, we introduce Synapse (Synergistic Associative Processing Semantic Encoding), a unified memory architecture that transcends static vector similarity. Drawing from cognitive science, Synapse models memory as a dynamic graph where relevance emerges from spreading activation rather than pre-computed links. By integrating lateral inhibition and temporal decay, the system dynamically highlights relevant sub-graphs while filtering interference. We implement a Triple Hybrid Retrieval strategy that fuses geometric embeddings with activation-based graph traversal. Comprehensive evaluations on the LoCoMo benchmark show that Synapse significantly outperforms state-of-the-art methods in complex temporal and multi-hop reasoning tasks, offering a robust solution to the \"Contextual Tunneling\" problem. Our code and data will be made publicly available upon acceptance.",
+      "published": "2026-01-06T06:19:58Z",
+      "updated": "2026-02-16T17:31:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.02744v3"
+    },
+    {
+      "id": "http://arxiv.org/abs/2506.01784v6",
+      "title": "iQUEST: An Iterative Question-Guided Framework for Knowledge Base Question Answering",
+      "authors": [
+        "Shuai Wang",
+        "Yinan Yu"
+      ],
+      "summary": "Large Language Models (LLMs) excel in many natural language processing tasks but often exhibit factual inconsistencies in knowledge-intensive settings. Integrating external knowledge resources, particularly knowledge graphs (KGs), provides a transparent and updatable foundation for more reliable reasoning. Knowledge Base Question Answering (KBQA), which queries and reasons over KGs, is central to this effort, especially for complex, multi-hop queries. However, multi-hop reasoning poses two key challenges: (1)~maintaining coherent reasoning paths, and (2)~avoiding prematurely discarding critical multi-hop connections. To tackle these challenges, we introduce iQUEST, a question-guided KBQA framework that iteratively decomposes complex queries into simpler sub-questions, ensuring a structured and focused reasoning trajectory. Additionally, we integrate a Graph Neural Network (GNN) to look ahead and incorporate 2-hop neighbor information at each reasoning step. This dual approach strengthens the reasoning process, enabling the model to explore viable paths more effectively. Detailed experiments demonstrate the consistent improvement delivered by iQUEST across four benchmark datasets and four LLMs. The code is publicly available at: https://github.com/Wangshuaiia/iQUEST.",
+      "published": "2025-06-02T15:30:02Z",
+      "updated": "2026-02-16T17:22:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.01784v6"
+    },
+    {
+      "id": "http://arxiv.org/abs/2602.14926v1",
+      "title": "MAC-AMP: A Closed-Loop Multi-Agent Collaboration System for Multi-Objective Antimicrobial Peptide Design",
+      "authors": [
+        "Gen Zhou",
+        "Sugitha Janarthanan",
+        "Lianghong Chen",
+        "Pingzhao Hu"
+      ],
+      "summary": "To address the global health threat of antimicrobial resistance, antimicrobial peptides (AMP) are being explored for their potent and promising ability to fight resistant pathogens. While artificial intelligence (AI) is being employed to advance AMP discovery and design, most AMP design models struggle to balance key goals like activity, toxicity, and novelty, using rigid or unclear scoring methods that make results hard to interpret and optimize. As the capabilities of Large Language Models (LLM) advance and evolve swiftly, we turn to AI multi-agent collaboration based on such models (multi-agent LLMs), which show rapidly rising potential in complex scientific design scenarios. Based on this, we introduce MAC-AMP, a closed-loop multi-agent collaboration (MAC) system for multi-objective AMP design. The system implements a fully autonomous simulated peer review-adaptive reinforcement learning framework that requires only a task description and example dataset to design novel AMPs. The novelty of our work lies in introducing a closed-loop multi-agent system for AMP design, with cross-domain transferability, that supports multi-objective optimization while remaining explainable rather than a 'black box'. Experiments show that MAC-AMP outperforms other AMP generative models by effectively optimizing AMP generation for multiple key molecular properties, demonstrating exceptional results in antibacterial activity, AMP likeliness, toxicity compliance, and structural reliability.",
+      "published": "2026-02-16T17:01:47Z",
+      "updated": "2026-02-16T17:01:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.14926v1"
+    }
+  ]
+}

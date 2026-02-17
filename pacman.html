@@ -1,38 +1,561 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valentine Pac-Man | Johnson's Coding Blog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="./index.html">JohnsonW625</a>
-        <nav aria-label="Main navigation">
-          <ul class="nav-list">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./pacman.html" class="active">Pac-Man Game</a></li>
-            <li><a href="./arxiv.html">arXiv Feed</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Pac-Man | Johnson's Coding Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .game-wrap{display:flex;flex-direction:column;align-items:center;padding:1.5rem 0 3rem}
+    .game-wrap h1{margin-bottom:.4rem}
+    .hud{display:flex;gap:2rem;margin-bottom:.8rem;font-size:1.05rem;color:var(--muted)}
+    .hud b{color:var(--text)}
+    #pw{color:#FF69B4;font-weight:700}
+    canvas{border:2px solid var(--accent);border-radius:8px;background:#000}
+    #startBtn{margin-top:1rem;padding:.65rem 1.6rem;background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff;border:none;border-radius:999px;font:600 1rem Inter,sans-serif;cursor:pointer;transition:transform .15s}
+    #startBtn:hover{transform:translateY(-2px)}
+    .hint{color:var(--muted);font-size:.85rem;margin-top:.6rem}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html">JohnsonW625</a>
+      <nav><ul class="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pacman.html" class="active">Pac-Man</a></li>
+        <li><a href="./arxiv.html">arXiv</a></li>
+      </ul></nav>
+    </div>
+  </header>
 
-    <main class="container section">
-      <h1>Valentine Pac-Man (Coming Soon)</h1>
-      <p class="hero-copy">
-        This page is prepared for Problem 2. The game implementation will be
-        added here.
-      </p>
-      <p><a class="button button-primary" href="./index.html">Back Home</a></p>
-    </main>
-  </body>
+  <main class="container">
+    <div class="game-wrap">
+      <h1>Valentine Pac-Man 💘</h1>
+      <div class="hud">
+        <span>Score: <b id="sc">0</b></span>
+        <span>Lives: <b id="lv">3</b></span>
+        <span id="pw"></span>
+      </div>
+      <canvas id="gc"></canvas>
+      <button id="startBtn">Start Game</button>
+      <p class="hint">Arrow keys to move &bull; Eat 🌹 to shoot 💗 at ghosts!</p>
+    </div>
+  </main>
+
+<script>
+/* ============================================================
+   Valentine Pac-Man – full implementation
+   Features: maze+dots, 3 ghosts w/ AI, rose power-up, heart
+   projectiles, lives, score, win/lose conditions.
+   ============================================================ */
+
+const canvas = document.getElementById('gc');
+const ctx = canvas.getContext('2d');
+
+// --- Constants ---
+const T = 24;          // tile size in px
+const COLS = 19;
+const ROWS = 21;
+canvas.width = COLS * T;
+canvas.height = ROWS * T;
+
+const PAC_SPEED   = 3; // px/frame  (24/3 = 8 frames per tile)
+const GHOST_SPEED = 3; // px/frame
+const HEART_SPEED = 6; // px/frame  (fast projectiles)
+
+const POWER_DUR   = 300; // 5 s at 60 fps
+const HEART_INT   = 18;  // fire every ~300 ms
+const GHOST_RESPAWN = 180; // 3 s dead time
+
+// --- Maze template (1=wall, 0=dot path, 2=empty path) ---
+const MAZE_TPL = [
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1],
+  [1,0,1,1,0,1,1,1,0,1,0,1,1,1,0,1,1,0,1],
+  [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+  [1,0,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,0,1],
+  [1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,1],
+  [1,1,1,1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,1],
+  [1,1,1,1,0,1,0,0,0,0,0,0,0,1,0,1,1,1,1],
+  [1,1,1,1,0,1,0,1,1,0,1,1,0,1,0,1,1,1,1],
+  [1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1],
+  [1,1,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,1],
+  [1,1,1,1,0,1,0,0,0,0,0,0,0,1,0,1,1,1,1],
+  [1,1,1,1,0,1,0,1,1,1,1,1,0,1,0,1,1,1,1],
+  [1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1],
+  [1,0,1,1,0,1,1,1,0,1,0,1,1,1,0,1,1,0,1],
+  [1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1],
+  [1,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,1],
+  [1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,1],
+  [1,0,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1],
+  [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+];
+
+// Ghost configs: start position, color, chase probability
+const GHOST_CFG = [
+  { col:1,  row:1,  color:'#FF0000', chase:0.75 }, // Red – aggressive
+  { col:17, row:1,  color:'#FFB8FF', chase:0.50 }, // Pink – moderate
+  { col:9,  row:7,  color:'#00FFFF', chase:0.30 }, // Cyan – mostly random
+];
+
+const PAC_START_COL = 9;
+const PAC_START_ROW = 15;
+
+// --- State ---
+let maze, pac, ghosts, hearts, rose;
+let score, lives, dotsLeft;
+let powered, powerTimer, heartTimer, roseTimer;
+let lastDir, frame, state, deathTimer;
+
+// --- Helpers ---
+function walkable(c, r) {
+  return c >= 0 && c < COLS && r >= 0 && r < ROWS && maze[r][c] !== 1;
+}
+
+function hud() {
+  document.getElementById('sc').textContent = score;
+  document.getElementById('lv').textContent = lives;
+  document.getElementById('pw').textContent = powered ? '🌹 POWERED UP!' : '';
+}
+
+// --- Initialization ---
+function init() {
+  maze = MAZE_TPL.map(r => [...r]);
+  // Mark ghost-house interior as empty (no dots) so win is reachable without entering
+  [[8,9],[9,9],[10,9],[9,8],[9,10]].forEach(([c,r]) => {
+    if (maze[r] && maze[r][c] === 0) maze[r][c] = 2;
+  });
+
+  pac = { x: PAC_START_COL*T, y: PAC_START_ROW*T, dx:0, dy:0, ndx:0, ndy:0 };
+
+  ghosts = GHOST_CFG.map(g => ({
+    x: g.col*T, y: g.row*T,
+    sx: g.col*T, sy: g.row*T,
+    dx: 0, dy: 0,
+    color: g.color, chase: g.chase,
+    dead: false, deadTimer: 0,
+  }));
+
+  hearts = [];
+  rose = null;
+  score = 0;
+  lives = 3;
+  powered = false;
+  powerTimer = 0;
+  heartTimer = 0;
+  roseTimer = 360 + Math.floor(Math.random() * 300);
+  lastDir = { dx: 0, dy: -1 };
+  frame = 0;
+  deathTimer = 0;
+  state = 'idle';
+
+  dotsLeft = 0;
+  for (let r = 0; r < ROWS; r++)
+    for (let c = 0; c < COLS; c++)
+      if (maze[r][c] === 0) dotsLeft++;
+
+  hud();
+}
+
+function resetPositions() {
+  pac.x = PAC_START_COL*T; pac.y = PAC_START_ROW*T;
+  pac.dx = 0; pac.dy = 0; pac.ndx = 0; pac.ndy = 0;
+  lastDir = { dx: 0, dy: -1 };
+  ghosts.forEach((g, i) => {
+    g.x = g.sx; g.y = g.sy;
+    g.dx = 0; g.dy = 0;
+    g.dead = false; g.deadTimer = 0;
+  });
+  hearts = [];
+  powered = false; powerTimer = 0; heartTimer = 0;
+}
+
+// --- Input ---
+document.addEventListener('keydown', function(e) {
+  if (state !== 'play') return;
+  switch (e.key) {
+    case 'ArrowUp':    pac.ndx =  0; pac.ndy = -1; break;
+    case 'ArrowDown':  pac.ndx =  0; pac.ndy =  1; break;
+    case 'ArrowLeft':  pac.ndx = -1; pac.ndy =  0; break;
+    case 'ArrowRight': pac.ndx =  1; pac.ndy =  0; break;
+    default: return;
+  }
+  e.preventDefault();
+});
+
+// --- Update ---
+function update() {
+  if (state === 'dead') {
+    deathTimer--;
+    if (deathTimer <= 0) {
+      if (lives <= 0) { state = 'over'; }
+      else { resetPositions(); state = 'play'; }
+    }
+    return;
+  }
+  if (state !== 'play') return;
+
+  frame++;
+  updatePac();
+  updateGhosts();
+  updateRose();
+  updatePower();
+  updateHearts();
+  checkCollisions();
+  hud();
+}
+
+function updatePac() {
+  if (pac.x % T === 0 && pac.y % T === 0) {
+    // Try queued direction
+    if (walkable(pac.x/T + pac.ndx, pac.y/T + pac.ndy)) {
+      pac.dx = pac.ndx;
+      pac.dy = pac.ndy;
+    }
+    // Stop if current direction hits wall
+    if (!walkable(pac.x/T + pac.dx, pac.y/T + pac.dy)) {
+      pac.dx = 0;
+      pac.dy = 0;
+    }
+  }
+
+  if (pac.dx !== 0 || pac.dy !== 0) {
+    lastDir.dx = pac.dx;
+    lastDir.dy = pac.dy;
+  }
+
+  pac.x += pac.dx * PAC_SPEED;
+  pac.y += pac.dy * PAC_SPEED;
+
+  // Eat dot
+  if (pac.x % T === 0 && pac.y % T === 0) {
+    var c = pac.x / T, r = pac.y / T;
+    if (maze[r][c] === 0) {
+      maze[r][c] = 2;
+      score += 10;
+      dotsLeft--;
+      if (dotsLeft <= 0) state = 'win';
+    }
+  }
+}
+
+// Ghost AI: pick direction at tile centers
+function chooseGhostDir(g) {
+  var tx = g.x / T, ty = g.y / T;
+  var px = pac.x / T, py = pac.y / T;
+  var dirs = [{dx:0,dy:-1},{dx:0,dy:1},{dx:-1,dy:0},{dx:1,dy:0}];
+
+  // Valid = not wall and not reverse of current direction
+  var valid = dirs.filter(function(d) {
+    if (d.dx === -g.dx && d.dy === -g.dy) return false;
+    return walkable(tx + d.dx, ty + d.dy);
+  });
+
+  if (valid.length === 0) {
+    // Dead end – must reverse
+    if (walkable(tx - g.dx, ty - g.dy)) {
+      g.dx = -g.dx; g.dy = -g.dy;
+    } else {
+      g.dx = 0; g.dy = 0;
+    }
+    return;
+  }
+
+  // Sort by manhattan distance to Pac-Man (ascending)
+  valid.sort(function(a, b) {
+    var da = Math.abs(tx + a.dx - px) + Math.abs(ty + a.dy - py);
+    var db = Math.abs(tx + b.dx - px) + Math.abs(ty + b.dy - py);
+    return da - db;
+  });
+
+  var pick = (Math.random() < g.chase) ? valid[0]
+    : valid[Math.floor(Math.random() * valid.length)];
+  g.dx = pick.dx;
+  g.dy = pick.dy;
+}
+
+function updateGhosts() {
+  for (var i = 0; i < ghosts.length; i++) {
+    var g = ghosts[i];
+    if (g.dead) {
+      g.deadTimer--;
+      if (g.deadTimer <= 0) {
+        g.dead = false;
+        g.x = g.sx; g.y = g.sy;
+        g.dx = 0; g.dy = 0;
+      }
+      continue;
+    }
+    if (g.x % T === 0 && g.y % T === 0) {
+      chooseGhostDir(g);
+    }
+    g.x += g.dx * GHOST_SPEED;
+    g.y += g.dy * GHOST_SPEED;
+  }
+}
+
+function updateRose() {
+  if (!rose) {
+    roseTimer--;
+    if (roseTimer <= 0) {
+      var cells = [];
+      for (var r = 0; r < ROWS; r++)
+        for (var c = 0; c < COLS; c++)
+          if (maze[r][c] !== 1 && (Math.abs(c*T - pac.x) + Math.abs(r*T - pac.y)) > T*3)
+            cells.push({c:c, r:r});
+      if (cells.length > 0)
+        rose = cells[Math.floor(Math.random() * cells.length)];
+      roseTimer = 600 + Math.floor(Math.random() * 300);
+    }
+  }
+  // Eat rose
+  if (rose && pac.x % T === 0 && pac.y % T === 0) {
+    if (pac.x / T === rose.c && pac.y / T === rose.r) {
+      rose = null;
+      powered = true;
+      powerTimer = POWER_DUR;
+      heartTimer = 0;
+      score += 100;
+    }
+  }
+}
+
+function updatePower() {
+  if (!powered) return;
+  powerTimer--;
+  heartTimer--;
+  if (heartTimer <= 0 && (lastDir.dx !== 0 || lastDir.dy !== 0)) {
+    hearts.push({
+      x: pac.x + T/2,
+      y: pac.y + T/2,
+      dx: lastDir.dx,
+      dy: lastDir.dy
+    });
+    heartTimer = HEART_INT;
+  }
+  if (powerTimer <= 0) powered = false;
+}
+
+function updateHearts() {
+  for (var i = hearts.length - 1; i >= 0; i--) {
+    var h = hearts[i];
+    h.x += h.dx * HEART_SPEED;
+    h.y += h.dy * HEART_SPEED;
+
+    var col = Math.floor(h.x / T);
+    var row = Math.floor(h.y / T);
+    if (col < 0 || col >= COLS || row < 0 || row >= ROWS || maze[row][col] === 1) {
+      hearts.splice(i, 1);
+      continue;
+    }
+
+    // Check ghost collision
+    var removed = false;
+    for (var j = 0; j < ghosts.length; j++) {
+      var g = ghosts[j];
+      if (g.dead) continue;
+      var dx = h.x - (g.x + T/2);
+      var dy = h.y - (g.y + T/2);
+      if (Math.sqrt(dx*dx + dy*dy) < T * 0.7) {
+        g.dead = true;
+        g.deadTimer = GHOST_RESPAWN;
+        score += 50;
+        hearts.splice(i, 1);
+        removed = true;
+        break;
+      }
+    }
+    if (removed) continue;
+  }
+}
+
+function checkCollisions() {
+  for (var i = 0; i < ghosts.length; i++) {
+    var g = ghosts[i];
+    if (g.dead) continue;
+    if (Math.abs(pac.x - g.x) < T * 0.7 && Math.abs(pac.y - g.y) < T * 0.7) {
+      lives--;
+      powered = false; powerTimer = 0; hearts = [];
+      if (lives <= 0) { state = 'over'; }
+      else { state = 'dead'; deathTimer = 60; }
+      return;
+    }
+  }
+}
+
+// ===================== Drawing =====================
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawMaze();
+  drawRoseFn();
+  drawHeartsFn();
+  drawGhostsFn();
+  drawPacFn();
+  drawOverlay();
+}
+
+function drawMaze() {
+  for (var r = 0; r < ROWS; r++) {
+    for (var c = 0; c < COLS; c++) {
+      var x = c * T, y = r * T;
+      if (maze[r][c] === 1) {
+        ctx.fillStyle = '#3b0764';
+        ctx.fillRect(x, y, T, T);
+        // Neon border on edges facing a path
+        ctx.strokeStyle = '#e91e63';
+        ctx.lineWidth = 2;
+        if (r > 0     && maze[r-1][c] !== 1) { ctx.beginPath(); ctx.moveTo(x,y);     ctx.lineTo(x+T,y);   ctx.stroke(); }
+        if (r < ROWS-1 && maze[r+1][c] !== 1) { ctx.beginPath(); ctx.moveTo(x,y+T);   ctx.lineTo(x+T,y+T); ctx.stroke(); }
+        if (c > 0     && maze[r][c-1] !== 1) { ctx.beginPath(); ctx.moveTo(x,y);     ctx.lineTo(x,y+T);   ctx.stroke(); }
+        if (c < COLS-1 && maze[r][c+1] !== 1) { ctx.beginPath(); ctx.moveTo(x+T,y);   ctx.lineTo(x+T,y+T); ctx.stroke(); }
+      } else if (maze[r][c] === 0) {
+        ctx.fillStyle = '#fce4ec';
+        ctx.beginPath();
+        ctx.arc(x + T/2, y + T/2, 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+}
+
+function drawPacFn() {
+  if (state === 'dead') return;
+  var cx2 = pac.x + T/2, cy2 = pac.y + T/2;
+  var r = T/2 - 2;
+  var mouth = Math.abs(Math.sin(frame * 0.2)) * 0.3;
+  var ang = 0;
+  if (lastDir.dx ===  1) ang = 0;
+  if (lastDir.dx === -1) ang = Math.PI;
+  if (lastDir.dy === -1) ang = -Math.PI / 2;
+  if (lastDir.dy ===  1) ang =  Math.PI / 2;
+
+  ctx.fillStyle = powered ? '#FF69B4' : '#FFD700';
+  ctx.beginPath();
+  ctx.arc(cx2, cy2, r, ang + mouth * Math.PI, ang + (2 - mouth) * Math.PI);
+  ctx.lineTo(cx2, cy2);
+  ctx.closePath();
+  ctx.fill();
+
+  // Eye
+  var ex = cx2 + Math.cos(ang - 0.6) * (r * 0.45);
+  var ey = cy2 + Math.sin(ang - 0.6) * (r * 0.45);
+  ctx.fillStyle = '#111';
+  ctx.beginPath();
+  ctx.arc(ex, ey, 2, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawGhostsFn() {
+  for (var i = 0; i < ghosts.length; i++) {
+    var g = ghosts[i];
+    if (g.dead) continue;
+    var gx = g.x, gy = g.y;
+    var gcx = gx + T/2;
+
+    // Body: dome + rectangular sides + zigzag bottom
+    ctx.fillStyle = g.color;
+    ctx.beginPath();
+    ctx.arc(gcx, gy + T/3, T/2 - 1, Math.PI, 0);         // dome
+    ctx.lineTo(gx + T - 1, gy + T);                        // right side down
+    // Zigzag bottom (3 teeth)
+    ctx.lineTo(gx + T * 5/6, gy + T - 5);
+    ctx.lineTo(gx + T * 4/6, gy + T);
+    ctx.lineTo(gx + T * 3/6, gy + T - 5);
+    ctx.lineTo(gx + T * 2/6, gy + T);
+    ctx.lineTo(gx + T * 1/6, gy + T - 5);
+    ctx.lineTo(gx + 1, gy + T);                            // left side bottom
+    ctx.lineTo(gx + 1, gy + T/3);                          // left side up
+    ctx.closePath();
+    ctx.fill();
+
+    // Eyes
+    ctx.fillStyle = '#fff';
+    ctx.beginPath();
+    ctx.arc(gcx - 4, gy + T/3, 3.5, 0, Math.PI * 2);
+    ctx.arc(gcx + 4, gy + T/3, 3.5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#222';
+    ctx.beginPath();
+    ctx.arc(gcx - 4 + g.dx * 1.5, gy + T/3 + g.dy * 1.5, 1.8, 0, Math.PI * 2);
+    ctx.arc(gcx + 4 + g.dx * 1.5, gy + T/3 + g.dy * 1.5, 1.8, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function drawRoseFn() {
+  if (!rose) return;
+  ctx.font = (T - 4) + 'px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('\u{1F339}', rose.c * T + T/2, rose.r * T + T/2);
+}
+
+function drawHeartsFn() {
+  ctx.font = (T - 6) + 'px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (var i = 0; i < hearts.length; i++) {
+    ctx.fillText('\u{1F497}', hearts[i].x, hearts[i].y);
+  }
+}
+
+function drawOverlay() {
+  ctx.textAlign = 'center';
+  if (state === 'idle') {
+    ctx.fillStyle = 'rgba(0,0,0,0.65)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 26px Inter, sans-serif';
+    ctx.fillText('Valentine Pac-Man \u{1F498}', canvas.width/2, canvas.height/2 - 30);
+    ctx.font = '15px Inter, sans-serif';
+    ctx.fillStyle = '#ccc';
+    ctx.fillText('Eat dots, avoid ghosts, collect \u{1F339} to shoot \u{1F497}', canvas.width/2, canvas.height/2 + 5);
+    ctx.fillText('Press "Start Game" to begin', canvas.width/2, canvas.height/2 + 30);
+  } else if (state === 'over') {
+    ctx.fillStyle = 'rgba(0,0,0,0.72)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#FF1744';
+    ctx.font = 'bold 34px Inter, sans-serif';
+    ctx.fillText('GAME OVER', canvas.width/2, canvas.height/2 - 15);
+    ctx.fillStyle = '#fff';
+    ctx.font = '17px Inter, sans-serif';
+    ctx.fillText('Final Score: ' + score, canvas.width/2, canvas.height/2 + 18);
+  } else if (state === 'win') {
+    ctx.fillStyle = 'rgba(0,0,0,0.72)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#00E676';
+    ctx.font = 'bold 34px Inter, sans-serif';
+    ctx.fillText('YOU WIN! \u{1F496}', canvas.width/2, canvas.height/2 - 15);
+    ctx.fillStyle = '#fff';
+    ctx.font = '17px Inter, sans-serif';
+    ctx.fillText('Final Score: ' + score, canvas.width/2, canvas.height/2 + 18);
+  }
+}
+
+// ===================== Game loop =====================
+
+function gameLoop() {
+  update();
+  draw();
+  requestAnimationFrame(gameLoop);
+}
+
+// Start / restart
+document.getElementById('startBtn').addEventListener('click', function() {
+  init();
+  state = 'play';
+  this.textContent = 'Restart';
+});
+
+// Boot
+init();
+gameLoop();
+</script>
+</body>
 </html>

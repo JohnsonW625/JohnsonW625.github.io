@@ -3,11 +3,39 @@
 
 ## My Website
 
-- Homepage: `https://<your-github-username>.github.io/homework-1-JohnsonW625/`
-- Pac-Man page: `https://<your-github-username>.github.io/homework-1-JohnsonW625/pacman.html`
-- arXiv page: `https://<your-github-username>.github.io/homework-1-JohnsonW625/arxiv.html`
+- Homepage: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/`
+- Pac-Man page: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/pacman.html`
+- arXiv page: `https://johnsonw625.github.io/homework-1-JohnsonW625-site/arxiv.html`
 
-Replace `<your-github-username>` with your GitHub username after deployment.
+## Progress
+
+- Problem 1 (GitHub blog homepage): Completed
+- Problem 2 (Valentine Pac-Man): Completed
+  - Maze with pellets, ghosts, and lives
+  - Rose power-up that appears randomly
+  - Heart projectiles while powered-up
+- Problem 3 (arXiv auto-updating page): Completed
+
+## Problem 3 Report (Copilot CLI)
+
+### What I built
+
+- A dedicated arXiv page at `arxiv.html` that loads papers from `data/arxiv.json`
+- A Python fetch script at `scripts/fetch_arxiv.py` that queries the arXiv API and writes structured JSON
+- A nightly GitHub Actions workflow at `.github/workflows/update-arxiv.yml` that refreshes the data at midnight UTC
+- Supporting workflow notes in `.github/README.md`
+
+### Copilot CLI prompts I used
+
+1. "Create a Python script using only the standard library to fetch latest arXiv papers by keyword and export title/authors/abstract/pdf link to JSON."
+2. "Build a static arXiv feed webpage that fetches local JSON and renders cards with loading, empty, and error states."
+3. "Create a GitHub Actions workflow to run every midnight, update the JSON file, and commit only when data changed."
+
+### What worked well / iterations
+
+- Keeping the pipeline dependency-free (stdlib Python) made CI setup simple and reliable.
+- Rendering from a generated JSON file was easier for GitHub Pages than fetching arXiv directly from browser JavaScript.
+- Iteration needed: add a manual workflow trigger (`workflow_dispatch`) so I can test updates immediately without waiting for nightly schedule.
 
 The due date is Feb 17 at midnight. If you are using the late days, please note in the head of README.md that “I used XX late days this time, and I have XX days remaining”.
 

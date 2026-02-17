@@ -11,6 +11,74 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .feed-meta {
+        color: var(--muted);
+        margin-top: 0.4rem;
+      }
+
+      .status-box {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        color: var(--muted);
+        margin: 1rem 0 1.2rem;
+      }
+
+      .paper-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .paper-card {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 1rem;
+      }
+
+      .paper-title {
+        margin: 0 0 0.5rem;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+
+      .paper-title a {
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .paper-title a:hover {
+        text-decoration: underline;
+      }
+
+      .paper-authors {
+        color: var(--muted);
+        margin: 0 0 0.65rem;
+      }
+
+      .paper-abstract {
+        margin: 0;
+        color: #d9def7;
+        line-height: 1.65;
+      }
+
+      .paper-footer {
+        margin-top: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .paper-date {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -27,12 +95,92 @@
     </header>
 
     <main class="container section">
-      <h1>Auto-updating arXiv Feed (Coming Soon)</h1>
+      <h1>Latest arXiv Papers</h1>
       <p class="hero-copy">
-        This page is prepared for Problem 3. The arXiv paper feed and GitHub
-        Actions automation will be added here.
+        This page auto-updates every midnight through GitHub Actions.
       </p>
-      <p><a class="button button-primary" href="./index.html">Back Home</a></p>
+      <p class="feed-meta" id="feedMeta">Source: loading...</p>
+
+      <div class="status-box" id="statusBox">Loading latest papers...</div>
+      <section class="paper-list" id="paperList" aria-live="polite"></section>
     </main>
+
+    <script>
+      function esc(text) {
+        return String(text)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function fmtDate(value) {
+        if (!value) return "Unknown date";
+        const d = new Date(value);
+        if (Number.isNaN(d.getTime())) return value;
+        return d.toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        });
+      }
+
+      function renderPapers(payload) {
+        const list = document.getElementById("paperList");
+        const status = document.getElementById("statusBox");
+        const meta = document.getElementById("feedMeta");
+
+        const papers = Array.isArray(payload?.papers) ? payload.papers : [];
+        meta.textContent = `Source query: ${payload?.query || "N/A"} | Updated: ${fmtDate(
+          payload?.generated_at_utc
+        )}`;
+
+        if (papers.length === 0) {
+          status.textContent = "No papers available right now. Please check again later.";
+          return;
+        }
+
+        status.textContent = `Showing ${papers.length} recent papers.`;
+
+        list.innerHTML = papers
+          .map((paper) => {
+            const title = esc(paper.title || "Untitled paper");
+            const authors = esc((paper.authors || []).join(", ") || "Unknown authors");
+            const summary = esc(paper.summary || "No abstract available.");
+            const pdf = esc(paper.pdf_url || "#");
+            const published = fmtDate(paper.published);
+
+            return `
+              <article class="paper-card">
+                <h2 class="paper-title"><a href="${pdf}" target="_blank" rel="noopener noreferrer">${title}</a></h2>
+                <p class="paper-authors"><strong>Authors:</strong> ${authors}</p>
+                <p class="paper-abstract">${summary}</p>
+                <div class="paper-footer">
+                  <span class="paper-date">Published: ${published}</span>
+                  <a class="button button-primary" href="${pdf}" target="_blank" rel="noopener noreferrer">PDF</a>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      async function loadFeed() {
+        const status = document.getElementById("statusBox");
+        try {
+          const res = await fetch("./data/arxiv.json", { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const payload = await res.json();
+          renderPapers(payload);
+        } catch (err) {
+          status.textContent =
+            "Failed to load arXiv data. If this is a fresh deployment, run the workflow manually once in GitHub Actions.";
+          document.getElementById("feedMeta").textContent = `Load error: ${err.message}`;
+        }
+      }
+
+      loadFeed();
+    </script>
   </body>
 </html>
