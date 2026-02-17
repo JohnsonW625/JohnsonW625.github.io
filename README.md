@@ -1,6 +1,14 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/xdcIkjOc)
 # Homework 1: Code with AI
 
+## My Website
+
+- Homepage: `https://<your-github-username>.github.io/homework-1-JohnsonW625/`
+- Pac-Man page: `https://<your-github-username>.github.io/homework-1-JohnsonW625/pacman.html`
+- arXiv page: `https://<your-github-username>.github.io/homework-1-JohnsonW625/arxiv.html`
+
+Replace `<your-github-username>` with your GitHub username after deployment.
+
 The due date is Feb 17 at midnight. If you are using the late days, please note in the head of README.md that “I used XX late days this time, and I have XX days remaining”.
 
 The main purpose of this homework is to help you:

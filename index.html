@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnson's Coding Blog</title>
+    <meta
+      name="description"
+      content="Johnson's coding blog for CSE 236 homework projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-left" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">JohnsonW625</a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./pacman.html">Pac-Man Game</a></li>
+            <li><a href="./arxiv.html">arXiv Feed</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">CSE 236 • Homework 1</p>
+        <h1>Welcome to My Coding Blog</h1>
+        <p class="hero-copy">
+          I document AI-assisted coding experiments, mini-projects, and lessons
+          learned while building web apps and games.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./pacman.html"
+            >Play Pac-Man</a
+          >
+          <a class="button button-ghost" href="./arxiv.html"
+            >View arXiv Feed</a
+          >
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Project Roadmap</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Problem 1: Homepage</h3>
+            <p>
+              A modern, responsive personal homepage hosted on GitHub Pages.
+            </p>
+            <span class="status done">Completed</span>
+          </article>
+          <article class="card">
+            <h3>Problem 2: Valentine Pac-Man</h3>
+            <p>
+              A web Pac-Man game featuring a rose power-up and heart projectiles.
+            </p>
+            <a href="./pacman.html" class="inline-link">Open page</a>
+          </article>
+          <article class="card">
+            <h3>Problem 3: arXiv Auto Feed</h3>
+            <p>
+              An auto-updating paper list generated daily with GitHub Actions.
+            </p>
+            <a href="./arxiv.html" class="inline-link">Open page</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Built by JohnsonW625 • <span id="year"></span> • Hosted with GitHub
+          Pages
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
