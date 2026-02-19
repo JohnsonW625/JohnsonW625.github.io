@@ -1,215 +1,179 @@
 {
-  "generated_at_utc": "2026-02-18T02:07:16Z",
+  "generated_at_utc": "2026-02-19T02:05:59Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.15029v1",
-      "title": "Symmetry in language statistics shapes the geometry of model representations",
+      "id": "http://arxiv.org/abs/2602.15829v1",
+      "title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
       "authors": [
-        "Dhruva Karkada",
-        "Daniel J. Korchinski",
-        "Andres Nava",
-        "Matthieu Wyart",
-        "Yasaman Bahri"
+        "Tomás Vergara-Browne",
+        "Darshan Patil",
+        "Ivan Titov",
+        "Siva Reddy",
+        "Tiago Pimentel",
+        "Marius Mosbach"
       ],
-      "summary": "Although learned representations underlie neural networks' success, their fundamental properties remain poorly understood. A striking example is the emergence of simple geometric structures in LLM representations: for example, calendar months organize into a circle, years form a smooth one-dimensional manifold, and cities' latitudes and longitudes can be decoded by a linear probe. We show that the statistics of language exhibit a translation symmetry -- e.g., the co-occurrence probability of two months depends only on the time interval between them -- and we prove that the latter governs the aforementioned geometric structures in high-dimensional word embedding models. Moreover, we find that these structures persist even when the co-occurrence statistics are strongly perturbed (for example, by removing all sentences in which two months appear together) and at moderate embedding dimension. We show that this robustness naturally emerges if the co-occurrence statistics are collectively controlled by an underlying continuous latent variable. We empirically validate this theoretical framework in word embedding models, text embedding models, and large language models.",
-      "published": "2026-02-16T18:59:55Z",
-      "updated": "2026-02-16T18:59:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15029v1"
+      "summary": "The superficial alignment hypothesis (SAH) posits that large language models learn most of their knowledge during pre-training, and that post-training merely surfaces this knowledge. The SAH, however, lacks a precise definition, which has led to (i) different and seemingly orthogonal arguments supporting it, and (ii) important critiques to it. We propose a new metric called task complexity: the length of the shortest program that achieves a target performance on a task. In this framework, the SAH simply claims that pre-trained models drastically reduce the complexity of achieving high performance on many tasks. Our definition unifies prior arguments supporting the SAH, interpreting them as different strategies to find such short programs. Experimentally, we estimate the task complexity of mathematical reasoning, machine translation, and instruction following; we then show that these complexities can be remarkably low when conditioned on a pre-trained model. Further, we find that pre-training enables access to strong performances on our tasks, but it can require programs of gigabytes of length to access them. Post-training, on the other hand, collapses the complexity of reaching this same performance by several orders of magnitude. Overall, our results highlight that task adaptation often requires surprisingly little information -- often just a few kilobytes.",
+      "published": "2026-02-17T18:59:39Z",
+      "updated": "2026-02-17T18:59:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15829v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15028v1",
-      "title": "Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy and Personalization",
+      "id": "http://arxiv.org/abs/2602.15823v1",
+      "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
       "authors": [
-        "Shangding Gu"
+        "Zarif Ikram",
+        "Arad Firouzkouhi",
+        "Stephen Tu",
+        "Mahdi Soltanolkotabi",
+        "Paria Rashidinejad"
       ],
-      "summary": "Large language models (LLMs) are increasingly deployed in privacy-critical and personalization-oriented scenarios, yet the role of context length in shaping privacy leakage and personalization effectiveness remains largely unexplored. We introduce a large-scale benchmark, PAPerBench, to systematically study how increasing context length influences both personalization quality and privacy protection in LLMs. The benchmark comprises approximately 29,000 instances with context lengths ranging from 1K to 256K tokens, yielding a total of 377K evaluation questions. It jointly evaluates personalization performance and privacy risks across diverse scenarios, enabling controlled analysis of long-context model behavior. Extensive evaluations across state-of-the-art LLMs reveal consistent performance degradation in both personalization and privacy as context length increases. We further provide a theoretical analysis of attention dilution under context scaling, explaining this behavior as an inherent limitation of soft attention in fixed-capacity Transformers. The empirical and theoretical findings together suggest a general scaling gap in current models -- long context, less focus. We release the benchmark to support reproducible evaluation and future research on scalable privacy and personalization. Code and data are available at https://github.com/SafeRL-Lab/PAPerBench",
-      "published": "2026-02-16T18:59:42Z",
-      "updated": "2026-02-16T18:59:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15028v1"
+      "summary": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates editing as constrained optimization and enforces the constraint by projecting edit updates onto the low-curvature subspace of the capability-loss landscape. At the crux of CrispEdit is expressing capability constraint via Bregman divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even when the base model is not trained to convergence. We make this second-order procedure efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector that exploits Kronecker structure to avoid constructing massive projection matrices. Across standard model-editing benchmarks, CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors.",
+      "published": "2026-02-17T18:58:04Z",
+      "updated": "2026-02-17T18:58:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15823v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15013v1",
-      "title": "Text Style Transfer with Parameter-efficient LLM Finetuning and Round-trip Translation",
+      "id": "http://arxiv.org/abs/2602.15819v1",
+      "title": "VideoSketcher: Video Models Prior Enable Versatile Sequential Sketch Generation",
       "authors": [
-        "Ruoxi Liu",
-        "Philipp Koehn"
+        "Hui Ren",
+        "Yuval Alaluf",
+        "Omer Bar Tal",
+        "Alexander Schwing",
+        "Antonio Torralba",
+        "Yael Vinker"
       ],
-      "summary": "This paper proposes a novel method for Text Style Transfer (TST) based on parameter-efficient fine-tuning of Large Language Models (LLMs). Addressing the scarcity of parallel corpora that map between styles, the study employs roundtrip translation to synthesize such parallel datasets from monolingual corpora. This approach creates 'neutralized' text devoid of stylistic attributes, essentially creating a shared input style at training-time and inference-time. Experimental results demonstrate consistent superiority of this method over zero-shot prompting and fewshot ICL techniques measured by BLEU scores and style accuracy scores across four investigated domains. Furthermore, the integration of retrieval-augmented generation (RAG) for terminology and name knowledge enhances robustness and stylistic consistency.",
-      "published": "2026-02-16T18:52:43Z",
-      "updated": "2026-02-16T18:52:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15013v1"
+      "summary": "Sketching is inherently a sequential process, in which strokes are drawn in a meaningful order to explore and refine ideas. However, most generative models treat sketches as static images, overlooking the temporal structure that underlies creative drawing. We present a data-efficient approach for sequential sketch generation that adapts pretrained text-to-video diffusion models to generate sketching processes. Our key insight is that large language models and video diffusion models offer complementary strengths for this task: LLMs provide semantic planning and stroke ordering, while video diffusion models serve as strong renderers that produce high-quality, temporally coherent visuals. We leverage this by representing sketches as short videos in which strokes are progressively drawn on a blank canvas, guided by text-specified ordering instructions. We introduce a two-stage fine-tuning strategy that decouples the learning of stroke ordering from the learning of sketch appearance. Stroke ordering is learned using synthetic shape compositions with controlled temporal structure, while visual appearance is distilled from as few as seven manually authored sketching processes that capture both global drawing order and the continuous formation of individual strokes. Despite the extremely limited amount of human-drawn sketch data, our method generates high-quality sequential sketches that closely follow text-specified orderings while exhibiting rich visual detail. We further demonstrate the flexibility of our approach through extensions such as brush style conditioning and autoregressive sketch generation, enabling additional controllability and interactive, collaborative drawing.",
+      "published": "2026-02-17T18:55:03Z",
+      "updated": "2026-02-17T18:55:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15819v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15005v1",
-      "title": "Learning User Interests via Reasoning and Distillation for Cross-Domain News Recommendation",
+      "id": "http://arxiv.org/abs/2602.15809v1",
+      "title": "Decision Quality Evaluation Framework at Pinterest",
       "authors": [
-        "Mengdan Zhu",
-        "Yufan Zhao",
-        "Tao Di",
-        "Yulan Yan",
-        "Liang Zhao"
+        "Yuqi Tian",
+        "Robert Paine",
+        "Attila Dobi",
+        "Kevin O'Sullivan",
+        "Aravindh Manickavasagam",
+        "Faisal Farooq"
       ],
-      "summary": "News recommendation plays a critical role in online news platforms by helping users discover relevant content. Cross-domain news recommendation further requires inferring user's underlying information needs from heterogeneous signals that often extend beyond direct news consumption. A key challenge lies in moving beyond surface-level behaviors to capture deeper, reusable user interests while maintaining scalability in large-scale production systems. In this paper, we present a reinforcement learning framework that trains large language models to generate high-quality lists of interest-driven news search queries from cross-domain user signals. We formulate query-list generation as a policy optimization problem and employ GRPO with multiple reward signals. We systematically study two compute dimensions: inference-time sampling and model capacity, and empirically observe consistent improvements with increased compute that exhibit scaling-like behavior. Finally, we perform on-policy distillation to transfer the learned policy from a large, compute-intensive teacher to a compact student model suitable for scalable deployment. Extensive offline experiments, ablation studies and large-scale online A/B tests in a production news recommendation system demonstrate consistent gains in both interest modeling quality and downstream recommendation performance.",
-      "published": "2026-02-16T18:45:40Z",
-      "updated": "2026-02-16T18:45:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15005v1"
+      "summary": "Online platforms require robust systems to enforce content safety policies at scale. A critical component of these systems is the ability to evaluate the quality of moderation decisions made by both human agents and Large Language Models (LLMs). However, this evaluation is challenging due to the inherent trade-offs between cost, scale, and trustworthiness, along with the complexity of evolving policies. To address this, we present a comprehensive Decision Quality Evaluation Framework developed and deployed at Pinterest. The framework is centered on a high-trust Golden Set (GDS) curated by subject matter experts (SMEs), which serves as a ground truth benchmark. We introduce an automated intelligent sampling pipeline that uses propensity scores to efficiently expand dataset coverage. We demonstrate the framework's practical application in several key areas: benchmarking the cost-performance trade-offs of various LLM agents, establishing a rigorous methodology for data-driven prompt optimization, managing complex policy evolution, and ensuring the integrity of policy content prevalence metrics via continuous validation. The framework enables a shift from subjective assessments to a data-driven and quantitative practice for managing content safety systems.",
+      "published": "2026-02-17T18:45:55Z",
+      "updated": "2026-02-17T18:45:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15809v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.01024v2",
-      "title": "Low-Latency Federated Fine-Tuning for Large Language Models Over Wireless Networks",
+      "id": "http://arxiv.org/abs/2502.00225v3",
+      "title": "Should You Use Your Large Language Model to Explore or Exploit?",
       "authors": [
-        "Zhiwen Pang",
-        "Kang Wei",
-        "Long Shi",
-        "Zhe Wang",
-        "Jun Li",
-        "Feng Shu"
+        "Keegan Harris",
+        "Aleksandrs Slivkins"
       ],
-      "summary": "Recently, federated large language models (LLMs) have drawn significant attention thanks to coupled capabilities of LLMs and federated learning (FL) that address privacy concerns in collaborative fine-tuning. However, due to large-scale parameters of LLMs, existing federated LLM fine-tuning frameworks incur significant challenges in resource-constrained clients characterized by heterogeneous computing capabilities and random wireless channels. To address this issue, we propose a joint client-specific pruning and bandwidth allocation (JCPBA) framework for federated LLMs to improve the fine-tuning efficiency over the wireless networks. Specifically, we formulate a fine-tuning latency minimization problem by jointly optimizing pruning rates and bandwidth allocations. Furthermore, we solve this optimization problem using a block coordinate descent method. Extensive experiments on the datasets of Yahoo Answers and GSM8K demonstrate that the proposed framework significantly reduces wall-clock fine-tuning time compared with state-of-the-art baselines and gains equal or lower test loss at the cost of lower computation and communication overhead.",
-      "published": "2026-02-01T05:15:50Z",
-      "updated": "2026-02-16T18:21:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.01024v2"
+      "summary": "We evaluate the ability of the current generation of large language models (LLMs) to help a decision-making agent facing an exploration-exploitation tradeoff. While previous work has largely study the ability of LLMs to solve combined exploration-exploitation tasks, we take a more systematic approach and use LLMs to explore and exploit in silos in various (contextual) bandit tasks. We find that reasoning models show the most promise for solving exploitation tasks, although they are still too expensive or too slow to be used in many practical settings. Motivated by this, we study tool use and in-context summarization using non-reasoning models. We find that these mitigations may be used to substantially improve performance on medium-difficulty tasks, however even then, all LLMs we study perform worse than a simple linear regression, even in non-linear settings. On the other hand, we find that LLMs do help at exploring large action spaces with inherent semantics, by suggesting suitable candidates to explore.",
+      "published": "2025-01-31T23:42:53Z",
+      "updated": "2026-02-17T18:41:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.00225v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.03837v2",
-      "title": "Accelerating Scientific Research with Gemini: Case Studies and Common Techniques",
+      "id": "http://arxiv.org/abs/2602.08437v4",
+      "title": "Large Language Models and Impossible Language Acquisition: \"False Promise\" or an Overturn of our Current Perspective towards AI",
       "authors": [
-        "David P. Woodruff",
-        "Vincent Cohen-Addad",
-        "Lalit Jain",
-        "Jieming Mao",
-        "Song Zuo",
-        "MohammadHossein Bateni",
-        "Simina Branzei",
-        "Michael P. Brenner",
-        "Lin Chen",
-        "Ying Feng",
-        "Lance Fortnow",
-        "Gang Fu",
-        "Ziyi Guan",
-        "Zahra Hadizadeh",
-        "Mohammad T. Hajiaghayi",
-        "Mahdi JafariRaviz",
-        "Adel Javanmard",
-        "Karthik C. S.",
-        "Ken-ichi Kawarabayashi",
-        "Ravi Kumar",
-        "Silvio Lattanzi",
-        "Euiwoong Lee",
-        "Yi Li",
-        "Ioannis Panageas",
-        "Dimitris Paparas",
-        "Benjamin Przybocki",
-        "Bernardo Subercaseaux",
-        "Ola Svensson",
-        "Shayan Taherijam",
-        "Xuan Wu",
-        "Eylon Yogev",
-        "Morteza Zadimoghaddam",
-        "Samson Zhou",
-        "Yossi Matias",
-        "James Manyika",
-        "Vahab Mirrokni"
+        "Ziyan Wang",
+        "Longlong Ma"
       ],
-      "summary": "Recent advances in large language models (LLMs) have opened new avenues for accelerating scientific research. While models are increasingly capable of assisting with routine tasks, their ability to contribute to novel, expert-level mathematical discovery is less understood. We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variants), to solve open problems, refute conjectures, and generate new proofs across diverse areas in theoretical computer science, as well as other areas such as economics, optimization, and physics. Based on these experiences, we extract common techniques for effective human-AI collaboration in theoretical research, such as iterative refinement, problem decomposition, and cross-disciplinary knowledge transfer. While the majority of our results stem from this interactive, conversational methodology, we also highlight specific instances that push beyond standard chat interfaces. These include deploying the model as a rigorous adversarial reviewer to detect subtle flaws in existing proofs, and embedding it within a \"neuro-symbolic\" loop that autonomously writes and executes code to verify complex derivations. Together, these examples highlight the potential of AI not just as a tool for automation, but as a versatile, genuine partner in the creative process of scientific discovery.",
-      "published": "2026-02-03T18:56:17Z",
-      "updated": "2026-02-16T18:02:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.03837v2"
+      "summary": "In Chomsky's provocative critique \"The False Promise of CHATGPT,\" Large Language Models (LLMs) are characterized as mere pattern predictors that do not acquire languages via intrinsic causal and self-correction structures like humans, therefore are not able to distinguish impossible languages. It stands as a representative in a fundamental challenge to the intellectual foundations of AI, for it integrally synthesizes major issues in methodologies within LLMs and possesses an iconic a priori rationalist perspective. We examine this famous critique from both the perspective in pre-existing literature of linguistics and psychology as well as a research based on an experiment inquiring into the capacity of learning both possible and impossible languages among LLMs. We constructed a set of syntactically impossible languages by applying certain transformations to English. These include reversing whole sentences, and adding negation based on word-count parity. Two rounds of controlled experiments were each conducted on GPT-2 small models and long short-term memory (LSTM) models. Statistical analysis (Welch's t-test) shows GPT2 small models underperform in learning all of the impossible languages compared to their performance on the possible language (p<.001). On the other hand, LSTM models' performance tallies with Chomsky's argument, suggesting the irreplaceable role of the evolution of transformer architecture. Based on theoretical analysis and empirical findings, we propose a new vision within Chomsky's theory towards LLMs, and a shift of theoretical paradigm outside Chomsky, from his \"rationalist-romantics\" paradigm to functionalism and empiricism in LLMs research.",
+      "published": "2026-02-09T09:50:12Z",
+      "updated": "2026-02-17T18:26:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.08437v4"
     },
     {
-      "id": "http://arxiv.org/abs/2503.08796v2",
-      "title": "Robust Multi-Objective Controlled Decoding of Large Language Models",
+      "id": "http://arxiv.org/abs/2602.15791v1",
+      "title": "Enhancing Building Semantics Preservation in AI Model Training with Large Language Model Encodings",
       "authors": [
-        "Seongho Son",
-        "William Bankes",
-        "Sangwoong Yoon",
-        "Shyam Sundhar Ramesh",
-        "Xiaohang Tang",
-        "Ilija Bogunovic"
+        "Suhyung Jang",
+        "Ghang Lee",
+        "Jaekun Lee",
+        "Hyunjun Lee"
       ],
-      "summary": "We introduce Robust Multi-Objective Decoding (RMOD), a novel inference-time algorithm that robustly aligns Large Language Models (LLMs) to multiple human objectives (e.g., instruction-following, helpfulness, safety) by maximizing the worst-case rewards. RMOD formulates the robust decoding problem as a maximin two-player game between adversarially computed reward weights and the sampling policy, solvable through a Nash equilibrium. We demonstrate that this game reduces to a convex optimization problem to identify the worst-case reward weights, with the optimal sampling policy analytically derived. For practical applications, we propose an efficient algorithm of RMOD tailored for contemporary LLMs, introducing minimal computational overhead compared to standard non-robust Controlled Decoding methods. Experimental results across a range of popular alignment datasets with up to 10 objectives show the effectiveness of RMOD and its distilled version, consistently outperforming baselines in worst-case rewards and win rates.",
-      "published": "2025-03-11T18:15:26Z",
-      "updated": "2026-02-16T17:58:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2503.08796v2"
+      "summary": "Accurate representation of building semantics, encompassing both generic object types and specific subtypes, is essential for effective AI model training in the architecture, engineering, construction, and operation (AECO) industry. Conventional encoding methods (e.g., one-hot) often fail to convey the nuanced relationships among closely related subtypes, limiting AI's semantic comprehension. To address this limitation, this study proposes a novel training approach that employs large language model (LLM) embeddings (e.g., OpenAI GPT and Meta LLaMA) as encodings to preserve finer distinctions in building semantics. We evaluated the proposed method by training GraphSAGE models to classify 42 building object subtypes across five high-rise residential building information models (BIMs). Various embedding dimensions were tested, including original high-dimensional LLM embeddings (1,536, 3,072, or 4,096) and 1,024-dimensional compacted embeddings generated via the Matryoshka representation model. Experimental results demonstrated that LLM encodings outperformed the conventional one-hot baseline, with the llama-3 (compacted) embedding achieving a weighted average F1-score of 0.8766, compared to 0.8475 for one-hot encoding. The results underscore the promise of leveraging LLM-based encodings to enhance AI's ability to interpret complex, domain-specific building semantics. As the capabilities of LLMs and dimensionality reduction techniques continue to evolve, this approach holds considerable potential for broad application in semantic elaboration tasks throughout the AECO industry.",
+      "published": "2026-02-17T18:26:36Z",
+      "updated": "2026-02-17T18:26:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15791v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.14970v1",
-      "title": "Counterfactual Fairness Evaluation of LLM-Based Contact Center Agent Quality Assurance System",
+      "id": "http://arxiv.org/abs/2602.15785v1",
+      "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
       "authors": [
-        "Kawin Mayilvaghanan",
-        "Siddhant Gupta",
-        "Ayush Kumar"
+        "Jessica Hullman",
+        "David Broska",
+        "Huaman Sun",
+        "Aaron Shaw"
       ],
-      "summary": "Large Language Models (LLMs) are increasingly deployed in contact-center Quality Assurance (QA) to automate agent performance evaluation and coaching feedback. While LLMs offer unprecedented scalability and speed, their reliance on web-scale training data raises concerns regarding demographic and behavioral biases that may distort workforce assessment. We present a counterfactual fairness evaluation of LLM-based QA systems across 13 dimensions spanning three categories: Identity, Context, and Behavioral Style. Fairness is quantified using the Counterfactual Flip Rate (CFR), the frequency of binary judgment reversals, and the Mean Absolute Score Difference (MASD), the average shift in coaching or confidence scores across counterfactual pairs. Evaluating 18 LLMs on 3,000 real-world contact center transcripts, we find systematic disparities, with CFR ranging from 5.4% to 13.0% and consistent MASD shifts across confidence, positive, and improvement scores. Larger, more strongly aligned models show lower unfairness, though fairness does not track accuracy. Contextual priming of historical performance induces the most severe degradations (CFR up to 16.4%), while implicit linguistic identity cues remain a persistent bias source. Finally, we analyze the efficacy of fairness-aware prompting, finding that explicit instructions yield only modest improvements in evaluative consistency. Our findings underscore the need for standardized fairness auditing pipelines prior to deploying LLMs in high-stakes workforce evaluation.",
-      "published": "2026-02-16T17:56:18Z",
-      "updated": "2026-02-16T17:56:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.14970v1"
+      "summary": "A growing literature uses large language models (LLMs) as synthetic participants to generate cost-effective and nearly instantaneous responses in social science experiments. However, there is limited guidance on when such simulations support valid inference about human behavior. We contrast two strategies for obtaining valid estimates of causal effects and clarify the assumptions under which each is suitable for exploratory versus confirmatory research. Heuristic approaches seek to establish that simulated and observed human behavior are interchangeable through prompt engineering, model fine-tuning, and other repair strategies designed to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. In contrast, statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses. Under explicit assumptions, statistical calibration preserves validity and provides more precise estimates of causal effects at lower cost than experiments that rely solely on human participants. Yet the potential of both approaches depends on how well LLMs approximate the relevant populations. We consider what opportunities are overlooked when researchers focus myopically on substituting LLMs for human participants in a study.",
+      "published": "2026-02-17T18:18:38Z",
+      "updated": "2026-02-17T18:18:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15785v1"
     },
     {
-      "id": "http://arxiv.org/abs/2402.15751v2",
-      "title": "Sparse MeZO: Less Parameters for Better Performance in Zeroth-Order LLM Fine-Tuning",
+      "id": "http://arxiv.org/abs/2602.15781v1",
+      "title": "Neural Scaling Laws for Boosted Jet Tagging",
       "authors": [
-        "Yong Liu",
-        "Zirui Zhu",
-        "Chaoyu Gong",
-        "Minhao Cheng",
-        "Cho-Jui Hsieh",
-        "Yang You"
+        "Matthias Vigl",
+        "Nicole Hartman",
+        "Michael Kagan",
+        "Lukas Heinrich"
       ],
-      "summary": "While fine-tuning large language models (LLMs) for specific tasks often yields impressive results, it comes at the cost of memory inefficiency due to back-propagation in gradient-based training. Memory-efficient Zeroth-order (MeZO) optimizers, recently proposed to address this issue, only require forward passes during training, making them more memory-friendly. However, compared with exact gradients, ZO-based gradients usually exhibit an estimation error, which can significantly hurt the optimization process, leading to slower convergence and suboptimal solutions. In addition, we find that the estimation error will hurt more when adding to large weights instead of small weights. Based on this observation, this paper introduces Sparse MeZO, a novel memory-efficient zeroth-order optimization approach that applies ZO only to a carefully chosen subset of parameters. We propose a simple yet effective parameter selection scheme that yields significant performance gains with Sparse-MeZO. Additionally, we develop a memory-optimized implementation for sparse masking, ensuring the algorithm requires only inference-level memory consumption, allowing Sparse-MeZO to fine-tune LLaMA-30b on a single A100 GPU. Experimental results illustrate that Sparse-MeZO consistently improves both performance and convergence speed over MeZO without any overhead. For example, it achieves a 9\\% absolute accuracy improvement and 3.5x speedup over MeZO on the RTE task. Code is available at https://github.com/NUS-HPC-AI-Lab/SparseMeZO.",
-      "published": "2024-02-24T07:22:04Z",
-      "updated": "2026-02-16T17:54:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2402.15751v2"
+      "summary": "The success of Large Language Models (LLMs) has established that scaling compute, through joint increases in model capacity and dataset size, is the primary driver of performance in modern machine learning. While machine learning has long been an integral component of High Energy Physics (HEP) data analysis workflows, the compute used to train state-of-the-art HEP models remains orders of magnitude below that of industry foundation models. With scaling laws only beginning to be studied in the field, we investigate neural scaling laws for boosted jet classification using the public JetClass dataset. We derive compute optimal scaling laws and identify an effective performance limit that can be consistently approached through increased compute. We study how data repetition, common in HEP where simulation is expensive, modifies the scaling yielding a quantifiable effective dataset size gain. We then study how the scaling coefficients and asymptotic performance limits vary with the choice of input features and particle multiplicity, demonstrating that increased compute reliably drives performance toward an asymptotic limit, and that more expressive, lower-level features can raise the performance limit and improve results at fixed dataset size.",
+      "published": "2026-02-17T18:13:01Z",
+      "updated": "2026-02-17T18:13:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15781v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.02744v3",
-      "title": "SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation",
+      "id": "http://arxiv.org/abs/2602.15769v1",
+      "title": "ViTaB-A: Evaluating Multimodal Large Language Models on Visual Table Attribution",
       "authors": [
-        "Hanqi Jiang",
-        "Junhao Chen",
-        "Yi Pan",
-        "Ling Chen",
-        "Weihang You",
-        "Yifan Zhou",
-        "Ruidong Zhang",
-        "Andrea Sikora",
-        "Lin Zhao",
-        "Yohannes Abate",
-        "Tianming Liu"
+        "Yahia Alqurnawi",
+        "Preetom Biswas",
+        "Anmol Rao",
+        "Tejas Anvekar",
+        "Chitta Baral",
+        "Vivek Gupta"
       ],
-      "summary": "While Large Language Models (LLMs) excel at generalized reasoning, standard retrieval-augmented approaches fail to address the disconnected nature of long-term agentic memory. To bridge this gap, we introduce Synapse (Synergistic Associative Processing Semantic Encoding), a unified memory architecture that transcends static vector similarity. Drawing from cognitive science, Synapse models memory as a dynamic graph where relevance emerges from spreading activation rather than pre-computed links. By integrating lateral inhibition and temporal decay, the system dynamically highlights relevant sub-graphs while filtering interference. We implement a Triple Hybrid Retrieval strategy that fuses geometric embeddings with activation-based graph traversal. Comprehensive evaluations on the LoCoMo benchmark show that Synapse significantly outperforms state-of-the-art methods in complex temporal and multi-hop reasoning tasks, offering a robust solution to the \"Contextual Tunneling\" problem. Our code and data will be made publicly available upon acceptance.",
-      "published": "2026-01-06T06:19:58Z",
-      "updated": "2026-02-16T17:31:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.02744v3"
+      "summary": "Multimodal Large Language Models (mLLMs) are often used to answer questions in structured data such as tables in Markdown, JSON, and images. While these models can often give correct answers, users also need to know where those answers come from. In this work, we study structured data attribution/citation, which is the ability of the models to point to the specific rows and columns that support an answer. We evaluate several mLLMs across different table formats and prompting strategies. Our results show a clear gap between question answering and evidence attribution. Although question answering accuracy remains moderate, attribution accuracy is much lower, near random for JSON inputs, across all models. We also find that models are more reliable at citing rows than columns, and struggle more with textual formats than images. Finally, we observe notable differences across model families. Overall, our findings show that current mLLMs are unreliable at providing fine-grained, trustworthy attribution for structured data, which limits their usage in applications requiring transparency and traceability.",
+      "published": "2026-02-17T18:01:35Z",
+      "updated": "2026-02-17T18:01:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15769v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.01784v6",
-      "title": "iQUEST: An Iterative Question-Guided Framework for Knowledge Base Question Answering",
+      "id": "http://arxiv.org/abs/2506.02954v6",
+      "title": "Mutation-Guided Unit Test Generation with a Large Language Model",
       "authors": [
-        "Shuai Wang",
-        "Yinan Yu"
+        "Guancheng Wang",
+        "Qinghua Xu",
+        "Lionel C. Briand",
+        "Kui Liu"
       ],
-      "summary": "Large Language Models (LLMs) excel in many natural language processing tasks but often exhibit factual inconsistencies in knowledge-intensive settings. Integrating external knowledge resources, particularly knowledge graphs (KGs), provides a transparent and updatable foundation for more reliable reasoning. Knowledge Base Question Answering (KBQA), which queries and reasons over KGs, is central to this effort, especially for complex, multi-hop queries. However, multi-hop reasoning poses two key challenges: (1)~maintaining coherent reasoning paths, and (2)~avoiding prematurely discarding critical multi-hop connections. To tackle these challenges, we introduce iQUEST, a question-guided KBQA framework that iteratively decomposes complex queries into simpler sub-questions, ensuring a structured and focused reasoning trajectory. Additionally, we integrate a Graph Neural Network (GNN) to look ahead and incorporate 2-hop neighbor information at each reasoning step. This dual approach strengthens the reasoning process, enabling the model to explore viable paths more effectively. Detailed experiments demonstrate the consistent improvement delivered by iQUEST across four benchmark datasets and four LLMs. The code is publicly available at: https://github.com/Wangshuaiia/iQUEST.",
-      "published": "2025-06-02T15:30:02Z",
-      "updated": "2026-02-16T17:22:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.01784v6"
+      "summary": "Unit tests play a vital role in uncovering potential faults in software. While tools like EvoSuite focus on maximizing code coverage, recent advances in large language models (LLMs) have shifted attention toward LLM-based test generation. However, code coverage metrics -- such as line and branch coverage -- remain overly emphasized in reported research, despite being weak indicators of a test suite's fault-detection capability. In contrast, mutation score offers a more reliable and stringent measure, as demonstrated in our findings where some test suites achieve 100% coverage but only 4% mutation score. Although a few studies consider mutation score, the effectiveness of LLMs in killing mutants remains underexplored. In this paper, we propose MUTGEN, a mutation-guided, LLM-based test generation approach that incorporates mutation feedback directly into the prompt. Evaluated on 204 subjects from two benchmarks, MUTGEN significantly outperforms both EvoSuite and vanilla prompt-based strategies in terms of mutation score. Furthermore, MUTGEN introduces an iterative generation mechanism that pushes the limits of LLMs in killing additional mutants. Our study also provide insights into the limitations of LLM-based generation, analyzing the reasons for live and uncovered mutants, and the impact of different mutation operators on generation effectiveness.",
+      "published": "2025-06-03T14:47:22Z",
+      "updated": "2026-02-17T17:58:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.02954v6"
     },
     {
-      "id": "http://arxiv.org/abs/2602.14926v1",
-      "title": "MAC-AMP: A Closed-Loop Multi-Agent Collaboration System for Multi-Objective Antimicrobial Peptide Design",
+      "id": "http://arxiv.org/abs/2602.15761v1",
+      "title": "A Differential Fuzzing-Based Evaluation of Functional Equivalence in LLM-Generated Code Refactorings",
       "authors": [
-        "Gen Zhou",
-        "Sugitha Janarthanan",
-        "Lianghong Chen",
-        "Pingzhao Hu"
+        "Simantika Bhattacharjee Dristi",
+        "Matthew B. Dwyer"
       ],
-      "summary": "To address the global health threat of antimicrobial resistance, antimicrobial peptides (AMP) are being explored for their potent and promising ability to fight resistant pathogens. While artificial intelligence (AI) is being employed to advance AMP discovery and design, most AMP design models struggle to balance key goals like activity, toxicity, and novelty, using rigid or unclear scoring methods that make results hard to interpret and optimize. As the capabilities of Large Language Models (LLM) advance and evolve swiftly, we turn to AI multi-agent collaboration based on such models (multi-agent LLMs), which show rapidly rising potential in complex scientific design scenarios. Based on this, we introduce MAC-AMP, a closed-loop multi-agent collaboration (MAC) system for multi-objective AMP design. The system implements a fully autonomous simulated peer review-adaptive reinforcement learning framework that requires only a task description and example dataset to design novel AMPs. The novelty of our work lies in introducing a closed-loop multi-agent system for AMP design, with cross-domain transferability, that supports multi-objective optimization while remaining explainable rather than a 'black box'. Experiments show that MAC-AMP outperforms other AMP generative models by effectively optimizing AMP generation for multiple key molecular properties, demonstrating exceptional results in antibacterial activity, AMP likeliness, toxicity compliance, and structural reliability.",
-      "published": "2026-02-16T17:01:47Z",
-      "updated": "2026-02-16T17:01:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.14926v1"
+      "summary": "With the rapid adoption of large language models (LLMs) in automated code refactoring, assessing and ensuring functional equivalence between LLM-generated refactoring and the original implementation becomes critical. While prior work typically relies on predefined test cases to evaluate correctness, in this work, we leverage differential fuzzing to check functional equivalence in LLM-generated code refactorings. Unlike test-based evaluation, a differential fuzzing-based equivalence checker needs no predefined test cases and can explore a much larger input space by executing and comparing thousands of automatically generated test inputs. In a large-scale evaluation of six LLMs (CodeLlama, Codestral, StarChat2, Qwen-2.5, Olmo-3, and GPT-4o) across three datasets and two refactoring types, we find that LLMs show a non-trivial tendency to alter program semantics, producing 19-35% functionally non-equivalent refactorings. Our experiments further demonstrate that about 21% of these non-equivalent refactorings remain undetected by the existing test suites of the three evaluated datasets. Collectively, the findings of this study imply that reliance on existing tests might overestimate functional equivalence in LLM-generated code refactorings, which remain prone to semantic divergence.",
+      "published": "2026-02-17T17:47:13Z",
+      "updated": "2026-02-17T17:47:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15761v1"
     }
   ]
 }
