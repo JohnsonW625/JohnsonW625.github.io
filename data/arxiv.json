@@ -1,179 +1,183 @@
 {
-  "generated_at_utc": "2026-02-19T02:05:59Z",
+  "generated_at_utc": "2026-02-20T02:01:44Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.15829v1",
-      "title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
+      "id": "http://arxiv.org/abs/2602.13194v2",
+      "title": "Semantic Chunking and the Entropy of Natural Language",
       "authors": [
-        "Tomás Vergara-Browne",
-        "Darshan Patil",
-        "Ivan Titov",
-        "Siva Reddy",
-        "Tiago Pimentel",
-        "Marius Mosbach"
+        "Weishun Zhong",
+        "Doron Sivan",
+        "Tankut Can",
+        "Mikhail Katkov",
+        "Misha Tsodyks"
       ],
-      "summary": "The superficial alignment hypothesis (SAH) posits that large language models learn most of their knowledge during pre-training, and that post-training merely surfaces this knowledge. The SAH, however, lacks a precise definition, which has led to (i) different and seemingly orthogonal arguments supporting it, and (ii) important critiques to it. We propose a new metric called task complexity: the length of the shortest program that achieves a target performance on a task. In this framework, the SAH simply claims that pre-trained models drastically reduce the complexity of achieving high performance on many tasks. Our definition unifies prior arguments supporting the SAH, interpreting them as different strategies to find such short programs. Experimentally, we estimate the task complexity of mathematical reasoning, machine translation, and instruction following; we then show that these complexities can be remarkably low when conditioned on a pre-trained model. Further, we find that pre-training enables access to strong performances on our tasks, but it can require programs of gigabytes of length to access them. Post-training, on the other hand, collapses the complexity of reaching this same performance by several orders of magnitude. Overall, our results highlight that task adaptation often requires surprisingly little information -- often just a few kilobytes.",
-      "published": "2026-02-17T18:59:39Z",
-      "updated": "2026-02-17T18:59:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15829v1"
+      "summary": "The entropy rate of printed English is famously estimated to be about one bit per character, a benchmark that modern large language models (LLMs) have only recently approached. This entropy rate implies that English contains nearly 80 percent redundancy relative to the five bits per character expected for random text. We introduce a statistical model that attempts to capture the intricate multi-scale structure of natural language, providing a first-principles account of this redundancy level. Our model describes a procedure of self-similarly segmenting text into semantically coherent chunks down to the single-word level. The semantic structure of the text can then be hierarchically decomposed, allowing for analytical treatment. Numerical experiments with modern LLMs and open datasets suggest that our model quantitatively captures the structure of real texts at different levels of the semantic hierarchy. The entropy rate predicted by our model agrees with the estimated entropy rate of printed English. Moreover, our theory further reveals that the entropy rate of natural language is not fixed but should increase systematically with the semantic complexity of corpora, which are captured by the only free parameter in our model.",
+      "published": "2026-02-13T18:58:10Z",
+      "updated": "2026-02-18T18:59:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.13194v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15823v1",
-      "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+      "id": "http://arxiv.org/abs/2602.16703v1",
+      "title": "Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology",
       "authors": [
-        "Zarif Ikram",
-        "Arad Firouzkouhi",
-        "Stephen Tu",
-        "Mahdi Soltanolkotabi",
-        "Paria Rashidinejad"
+        "Shen Zhou Hong",
+        "Alex Kleinman",
+        "Alyssa Mathiowetz",
+        "Adam Howes",
+        "Julian Cohen",
+        "Suveer Ganta",
+        "Alex Letizia",
+        "Dora Liao",
+        "Deepika Pahari",
+        "Xavier Roberts-Gaal",
+        "Luca Righetti",
+        "Joe Torres"
       ],
-      "summary": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates editing as constrained optimization and enforces the constraint by projecting edit updates onto the low-curvature subspace of the capability-loss landscape. At the crux of CrispEdit is expressing capability constraint via Bregman divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even when the base model is not trained to convergence. We make this second-order procedure efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector that exploits Kronecker structure to avoid constructing massive projection matrices. Across standard model-editing benchmarks, CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors.",
-      "published": "2026-02-17T18:58:04Z",
-      "updated": "2026-02-17T18:58:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15823v1"
+      "summary": "Large language models (LLMs) perform strongly on biological benchmarks, raising concerns that they may help novice actors acquire dual-use laboratory skills. Yet, whether this translates to improved human performance in the physical laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded, randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs improve novice performance in tasks that collectively model a viral reverse genetics workflow. We observed no significant difference in the primary endpoint of workflow completion (5.2% LLM vs. 6.6% Internet; P = 0.759), nor in the success rate of individual tasks. However, the LLM arm had numerically higher success rates in four of the five tasks, most notably for the cell culture task (68.8% LLM vs. 55.3% Internet; P = 0.059). Post-hoc Bayesian modeling of pooled data estimates an approximate 1.4-fold increase (95% CrI 0.74-2.62) in success for a \"typical\" reverse genetics task under LLM assistance. Ordinal regression modelling suggests that participants in the LLM arm were more likely to progress through intermediate steps across all tasks (posterior probability of a positive effect: 81%-96%). Overall, mid-2025 LLMs did not substantially increase novice completion of complex laboratory procedures but were associated with a modest performance benefit. These results reveal a gap between in silico benchmarks and real-world utility, underscoring the need for physical-world validation of AI biosecurity assessments as model capabilities and user proficiency evolve.",
+      "published": "2026-02-18T18:51:28Z",
+      "updated": "2026-02-18T18:51:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16703v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15819v1",
-      "title": "VideoSketcher: Video Models Prior Enable Versatile Sequential Sketch Generation",
+      "id": "http://arxiv.org/abs/2402.18060v6",
+      "title": "Benchmarking Large Language Models on Answering and Explaining Challenging Medical Questions",
       "authors": [
-        "Hui Ren",
-        "Yuval Alaluf",
-        "Omer Bar Tal",
-        "Alexander Schwing",
-        "Antonio Torralba",
-        "Yael Vinker"
+        "Hanjie Chen",
+        "Zhouxiang Fang",
+        "Yash Singla",
+        "Mark Dredze"
       ],
-      "summary": "Sketching is inherently a sequential process, in which strokes are drawn in a meaningful order to explore and refine ideas. However, most generative models treat sketches as static images, overlooking the temporal structure that underlies creative drawing. We present a data-efficient approach for sequential sketch generation that adapts pretrained text-to-video diffusion models to generate sketching processes. Our key insight is that large language models and video diffusion models offer complementary strengths for this task: LLMs provide semantic planning and stroke ordering, while video diffusion models serve as strong renderers that produce high-quality, temporally coherent visuals. We leverage this by representing sketches as short videos in which strokes are progressively drawn on a blank canvas, guided by text-specified ordering instructions. We introduce a two-stage fine-tuning strategy that decouples the learning of stroke ordering from the learning of sketch appearance. Stroke ordering is learned using synthetic shape compositions with controlled temporal structure, while visual appearance is distilled from as few as seven manually authored sketching processes that capture both global drawing order and the continuous formation of individual strokes. Despite the extremely limited amount of human-drawn sketch data, our method generates high-quality sequential sketches that closely follow text-specified orderings while exhibiting rich visual detail. We further demonstrate the flexibility of our approach through extensions such as brush style conditioning and autoregressive sketch generation, enabling additional controllability and interactive, collaborative drawing.",
-      "published": "2026-02-17T18:55:03Z",
-      "updated": "2026-02-17T18:55:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15819v1"
+      "summary": "LLMs have demonstrated impressive performance in answering medical questions, such as achieving passing scores on medical licensing examinations. However, medical board exams or general clinical questions do not capture the complexity of realistic clinical cases. Moreover, the lack of reference explanations means we cannot easily evaluate the reasoning of model decisions, a crucial component of supporting doctors in making complex medical decisions. To address these challenges, we construct two new datasets: JAMA Clinical Challenge and Medbullets. Datasets and code are available at https://github.com/HanjieChen/ChallengeClinicalQA. JAMA Clinical Challenge consists of questions based on challenging clinical cases, while Medbullets comprises simulated clinical questions. Both datasets are structured as multiple-choice question-answering tasks, accompanied by expert-written explanations. We evaluate seven LLMs on the two datasets using various prompts. Experiments demonstrate that our datasets are harder than previous benchmarks. In-depth automatic and human evaluations of model-generated explanations provide insights into the promise and deficiency of LLMs for explainable medical QA.",
+      "published": "2024-02-28T05:44:41Z",
+      "updated": "2026-02-18T18:50:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2402.18060v6"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15809v1",
-      "title": "Decision Quality Evaluation Framework at Pinterest",
+      "id": "http://arxiv.org/abs/2602.16702v1",
+      "title": "Saliency-Aware Multi-Route Thinking: Revisiting Vision-Language Reasoning",
       "authors": [
-        "Yuqi Tian",
-        "Robert Paine",
-        "Attila Dobi",
-        "Kevin O'Sullivan",
-        "Aravindh Manickavasagam",
-        "Faisal Farooq"
+        "Mingjia Shi",
+        "Yinhan He",
+        "Yaochen Zhu",
+        "Jundong Li"
       ],
-      "summary": "Online platforms require robust systems to enforce content safety policies at scale. A critical component of these systems is the ability to evaluate the quality of moderation decisions made by both human agents and Large Language Models (LLMs). However, this evaluation is challenging due to the inherent trade-offs between cost, scale, and trustworthiness, along with the complexity of evolving policies. To address this, we present a comprehensive Decision Quality Evaluation Framework developed and deployed at Pinterest. The framework is centered on a high-trust Golden Set (GDS) curated by subject matter experts (SMEs), which serves as a ground truth benchmark. We introduce an automated intelligent sampling pipeline that uses propensity scores to efficiently expand dataset coverage. We demonstrate the framework's practical application in several key areas: benchmarking the cost-performance trade-offs of various LLM agents, establishing a rigorous methodology for data-driven prompt optimization, managing complex policy evolution, and ensuring the integrity of policy content prevalence metrics via continuous validation. The framework enables a shift from subjective assessments to a data-driven and quantitative practice for managing content safety systems.",
-      "published": "2026-02-17T18:45:55Z",
-      "updated": "2026-02-17T18:45:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15809v1"
+      "summary": "Vision-language models (VLMs) aim to reason by jointly leveraging visual and textual modalities. While allocating additional inference-time computation has proven effective for large language models (LLMs), achieving similar scaling in VLMs remains challenging. A key obstacle is that visual inputs are typically provided only once at the start of generation, while textual reasoning (e.g., early visual summaries) is generated autoregressively, causing reasoning to become increasingly text-dominated and allowing early visual grounding errors to accumulate. Moreover, vanilla guidance for visual grounding during inference is often coarse and noisy, making it difficult to steer reasoning over long texts. To address these challenges, we propose \\emph{Saliency-Aware Principle} (SAP) selection. SAP operates on high-level reasoning principles rather than token-level trajectories, which enable stable control over discrete generation under noisy feedback while allowing later reasoning steps to re-consult visual evidence when renewed grounding is required. In addition, SAP supports multi-route inference, enabling parallel exploration of diverse reasoning behaviors. SAP is model-agnostic and data-free, requiring no additional training. Empirical results show that SAP achieves competitive performance, especially in reducing object hallucination, under comparable token-generation budgets while yielding more stable reasoning and lower response latency than CoT-style long sequential reasoning.",
+      "published": "2026-02-18T18:49:56Z",
+      "updated": "2026-02-18T18:49:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16702v1"
     },
     {
-      "id": "http://arxiv.org/abs/2502.00225v3",
-      "title": "Should You Use Your Large Language Model to Explore or Exploit?",
+      "id": "http://arxiv.org/abs/2602.16698v1",
+      "title": "Causality is Key for Interpretability Claims to Generalise",
       "authors": [
-        "Keegan Harris",
-        "Aleksandrs Slivkins"
+        "Shruti Joshi",
+        "Aaron Mueller",
+        "David Klindt",
+        "Wieland Brendel",
+        "Patrik Reizinger",
+        "Dhanya Sridhar"
       ],
-      "summary": "We evaluate the ability of the current generation of large language models (LLMs) to help a decision-making agent facing an exploration-exploitation tradeoff. While previous work has largely study the ability of LLMs to solve combined exploration-exploitation tasks, we take a more systematic approach and use LLMs to explore and exploit in silos in various (contextual) bandit tasks. We find that reasoning models show the most promise for solving exploitation tasks, although they are still too expensive or too slow to be used in many practical settings. Motivated by this, we study tool use and in-context summarization using non-reasoning models. We find that these mitigations may be used to substantially improve performance on medium-difficulty tasks, however even then, all LLMs we study perform worse than a simple linear regression, even in non-linear settings. On the other hand, we find that LLMs do help at exploring large action spaces with inherent semantics, by suggesting suitable candidates to explore.",
-      "published": "2025-01-31T23:42:53Z",
-      "updated": "2026-02-17T18:41:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2502.00225v3"
+      "summary": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
+      "published": "2026-02-18T18:45:04Z",
+      "updated": "2026-02-18T18:45:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16698v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.08437v4",
-      "title": "Large Language Models and Impossible Language Acquisition: \"False Promise\" or an Overturn of our Current Perspective towards AI",
+      "id": "http://arxiv.org/abs/2602.16671v1",
+      "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
       "authors": [
-        "Ziyan Wang",
-        "Longlong Ma"
+        "Jaid Monwar Chowdhury",
+        "Chi-An Fu",
+        "Reyhaneh Jabbarvand"
       ],
-      "summary": "In Chomsky's provocative critique \"The False Promise of CHATGPT,\" Large Language Models (LLMs) are characterized as mere pattern predictors that do not acquire languages via intrinsic causal and self-correction structures like humans, therefore are not able to distinguish impossible languages. It stands as a representative in a fundamental challenge to the intellectual foundations of AI, for it integrally synthesizes major issues in methodologies within LLMs and possesses an iconic a priori rationalist perspective. We examine this famous critique from both the perspective in pre-existing literature of linguistics and psychology as well as a research based on an experiment inquiring into the capacity of learning both possible and impossible languages among LLMs. We constructed a set of syntactically impossible languages by applying certain transformations to English. These include reversing whole sentences, and adding negation based on word-count parity. Two rounds of controlled experiments were each conducted on GPT-2 small models and long short-term memory (LSTM) models. Statistical analysis (Welch's t-test) shows GPT2 small models underperform in learning all of the impossible languages compared to their performance on the possible language (p<.001). On the other hand, LSTM models' performance tallies with Chomsky's argument, suggesting the irreplaceable role of the evolution of transformer architecture. Based on theoretical analysis and empirical findings, we propose a new vision within Chomsky's theory towards LLMs, and a shift of theoretical paradigm outside Chomsky, from his \"rationalist-romantics\" paradigm to functionalism and empiricism in LLMs research.",
-      "published": "2026-02-09T09:50:12Z",
-      "updated": "2026-02-17T18:26:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.08437v4"
+      "summary": "Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.",
+      "published": "2026-02-18T18:09:03Z",
+      "updated": "2026-02-18T18:09:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16671v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15791v1",
-      "title": "Enhancing Building Semantics Preservation in AI Model Training with Large Language Model Encodings",
+      "id": "http://arxiv.org/abs/2602.16660v1",
+      "title": "Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for LLM Safety Alignment",
       "authors": [
-        "Suhyung Jang",
-        "Ghang Lee",
-        "Jaekun Lee",
-        "Hyunjun Lee"
+        "Yuyan Bu",
+        "Xiaohao Liu",
+        "ZhaoXing Ren",
+        "Yaodong Yang",
+        "Juntao Dai"
       ],
-      "summary": "Accurate representation of building semantics, encompassing both generic object types and specific subtypes, is essential for effective AI model training in the architecture, engineering, construction, and operation (AECO) industry. Conventional encoding methods (e.g., one-hot) often fail to convey the nuanced relationships among closely related subtypes, limiting AI's semantic comprehension. To address this limitation, this study proposes a novel training approach that employs large language model (LLM) embeddings (e.g., OpenAI GPT and Meta LLaMA) as encodings to preserve finer distinctions in building semantics. We evaluated the proposed method by training GraphSAGE models to classify 42 building object subtypes across five high-rise residential building information models (BIMs). Various embedding dimensions were tested, including original high-dimensional LLM embeddings (1,536, 3,072, or 4,096) and 1,024-dimensional compacted embeddings generated via the Matryoshka representation model. Experimental results demonstrated that LLM encodings outperformed the conventional one-hot baseline, with the llama-3 (compacted) embedding achieving a weighted average F1-score of 0.8766, compared to 0.8475 for one-hot encoding. The results underscore the promise of leveraging LLM-based encodings to enhance AI's ability to interpret complex, domain-specific building semantics. As the capabilities of LLMs and dimensionality reduction techniques continue to evolve, this approach holds considerable potential for broad application in semantic elaboration tasks throughout the AECO industry.",
-      "published": "2026-02-17T18:26:36Z",
-      "updated": "2026-02-17T18:26:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15791v1"
+      "summary": "The widespread deployment of large language models (LLMs) across linguistic communities necessitates reliable multilingual safety alignment. However, recent efforts to extend alignment to other languages often require substantial resources, either through large-scale, high-quality supervision in the target language or through pairwise alignment with high-resource languages, which limits scalability. In this work, we propose a resource-efficient method for improving multilingual safety alignment. We introduce a plug-and-play Multi-Lingual Consistency (MLC) loss that can be integrated into existing monolingual alignment pipelines. By improving collinearity between multilingual representation vectors, our method encourages directional consistency at the multilingual semantic level in a single update. This allows simultaneous alignment across multiple languages using only multilingual prompt variants without requiring additional response-level supervision in low-resource languages. We validate the proposed method across different model architectures and alignment paradigms, and demonstrate its effectiveness in enhancing multilingual safety with limited impact on general model utility. Further evaluation across languages and tasks indicates improved cross-lingual generalization, suggesting the proposed approach as a practical solution for multilingual consistency alignment under limited supervision.",
+      "published": "2026-02-18T18:01:23Z",
+      "updated": "2026-02-18T18:01:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16660v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15785v1",
-      "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
+      "id": "http://arxiv.org/abs/2602.16650v1",
+      "title": "Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System",
       "authors": [
-        "Jessica Hullman",
-        "David Broska",
-        "Huaman Sun",
-        "Aaron Shaw"
+        "Sonakshi Gupta",
+        "Akhlak Mahmood",
+        "Wei Xiong",
+        "Rampi Ramprasad"
       ],
-      "summary": "A growing literature uses large language models (LLMs) as synthetic participants to generate cost-effective and nearly instantaneous responses in social science experiments. However, there is limited guidance on when such simulations support valid inference about human behavior. We contrast two strategies for obtaining valid estimates of causal effects and clarify the assumptions under which each is suitable for exploratory versus confirmatory research. Heuristic approaches seek to establish that simulated and observed human behavior are interchangeable through prompt engineering, model fine-tuning, and other repair strategies designed to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. In contrast, statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses. Under explicit assumptions, statistical calibration preserves validity and provides more precise estimates of causal effects at lower cost than experiments that rely solely on human participants. Yet the potential of both approaches depends on how well LLMs approximate the relevant populations. We consider what opportunities are overlooked when researchers focus myopically on substituting LLMs for human participants in a study.",
-      "published": "2026-02-17T18:18:38Z",
-      "updated": "2026-02-17T18:18:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15785v1"
+      "summary": "Polymer literature contains a large and growing body of experimental knowledge, yet much of it is buried in unstructured text and inconsistent terminology, making systematic retrieval and reasoning difficult. Existing tools typically extract narrow, study-specific facts in isolation, failing to preserve the cross-study context required to answer broader scientific questions. Retrieval-augmented generation (RAG) offers a promising way to overcome this limitation by combining large language models (LLMs) with external retrieval, but its effectiveness depends strongly on how domain knowledge is represented. In this work, we develop two retrieval pipelines: a dense semantic vector-based approach (VectorRAG) and a graph-based approach (GraphRAG). Using over 1,000 polyhydroxyalkanoate (PHA) papers, we construct context-preserving paragraph embeddings and a canonicalized structured knowledge graph supporting entity disambiguation and multi-hop reasoning. We evaluate these pipelines through standard retrieval metrics, comparisons with general state-of-the-art systems such as GPT and Gemini, and qualitative validation by a domain chemist. The results show that GraphRAG achieves higher precision and interpretability, while VectorRAG provides broader recall, highlighting complementary trade-offs. Expert validation further confirms that the tailored pipelines, particularly GraphRAG, produce well-grounded, citation-reliable responses with strong domain relevance. By grounding every statement in evidence, these systems enable researchers to navigate the literature, compare findings across studies, and uncover patterns that are difficult to extract manually. More broadly, this work establishes a practical framework for building materials science assistants using curated corpora and retrieval design, reducing reliance on proprietary models while enabling trustworthy literature analysis at scale.",
+      "published": "2026-02-18T17:46:09Z",
+      "updated": "2026-02-18T17:46:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16650v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15781v1",
-      "title": "Neural Scaling Laws for Boosted Jet Tagging",
+      "id": "http://arxiv.org/abs/2602.16640v1",
+      "title": "Quecto-V1: Empirical Analysis of 8-bit Quantized Small Language Models for On-Device Legal Retrieval",
       "authors": [
-        "Matthias Vigl",
-        "Nicole Hartman",
-        "Michael Kagan",
-        "Lukas Heinrich"
+        "Subrit Dikshit"
       ],
-      "summary": "The success of Large Language Models (LLMs) has established that scaling compute, through joint increases in model capacity and dataset size, is the primary driver of performance in modern machine learning. While machine learning has long been an integral component of High Energy Physics (HEP) data analysis workflows, the compute used to train state-of-the-art HEP models remains orders of magnitude below that of industry foundation models. With scaling laws only beginning to be studied in the field, we investigate neural scaling laws for boosted jet classification using the public JetClass dataset. We derive compute optimal scaling laws and identify an effective performance limit that can be consistently approached through increased compute. We study how data repetition, common in HEP where simulation is expensive, modifies the scaling yielding a quantifiable effective dataset size gain. We then study how the scaling coefficients and asymptotic performance limits vary with the choice of input features and particle multiplicity, demonstrating that increased compute reliably drives performance toward an asymptotic limit, and that more expressive, lower-level features can raise the performance limit and improve results at fixed dataset size.",
-      "published": "2026-02-17T18:13:01Z",
-      "updated": "2026-02-17T18:13:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15781v1"
+      "summary": "The rapid proliferation of Large Language Models (LLMs) has revolutionized Natural Language Processing (NLP) but has simultaneously created a \"resource divide.\" State-of-the-art legal intelligence systems typically rely on massive parameter counts (7B+) and cloud-based inference, rendering them inaccessible to practitioners in resource-constrained environments and posing significant data sovereignty risks. This paper introduces Quecto-V1, a domain-specific Small Language Model (SLM) engineered to democratize access to Indian legal intelligence. Built upon a custom configuration of the GPT-2 architecture (124 million parameters), Quecto-V1 was trained from scratch exclusively on a corpus of Indian statutes, including the Indian Penal Code (IPC), the Code of Criminal Procedure (CrPC), and the Constitution of India. Unlike generalist models, which prioritize broad world knowledge, our approach maximizes \"lexical density\" within the legal domain. Furthermore, we address the deployment bottleneck by applying post-training 8-bit quantization (GGUF format), compressing the model to a memory footprint of under 150 MB. Our empirical analysis demonstrates that Quecto-V1 achieves high fidelity in retrieving statutory definitions and penal provisions, outperforming general-purpose SLMs in domain-specific exact match tasks while running entirely offline on consumer-grade CPUs. We further present an ablation study showing that 8-bit quantization yields a 74% reduction in model size with less than 3.5% degradation in retrieval accuracy compared to full-precision baselines. These findings suggest that for specialized, high-stakes domains like law, domain-specific training coupled with aggressive quantization offers a viable, privacy-preserving alternative to monolithic cloud models.",
+      "published": "2026-02-18T17:29:43Z",
+      "updated": "2026-02-18T17:29:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16640v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15769v1",
-      "title": "ViTaB-A: Evaluating Multimodal Large Language Models on Visual Table Attribution",
+      "id": "http://arxiv.org/abs/2602.16639v1",
+      "title": "AREG: Adversarial Resource Extraction Game for Evaluating Persuasion and Resistance in Large Language Models",
       "authors": [
-        "Yahia Alqurnawi",
-        "Preetom Biswas",
-        "Anmol Rao",
-        "Tejas Anvekar",
-        "Chitta Baral",
-        "Vivek Gupta"
+        "Adib Sakhawat",
+        "Fardeen Sadab"
       ],
-      "summary": "Multimodal Large Language Models (mLLMs) are often used to answer questions in structured data such as tables in Markdown, JSON, and images. While these models can often give correct answers, users also need to know where those answers come from. In this work, we study structured data attribution/citation, which is the ability of the models to point to the specific rows and columns that support an answer. We evaluate several mLLMs across different table formats and prompting strategies. Our results show a clear gap between question answering and evidence attribution. Although question answering accuracy remains moderate, attribution accuracy is much lower, near random for JSON inputs, across all models. We also find that models are more reliable at citing rows than columns, and struggle more with textual formats than images. Finally, we observe notable differences across model families. Overall, our findings show that current mLLMs are unreliable at providing fine-grained, trustworthy attribution for structured data, which limits their usage in applications requiring transparency and traceability.",
-      "published": "2026-02-17T18:01:35Z",
-      "updated": "2026-02-17T18:01:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15769v1"
+      "summary": "Evaluating the social intelligence of Large Language Models (LLMs) increasingly requires moving beyond static text generation toward dynamic, adversarial interaction. We introduce the Adversarial Resource Extraction Game (AREG), a benchmark that operationalizes persuasion and resistance as a multi-turn, zero-sum negotiation over financial resources. Using a round-robin tournament across frontier models, AREG enables joint evaluation of offensive (persuasion) and defensive (resistance) capabilities within a single interactional framework. Our analysis provides evidence that these capabilities are weakly correlated ($ρ= 0.33$) and empirically dissociated: strong persuasive performance does not reliably predict strong resistance, and vice versa. Across all evaluated models, resistance scores exceed persuasion scores, indicating a systematic defensive advantage in adversarial dialogue settings. Further linguistic analysis suggests that interaction structure plays a central role in these outcomes. Incremental commitment-seeking strategies are associated with higher extraction success, while verification-seeking responses are more prevalent in successful defenses than explicit refusal. Together, these findings indicate that social influence in LLMs is not a monolithic capability and that evaluation frameworks focusing on persuasion alone may overlook asymmetric behavioral vulnerabilities.",
+      "published": "2026-02-18T17:28:28Z",
+      "updated": "2026-02-18T17:28:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16639v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.02954v6",
-      "title": "Mutation-Guided Unit Test Generation with a Large Language Model",
+      "id": "http://arxiv.org/abs/2502.07274v5",
+      "title": "Forget Forgetting: Continual Learning in a World of Abundant Memory",
       "authors": [
-        "Guancheng Wang",
-        "Qinghua Xu",
-        "Lionel C. Briand",
-        "Kui Liu"
+        "Dongkyu Cho",
+        "Taesup Moon",
+        "Rumi Chunara",
+        "Kyunghyun Cho",
+        "Sungmin Cha"
       ],
-      "summary": "Unit tests play a vital role in uncovering potential faults in software. While tools like EvoSuite focus on maximizing code coverage, recent advances in large language models (LLMs) have shifted attention toward LLM-based test generation. However, code coverage metrics -- such as line and branch coverage -- remain overly emphasized in reported research, despite being weak indicators of a test suite's fault-detection capability. In contrast, mutation score offers a more reliable and stringent measure, as demonstrated in our findings where some test suites achieve 100% coverage but only 4% mutation score. Although a few studies consider mutation score, the effectiveness of LLMs in killing mutants remains underexplored. In this paper, we propose MUTGEN, a mutation-guided, LLM-based test generation approach that incorporates mutation feedback directly into the prompt. Evaluated on 204 subjects from two benchmarks, MUTGEN significantly outperforms both EvoSuite and vanilla prompt-based strategies in terms of mutation score. Furthermore, MUTGEN introduces an iterative generation mechanism that pushes the limits of LLMs in killing additional mutants. Our study also provide insights into the limitations of LLM-based generation, analyzing the reasons for live and uncovered mutants, and the impact of different mutation operators on generation effectiveness.",
-      "published": "2025-06-03T14:47:22Z",
-      "updated": "2026-02-17T17:58:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.02954v6"
+      "summary": "Continual learning (CL) has traditionally focused on minimizing exemplar memory, a constraint often misaligned with modern systems where GPU time, not storage, is the primary bottleneck. This paper challenges this paradigm by investigating a more realistic regime: one where memory is abundant enough to mitigate forgetting, but full retraining from scratch remains prohibitively expensive. In this practical \"middle ground\", we find that the core challenge shifts from stability to plasticity, as models become biased toward prior tasks and struggle to learn new ones. Conversely, improved stability allows simple replay baselines to outperform the state-of-the-art methods at a fraction of the GPU cost. To address this newly surfaced trade-off, we propose Weight Space Consolidation, a lightweight method that combines (1) rank-based parameter resets to restore plasticity with (2) weight averaging to enhance stability. Validated on both class-incremental learning with image classifiers and continual instruction tuning with large language models, our approach outperforms strong baselines while matching the low computational cost of replay, offering a scalable alternative to expensive full-retraining. These findings challenge long-standing CL assumptions and establish a new, cost-efficient baseline for real-world CL systems where exemplar memory is no longer the limiting factor.",
+      "published": "2025-02-11T05:40:52Z",
+      "updated": "2026-02-18T17:04:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.07274v5"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15761v1",
-      "title": "A Differential Fuzzing-Based Evaluation of Functional Equivalence in LLM-Generated Code Refactorings",
+      "id": "http://arxiv.org/abs/2602.16610v1",
+      "title": "Who can we trust? LLM-as-a-jury for Comparative Assessment",
       "authors": [
-        "Simantika Bhattacharjee Dristi",
-        "Matthew B. Dwyer"
+        "Mengjie Qian",
+        "Guangzhi Sun",
+        "Mark J. F. Gales",
+        "Kate M. Knill"
       ],
-      "summary": "With the rapid adoption of large language models (LLMs) in automated code refactoring, assessing and ensuring functional equivalence between LLM-generated refactoring and the original implementation becomes critical. While prior work typically relies on predefined test cases to evaluate correctness, in this work, we leverage differential fuzzing to check functional equivalence in LLM-generated code refactorings. Unlike test-based evaluation, a differential fuzzing-based equivalence checker needs no predefined test cases and can explore a much larger input space by executing and comparing thousands of automatically generated test inputs. In a large-scale evaluation of six LLMs (CodeLlama, Codestral, StarChat2, Qwen-2.5, Olmo-3, and GPT-4o) across three datasets and two refactoring types, we find that LLMs show a non-trivial tendency to alter program semantics, producing 19-35% functionally non-equivalent refactorings. Our experiments further demonstrate that about 21% of these non-equivalent refactorings remain undetected by the existing test suites of the three evaluated datasets. Collectively, the findings of this study imply that reliance on existing tests might overestimate functional equivalence in LLM-generated code refactorings, which remain prone to semantic divergence.",
-      "published": "2026-02-17T17:47:13Z",
-      "updated": "2026-02-17T17:47:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15761v1"
+      "summary": "Large language models (LLMs) are increasingly applied as automatic evaluators for natural language generation assessment often using pairwise comparative judgements. Existing approaches typically rely on single judges or aggregate multiple judges assuming equal reliability. In practice, LLM judges vary substantially in performance across tasks and aspects, and their judgment probabilities may be biased and inconsistent. Furthermore, human-labelled supervision for judge calibration may be unavailable. We first empirically demonstrate that inconsistencies in LLM comparison probabilities exist and show that it limits the effectiveness of direct probability-based ranking. To address this, we study the LLM-as-a-jury setting and propose BT-sigma, a judge-aware extension of the Bradley-Terry model that introduces a discriminator parameter for each judge to jointly infer item rankings and judge reliability from pairwise comparisons alone. Experiments on benchmark NLG evaluation datasets show that BT-sigma consistently outperforms averaging-based aggregation methods, and that the learned discriminator strongly correlates with independent measures of the cycle consistency of LLM judgments. Further analysis reveals that BT-sigma can be interpreted as an unsupervised calibration mechanism that improves aggregation by modelling judge reliability.",
+      "published": "2026-02-18T17:04:02Z",
+      "updated": "2026-02-18T17:04:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.16610v1"
     }
   ]
 }
