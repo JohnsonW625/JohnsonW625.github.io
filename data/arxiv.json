@@ -1,183 +1,198 @@
 {
-  "generated_at_utc": "2026-02-20T02:01:44Z",
+  "generated_at_utc": "2026-02-22T02:05:49Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.13194v2",
-      "title": "Semantic Chunking and the Entropy of Natural Language",
+      "id": "http://arxiv.org/abs/2602.17655v1",
+      "title": "What Language is This? Ask Your Tokenizer",
       "authors": [
-        "Weishun Zhong",
-        "Doron Sivan",
-        "Tankut Can",
-        "Mikhail Katkov",
-        "Misha Tsodyks"
+        "Clara Meister",
+        "Ahmetcan Yavuz",
+        "Pietro Lesci",
+        "Tiago Pimentel"
       ],
-      "summary": "The entropy rate of printed English is famously estimated to be about one bit per character, a benchmark that modern large language models (LLMs) have only recently approached. This entropy rate implies that English contains nearly 80 percent redundancy relative to the five bits per character expected for random text. We introduce a statistical model that attempts to capture the intricate multi-scale structure of natural language, providing a first-principles account of this redundancy level. Our model describes a procedure of self-similarly segmenting text into semantically coherent chunks down to the single-word level. The semantic structure of the text can then be hierarchically decomposed, allowing for analytical treatment. Numerical experiments with modern LLMs and open datasets suggest that our model quantitatively captures the structure of real texts at different levels of the semantic hierarchy. The entropy rate predicted by our model agrees with the estimated entropy rate of printed English. Moreover, our theory further reveals that the entropy rate of natural language is not fixed but should increase systematically with the semantic complexity of corpora, which are captured by the only free parameter in our model.",
-      "published": "2026-02-13T18:58:10Z",
-      "updated": "2026-02-18T18:59:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.13194v2"
+      "summary": "Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.",
+      "published": "2026-02-19T18:58:39Z",
+      "updated": "2026-02-19T18:58:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17655v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16703v1",
-      "title": "Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology",
+      "id": "http://arxiv.org/abs/2602.17616v1",
+      "title": "Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs",
       "authors": [
-        "Shen Zhou Hong",
-        "Alex Kleinman",
-        "Alyssa Mathiowetz",
-        "Adam Howes",
-        "Julian Cohen",
-        "Suveer Ganta",
-        "Alex Letizia",
-        "Dora Liao",
-        "Deepika Pahari",
-        "Xavier Roberts-Gaal",
-        "Luca Righetti",
-        "Joe Torres"
+        "Luke Huang",
+        "Zhuoyang Zhang",
+        "Qinghao Hu",
+        "Shang Yang",
+        "Song Han"
       ],
-      "summary": "Large language models (LLMs) perform strongly on biological benchmarks, raising concerns that they may help novice actors acquire dual-use laboratory skills. Yet, whether this translates to improved human performance in the physical laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded, randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs improve novice performance in tasks that collectively model a viral reverse genetics workflow. We observed no significant difference in the primary endpoint of workflow completion (5.2% LLM vs. 6.6% Internet; P = 0.759), nor in the success rate of individual tasks. However, the LLM arm had numerically higher success rates in four of the five tasks, most notably for the cell culture task (68.8% LLM vs. 55.3% Internet; P = 0.059). Post-hoc Bayesian modeling of pooled data estimates an approximate 1.4-fold increase (95% CrI 0.74-2.62) in success for a \"typical\" reverse genetics task under LLM assistance. Ordinal regression modelling suggests that participants in the LLM arm were more likely to progress through intermediate steps across all tasks (posterior probability of a positive effect: 81%-96%). Overall, mid-2025 LLMs did not substantially increase novice completion of complex laboratory procedures but were associated with a modest performance benefit. These results reveal a gap between in silico benchmarks and real-world utility, underscoring the need for physical-world validation of AI biosecurity assessments as model capabilities and user proficiency evolve.",
-      "published": "2026-02-18T18:51:28Z",
-      "updated": "2026-02-18T18:51:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16703v1"
+      "summary": "Reinforcement learning (RL) is widely used to improve large language models on reasoning tasks, and asynchronous RL training is attractive because it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient estimator markedly $\\textbf{higher variance}$: training on stale rollouts creates heavy-tailed importance ratios, causing a small fraction of samples to dominate updates. This amplification makes gradients noisy and learning unstable relative to matched on-policy training. Across math and general reasoning benchmarks, we find collapse is reliably predicted by effective sample size (ESS) and unstable gradient norms. Motivated by this diagnosis, we propose $\\textbf{V}$ariance $\\textbf{C}$ontrolled $\\textbf{P}$olicy $\\textbf{O}$ptimization ($\\textbf{VCPO}$), a general stabilization method for REINFORCE/GRPO-style algorithms that (i) scales learning rate based on effective sample size to dampen unreliable updates, and (ii) applies a closed-form minimum-variance baseline for the off-policy setting, avoiding an auxiliary value model and adding minimal overhead. Empirically, VCPO substantially improves robustness for asynchronous training across math, general reasoning, and tool-use tasks, outperforming a broad suite of baselines spanning masking/clipping stabilizers and algorithmic variants. This reduces long-context, multi-turn training time by 2.5$\\times$ while matching synchronous performance, demonstrating that explicit control of policy-gradient variance is key for reliable asynchronous RL at scale.",
+      "published": "2026-02-19T18:40:51Z",
+      "updated": "2026-02-19T18:40:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17616v1"
     },
     {
-      "id": "http://arxiv.org/abs/2402.18060v6",
-      "title": "Benchmarking Large Language Models on Answering and Explaining Challenging Medical Questions",
+      "id": "http://arxiv.org/abs/2505.02819v4",
+      "title": "ReplaceMe: Network Simplification via Depth Pruning and Transformer Block Linearization",
       "authors": [
-        "Hanjie Chen",
-        "Zhouxiang Fang",
-        "Yash Singla",
-        "Mark Dredze"
+        "Dmitriy Shopkhoev",
+        "Ammar Ali",
+        "Magauiya Zhussip",
+        "Valentin Malykh",
+        "Stamatios Lefkimmiatis",
+        "Nikos Komodakis",
+        "Sergey Zagoruyko"
       ],
-      "summary": "LLMs have demonstrated impressive performance in answering medical questions, such as achieving passing scores on medical licensing examinations. However, medical board exams or general clinical questions do not capture the complexity of realistic clinical cases. Moreover, the lack of reference explanations means we cannot easily evaluate the reasoning of model decisions, a crucial component of supporting doctors in making complex medical decisions. To address these challenges, we construct two new datasets: JAMA Clinical Challenge and Medbullets. Datasets and code are available at https://github.com/HanjieChen/ChallengeClinicalQA. JAMA Clinical Challenge consists of questions based on challenging clinical cases, while Medbullets comprises simulated clinical questions. Both datasets are structured as multiple-choice question-answering tasks, accompanied by expert-written explanations. We evaluate seven LLMs on the two datasets using various prompts. Experiments demonstrate that our datasets are harder than previous benchmarks. In-depth automatic and human evaluations of model-generated explanations provide insights into the promise and deficiency of LLMs for explainable medical QA.",
-      "published": "2024-02-28T05:44:41Z",
-      "updated": "2026-02-18T18:50:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2402.18060v6"
+      "summary": "We introduce ReplaceMe, a generalized training-free depth pruning method that effectively replaces transformer blocks with a linear operation, while maintaining high performance for low compression ratios. In contrast to conventional pruning approaches that require additional training or fine-tuning, our approach requires only a small calibration dataset that is used to estimate a linear transformation, which approximates the pruned blocks. The estimated linear mapping can be seamlessly merged with the remaining transformer blocks, eliminating the need for any additional network parameters. Our experiments show that ReplaceMe consistently outperforms other training-free approaches and remains highly competitive with state-of-the-art pruning methods that involve extensive retraining/fine-tuning and architectural modifications. Applied to several large language models (LLMs), ReplaceMe achieves up to 25\\% pruning while retaining approximately 90\\% of the original model's performance on open benchmarks - without any training or healing steps, resulting in minimal computational overhead. We provide an open-source library implementing ReplaceMe alongside several state-of-the-art depth pruning techniques, available at https://github.com/mts-ai/ReplaceMe",
+      "published": "2025-05-05T17:47:42Z",
+      "updated": "2026-02-19T18:32:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.02819v4"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16702v1",
-      "title": "Saliency-Aware Multi-Route Thinking: Revisiting Vision-Language Reasoning",
+      "id": "http://arxiv.org/abs/2602.17608v1",
+      "title": "Towards Anytime-Valid Statistical Watermarking",
       "authors": [
-        "Mingjia Shi",
-        "Yinhan He",
-        "Yaochen Zhu",
-        "Jundong Li"
+        "Baihe Huang",
+        "Eric Xu",
+        "Kannan Ramchandran",
+        "Jiantao Jiao",
+        "Michael I. Jordan"
       ],
-      "summary": "Vision-language models (VLMs) aim to reason by jointly leveraging visual and textual modalities. While allocating additional inference-time computation has proven effective for large language models (LLMs), achieving similar scaling in VLMs remains challenging. A key obstacle is that visual inputs are typically provided only once at the start of generation, while textual reasoning (e.g., early visual summaries) is generated autoregressively, causing reasoning to become increasingly text-dominated and allowing early visual grounding errors to accumulate. Moreover, vanilla guidance for visual grounding during inference is often coarse and noisy, making it difficult to steer reasoning over long texts. To address these challenges, we propose \\emph{Saliency-Aware Principle} (SAP) selection. SAP operates on high-level reasoning principles rather than token-level trajectories, which enable stable control over discrete generation under noisy feedback while allowing later reasoning steps to re-consult visual evidence when renewed grounding is required. In addition, SAP supports multi-route inference, enabling parallel exploration of diverse reasoning behaviors. SAP is model-agnostic and data-free, requiring no additional training. Empirical results show that SAP achieves competitive performance, especially in reducing object hallucination, under comparable token-generation budgets while yielding more stable reasoning and lower response latency than CoT-style long sequential reasoning.",
-      "published": "2026-02-18T18:49:56Z",
-      "updated": "2026-02-18T18:49:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16702v1"
+      "summary": "The proliferation of Large Language Models (LLMs) necessitates efficient mechanisms to distinguish machine-generated content from human text. While statistical watermarking has emerged as a promising solution, existing methods suffer from two critical limitations: the lack of a principled approach for selecting sampling distributions and the reliance on fixed-horizon hypothesis testing, which precludes valid early stopping. In this paper, we bridge this gap by developing the first e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal sampling with anytime-valid inference. Unlike traditional approaches where optional stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference by constructing a test supermartingale for the detection process. By leveraging an anchor distribution to approximate the target model, we characterize the optimal e-value with respect to the worst-case log-growth rate and derive the optimal expected stopping time. Our theoretical claims are substantiated by simulations and evaluations on established benchmarks, showing that our framework can significantly enhance sample efficiency, reducing the average token budget required for detection by 13-15% relative to state-of-the-art baselines.",
+      "published": "2026-02-19T18:32:26Z",
+      "updated": "2026-02-19T18:32:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17608v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16698v1",
-      "title": "Causality is Key for Interpretability Claims to Generalise",
+      "id": "http://arxiv.org/abs/2509.22075v4",
+      "title": "CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning",
       "authors": [
-        "Shruti Joshi",
-        "Aaron Mueller",
-        "David Klindt",
-        "Wieland Brendel",
-        "Patrik Reizinger",
-        "Dhanya Sridhar"
+        "Denis Makhov",
+        "Dmitriy Shopkhoev",
+        "Magauiya Zhussip",
+        "Ammar Ali",
+        "Stamatios Lefkimmiatis"
       ],
-      "summary": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
-      "published": "2026-02-18T18:45:04Z",
-      "updated": "2026-02-18T18:45:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16698v1"
+      "summary": "Post-training compression of large language models (LLMs) often relies on low-rank weight approximations that represent each column of the weight matrix in a shared low-dimensional subspace. This strategy is computationally efficient but the underlying constraint can be overly rigid for heterogeneous projection weights and may incur avoidable accuracy loss. We propose CoSpaDi (Compression via Sparse Dictionary Learning), a training-free framework that replaces low-rank factorization with a structured sparse decomposition in which each weight matrix is represented as a dense dictionary multiplied by a column-sparse coefficient matrix. This yields a union-of-subspaces model: the columns of the weight matrix are represented as linear combinations of different subsets of dictionary atoms, improving expressiveness at a fixed parameter budget. CoSpaDi is calibration-guided: using a small calibration set, we optimize the factorization to minimize functional reconstruction error of layer outputs rather than weight-space error. An activation-derived Gram orthonormalization reformulates this data-aware objective into a standard dictionary learning problem on transformed weights, and we support both per-layer compression and cross-layer dictionary sharing within groups of similar projections. Across Llama and Qwen model families, CoSpaDi consistently improves the accuracy--compression and perplexity--compression trade-offs over state-of-the-art SVD-based baselines and strong structured pruning baselines at 20-40\\% compression ratios. The resulting structured sparsity enables sparse--dense computation and integrates with post-training quantization of the sparse coefficients.",
+      "published": "2025-09-26T08:55:09Z",
+      "updated": "2026-02-19T17:30:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.22075v4"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16671v1",
-      "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
+      "id": "http://arxiv.org/abs/2602.17560v1",
+      "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
       "authors": [
-        "Jaid Monwar Chowdhury",
-        "Chi-An Fu",
-        "Reyhaneh Jabbarvand"
+        "Hongjue Zhao",
+        "Haosen Sun",
+        "Jiangtao Kong",
+        "Xiaochang Li",
+        "Qineng Wang",
+        "Liwei Jiang",
+        "Qi Zhu",
+        "Tarek Abdelzaher",
+        "Yejin Choi",
+        "Manling Li",
+        "Huajie Shao"
       ],
-      "summary": "Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.",
-      "published": "2026-02-18T18:09:03Z",
-      "updated": "2026-02-18T18:09:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16671v1"
+      "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for guiding the design of steering directions, and \\textit{(ii)} an over-reliance on \\textit{one-step steering} that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based \\textit{theoretical} framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a \\textit{barrier function} from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows \\textit{empirical} advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for \\textit{multi-step and adaptive} steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\\%$ improvement over TruthfulQA, $2.5\\%$ over UltraFeedback, and $2.4\\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical foundations via ODEs, and validating it empirically through the proposed ODESteer method.",
+      "published": "2026-02-19T17:13:44Z",
+      "updated": "2026-02-19T17:13:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17560v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16660v1",
-      "title": "Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for LLM Safety Alignment",
+      "id": "http://arxiv.org/abs/2406.04220v6",
+      "title": "BEADs: Bias Evaluation Across Domains",
       "authors": [
-        "Yuyan Bu",
-        "Xiaohao Liu",
-        "ZhaoXing Ren",
-        "Yaodong Yang",
-        "Juntao Dai"
+        "Shaina Raza",
+        "Mizanur Rahman",
+        "Michael R. Zhang"
       ],
-      "summary": "The widespread deployment of large language models (LLMs) across linguistic communities necessitates reliable multilingual safety alignment. However, recent efforts to extend alignment to other languages often require substantial resources, either through large-scale, high-quality supervision in the target language or through pairwise alignment with high-resource languages, which limits scalability. In this work, we propose a resource-efficient method for improving multilingual safety alignment. We introduce a plug-and-play Multi-Lingual Consistency (MLC) loss that can be integrated into existing monolingual alignment pipelines. By improving collinearity between multilingual representation vectors, our method encourages directional consistency at the multilingual semantic level in a single update. This allows simultaneous alignment across multiple languages using only multilingual prompt variants without requiring additional response-level supervision in low-resource languages. We validate the proposed method across different model architectures and alignment paradigms, and demonstrate its effectiveness in enhancing multilingual safety with limited impact on general model utility. Further evaluation across languages and tasks indicates improved cross-lingual generalization, suggesting the proposed approach as a practical solution for multilingual consistency alignment under limited supervision.",
-      "published": "2026-02-18T18:01:23Z",
-      "updated": "2026-02-18T18:01:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16660v1"
+      "summary": "Recent advances in large language models (LLMs) have substantially improved natural language processing (NLP) applications. However, these models often inherit and amplify biases present in their training data. Although several datasets exist for bias detection, most are limited to one or two NLP tasks, typically classification or evaluation and do not provide broad coverage across diverse task settings. To address this gap, we introduce the \\textbf{Bias Evaluations Across Domains} (\\textbf{B}\\texttt{EADs}) dataset, designed to support a wide range of NLP tasks, including text classification, token classification, bias quantification, and benign language generation. A key contribution of this work is a gold-standard annotation scheme that supports both evaluation and supervised training of language models. Experiments on state-of-the-art models reveal some gaps: some models exhibit systematic bias toward specific demographics, while others apply safety guardrails more strictly or inconsistently across groups. Overall, these results highlight persistent shortcomings in current models and underscore the need for comprehensive bias evaluation. Project: https://vectorinstitute.github.io/BEAD/ Data: https://huggingface.co/datasets/shainar/BEAD",
+      "published": "2024-06-06T16:18:30Z",
+      "updated": "2026-02-19T17:12:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.04220v6"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16650v1",
-      "title": "Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System",
+      "id": "http://arxiv.org/abs/2602.17558v1",
+      "title": "RetouchIQ: MLLM Agents for Instruction-Based Image Retouching with Generalist Reward",
       "authors": [
-        "Sonakshi Gupta",
-        "Akhlak Mahmood",
-        "Wei Xiong",
-        "Rampi Ramprasad"
+        "Qiucheng Wu",
+        "Jing Shi",
+        "Simon Jenni",
+        "Kushal Kafle",
+        "Tianyu Wang",
+        "Shiyu Chang",
+        "Handong Zhao"
       ],
-      "summary": "Polymer literature contains a large and growing body of experimental knowledge, yet much of it is buried in unstructured text and inconsistent terminology, making systematic retrieval and reasoning difficult. Existing tools typically extract narrow, study-specific facts in isolation, failing to preserve the cross-study context required to answer broader scientific questions. Retrieval-augmented generation (RAG) offers a promising way to overcome this limitation by combining large language models (LLMs) with external retrieval, but its effectiveness depends strongly on how domain knowledge is represented. In this work, we develop two retrieval pipelines: a dense semantic vector-based approach (VectorRAG) and a graph-based approach (GraphRAG). Using over 1,000 polyhydroxyalkanoate (PHA) papers, we construct context-preserving paragraph embeddings and a canonicalized structured knowledge graph supporting entity disambiguation and multi-hop reasoning. We evaluate these pipelines through standard retrieval metrics, comparisons with general state-of-the-art systems such as GPT and Gemini, and qualitative validation by a domain chemist. The results show that GraphRAG achieves higher precision and interpretability, while VectorRAG provides broader recall, highlighting complementary trade-offs. Expert validation further confirms that the tailored pipelines, particularly GraphRAG, produce well-grounded, citation-reliable responses with strong domain relevance. By grounding every statement in evidence, these systems enable researchers to navigate the literature, compare findings across studies, and uncover patterns that are difficult to extract manually. More broadly, this work establishes a practical framework for building materials science assistants using curated corpora and retrieval design, reducing reliance on proprietary models while enabling trustworthy literature analysis at scale.",
-      "published": "2026-02-18T17:46:09Z",
-      "updated": "2026-02-18T17:46:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16650v1"
+      "summary": "Recent advances in multimodal large language models (MLLMs) have shown great potential for extending vision-language reasoning to professional tool-based image editing, enabling intuitive and creative editing. A promising direction is to use reinforcement learning (RL) to enable MLLMs to reason about and execute optimal tool-use plans within professional image-editing software. However, training remains challenging due to the lack of reliable, verifiable reward signals that can reflect the inherently subjective nature of creative editing. In this work, we introduce RetouchIQ, a framework that performs instruction-based executable image editing through MLLM agents guided by a generalist reward model. RetouchIQ interprets user-specified editing intentions and generates corresponding, executable image adjustments, bridging high-level aesthetic goals with precise parameter control. To move beyond conventional, rule-based rewards that compute similarity against a fixed reference image using handcrafted metrics, we propose a generalist reward model, an RL fine-tuned MLLM that evaluates edited results through a set of generated metrics on a case-by-case basis. Then, the reward model provides scalar feedback through multimodal reasoning, enabling reinforcement learning with high-quality, instruction-consistent gradients. We curate an extended dataset with 190k instruction-reasoning pairs and establish a new benchmark for instruction-based image editing. Experiments show that RetouchIQ substantially improves both semantic consistency and perceptual quality over previous MLLM-based and diffusion-based editing systems. Our findings demonstrate the potential of generalist reward-driven MLLM agents as flexible, explainable, and executable assistants for professional image editing.",
+      "published": "2026-02-19T17:11:59Z",
+      "updated": "2026-02-19T17:11:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17558v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16640v1",
-      "title": "Quecto-V1: Empirical Analysis of 8-bit Quantized Small Language Models for On-Device Legal Retrieval",
+      "id": "http://arxiv.org/abs/2602.17555v1",
+      "title": "GraphThinker: Reinforcing Video Reasoning with Event Graph Thinking",
       "authors": [
-        "Subrit Dikshit"
+        "Zixu Cheng",
+        "Da Li",
+        "Jian Hu",
+        "Ziquan Liu",
+        "Wei Li",
+        "Shaogang Gong"
       ],
-      "summary": "The rapid proliferation of Large Language Models (LLMs) has revolutionized Natural Language Processing (NLP) but has simultaneously created a \"resource divide.\" State-of-the-art legal intelligence systems typically rely on massive parameter counts (7B+) and cloud-based inference, rendering them inaccessible to practitioners in resource-constrained environments and posing significant data sovereignty risks. This paper introduces Quecto-V1, a domain-specific Small Language Model (SLM) engineered to democratize access to Indian legal intelligence. Built upon a custom configuration of the GPT-2 architecture (124 million parameters), Quecto-V1 was trained from scratch exclusively on a corpus of Indian statutes, including the Indian Penal Code (IPC), the Code of Criminal Procedure (CrPC), and the Constitution of India. Unlike generalist models, which prioritize broad world knowledge, our approach maximizes \"lexical density\" within the legal domain. Furthermore, we address the deployment bottleneck by applying post-training 8-bit quantization (GGUF format), compressing the model to a memory footprint of under 150 MB. Our empirical analysis demonstrates that Quecto-V1 achieves high fidelity in retrieving statutory definitions and penal provisions, outperforming general-purpose SLMs in domain-specific exact match tasks while running entirely offline on consumer-grade CPUs. We further present an ablation study showing that 8-bit quantization yields a 74% reduction in model size with less than 3.5% degradation in retrieval accuracy compared to full-precision baselines. These findings suggest that for specialized, high-stakes domains like law, domain-specific training coupled with aggressive quantization offers a viable, privacy-preserving alternative to monolithic cloud models.",
-      "published": "2026-02-18T17:29:43Z",
-      "updated": "2026-02-18T17:29:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16640v1"
+      "summary": "Video reasoning requires understanding the causal relationships between events in a video. However, such relationships are often implicit and costly to annotate manually. While existing multimodal large language models (MLLMs) often infer event relations through dense captions or video summaries for video reasoning, such modeling still lacks causal understanding. Without explicit causal structure modeling within and across video events, these models suffer from hallucinations during the video reasoning. In this work, we propose GraphThinker, a reinforcement finetuning-based method that constructs structural event-level scene graphs and enhances visual grounding to jointly reduce hallucinations in video reasoning. Specifically, we first employ an MLLM to construct an event-based video scene graph (EVSG) that explicitly models both intra- and inter-event relations, and incorporate these formed scene graphs into the MLLM as an intermediate thinking process. We also introduce a visual attention reward during reinforcement finetuning, which strengthens video grounding and further mitigates hallucinations. We evaluate GraphThinker on two datasets, RexTime and VidHalluc, where it shows superior ability to capture object and event relations with more precise event localization, reducing hallucinations in video reasoning compared to prior methods.",
+      "published": "2026-02-19T17:09:30Z",
+      "updated": "2026-02-19T17:09:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17555v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16639v1",
-      "title": "AREG: Adversarial Resource Extraction Game for Evaluating Persuasion and Resistance in Large Language Models",
+      "id": "http://arxiv.org/abs/2602.17554v1",
+      "title": "A Theoretical Framework for Modular Learning of Robust Generative Models",
       "authors": [
-        "Adib Sakhawat",
-        "Fardeen Sadab"
+        "Corinna Cortes",
+        "Mehryar Mohri",
+        "Yutao Zhong"
       ],
-      "summary": "Evaluating the social intelligence of Large Language Models (LLMs) increasingly requires moving beyond static text generation toward dynamic, adversarial interaction. We introduce the Adversarial Resource Extraction Game (AREG), a benchmark that operationalizes persuasion and resistance as a multi-turn, zero-sum negotiation over financial resources. Using a round-robin tournament across frontier models, AREG enables joint evaluation of offensive (persuasion) and defensive (resistance) capabilities within a single interactional framework. Our analysis provides evidence that these capabilities are weakly correlated ($ρ= 0.33$) and empirically dissociated: strong persuasive performance does not reliably predict strong resistance, and vice versa. Across all evaluated models, resistance scores exceed persuasion scores, indicating a systematic defensive advantage in adversarial dialogue settings. Further linguistic analysis suggests that interaction structure plays a central role in these outcomes. Incremental commitment-seeking strategies are associated with higher extraction success, while verification-seeking responses are more prevalent in successful defenses than explicit refusal. Together, these findings indicate that social influence in LLMs is not a monolithic capability and that evaluation frameworks focusing on persuasion alone may overlook asymmetric behavioral vulnerabilities.",
-      "published": "2026-02-18T17:28:28Z",
-      "updated": "2026-02-18T17:28:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16639v1"
+      "summary": "Training large-scale generative models is resource-intensive and relies heavily on heuristic dataset weighting. We address two fundamental questions: Can we train Large Language Models (LLMs) modularly-combining small, domain-specific experts to match monolithic performance-and can we do so robustly for any data mixture, eliminating heuristic tuning? We present a theoretical framework for modular generative modeling where a set of pre-trained experts are combined via a gating mechanism. We define the space of normalized gating functions, $G_{1}$, and formulate the problem as a minimax game to find a single robust gate that minimizes divergence to the worst-case data mixture. We prove the existence of such a robust gate using Kakutani's fixed-point theorem and show that modularity acts as a strong regularizer, with generalization bounds scaling with the lightweight gate's complexity. Furthermore, we prove that this modular approach can theoretically outperform models retrained on aggregate data, with the gap characterized by the Jensen-Shannon Divergence. Finally, we introduce a scalable Stochastic Primal-Dual algorithm and a Structural Distillation method for efficient inference. Empirical results on synthetic and real-world datasets confirm that our modular architecture effectively mitigates gradient conflict and can robustly outperform monolithic baselines.",
+      "published": "2026-02-19T17:09:13Z",
+      "updated": "2026-02-19T17:09:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17554v1"
     },
     {
-      "id": "http://arxiv.org/abs/2502.07274v5",
-      "title": "Forget Forgetting: Continual Learning in a World of Abundant Memory",
+      "id": "http://arxiv.org/abs/2602.17550v1",
+      "title": "MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning",
       "authors": [
-        "Dongkyu Cho",
-        "Taesup Moon",
-        "Rumi Chunara",
-        "Kyunghyun Cho",
-        "Sungmin Cha"
+        "Xiaoliang Fu",
+        "Jiaye Lin",
+        "Yangyi Fang",
+        "Binbin Zheng",
+        "Chaowen Hu",
+        "Zekai Shao",
+        "Cong Qin",
+        "Lu Pan",
+        "Ke Zeng",
+        "Xunliang Cai"
       ],
-      "summary": "Continual learning (CL) has traditionally focused on minimizing exemplar memory, a constraint often misaligned with modern systems where GPU time, not storage, is the primary bottleneck. This paper challenges this paradigm by investigating a more realistic regime: one where memory is abundant enough to mitigate forgetting, but full retraining from scratch remains prohibitively expensive. In this practical \"middle ground\", we find that the core challenge shifts from stability to plasticity, as models become biased toward prior tasks and struggle to learn new ones. Conversely, improved stability allows simple replay baselines to outperform the state-of-the-art methods at a fraction of the GPU cost. To address this newly surfaced trade-off, we propose Weight Space Consolidation, a lightweight method that combines (1) rank-based parameter resets to restore plasticity with (2) weight averaging to enhance stability. Validated on both class-incremental learning with image classifiers and continual instruction tuning with large language models, our approach outperforms strong baselines while matching the low computational cost of replay, offering a scalable alternative to expensive full-retraining. These findings challenge long-standing CL assumptions and establish a new, cost-efficient baseline for real-world CL systems where exemplar memory is no longer the limiting factor.",
-      "published": "2025-02-11T05:40:52Z",
-      "updated": "2026-02-18T17:04:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2502.07274v5"
+      "summary": "Existing Reinforcement Learning with Verifiable Rewards (RLVR) algorithms, such as GRPO, rely on rigid, uniform, and symmetric trust region mechanisms that are fundamentally misaligned with the complex optimization dynamics of Large Language Models (LLMs). In this paper, we identify three critical challenges in these methods: (1) inefficient gradient utilization caused by the binary cutoff of hard clipping, (2) insensitive probability mass arising from uniform ratio constraints that ignore the token distribution, and (3) asymmetric signal reliability stemming from the disparate credit assignment ambiguity between positive and negative samples. To bridge these gaps, we propose Mass-Adaptive Soft Policy Optimization (MASPO), a unified framework designed to harmonize these three dimensions. MASPO integrates a differentiable soft Gaussian gating to maximize gradient utility, a mass-adaptive limiter to balance exploration across the probability spectrum, and an asymmetric risk controller to align update magnitudes with signal confidence. Extensive evaluations demonstrate that MASPO serves as a robust, all-in-one RLVR solution, significantly outperforming strong baselines. Our code is available at: https://anonymous.4open.science/r/ma1/README.md.",
+      "published": "2026-02-19T17:05:20Z",
+      "updated": "2026-02-19T17:05:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17550v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16610v1",
-      "title": "Who can we trust? LLM-as-a-jury for Comparative Assessment",
+      "id": "http://arxiv.org/abs/2602.17542v1",
+      "title": "Using LLMs for Knowledge Component-level Correctness Labeling in Open-ended Coding Problems",
       "authors": [
-        "Mengjie Qian",
-        "Guangzhi Sun",
-        "Mark J. F. Gales",
-        "Kate M. Knill"
+        "Zhangqi Duan",
+        "Arnav Kankaria",
+        "Dhruv Kartik",
+        "Andrew Lan"
       ],
-      "summary": "Large language models (LLMs) are increasingly applied as automatic evaluators for natural language generation assessment often using pairwise comparative judgements. Existing approaches typically rely on single judges or aggregate multiple judges assuming equal reliability. In practice, LLM judges vary substantially in performance across tasks and aspects, and their judgment probabilities may be biased and inconsistent. Furthermore, human-labelled supervision for judge calibration may be unavailable. We first empirically demonstrate that inconsistencies in LLM comparison probabilities exist and show that it limits the effectiveness of direct probability-based ranking. To address this, we study the LLM-as-a-jury setting and propose BT-sigma, a judge-aware extension of the Bradley-Terry model that introduces a discriminator parameter for each judge to jointly infer item rankings and judge reliability from pairwise comparisons alone. Experiments on benchmark NLG evaluation datasets show that BT-sigma consistently outperforms averaging-based aggregation methods, and that the learned discriminator strongly correlates with independent measures of the cycle consistency of LLM judgments. Further analysis reveals that BT-sigma can be interpreted as an unsupervised calibration mechanism that improves aggregation by modelling judge reliability.",
-      "published": "2026-02-18T17:04:02Z",
-      "updated": "2026-02-18T17:04:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16610v1"
+      "summary": "Fine-grained skill representations, commonly referred to as knowledge components (KCs), are fundamental to many approaches in student modeling and learning analytics. However, KC-level correctness labels are rarely available in real-world datasets, especially for open-ended programming tasks where solutions typically involve multiple KCs simultaneously. Simply propagating problem-level correctness to all associated KCs obscures partial mastery and often leads to poorly fitted learning curves. To address this challenge, we propose an automated framework that leverages large language models (LLMs) to label KC-level correctness directly from student-written code. Our method assesses whether each KC is correctly applied and further introduces a temporal context-aware Code-KC mapping mechanism to better align KCs with individual student code. We evaluate the resulting KC-level correctness labels in terms of learning curve fit and predictive performance using the power law of practice and the Additive Factors Model. Experimental results show that our framework leads to learning curves that are more consistent with cognitive theory and improves predictive performance, compared to baselines. Human evaluation further demonstrates substantial agreement between LLM and expert annotations.",
+      "published": "2026-02-19T16:58:34Z",
+      "updated": "2026-02-19T16:58:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17542v1"
     }
   ]
 }
