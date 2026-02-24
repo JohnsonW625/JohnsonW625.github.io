@@ -1,198 +1,180 @@
 {
-  "generated_at_utc": "2026-02-23T02:06:37Z",
+  "generated_at_utc": "2026-02-24T02:03:16Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.17655v1",
-      "title": "What Language is This? Ask Your Tokenizer",
+      "id": "http://arxiv.org/abs/2601.14434v2",
+      "title": "CMind: An AI Agent for Localizing C Memory Bugs",
       "authors": [
-        "Clara Meister",
-        "Ahmetcan Yavuz",
-        "Pietro Lesci",
-        "Tiago Pimentel"
+        "Chia-Yi Su",
+        "Collin McMillan"
       ],
-      "summary": "Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.",
-      "published": "2026-02-19T18:58:39Z",
-      "updated": "2026-02-19T18:58:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17655v1"
+      "summary": "This demonstration paper presents CMind, an artificial intelligence agent for localizing C memory bugs. The novel aspect to CMind is that it follows steps that we observed human programmers perform during empirical study of those programmers finding memory bugs in C programs. The input to the tool is a C program's source code and a bug report describing the problem. The output is the tool's hypothesis about the reason for the bug and its location. CMind reads the bug report to find potential entry points to the program, then navigates the program's source code, analyzes that source code, and generates a hypothesis location and rationale that fit a template. The tool combines large language model reasoning with guided decision making we encoded to mimic human behavior. The video demonstration is available at https://youtu.be/_vVd0LRvVHI.",
+      "published": "2026-01-20T19:43:11Z",
+      "updated": "2026-02-20T18:56:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.14434v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17616v1",
-      "title": "Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs",
+      "id": "http://arxiv.org/abs/2602.18429v1",
+      "title": "VIRAASAT: Traversing Novel Paths for Indian Cultural Reasoning",
       "authors": [
-        "Luke Huang",
-        "Zhuoyang Zhang",
-        "Qinghao Hu",
-        "Shang Yang",
-        "Song Han"
+        "Harshul Raj Surana",
+        "Arijit Maji",
+        "Aryan Vats",
+        "Akash Ghosh",
+        "Sriparna Saha",
+        "Amit Sheth"
       ],
-      "summary": "Reinforcement learning (RL) is widely used to improve large language models on reasoning tasks, and asynchronous RL training is attractive because it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient estimator markedly $\\textbf{higher variance}$: training on stale rollouts creates heavy-tailed importance ratios, causing a small fraction of samples to dominate updates. This amplification makes gradients noisy and learning unstable relative to matched on-policy training. Across math and general reasoning benchmarks, we find collapse is reliably predicted by effective sample size (ESS) and unstable gradient norms. Motivated by this diagnosis, we propose $\\textbf{V}$ariance $\\textbf{C}$ontrolled $\\textbf{P}$olicy $\\textbf{O}$ptimization ($\\textbf{VCPO}$), a general stabilization method for REINFORCE/GRPO-style algorithms that (i) scales learning rate based on effective sample size to dampen unreliable updates, and (ii) applies a closed-form minimum-variance baseline for the off-policy setting, avoiding an auxiliary value model and adding minimal overhead. Empirically, VCPO substantially improves robustness for asynchronous training across math, general reasoning, and tool-use tasks, outperforming a broad suite of baselines spanning masking/clipping stabilizers and algorithmic variants. This reduces long-context, multi-turn training time by 2.5$\\times$ while matching synchronous performance, demonstrating that explicit control of policy-gradient variance is key for reliable asynchronous RL at scale.",
-      "published": "2026-02-19T18:40:51Z",
-      "updated": "2026-02-19T18:40:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17616v1"
+      "summary": "Large Language Models (LLMs) have made significant progress in reasoning tasks across various domains such as mathematics and coding. However, their performance deteriorates in tasks requiring rich socio-cultural knowledge and diverse local contexts, particularly those involving Indian Culture. Existing Cultural benchmarks are (i) Manually crafted, (ii) contain single-hop questions testing factual recall, and (iii) prohibitively costly to scale, leaving this deficiency largely unmeasured. To address this, we introduce VIRAASAT, a novel, semi-automated multi-hop approach for generating cultural specific multi-hop Question-Answering dataset for Indian culture. VIRAASAT leverages a Knowledge Graph comprising more than 700 expert-curated cultural artifacts, covering 13 key attributes of Indian culture (history, festivals, etc). VIRAASAT spans all 28 states and 8 Union Territories, yielding more than 3,200 multi-hop questions that necessitate chained cultural reasoning. We evaluate current State-of-the-Art (SOTA) LLMs on VIRAASAT and identify key limitations in reasoning wherein fine-tuning on Chain-of-Thought(CoT) traces fails to ground and synthesize low-probability facts. To bridge this gap, we propose a novel framework named Symbolic Chain-of-Manipulation (SCoM). Adapting the Chain-of-Manipulation paradigm, we train the model to simulate atomic Knowledge Graph manipulations internally. SCoM teaches the model to reliably traverse the topological structure of the graph. Experiments on Supervised Fine-Tuning (SFT) demonstrate that SCoM outperforms standard CoT baselines by up to 20%. We release the VIRAASAT dataset along with our findings, laying a strong foundation towards building Culturally Aware Reasoning Models.",
+      "published": "2026-02-20T18:53:07Z",
+      "updated": "2026-02-20T18:53:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18429v1"
     },
     {
-      "id": "http://arxiv.org/abs/2505.02819v4",
-      "title": "ReplaceMe: Network Simplification via Depth Pruning and Transformer Block Linearization",
+      "id": "http://arxiv.org/abs/2602.18420v1",
+      "title": "SPQ: An Ensemble Technique for Large Language Model Compression",
       "authors": [
-        "Dmitriy Shopkhoev",
-        "Ammar Ali",
-        "Magauiya Zhussip",
-        "Valentin Malykh",
-        "Stamatios Lefkimmiatis",
-        "Nikos Komodakis",
-        "Sergey Zagoruyko"
+        "Jiamin Yao",
+        "Eren Gultepe"
       ],
-      "summary": "We introduce ReplaceMe, a generalized training-free depth pruning method that effectively replaces transformer blocks with a linear operation, while maintaining high performance for low compression ratios. In contrast to conventional pruning approaches that require additional training or fine-tuning, our approach requires only a small calibration dataset that is used to estimate a linear transformation, which approximates the pruned blocks. The estimated linear mapping can be seamlessly merged with the remaining transformer blocks, eliminating the need for any additional network parameters. Our experiments show that ReplaceMe consistently outperforms other training-free approaches and remains highly competitive with state-of-the-art pruning methods that involve extensive retraining/fine-tuning and architectural modifications. Applied to several large language models (LLMs), ReplaceMe achieves up to 25\\% pruning while retaining approximately 90\\% of the original model's performance on open benchmarks - without any training or healing steps, resulting in minimal computational overhead. We provide an open-source library implementing ReplaceMe alongside several state-of-the-art depth pruning techniques, available at https://github.com/mts-ai/ReplaceMe",
-      "published": "2025-05-05T17:47:42Z",
-      "updated": "2026-02-19T18:32:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.02819v4"
+      "summary": "This study presents an ensemble technique, SPQ (SVD-Pruning-Quantization), for large language model (LLM) compression that combines variance-retained singular value decomposition (SVD), activation-based pruning, and post-training linear quantization. Each component targets a different source of inefficiency: i) pruning removes redundant neurons in MLP layers, ii) SVD reduces attention projections into compact low-rank factors, iii) and 8-bit quantization uniformly compresses all linear layers. At matched compression ratios, SPQ outperforms individual methods (SVD-only, pruning-only, or quantization-only) in perplexity, demonstrating the benefit of combining complementary techniques. Applied to LLaMA-2-7B, SPQ achieves up to 75% memory reduction while maintaining or improving perplexity (e.g., WikiText-2 5.47 to 4.91) and preserving accuracy on downstream benchmarks such as C4, TruthfulQA, and GSM8K. Compared to strong baselines like GPTQ and SparseGPT, SPQ offers competitive perplexity and accuracy while using less memory (6.86 GB vs. 7.16 GB for GPTQ). Moreover, SPQ improves inference throughput over GPTQ, achieving up to a 1.9x speedup, which further enhances its practicality for real-world deployment. The effectiveness of SPQ's robust compression through layer-aware and complementary compression techniques may provide practical deployment of LLMs in memory-constrained environments. Code is available at: https://github.com/JiaminYao/SPQ_LLM_Compression/",
+      "published": "2026-02-20T18:44:16Z",
+      "updated": "2026-02-20T18:44:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18420v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17608v1",
-      "title": "Towards Anytime-Valid Statistical Watermarking",
+      "id": "http://arxiv.org/abs/2602.18415v1",
+      "title": "AI-Wrapped: Participatory, Privacy-Preserving Measurement of Longitudinal LLM Use In-the-Wild",
       "authors": [
-        "Baihe Huang",
-        "Eric Xu",
-        "Kannan Ramchandran",
-        "Jiantao Jiao",
-        "Michael I. Jordan"
+        "Cathy Mengying Fang",
+        "Sheer Karny",
+        "Chayapatr Archiwaranguprok",
+        "Yasith Samaradivakara",
+        "Pat Pataranutaporn",
+        "Pattie Maes"
       ],
-      "summary": "The proliferation of Large Language Models (LLMs) necessitates efficient mechanisms to distinguish machine-generated content from human text. While statistical watermarking has emerged as a promising solution, existing methods suffer from two critical limitations: the lack of a principled approach for selecting sampling distributions and the reliance on fixed-horizon hypothesis testing, which precludes valid early stopping. In this paper, we bridge this gap by developing the first e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal sampling with anytime-valid inference. Unlike traditional approaches where optional stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference by constructing a test supermartingale for the detection process. By leveraging an anchor distribution to approximate the target model, we characterize the optimal e-value with respect to the worst-case log-growth rate and derive the optimal expected stopping time. Our theoretical claims are substantiated by simulations and evaluations on established benchmarks, showing that our framework can significantly enhance sample efficiency, reducing the average token budget required for detection by 13-15% relative to state-of-the-art baselines.",
-      "published": "2026-02-19T18:32:26Z",
-      "updated": "2026-02-19T18:32:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17608v1"
+      "summary": "Alignment research on large language models (LLMs) increasingly depends on understanding how these systems are used in everyday contexts. yet naturalistic interaction data is difficult to access due to privacy constraints and platform control. We present AI-Wrapped, a prototype workflow for collecting naturalistic LLM usage data while providing participants with an immediate ``wrapped''-style report on their usage statistics, top topics, and safety-relevant behavioral patterns. We report findings from an initial deployment with 82 U.S.-based adults across 48,495 conversations from their 2025 histories. Participants used LLMs for both instrumental and reflective purposes, including creative work, professional tasks, and emotional or existential themes. Some usage patterns were consistent with potential over-reliance or perfectionistic refinement, while heavier users showed comparatively more reflective exchanges than primarily transactional ones. Methodologically, even with zero data retention and PII removal, participants may remain hesitant to share chat data due to perceived privacy and judgment risks, underscoring the importance of trust, agency, and transparent design when building measurement infrastructure for alignment research.",
+      "published": "2026-02-20T18:34:23Z",
+      "updated": "2026-02-20T18:34:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18415v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.22075v4",
-      "title": "CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning",
+      "id": "http://arxiv.org/abs/2602.08227v2",
+      "title": "Investigating Writing Professionals' Relationships with Generative AI: How Combined Perceptions of Rivalry and Collaboration Shape Work Practices and Outcomes",
       "authors": [
-        "Denis Makhov",
-        "Dmitriy Shopkhoev",
-        "Magauiya Zhussip",
-        "Ammar Ali",
-        "Stamatios Lefkimmiatis"
+        "Rama Adithya Varanasi",
+        "Oded Nov",
+        "Batia Mishan Wiesenfeld"
       ],
-      "summary": "Post-training compression of large language models (LLMs) often relies on low-rank weight approximations that represent each column of the weight matrix in a shared low-dimensional subspace. This strategy is computationally efficient but the underlying constraint can be overly rigid for heterogeneous projection weights and may incur avoidable accuracy loss. We propose CoSpaDi (Compression via Sparse Dictionary Learning), a training-free framework that replaces low-rank factorization with a structured sparse decomposition in which each weight matrix is represented as a dense dictionary multiplied by a column-sparse coefficient matrix. This yields a union-of-subspaces model: the columns of the weight matrix are represented as linear combinations of different subsets of dictionary atoms, improving expressiveness at a fixed parameter budget. CoSpaDi is calibration-guided: using a small calibration set, we optimize the factorization to minimize functional reconstruction error of layer outputs rather than weight-space error. An activation-derived Gram orthonormalization reformulates this data-aware objective into a standard dictionary learning problem on transformed weights, and we support both per-layer compression and cross-layer dictionary sharing within groups of similar projections. Across Llama and Qwen model families, CoSpaDi consistently improves the accuracy--compression and perplexity--compression trade-offs over state-of-the-art SVD-based baselines and strong structured pruning baselines at 20-40\\% compression ratios. The resulting structured sparsity enables sparse--dense computation and integrates with post-training quantization of the sparse coefficients.",
-      "published": "2025-09-26T08:55:09Z",
-      "updated": "2026-02-19T17:30:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.22075v4"
+      "summary": "This study investigates how professional writers' complex relationship with GenAI shapes their work practices and outcomes. Through a cross-sectional survey with writing professionals (n=403) in diverse roles, we show that collaboration and rivalry orientation are associated with differences in work practices and outcomes. Rivalry is primarily associated with relational crafting and skill maintenance. Collaboration is primarily associated with task crafting, productivity, and satisfaction, at the cost of long-term skill deterioration. Combination of the orientations (high rivalry and high collaboration) reconciles these differences, while boosting the association with the outcomes. Our findings argue for a balanced approach where high levels of rivalry and collaboration are essential to shape work practices and generate outcomes aimed at the long-term success of the job. We present key design implications on how to increase friction (rivalry) and reduce over-reliance (collaboration) to achieve a more balanced relationship with GenAI.",
+      "published": "2026-02-09T03:01:21Z",
+      "updated": "2026-02-20T18:18:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.08227v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17560v1",
-      "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+      "id": "http://arxiv.org/abs/2602.17037v2",
+      "title": "Wink: Recovering from Misbehaviors in Coding Agents",
       "authors": [
-        "Hongjue Zhao",
-        "Haosen Sun",
-        "Jiangtao Kong",
-        "Xiaochang Li",
-        "Qineng Wang",
-        "Liwei Jiang",
-        "Qi Zhu",
-        "Tarek Abdelzaher",
-        "Yejin Choi",
-        "Manling Li",
-        "Huajie Shao"
+        "Rahul Nanda",
+        "Chandra Maddila",
+        "Smriti Jha",
+        "Euna Mehnaz Khan",
+        "Matteo Paltenghi",
+        "Satish Chandra"
       ],
-      "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for guiding the design of steering directions, and \\textit{(ii)} an over-reliance on \\textit{one-step steering} that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based \\textit{theoretical} framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a \\textit{barrier function} from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows \\textit{empirical} advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for \\textit{multi-step and adaptive} steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\\%$ improvement over TruthfulQA, $2.5\\%$ over UltraFeedback, and $2.4\\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical foundations via ODEs, and validating it empirically through the proposed ODESteer method.",
-      "published": "2026-02-19T17:13:44Z",
-      "updated": "2026-02-19T17:13:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17560v1"
+      "summary": "Autonomous coding agents, powered by large language models (LLMs), are increasingly being adopted in the software industry to automate complex engineering tasks. However, these agents are prone to a wide range of misbehaviors, such as deviating from the user's instructions, getting stuck in repetitive loops, or failing to use tools correctly. These failures disrupt the development workflow and often require resource-intensive manual intervention. In this paper, we present a system for automatically recovering from agentic misbehaviors at scale. We first introduce a taxonomy of misbehaviors grounded in an analysis of production traffic, identifying three primary categories: Specification Drift, Reasoning Problems, and Tool Call Failures, which we find occur in about 30% of all agent trajectories. To address these issues, we developed a lightweight, asynchronous self-intervention system named Wink. Wink observes agent trajectories and provides targeted course-correction guidance to nudge the agent back to a productive path. We evaluated our system on over 10,000 real world agent trajectories and found that it successfully resolves 90% of the misbehaviors that require a single intervention. Furthermore, a live A/B test in our production environment demonstrated that our system leads to a statistically significant reduction in Tool Call Failures, Tokens per Session and Engineer Interventions per Session. We present our experience designing and deploying this system, offering insights into the challenges of building resilient agentic systems at scale.",
+      "published": "2026-02-19T03:15:00Z",
+      "updated": "2026-02-20T18:13:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17037v2"
     },
     {
-      "id": "http://arxiv.org/abs/2406.04220v6",
-      "title": "BEADs: Bias Evaluation Across Domains",
+      "id": "http://arxiv.org/abs/2510.02228v2",
+      "title": "xLSTM Scaling Laws: Competitive Performance with Linear Time-Complexity",
       "authors": [
-        "Shaina Raza",
-        "Mizanur Rahman",
-        "Michael R. Zhang"
+        "Maximilian Beck",
+        "Kajetan Schweighofer",
+        "Sebastian Böck",
+        "Sebastian Lehner",
+        "Sepp Hochreiter"
       ],
-      "summary": "Recent advances in large language models (LLMs) have substantially improved natural language processing (NLP) applications. However, these models often inherit and amplify biases present in their training data. Although several datasets exist for bias detection, most are limited to one or two NLP tasks, typically classification or evaluation and do not provide broad coverage across diverse task settings. To address this gap, we introduce the \\textbf{Bias Evaluations Across Domains} (\\textbf{B}\\texttt{EADs}) dataset, designed to support a wide range of NLP tasks, including text classification, token classification, bias quantification, and benign language generation. A key contribution of this work is a gold-standard annotation scheme that supports both evaluation and supervised training of language models. Experiments on state-of-the-art models reveal some gaps: some models exhibit systematic bias toward specific demographics, while others apply safety guardrails more strictly or inconsistently across groups. Overall, these results highlight persistent shortcomings in current models and underscore the need for comprehensive bias evaluation. Project: https://vectorinstitute.github.io/BEAD/ Data: https://huggingface.co/datasets/shainar/BEAD",
-      "published": "2024-06-06T16:18:30Z",
-      "updated": "2026-02-19T17:12:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2406.04220v6"
+      "summary": "Scaling laws play a central role in the success of Large Language Models (LLMs), enabling the prediction of model performance relative to compute budgets prior to training. While Transformers have been the dominant architecture, recent alternatives such as xLSTM offer linear complexity with respect to context length while remaining competitive in the billion-parameter regime. We conduct a comparative investigation on the scaling behavior of Transformers and xLSTM along the following lines, providing insights to guide future model design and deployment. First, we study the scaling behavior for xLSTM in compute-optimal and over-training regimes using both IsoFLOP and parametric fit approaches on a wide range of model sizes (80M-7B) and number of training tokens (2B-2T). Second, we examine the dependence of optimal model sizes on context length, a pivotal aspect that was largely ignored in previous work. Finally, we analyze inference-time scaling characteristics. Our findings reveal that in typical LLM training and inference scenarios, xLSTM scales favorably compared to Transformers. Notably, xLSTM models consistently Pareto-dominate Transformer models, delivering lower cross-entropy loss for the same compute budget.",
+      "published": "2025-10-02T17:14:34Z",
+      "updated": "2026-02-20T18:12:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.02228v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17558v1",
-      "title": "RetouchIQ: MLLM Agents for Instruction-Based Image Retouching with Generalist Reward",
+      "id": "http://arxiv.org/abs/2504.21022v2",
+      "title": "ConformalNL2LTL: Translating Natural Language Instructions into Temporal Logic Formulas with Conformal Correctness Guarantees",
       "authors": [
-        "Qiucheng Wu",
-        "Jing Shi",
-        "Simon Jenni",
-        "Kushal Kafle",
-        "Tianyu Wang",
-        "Shiyu Chang",
-        "Handong Zhao"
+        "David Smith Sundarsingh",
+        "Jun Wang",
+        "Jyotirmoy V. Deshmukh",
+        "Yiannis Kantaros"
       ],
-      "summary": "Recent advances in multimodal large language models (MLLMs) have shown great potential for extending vision-language reasoning to professional tool-based image editing, enabling intuitive and creative editing. A promising direction is to use reinforcement learning (RL) to enable MLLMs to reason about and execute optimal tool-use plans within professional image-editing software. However, training remains challenging due to the lack of reliable, verifiable reward signals that can reflect the inherently subjective nature of creative editing. In this work, we introduce RetouchIQ, a framework that performs instruction-based executable image editing through MLLM agents guided by a generalist reward model. RetouchIQ interprets user-specified editing intentions and generates corresponding, executable image adjustments, bridging high-level aesthetic goals with precise parameter control. To move beyond conventional, rule-based rewards that compute similarity against a fixed reference image using handcrafted metrics, we propose a generalist reward model, an RL fine-tuned MLLM that evaluates edited results through a set of generated metrics on a case-by-case basis. Then, the reward model provides scalar feedback through multimodal reasoning, enabling reinforcement learning with high-quality, instruction-consistent gradients. We curate an extended dataset with 190k instruction-reasoning pairs and establish a new benchmark for instruction-based image editing. Experiments show that RetouchIQ substantially improves both semantic consistency and perceptual quality over previous MLLM-based and diffusion-based editing systems. Our findings demonstrate the potential of generalist reward-driven MLLM agents as flexible, explainable, and executable assistants for professional image editing.",
-      "published": "2026-02-19T17:11:59Z",
-      "updated": "2026-02-19T17:11:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17558v1"
+      "summary": "Linear Temporal Logic (LTL) is a widely used task specification language for autonomous systems. To mitigate the significant manual effort and expertise required to define LTL-encoded tasks, several methods have been proposed for translating Natural Language (NL) instructions into LTL formulas, which, however, lack correctness guarantees. To address this, we propose a new NL-to-LTL translation method, called ConformalNL2LTL that achieves user-defined translation success rates on unseen NL commands. Our method constructs LTL formulas iteratively by solving a sequence of open-vocabulary question-answering (QA) problems using large language models (LLMs). These QA tasks are handled collaboratively by a primary and an auxiliary model. The primary model answers each QA instance while quantifying uncertainty via conformal prediction; when it is insufficiently certain according to user-defined confidence thresholds, it requests assistance from the auxiliary model and, if necessary, from the user. We demonstrate theoretically and empirically that ConformalNL2LTL achieves the desired translation accuracy while minimizing user intervention.",
+      "published": "2025-04-22T20:32:34Z",
+      "updated": "2026-02-20T17:50:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.21022v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17555v1",
-      "title": "GraphThinker: Reinforcing Video Reasoning with Event Graph Thinking",
+      "id": "http://arxiv.org/abs/2602.18372v1",
+      "title": "\"How Do I ...?\": Procedural Questions Predominate Student-LLM Chatbot Conversations",
       "authors": [
-        "Zixu Cheng",
-        "Da Li",
-        "Jian Hu",
-        "Ziquan Liu",
-        "Wei Li",
-        "Shaogang Gong"
+        "Alexandra Neagu",
+        "Marcus Messer",
+        "Peter Johnson",
+        "Rhodri Nelson"
       ],
-      "summary": "Video reasoning requires understanding the causal relationships between events in a video. However, such relationships are often implicit and costly to annotate manually. While existing multimodal large language models (MLLMs) often infer event relations through dense captions or video summaries for video reasoning, such modeling still lacks causal understanding. Without explicit causal structure modeling within and across video events, these models suffer from hallucinations during the video reasoning. In this work, we propose GraphThinker, a reinforcement finetuning-based method that constructs structural event-level scene graphs and enhances visual grounding to jointly reduce hallucinations in video reasoning. Specifically, we first employ an MLLM to construct an event-based video scene graph (EVSG) that explicitly models both intra- and inter-event relations, and incorporate these formed scene graphs into the MLLM as an intermediate thinking process. We also introduce a visual attention reward during reinforcement finetuning, which strengthens video grounding and further mitigates hallucinations. We evaluate GraphThinker on two datasets, RexTime and VidHalluc, where it shows superior ability to capture object and event relations with more precise event localization, reducing hallucinations in video reasoning compared to prior methods.",
-      "published": "2026-02-19T17:09:30Z",
-      "updated": "2026-02-19T17:09:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17555v1"
+      "summary": "Providing scaffolding through educational chatbots built on Large Language Models (LLM) has potential risks and benefits that remain an open area of research. When students navigate impasses, they ask for help by formulating impasse-driven questions. Within interactions with LLM chatbots, such questions shape the user prompts and drive the pedagogical effectiveness of the chatbot's response. This paper focuses on such student questions from two datasets of distinct learning contexts: formative self-study, and summative assessed coursework. We analysed 6,113 messages from both learning contexts, using 11 different LLMs and three human raters to classify student questions using four existing schemas. On the feasibility of using LLMs as raters, results showed moderate-to-good inter-rater reliability, with higher consistency than human raters. The data showed that 'procedural' questions predominated in both learning contexts, but more so when students prepare for summative assessment. These results provide a basis on which to use LLMs for classification of student questions. However, we identify clear limitations in both the ability to classify with schemas and the value of doing so: schemas are limited and thus struggle to accommodate the semantic richness of composite prompts, offering only partial understanding the wider risks and benefits of chatbot integration. In the future, we recommend an analysis approach that captures the nuanced, multi-turn nature of conversation, for example, by applying methods from conversation analysis in discursive psychology.",
+      "published": "2026-02-20T17:27:41Z",
+      "updated": "2026-02-20T17:27:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18372v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17554v1",
-      "title": "A Theoretical Framework for Modular Learning of Robust Generative Models",
+      "id": "http://arxiv.org/abs/2602.18364v1",
+      "title": "Quantum Maximum Likelihood Prediction via Hilbert Space Embeddings",
       "authors": [
-        "Corinna Cortes",
-        "Mehryar Mohri",
-        "Yutao Zhong"
+        "Sreejith Sreekumar",
+        "Nir Weinberger"
       ],
-      "summary": "Training large-scale generative models is resource-intensive and relies heavily on heuristic dataset weighting. We address two fundamental questions: Can we train Large Language Models (LLMs) modularly-combining small, domain-specific experts to match monolithic performance-and can we do so robustly for any data mixture, eliminating heuristic tuning? We present a theoretical framework for modular generative modeling where a set of pre-trained experts are combined via a gating mechanism. We define the space of normalized gating functions, $G_{1}$, and formulate the problem as a minimax game to find a single robust gate that minimizes divergence to the worst-case data mixture. We prove the existence of such a robust gate using Kakutani's fixed-point theorem and show that modularity acts as a strong regularizer, with generalization bounds scaling with the lightweight gate's complexity. Furthermore, we prove that this modular approach can theoretically outperform models retrained on aggregate data, with the gap characterized by the Jensen-Shannon Divergence. Finally, we introduce a scalable Stochastic Primal-Dual algorithm and a Structural Distillation method for efficient inference. Empirical results on synthetic and real-world datasets confirm that our modular architecture effectively mitigates gradient conflict and can robustly outperform monolithic baselines.",
-      "published": "2026-02-19T17:09:13Z",
-      "updated": "2026-02-19T17:09:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17554v1"
+      "summary": "Recent works have proposed various explanations for the ability of modern large language models (LLMs) to perform in-context prediction. We propose an alternative conceptual viewpoint from an information-geometric and statistical perspective. Motivated by Bach[2023], we model training as learning an embedding of probability distributions into the space of quantum density operators, and in-context learning as maximum-likelihood prediction over a specified class of quantum models. We provide an interpretation of this predictor in terms of quantum reverse information projection and quantum Pythagorean theorem when the class of quantum models is sufficiently expressive. We further derive non-asymptotic performance guarantees in terms of convergence rates and concentration inequalities, both in trace norm and quantum relative entropy. Our approach provides a unified framework to handle both classical and quantum LLMs.",
+      "published": "2026-02-20T17:16:38Z",
+      "updated": "2026-02-20T17:16:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18364v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17550v1",
-      "title": "MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning",
+      "id": "http://arxiv.org/abs/2505.11409v3",
+      "title": "Visual Planning: Let's Think Only with Images",
       "authors": [
-        "Xiaoliang Fu",
-        "Jiaye Lin",
-        "Yangyi Fang",
-        "Binbin Zheng",
-        "Chaowen Hu",
-        "Zekai Shao",
-        "Cong Qin",
-        "Lu Pan",
-        "Ke Zeng",
-        "Xunliang Cai"
+        "Yi Xu",
+        "Chengzu Li",
+        "Han Zhou",
+        "Xingchen Wan",
+        "Caiqi Zhang",
+        "Anna Korhonen",
+        "Ivan Vulić"
       ],
-      "summary": "Existing Reinforcement Learning with Verifiable Rewards (RLVR) algorithms, such as GRPO, rely on rigid, uniform, and symmetric trust region mechanisms that are fundamentally misaligned with the complex optimization dynamics of Large Language Models (LLMs). In this paper, we identify three critical challenges in these methods: (1) inefficient gradient utilization caused by the binary cutoff of hard clipping, (2) insensitive probability mass arising from uniform ratio constraints that ignore the token distribution, and (3) asymmetric signal reliability stemming from the disparate credit assignment ambiguity between positive and negative samples. To bridge these gaps, we propose Mass-Adaptive Soft Policy Optimization (MASPO), a unified framework designed to harmonize these three dimensions. MASPO integrates a differentiable soft Gaussian gating to maximize gradient utility, a mass-adaptive limiter to balance exploration across the probability spectrum, and an asymmetric risk controller to align update magnitudes with signal confidence. Extensive evaluations demonstrate that MASPO serves as a robust, all-in-one RLVR solution, significantly outperforming strong baselines. Our code is available at: https://anonymous.4open.science/r/ma1/README.md.",
-      "published": "2026-02-19T17:05:20Z",
-      "updated": "2026-02-19T17:05:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17550v1"
+      "summary": "Recent advancements in Large Language Models (LLMs) and their multimodal extensions (MLLMs) have substantially enhanced machine reasoning across diverse tasks. However, these models predominantly rely on pure text as the medium for both expressing and structuring reasoning, even when visual information is present. In this work, we argue that language may not always be the most natural or effective modality for reasoning, particularly in tasks involving spatial and geometrical information. Motivated by this, we propose a new paradigm, Visual Planning, which enables planning through purely visual representations for these \"vision-first\" tasks, as a supplementary channel to language-based reasoning. In this paradigm, planning is executed via sequences of images that encode step-by-step inference in the visual domain, akin to how humans sketch or visualize future actions. We introduce a novel reinforcement learning framework, Visual Planning via Reinforcement Learning (VPRL), empowered by GRPO for post-training large vision models, leading to substantial improvements in planning in a selection of representative visual navigation tasks, FrozenLake, Maze, and MiniBehavior. Our visual planning paradigm outperforms all other planning variants that conduct reasoning in the text-only space. Our results establish Visual Planning as a viable and promising supplement to language-based reasoning, opening new avenues for tasks that benefit from intuitive, image-based inference.",
+      "published": "2025-05-16T16:17:22Z",
+      "updated": "2026-02-20T17:09:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.11409v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17542v1",
-      "title": "Using LLMs for Knowledge Component-level Correctness Labeling in Open-ended Coding Problems",
+      "id": "http://arxiv.org/abs/2602.18352v1",
+      "title": "Qualitative Coding Analysis through Open-Source Large Language Models: A User Study and Design Recommendations",
       "authors": [
-        "Zhangqi Duan",
-        "Arnav Kankaria",
-        "Dhruv Kartik",
-        "Andrew Lan"
+        "Tung T. Ngo",
+        "Dai Nguyen Van",
+        "Anh-Minh Nguyen",
+        "Phuong-Anh Do",
+        "Anh Nguyen-Quoc"
       ],
-      "summary": "Fine-grained skill representations, commonly referred to as knowledge components (KCs), are fundamental to many approaches in student modeling and learning analytics. However, KC-level correctness labels are rarely available in real-world datasets, especially for open-ended programming tasks where solutions typically involve multiple KCs simultaneously. Simply propagating problem-level correctness to all associated KCs obscures partial mastery and often leads to poorly fitted learning curves. To address this challenge, we propose an automated framework that leverages large language models (LLMs) to label KC-level correctness directly from student-written code. Our method assesses whether each KC is correctly applied and further introduces a temporal context-aware Code-KC mapping mechanism to better align KCs with individual student code. We evaluate the resulting KC-level correctness labels in terms of learning curve fit and predictive performance using the power law of practice and the Additive Factors Model. Experimental results show that our framework leads to learning curves that are more consistent with cognitive theory and improves predictive performance, compared to baselines. Human evaluation further demonstrates substantial agreement between LLM and expert annotations.",
-      "published": "2026-02-19T16:58:34Z",
-      "updated": "2026-02-19T16:58:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17542v1"
+      "summary": "Qualitative data analysis is labor-intensive, yet the privacy risks associated with commercial Large Language Models (LLMs) often preclude their use in sensitive research. To address this, we introduce ChatQDA, an on-device framework powered by open-source LLMs designed for privacy-preserving open coding. Our mixed-methods user study reveals that while participants rated the system highly for usability and perceived efficiency, they exhibited \"conditional trust\", valuing the tool for surface-level extraction while questioning its interpretive nuance and consistency. Furthermore, despite the technical security of local deployment, participants reported epistemic uncertainty regarding data protection, suggesting that invisible security measures are insufficient to foster trust. We conclude with design recommendations for local-first analysis tools that prioritize verifiable privacy and methodological rigor.",
+      "published": "2026-02-20T17:04:02Z",
+      "updated": "2026-02-20T17:04:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18352v1"
     }
   ]
 }
