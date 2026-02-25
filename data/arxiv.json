@@ -1,180 +1,217 @@
 {
-  "generated_at_utc": "2026-02-24T02:03:16Z",
+  "generated_at_utc": "2026-02-25T02:05:29Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2601.14434v2",
-      "title": "CMind: An AI Agent for Localizing C Memory Bugs",
+      "id": "http://arxiv.org/abs/2510.03817v3",
+      "title": "TROLL: Trust Regions improve Reinforcement Learning for Large Language Models",
       "authors": [
-        "Chia-Yi Su",
-        "Collin McMillan"
+        "Philipp Becker",
+        "Niklas Freymuth",
+        "Serge Thilges",
+        "Fabian Otto",
+        "Gerhard Neumann"
       ],
-      "summary": "This demonstration paper presents CMind, an artificial intelligence agent for localizing C memory bugs. The novel aspect to CMind is that it follows steps that we observed human programmers perform during empirical study of those programmers finding memory bugs in C programs. The input to the tool is a C program's source code and a bug report describing the problem. The output is the tool's hypothesis about the reason for the bug and its location. CMind reads the bug report to find potential entry points to the program, then navigates the program's source code, analyzes that source code, and generates a hypothesis location and rationale that fit a template. The tool combines large language model reasoning with guided decision making we encoded to mimic human behavior. The video demonstration is available at https://youtu.be/_vVd0LRvVHI.",
-      "published": "2026-01-20T19:43:11Z",
-      "updated": "2026-02-20T18:56:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.14434v2"
+      "summary": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs). Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched. Originally introduced as a proxy for principled KL-based trust regions, clipping is a crude approximation that often causes unstable updates and suboptimal performance. We replace the clip objective with a novel discrete differentiable trust region projection, which provides principled token-level KL constraints. The projection operates on a sparse subset of the model's most important token logits to balance computational cost and projection effectiveness. Our approach, Trust Region Optimization for Large Language models (TROLL), serves as a direct replacement for PPO-like clipping during training and does not alter the model's inference behavior. Across mathematical reasoning and code generation tasks, model families, as well as advantage-estimation methods, TROLL consistently outperforms PPO-like clipping in terms of training speed, stability, and final success rates.",
+      "published": "2025-10-04T14:14:20Z",
+      "updated": "2026-02-23T18:54:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.03817v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18429v1",
-      "title": "VIRAASAT: Traversing Novel Paths for Indian Cultural Reasoning",
+      "id": "http://arxiv.org/abs/2602.20137v1",
+      "title": "Do Large Language Models Understand Data Visualization Rules?",
       "authors": [
-        "Harshul Raj Surana",
-        "Arijit Maji",
-        "Aryan Vats",
-        "Akash Ghosh",
-        "Sriparna Saha",
-        "Amit Sheth"
+        "Martin Sinnona",
+        "Valentin Bonas",
+        "Emmanuel Iarussi",
+        "Viviana Siless"
       ],
-      "summary": "Large Language Models (LLMs) have made significant progress in reasoning tasks across various domains such as mathematics and coding. However, their performance deteriorates in tasks requiring rich socio-cultural knowledge and diverse local contexts, particularly those involving Indian Culture. Existing Cultural benchmarks are (i) Manually crafted, (ii) contain single-hop questions testing factual recall, and (iii) prohibitively costly to scale, leaving this deficiency largely unmeasured. To address this, we introduce VIRAASAT, a novel, semi-automated multi-hop approach for generating cultural specific multi-hop Question-Answering dataset for Indian culture. VIRAASAT leverages a Knowledge Graph comprising more than 700 expert-curated cultural artifacts, covering 13 key attributes of Indian culture (history, festivals, etc). VIRAASAT spans all 28 states and 8 Union Territories, yielding more than 3,200 multi-hop questions that necessitate chained cultural reasoning. We evaluate current State-of-the-Art (SOTA) LLMs on VIRAASAT and identify key limitations in reasoning wherein fine-tuning on Chain-of-Thought(CoT) traces fails to ground and synthesize low-probability facts. To bridge this gap, we propose a novel framework named Symbolic Chain-of-Manipulation (SCoM). Adapting the Chain-of-Manipulation paradigm, we train the model to simulate atomic Knowledge Graph manipulations internally. SCoM teaches the model to reliably traverse the topological structure of the graph. Experiments on Supervised Fine-Tuning (SFT) demonstrate that SCoM outperforms standard CoT baselines by up to 20%. We release the VIRAASAT dataset along with our findings, laying a strong foundation towards building Culturally Aware Reasoning Models.",
-      "published": "2026-02-20T18:53:07Z",
-      "updated": "2026-02-20T18:53:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18429v1"
+      "summary": "Data visualization rules-derived from decades of research in design and perception-ensure trustworthy chart communication. While prior work has shown that large language models (LLMs) can generate charts or flag misleading figures, it remains unclear whether they can reason about and enforce visualization rules directly. Constraint-based systems such as Draco encode these rules as logical constraints for precise automated checks, but maintaining symbolic encodings requires expert effort, motivating the use of LLMs as flexible rule validators. In this paper, we present the first systematic evaluation of LLMs against visualization rules using hard-verification ground truth derived from Answer Set Programming (ASP). We translated a subset of Draco's constraints into natural-language statements and generated a controlled dataset of 2,000 Vega-Lite specifications annotated with explicit rule violations. LLMs were evaluated on both accuracy in detecting violations and prompt adherence, which measures whether outputs follow the required structured format. Results show that frontier models achieve high adherence (Gemma 3 4B / 27B: 100%, GPT-oss 20B: 98%) and reliably detect common violations (F1 up to 0.82),yet performance drops for subtler perceptual rules (F1 < 0.15 for some categories) and for outputs generated from technical ASP formulations.Translating constraints into natural language improved performance by up to 150% for smaller models. These findings demonstrate the potential of LLMs as flexible, language-driven validators while highlighting their current limitations compared to symbolic solvers.",
+      "published": "2026-02-23T18:47:51Z",
+      "updated": "2026-02-23T18:47:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20137v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18420v1",
-      "title": "SPQ: An Ensemble Technique for Large Language Model Compression",
+      "id": "http://arxiv.org/abs/2602.20135v1",
+      "title": "KNIGHT: Knowledge Graph-Driven Multiple-Choice Question Generation with Adaptive Hardness Calibration",
       "authors": [
-        "Jiamin Yao",
-        "Eren Gultepe"
+        "Mohammad Amanlou",
+        "Erfan Shafiee Moghaddam",
+        "Yasaman Amou Jafari",
+        "Mahdi Noori",
+        "Farhan Farsi",
+        "Behnam Bahrak"
       ],
-      "summary": "This study presents an ensemble technique, SPQ (SVD-Pruning-Quantization), for large language model (LLM) compression that combines variance-retained singular value decomposition (SVD), activation-based pruning, and post-training linear quantization. Each component targets a different source of inefficiency: i) pruning removes redundant neurons in MLP layers, ii) SVD reduces attention projections into compact low-rank factors, iii) and 8-bit quantization uniformly compresses all linear layers. At matched compression ratios, SPQ outperforms individual methods (SVD-only, pruning-only, or quantization-only) in perplexity, demonstrating the benefit of combining complementary techniques. Applied to LLaMA-2-7B, SPQ achieves up to 75% memory reduction while maintaining or improving perplexity (e.g., WikiText-2 5.47 to 4.91) and preserving accuracy on downstream benchmarks such as C4, TruthfulQA, and GSM8K. Compared to strong baselines like GPTQ and SparseGPT, SPQ offers competitive perplexity and accuracy while using less memory (6.86 GB vs. 7.16 GB for GPTQ). Moreover, SPQ improves inference throughput over GPTQ, achieving up to a 1.9x speedup, which further enhances its practicality for real-world deployment. The effectiveness of SPQ's robust compression through layer-aware and complementary compression techniques may provide practical deployment of LLMs in memory-constrained environments. Code is available at: https://github.com/JiaminYao/SPQ_LLM_Compression/",
-      "published": "2026-02-20T18:44:16Z",
-      "updated": "2026-02-20T18:44:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18420v1"
+      "summary": "With the rise of large language models (LLMs), they have become instrumental in applications such as Retrieval-Augmented Generation (RAG). Yet evaluating these systems remains bottlenecked by the time and cost of building specialized assessment datasets. We introduce KNIGHT, an LLM-based, knowledge-graph-driven framework for generating multiple-choice question (MCQ) datasets from external sources. KNIGHT constructs a topic-specific knowledge graph, a structured and parsimonious summary of entities and relations, that can be reused to generate instructor-controlled difficulty levels, including multi-hop questions, without repeatedly re-feeding the full source text. This knowledge graph acts as a compressed, reusable state, making question generation a cheap read over the graph. We instantiate KNIGHT on Wikipedia/Wikidata while keeping the framework domain- and ontology-agnostic. As a case study, KNIGHT produces six MCQ datasets in History, Biology, and Mathematics. We evaluate quality on five criteria: fluency, unambiguity (single correct answer), topic relevance, option uniqueness, and answerability given the provided sources (as a proxy for hallucination). Results show that KNIGHT enables token- and cost-efficient generation from a reusable graph representation, achieves high quality across these criteria, and yields model rankings aligned with MMLU-style benchmarks, while supporting topic-specific and difficulty-controlled evaluation.",
+      "published": "2026-02-23T18:46:27Z",
+      "updated": "2026-02-23T18:46:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20135v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18415v1",
-      "title": "AI-Wrapped: Participatory, Privacy-Preserving Measurement of Longitudinal LLM Use In-the-Wild",
+      "id": "http://arxiv.org/abs/2602.20133v1",
+      "title": "AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization",
       "authors": [
-        "Cathy Mengying Fang",
-        "Sheer Karny",
-        "Chayapatr Archiwaranguprok",
-        "Yasith Samaradivakara",
-        "Pat Pataranutaporn",
-        "Pattie Maes"
+        "Mert Cemri",
+        "Shubham Agrawal",
+        "Akshat Gupta",
+        "Shu Liu",
+        "Audrey Cheng",
+        "Qiuyang Mang",
+        "Ashwin Naren",
+        "Lutfi Eren Erdogan",
+        "Koushik Sen",
+        "Matei Zaharia",
+        "Alex Dimakis",
+        "Ion Stoica"
       ],
-      "summary": "Alignment research on large language models (LLMs) increasingly depends on understanding how these systems are used in everyday contexts. yet naturalistic interaction data is difficult to access due to privacy constraints and platform control. We present AI-Wrapped, a prototype workflow for collecting naturalistic LLM usage data while providing participants with an immediate ``wrapped''-style report on their usage statistics, top topics, and safety-relevant behavioral patterns. We report findings from an initial deployment with 82 U.S.-based adults across 48,495 conversations from their 2025 histories. Participants used LLMs for both instrumental and reflective purposes, including creative work, professional tasks, and emotional or existential themes. Some usage patterns were consistent with potential over-reliance or perfectionistic refinement, while heavier users showed comparatively more reflective exchanges than primarily transactional ones. Methodologically, even with zero data retention and PII removal, participants may remain hesitant to share chat data due to perceived privacy and judgment risks, underscoring the importance of trust, agency, and transparent design when building measurement infrastructure for alignment research.",
-      "published": "2026-02-20T18:34:23Z",
-      "updated": "2026-02-20T18:34:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18415v1"
+      "summary": "The paradigm of automated program generation is shifting from one-shot generation to inference-time search, where Large Language Models (LLMs) function as semantic mutation operators within evolutionary loops. While effective, these systems are currently governed by static schedules that fail to account for the non-stationary dynamics of the search process. This rigidity results in substantial computational waste, as resources are indiscriminately allocated to stagnating populations while promising frontiers remain under-exploited. We introduce AdaEvolve, a framework that reformulates LLM-driven evolution as a hierarchical adaptive optimization problem. AdaEvolve uses an \"accumulated improvement signal\" to unify decisions across three levels: Local Adaptation, which dynamically modulates the exploration intensity within a population of solution candidates; Global Adaptation, which routes the global resource budget via bandit-based scheduling across different solution candidate populations; and Meta-Guidance which generates novel solution tactics based on the previously generated solutions and their corresponding improvements when the progress stalls. We demonstrate that AdaEvolve consistently outperforms the open-sourced baselines across 185 different open-ended optimization problems including combinatorial, systems optimization and algorithm design problems.",
+      "published": "2026-02-23T18:45:31Z",
+      "updated": "2026-02-23T18:45:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20133v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.08227v2",
-      "title": "Investigating Writing Professionals' Relationships with Generative AI: How Combined Perceptions of Rivalry and Collaboration Shape Work Practices and Outcomes",
+      "id": "http://arxiv.org/abs/2602.20130v1",
+      "title": "To Reason or Not to: Selective Chain-of-Thought in Medical Question Answering",
       "authors": [
-        "Rama Adithya Varanasi",
-        "Oded Nov",
-        "Batia Mishan Wiesenfeld"
+        "Zaifu Zhan",
+        "Min Zeng",
+        "Shuang Zhou",
+        "Yiran Song",
+        "Xiaoyi Chen",
+        "Yu Hou",
+        "Yifan Wu",
+        "Yang Ruan",
+        "Rui Zhang"
       ],
-      "summary": "This study investigates how professional writers' complex relationship with GenAI shapes their work practices and outcomes. Through a cross-sectional survey with writing professionals (n=403) in diverse roles, we show that collaboration and rivalry orientation are associated with differences in work practices and outcomes. Rivalry is primarily associated with relational crafting and skill maintenance. Collaboration is primarily associated with task crafting, productivity, and satisfaction, at the cost of long-term skill deterioration. Combination of the orientations (high rivalry and high collaboration) reconciles these differences, while boosting the association with the outcomes. Our findings argue for a balanced approach where high levels of rivalry and collaboration are essential to shape work practices and generate outcomes aimed at the long-term success of the job. We present key design implications on how to increase friction (rivalry) and reduce over-reliance (collaboration) to achieve a more balanced relationship with GenAI.",
-      "published": "2026-02-09T03:01:21Z",
-      "updated": "2026-02-20T18:18:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.08227v2"
+      "summary": "Objective: To improve the efficiency of medical question answering (MedQA) with large language models (LLMs) by avoiding unnecessary reasoning while maintaining accuracy. Methods: We propose Selective Chain-of-Thought (Selective CoT), an inference-time strategy that first predicts whether a question requires reasoning and generates a rationale only when needed. Two open-source LLMs (Llama-3.1-8B and Qwen-2.5-7B) were evaluated on four biomedical QA benchmarks-HeadQA, MedQA-USMLE, MedMCQA, and PubMedQA. Metrics included accuracy, total generated tokens, and inference time. Results: Selective CoT reduced inference time by 13-45% and token usage by 8-47% with minimal accuracy loss ($\\leq$4\\%). In some model-task pairs, it achieved both higher accuracy and greater efficiency than standard CoT. Compared with fixed-length CoT, Selective CoT reached similar or superior accuracy at substantially lower computational cost. Discussion: Selective CoT dynamically balances reasoning depth and efficiency by invoking explicit reasoning only when beneficial, reducing redundancy on recall-type questions while preserving interpretability. Conclusion: Selective CoT provides a simple, model-agnostic, and cost-effective approach for medical QA, aligning reasoning effort with question complexity to enhance real-world deployability of LLM-based clinical systems.",
+      "published": "2026-02-23T18:42:50Z",
+      "updated": "2026-02-23T18:42:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20130v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17037v2",
-      "title": "Wink: Recovering from Misbehaviors in Coding Agents",
+      "id": "http://arxiv.org/abs/2602.20122v1",
+      "title": "NanoKnow: How to Know What Your Language Model Knows",
       "authors": [
-        "Rahul Nanda",
-        "Chandra Maddila",
-        "Smriti Jha",
-        "Euna Mehnaz Khan",
-        "Matteo Paltenghi",
-        "Satish Chandra"
+        "Lingwei Gu",
+        "Nour Jedidi",
+        "Jimmy Lin"
       ],
-      "summary": "Autonomous coding agents, powered by large language models (LLMs), are increasingly being adopted in the software industry to automate complex engineering tasks. However, these agents are prone to a wide range of misbehaviors, such as deviating from the user's instructions, getting stuck in repetitive loops, or failing to use tools correctly. These failures disrupt the development workflow and often require resource-intensive manual intervention. In this paper, we present a system for automatically recovering from agentic misbehaviors at scale. We first introduce a taxonomy of misbehaviors grounded in an analysis of production traffic, identifying three primary categories: Specification Drift, Reasoning Problems, and Tool Call Failures, which we find occur in about 30% of all agent trajectories. To address these issues, we developed a lightweight, asynchronous self-intervention system named Wink. Wink observes agent trajectories and provides targeted course-correction guidance to nudge the agent back to a productive path. We evaluated our system on over 10,000 real world agent trajectories and found that it successfully resolves 90% of the misbehaviors that require a single intervention. Furthermore, a live A/B test in our production environment demonstrated that our system leads to a statistically significant reduction in Tool Call Failures, Tokens per Session and Engineer Interventions per Session. We present our experience designing and deploying this system, offering insights into the challenges of building resilient agentic systems at scale.",
-      "published": "2026-02-19T03:15:00Z",
-      "updated": "2026-02-20T18:13:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17037v2"
+      "summary": "How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a \"black box\" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions questions from Natural Questions and SQuAD into splits based on whether their answers are present in nanochat's pre-training corpus. Using these splits, we can now properly disentangle the sources of knowledge that LLMs rely on when producing an output. To demonstrate NanoKnow's utility, we conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book accuracy is strongly influenced by answer frequency in the pre-training data, (2) providing external evidence can mitigate this frequency dependence, (3) even with external evidence, models are more accurate when answers were seen during pre-training, demonstrating that parametric and external knowledge are complementary, and (4) non-relevant information is harmful, with accuracy decreasing based on both the position and the number of non-relevant contexts. We release all NanoKnow artifacts at https://github.com/castorini/NanoKnow.",
+      "published": "2026-02-23T18:37:49Z",
+      "updated": "2026-02-23T18:37:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20122v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.02228v2",
-      "title": "xLSTM Scaling Laws: Competitive Performance with Linear Time-Complexity",
+      "id": "http://arxiv.org/abs/2506.07751v4",
+      "title": "AbstRaL: Augmenting LLMs' Reasoning by Reinforcing Abstract Thinking",
       "authors": [
-        "Maximilian Beck",
-        "Kajetan Schweighofer",
-        "Sebastian Böck",
-        "Sebastian Lehner",
-        "Sepp Hochreiter"
+        "Silin Gao",
+        "Antoine Bosselut",
+        "Samy Bengio",
+        "Emmanuel Abbe"
       ],
-      "summary": "Scaling laws play a central role in the success of Large Language Models (LLMs), enabling the prediction of model performance relative to compute budgets prior to training. While Transformers have been the dominant architecture, recent alternatives such as xLSTM offer linear complexity with respect to context length while remaining competitive in the billion-parameter regime. We conduct a comparative investigation on the scaling behavior of Transformers and xLSTM along the following lines, providing insights to guide future model design and deployment. First, we study the scaling behavior for xLSTM in compute-optimal and over-training regimes using both IsoFLOP and parametric fit approaches on a wide range of model sizes (80M-7B) and number of training tokens (2B-2T). Second, we examine the dependence of optimal model sizes on context length, a pivotal aspect that was largely ignored in previous work. Finally, we analyze inference-time scaling characteristics. Our findings reveal that in typical LLM training and inference scenarios, xLSTM scales favorably compared to Transformers. Notably, xLSTM models consistently Pareto-dominate Transformer models, delivering lower cross-entropy loss for the same compute budget.",
-      "published": "2025-10-02T17:14:34Z",
-      "updated": "2026-02-20T18:12:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.02228v2"
+      "summary": "Recent studies have shown that large language models (LLMs), especially smaller ones, often lack robustness in grade school math (GSM) reasoning. In particular, they tend to experience performance drops when faced with distribution shifts, such as changes to numerical or nominal variables, or insertions of distracting clauses. A possible strategy to address this involves generating synthetic data to further \"instantiate\" reasoning problems on potential variations. In this work, we instead focus on the strategy of \"abstracting\" reasoning problems. This not only helps counteract distribution shifts but also facilitates the connection to symbolic tools for deriving solutions. Focusing on GSM, we find that this abstraction process is better acquired through reinforcement learning (RL) than just supervised fine-tuning, which often fails to produce faithful abstractions. Our method, AbstRaL -- which promotes abstract reasoning in LLMs using RL on granular abstraction data -- significantly mitigates performance degradation on recent GSM perturbation benchmarks. Besides, improving GSM robustness via AbstRaL is shown to also implicitly benefit LLMs' capabilities on OOD mathematical and general reasoning tasks, indicating that abstract thinking broadly enables better generalizability.",
+      "published": "2025-06-09T13:34:50Z",
+      "updated": "2026-02-23T18:25:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.07751v4"
     },
     {
-      "id": "http://arxiv.org/abs/2504.21022v2",
-      "title": "ConformalNL2LTL: Translating Natural Language Instructions into Temporal Logic Formulas with Conformal Correctness Guarantees",
+      "id": "http://arxiv.org/abs/2602.05165v3",
+      "title": "EBPO: Empirical Bayes Shrinkage for Stabilizing Group-Relative Policy Optimization",
       "authors": [
-        "David Smith Sundarsingh",
-        "Jun Wang",
-        "Jyotirmoy V. Deshmukh",
-        "Yiannis Kantaros"
+        "Kevin Han",
+        "Yuhang Zhou",
+        "Mingze Gao",
+        "Gedi Zhou",
+        "Serena Li",
+        "Abhishek Kumar",
+        "Xiangjun Fan",
+        "Weiwei Li",
+        "Lizhu Zhang"
       ],
-      "summary": "Linear Temporal Logic (LTL) is a widely used task specification language for autonomous systems. To mitigate the significant manual effort and expertise required to define LTL-encoded tasks, several methods have been proposed for translating Natural Language (NL) instructions into LTL formulas, which, however, lack correctness guarantees. To address this, we propose a new NL-to-LTL translation method, called ConformalNL2LTL that achieves user-defined translation success rates on unseen NL commands. Our method constructs LTL formulas iteratively by solving a sequence of open-vocabulary question-answering (QA) problems using large language models (LLMs). These QA tasks are handled collaboratively by a primary and an auxiliary model. The primary model answers each QA instance while quantifying uncertainty via conformal prediction; when it is insufficiently certain according to user-defined confidence thresholds, it requests assistance from the auxiliary model and, if necessary, from the user. We demonstrate theoretically and empirically that ConformalNL2LTL achieves the desired translation accuracy while minimizing user intervention.",
-      "published": "2025-04-22T20:32:34Z",
-      "updated": "2026-02-20T17:50:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.21022v2"
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective for enhancing the reasoning capabilities of Large Language Models (LLMs). However, dominant approaches like Group Relative Policy Optimization (GRPO) face critical stability challenges: they suffer from high estimator variance under computational constraints (small group sizes) and vanishing gradient signals in saturated failure regimes where all responses yield identical zero rewards. To address this, we propose Empirical Bayes Policy Optimization (EBPO), a novel framework that regularizes local group-based baselines by borrowing strength from the policy's accumulated global statistics. Instead of estimating baselines in isolation, EBPO employs a shrinkage estimator that dynamically balances local group statistics with a global prior updated via Welford's online algorithm. Theoretically, we demonstrate that EBPO guarantees strictly lower Mean Squared Error (MSE), bounded entropy decay, and non-vanishing penalty signals in failure scenarios compared to GRPO. Empirically, EBPO consistently outperforms GRPO and other established baselines across diverse benchmarks, including AIME and OlympiadBench. Notably, EBPO exhibits superior training stability, achieving high-performance gains even with small group sizes, and benefits significantly from difficulty-stratified curriculum learning.",
+      "published": "2026-02-05T00:33:02Z",
+      "updated": "2026-02-23T18:23:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.05165v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18372v1",
-      "title": "\"How Do I ...?\": Procedural Questions Predominate Student-LLM Chatbot Conversations",
+      "id": "http://arxiv.org/abs/2602.20102v1",
+      "title": "BarrierSteer: LLM Safety via Learning Barrier Steering",
       "authors": [
-        "Alexandra Neagu",
-        "Marcus Messer",
-        "Peter Johnson",
-        "Rhodri Nelson"
+        "Thanh Q. Tran",
+        "Arun Verma",
+        "Kiwan Wong",
+        "Bryan Kian Hsiang Low",
+        "Daniela Rus",
+        "Wei Xiao"
       ],
-      "summary": "Providing scaffolding through educational chatbots built on Large Language Models (LLM) has potential risks and benefits that remain an open area of research. When students navigate impasses, they ask for help by formulating impasse-driven questions. Within interactions with LLM chatbots, such questions shape the user prompts and drive the pedagogical effectiveness of the chatbot's response. This paper focuses on such student questions from two datasets of distinct learning contexts: formative self-study, and summative assessed coursework. We analysed 6,113 messages from both learning contexts, using 11 different LLMs and three human raters to classify student questions using four existing schemas. On the feasibility of using LLMs as raters, results showed moderate-to-good inter-rater reliability, with higher consistency than human raters. The data showed that 'procedural' questions predominated in both learning contexts, but more so when students prepare for summative assessment. These results provide a basis on which to use LLMs for classification of student questions. However, we identify clear limitations in both the ability to classify with schemas and the value of doing so: schemas are limited and thus struggle to accommodate the semantic richness of composite prompts, offering only partial understanding the wider risks and benefits of chatbot integration. In the future, we recommend an analysis approach that captures the nuanced, multi-turn nature of conversation, for example, by applying methods from conversation analysis in discursive psychology.",
-      "published": "2026-02-20T17:27:41Z",
-      "updated": "2026-02-20T17:27:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18372v1"
+      "summary": "Despite the state-of-the-art performance of large language models (LLMs) across diverse tasks, their susceptibility to adversarial attacks and unsafe content generation remains a major obstacle to deployment, particularly in high-stakes settings. Addressing this challenge requires safety mechanisms that are both practically effective and supported by rigorous theory. We introduce BarrierSteer, a novel framework that formalizes response safety by embedding learned non-linear safety constraints directly into the model's latent representation space. BarrierSteer employs a steering mechanism based on Control Barrier Functions (CBFs) to efficiently detect and prevent unsafe response trajectories during inference with high precision. By enforcing multiple safety constraints through efficient constraint merging, without modifying the underlying LLM parameters, BarrierSteer preserves the model's original capabilities and performance. We provide theoretical results establishing that applying CBFs in latent space offers a principled and computationally efficient approach to enforcing safety. Our experiments across multiple models and datasets show that BarrierSteer substantially reduces adversarial success rates, decreases unsafe generations, and outperforms existing methods.",
+      "published": "2026-02-23T18:19:46Z",
+      "updated": "2026-02-23T18:19:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20102v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18364v1",
-      "title": "Quantum Maximum Likelihood Prediction via Hilbert Space Embeddings",
+      "id": "http://arxiv.org/abs/2601.05500v3",
+      "title": "The Illusion of Human AI Parity Under Uncertainty: Navigating Elusive Ground Truth via a Probabilistic Paradigm",
       "authors": [
-        "Sreejith Sreekumar",
-        "Nir Weinberger"
+        "Aparna Elangovan",
+        "Lei Xu",
+        "Mahsa Elyasi",
+        "Ismail Akdulum",
+        "Mehmet Aksakal",
+        "Enes Gurun",
+        "Brian Hur",
+        "Saab Mansour",
+        "Ravid Shwartz Ziv",
+        "Karin Verspoor",
+        "Dan Roth"
       ],
-      "summary": "Recent works have proposed various explanations for the ability of modern large language models (LLMs) to perform in-context prediction. We propose an alternative conceptual viewpoint from an information-geometric and statistical perspective. Motivated by Bach[2023], we model training as learning an embedding of probability distributions into the space of quantum density operators, and in-context learning as maximum-likelihood prediction over a specified class of quantum models. We provide an interpretation of this predictor in terms of quantum reverse information projection and quantum Pythagorean theorem when the class of quantum models is sufficiently expressive. We further derive non-asymptotic performance guarantees in terms of convergence rates and concentration inequalities, both in trace norm and quantum relative entropy. Our approach provides a unified framework to handle both classical and quantum LLMs.",
-      "published": "2026-02-20T17:16:38Z",
-      "updated": "2026-02-20T17:16:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18364v1"
+      "summary": "Benchmarking the relative capabilities of AI systems, including Large Language Models (LLMs) and Vision Models, typically ignores the impact of uncertainty in the underlying ground truth answers from experts. This ambiguity is not just limited to human preferences, but is also consequential even in safety critical domains such as medicine where uncertainty is pervasive. In this paper, we introduce a probabilistic paradigm to theoretically explain how - high certainty in ground truth answers is almost always necessary for even an expert to achieve high scores, whereas in datasets with high variation in ground truth answers there may be little difference between a random labeller and an expert. Therefore, ignoring uncertainty in ground truth evaluation data can result in the misleading conclusion that a non-expert has similar performance to that of an expert. Using the probabilistic paradigm, we thus bring forth the concepts of expected accuracy and expected F1 to estimate the score an expert human or system can achieve given ground truth answer variability. Our work leads to the recommendation that when establishing the capability of a system, results should be stratified by probability of the ground truth answer, typically measured by the agreement rate of ground truth experts. Stratification becomes critical when the overall performance drops below a threshold of 80\\%. Under stratified evaluation, performance comparison becomes more reliable in high certainty bins, mitigating the effect of the key confounding factor -- uncertainty.",
+      "published": "2026-01-09T03:19:37Z",
+      "updated": "2026-02-23T18:16:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.05500v3"
     },
     {
-      "id": "http://arxiv.org/abs/2505.11409v3",
-      "title": "Visual Planning: Let's Think Only with Images",
+      "id": "http://arxiv.org/abs/2507.17842v2",
+      "title": "Shop-R1: Rewarding LLMs to Simulate Human Behavior in Online Shopping via Reinforcement Learning",
       "authors": [
-        "Yi Xu",
-        "Chengzu Li",
-        "Han Zhou",
-        "Xingchen Wan",
-        "Caiqi Zhang",
-        "Anna Korhonen",
-        "Ivan Vulić"
+        "Yimeng Zhang",
+        "Tian Wang",
+        "Jiri Gesi",
+        "Ziyi Wang",
+        "Yuxuan Lu",
+        "Jiacheng Lin",
+        "Sinong Zhan",
+        "Vianne Gao",
+        "Ruochen Jiao",
+        "Junze Liu",
+        "Kun Qian",
+        "Yuxin Tang",
+        "Ran Xue",
+        "Houyu Zhang",
+        "Qingjun Cui",
+        "Yufan Guo",
+        "Dakuo Wang"
       ],
-      "summary": "Recent advancements in Large Language Models (LLMs) and their multimodal extensions (MLLMs) have substantially enhanced machine reasoning across diverse tasks. However, these models predominantly rely on pure text as the medium for both expressing and structuring reasoning, even when visual information is present. In this work, we argue that language may not always be the most natural or effective modality for reasoning, particularly in tasks involving spatial and geometrical information. Motivated by this, we propose a new paradigm, Visual Planning, which enables planning through purely visual representations for these \"vision-first\" tasks, as a supplementary channel to language-based reasoning. In this paradigm, planning is executed via sequences of images that encode step-by-step inference in the visual domain, akin to how humans sketch or visualize future actions. We introduce a novel reinforcement learning framework, Visual Planning via Reinforcement Learning (VPRL), empowered by GRPO for post-training large vision models, leading to substantial improvements in planning in a selection of representative visual navigation tasks, FrozenLake, Maze, and MiniBehavior. Our visual planning paradigm outperforms all other planning variants that conduct reasoning in the text-only space. Our results establish Visual Planning as a viable and promising supplement to language-based reasoning, opening new avenues for tasks that benefit from intuitive, image-based inference.",
-      "published": "2025-05-16T16:17:22Z",
-      "updated": "2026-02-20T17:09:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.11409v3"
+      "summary": "Large Language Models (LLMs) have recently demonstrated strong potential in generating 'believable human-like' behavior in web environments. Prior work has explored augmenting training data with LLM-synthesized rationales and applying supervised fine-tuning (SFT) to enhance reasoning ability, which in turn can improve downstream action prediction. However, the performance of such approaches remains inherently bounded by the reasoning capabilities of the model used to generate the rationales. In this paper, we introduce Shop-R1, a novel reinforcement learning (RL) framework aimed at enhancing the reasoning ability of LLMs for simulation of real human behavior in online shopping environments. Specifically, Shop-R1 decomposes the human behavior simulation task into two stages: rationale generation and action prediction, each guided by distinct reward signals. For rationale generation, we leverage internal model signals (e.g., logit distributions) to guide the reasoning process in a self-supervised manner. For action prediction, we propose a hierarchical reward structure with difficulty-aware scaling to prevent reward hacking and enable fine-grained reward assignment. This design evaluates both high-level action types and the correctness of fine-grained sub-action details (attributes and values), rewarding outputs proportionally to their difficulty. Experimental results show that our method achieves a relative improvement of over 65% compared to the baseline. The project page is available at https://damon-demon.github.io/shop-r1.html.",
+      "published": "2025-07-23T18:10:43Z",
+      "updated": "2026-02-23T18:12:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.17842v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18352v1",
-      "title": "Qualitative Coding Analysis through Open-Source Large Language Models: A User Study and Design Recommendations",
+      "id": "http://arxiv.org/abs/2602.20094v1",
+      "title": "CausalFlip: A Benchmark for LLM Causal Judgment Beyond Semantic Matching",
       "authors": [
-        "Tung T. Ngo",
-        "Dai Nguyen Van",
-        "Anh-Minh Nguyen",
-        "Phuong-Anh Do",
-        "Anh Nguyen-Quoc"
+        "Yuzhe Wang",
+        "Yaochen Zhu",
+        "Jundong Li"
       ],
-      "summary": "Qualitative data analysis is labor-intensive, yet the privacy risks associated with commercial Large Language Models (LLMs) often preclude their use in sensitive research. To address this, we introduce ChatQDA, an on-device framework powered by open-source LLMs designed for privacy-preserving open coding. Our mixed-methods user study reveals that while participants rated the system highly for usability and perceived efficiency, they exhibited \"conditional trust\", valuing the tool for surface-level extraction while questioning its interpretive nuance and consistency. Furthermore, despite the technical security of local deployment, participants reported epistemic uncertainty regarding data protection, suggesting that invisible security measures are insufficient to foster trust. We conclude with design recommendations for local-first analysis tools that prioritize verifiable privacy and methodological rigor.",
-      "published": "2026-02-20T17:04:02Z",
-      "updated": "2026-02-20T17:04:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18352v1"
+      "summary": "As large language models (LLMs) witness increasing deployment in complex, high-stakes decision-making scenarios, it becomes imperative to ground their reasoning in causality rather than spurious correlations. However, strong performance on traditional reasoning benchmarks does not guarantee true causal reasoning ability of LLMs, as high accuracy may still arise from memorizing semantic patterns instead of analyzing the underlying true causal structures. To bridge this critical gap, we propose a new causal reasoning benchmark, CausalFlip, designed to encourage the development of new LLM paradigm or training algorithms that ground LLM reasoning in causality rather than semantic correlation. CausalFlip consists of causal judgment questions built over event triples that could form different confounder, chain, and collider relations. Based on this, for each event triple, we construct pairs of semantically similar questions that reuse the same events but yield opposite causal answers, where models that rely heavily on semantic matching are systematically driven toward incorrect predictions. To further probe models' reliance on semantic patterns, we introduce a noisy-prefix evaluation that prepends causally irrelevant text before intermediate causal reasoning steps without altering the underlying causal relations or the logic of the reasoning process. We evaluate LLMs under multiple training paradigms, including answer-only training, explicit Chain-of-Thought (CoT) supervision, and a proposed internalized causal reasoning approach that aims to mitigate explicit reliance on correlation in the reasoning process. Our results show that explicit CoT can still be misled by spurious semantic correlations, where internalizing reasoning steps yields substantially improved causal grounding, suggesting that it is promising to better elicit the latent causal reasoning capabilities of base LLMs.",
+      "published": "2026-02-23T18:06:15Z",
+      "updated": "2026-02-23T18:06:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20094v1"
     }
   ]
 }
