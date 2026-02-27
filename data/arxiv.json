@@ -1,206 +1,185 @@
 {
-  "generated_at_utc": "2026-02-26T02:00:49Z",
+  "generated_at_utc": "2026-02-27T02:00:11Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2509.26626v2",
-      "title": "Recursive Self-Aggregation Unlocks Deep Thinking in Large Language Models",
+      "id": "http://arxiv.org/abs/2602.22207v1",
+      "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
       "authors": [
-        "Siddarth Venkatraman",
-        "Vineet Jain",
-        "Sarthak Mittal",
-        "Vedant Shah",
-        "Johan Obando-Ceron",
-        "Yoshua Bengio",
-        "Brian R. Bartoldson",
-        "Bhavya Kailkhura",
-        "Guillaume Lajoie",
-        "Glen Berseth",
-        "Nikolay Malkin",
-        "Moksh Jain"
+        "Hanna Yukhymenko",
+        "Anton Alexandrov",
+        "Martin Vechev"
       ],
-      "summary": "Test-time scaling methods improve the capabilities of large language models (LLMs) by increasing the amount of compute used during inference to make a prediction. Inference-time compute can be scaled in parallel by choosing among multiple independent solutions or sequentially through self-refinement. We propose Recursive Self-Aggregation (RSA), a test-time scaling method inspired by evolutionary methods that combines the benefits of both parallel and sequential scaling. Each step of RSA refines a population of candidate reasoning chains through aggregation of subsets to yield a population of improved solutions, which are then used as the candidate pool for the next iteration. Empirically, RSA delivers substantial performance gains with increasing compute budgets across diverse tasks, model families and sizes. Notably, RSA with Gemini 3 Flash attains performance near the top of the ARC-AGI-2 public leaderboard. RSA also enables Qwen3-4B-Instruct-2507 to achieve competitive performance with larger reasoning models, including DeepSeek-R1 and o3-mini (high), outperforming purely parallel and sequential scaling strategies across AIME-25, HMMT-25, Reasoning Gym, LiveCodeBench-v6, and SuperGPQA. We further propose a novel aggregation-aware reinforcement learning approach that yields significant performance gains by training the model to combine solutions.",
-      "published": "2025-09-30T17:58:03Z",
-      "updated": "2026-02-24T18:58:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.26626v2"
+      "summary": "The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.",
+      "published": "2026-02-25T18:58:25Z",
+      "updated": "2026-02-25T18:58:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22207v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21193v1",
-      "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+      "id": "http://arxiv.org/abs/2602.00288v3",
+      "title": "TimeBlind: A Spatio-Temporal Compositionality Benchmark for Video LLMs",
       "authors": [
-        "Renjie Pi",
-        "Grace Lam",
-        "Mohammad Shoeybi",
-        "Pooya Jannaty",
-        "Bryan Catanzaro",
-        "Wei Ping"
+        "Baiqi Li",
+        "Kangyi Zhao",
+        "Ce Zhang",
+        "Chancharik Mitra",
+        "Jean de Dieu Nyandwi",
+        "Gedas Bertasius"
       ],
-      "summary": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices for terminal agents, making two key contributions: (1) Terminal-Task-Gen, a lightweight synthetic task generation pipeline that supports seed-based and skill-based task construction, and (2) a comprehensive analysis of data and training strategies, including filtering, curriculum learning, long context training, and scaling behavior. Our pipeline yields Terminal-Corpus, a large-scale open-source dataset for terminal tasks. Using this dataset, we train Nemotron-Terminal, a family of models initialized from Qwen3(8B, 14B, 32B) that achieve substantial gains on Terminal-Bench 2.0: Nemotron-Terminal-8B improves from 2.5% to 13.0% Nemotron-Terminal-14B improves from 4.0% to 20.2%, and Nemotron-Terminal-32B improves from 3.4% to 27.4%, matching the performance of significantly larger models. To accelerate research in this domain, we open-source our model checkpoints and most of our synthetic datasets at https://huggingface.co/collections/nvidia/nemotron-terminal.",
-      "published": "2026-02-24T18:51:04Z",
-      "updated": "2026-02-24T18:51:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21193v1"
+      "summary": "Fine-grained spatio-temporal understanding is essential for video reasoning and embodied AI. Yet, while Multimodal Large Language Models (MLLMs) master static semantics, their grasp of temporal dynamics remains brittle. We present TimeBlind, a diagnostic benchmark for compositional spatio-temporal understanding. Inspired by cognitive science, TimeBlind categorizes fine-grained temporal understanding into three levels: recognizing atomic events, characterizing event properties, and reasoning about event interdependencies. Unlike benchmarks that conflate recognition with temporal reasoning, TimeBlind leverages a minimal-pairs paradigm: video pairs share identical static visual content but differ solely in temporal structure, utilizing complementary questions to neutralize language priors. Evaluating over 20 state-of-the-art MLLMs (e.g., GPT-5, Gemini 3 Pro) on 600 curated instances (2400 video-question pairs), reveals that the Instance Accuracy (correctly distinguishing both videos in a pair) of the best performing MLLM is only 48.2%, far below the human performance (98.2%). These results demonstrate that even frontier models rely heavily on static visual shortcuts rather than genuine temporal logic, positioning TimeBlind as a vital diagnostic tool for next-generation video understanding. Dataset and code are available at https://baiqi-li.github.io/timeblind_project/ .",
+      "published": "2026-01-30T20:21:46Z",
+      "updated": "2026-02-25T18:57:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.00288v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21189v1",
-      "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
+      "id": "http://arxiv.org/abs/2504.17203v4",
+      "title": "High-Fidelity And Complex Test Data Generation For Google SQL Code Generation Services",
       "authors": [
-        "Anas Barakat",
-        "Souradip Chakraborty",
-        "Khushbu Pahwa",
-        "Amrit Singh Bedi"
+        "Shivasankari Kannan",
+        "Yeounoh Chung",
+        "Amita Gondi",
+        "Tristan Swadell",
+        "Fatma Ozcan"
       ],
-      "summary": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
-      "published": "2026-02-24T18:43:08Z",
-      "updated": "2026-02-24T18:43:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21189v1"
+      "summary": "The demand for high-fidelity test data is paramount in industrial settings where access to production data is largely restricted. Traditional data generation methods often fall short, struggling with low-fidelity and the ability to model complex data structures and semantic relationships that are critical for testing complex SQL code generation services like Natural Language to SQL (NL2SQL). In this paper, we address the critical need for generating syntactically correct and semantically relevant high-fidelity mock data for complex data structures that includes columns with nested structures that we frequently encounter in Google workloads. We highlight the limitations of existing approaches used in production, particularly their inability to handle large and complex data structures, as well as the lack of semantically coherent test data that lead to limited test coverage. We demonstrate that by leveraging Large Language Models (LLMs) and incorporating strategic pre- and post-processing steps, we can generate syntactically correct and semantically relevant high-fidelity test data that adheres to complex structural constraints and maintains semantic integrity to the SQL test targets (queries/functions). This approach supports comprehensive testing of complex SQL queries involving joins, aggregations, and even deeply nested subqueries, ensuring robust evaluation of SQL code generation services, like NL2SQL and SQL Code Assistant. Our results demonstrate the practical utility of an LLM (\\textit{Gemini}) based test data generation for industrial SQL code generation services where generating high-fidelity test data is essential due to the frequent unavailability and inaccessibility of production datasets for testing.",
+      "published": "2025-04-24T02:27:17Z",
+      "updated": "2026-02-25T18:55:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.17203v4"
     },
     {
-      "id": "http://arxiv.org/abs/2602.19275v2",
-      "title": "KUDA: Knowledge Unlearning by Deviating Representation for Large Language Models",
+      "id": "http://arxiv.org/abs/2602.22197v1",
+      "title": "Off-The-Shelf Image-to-Image Models Are All You Need To Defeat Image Protection Schemes",
       "authors": [
-        "Ce Fang",
-        "Zhikun Zhang",
-        "Min Chen",
-        "Qing Liu",
-        "Lu Zhou",
-        "Zhe Liu",
-        "Yunjun Gao"
+        "Xavier Pleimling",
+        "Sifat Muhammad Abdullah",
+        "Gunjan Balde",
+        "Peng Gao",
+        "Mainack Mondal",
+        "Murtuza Jadliwala",
+        "Bimal Viswanath"
       ],
-      "summary": "Large language models (LLMs) acquire a large amount of knowledge through pre-training on vast and diverse corpora. While this endows LLMs with strong capabilities in generation and reasoning, it amplifies risks associated with sensitive, copyrighted, or harmful content in training data. LLM unlearning, which aims to remove specific knowledge encoded within models, is a promising technique to reduce these risks. However, existing LLM unlearning methods often force LLMs to generate random or incoherent answers due to their inability to alter the encoded knowledge precisely. To achieve effective unlearning at the knowledge level of LLMs, we propose Knowledge Unlearning by Deviating representAtion (KUDA). We first utilize causal tracing to locate specific layers for target knowledge storage. We then design a new unlearning objective that induces the model's representations to deviate from its original position in the phase of knowledge removal, thus disrupting the ability to associate with the target knowledge. To resolve the optimization conflicts between forgetting and retention, we employ a relaxation null-space projection mechanism to mitigate the disruption to the representation space of retaining knowledge. Extensive experiments on representative benchmarks, WMDP and MUSE, demonstrate that KUDA outperforms most existing baselines by effectively balancing knowledge removal and model utility retention.",
-      "published": "2026-02-22T17:16:49Z",
-      "updated": "2026-02-24T18:28:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.19275v2"
+      "summary": "Advances in Generative AI (GenAI) have led to the development of various protection strategies to prevent the unauthorized use of images. These methods rely on adding imperceptible protective perturbations to images to thwart misuse such as style mimicry or deepfake manipulations. Although previous attacks on these protections required specialized, purpose-built methods, we demonstrate that this is no longer necessary. We show that off-the-shelf image-to-image GenAI models can be repurposed as generic ``denoisers\" using a simple text prompt, effectively removing a wide range of protective perturbations. Across 8 case studies spanning 6 diverse protection schemes, our general-purpose attack not only circumvents these defenses but also outperforms existing specialized attacks while preserving the image's utility for the adversary. Our findings reveal a critical and widespread vulnerability in the current landscape of image protection, indicating that many schemes provide a false sense of security. We stress the urgent need to develop robust defenses and establish that any future protection mechanism must be benchmarked against attacks from off-the-shelf GenAI models. Code is available in this repository: https://github.com/mlsecviswanath/img2imgdenoiser",
+      "published": "2026-02-25T18:46:30Z",
+      "updated": "2026-02-25T18:46:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22197v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.18310v2",
-      "title": "How much does context affect the accuracy of AI health advice?",
+      "id": "http://arxiv.org/abs/2507.08017v5",
+      "title": "Mechanistic Indicators of Understanding in Large Language Models",
       "authors": [
-        "Prashant Garg",
-        "Thiemo Fetzer"
+        "Pierre Beckmann",
+        "Matthieu Queloz"
       ],
-      "summary": "Large language models (LLMs) are increasingly used to provide health advice, yet evidence on how their accuracy varies across languages, topics and information sources remains limited. We assess how linguistic and contextual factors affect the accuracy of AI-based health-claim verification. We evaluated seven widely used LLMs on two datasets: (i) 1,975 legally authorised nutrition and health claims from UK and EU regulatory registers translated into 21 languages; and (ii) 9,088 journalist-vetted public-health claims from the PUBHEALTH corpus spanning COVID-19, abortion, politics and general health, drawn from government advisories, scientific abstracts and media sources. Models classified each claim as supported or unsupported using majority voting across repeated runs. Accuracy was analysed by language, topic, source and model. Accuracy on authorised claims was highest in English and closely related European languages and declined in several widely spoken non-European languages, decreasing with syntactic distance from English. On real-world public-health claims, accuracy was substantially lower and varied systematically by topic and source. Models performed best on COVID-19 and government-attributed claims and worst on general health and scientific abstracts. High performance on English, canonical health claims masks substantial context-dependent gaps. Differences in training data exposure, editorial framing and topic-specific tuning likely contribute to these disparities, which are comparable in magnitude to cross-language differences. LLM accuracy in health-claim verification depends strongly on language, topic and information source. English-language performance does not reliably generalise across contexts, underscoring the need for multilingual, domain-specific evaluation before deployment in public-health communication.",
-      "published": "2025-04-25T12:37:15Z",
-      "updated": "2026-02-24T18:23:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.18310v2"
+      "summary": "Large language models (LLMs) are often portrayed as merely imitating linguistic patterns without genuine understanding. We argue that recent findings in mechanistic interpretability (MI), the emerging field probing the inner workings of LLMs, render this picture increasingly untenable--but only once those findings are integrated within a theoretical account of understanding. We propose a tiered framework for thinking about understanding in LLMs and use it to synthesize the most relevant findings to date. The framework distinguishes three hierarchical varieties of understanding, each tied to a corresponding level of computational organization: conceptual understanding emerges when a model forms \"features\" as directions in latent space, learning connections between diverse manifestations of a single entity or property; state-of-the-world understanding emerges when a model learns contingent factual connections between features and dynamically tracks changes in the world; principled understanding emerges when a model ceases to rely on memorized facts and discovers a compact \"circuit\" connecting these facts. Across these tiers, MI uncovers internal organizations that can underwrite understanding-like unification. However, these also diverge from human cognition in their parallel exploitation of heterogeneous mechanisms. Fusing philosophical theory with mechanistic evidence thus allows us to transcend binary debates over whether AI understands, paving the way for a comparative, mechanistically grounded epistemology that explores how AI understanding aligns with--and diverges from--our own.",
+      "published": "2025-07-07T20:26:31Z",
+      "updated": "2026-02-25T18:34:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.08017v5"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21161v1",
-      "title": "ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking",
+      "id": "http://arxiv.org/abs/2505.23725v2",
+      "title": "MuLoCo: Muon is a practical inner optimizer for DiLoCo",
       "authors": [
-        "Guangming Wang",
-        "Qizhen Ying",
-        "Yixiong Jing",
-        "Olaf Wysocki",
-        "Brian Sheil"
+        "Benjamin Thérien",
+        "Xiaolong Huang",
+        "Aaron Defazio",
+        "Irina Rish",
+        "Eugene Belilovsky"
       ],
-      "summary": "Classical robotic systems typically rely on custom planners designed for constrained environments. While effective in restricted settings, these systems lack generalization capabilities, limiting the scalability of embodied AI and general-purpose robots. Recent data-driven Vision-Language-Action (VLA) approaches aim to learn policies from large-scale simulation and real-world data. However, the continuous action space of the physical world significantly exceeds the representational capacity of linguistic tokens, making it unclear if scaling data alone can yield general robotic intelligence. To address this gap, we propose ActionReasoning, an LLM-driven framework that performs explicit action reasoning to produce physics-consistent, prior-guided decisions for robotic manipulation. ActionReasoning leverages the physical priors and real-world knowledge already encoded in Large Language Models (LLMs) and structures them within a multi-agent architecture. We instantiate this framework on a tractable case study of brick stacking, where the environment states are assumed to be already accurately measured. The environmental states are then serialized and passed to a multi-agent LLM framework that generates physics-aware action plans. The experiments demonstrate that the proposed multi-agent LLM framework enables stable brick placement while shifting effort from low-level domain-specific coding to high-level tool invocation and prompting, highlighting its potential for broader generalization. This work introduces a promising approach to bridging perception and execution in robotic manipulation by integrating physical reasoning with LLMs.",
-      "published": "2026-02-24T18:07:06Z",
-      "updated": "2026-02-24T18:07:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21161v1"
+      "summary": "DiLoCo is a powerful framework for training large language models (LLMs), enabling larger optimal batch sizes and increased accelerator utilization under networking constraints. However, DiLoCo's performance has been shown to degrade as the number of workers (K) increases (Charles et al., 2025). In this work, we posit that a related but often overlooked factor in DiLoCo's behavior is the choice of inner optimizer, which shapes the pseudogradient used by the outer optimizer. Given the recent success of Muon relative to AdamW for data parallel (DP) training, we examine how Muon's normalized optimizer steps can affect the pseudogradient's quality. We find that, relative to AdamW, Muon yields more directionally correct pseudogradients as the number of workers (K) increases. In our experiments pre-training language models, we conduct extensive hyperparameter tuning across 150M, 416M, 914M, 1.76B, and 3.1B models for DiLoCo, MuLoCo, AdamW DP, and Muon DP. Consistently across all scales, we find that with K>=1 workers, MuLoCo (Muon inner optimizer DiLoCo) achieves superior performance to DiLoCo in absolute terms and for K>2 it outperforms DiLoCo relative to their data parallel baselines, while being compatible with quantization, streaming, and long synchronization intervals. At K=1, we find that MuLoCo can even outperform the data-parallel gold standard while having larger critical batch sizes. Finally, we extrapolate optimal hyperparameters to 15B scale and train a model with each method (six in total) using K=1 and K=16 workers. We find that K=16 MuLoCo nearly matches single-worker performance at this scale, while MuLoCo K=1 matches the best performing baseline while using a much larger 16M token batch size.",
+      "published": "2025-05-29T17:55:37Z",
+      "updated": "2026-02-25T18:22:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.23725v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21158v1",
-      "title": "SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards",
+      "id": "http://arxiv.org/abs/2602.22171v1",
+      "title": "A Taxonomy of Human--MLLM Interaction in Early-Stage Sketch-Based Design Ideation",
       "authors": [
-        "Dengjia Zhang",
-        "Xiaoou Liu",
-        "Lu Cheng",
-        "Yaqing Wang",
-        "Kenton Murray",
-        "Hua Wei"
+        "Weiayn Shi",
+        "Kenny Tsu Wei Choo"
       ],
-      "summary": "Large language models (LLMs) are increasingly deployed as multi-step decision-making agents, where effective reward design is essential for guiding learning. Although recent work explores various forms of reward shaping and step-level credit assignment, a key signal remains largely overlooked: the intrinsic uncertainty of LLMs. Uncertainty reflects model confidence, reveals where exploration is needed, and offers valuable learning cues even in failed trajectories. We introduce SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards, a reinforcement learning framework that incorporates uncertainty directly into the reward design. SELAUR integrates entropy-, least-confidence-, and margin-based metrics into a combined token-level uncertainty estimate, providing dense confidence-aligned supervision, and employs a failure-aware reward reshaping mechanism that injects these uncertainty signals into step- and trajectory-level rewards to improve exploration efficiency and learning stability. Experiments on two benchmarks, ALFWorld and WebShop, show that our method consistently improves success rates over strong baselines. Ablation studies further demonstrate how uncertainty signals enhance exploration and robustness.",
-      "published": "2026-02-24T18:04:54Z",
-      "updated": "2026-02-24T18:04:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21158v1"
+      "summary": "As multimodal large language models (MLLMs) are increasingly integrated into early-stage design tools, it is important to understand how designers collaborate with AI during ideation. In a user study with 12 participants, we analysed sketch-based design interactions with an MLLM-powered system using automatically recorded interaction logs and post-task interviews. Based on how creative responsibility was allocated between humans and the AI, we predefined four interaction modes: Human-Only, Human-Lead, AI-Lead, and Co-Evolution, and analysed how these modes manifested during sketch-based design ideation. Our results show that designers rarely rely on a single mode; instead, human-led and AI-led roles are frequently interwoven and shift across ideation instances. These findings provide an empirical basis for future work to investigate why designers shift roles with AI and how interactive systems can better support such dynamic collaboration.",
+      "published": "2026-02-25T18:18:02Z",
+      "updated": "2026-02-25T18:18:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22171v1"
     },
     {
-      "id": "http://arxiv.org/abs/2512.03005v4",
-      "title": "From Moderation to Mediation: Can LLMs Serve as Mediators in Online Flame Wars?",
+      "id": "http://arxiv.org/abs/2601.18970v2",
+      "title": "Pay Attention to Where You Looked",
       "authors": [
-        "Dawei Li",
-        "Abdullah Alnaibari",
-        "Arslan Bisharat",
-        "Manny Sandoval",
-        "Deborah Hall",
-        "Yasin Silva",
-        "Huan Liu"
+        "Alex Berian",
+        "JhihYang Wu",
+        "Daniel Brignac",
+        "Natnael Daba",
+        "Abhijit Mahalanobis"
       ],
-      "summary": "The rapid advancement of large language models (LLMs) has opened new possibilities for AI for good applications. As LLMs increasingly mediate online communication, their potential to foster empathy and constructive dialogue becomes an important frontier for responsible AI research. This work explores whether LLMs can serve not only as moderators that detect harmful content, but as mediators capable of understanding and de-escalating online conflicts. Our framework decomposes mediation into two subtasks: judgment, where an LLM evaluates the fairness and emotional dynamics of a conversation, and steering, where it generates empathetic, de-escalatory messages to guide participants toward resolution. To assess mediation quality, we construct a large Reddit-based dataset and propose a multi-stage evaluation pipeline combining principle-based scoring, user simulation, and human comparison. Experiments show that API-based models outperform open-source counterparts in both reasoning and intervention alignment when doing mediation. Our findings highlight both the promise and limitations of current LLMs as emerging agents for online social mediation.",
-      "published": "2025-12-02T18:31:18Z",
-      "updated": "2026-02-24T18:01:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.03005v4"
+      "summary": "Novel view synthesis (NVS) has advanced with generative modeling, enabling photorealistic image generation. In few-shot NVS, where only a few input views are available, existing methods often assume equal importance for all input views relative to the target, leading to suboptimal results. We address this limitation by introducing a camera-weighting mechanism that adjusts the importance of source views based on their relevance to the target. We propose two approaches: a deterministic weighting scheme leveraging geometric properties like Euclidean distance and angular differences, and a cross-attention-based learning scheme that optimizes view weighting. Additionally, models can be further trained with our camera-weighting scheme to refine their understanding of view relevance and enhance synthesis quality. This mechanism is adaptable and can be integrated into various NVS algorithms, improving their ability to synthesize high-quality novel views. Our results demonstrate that adaptive view weighting enhances accuracy and realism, offering a promising direction for improving NVS.",
+      "published": "2026-01-26T21:10:32Z",
+      "updated": "2026-02-25T18:12:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.18970v2"
     },
     {
-      "id": "http://arxiv.org/abs/2506.21220v4",
-      "title": "Complexity-aware fine-tuning",
+      "id": "http://arxiv.org/abs/2602.18671v2",
+      "title": "Spilled Energy in Large Language Models",
       "authors": [
-        "Andrey Goncharov",
-        "Daniil Vyazhev",
-        "Petr Sychev",
-        "Edvard Khalafyan",
-        "Alexey Zaytsev"
+        "Adrian Robert Minut",
+        "Hazem Dewidar",
+        "Iacopo Masi"
       ],
-      "summary": "General-purpose Large Language Models (LLMs) are frequently fine-tuned through supervised fine-tuning (SFT) to enhance performance in specific domains. Better results can be achieved by distilling the chain-of-thought of a larger model at the cost of numerous expensive calls and a much greater amount of data. We propose a novel blueprint for efficient fine-tuning that uses reasoning only for complex data identified by entropy. Specifically, across three small open models ($\\approx 3B$) we split the training data into complexity categories by a single token answer entropy (ROC AUC $0.73$), fine-tune large language models (LLMs) via SFT and distillation, and show that our pipeline significantly outperforms the standard SFT approach ($0.58$ vs $0.45$ average accuracy) and outperforms the distillation approach ($0.58$ vs $0.56$ average accuracy) while using $81\\%$ less data.",
-      "published": "2025-06-26T13:13:24Z",
-      "updated": "2026-02-24T17:50:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.21220v4"
+      "summary": "We reinterpret the final Large Language Model (LLM) softmax classifier as an Energy-Based Model (EBM), decomposing the sequence-to-sequence probability chain into multiple interacting EBMs at inference. This principled approach allows us to track \"energy spills\" during decoding, which we empirically show correlate with factual errors, biases, and failures. Similar to Orgad et al. (2025), our method localizes the exact answer token and subsequently tests for hallucinations. Crucially, however, we achieve this without requiring trained probe classifiers or activation ablations. Instead, we introduce two completely training-free metrics derived directly from output logits: spilled energy, which captures the discrepancy between energy values across consecutive generation steps that should theoretically match, and marginalized energy, which is measurable at a single step. Evaluated on nine benchmarks across state-of-the-art LLMs (including LLaMA, Mistral, and Gemma) and on synthetic algebraic operations (Qwen3), our approach demonstrates robust, competitive hallucination detection and cross-task generalization. Notably, these results hold for both pretrained and instruction-tuned variants without introducing any training overhead.",
+      "published": "2026-02-21T00:38:47Z",
+      "updated": "2026-02-25T18:09:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18671v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21144v1",
-      "title": "Scaling State-Space Models on Multiple GPUs with Tensor Parallelism",
+      "id": "http://arxiv.org/abs/2602.22158v1",
+      "title": "LLMTailor: A Layer-wise Tailoring Tool for Efficient Checkpointing of Large Language Models",
       "authors": [
-        "Anurag Dutt",
-        "Nimit Shah",
-        "Hazem Masarani",
-        "Anshul Gandhi"
+        "Minqiu Sun",
+        "Xin Huang",
+        "Luanzheng Guo",
+        "Nathan R. Tallent",
+        "Kento Sato",
+        "Dong Dai"
       ],
-      "summary": "Selective state space models (SSMs) have rapidly become a compelling backbone for large language models, especially for long-context workloads. Yet in deployment, their inference performance is often bounded by the memory capacity, bandwidth, and latency limits of a single GPU, making multi-GPU execution increasingly necessary. Although tensor parallelism (TP) is widely used to scale Transformer inference, applying it to selective SSM blocks is non-trivial because the SSM mixer couples large projections with a sequence-wise recurrent state update and local mixing whose efficiency depends on preserving locality and avoiding synchronization in the critical path. This paper presents a communication-efficient TP design for selective SSM inference that addresses three practical engineering challenges: enabling TTFT improvements via an SSM state cache across prefill and decode, partitioning the mixer's packed parameter tensor so that recurrent updates remain local while minimizing communication, and reducing TP aggregation overhead with quantized AllReduce. We evaluate on three representative SSM-based LLMs spanning pure-SSM and hybrid architectures - Mamba, Falcon-Mamba, and Zamba - on NVIDIA A6000 and A100 clusters. Our experiments show substantial throughput gains from tensor-parallel SSM inference, improving batch-request throughput by ~1.6-2.1x on 2 GPUs and ~2.6-4.0x on 4 GPUs for Mamba, with the largest benefits at long context lengths, and achieving a further ~10-18% throughput improvement from quantized all-reduce by lowering synchronization bandwidth overhead.",
-      "published": "2026-02-24T17:47:54Z",
-      "updated": "2026-02-24T17:47:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21144v1"
+      "summary": "Checkpointing is essential for fault tolerance in training large language models (LLMs). However, existing methods, regardless of their I/O strategies, periodically store the entire model and optimizer states, incurring substantial storage overhead and resource contention. Recent studies reveal that updates across LLM layers are highly non-uniform. Across training steps, some layers may undergo more significant changes, while others remain relatively stable or even unchanged. This suggests that selectively checkpointing only layers with significant updates could reduce overhead without harming training. Implementing such selective strategies requires fine-grained control over both weights and optimizer states, which no current tool provides. To address this gap, we propose \\texttt{LLMTailor}, a checkpoint-merging framework that filters and assembles layers from different checkpoints to form a composite checkpoint. Our evaluation indicates that LLMTailor can work with different selective checkpointing strategies and effectively reduce checkpoint size (e.g., 4.3 times smaller for Llama3.1-8B) and checkpoint time (e.g., 2.8 times faster for Qwen2.5-7B) while maintaining model quality.",
+      "published": "2026-02-25T18:05:17Z",
+      "updated": "2026-02-25T18:05:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22158v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21143v1",
-      "title": "A Benchmark for Deep Information Synthesis",
+      "id": "http://arxiv.org/abs/2602.22157v1",
+      "title": "Dynamic Personality Adaptation in Large Language Models via State Machines",
       "authors": [
-        "Debjit Paul",
-        "Daniel Murphy",
-        "Milan Gritta",
-        "Ronald Cardenas",
-        "Victor Prokhorov",
-        "Lena Sophia Bolliger",
-        "Aysim Toker",
-        "Roy Miles",
-        "Andreea-Maria Oncescu",
-        "Jasivan Alex Sivakumar",
-        "Philipp Borchert",
-        "Ismail Elezi",
-        "Meiru Zhang",
-        "Ka Yiu Lee",
-        "Guchun Zhang",
-        "Jun Wang",
-        "Gerasimos Lampouras"
+        "Leon Pielage",
+        "Ole Hätscher",
+        "Mitja Back",
+        "Bernhard Marschall",
+        "Benjamin Risse"
       ],
-      "summary": "Large language model (LLM)-based agents are increasingly used to solve complex tasks involving tool use, such as web browsing, code execution, and data analysis. However, current evaluation benchmarks do not adequately assess their ability to solve real-world tasks that require synthesizing information from multiple sources and inferring insights beyond simple fact retrieval. To address this, we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic, time-consuming problems that combine information gathering, synthesis, and structured reasoning to produce insights. DEEPSYNTH contains 120 tasks collected across 7 domains and data sources covering 67 countries. DEEPSYNTH is constructed using a multi-stage data collection pipeline that requires annotators to collect official data sources, create hypotheses, perform manual analysis, and design tasks with verifiable answers. When evaluated on DEEPSYNTH, 11 state-of-the-art LLMs and deep research agents achieve a maximum F1 score of 8.97 and 17.5 on the LLM-judge metric, underscoring the difficulty of the benchmark. Our analysis reveals that current agents struggle with hallucinations and reasoning over large information spaces, highlighting DEEPSYNTH as a crucial benchmark for guiding future research.",
-      "published": "2026-02-24T17:43:32Z",
-      "updated": "2026-02-24T17:43:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21143v1"
+      "summary": "The inability of Large Language Models (LLMs) to modulate their personality expression in response to evolving dialogue dynamics hinders their performance in complex, interactive contexts. We propose a model-agnostic framework for dynamic personality simulation that employs state machines to represent latent personality states, where transition probabilities are dynamically adapted to the conversational context. Part of our architecture is a modular pipeline for continuous personality scoring that evaluates dialogues along latent axes while remaining agnostic to the specific personality models, their dimensions, transition mechanisms, or LLMs used. These scores function as dynamic state variables that systematically reconfigure the system prompt, steering behavioral alignment throughout the interaction.We evaluate this framework by operationalizing the Interpersonal Circumplex (IPC) in a medical education setting. Results demonstrate that the system successfully adapts its personality state to user inputs, but also influences user behavior, thereby facilitating de-escalation training. Notably, the scoring pipeline maintains comparable precision even when utilizing lightweight, fine-tuned classifiers instead of large-scale LLMs. This work demonstrates the feasibility of modular, personality-adaptive architectures for education, customer support, and broader human-computer interaction.",
+      "published": "2026-02-25T18:05:11Z",
+      "updated": "2026-02-25T18:05:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22157v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21136v1",
-      "title": "SparkMe: Adaptive Semi-Structured Interviewing for Qualitative Insight Discovery",
+      "id": "http://arxiv.org/abs/2602.17849v2",
+      "title": "Quad Length Codes for Lossless Compression of e4m3",
       "authors": [
-        "David Anugraha",
-        "Vishakh Padmakumar",
-        "Diyi Yang"
+        "Aditya Agrawal",
+        "Albert Magyar",
+        "Hiteshwar Eswaraiah",
+        "Patrick Sheridan",
+        "Pradeep Janedula",
+        "Ravi Krishnan Venkatesan",
+        "Krishna Nair",
+        "Ravi Iyer"
       ],
-      "summary": "Qualitative insights from user experiences are critical for informing product and policy decisions, but collecting such data at scale is constrained by the time and availability of experts to conduct semi-structured interviews. Recent work has explored using large language models (LLMs) to automate interviewing, yet existing systems lack a principled mechanism for balancing systematic coverage of predefined topics with adaptive exploration, or the ability to pursue follow-ups, deep dives, and emergent themes that arise organically during conversation. In this work, we formulate adaptive semi-structured interviewing as an optimization problem over the interviewer's behavior. We define interview utility as a trade-off between coverage of a predefined interview topic guide, discovery of relevant emergent themes, and interview cost measured by length. Based on this formulation, we introduce SparkMe, a multi-agent LLM interviewer that performs deliberative planning via simulated conversation rollouts to select questions with high expected utility. We evaluate SparkMe through controlled experiments with LLM-based interviewees, showing that it achieves higher interview utility, improving topic guide coverage (+4.7% over the best baseline) and eliciting richer emergent insights while using fewer conversational turns than prior LLM interviewing approaches. We further validate SparkMe in a user study with 70 participants across 7 professions on the impact of AI on their workflows. Domain experts rate SparkMe as producing high-quality adaptive interviews that surface helpful profession-specific insights not captured by prior approaches. The code, datasets, and evaluation protocols for SparkMe are available as open-source at https://github.com/SALT-NLP/SparkMe.",
-      "published": "2026-02-24T17:33:02Z",
-      "updated": "2026-02-24T17:33:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21136v1"
+      "summary": "Training and serving Large Language Models (LLMs) relies heavily on parallelization and collective operations, which are frequently bottlenecked by network bandwidth. Lossless compression using e.g., Huffman codes can alleviate the issue, however, Huffman codes suffer from slow, bit-sequential decoding and high hardware complexity due to deep tree traversals. Universal codes e.g., Exponential-Golomb codes are faster to decode but do not exploit the symbol frequency distributions. To address these limitations, this paper introduces Quad Length Codes, a hybrid approach designed to balance compression efficiency with decoding speed. The coding scheme uses 3 prefix bits to divide the 256 symbols into 8 areas. Each area has a different code length and encodes a different number of symbols. The scheme uses a Look Up Table with 256 entries, significantly simplifying the hardware implementation compared to Huffman trees. The coding scheme can be adapted for different distributions. For the e4m3 data type, the scheme achieves a compressibility of 13.9% in comparison to 15.9% achieved by Huffman codes, but it significantly speeds up the decoding and simplifies the hardware complexity.",
+      "published": "2026-02-19T21:31:33Z",
+      "updated": "2026-02-25T17:58:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.17849v2"
     }
   ]
 }
