@@ -1,185 +1,204 @@
 {
-  "generated_at_utc": "2026-02-27T02:00:11Z",
+  "generated_at_utc": "2026-02-28T01:50:24Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.22207v1",
-      "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
+      "id": "http://arxiv.org/abs/2602.23363v1",
+      "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
       "authors": [
-        "Hanna Yukhymenko",
-        "Anton Alexandrov",
-        "Martin Vechev"
+        "Sahal Shaji Mullappilly",
+        "Mohammed Irfan Kurpath",
+        "Omair Mohamed",
+        "Mohamed Zidan",
+        "Fahad Khan",
+        "Salman Khan",
+        "Rao Anwer",
+        "Hisham Cholakkal"
       ],
-      "summary": "The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.",
-      "published": "2026-02-25T18:58:25Z",
-      "updated": "2026-02-25T18:58:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22207v1"
+      "summary": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and image+text tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only $\\sim51$K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image + text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https://medix.cvmbzuai.com",
+      "published": "2026-02-26T18:59:46Z",
+      "updated": "2026-02-26T18:59:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23363v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.00288v3",
-      "title": "TimeBlind: A Spatio-Temporal Compositionality Benchmark for Video LLMs",
+      "id": "http://arxiv.org/abs/2602.23331v1",
+      "title": "Utilizing LLMs for Industrial Process Automation",
       "authors": [
-        "Baiqi Li",
-        "Kangyi Zhao",
-        "Ce Zhang",
-        "Chancharik Mitra",
-        "Jean de Dieu Nyandwi",
-        "Gedas Bertasius"
+        "Salim Fares"
       ],
-      "summary": "Fine-grained spatio-temporal understanding is essential for video reasoning and embodied AI. Yet, while Multimodal Large Language Models (MLLMs) master static semantics, their grasp of temporal dynamics remains brittle. We present TimeBlind, a diagnostic benchmark for compositional spatio-temporal understanding. Inspired by cognitive science, TimeBlind categorizes fine-grained temporal understanding into three levels: recognizing atomic events, characterizing event properties, and reasoning about event interdependencies. Unlike benchmarks that conflate recognition with temporal reasoning, TimeBlind leverages a minimal-pairs paradigm: video pairs share identical static visual content but differ solely in temporal structure, utilizing complementary questions to neutralize language priors. Evaluating over 20 state-of-the-art MLLMs (e.g., GPT-5, Gemini 3 Pro) on 600 curated instances (2400 video-question pairs), reveals that the Instance Accuracy (correctly distinguishing both videos in a pair) of the best performing MLLM is only 48.2%, far below the human performance (98.2%). These results demonstrate that even frontier models rely heavily on static visual shortcuts rather than genuine temporal logic, positioning TimeBlind as a vital diagnostic tool for next-generation video understanding. Dataset and code are available at https://baiqi-li.github.io/timeblind_project/ .",
-      "published": "2026-01-30T20:21:46Z",
-      "updated": "2026-02-25T18:57:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.00288v3"
+      "summary": "A growing number of publications address the best practices to use Large Language Models (LLMs) for software engineering in recent years. However, most of this work focuses on widely-used general purpose programming languages like Python due to their widespread usage training data. The utility of LLMs for software within the industrial process automation domain, with highly-specialized languages that are typically only used in proprietary contexts, remains underexplored. This research aims to utilize and integrate LLMs in the industrial development process, solving real-life programming tasks (e.g., generating a movement routine for a robotic arm) and accelerating the development cycles of manufacturing systems.",
+      "published": "2026-02-26T18:38:00Z",
+      "updated": "2026-02-26T18:38:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23331v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.17203v4",
-      "title": "High-Fidelity And Complex Test Data Generation For Google SQL Code Generation Services",
+      "id": "http://arxiv.org/abs/2602.23330v1",
+      "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
       "authors": [
-        "Shivasankari Kannan",
-        "Yeounoh Chung",
-        "Amita Gondi",
-        "Tristan Swadell",
-        "Fatma Ozcan"
+        "Kunihiro Miyazaki",
+        "Takanobu Kawahara",
+        "Stephen Roberts",
+        "Stefan Zohren"
       ],
-      "summary": "The demand for high-fidelity test data is paramount in industrial settings where access to production data is largely restricted. Traditional data generation methods often fall short, struggling with low-fidelity and the ability to model complex data structures and semantic relationships that are critical for testing complex SQL code generation services like Natural Language to SQL (NL2SQL). In this paper, we address the critical need for generating syntactically correct and semantically relevant high-fidelity mock data for complex data structures that includes columns with nested structures that we frequently encounter in Google workloads. We highlight the limitations of existing approaches used in production, particularly their inability to handle large and complex data structures, as well as the lack of semantically coherent test data that lead to limited test coverage. We demonstrate that by leveraging Large Language Models (LLMs) and incorporating strategic pre- and post-processing steps, we can generate syntactically correct and semantically relevant high-fidelity test data that adheres to complex structural constraints and maintains semantic integrity to the SQL test targets (queries/functions). This approach supports comprehensive testing of complex SQL queries involving joins, aggregations, and even deeply nested subqueries, ensuring robust evaluation of SQL code generation services, like NL2SQL and SQL Code Assistant. Our results demonstrate the practical utility of an LLM (\\textit{Gemini}) based test data generation for industrial SQL code generation services where generating high-fidelity test data is essential due to the frequent unavailability and inaccessibility of production datasets for testing.",
-      "published": "2025-04-24T02:27:17Z",
-      "updated": "2026-02-25T18:55:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.17203v4"
+      "summary": "The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each system's output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.",
+      "published": "2026-02-26T18:37:36Z",
+      "updated": "2026-02-26T18:37:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23330v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22197v1",
-      "title": "Off-The-Shelf Image-to-Image Models Are All You Need To Defeat Image Protection Schemes",
+      "id": "http://arxiv.org/abs/2602.23329v1",
+      "title": "LLM Novice Uplift on Dual-Use, In Silico Biology Tasks",
       "authors": [
-        "Xavier Pleimling",
-        "Sifat Muhammad Abdullah",
-        "Gunjan Balde",
-        "Peng Gao",
-        "Mainack Mondal",
-        "Murtuza Jadliwala",
-        "Bimal Viswanath"
+        "Chen Bo Calvin Zhang",
+        "Christina Q. Knight",
+        "Nicholas Kruus",
+        "Jason Hausenloy",
+        "Pedro Medeiros",
+        "Nathaniel Li",
+        "Aiden Kim",
+        "Yury Orlovskiy",
+        "Coleman Breen",
+        "Bryce Cai",
+        "Jasper Götting",
+        "Andrew Bo Liu",
+        "Samira Nedungadi",
+        "Paula Rodriguez",
+        "Yannis Yiming He",
+        "Mohamed Shaaban",
+        "Zifan Wang",
+        "Seth Donoughe",
+        "Julian Michael"
       ],
-      "summary": "Advances in Generative AI (GenAI) have led to the development of various protection strategies to prevent the unauthorized use of images. These methods rely on adding imperceptible protective perturbations to images to thwart misuse such as style mimicry or deepfake manipulations. Although previous attacks on these protections required specialized, purpose-built methods, we demonstrate that this is no longer necessary. We show that off-the-shelf image-to-image GenAI models can be repurposed as generic ``denoisers\" using a simple text prompt, effectively removing a wide range of protective perturbations. Across 8 case studies spanning 6 diverse protection schemes, our general-purpose attack not only circumvents these defenses but also outperforms existing specialized attacks while preserving the image's utility for the adversary. Our findings reveal a critical and widespread vulnerability in the current landscape of image protection, indicating that many schemes provide a false sense of security. We stress the urgent need to develop robust defenses and establish that any future protection mechanism must be benchmarked against attacks from off-the-shelf GenAI models. Code is available in this repository: https://github.com/mlsecviswanath/img2imgdenoiser",
-      "published": "2026-02-25T18:46:30Z",
-      "updated": "2026-02-25T18:46:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22197v1"
+      "summary": "Large language models (LLMs) perform increasingly well on biology benchmarks, but it remains unclear whether they uplift novice users -- i.e., enable humans to perform better than with internet-only resources. This uncertainty is central to understanding both scientific acceleration and dual-use risk. We conducted a multi-model, multi-benchmark human uplift study comparing novices with LLM access versus internet-only access across eight biosecurity-relevant task sets. Participants worked on complex problems with ample time (up to 13 hours for the most involved tasks). We found that LLM access provided substantial uplift: novices with LLMs were 4.16 times more accurate than controls (95% CI [2.63, 6.87]). On four benchmarks with available expert baselines (internet-only), novices with LLMs outperformed experts on three of them. Perhaps surprisingly, standalone LLMs often exceeded LLM-assisted novices, indicating that users were not eliciting the strongest available contributions from the LLMs. Most participants (89.6%) reported little difficulty obtaining dual-use-relevant information despite safeguards. Overall, LLMs substantially uplift novices on biological tasks previously reserved for trained practitioners, underscoring the need for sustained, interactive uplift evaluations alongside traditional benchmarks.",
+      "published": "2026-02-26T18:37:23Z",
+      "updated": "2026-02-26T18:37:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23329v1"
     },
     {
-      "id": "http://arxiv.org/abs/2507.08017v5",
-      "title": "Mechanistic Indicators of Understanding in Large Language Models",
+      "id": "http://arxiv.org/abs/2602.23312v1",
+      "title": "Evaluating Zero-Shot and One-Shot Adaptation of Small Language Models in Leader-Follower Interaction",
       "authors": [
-        "Pierre Beckmann",
-        "Matthieu Queloz"
+        "Rafael R. Baptista",
+        "André de Lima Salgado",
+        "Ricardo V. Godoy",
+        "Marcelo Becker",
+        "Thiago Boaventura",
+        "Gustavo J. G. Lahr"
       ],
-      "summary": "Large language models (LLMs) are often portrayed as merely imitating linguistic patterns without genuine understanding. We argue that recent findings in mechanistic interpretability (MI), the emerging field probing the inner workings of LLMs, render this picture increasingly untenable--but only once those findings are integrated within a theoretical account of understanding. We propose a tiered framework for thinking about understanding in LLMs and use it to synthesize the most relevant findings to date. The framework distinguishes three hierarchical varieties of understanding, each tied to a corresponding level of computational organization: conceptual understanding emerges when a model forms \"features\" as directions in latent space, learning connections between diverse manifestations of a single entity or property; state-of-the-world understanding emerges when a model learns contingent factual connections between features and dynamically tracks changes in the world; principled understanding emerges when a model ceases to rely on memorized facts and discovers a compact \"circuit\" connecting these facts. Across these tiers, MI uncovers internal organizations that can underwrite understanding-like unification. However, these also diverge from human cognition in their parallel exploitation of heterogeneous mechanisms. Fusing philosophical theory with mechanistic evidence thus allows us to transcend binary debates over whether AI understands, paving the way for a comparative, mechanistically grounded epistemology that explores how AI understanding aligns with--and diverges from--our own.",
-      "published": "2025-07-07T20:26:31Z",
-      "updated": "2026-02-25T18:34:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.08017v5"
+      "summary": "Leader-follower interaction is an important paradigm in human-robot interaction (HRI). Yet, assigning roles in real time remains challenging for resource-constrained mobile and assistive robots. While large language models (LLMs) have shown promise for natural communication, their size and latency limit on-device deployment. Small language models (SLMs) offer a potential alternative, but their effectiveness for role classification in HRI has not been systematically evaluated. In this paper, we present a benchmark of SLMs for leader-follower communication, introducing a novel dataset derived from a published database and augmented with synthetic samples to capture interaction-specific dynamics. We investigate two adaptation strategies: prompt engineering and fine-tuning, studied under zero-shot and one-shot interaction modes, compared with an untrained baseline. Experiments with Qwen2.5-0.5B reveal that zero-shot fine-tuning achieves robust classification performance (86.66% accuracy) while maintaining low latency (22.2 ms per sample), significantly outperforming baseline and prompt-engineered approaches. However, results also indicate a performance degradation in one-shot modes, where increased context length challenges the model's architectural capacity. These findings demonstrate that fine-tuned SLMs provide an effective solution for direct role assignment, while highlighting critical trade-offs between dialogue complexity and classification reliability on the edge.",
+      "published": "2026-02-26T18:20:26Z",
+      "updated": "2026-02-26T18:20:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23312v1"
     },
     {
-      "id": "http://arxiv.org/abs/2505.23725v2",
-      "title": "MuLoCo: Muon is a practical inner optimizer for DiLoCo",
+      "id": "http://arxiv.org/abs/2504.12522v2",
+      "title": "Evaluating the Diversity and Quality of LLM Generated Content",
       "authors": [
-        "Benjamin Thérien",
-        "Xiaolong Huang",
-        "Aaron Defazio",
-        "Irina Rish",
-        "Eugene Belilovsky"
+        "Alexander Shypula",
+        "Shuo Li",
+        "Botong Zhang",
+        "Vishakh Padmakumar",
+        "Kayo Yin",
+        "Osbert Bastani"
       ],
-      "summary": "DiLoCo is a powerful framework for training large language models (LLMs), enabling larger optimal batch sizes and increased accelerator utilization under networking constraints. However, DiLoCo's performance has been shown to degrade as the number of workers (K) increases (Charles et al., 2025). In this work, we posit that a related but often overlooked factor in DiLoCo's behavior is the choice of inner optimizer, which shapes the pseudogradient used by the outer optimizer. Given the recent success of Muon relative to AdamW for data parallel (DP) training, we examine how Muon's normalized optimizer steps can affect the pseudogradient's quality. We find that, relative to AdamW, Muon yields more directionally correct pseudogradients as the number of workers (K) increases. In our experiments pre-training language models, we conduct extensive hyperparameter tuning across 150M, 416M, 914M, 1.76B, and 3.1B models for DiLoCo, MuLoCo, AdamW DP, and Muon DP. Consistently across all scales, we find that with K>=1 workers, MuLoCo (Muon inner optimizer DiLoCo) achieves superior performance to DiLoCo in absolute terms and for K>2 it outperforms DiLoCo relative to their data parallel baselines, while being compatible with quantization, streaming, and long synchronization intervals. At K=1, we find that MuLoCo can even outperform the data-parallel gold standard while having larger critical batch sizes. Finally, we extrapolate optimal hyperparameters to 15B scale and train a model with each method (six in total) using K=1 and K=16 workers. We find that K=16 MuLoCo nearly matches single-worker performance at this scale, while MuLoCo K=1 matches the best performing baseline while using a much larger 16M token batch size.",
-      "published": "2025-05-29T17:55:37Z",
-      "updated": "2026-02-25T18:22:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.23725v2"
+      "summary": "Recent work suggests that preference-tuning techniques -- such as Reinforcement Learning from Human Feedback (RLHF) methods like PPO and GRPO, as well as alternatives like DPO -- reduce diversity, creating a dilemma given that these models are widely deployed in applications requiring varied outputs. We argue that diversity without consideration of quality has limited practical value. To address this issue, we introduce a framework for measuring effective semantic diversity -- diversity among outputs that meet quality thresholds -- which better reflects the practical utility of large language models (LLMs). Using open-ended tasks that require no human intervention, we find counterintuitive results: when using diversity metrics that do not explicitly consider quality, preference-tuned models -- particularly those trained via RL -- often produce outputs with lower diversity; however, these same preference-tuned models generate greater effective semantic diversity than supervised fine-tuned (SFT) or base models. Our analysis further shows another trend: while larger models may exhibit greater effective semantic diversity than smaller models, the smaller models are consistently more parameter-efficient at producing unique content within a fixed sampling budget. These findings have practical implications for applications that require diverse yet high-quality outputs, from creative assistance to synthetic data generation.",
+      "published": "2025-04-16T23:02:23Z",
+      "updated": "2026-02-26T18:17:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.12522v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22171v1",
-      "title": "A Taxonomy of Human--MLLM Interaction in Early-Stage Sketch-Based Design Ideation",
+      "id": "http://arxiv.org/abs/2602.21189v2",
+      "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
       "authors": [
-        "Weiayn Shi",
-        "Kenny Tsu Wei Choo"
+        "Anas Barakat",
+        "Souradip Chakraborty",
+        "Khushbu Pahwa",
+        "Amrit Singh Bedi"
       ],
-      "summary": "As multimodal large language models (MLLMs) are increasingly integrated into early-stage design tools, it is important to understand how designers collaborate with AI during ideation. In a user study with 12 participants, we analysed sketch-based design interactions with an MLLM-powered system using automatically recorded interaction logs and post-task interviews. Based on how creative responsibility was allocated between humans and the AI, we predefined four interaction modes: Human-Only, Human-Lead, AI-Lead, and Co-Evolution, and analysed how these modes manifested during sketch-based design ideation. Our results show that designers rarely rely on a single mode; instead, human-led and AI-led roles are frequently interwoven and shift across ideation instances. These findings provide an empirical basis for future work to investigate why designers shift roles with AI and how interactive systems can better support such dynamic collaboration.",
-      "published": "2026-02-25T18:18:02Z",
-      "updated": "2026-02-25T18:18:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22171v1"
+      "summary": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
+      "published": "2026-02-24T18:43:08Z",
+      "updated": "2026-02-26T18:11:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.21189v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.18970v2",
-      "title": "Pay Attention to Where You Looked",
+      "id": "http://arxiv.org/abs/2602.23306v1",
+      "title": "ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding",
       "authors": [
-        "Alex Berian",
-        "JhihYang Wu",
-        "Daniel Brignac",
-        "Natnael Daba",
-        "Abhijit Mahalanobis"
+        "Yiran Guan",
+        "Sifan Tu",
+        "Dingkang Liang",
+        "Linghao Zhu",
+        "Jianzhong Ju",
+        "Zhenbo Luo",
+        "Jian Luan",
+        "Yuliang Liu",
+        "Xiang Bai"
       ],
-      "summary": "Novel view synthesis (NVS) has advanced with generative modeling, enabling photorealistic image generation. In few-shot NVS, where only a few input views are available, existing methods often assume equal importance for all input views relative to the target, leading to suboptimal results. We address this limitation by introducing a camera-weighting mechanism that adjusts the importance of source views based on their relevance to the target. We propose two approaches: a deterministic weighting scheme leveraging geometric properties like Euclidean distance and angular differences, and a cross-attention-based learning scheme that optimizes view weighting. Additionally, models can be further trained with our camera-weighting scheme to refine their understanding of view relevance and enhance synthesis quality. This mechanism is adaptable and can be integrated into various NVS algorithms, improving their ability to synthesize high-quality novel views. Our results demonstrate that adaptive view weighting enhances accuracy and realism, offering a promising direction for improving NVS.",
-      "published": "2026-01-26T21:10:32Z",
-      "updated": "2026-02-25T18:12:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.18970v2"
+      "summary": "Omni-modal reasoning is essential for intelligent systems to understand and draw inferences from diverse data sources. While existing omni-modal large language models (OLLM) excel at perceiving diverse modalities, they lack the complex reasoning abilities of recent large reasoning models (LRM). However, enhancing the reasoning ability of OLLMs through additional training presents significant challenges, including the need for high-quality data, task-specific adaptation, and substantial computational costs. To address these limitations, we propose ThinkOmni, a training-free and data-free framework that lifts textual reasoning to omni-modal scenarios. ThinkOmni introduces two key components: 1) LRM-as-a-Guide, which leverages off-the-shelf LRMs to guide the OLLM decoding process; 2) Stepwise Contrastive Scaling, which adaptively balances perception and reasoning signals without manual hyperparameter tuning. Experiments on six multi-modal reasoning benchmarks demonstrate that ThinkOmni consistently delivers performance improvements, with main results achieving 70.2 on MathVista and 75.5 on MMAU. Overall, ThinkOmni offers a flexible and generalizable solution for omni-modal reasoning and provides new insights into the generalization and application of reasoning capabilities.",
+      "published": "2026-02-26T18:10:41Z",
+      "updated": "2026-02-26T18:10:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23306v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.18671v2",
-      "title": "Spilled Energy in Large Language Models",
+      "id": "http://arxiv.org/abs/2602.23300v1",
+      "title": "A Mixture-of-Experts Model for Multimodal Emotion Recognition in Conversations",
       "authors": [
-        "Adrian Robert Minut",
-        "Hazem Dewidar",
-        "Iacopo Masi"
+        "Soumya Dutta",
+        "Smruthi Balaji",
+        "Sriram Ganapathy"
       ],
-      "summary": "We reinterpret the final Large Language Model (LLM) softmax classifier as an Energy-Based Model (EBM), decomposing the sequence-to-sequence probability chain into multiple interacting EBMs at inference. This principled approach allows us to track \"energy spills\" during decoding, which we empirically show correlate with factual errors, biases, and failures. Similar to Orgad et al. (2025), our method localizes the exact answer token and subsequently tests for hallucinations. Crucially, however, we achieve this without requiring trained probe classifiers or activation ablations. Instead, we introduce two completely training-free metrics derived directly from output logits: spilled energy, which captures the discrepancy between energy values across consecutive generation steps that should theoretically match, and marginalized energy, which is measurable at a single step. Evaluated on nine benchmarks across state-of-the-art LLMs (including LLaMA, Mistral, and Gemma) and on synthetic algebraic operations (Qwen3), our approach demonstrates robust, competitive hallucination detection and cross-task generalization. Notably, these results hold for both pretrained and instruction-tuned variants without introducing any training overhead.",
-      "published": "2026-02-21T00:38:47Z",
-      "updated": "2026-02-25T18:09:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.18671v2"
+      "summary": "Emotion Recognition in Conversations (ERC) presents unique challenges, requiring models to capture the temporal flow of multi-turn dialogues and to effectively integrate cues from multiple modalities. We propose Mixture of Speech-Text Experts for Recognition of Emotions (MiSTER-E), a modular Mixture-of-Experts (MoE) framework designed to decouple two core challenges in ERC: modality-specific context modeling and multimodal information fusion. MiSTER-E leverages large language models (LLMs) fine-tuned for both speech and text to provide rich utterance-level embeddings, which are then enhanced through a convolutional-recurrent context modeling layer. The system integrates predictions from three experts-speech-only, text-only, and cross-modal-using a learned gating mechanism that dynamically weighs their outputs. To further encourage consistency and alignment across modalities, we introduce a supervised contrastive loss between paired speech-text representations and a KL-divergence-based regulariza-tion across expert predictions. Importantly, MiSTER-E does not rely on speaker identity at any stage. Experiments on three benchmark datasets-IEMOCAP, MELD, and MOSI-show that our proposal achieves 70.9%, 69.5%, and 87.9% weighted F1-scores respectively, outperforming several baseline speech-text ERC systems. We also provide various ablations to highlight the contributions made in the proposed approach.",
+      "published": "2026-02-26T18:08:40Z",
+      "updated": "2026-02-26T18:08:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23300v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22158v1",
-      "title": "LLMTailor: A Layer-wise Tailoring Tool for Efficient Checkpointing of Large Language Models",
+      "id": "http://arxiv.org/abs/2602.23276v1",
+      "title": "CXReasonAgent: Evidence-Grounded Diagnostic Reasoning Agent for Chest X-rays",
       "authors": [
-        "Minqiu Sun",
-        "Xin Huang",
-        "Luanzheng Guo",
-        "Nathan R. Tallent",
-        "Kento Sato",
-        "Dong Dai"
+        "Hyungyung Lee",
+        "Hangyul Yoon",
+        "Edward Choi"
       ],
-      "summary": "Checkpointing is essential for fault tolerance in training large language models (LLMs). However, existing methods, regardless of their I/O strategies, periodically store the entire model and optimizer states, incurring substantial storage overhead and resource contention. Recent studies reveal that updates across LLM layers are highly non-uniform. Across training steps, some layers may undergo more significant changes, while others remain relatively stable or even unchanged. This suggests that selectively checkpointing only layers with significant updates could reduce overhead without harming training. Implementing such selective strategies requires fine-grained control over both weights and optimizer states, which no current tool provides. To address this gap, we propose \\texttt{LLMTailor}, a checkpoint-merging framework that filters and assembles layers from different checkpoints to form a composite checkpoint. Our evaluation indicates that LLMTailor can work with different selective checkpointing strategies and effectively reduce checkpoint size (e.g., 4.3 times smaller for Llama3.1-8B) and checkpoint time (e.g., 2.8 times faster for Qwen2.5-7B) while maintaining model quality.",
-      "published": "2026-02-25T18:05:17Z",
-      "updated": "2026-02-25T18:05:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22158v1"
+      "summary": "Chest X-ray plays a central role in thoracic diagnosis, and its interpretation inherently requires multi-step, evidence-grounded reasoning. However, large vision-language models (LVLMs) often generate plausible responses that are not faithfully grounded in diagnostic evidence and provide limited visual evidence for verification, while also requiring costly retraining to support new diagnostic tasks, limiting their reliability and adaptability in clinical settings. To address these limitations, we present CXReasonAgent, a diagnostic agent that integrates a large language model (LLM) with clinically grounded diagnostic tools to perform evidence-grounded diagnostic reasoning using image-derived diagnostic and visual evidence. To evaluate these capabilities, we introduce CXReasonDial, a multi-turn dialogue benchmark with 1,946 dialogues across 12 diagnostic tasks, and show that CXReasonAgent produces faithfully grounded responses, enabling more reliable and verifiable diagnostic reasoning than LVLMs. These findings highlight the importance of integrating clinically grounded diagnostic tools, particularly in safety-critical clinical settings.",
+      "published": "2026-02-26T17:51:21Z",
+      "updated": "2026-02-26T17:51:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23276v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22157v1",
-      "title": "Dynamic Personality Adaptation in Large Language Models via State Machines",
+      "id": "http://arxiv.org/abs/2602.10001v2",
+      "title": "Human-AI Synergy Supports Collective Creative Search",
       "authors": [
-        "Leon Pielage",
-        "Ole Hätscher",
-        "Mitja Back",
-        "Bernhard Marschall",
-        "Benjamin Risse"
+        "Chenyi Li",
+        "Raja Marjieh",
+        "Haoyu Hu",
+        "Mark Steyvers",
+        "Katherine M. Collins",
+        "Ilia Sucholutsky",
+        "Nori Jacoby"
       ],
-      "summary": "The inability of Large Language Models (LLMs) to modulate their personality expression in response to evolving dialogue dynamics hinders their performance in complex, interactive contexts. We propose a model-agnostic framework for dynamic personality simulation that employs state machines to represent latent personality states, where transition probabilities are dynamically adapted to the conversational context. Part of our architecture is a modular pipeline for continuous personality scoring that evaluates dialogues along latent axes while remaining agnostic to the specific personality models, their dimensions, transition mechanisms, or LLMs used. These scores function as dynamic state variables that systematically reconfigure the system prompt, steering behavioral alignment throughout the interaction.We evaluate this framework by operationalizing the Interpersonal Circumplex (IPC) in a medical education setting. Results demonstrate that the system successfully adapts its personality state to user inputs, but also influences user behavior, thereby facilitating de-escalation training. Notably, the scoring pipeline maintains comparable precision even when utilizing lightweight, fine-tuned classifiers instead of large-scale LLMs. This work demonstrates the feasibility of modular, personality-adaptive architectures for education, customer support, and broader human-computer interaction.",
-      "published": "2026-02-25T18:05:11Z",
-      "updated": "2026-02-25T18:05:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22157v1"
+      "summary": "Generative AI is increasingly transforming creativity into a hybrid human-artificial process, but its impact on the quality and diversity of creative output remains unclear. We study collective creativity using a controlled word-guessing task that balances open-endedness with an objective measure of task performance. Participants attempt to infer a hidden target word, scored based on the semantic similarity of their guesses to the target, while also observing the best guess from previous players. We compare performance and outcome diversity across human-only, AI-only, and hybrid human-AI groups. Hybrid groups achieve the highest performance while preserving high diversity of guesses. Within hybrid groups, both humans and AI agents systematically adjust their strategies relative to single-agent conditions, suggesting higher-order interaction effects, whereby agents adapt to each other's presence. Although some performance benefits can be reproduced through collaboration between heterogeneous AI systems, human-AI collaboration remains superior, underscoring complementary roles in collective creativity.",
+      "published": "2026-02-10T17:23:33Z",
+      "updated": "2026-02-26T17:40:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.10001v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.17849v2",
-      "title": "Quad Length Codes for Lossless Compression of e4m3",
+      "id": "http://arxiv.org/abs/2507.03772v3",
+      "title": "Skewed Score: A statistical framework to assess autograders",
       "authors": [
-        "Aditya Agrawal",
-        "Albert Magyar",
-        "Hiteshwar Eswaraiah",
-        "Patrick Sheridan",
-        "Pradeep Janedula",
-        "Ravi Krishnan Venkatesan",
-        "Krishna Nair",
-        "Ravi Iyer"
+        "Magda Dubois",
+        "Harry Coppock",
+        "Mario Giulianelli",
+        "Timo Flesch",
+        "Lennart Luettgau",
+        "Cozmin Ududec"
       ],
-      "summary": "Training and serving Large Language Models (LLMs) relies heavily on parallelization and collective operations, which are frequently bottlenecked by network bandwidth. Lossless compression using e.g., Huffman codes can alleviate the issue, however, Huffman codes suffer from slow, bit-sequential decoding and high hardware complexity due to deep tree traversals. Universal codes e.g., Exponential-Golomb codes are faster to decode but do not exploit the symbol frequency distributions. To address these limitations, this paper introduces Quad Length Codes, a hybrid approach designed to balance compression efficiency with decoding speed. The coding scheme uses 3 prefix bits to divide the 256 symbols into 8 areas. Each area has a different code length and encodes a different number of symbols. The scheme uses a Look Up Table with 256 entries, significantly simplifying the hardware implementation compared to Huffman trees. The coding scheme can be adapted for different distributions. For the e4m3 data type, the scheme achieves a compressibility of 13.9% in comparison to 15.9% achieved by Huffman codes, but it significantly speeds up the decoding and simplifies the hardware complexity.",
-      "published": "2026-02-19T21:31:33Z",
-      "updated": "2026-02-25T17:58:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.17849v2"
+      "summary": "The evaluation of large language model (LLM) outputs is increasingly performed by other LLMs, a setup commonly known as \"LLM-as-a-judge\", or autograders. While autograders offer a scalable alternative to human evaluation, they have shown mixed reliability and may exhibit systematic biases, depending on response type, scoring methodology, domain specificity, or other factors. Here we propose a statistical framework based on Bayesian generalised linear models (GLMs) that enables researchers to simultaneously assess their autograders while addressing their primary research questions (e.g., LLM evaluation). Our approach models evaluation outcomes (e.g., scores or pairwise preferences) as a function of properties of the grader (e.g., human vs. autograder) and the evaluated item (e.g., response length or the LLM that generated it), allowing for explicit quantification of scoring differences and potential biases within a unified framework. In addition, our method can be used to augment traditional metrics such as inter-rater agreement, by providing uncertainty estimates and clarifying sources of disagreement. Overall, this approach contributes to more robust and interpretable use of autograders in LLM evaluation, enabling both performance analysis and bias detection.",
+      "published": "2025-07-04T18:45:10Z",
+      "updated": "2026-02-26T17:39:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.03772v3"
     }
   ]
 }
