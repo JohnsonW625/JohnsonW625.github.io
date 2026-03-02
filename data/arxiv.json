@@ -1,204 +1,229 @@
 {
-  "generated_at_utc": "2026-03-01T02:12:21Z",
+  "generated_at_utc": "2026-03-02T02:03:35Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.23363v1",
-      "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2602.24235v1",
+      "title": "SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems",
       "authors": [
-        "Sahal Shaji Mullappilly",
-        "Mohammed Irfan Kurpath",
-        "Omair Mohamed",
-        "Mohamed Zidan",
-        "Fahad Khan",
-        "Salman Khan",
-        "Rao Anwer",
-        "Hisham Cholakkal"
+        "Jialiang Fan",
+        "Weizhe Xu",
+        "Mengyu Liu",
+        "Oleg Sokolsky",
+        "Insup Lee",
+        "Fangxin Kong"
       ],
-      "summary": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and image+text tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only $\\sim51$K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image + text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https://medix.cvmbzuai.com",
-      "published": "2026-02-26T18:59:46Z",
-      "updated": "2026-02-26T18:59:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23363v1"
+      "summary": "Safety-critical task planning in robotic systems remains challenging: classical planners suffer from poor scalability, Reinforcement Learning (RL)-based methods generalize poorly, and base Large Language Models (LLMs) cannot guarantee safety. To address this gap, we propose safety-generalizable large language models, named SafeGen-LLM. SafeGen-LLM can not only enhance the safety satisfaction of task plans but also generalize well to novel safety properties in various domains. We first construct a multi-domain Planning Domain Definition Language 3 (PDDL3) benchmark with explicit safety constraints. Then, we introduce a two-stage post-training framework: Supervised Fine-Tuning (SFT) on a constraint-compliant planning dataset to learn planning syntax and semantics, and Group Relative Policy Optimization (GRPO) guided by fine-grained reward machines derived from formal verification to enforce safety alignment and by curriculum learning to better handle complex tasks. Extensive experiments show that SafeGen-LLM achieves strong safety generalization and outperforms frontier proprietary baselines across multi-domain planning tasks and multiple input formats (e.g., PDDLs and natural language).",
+      "published": "2026-02-27T18:06:10Z",
+      "updated": "2026-02-27T18:06:10Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24235v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23331v1",
-      "title": "Utilizing LLMs for Industrial Process Automation",
+      "id": "http://arxiv.org/abs/2602.24223v1",
+      "title": "Anansi: Scalable Characterization of Message-Based Job Scams",
       "authors": [
-        "Salim Fares"
+        "Abisheka Pitumpe",
+        "Amir Rahmati"
       ],
-      "summary": "A growing number of publications address the best practices to use Large Language Models (LLMs) for software engineering in recent years. However, most of this work focuses on widely-used general purpose programming languages like Python due to their widespread usage training data. The utility of LLMs for software within the industrial process automation domain, with highly-specialized languages that are typically only used in proprietary contexts, remains underexplored. This research aims to utilize and integrate LLMs in the industrial development process, solving real-life programming tasks (e.g., generating a movement routine for a robotic arm) and accelerating the development cycles of manufacturing systems.",
-      "published": "2026-02-26T18:38:00Z",
-      "updated": "2026-02-26T18:38:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23331v1"
+      "summary": "Job-based smishing scams, where victims are recruited under the guise of remote job opportunities, represent a rapidly growing and understudied threat within the broader landscape of online fraud. In this paper, we present Anansi, the first scalable, end-to-end measurement pipeline designed to systematically engage with, analyze, and characterize job scams in the wild. Anansi combines large language models (LLMs), automated browser agents, and infrastructure fingerprinting tools to collect over 29,000 scam messages, interact with more than 1900 scammers, and extract behavioral, financial, and infrastructural signals at scale. We detail the operational workflows of scammers, uncover extensive reuse of message templates, domains, and cryptocurrency wallets, and identify the social engineering tactics used to defraud victims. Our analysis reveals millions of dollars in cryptocurrency losses, highlighting the use of deceptive techniques such as domain fronting and impersonation of well-known brands. Anansi demonstrates the feasibility and value of automating the engagement with scammers and the analysis of infrastructure, offering a new methodological foundation for studying large-scale fraud ecosystems.",
+      "published": "2026-02-27T17:49:56Z",
+      "updated": "2026-02-27T17:49:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24223v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23330v1",
-      "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+      "id": "http://arxiv.org/abs/2602.20167v2",
+      "title": "Playsemble: Learning Low-Level Programming Through Interactive Games",
       "authors": [
-        "Kunihiro Miyazaki",
-        "Takanobu Kawahara",
-        "Stephen Roberts",
-        "Stefan Zohren"
+        "Elliott Wen",
+        "Paul Denny",
+        "Andrew Luxton-Reilly",
+        "Sean Ma",
+        "Bruce Sham",
+        "Chenye Ni",
+        "Jun Seo",
+        "Yu Yang"
       ],
-      "summary": "The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each system's output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.",
-      "published": "2026-02-26T18:37:36Z",
-      "updated": "2026-02-26T18:37:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23330v1"
+      "summary": "Teaching assembly programming is a fundamental component of undergraduate computer science education, yet many students struggle with its abstract and low-level concepts. Existing learning tools, such as simulators and visualisers, support understanding by exposing machine states. However, they often limit students to passive observation and provide few opportunities for meaningful interaction. To address these limitations, we introduce Playsemble, a gamified learning system that transforms assembly instructions into interactive, game-like tasks in which students control Pac-Man to collect items, avoid ghosts, and reach targets. Playsemble integrates a code editor, a CPU emulator, and visual debugging tools within a browser-based environment, allowing students to work offline without installation or configuration. It also provides immediate formative feedback enhanced by large language models. We deployed Playsemble in an undergraduate computer architecture course with 107 students. The course featured a sequence of assignments of increasing complexity, covering core concepts such as register and memory manipulation, control structures including loops and conditionals, and arithmetic operations. Our findings suggest that Playsemble promotes active experimentation, sustained engagement, and deeper conceptual understanding through meaningful game-based learning experiences.",
+      "published": "2026-02-09T06:31:44Z",
+      "updated": "2026-02-27T17:43:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20167v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23329v1",
-      "title": "LLM Novice Uplift on Dual-Use, In Silico Biology Tasks",
+      "id": "http://arxiv.org/abs/2508.03716v2",
+      "title": "FeynTune: Large Language Models for High-Energy Theory",
       "authors": [
-        "Chen Bo Calvin Zhang",
-        "Christina Q. Knight",
-        "Nicholas Kruus",
-        "Jason Hausenloy",
-        "Pedro Medeiros",
-        "Nathaniel Li",
-        "Aiden Kim",
-        "Yury Orlovskiy",
-        "Coleman Breen",
-        "Bryce Cai",
-        "Jasper Götting",
-        "Andrew Bo Liu",
-        "Samira Nedungadi",
-        "Paula Rodriguez",
-        "Yannis Yiming He",
-        "Mohamed Shaaban",
-        "Zifan Wang",
-        "Seth Donoughe",
-        "Julian Michael"
+        "Paul Richmond",
+        "Prarit Agarwal",
+        "Borun Chowdhury",
+        "Vasilis Niarchos",
+        "Constantinos Papageorgakis"
       ],
-      "summary": "Large language models (LLMs) perform increasingly well on biology benchmarks, but it remains unclear whether they uplift novice users -- i.e., enable humans to perform better than with internet-only resources. This uncertainty is central to understanding both scientific acceleration and dual-use risk. We conducted a multi-model, multi-benchmark human uplift study comparing novices with LLM access versus internet-only access across eight biosecurity-relevant task sets. Participants worked on complex problems with ample time (up to 13 hours for the most involved tasks). We found that LLM access provided substantial uplift: novices with LLMs were 4.16 times more accurate than controls (95% CI [2.63, 6.87]). On four benchmarks with available expert baselines (internet-only), novices with LLMs outperformed experts on three of them. Perhaps surprisingly, standalone LLMs often exceeded LLM-assisted novices, indicating that users were not eliciting the strongest available contributions from the LLMs. Most participants (89.6%) reported little difficulty obtaining dual-use-relevant information despite safeguards. Overall, LLMs substantially uplift novices on biological tasks previously reserved for trained practitioners, underscoring the need for sustained, interactive uplift evaluations alongside traditional benchmarks.",
-      "published": "2026-02-26T18:37:23Z",
-      "updated": "2026-02-26T18:37:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23329v1"
+      "summary": "We present specialized Large Language Models for theoretical High-Energy Physics, obtained as 20 fine-tuned variants of the 8-billion parameter Llama-3.1 model. Each variant was trained on arXiv abstracts (through August 2024) from different combinations of hep-th, hep-ph and gr-qc. For a comparative study, we also trained models on datasets that contained abstracts from disparate fields such as the q-bio and cs categories. All models were fine-tuned using two distinct Low-Rank Adaptation fine-tuning approaches and varying dataset sizes, and outperformed the base model on hep-th abstract completion tasks. We compare performance against leading commercial LLMs (ChatGPT, Claude, Gemini, DeepSeek) and derive insights for further developing specialized language models for High-Energy Theoretical Physics.",
+      "published": "2025-07-24T18:21:03Z",
+      "updated": "2026-02-27T17:30:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.03716v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23312v1",
-      "title": "Evaluating Zero-Shot and One-Shot Adaptation of Small Language Models in Leader-Follower Interaction",
+      "id": "http://arxiv.org/abs/2602.24195v1",
+      "title": "Uncertainty Quantification for Multimodal Large Language Models with Incoherence-adjusted Semantic Volume",
       "authors": [
-        "Rafael R. Baptista",
-        "André de Lima Salgado",
-        "Ricardo V. Godoy",
-        "Marcelo Becker",
-        "Thiago Boaventura",
-        "Gustavo J. G. Lahr"
+        "Gregory Kang Ruey Lau",
+        "Hieu Dao",
+        "Nicole Kan Hui Lin",
+        "Bryan Kian Hsiang Low"
       ],
-      "summary": "Leader-follower interaction is an important paradigm in human-robot interaction (HRI). Yet, assigning roles in real time remains challenging for resource-constrained mobile and assistive robots. While large language models (LLMs) have shown promise for natural communication, their size and latency limit on-device deployment. Small language models (SLMs) offer a potential alternative, but their effectiveness for role classification in HRI has not been systematically evaluated. In this paper, we present a benchmark of SLMs for leader-follower communication, introducing a novel dataset derived from a published database and augmented with synthetic samples to capture interaction-specific dynamics. We investigate two adaptation strategies: prompt engineering and fine-tuning, studied under zero-shot and one-shot interaction modes, compared with an untrained baseline. Experiments with Qwen2.5-0.5B reveal that zero-shot fine-tuning achieves robust classification performance (86.66% accuracy) while maintaining low latency (22.2 ms per sample), significantly outperforming baseline and prompt-engineered approaches. However, results also indicate a performance degradation in one-shot modes, where increased context length challenges the model's architectural capacity. These findings demonstrate that fine-tuned SLMs provide an effective solution for direct role assignment, while highlighting critical trade-offs between dialogue complexity and classification reliability on the edge.",
-      "published": "2026-02-26T18:20:26Z",
-      "updated": "2026-02-26T18:20:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23312v1"
+      "summary": "Despite their capabilities, Multimodal Large Language Models (MLLMs) may produce plausible but erroneous outputs, hindering reliable deployment. Accurate uncertainty metrics could enable escalation of unreliable queries to human experts or larger models for improved performance. However, existing uncertainty metrics have practical constraints, such as being designed only for specific modalities, reliant on external tools, or computationally expensive. We introduce UMPIRE, a training-free uncertainty quantification framework for MLLMs that works efficiently across various input and output modalities without external tools, relying only on the models' own internal modality features. UMPIRE computes the incoherence-adjusted semantic volume of sampled MLLM responses for a given task instance, effectively capturing both the global semantic diversity of samples and the local incoherence of responses based on internal model confidence. We propose uncertainty desiderata for MLLMs and provide theoretical analysis motivating UMPIRE's design. Extensive experiments show that UMPIRE consistently outperforms baseline metrics in error detection and uncertainty calibration across image, audio, and video-text benchmarks, including adversarial and out-of-distribution settings. We also demonstrate UMPIRE's generalization to non-text output tasks, including image and audio generation.",
+      "published": "2026-02-27T17:18:42Z",
+      "updated": "2026-02-27T17:18:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24195v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.12522v2",
-      "title": "Evaluating the Diversity and Quality of LLM Generated Content",
+      "id": "http://arxiv.org/abs/2602.22291v2",
+      "title": "Manifold of Failure: Behavioral Attraction Basins in Language Models",
       "authors": [
-        "Alexander Shypula",
-        "Shuo Li",
-        "Botong Zhang",
-        "Vishakh Padmakumar",
-        "Kayo Yin",
-        "Osbert Bastani"
+        "Sarthak Munshi",
+        "Manish Bhatt",
+        "Vineeth Sai Narajala",
+        "Idan Habler",
+        "Ammar Al-Kahfah",
+        "Ken Huang",
+        "Blake Gatto"
       ],
-      "summary": "Recent work suggests that preference-tuning techniques -- such as Reinforcement Learning from Human Feedback (RLHF) methods like PPO and GRPO, as well as alternatives like DPO -- reduce diversity, creating a dilemma given that these models are widely deployed in applications requiring varied outputs. We argue that diversity without consideration of quality has limited practical value. To address this issue, we introduce a framework for measuring effective semantic diversity -- diversity among outputs that meet quality thresholds -- which better reflects the practical utility of large language models (LLMs). Using open-ended tasks that require no human intervention, we find counterintuitive results: when using diversity metrics that do not explicitly consider quality, preference-tuned models -- particularly those trained via RL -- often produce outputs with lower diversity; however, these same preference-tuned models generate greater effective semantic diversity than supervised fine-tuned (SFT) or base models. Our analysis further shows another trend: while larger models may exhibit greater effective semantic diversity than smaller models, the smaller models are consistently more parameter-efficient at producing unique content within a fixed sampling budget. These findings have practical implications for applications that require diverse yet high-quality outputs, from creative assistance to synthetic data generation.",
-      "published": "2025-04-16T23:02:23Z",
-      "updated": "2026-02-26T18:17:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.12522v2"
+      "summary": "While prior work has focused on projecting adversarial examples back onto the manifold of natural data to restore safety, we argue that a comprehensive understanding of AI safety requires characterizing the unsafe regions themselves. This paper introduces a framework for systematically mapping the Manifold of Failure in Large Language Models (LLMs). We reframe the search for vulnerabilities as a quality diversity problem, using MAP-Elites to illuminate the continuous topology of these failure regions, which we term behavioral attraction basins. Our quality metric, Alignment Deviation, guides the search towards areas where the model's behavior diverges most from its intended alignment. Across three LLMs: Llama-3-8B, GPT-OSS-20B, and GPT-5-Mini, we show that MAP-Elites achieves up to 63% behavioral coverage, discovers up to 370 distinct vulnerability niches, and reveals dramatically different model-specific topological signatures: Llama-3-8B exhibits a near-universal vulnerability plateau (mean Alignment Deviation 0.93), GPT-OSS-20B shows a fragmented landscape with spatially concentrated basins (mean 0.73), and GPT-5-Mini demonstrates strong robustness with a ceiling at 0.50. Our approach produces interpretable, global maps of each model's safety landscape that no existing attack method (GCG, PAIR, or TAP) can provide, shifting the paradigm from finding discrete failures to understanding their underlying structure.",
+      "published": "2026-02-25T15:08:20Z",
+      "updated": "2026-02-27T17:04:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22291v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.21189v2",
-      "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
+      "id": "http://arxiv.org/abs/2507.19364v2",
+      "title": "Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges",
       "authors": [
-        "Anas Barakat",
-        "Souradip Chakraborty",
-        "Khushbu Pahwa",
-        "Amrit Singh Bedi"
+        "Patrick Taillandier",
+        "Jean Daniel Zucker",
+        "Arnaud Grignard",
+        "Benoit Gaudou",
+        "Nghi Quang Huynh",
+        "Alexis Drogoul"
       ],
-      "summary": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
-      "published": "2026-02-24T18:43:08Z",
-      "updated": "2026-02-26T18:11:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.21189v2"
+      "summary": "This position paper examines the use of Large Language Models (LLMs) in social simulation, analyzing their potential and limitations from a computational social science perspective. We first review recent findings on LLMs' ability to replicate key aspects of human cognition, including Theory of Mind reasoning and social inference, while identifying persistent limitations such as cognitive biases, lack of grounded understanding, and behavioral inconsistencies. We then survey emerging applications of LLMs in multi-agent simulation frameworks, examining system architectures, scalability, and validation strategies. Projects such as Generative Agents (Smallville) and AgentSociety are analyzed with respect to their empirical grounding and methodological design. Particular attention is given to the challenges of behavioral fidelity, calibration, and reproducibility in large-scale LLM-driven simulations. Finally, we distinguish between contexts where LLM-based agents provide operational value-such as interactive simulations and serious games-and contexts where their use raises epistemic concerns, particularly in explanatory or predictive modeling. We argue that hybrid approaches integrating LLMs into established agent-based modeling platforms such as GAMA and NetLogo may offer a promising compromise between expressive flexibility and analytical transparency. Building on this analysis, we outline a conceptual research direction termed Hybrid Constitutional Architectures, which proposes a stratified integration of classical agent-based models (ABMs), small language models (SLMs), and LLMs within established platforms such as GAMA and NetLogo.",
+      "published": "2025-07-25T15:15:35Z",
+      "updated": "2026-02-27T17:03:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.19364v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23306v1",
-      "title": "ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding",
+      "id": "http://arxiv.org/abs/2602.24176v1",
+      "title": "Beyond Explainable AI (XAI): An Overdue Paradigm Shift and Post-XAI Research Directions",
       "authors": [
-        "Yiran Guan",
-        "Sifan Tu",
-        "Dingkang Liang",
-        "Linghao Zhu",
-        "Jianzhong Ju",
-        "Zhenbo Luo",
-        "Jian Luan",
-        "Yuliang Liu",
-        "Xiang Bai"
+        "Saleh Afroogh",
+        "Seyd Ishtiaque Ahmed",
+        "Petra Ahrweiler",
+        "David Alvarez-Melis",
+        "Mansur Maturidi Arief",
+        "Emilia Barakova",
+        "Falco J. Bargagli-Stoffi",
+        "Erdem Biyik",
+        "Hanjie Chen",
+        "Xiang 'Anthony' Chen",
+        "Robert Clements",
+        "Keeley Crockett",
+        "Amit Dhurandhar",
+        "Fethiye Irmak Dogan",
+        "Mollie Dollinger",
+        "Motahhare Eslami",
+        "Aldo A Faisal",
+        "Arya Farahi",
+        "Melanie Fernandez Pradie",
+        "Saadia Gabrie",
+        "Diego Garcia-Olano",
+        "Marzyeh Ghassemi",
+        "Shaona Ghosh",
+        "Hatice Gunes",
+        "Ehsan Hajiramezanali",
+        "Stefan Haufe",
+        "Biwei Huang",
+        "Angel Hwang",
+        "Md Tauhidul Islam",
+        "Junfeng Jiao",
+        "Amir-Hossein Karimi",
+        "Saber Kazeminasab",
+        "Anastasia Kuzminykh",
+        "William La Cava",
+        "Brian Y. Lim",
+        "Xiaofeng Liu",
+        "Mohammad R. K. Mofrad",
+        "Alicia Parrish",
+        "Maria Perez-Ortiz",
+        "Shriti Raj",
+        "Swabha Swayamdipta",
+        "Salmon Talebi",
+        "Kush R. Varshney",
+        "Mihaela Vorvoreanu",
+        "Lily Weng",
+        "Alice Xiang",
+        "Yiming Xu",
+        "Ding Zhao",
+        "Jieyu Zhao"
       ],
-      "summary": "Omni-modal reasoning is essential for intelligent systems to understand and draw inferences from diverse data sources. While existing omni-modal large language models (OLLM) excel at perceiving diverse modalities, they lack the complex reasoning abilities of recent large reasoning models (LRM). However, enhancing the reasoning ability of OLLMs through additional training presents significant challenges, including the need for high-quality data, task-specific adaptation, and substantial computational costs. To address these limitations, we propose ThinkOmni, a training-free and data-free framework that lifts textual reasoning to omni-modal scenarios. ThinkOmni introduces two key components: 1) LRM-as-a-Guide, which leverages off-the-shelf LRMs to guide the OLLM decoding process; 2) Stepwise Contrastive Scaling, which adaptively balances perception and reasoning signals without manual hyperparameter tuning. Experiments on six multi-modal reasoning benchmarks demonstrate that ThinkOmni consistently delivers performance improvements, with main results achieving 70.2 on MathVista and 75.5 on MMAU. Overall, ThinkOmni offers a flexible and generalizable solution for omni-modal reasoning and provides new insights into the generalization and application of reasoning capabilities.",
-      "published": "2026-02-26T18:10:41Z",
-      "updated": "2026-02-26T18:10:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23306v1"
+      "summary": "This study provides a cross-disciplinary examination of Explainable Artificial Intelligence (XAI) approaches-focusing on deep neural networks (DNNs) and large language models (LLMs)-and identifies empirical and conceptual limitations in current XAI. We discuss critical symptoms that stem from deeper root causes (i.e., two paradoxes, two conceptual confusions, and five false assumptions). These fundamental problems within the current XAI research field reveal three insights: experimentally, XAI exhibits significant flaws; conceptually, it is paradoxical; and pragmatically, further attempts to reform the paradoxical XAI might exacerbate its confusion-demanding fundamental shifts and new research directions. To move beyond XAI's limitations, we propose a four-pronged synthesized paradigm shift toward reliable and certified AI development. These four components include: verification-focused Interactive AI (IAI) to establish scientific community protocols for certifying AI system performance rather than attempting post-hoc explanations, AI Epistemology for rigorous scientific foundations, User-Sensible AI to create context-aware systems tailored to specific user communities, and Model-Centered Interpretability for faithful technical analysis-together offering comprehensive post-XAI research directions.",
+      "published": "2026-02-27T16:58:27Z",
+      "updated": "2026-02-27T16:58:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24176v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23300v1",
-      "title": "A Mixture-of-Experts Model for Multimodal Emotion Recognition in Conversations",
+      "id": "http://arxiv.org/abs/2602.24174v1",
+      "title": "Task-Centric Acceleration of Small-Language Models",
       "authors": [
-        "Soumya Dutta",
-        "Smruthi Balaji",
-        "Sriram Ganapathy"
+        "Dor Tsur",
+        "Sharon Adar",
+        "Ran Levy"
       ],
-      "summary": "Emotion Recognition in Conversations (ERC) presents unique challenges, requiring models to capture the temporal flow of multi-turn dialogues and to effectively integrate cues from multiple modalities. We propose Mixture of Speech-Text Experts for Recognition of Emotions (MiSTER-E), a modular Mixture-of-Experts (MoE) framework designed to decouple two core challenges in ERC: modality-specific context modeling and multimodal information fusion. MiSTER-E leverages large language models (LLMs) fine-tuned for both speech and text to provide rich utterance-level embeddings, which are then enhanced through a convolutional-recurrent context modeling layer. The system integrates predictions from three experts-speech-only, text-only, and cross-modal-using a learned gating mechanism that dynamically weighs their outputs. To further encourage consistency and alignment across modalities, we introduce a supervised contrastive loss between paired speech-text representations and a KL-divergence-based regulariza-tion across expert predictions. Importantly, MiSTER-E does not rely on speaker identity at any stage. Experiments on three benchmark datasets-IEMOCAP, MELD, and MOSI-show that our proposal achieves 70.9%, 69.5%, and 87.9% weighted F1-scores respectively, outperforming several baseline speech-text ERC systems. We also provide various ablations to highlight the contributions made in the proposed approach.",
-      "published": "2026-02-26T18:08:40Z",
-      "updated": "2026-02-26T18:08:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23300v1"
+      "summary": "Small language models (SLMs) have emerged as efficient alternatives to large language models for task-specific applications. However, they are often employed in high-volume, low-latency settings, where efficiency is crucial. We propose TASC, Task-Adaptive Sequence Compression, a framework for SLM acceleration comprising two use-cases: When performing SLM fine-tuning, we propose TASC-ft, which iteratively enriches the tokenizer vocabulary with high-frequency output n-grams and then fine-tunes the model to utilize the expanded vocabulary. Next, we propose an inference-time method, termed TASC-spec. TASC-spec is a lightweight, training-free speculative decoding method that constructs an n-gram draft model from the task's output corpus, mixing task and context n-gram information.TASC-spec avoids any additional training, while bypassing draft-target vocabulary alignment constraints. We demonstrate the effectiveness of both methods across multiple low output-variability generation tasks. Our methods show consistent improvements in inference efficiency while maintaining task performance.",
+      "published": "2026-02-27T16:55:22Z",
+      "updated": "2026-02-27T16:55:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24174v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23276v1",
-      "title": "CXReasonAgent: Evidence-Grounded Diagnostic Reasoning Agent for Chest X-rays",
+      "id": "http://arxiv.org/abs/2602.24173v1",
+      "title": "LemmaBench: A Live, Research-Level Benchmark to Evaluate LLM Capabilities in Mathematics",
       "authors": [
-        "Hyungyung Lee",
-        "Hangyul Yoon",
-        "Edward Choi"
+        "Antoine Peyronnet",
+        "Fabian Gloeckle",
+        "Amaury Hayat"
       ],
-      "summary": "Chest X-ray plays a central role in thoracic diagnosis, and its interpretation inherently requires multi-step, evidence-grounded reasoning. However, large vision-language models (LVLMs) often generate plausible responses that are not faithfully grounded in diagnostic evidence and provide limited visual evidence for verification, while also requiring costly retraining to support new diagnostic tasks, limiting their reliability and adaptability in clinical settings. To address these limitations, we present CXReasonAgent, a diagnostic agent that integrates a large language model (LLM) with clinically grounded diagnostic tools to perform evidence-grounded diagnostic reasoning using image-derived diagnostic and visual evidence. To evaluate these capabilities, we introduce CXReasonDial, a multi-turn dialogue benchmark with 1,946 dialogues across 12 diagnostic tasks, and show that CXReasonAgent produces faithfully grounded responses, enabling more reliable and verifiable diagnostic reasoning than LVLMs. These findings highlight the importance of integrating clinically grounded diagnostic tools, particularly in safety-critical clinical settings.",
-      "published": "2026-02-26T17:51:21Z",
-      "updated": "2026-02-26T17:51:21Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23276v1"
+      "summary": "We present a new approach for benchmarking Large Language Model (LLM) capabilities on research-level mathematics. Existing benchmarks largely rely on static, hand-curated sets of contest or textbook-style problems as proxies for mathematical research. Instead, we establish an updatable benchmark evaluating models directly on the latest research results in mathematics. This consists of an automatic pipeline that extracts lemmas from arXiv and rewrites them into self-contained statements by making all assumptions and required definitions explicit. It results in a benchmark that can be updated regularly with new problems taken directly from human mathematical research, while previous instances can be used for training without compromising future evaluations. We benchmark current state-of-the-art LLMs, which obtain around 10-15$\\%$ accuracy in theorem proving (pass@1) depending on the model, showing that there is currently a large margin of progression for LLMs to reach human-level proving capabilities in a research context.",
+      "published": "2026-02-27T16:52:52Z",
+      "updated": "2026-02-27T16:52:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24173v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.10001v2",
-      "title": "Human-AI Synergy Supports Collective Creative Search",
+      "id": "http://arxiv.org/abs/2602.24172v1",
+      "title": "ArgLLM-App: An Interactive System for Argumentative Reasoning with Large Language Models",
       "authors": [
-        "Chenyi Li",
-        "Raja Marjieh",
-        "Haoyu Hu",
-        "Mark Steyvers",
-        "Katherine M. Collins",
-        "Ilia Sucholutsky",
-        "Nori Jacoby"
+        "Adam Dejl",
+        "Deniz Gorur",
+        "Francesca Toni"
       ],
-      "summary": "Generative AI is increasingly transforming creativity into a hybrid human-artificial process, but its impact on the quality and diversity of creative output remains unclear. We study collective creativity using a controlled word-guessing task that balances open-endedness with an objective measure of task performance. Participants attempt to infer a hidden target word, scored based on the semantic similarity of their guesses to the target, while also observing the best guess from previous players. We compare performance and outcome diversity across human-only, AI-only, and hybrid human-AI groups. Hybrid groups achieve the highest performance while preserving high diversity of guesses. Within hybrid groups, both humans and AI agents systematically adjust their strategies relative to single-agent conditions, suggesting higher-order interaction effects, whereby agents adapt to each other's presence. Although some performance benefits can be reproduced through collaboration between heterogeneous AI systems, human-AI collaboration remains superior, underscoring complementary roles in collective creativity.",
-      "published": "2026-02-10T17:23:33Z",
-      "updated": "2026-02-26T17:40:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.10001v2"
+      "summary": "Argumentative LLMs (ArgLLMs) are an existing approach leveraging Large Language Models (LLMs) and computational argumentation for decision-making, with the aim of making the resulting decisions faithfully explainable to and contestable by humans. Here we propose a web-based system implementing ArgLLM-empowered agents for binary tasks. ArgLLM-App supports visualisation of the produced explanations and interaction with human users, allowing them to identify and contest any mistakes in the system's reasoning. It is highly modular and enables drawing information from trusted external sources. ArgLLM-App is publicly available at https://argllm.app, with a video demonstration at https://youtu.be/vzwlGOr0sPM.",
+      "published": "2026-02-27T16:52:27Z",
+      "updated": "2026-02-27T16:52:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.24172v1"
     },
     {
-      "id": "http://arxiv.org/abs/2507.03772v3",
-      "title": "Skewed Score: A statistical framework to assess autograders",
+      "id": "http://arxiv.org/abs/2506.20640v3",
+      "title": "CoMind: Towards Community-Driven Agents for Machine Learning Engineering",
       "authors": [
-        "Magda Dubois",
-        "Harry Coppock",
-        "Mario Giulianelli",
-        "Timo Flesch",
-        "Lennart Luettgau",
-        "Cozmin Ududec"
+        "Sijie Li",
+        "Weiwei Sun",
+        "Shanda Li",
+        "Ameet Talwalkar",
+        "Yiming Yang"
       ],
-      "summary": "The evaluation of large language model (LLM) outputs is increasingly performed by other LLMs, a setup commonly known as \"LLM-as-a-judge\", or autograders. While autograders offer a scalable alternative to human evaluation, they have shown mixed reliability and may exhibit systematic biases, depending on response type, scoring methodology, domain specificity, or other factors. Here we propose a statistical framework based on Bayesian generalised linear models (GLMs) that enables researchers to simultaneously assess their autograders while addressing their primary research questions (e.g., LLM evaluation). Our approach models evaluation outcomes (e.g., scores or pairwise preferences) as a function of properties of the grader (e.g., human vs. autograder) and the evaluated item (e.g., response length or the LLM that generated it), allowing for explicit quantification of scoring differences and potential biases within a unified framework. In addition, our method can be used to augment traditional metrics such as inter-rater agreement, by providing uncertainty estimates and clarifying sources of disagreement. Overall, this approach contributes to more robust and interpretable use of autograders in LLM evaluation, enabling both performance analysis and bias detection.",
-      "published": "2025-07-04T18:45:10Z",
-      "updated": "2026-02-26T17:39:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.03772v3"
+      "summary": "Large language model (LLM) agents show promise in automating machine learning (ML) engineering. However, existing agents typically operate in isolation on a given research problem, without engaging with the broader research community, where human researchers often gain insights and contribute by sharing knowledge. To bridge this gap, we introduce MLE-Live, a live evaluation framework designed to assess an agent's ability to communicate with and leverage collective knowledge from a simulated Kaggle research community. Building on this framework, we propose CoMind, a multi-agent system designed to systematically leverage external knowledge. CoMind employs an iterative parallel exploration mechanism, developing multiple solutions simultaneously to balance exploratory breadth with implementation depth. On 75 past Kaggle competitions within our MLE-Live framework, CoMind achieves a 36% medal rate, establishing a new state of the art. Critically, when deployed in eight live, ongoing competitions, CoMind outperforms 92.6% of human competitors on average, placing in the top 5% on three official leaderboards and the top 1% on one.",
+      "published": "2025-06-25T17:36:02Z",
+      "updated": "2026-02-27T16:45:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.20640v3"
     }
   ]
 }
