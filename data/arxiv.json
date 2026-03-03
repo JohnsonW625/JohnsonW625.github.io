@@ -1,229 +1,207 @@
 {
-  "generated_at_utc": "2026-03-02T02:03:35Z",
+  "generated_at_utc": "2026-03-03T02:05:31Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.24235v1",
-      "title": "SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems",
+      "id": "http://arxiv.org/abs/2410.16597v2",
+      "title": "Scaling Knowledge Graph Construction through Synthetic Data Generation and Distillation",
       "authors": [
-        "Jialiang Fan",
-        "Weizhe Xu",
-        "Mengyu Liu",
-        "Oleg Sokolsky",
-        "Insup Lee",
-        "Fangxin Kong"
+        "Prafulla Kumar Choubey",
+        "Xin Su",
+        "Man Luo",
+        "Xiangyu Peng",
+        "Caiming Xiong",
+        "Tiep Le",
+        "Shachar Rosenman",
+        "Vasudev Lal",
+        "Phil Mui",
+        "Ricky Ho",
+        "Phillip Howard",
+        "Chien-Sheng Wu"
       ],
-      "summary": "Safety-critical task planning in robotic systems remains challenging: classical planners suffer from poor scalability, Reinforcement Learning (RL)-based methods generalize poorly, and base Large Language Models (LLMs) cannot guarantee safety. To address this gap, we propose safety-generalizable large language models, named SafeGen-LLM. SafeGen-LLM can not only enhance the safety satisfaction of task plans but also generalize well to novel safety properties in various domains. We first construct a multi-domain Planning Domain Definition Language 3 (PDDL3) benchmark with explicit safety constraints. Then, we introduce a two-stage post-training framework: Supervised Fine-Tuning (SFT) on a constraint-compliant planning dataset to learn planning syntax and semantics, and Group Relative Policy Optimization (GRPO) guided by fine-grained reward machines derived from formal verification to enforce safety alignment and by curriculum learning to better handle complex tasks. Extensive experiments show that SafeGen-LLM achieves strong safety generalization and outperforms frontier proprietary baselines across multi-domain planning tasks and multiple input formats (e.g., PDDLs and natural language).",
-      "published": "2026-02-27T18:06:10Z",
-      "updated": "2026-02-27T18:06:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24235v1"
+      "summary": "Document-level knowledge graph (KG) construction faces a fundamental scaling challenge: existing methods either rely on expensive large language models (LLMs), making them economically nonviable for large-scale corpora, or employ smaller models that produce incomplete and inconsistent graphs. We find that this limitation stems not from model capabilities but from insufficient training on high-quality document-level KG data. To address this gap, we introduce SynthKG, a multi-step data synthesis pipeline that generates high-quality document-KG pairs through systematic chunking, decontextualization, and structured extraction using LLMs. By fine-tuning a smaller LLM on synthesized document-KG pairs, we streamline the multi-step process into a single-step KG generation approach called Distill-SynthKG. Furthermore, we repurpose existing question-answering datasets to construct KG evaluation datasets and introduce new evaluation metrics. Using KGs produced by Distill-SynthKG, we also design a novel graph-based retrieval framework for RAG. Experimental results demonstrate that Distill-SynthKG not only surpasses all baseline models in KG quality (including models up to eight times larger) but also consistently improves in retrieval and question-answering tasks. Additionally, our proposed graph retrieval framework outperforms all KG-retrieval methods across multiple benchmark datasets.",
+      "published": "2024-10-22T00:47:54Z",
+      "updated": "2026-03-01T04:18:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.16597v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24223v1",
-      "title": "Anansi: Scalable Characterization of Message-Based Job Scams",
+      "id": "http://arxiv.org/abs/2603.00910v1",
+      "title": "Curvature-Weighted Capacity Allocation: A Minimum Description Length Framework for Layer-Adaptive Large Language Model Optimization",
       "authors": [
-        "Abisheka Pitumpe",
-        "Amir Rahmati"
+        "Theophilus Amaefuna",
+        "Hitesh Vaidya",
+        "Anshuman Chhabra",
+        "Ankur Mali"
       ],
-      "summary": "Job-based smishing scams, where victims are recruited under the guise of remote job opportunities, represent a rapidly growing and understudied threat within the broader landscape of online fraud. In this paper, we present Anansi, the first scalable, end-to-end measurement pipeline designed to systematically engage with, analyze, and characterize job scams in the wild. Anansi combines large language models (LLMs), automated browser agents, and infrastructure fingerprinting tools to collect over 29,000 scam messages, interact with more than 1900 scammers, and extract behavioral, financial, and infrastructural signals at scale. We detail the operational workflows of scammers, uncover extensive reuse of message templates, domains, and cryptocurrency wallets, and identify the social engineering tactics used to defraud victims. Our analysis reveals millions of dollars in cryptocurrency losses, highlighting the use of deceptive techniques such as domain fronting and impersonation of well-known brands. Anansi demonstrates the feasibility and value of automating the engagement with scammers and the analysis of infrastructure, offering a new methodological foundation for studying large-scale fraud ecosystems.",
-      "published": "2026-02-27T17:49:56Z",
-      "updated": "2026-02-27T17:49:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24223v1"
+      "summary": "Layer-wise capacity in large language models is highly non-uniform: some layers contribute disproportionately to loss reduction while others are near-redundant. Existing methods for exploiting this non-uniformity, such as influence-function-based layer scoring, produce sensitivity estimates but offer no principled mechanism for translating them into allocation or pruning decisions under hardware constraints. We address this gap with a unified, curvature-aware framework grounded in the Minimum Description Length (MDL) principle. Our central quantity is the curvature-adjusted layer gain $ζ_k^2 = g_k^\\top \\widetilde{H}_{kk}^{-1} g_k$, which we show equals twice the maximal second-order reduction in empirical risk achievable by updating layer $k$ alone, and which strictly dominates gradient-norm-based scores by incorporating local curvature. Normalizing these gains into layer quality scores $q_k$, we formulate two convex MDL programs: a capacity allocation program that distributes expert slots or LoRA rank preferentially to high-curvature layers under diminishing returns, and a pruning program that concentrates sparsity on low-gain layers while protecting high-gain layers from degradation. Both programs admit unique closed-form solutions parameterized by a single dual variable, computable in $O(K \\log 1/\\varepsilon)$ via bisection. We prove an $O(δ^2)$ transfer regret bound showing that source-domain allocations remain near-optimal on target tasks when curvature scores drift by $δ$, with explicit constants tied to the condition number of the target program. Together, these results elevate layer-wise capacity optimization from an empirical heuristic to a theoretically grounded, computationally efficient framework with provable optimality and generalization guarantees.",
+      "published": "2026-03-01T04:14:15Z",
+      "updated": "2026-03-01T04:14:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00910v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.20167v2",
-      "title": "Playsemble: Learning Low-Level Programming Through Interactive Games",
+      "id": "http://arxiv.org/abs/2603.00907v1",
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
       "authors": [
-        "Elliott Wen",
-        "Paul Denny",
-        "Andrew Luxton-Reilly",
-        "Sean Ma",
-        "Bruce Sham",
-        "Chenye Ni",
-        "Jun Seo",
-        "Yu Yang"
+        "Lianjun Liu",
+        "Hongli An",
+        "Weiqi Yan",
+        "Xin Du",
+        "Shengchuan Zhang",
+        "Huazhong Liu",
+        "Yunshan Zhong"
       ],
-      "summary": "Teaching assembly programming is a fundamental component of undergraduate computer science education, yet many students struggle with its abstract and low-level concepts. Existing learning tools, such as simulators and visualisers, support understanding by exposing machine states. However, they often limit students to passive observation and provide few opportunities for meaningful interaction. To address these limitations, we introduce Playsemble, a gamified learning system that transforms assembly instructions into interactive, game-like tasks in which students control Pac-Man to collect items, avoid ghosts, and reach targets. Playsemble integrates a code editor, a CPU emulator, and visual debugging tools within a browser-based environment, allowing students to work offline without installation or configuration. It also provides immediate formative feedback enhanced by large language models. We deployed Playsemble in an undergraduate computer architecture course with 107 students. The course featured a sequence of assignments of increasing complexity, covering core concepts such as register and memory manipulation, control structures including loops and conditionals, and arithmetic operations. Our findings suggest that Playsemble promotes active experimentation, sustained engagement, and deeper conceptual understanding through meaningful game-based learning experiences.",
-      "published": "2026-02-09T06:31:44Z",
-      "updated": "2026-02-27T17:43:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.20167v2"
+      "summary": "The growing computational and memory demands of the Key-Value (KV) cache significantly limit the ability of Large Language Models (LLMs). While KV merging has emerged as a promising solution, existing methods that rely on empirical observations of KV asymmetry and gradient-based Hessian approximations lack a theoretical foundation and incur suboptimal compression and inference overhead. To bridge these gaps, we establish a theoretical framework that characterizes this asymmetry through the spectral energy distribution of projection weights, demonstrating that concentrated spectra in Query/Key weights induce feature homogeneity, whereas dispersed spectra in Value weights preserve heterogeneity. Then, we introduce KVSlimmer, an efficient algorithm that captures exact Hessian information through a mathematically exact formulation, and derives a closed-form solution utilizing only forward-pass variables, resulting in a gradient-free approach that is both memory- and time-efficient. Extensive experiments across various models and benchmarks demonstrate that KVSlimmer consistently outperforms SOTA methods. For instance, on Llama3.1-8B-Instruct, it improves the LongBench average score by 0.92 while reducing memory costs and latency by 29% and 28%, respectively.",
+      "published": "2026-03-01T04:07:36Z",
+      "updated": "2026-03-01T04:07:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00907v1"
     },
     {
-      "id": "http://arxiv.org/abs/2508.03716v2",
-      "title": "FeynTune: Large Language Models for High-Energy Theory",
+      "id": "http://arxiv.org/abs/2603.00905v1",
+      "title": "pySpatial: Generating 3D Visual Programs for Zero-Shot Spatial Reasoning",
       "authors": [
-        "Paul Richmond",
-        "Prarit Agarwal",
-        "Borun Chowdhury",
-        "Vasilis Niarchos",
-        "Constantinos Papageorgakis"
+        "Zhanpeng Luo",
+        "Ce Zhang",
+        "Silong Yong",
+        "Cunxi Dai",
+        "Qianwei Wang",
+        "Haoxi Ran",
+        "Guanya Shi",
+        "Katia Sycara",
+        "Yaqi Xie"
       ],
-      "summary": "We present specialized Large Language Models for theoretical High-Energy Physics, obtained as 20 fine-tuned variants of the 8-billion parameter Llama-3.1 model. Each variant was trained on arXiv abstracts (through August 2024) from different combinations of hep-th, hep-ph and gr-qc. For a comparative study, we also trained models on datasets that contained abstracts from disparate fields such as the q-bio and cs categories. All models were fine-tuned using two distinct Low-Rank Adaptation fine-tuning approaches and varying dataset sizes, and outperformed the base model on hep-th abstract completion tasks. We compare performance against leading commercial LLMs (ChatGPT, Claude, Gemini, DeepSeek) and derive insights for further developing specialized language models for High-Energy Theoretical Physics.",
-      "published": "2025-07-24T18:21:03Z",
-      "updated": "2026-02-27T17:30:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.03716v2"
+      "summary": "Multi-modal Large Language Models (MLLMs) have demonstrated strong capabilities in general-purpose perception and reasoning, but they still struggle with tasks that require spatial understanding of the 3D world. To address this, we introduce pySpatial, a visual programming framework that equips MLLMs with the ability to interface with spatial tools via Python code generation. Given an image sequence and a natural-language query, the model composes function calls to spatial tools including 3D reconstruction, camera-pose recovery, novel-view rendering, etc. These operations convert raw 2D inputs into an explorable 3D scene, enabling MLLMs to reason explicitly over structured spatial representations. Notably, pySpatial requires no gradient-based fine-tuning and operates in a fully zero-shot setting. Experimental evaluations on the challenging MindCube and Omni3D-Bench benchmarks demonstrate that our framework pySpatial consistently surpasses strong MLLM baselines; for instance, it outperforms GPT-4.1-mini by 12.94% on MindCube. Furthermore, we conduct real-world indoor navigation experiments where the robot can successfully traverse complex environments using route plans generated by pySpatial, highlighting the practical effectiveness of our approach.",
+      "published": "2026-03-01T03:55:49Z",
+      "updated": "2026-03-01T03:55:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00905v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24195v1",
-      "title": "Uncertainty Quantification for Multimodal Large Language Models with Incoherence-adjusted Semantic Volume",
+      "id": "http://arxiv.org/abs/2509.24198v2",
+      "title": "Negative Pre-activations Differentiate Syntax",
       "authors": [
-        "Gregory Kang Ruey Lau",
-        "Hieu Dao",
-        "Nicole Kan Hui Lin",
-        "Bryan Kian Hsiang Low"
+        "Linghao Kong",
+        "Angelina Ning",
+        "Micah Adler",
+        "Nir Shavit"
       ],
-      "summary": "Despite their capabilities, Multimodal Large Language Models (MLLMs) may produce plausible but erroneous outputs, hindering reliable deployment. Accurate uncertainty metrics could enable escalation of unreliable queries to human experts or larger models for improved performance. However, existing uncertainty metrics have practical constraints, such as being designed only for specific modalities, reliant on external tools, or computationally expensive. We introduce UMPIRE, a training-free uncertainty quantification framework for MLLMs that works efficiently across various input and output modalities without external tools, relying only on the models' own internal modality features. UMPIRE computes the incoherence-adjusted semantic volume of sampled MLLM responses for a given task instance, effectively capturing both the global semantic diversity of samples and the local incoherence of responses based on internal model confidence. We propose uncertainty desiderata for MLLMs and provide theoretical analysis motivating UMPIRE's design. Extensive experiments show that UMPIRE consistently outperforms baseline metrics in error detection and uncertainty calibration across image, audio, and video-text benchmarks, including adversarial and out-of-distribution settings. We also demonstrate UMPIRE's generalization to non-text output tasks, including image and audio generation.",
-      "published": "2026-02-27T17:18:42Z",
-      "updated": "2026-02-27T17:18:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24195v1"
+      "summary": "Modern large language models increasingly use smooth activation functions such as GELU or SiLU, allowing negative pre-activations to carry both signal and gradient. Nevertheless, many neuron-level interpretability analyses have historically focused on large positive activations, often implicitly treating the negative region as less informative, a carryover from the ReLU-era. We challenge this assumption and ask whether and how negative pre-activations are leveraged by models. We address this question by studying a sparse subpopulation of Wasserstein neurons whose output distributions deviate strongly from a Gaussian baseline and that functionally differentiate similar inputs. We show that this negative region plays an active role rather than reflecting a mere gradient optimization side effect. A minimal, sign-specific intervention that zeroes only the negative pre-activations of a small set of Wasserstein neurons substantially increases perplexity and sharply degrades grammatical performance on BLiMP and TSE, whereas both random and perplexity-matched ablations of many more non-Wasserstein neurons in their negative pre-activations leave grammatical performance largely intact. Conversely, on a suite of non-grammatical benchmarks, the perplexity-matched control ablation is more damaging than the Wasserstein neuron ablation, yielding a double dissociation between syntax and other capabilities. Part-of-speech analysis localizes the excess surprisal to syntactic scaffolding tokens, layer-specific interventions show that small local degradations accumulate across depth, and training-dynamics analysis reveals that the same sign-specific ablation becomes more harmful as Wasserstein neurons emerge and stabilize. Together, these results identify negative pre-activations in a sparse subpopulation of Wasserstein neurons as an actively used substrate for syntax in smooth-activation language models.",
+      "published": "2025-09-29T02:29:29Z",
+      "updated": "2026-03-01T03:49:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.24198v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22291v2",
-      "title": "Manifold of Failure: Behavioral Attraction Basins in Language Models",
+      "id": "http://arxiv.org/abs/2504.03889v4",
+      "title": "Identifying and Evaluating Inactive Heads in Pretrained LLMs",
       "authors": [
-        "Sarthak Munshi",
-        "Manish Bhatt",
-        "Vineeth Sai Narajala",
-        "Idan Habler",
-        "Ammar Al-Kahfah",
-        "Ken Huang",
-        "Blake Gatto"
+        "Pedro Sandoval-Segura",
+        "Xijun Wang",
+        "Ashwinee Panda",
+        "Micah Goldblum",
+        "Ronen Basri",
+        "Tom Goldstein",
+        "David Jacobs"
       ],
-      "summary": "While prior work has focused on projecting adversarial examples back onto the manifold of natural data to restore safety, we argue that a comprehensive understanding of AI safety requires characterizing the unsafe regions themselves. This paper introduces a framework for systematically mapping the Manifold of Failure in Large Language Models (LLMs). We reframe the search for vulnerabilities as a quality diversity problem, using MAP-Elites to illuminate the continuous topology of these failure regions, which we term behavioral attraction basins. Our quality metric, Alignment Deviation, guides the search towards areas where the model's behavior diverges most from its intended alignment. Across three LLMs: Llama-3-8B, GPT-OSS-20B, and GPT-5-Mini, we show that MAP-Elites achieves up to 63% behavioral coverage, discovers up to 370 distinct vulnerability niches, and reveals dramatically different model-specific topological signatures: Llama-3-8B exhibits a near-universal vulnerability plateau (mean Alignment Deviation 0.93), GPT-OSS-20B shows a fragmented landscape with spatially concentrated basins (mean 0.73), and GPT-5-Mini demonstrates strong robustness with a ceiling at 0.50. Our approach produces interpretable, global maps of each model's safety landscape that no existing attack method (GCG, PAIR, or TAP) can provide, shifting the paradigm from finding discrete failures to understanding their underlying structure.",
-      "published": "2026-02-25T15:08:20Z",
-      "updated": "2026-02-27T17:04:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22291v2"
+      "summary": "Attention is foundational to large language models (LLMs), enabling different heads to have diverse focus on relevant input tokens. However, learned behaviors like attention sinks, where the first token receives the most attention despite limited semantic importance, suggest some heads may be inactive, and point to a significant source of computational redundancy. To analyze this phenomenon, we evaluate 12 score functions that measure different ways a head can be inactive. Thresholding these scores allows us to analyze different sets of potentially inactive attention heads. We evaluate whether identified heads are inactive through model interventions, finding that more than 12% of attention heads are inactive on average, and can be ablated in specific contexts while maintaining MMLU accuracy to within 1% of the pretrained LLM. Across 3 model families, our score functions that measure the average norm of a head's output consistently identify inactive heads that would not have been found by score functions that rely solely on attention weights. We establish that relying on a score function that measures a first token attention sink would underestimate the prevalence of inactive heads, failing to identify more than 7% of inactive heads on average. We also show how measuring score distributions can provide insights into attention behavior. For instance, we find evidence that finetuning causes little to no change in attention behavior, and that even within the same model family, large model scales present different attention behaviors.",
+      "published": "2025-04-04T19:28:23Z",
+      "updated": "2026-03-01T03:45:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.03889v4"
     },
     {
-      "id": "http://arxiv.org/abs/2507.19364v2",
-      "title": "Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges",
+      "id": "http://arxiv.org/abs/2603.00897v1",
+      "title": "Detect Repair Verify for Securing LLM Generated Code: A Multi-Language Empirical Study",
       "authors": [
-        "Patrick Taillandier",
-        "Jean Daniel Zucker",
-        "Arnaud Grignard",
-        "Benoit Gaudou",
-        "Nghi Quang Huynh",
-        "Alexis Drogoul"
+        "Cheng Cheng"
       ],
-      "summary": "This position paper examines the use of Large Language Models (LLMs) in social simulation, analyzing their potential and limitations from a computational social science perspective. We first review recent findings on LLMs' ability to replicate key aspects of human cognition, including Theory of Mind reasoning and social inference, while identifying persistent limitations such as cognitive biases, lack of grounded understanding, and behavioral inconsistencies. We then survey emerging applications of LLMs in multi-agent simulation frameworks, examining system architectures, scalability, and validation strategies. Projects such as Generative Agents (Smallville) and AgentSociety are analyzed with respect to their empirical grounding and methodological design. Particular attention is given to the challenges of behavioral fidelity, calibration, and reproducibility in large-scale LLM-driven simulations. Finally, we distinguish between contexts where LLM-based agents provide operational value-such as interactive simulations and serious games-and contexts where their use raises epistemic concerns, particularly in explanatory or predictive modeling. We argue that hybrid approaches integrating LLMs into established agent-based modeling platforms such as GAMA and NetLogo may offer a promising compromise between expressive flexibility and analytical transparency. Building on this analysis, we outline a conceptual research direction termed Hybrid Constitutional Architectures, which proposes a stratified integration of classical agent-based models (ABMs), small language models (SLMs), and LLMs within established platforms such as GAMA and NetLogo.",
-      "published": "2025-07-25T15:15:35Z",
-      "updated": "2026-02-27T17:03:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.19364v2"
+      "summary": "Large language models are increasingly used to produce runnable software. In practice, security is often addressed through a Detect--Repair--Verify (DRV) loop that detects issues, applies fixes, and verifies the result. This work studies such a workflow for project-level artifacts and addresses four gaps: L1, the lack of project-level benchmarks with executable function and security tests; L2, limited evidence on pipeline-level effectiveness beyond studying detection or repair alone; L3, unclear reliability of detection reports as repair guidance; and L4, uncertain repair trustworthiness and side effects under verification. A new benchmark dataset\\footnote{https://github.com/Hahappyppy2024/EmpricalVDR} is introduced, consisting of runnable web-application projects paired with functional tests and targeted security tests, and supporting three prompt granularities at the project, requirement, and function level. The evaluation compares generation-only, single-pass DRV, and bounded iterative DRV variants under comparable budget constraints. Outcomes are measured by secure and correct yield using test-grounded verification, and intermediate artifacts are analyzed to assess report actionability and post-repair failure modes such as regressions, semantic drift, and newly introduced security issues.",
+      "published": "2026-03-01T03:41:24Z",
+      "updated": "2026-03-01T03:41:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00897v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24176v1",
-      "title": "Beyond Explainable AI (XAI): An Overdue Paradigm Shift and Post-XAI Research Directions",
+      "id": "http://arxiv.org/abs/2412.03772v2",
+      "title": "A Contemporary Overview: Trends and Applications of Large Language Models on Mobile Devices",
       "authors": [
-        "Saleh Afroogh",
-        "Seyd Ishtiaque Ahmed",
-        "Petra Ahrweiler",
-        "David Alvarez-Melis",
-        "Mansur Maturidi Arief",
-        "Emilia Barakova",
-        "Falco J. Bargagli-Stoffi",
-        "Erdem Biyik",
-        "Hanjie Chen",
-        "Xiang 'Anthony' Chen",
-        "Robert Clements",
-        "Keeley Crockett",
-        "Amit Dhurandhar",
-        "Fethiye Irmak Dogan",
-        "Mollie Dollinger",
-        "Motahhare Eslami",
-        "Aldo A Faisal",
-        "Arya Farahi",
-        "Melanie Fernandez Pradie",
-        "Saadia Gabrie",
-        "Diego Garcia-Olano",
-        "Marzyeh Ghassemi",
-        "Shaona Ghosh",
-        "Hatice Gunes",
-        "Ehsan Hajiramezanali",
-        "Stefan Haufe",
-        "Biwei Huang",
-        "Angel Hwang",
-        "Md Tauhidul Islam",
-        "Junfeng Jiao",
-        "Amir-Hossein Karimi",
-        "Saber Kazeminasab",
-        "Anastasia Kuzminykh",
-        "William La Cava",
-        "Brian Y. Lim",
-        "Xiaofeng Liu",
-        "Mohammad R. K. Mofrad",
-        "Alicia Parrish",
-        "Maria Perez-Ortiz",
-        "Shriti Raj",
-        "Swabha Swayamdipta",
-        "Salmon Talebi",
-        "Kush R. Varshney",
-        "Mihaela Vorvoreanu",
-        "Lily Weng",
-        "Alice Xiang",
-        "Yiming Xu",
-        "Ding Zhao",
-        "Jieyu Zhao"
+        "Lianjun Liu",
+        "Hongli An",
+        "Pengxuan Chen",
+        "Longxiang Ye"
       ],
-      "summary": "This study provides a cross-disciplinary examination of Explainable Artificial Intelligence (XAI) approaches-focusing on deep neural networks (DNNs) and large language models (LLMs)-and identifies empirical and conceptual limitations in current XAI. We discuss critical symptoms that stem from deeper root causes (i.e., two paradoxes, two conceptual confusions, and five false assumptions). These fundamental problems within the current XAI research field reveal three insights: experimentally, XAI exhibits significant flaws; conceptually, it is paradoxical; and pragmatically, further attempts to reform the paradoxical XAI might exacerbate its confusion-demanding fundamental shifts and new research directions. To move beyond XAI's limitations, we propose a four-pronged synthesized paradigm shift toward reliable and certified AI development. These four components include: verification-focused Interactive AI (IAI) to establish scientific community protocols for certifying AI system performance rather than attempting post-hoc explanations, AI Epistemology for rigorous scientific foundations, User-Sensible AI to create context-aware systems tailored to specific user communities, and Model-Centered Interpretability for faithful technical analysis-together offering comprehensive post-XAI research directions.",
-      "published": "2026-02-27T16:58:27Z",
-      "updated": "2026-02-27T16:58:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24176v1"
+      "summary": "With the rapid development of large language models (LLMs), which possess powerful natural language processing and generation capabilities, LLMs are poised to provide more natural and personalized user experiences. Their deployment on mobile devices is gradually becoming a significant trend in the field of intelligent devices. LLMs have demonstrated tremendous potential in applications such as voice assistants, real-time translation, and intelligent recommendations. Advancements in hardware technologies (such as neural network accelerators) and network infrastructure (such as 5G) have enabled efficient local inference and low-latency intelligent responses on mobile devices. This reduces reliance on cloud computing while enhancing data privacy and security. Developers can easily integrate LLM functionalities through open APIs and SDKs, enabling the creation of more innovative intelligent applications. The widespread use of LLMs not only enhances the intelligence of mobile devices but also fosters the integrated innovation of fields like augmented reality (AR) and the Internet of Things (IoT). This trend is expected to drive the development of the next generation of mobile intelligent applications.",
+      "published": "2024-12-04T23:25:03Z",
+      "updated": "2026-03-01T03:40:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.03772v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24174v1",
-      "title": "Task-Centric Acceleration of Small-Language Models",
+      "id": "http://arxiv.org/abs/2603.00895v1",
+      "title": "Evaluating AI Grading on Real-World Handwritten College Mathematics: A Large-Scale Study Toward a Benchmark",
       "authors": [
-        "Dor Tsur",
-        "Sharon Adar",
-        "Ran Levy"
+        "Zhiqi Yu",
+        "Xingping Liu",
+        "Haobin Mao",
+        "Mingshuo Liu",
+        "Long Chen",
+        "Jack Xin",
+        "Yifeng Yu"
       ],
-      "summary": "Small language models (SLMs) have emerged as efficient alternatives to large language models for task-specific applications. However, they are often employed in high-volume, low-latency settings, where efficiency is crucial. We propose TASC, Task-Adaptive Sequence Compression, a framework for SLM acceleration comprising two use-cases: When performing SLM fine-tuning, we propose TASC-ft, which iteratively enriches the tokenizer vocabulary with high-frequency output n-grams and then fine-tunes the model to utilize the expanded vocabulary. Next, we propose an inference-time method, termed TASC-spec. TASC-spec is a lightweight, training-free speculative decoding method that constructs an n-gram draft model from the task's output corpus, mixing task and context n-gram information.TASC-spec avoids any additional training, while bypassing draft-target vocabulary alignment constraints. We demonstrate the effectiveness of both methods across multiple low output-variability generation tasks. Our methods show consistent improvements in inference efficiency while maintaining task performance.",
-      "published": "2026-02-27T16:55:22Z",
-      "updated": "2026-02-27T16:55:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24174v1"
+      "summary": "Grading in large undergraduate STEM courses often yields minimal feedback due to heavy instructional workloads. We present a large-scale empirical study of AI grading on real, handwritten single-variable calculus work from UC Irvine. Using OCR-conditioned large language models with structured, rubric-guided prompting, our system produces scores and formative feedback for thousands of free-response quiz submissions from nearly 800 students. In a setting with no single ground-truth label, we evaluate performance against official teaching-assistant grades, student surveys, and independent human review, finding strong alignment with TA scoring and a large majority of AI-generated feedback rated as correct or acceptable across quizzes. Beyond calculus, this setting highlights core challenges in OCR-conditioned mathematical reasoning and partial-credit assessment. We analyze key failure modes, propose practical rubric- and prompt-design principles, and introduce a multi-perspective evaluation protocol for reliable, real-course deployment. Building on the dataset and evaluation framework developed here, we outline a standardized benchmark for AI grading of handwritten mathematics to support reproducible comparison and future research.",
+      "published": "2026-03-01T03:32:51Z",
+      "updated": "2026-03-01T03:32:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00895v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24173v1",
-      "title": "LemmaBench: A Live, Research-Level Benchmark to Evaluate LLM Capabilities in Mathematics",
+      "id": "http://arxiv.org/abs/2509.18487v2",
+      "title": "Actions Speak Louder than Prompts: A Large-Scale Study of LLMs for Graph Inference",
       "authors": [
-        "Antoine Peyronnet",
-        "Fabian Gloeckle",
-        "Amaury Hayat"
+        "Ben Finkelshtein",
+        "Silviu Cucerzan",
+        "Sujay Kumar Jauhar",
+        "Ryen White"
       ],
-      "summary": "We present a new approach for benchmarking Large Language Model (LLM) capabilities on research-level mathematics. Existing benchmarks largely rely on static, hand-curated sets of contest or textbook-style problems as proxies for mathematical research. Instead, we establish an updatable benchmark evaluating models directly on the latest research results in mathematics. This consists of an automatic pipeline that extracts lemmas from arXiv and rewrites them into self-contained statements by making all assumptions and required definitions explicit. It results in a benchmark that can be updated regularly with new problems taken directly from human mathematical research, while previous instances can be used for training without compromising future evaluations. We benchmark current state-of-the-art LLMs, which obtain around 10-15$\\%$ accuracy in theorem proving (pass@1) depending on the model, showing that there is currently a large margin of progression for LLMs to reach human-level proving capabilities in a research context.",
-      "published": "2026-02-27T16:52:52Z",
-      "updated": "2026-02-27T16:52:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24173v1"
+      "summary": "Large language models (LLMs) are increasingly used for text-rich graph machine learning tasks such as node classification in high-impact domains like fraud detection and recommendation systems. Yet, despite a surge of interest, the field lacks a principled understanding of the capabilities of LLMs in their interaction with graph data. In this work, we conduct a large-scale, controlled evaluation across several key axes of variability to systematically assess the strengths and weaknesses of LLM-based graph reasoning methods in text-based applications. The axes include the LLM-graph interaction mode, comparing prompting, tool-use, and code generation; dataset domains, spanning citation, web-link, e-commerce, and social networks; structural regimes contrasting homophilic and heterophilic graphs; feature characteristics involving both short- and long-text node attributes; and model configurations with varying LLM sizes and reasoning capabilities. We further analyze dependencies by methodically truncating features, deleting edges, and removing labels to quantify reliance on input types. Our findings provide practical and actionable guidance. (1) LLMs as code generators achieve the strongest overall performance on graph data, with especially large gains on long-text or high-degree graphs where prompting quickly exceeds the token budget. (2) All interaction strategies remain effective on heterophilic graphs, challenging the assumption that LLM-based methods collapse under low homophily. (3) Code generation is able to flexibly adapt its reliance between structure, features, or labels to leverage the most informative input type. Together, these findings provide a comprehensive view of the strengths and limitations of current LLM-graph interaction modes and highlight key design principles for future approaches.",
+      "published": "2025-09-23T00:46:21Z",
+      "updated": "2026-03-01T03:26:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.18487v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.24172v1",
-      "title": "ArgLLM-App: An Interactive System for Argumentative Reasoning with Large Language Models",
+      "id": "http://arxiv.org/abs/2603.00889v1",
+      "title": "CHIMERA: Compact Synthetic Data for Generalizable LLM Reasoning",
       "authors": [
-        "Adam Dejl",
-        "Deniz Gorur",
-        "Francesca Toni"
+        "Xinyu Zhu",
+        "Yihao Feng",
+        "Yanchao Sun",
+        "Xianzhi Du",
+        "Pingzhi Li",
+        "Olli Saarikivi",
+        "Yun Zhu",
+        "Yu Meng"
       ],
-      "summary": "Argumentative LLMs (ArgLLMs) are an existing approach leveraging Large Language Models (LLMs) and computational argumentation for decision-making, with the aim of making the resulting decisions faithfully explainable to and contestable by humans. Here we propose a web-based system implementing ArgLLM-empowered agents for binary tasks. ArgLLM-App supports visualisation of the produced explanations and interaction with human users, allowing them to identify and contest any mistakes in the system's reasoning. It is highly modular and enables drawing information from trusted external sources. ArgLLM-App is publicly available at https://argllm.app, with a video demonstration at https://youtu.be/vzwlGOr0sPM.",
-      "published": "2026-02-27T16:52:27Z",
-      "updated": "2026-02-27T16:52:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.24172v1"
+      "summary": "Large Language Models (LLMs) have recently exhibited remarkable reasoning capabilities, largely enabled by supervised fine-tuning (SFT)- and reinforcement learning (RL)-based post-training on high-quality reasoning data. However, reproducing and extending these capabilities in open and scalable settings is hindered by three fundamental data-centric challenges: (1) the cold-start problem, arising from the lack of seed datasets with detailed, long Chain-of-Thought (CoT) trajectories needed to initialize reasoning policies; (2) limited domain coverage, as most existing open-source reasoning datasets are concentrated in mathematics, with limited coverage of broader scientific disciplines; and (3) the annotation bottleneck, where the difficulty of frontier-level reasoning tasks makes reliable human annotation prohibitively expensive or infeasible. To address these challenges, we introduce CHIMERA, a compact synthetic reasoning dataset comprising 9K samples for generalizable cross-domain reasoning. CHIMERA is constructed with three key properties: (1) it provides rich, long CoT reasoning trajectories synthesized by state-of-the-art reasoning models; (2) it has broad and structured coverage, spanning 8 major scientific disciplines and over 1K fine-grained topics organized via a model-generated hierarchical taxonomy; and (3) it employs a fully automated, scalable evaluation pipeline that uses strong reasoning models to cross-validate both problem validity and answer correctness. We use CHIMERA to post-train a 4B Qwen3 model. Despite the dataset's modest size, the resulting model achieves strong performance on a suite of challenging reasoning benchmarks, including GPQA-Diamond, AIME 24/25/26, HMMT 25, and Humanity's Last Exam, approaching or matching the reasoning performance of substantially larger models such as DeepSeek-R1 and Qwen3-235B.",
+      "published": "2026-03-01T03:23:41Z",
+      "updated": "2026-03-01T03:23:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.00889v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.20640v3",
-      "title": "CoMind: Towards Community-Driven Agents for Machine Learning Engineering",
+      "id": "http://arxiv.org/abs/2509.24276v3",
+      "title": "G-reasoner: Foundation Models for Unified Reasoning over Graph-structured Knowledge",
       "authors": [
-        "Sijie Li",
-        "Weiwei Sun",
-        "Shanda Li",
-        "Ameet Talwalkar",
-        "Yiming Yang"
+        "Linhao Luo",
+        "Zicheng Zhao",
+        "Junnan Liu",
+        "Zhangchi Qiu",
+        "Junnan Dong",
+        "Serge Panev",
+        "Chen Gong",
+        "Thuy-Trang Vu",
+        "Gholamreza Haffari",
+        "Dinh Phung",
+        "Alan Wee-Chung Liew",
+        "Shirui Pan"
       ],
-      "summary": "Large language model (LLM) agents show promise in automating machine learning (ML) engineering. However, existing agents typically operate in isolation on a given research problem, without engaging with the broader research community, where human researchers often gain insights and contribute by sharing knowledge. To bridge this gap, we introduce MLE-Live, a live evaluation framework designed to assess an agent's ability to communicate with and leverage collective knowledge from a simulated Kaggle research community. Building on this framework, we propose CoMind, a multi-agent system designed to systematically leverage external knowledge. CoMind employs an iterative parallel exploration mechanism, developing multiple solutions simultaneously to balance exploratory breadth with implementation depth. On 75 past Kaggle competitions within our MLE-Live framework, CoMind achieves a 36% medal rate, establishing a new state of the art. Critically, when deployed in eight live, ongoing competitions, CoMind outperforms 92.6% of human competitors on average, placing in the top 5% on three official leaderboards and the top 1% on one.",
-      "published": "2025-06-25T17:36:02Z",
-      "updated": "2026-02-27T16:45:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.20640v3"
+      "summary": "Large language models (LLMs) excel at complex reasoning but remain limited by static and incomplete parametric knowledge. Retrieval-augmented generation (RAG) mitigates this by incorporating external knowledge, yet existing RAGs struggle with knowledge-intensive tasks due to fragmented information and weak modeling of knowledge structure. Graphs offer a natural way to model relationships within knowledge, but LLMs are inherently unstructured and cannot effectively reason over graph-structured data. Recent graph-enhanced RAG (GraphRAG) attempts to bridge this gap by constructing tailored graphs and enabling LLMs to reason on them. However, these methods often depend on ad-hoc graph designs, heuristic search, or costly agent pipelines, which hinder scalability and generalization. To address these challenges, we present G-reasoner, a unified framework that integrates graph and language foundation models for scalable reasoning over diverse graph-structured knowledge. Central to our approach is QuadGraph, a standardized four-layer abstraction that unifies heterogeneous knowledge sources into a common graph representation. Building on this, we introduce a 34M-parameter graph foundation model (GFM) that jointly captures graph topology and textual semantics, and is integrated with LLMs to enhance reasoning in downstream applications. To ensure scalability and efficiency, mixed-precision training and distributed message-passing are implemented to scale GFM with more GPUs. Extensive experiments on six benchmarks show that G-reasoner consistently outperforms state-of-the-art baselines, significantly enhances LLM reasoning, and achieves strong efficiency and cross-graph generalization.",
+      "published": "2025-09-29T04:38:12Z",
+      "updated": "2026-03-01T03:15:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.24276v3"
     }
   ]
 }
