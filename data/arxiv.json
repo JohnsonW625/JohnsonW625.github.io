@@ -1,207 +1,178 @@
 {
-  "generated_at_utc": "2026-03-03T02:05:31Z",
+  "generated_at_utc": "2026-03-04T01:58:51Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2410.16597v2",
-      "title": "Scaling Knowledge Graph Construction through Synthetic Data Generation and Distillation",
+      "id": "http://arxiv.org/abs/2603.02193v1",
+      "title": "Symbol-Equivariant Recurrent Reasoning Models",
       "authors": [
-        "Prafulla Kumar Choubey",
-        "Xin Su",
-        "Man Luo",
-        "Xiangyu Peng",
-        "Caiming Xiong",
-        "Tiep Le",
-        "Shachar Rosenman",
-        "Vasudev Lal",
-        "Phil Mui",
-        "Ricky Ho",
-        "Phillip Howard",
-        "Chien-Sheng Wu"
+        "Richard Freinschlag",
+        "Timo Bertram",
+        "Erich Kobler",
+        "Andreas Mayr",
+        "Günter Klambauer"
       ],
-      "summary": "Document-level knowledge graph (KG) construction faces a fundamental scaling challenge: existing methods either rely on expensive large language models (LLMs), making them economically nonviable for large-scale corpora, or employ smaller models that produce incomplete and inconsistent graphs. We find that this limitation stems not from model capabilities but from insufficient training on high-quality document-level KG data. To address this gap, we introduce SynthKG, a multi-step data synthesis pipeline that generates high-quality document-KG pairs through systematic chunking, decontextualization, and structured extraction using LLMs. By fine-tuning a smaller LLM on synthesized document-KG pairs, we streamline the multi-step process into a single-step KG generation approach called Distill-SynthKG. Furthermore, we repurpose existing question-answering datasets to construct KG evaluation datasets and introduce new evaluation metrics. Using KGs produced by Distill-SynthKG, we also design a novel graph-based retrieval framework for RAG. Experimental results demonstrate that Distill-SynthKG not only surpasses all baseline models in KG quality (including models up to eight times larger) but also consistently improves in retrieval and question-answering tasks. Additionally, our proposed graph retrieval framework outperforms all KG-retrieval methods across multiple benchmark datasets.",
-      "published": "2024-10-22T00:47:54Z",
-      "updated": "2026-03-01T04:18:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2410.16597v2"
+      "summary": "Reasoning problems such as Sudoku and ARC-AGI remain challenging for neural networks. The structured problem solving architecture family of Recurrent Reasoning Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny Recursive Model (TRM), offer a compact alternative to large language models, but currently handle symbol symmetries only implicitly via costly data augmentation. We introduce Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce permutation equivariance at the architectural level through symbol-equivariant layers, guaranteeing identical solutions under symbol or color permutations. SE-RRMs outperform prior RRMs on 9x9 Sudoku and generalize from just training on 9x9 to smaller 4x4 and larger 16x16 and 25x25 instances, to which existing RRMs cannot extrapolate. On ARC-AGI-1 and ARC-AGI-2, SE-RRMs achieve competitive performance with substantially less data augmentation and only 2 million parameters, demonstrating that explicitly encoding symmetry improves the robustness and scalability of neural reasoning. Code is available at https://github.com/ml-jku/SE-RRM.",
+      "published": "2026-03-02T18:53:55Z",
+      "updated": "2026-03-02T18:53:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02193v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00910v1",
-      "title": "Curvature-Weighted Capacity Allocation: A Minimum Description Length Framework for Layer-Adaptive Large Language Model Optimization",
+      "id": "http://arxiv.org/abs/2603.02188v1",
+      "title": "Multi-Head Low-Rank Attention",
       "authors": [
-        "Theophilus Amaefuna",
-        "Hitesh Vaidya",
-        "Anshuman Chhabra",
-        "Ankur Mali"
+        "Songtao Liu",
+        "Hongwu Peng",
+        "Zhiwei Zhang",
+        "Zhengyu Chen",
+        "Yue Guo"
       ],
-      "summary": "Layer-wise capacity in large language models is highly non-uniform: some layers contribute disproportionately to loss reduction while others are near-redundant. Existing methods for exploiting this non-uniformity, such as influence-function-based layer scoring, produce sensitivity estimates but offer no principled mechanism for translating them into allocation or pruning decisions under hardware constraints. We address this gap with a unified, curvature-aware framework grounded in the Minimum Description Length (MDL) principle. Our central quantity is the curvature-adjusted layer gain $ζ_k^2 = g_k^\\top \\widetilde{H}_{kk}^{-1} g_k$, which we show equals twice the maximal second-order reduction in empirical risk achievable by updating layer $k$ alone, and which strictly dominates gradient-norm-based scores by incorporating local curvature. Normalizing these gains into layer quality scores $q_k$, we formulate two convex MDL programs: a capacity allocation program that distributes expert slots or LoRA rank preferentially to high-curvature layers under diminishing returns, and a pruning program that concentrates sparsity on low-gain layers while protecting high-gain layers from degradation. Both programs admit unique closed-form solutions parameterized by a single dual variable, computable in $O(K \\log 1/\\varepsilon)$ via bisection. We prove an $O(δ^2)$ transfer regret bound showing that source-domain allocations remain near-optimal on target tasks when curvature scores drift by $δ$, with explicit constants tied to the condition number of the target program. Together, these results elevate layer-wise capacity optimization from an empirical heuristic to a theoretically grounded, computationally efficient framework with provable optimality and generalization guarantees.",
-      "published": "2026-03-01T04:14:15Z",
-      "updated": "2026-03-01T04:14:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00910v1"
+      "summary": "Long-context inference in large language models is bottlenecked by Key--Value (KV) cache loading during the decoding stage, where the sequential nature of generation requires repeatedly transferring the KV cache from off-chip High-Bandwidth Memory (HBM) to on-chip Static Random-Access Memory (SRAM) at each step. While Multi-Head Latent Attention (MLA) significantly reduces the total KV cache size, it suffers from a sharding bottleneck during distributed decoding via Tensor Parallelism (TP). Since its single latent head cannot be partitioned, each device is forced to redundantly load the complete KV cache for every token, consuming excessive memory traffic and diminishing TP benefits like weight sharding. In this work, we propose Multi-Head Low-Rank Attention (MLRA), which enables partitionable latent states for efficient 4-way TP decoding. Extensive experiments show that MLRA achieves state-of-the-art perplexity and downstream task performance, while also delivering a 2.8$\\times$ decoding speedup over MLA. Code is available at https://github.com/SongtaoLiu0823/MLRA. Pretrained weights, along with the training and evaluation data, are available at https://huggingface.co/Soughing/MLRA.",
+      "published": "2026-03-02T18:52:38Z",
+      "updated": "2026-03-02T18:52:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02188v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00907v1",
-      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "id": "http://arxiv.org/abs/2503.02879v2",
+      "title": "Wikipedia in the Era of LLMs: Evolution and Risks",
       "authors": [
-        "Lianjun Liu",
-        "Hongli An",
-        "Weiqi Yan",
-        "Xin Du",
-        "Shengchuan Zhang",
-        "Huazhong Liu",
-        "Yunshan Zhong"
+        "Siming Huang",
+        "Yuliang Xu",
+        "Mingmeng Geng",
+        "Yao Wan",
+        "Dongping Chen"
       ],
-      "summary": "The growing computational and memory demands of the Key-Value (KV) cache significantly limit the ability of Large Language Models (LLMs). While KV merging has emerged as a promising solution, existing methods that rely on empirical observations of KV asymmetry and gradient-based Hessian approximations lack a theoretical foundation and incur suboptimal compression and inference overhead. To bridge these gaps, we establish a theoretical framework that characterizes this asymmetry through the spectral energy distribution of projection weights, demonstrating that concentrated spectra in Query/Key weights induce feature homogeneity, whereas dispersed spectra in Value weights preserve heterogeneity. Then, we introduce KVSlimmer, an efficient algorithm that captures exact Hessian information through a mathematically exact formulation, and derives a closed-form solution utilizing only forward-pass variables, resulting in a gradient-free approach that is both memory- and time-efficient. Extensive experiments across various models and benchmarks demonstrate that KVSlimmer consistently outperforms SOTA methods. For instance, on Llama3.1-8B-Instruct, it improves the LongBench average score by 0.92 while reducing memory costs and latency by 29% and 28%, respectively.",
-      "published": "2026-03-01T04:07:36Z",
-      "updated": "2026-03-01T04:07:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00907v1"
+      "summary": "In this paper, we present a comprehensive analysis and monitoring framework for the impact of Large Language Models (LLMs) on Wikipedia, examining the evolution of Wikipedia through existing data and using simulations to explore potential risks. We begin by analyzing article content and page views to study the recent changes in Wikipedia and assess the impact of LLMs. Subsequently, we evaluate how LLMs affect various Natural Language Processing (NLP) tasks related to Wikipedia, including machine translation and retrieval-augmented generation (RAG). Our findings and simulation results reveal that Wikipedia articles have been affected by LLMs, with an impact of approximately 1% in certain categories. If the machine translation benchmark based on Wikipedia is influenced by LLMs, the scores of the models may become inflated, and the comparative results among models could shift. Moreover, the effectiveness of RAG might decrease if the knowledge has been contaminated by LLMs. While LLMs have not yet fully changed Wikipedia's language and knowledge structures, we believe that our empirical findings signal the need for careful consideration of potential future risks in NLP research. We release all the experimental dataset and source code at: https://github.com/HSM316/LLM_Wikipedia",
+      "published": "2025-03-04T18:58:13Z",
+      "updated": "2026-03-02T18:48:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.02879v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00905v1",
-      "title": "pySpatial: Generating 3D Visual Programs for Zero-Shot Spatial Reasoning",
+      "id": "http://arxiv.org/abs/2603.02156v1",
+      "title": "How Small Can 6G Reason? Scaling Tiny Language Models for AI-Native Networks",
       "authors": [
-        "Zhanpeng Luo",
-        "Ce Zhang",
-        "Silong Yong",
-        "Cunxi Dai",
-        "Qianwei Wang",
-        "Haoxi Ran",
-        "Guanya Shi",
-        "Katia Sycara",
-        "Yaqi Xie"
+        "Mohamed Amine Ferrag",
+        "Abderrahmane Lakas",
+        "Merouane Debbah"
       ],
-      "summary": "Multi-modal Large Language Models (MLLMs) have demonstrated strong capabilities in general-purpose perception and reasoning, but they still struggle with tasks that require spatial understanding of the 3D world. To address this, we introduce pySpatial, a visual programming framework that equips MLLMs with the ability to interface with spatial tools via Python code generation. Given an image sequence and a natural-language query, the model composes function calls to spatial tools including 3D reconstruction, camera-pose recovery, novel-view rendering, etc. These operations convert raw 2D inputs into an explorable 3D scene, enabling MLLMs to reason explicitly over structured spatial representations. Notably, pySpatial requires no gradient-based fine-tuning and operates in a fully zero-shot setting. Experimental evaluations on the challenging MindCube and Omni3D-Bench benchmarks demonstrate that our framework pySpatial consistently surpasses strong MLLM baselines; for instance, it outperforms GPT-4.1-mini by 12.94% on MindCube. Furthermore, we conduct real-world indoor navigation experiments where the robot can successfully traverse complex environments using route plans generated by pySpatial, highlighting the practical effectiveness of our approach.",
-      "published": "2026-03-01T03:55:49Z",
-      "updated": "2026-03-01T03:55:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00905v1"
+      "summary": "Emerging 6G visions, reflected in ongoing standardization efforts within 3GPP, IETF, ETSI, ITU-T, and the O-RAN Alliance, increasingly characterize networks as AI-native systems in which high-level semantic reasoning layers operate above standardized control and data-plane functions. Although frontier-scale large language models (LLMs) such as Qwen2.5-7B and Olmo-3-7B demonstrate strong reasoning capability, their computational footprint limits deployment in latency-sensitive, edge-native infrastructures. This paper presents a systematic empirical study of the scaling behavior and deployment efficiency of compact language models for network-level semantic reasoning in AI-native 6G systems. Using 6G-Bench, a standardization-aligned benchmark comprising 30 decision-making tasks across five capability domains, we evaluate models ranging from 135M (SmolLM2-135M) to 7B parameters (Qwen2.5-7B), including mid-scale architectures such as Llama-3.2-1B, Granite-1B, and Qwen2.5-3B. Deterministic accuracy (pass@1) increases from 0.224 at 135M to 0.707 at 7B, but scaling gains are highly non-uniform. A pronounced stability transition occurs in the 1 to 1.5B range, where accuracy rises from 0.373 (Llama-3.2-1B) to 0.531 (Qwen2.5-1.5B) and the instability gap Delta_5 contracts from 0.356 to 0.138. Beyond 3B parameters, improvements diminish (+0.064 from 3B to 7B). Through single-query inference profiling and an Edge Score metric that normalizes accuracy by latency and memory footprint, we show that semantic reliability per unit edge resource does not scale monotonically with parameter count. Instead, mid-scale models (approximately 1.5 to 3B) achieve the most favorable balance between deterministic stability and computational efficiency, providing deployment-relevant guidance for AI-native 6G architectures. All scripts and results are publicly available at https://github.com/maferrag/6G-Bench",
+      "published": "2026-03-02T18:19:49Z",
+      "updated": "2026-03-02T18:19:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02156v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.24198v2",
-      "title": "Negative Pre-activations Differentiate Syntax",
+      "id": "http://arxiv.org/abs/2603.02150v1",
+      "title": "Zero- and Few-Shot Named-Entity Recognition: Case Study and Dataset in the Crime Domain (CrimeNER)",
       "authors": [
-        "Linghao Kong",
-        "Angelina Ning",
-        "Micah Adler",
-        "Nir Shavit"
+        "Miguel Lopez-Duran",
+        "Julian Fierrez",
+        "Aythami Morales",
+        "Daniel DeAlcala",
+        "Gonzalo Mancera",
+        "Javier Irigoyen",
+        "Ruben Tolosana",
+        "Oscar Delgado",
+        "Francisco Jurado",
+        "Alvaro Ortigosa"
       ],
-      "summary": "Modern large language models increasingly use smooth activation functions such as GELU or SiLU, allowing negative pre-activations to carry both signal and gradient. Nevertheless, many neuron-level interpretability analyses have historically focused on large positive activations, often implicitly treating the negative region as less informative, a carryover from the ReLU-era. We challenge this assumption and ask whether and how negative pre-activations are leveraged by models. We address this question by studying a sparse subpopulation of Wasserstein neurons whose output distributions deviate strongly from a Gaussian baseline and that functionally differentiate similar inputs. We show that this negative region plays an active role rather than reflecting a mere gradient optimization side effect. A minimal, sign-specific intervention that zeroes only the negative pre-activations of a small set of Wasserstein neurons substantially increases perplexity and sharply degrades grammatical performance on BLiMP and TSE, whereas both random and perplexity-matched ablations of many more non-Wasserstein neurons in their negative pre-activations leave grammatical performance largely intact. Conversely, on a suite of non-grammatical benchmarks, the perplexity-matched control ablation is more damaging than the Wasserstein neuron ablation, yielding a double dissociation between syntax and other capabilities. Part-of-speech analysis localizes the excess surprisal to syntactic scaffolding tokens, layer-specific interventions show that small local degradations accumulate across depth, and training-dynamics analysis reveals that the same sign-specific ablation becomes more harmful as Wasserstein neurons emerge and stabilize. Together, these results identify negative pre-activations in a sparse subpopulation of Wasserstein neurons as an actively used substrate for syntax in smooth-activation language models.",
-      "published": "2025-09-29T02:29:29Z",
-      "updated": "2026-03-01T03:49:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.24198v2"
+      "summary": "The extraction of critical information from crime-related documents is a crucial task for law enforcement agencies. Named-Entity Recognition (NER) can perform this task in extracting information about the crime, the criminal, or law enforcement agencies involved. However, there is a considerable lack of adequately annotated data on general real-world crime scenarios. To address this issue, we present CrimeNER, a case-study of Crime-related zero- and Few-Shot NER, and a general Crime-related Named-Entity Recognition database (CrimeNERdb) consisting of more than 1.5k annotated documents for the NER task extracted from public reports on terrorist attacks and the U.S. Department of Justice's press notes. We define 5 types of coarse crime entity and a total of 22 types of fine-grained entity. We address the quality of the case-study and the annotated data with experiments on Zero and Few-Shot settings with State-of-the-Art NER models as well as generalist and commonly used Large Language Models.",
+      "published": "2026-03-02T18:12:02Z",
+      "updated": "2026-03-02T18:12:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02150v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.03889v4",
-      "title": "Identifying and Evaluating Inactive Heads in Pretrained LLMs",
+      "id": "http://arxiv.org/abs/2603.02146v1",
+      "title": "LongRLVR: Long-Context Reinforcement Learning Requires Verifiable Context Rewards",
       "authors": [
-        "Pedro Sandoval-Segura",
-        "Xijun Wang",
-        "Ashwinee Panda",
-        "Micah Goldblum",
-        "Ronen Basri",
-        "Tom Goldstein",
-        "David Jacobs"
+        "Guanzheng Chen",
+        "Michael Qizhe Shieh",
+        "Lidong Bing"
       ],
-      "summary": "Attention is foundational to large language models (LLMs), enabling different heads to have diverse focus on relevant input tokens. However, learned behaviors like attention sinks, where the first token receives the most attention despite limited semantic importance, suggest some heads may be inactive, and point to a significant source of computational redundancy. To analyze this phenomenon, we evaluate 12 score functions that measure different ways a head can be inactive. Thresholding these scores allows us to analyze different sets of potentially inactive attention heads. We evaluate whether identified heads are inactive through model interventions, finding that more than 12% of attention heads are inactive on average, and can be ablated in specific contexts while maintaining MMLU accuracy to within 1% of the pretrained LLM. Across 3 model families, our score functions that measure the average norm of a head's output consistently identify inactive heads that would not have been found by score functions that rely solely on attention weights. We establish that relying on a score function that measures a first token attention sink would underestimate the prevalence of inactive heads, failing to identify more than 7% of inactive heads on average. We also show how measuring score distributions can provide insights into attention behavior. For instance, we find evidence that finetuning causes little to no change in attention behavior, and that even within the same model family, large model scales present different attention behaviors.",
-      "published": "2025-04-04T19:28:23Z",
-      "updated": "2026-03-01T03:45:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.03889v4"
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capabilities of Large Language Models (LLMs) by optimizing them against factual outcomes. However, this paradigm falters in long-context scenarios, as its reliance on internal parametric knowledge is ill-suited for tasks requiring contextual grounding--the ability to find and reason over externally provided information. We identify a key reason for this failure: a reward based solely on the final answer is too sparse to effectively guide the model for identifying relevant evidence. We formally prove that the outcome-only reward leads to significant vanishing gradients for the context grounding process, rendering learning intractable. To overcome this bottleneck, we introduce LongRLVR to augment the sparse answer reward with a dense and verifiable context reward. This auxiliary signal directly incentivizes the model for selecting the correct grounding information, providing a robust learning gradient that solves the underlying optimization challenge. We validate our method on challenging long-context benchmarks using Qwen and LLaMA models. LongRLVR consistently and significantly outperforms the standard RLVR across all models and benchmarks, e.g., boosting a 14B model's scores on RULER-QA from 73.17 to 88.90 and on LongBench v2 from 39.8 to 46.5. Our work demonstrates that explicitly rewarding the grounding process is a critical and effective strategy for unlocking the full reasoning potential of LLMs in long-context applications. Our code is available at https://github.com/real-absolute-AI/LongRLVR.",
+      "published": "2026-03-02T18:07:53Z",
+      "updated": "2026-03-02T18:07:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02146v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00897v1",
-      "title": "Detect Repair Verify for Securing LLM Generated Code: A Multi-Language Empirical Study",
+      "id": "http://arxiv.org/abs/2603.02141v1",
+      "title": "Generative AI in Software Testing: Current Trends and Future Directions",
       "authors": [
-        "Cheng Cheng"
+        "Tanish Singla",
+        "Qusay H. Mahmoud"
       ],
-      "summary": "Large language models are increasingly used to produce runnable software. In practice, security is often addressed through a Detect--Repair--Verify (DRV) loop that detects issues, applies fixes, and verifies the result. This work studies such a workflow for project-level artifacts and addresses four gaps: L1, the lack of project-level benchmarks with executable function and security tests; L2, limited evidence on pipeline-level effectiveness beyond studying detection or repair alone; L3, unclear reliability of detection reports as repair guidance; and L4, uncertain repair trustworthiness and side effects under verification. A new benchmark dataset\\footnote{https://github.com/Hahappyppy2024/EmpricalVDR} is introduced, consisting of runnable web-application projects paired with functional tests and targeted security tests, and supporting three prompt granularities at the project, requirement, and function level. The evaluation compares generation-only, single-pass DRV, and bounded iterative DRV variants under comparable budget constraints. Outcomes are measured by secure and correct yield using test-grounded verification, and intermediate artifacts are analyzed to assess report actionability and post-repair failure modes such as regressions, semantic drift, and newly introduced security issues.",
-      "published": "2026-03-01T03:41:24Z",
-      "updated": "2026-03-01T03:41:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00897v1"
+      "summary": "This paper investigates current software testing systems and explores how artificial intelligence, specifically Generative AI, can be integrated to enhance these systems. It begins by examining different types of AI systems and focuses on the potential of Generative AI to transform software testing processes by improving test coverage, increasing efficiency, and reducing costs. The study provides a com-prehensive overview of the current applications of AI in software testing, emphasizing its significant contributions in areas such as test case generation and validation. Through an extensive literature re-view, it highlights how Generative AI can streamline these processes, resulting in more robust and thorough testing outcomes. The paper also examines methods to improve the efficiency of Generative AI systems, such as prompt engineering and fine-tuning. Additionally, it explores the use of AI in specific tasks, including input generation, oracle generation, data generation, test data creation, and test case prioritization. By analyzing the current landscape and identifying both the opportunities and challenges in integrating Generative AI, this paper provides valuable insights and recommendations for practitioners and researchers. It underscores the need for ongoing advancements and targeted development efforts to overcome existing hurdles and fully leverage AI's capabilities. The findings further show that with continued innovation and careful implementation, Generative AI has the potential to significantly enhance the efficiency, effectiveness, and reliability of software testing, particularly in the rapidly evolving field of IoT testing.",
+      "published": "2026-03-02T18:01:43Z",
+      "updated": "2026-03-02T18:01:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02141v1"
     },
     {
-      "id": "http://arxiv.org/abs/2412.03772v2",
-      "title": "A Contemporary Overview: Trends and Applications of Large Language Models on Mobile Devices",
+      "id": "http://arxiv.org/abs/2404.08480v2",
+      "title": "Using ChatGPT for Data Science Analyses",
       "authors": [
-        "Lianjun Liu",
-        "Hongli An",
-        "Pengxuan Chen",
-        "Longxiang Ye"
+        "Ozan Evkaya",
+        "Miguel de Carvalho"
       ],
-      "summary": "With the rapid development of large language models (LLMs), which possess powerful natural language processing and generation capabilities, LLMs are poised to provide more natural and personalized user experiences. Their deployment on mobile devices is gradually becoming a significant trend in the field of intelligent devices. LLMs have demonstrated tremendous potential in applications such as voice assistants, real-time translation, and intelligent recommendations. Advancements in hardware technologies (such as neural network accelerators) and network infrastructure (such as 5G) have enabled efficient local inference and low-latency intelligent responses on mobile devices. This reduces reliance on cloud computing while enhancing data privacy and security. Developers can easily integrate LLM functionalities through open APIs and SDKs, enabling the creation of more innovative intelligent applications. The widespread use of LLMs not only enhances the intelligence of mobile devices but also fosters the integrated innovation of fields like augmented reality (AR) and the Internet of Things (IoT). This trend is expected to drive the development of the next generation of mobile intelligent applications.",
-      "published": "2024-12-04T23:25:03Z",
-      "updated": "2026-03-01T03:40:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2412.03772v2"
+      "summary": "As a result of recent advancements in generative AI, the field of data science is prone to various changes. The way practitioners construct their data science workflows is now irreversibly shaped by recent advancements, particularly by tools like OpenAI's Data Analysis plugin. While it offers powerful support as a quantitative co-pilot, its limitations demand careful consideration in empirical analysis. This paper assesses the potential of ChatGPT for data science analyses, illustrating its capabilities for data exploration and visualization, as well as for commonly used supervised and unsupervised modeling tasks. While we focus here on how the Data Analysis plugin can serve as co-pilot for Data Science workflows, its broader potential for automation is implicit throughout.",
+      "published": "2024-04-12T13:57:30Z",
+      "updated": "2026-03-02T17:58:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.08480v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00895v1",
-      "title": "Evaluating AI Grading on Real-World Handwritten College Mathematics: A Large-Scale Study Toward a Benchmark",
+      "id": "http://arxiv.org/abs/2603.02137v1",
+      "title": "NextAds: Towards Next-generation Personalized Video Advertising",
       "authors": [
-        "Zhiqi Yu",
-        "Xingping Liu",
-        "Haobin Mao",
-        "Mingshuo Liu",
-        "Long Chen",
-        "Jack Xin",
-        "Yifeng Yu"
+        "Yiyan Xu",
+        "Ruoxuan Xia",
+        "Wuqiang Zheng",
+        "Fengbin Zhu",
+        "Wenjie Wang",
+        "Fuli Feng"
       ],
-      "summary": "Grading in large undergraduate STEM courses often yields minimal feedback due to heavy instructional workloads. We present a large-scale empirical study of AI grading on real, handwritten single-variable calculus work from UC Irvine. Using OCR-conditioned large language models with structured, rubric-guided prompting, our system produces scores and formative feedback for thousands of free-response quiz submissions from nearly 800 students. In a setting with no single ground-truth label, we evaluate performance against official teaching-assistant grades, student surveys, and independent human review, finding strong alignment with TA scoring and a large majority of AI-generated feedback rated as correct or acceptable across quizzes. Beyond calculus, this setting highlights core challenges in OCR-conditioned mathematical reasoning and partial-credit assessment. We analyze key failure modes, propose practical rubric- and prompt-design principles, and introduce a multi-perspective evaluation protocol for reliable, real-course deployment. Building on the dataset and evaluation framework developed here, we outline a standardized benchmark for AI grading of handwritten mathematics to support reproducible comparison and future research.",
-      "published": "2026-03-01T03:32:51Z",
-      "updated": "2026-03-01T03:32:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00895v1"
+      "summary": "With the rapid growth of online video consumption, video advertising has become increasingly dominant in the digital advertising landscape. Yet diverse users and viewing contexts makes one-size-fits-all ad creatives insufficient for consistent effectiveness, underlining the importance of personalization. In practice, most personalized video advertising systems follow a retrieval-based paradigm, selecting the optimal one from a small set of professionally pre-produced creatives for each user. Such static and finite inventories limits both the granularity and the timeliness of personalization, and prevents the creatives from being continuously refined based on online user feedback. Recent advances in generative AI make it possible to move beyond retrieval toward optimizing video creatives in a continuous space at serving time. In this light, we propose NextAds, a generation-based paradigm for next-generation personalized video advertising, and conceptualize NextAds with four core components. To enable comparable research progress, we formulate two representative tasks: personalized creative generation and personalized creative integration, and introduce corresponding lightweight benchmarks. To assess feasibility, we instantiate end-to-end pipelines for both tasks and conduct initial exploratory experiments, demonstrating that GenAI can generate and integrate personalized creatives with encouraging performance. Moreover, we discuss the key challenges and opportunities under this paradigm, aiming to provide actionable insights for both researchers and practitioners and to catalyze progress in personalized video advertising.",
+      "published": "2026-03-02T17:58:07Z",
+      "updated": "2026-03-02T17:58:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02137v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.18487v2",
-      "title": "Actions Speak Louder than Prompts: A Large-Scale Study of LLMs for Graph Inference",
+      "id": "http://arxiv.org/abs/2603.02128v1",
+      "title": "LLMs as Strategic Actors: Behavioral Alignment, Risk Calibration, and Argumentation Framing in Geopolitical Simulations",
       "authors": [
-        "Ben Finkelshtein",
-        "Silviu Cucerzan",
-        "Sujay Kumar Jauhar",
-        "Ryen White"
+        "Veronika Solopova",
+        "Viktoria Skorik",
+        "Maksym Tereshchenko",
+        "Alina Haidun",
+        "Ostap Vykhopen"
       ],
-      "summary": "Large language models (LLMs) are increasingly used for text-rich graph machine learning tasks such as node classification in high-impact domains like fraud detection and recommendation systems. Yet, despite a surge of interest, the field lacks a principled understanding of the capabilities of LLMs in their interaction with graph data. In this work, we conduct a large-scale, controlled evaluation across several key axes of variability to systematically assess the strengths and weaknesses of LLM-based graph reasoning methods in text-based applications. The axes include the LLM-graph interaction mode, comparing prompting, tool-use, and code generation; dataset domains, spanning citation, web-link, e-commerce, and social networks; structural regimes contrasting homophilic and heterophilic graphs; feature characteristics involving both short- and long-text node attributes; and model configurations with varying LLM sizes and reasoning capabilities. We further analyze dependencies by methodically truncating features, deleting edges, and removing labels to quantify reliance on input types. Our findings provide practical and actionable guidance. (1) LLMs as code generators achieve the strongest overall performance on graph data, with especially large gains on long-text or high-degree graphs where prompting quickly exceeds the token budget. (2) All interaction strategies remain effective on heterophilic graphs, challenging the assumption that LLM-based methods collapse under low homophily. (3) Code generation is able to flexibly adapt its reliance between structure, features, or labels to leverage the most informative input type. Together, these findings provide a comprehensive view of the strengths and limitations of current LLM-graph interaction modes and highlight key design principles for future approaches.",
-      "published": "2025-09-23T00:46:21Z",
-      "updated": "2026-03-01T03:26:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.18487v2"
+      "summary": "Large language models (LLMs) are increasingly proposed as agents in strategic decision environments, yet their behavior in structured geopolitical simulations remains under-researched. We evaluate six popular state-of-the-art LLMs alongside results from human results across four real-world crisis simulation scenarios, requiring models to select predefined actions and justify their decisions across multiple rounds. We compare models to humans in action alignment, risk calibration through chosen actions' severity, and argumentative framing grounded in international relations theory. Results show that models approximate human decision patterns in base simulation rounds but diverge over time, displaying distinct behavioural profiles and strategy updates. LLM explanations for chosen actions across all models exhibit a strong normative-cooperative framing centered on stability, coordination, and risk mitigation, with limited adversarial reasoning.",
+      "published": "2026-03-02T17:46:17Z",
+      "updated": "2026-03-02T17:46:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02128v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.00889v1",
-      "title": "CHIMERA: Compact Synthetic Data for Generalizable LLM Reasoning",
+      "id": "http://arxiv.org/abs/2603.02119v1",
+      "title": "Pencil Puzzle Bench: A Benchmark for Multi-Step Verifiable Reasoning",
       "authors": [
-        "Xinyu Zhu",
-        "Yihao Feng",
-        "Yanchao Sun",
-        "Xianzhi Du",
-        "Pingzhi Li",
-        "Olli Saarikivi",
-        "Yun Zhu",
-        "Yu Meng"
+        "Justin Waugh"
       ],
-      "summary": "Large Language Models (LLMs) have recently exhibited remarkable reasoning capabilities, largely enabled by supervised fine-tuning (SFT)- and reinforcement learning (RL)-based post-training on high-quality reasoning data. However, reproducing and extending these capabilities in open and scalable settings is hindered by three fundamental data-centric challenges: (1) the cold-start problem, arising from the lack of seed datasets with detailed, long Chain-of-Thought (CoT) trajectories needed to initialize reasoning policies; (2) limited domain coverage, as most existing open-source reasoning datasets are concentrated in mathematics, with limited coverage of broader scientific disciplines; and (3) the annotation bottleneck, where the difficulty of frontier-level reasoning tasks makes reliable human annotation prohibitively expensive or infeasible. To address these challenges, we introduce CHIMERA, a compact synthetic reasoning dataset comprising 9K samples for generalizable cross-domain reasoning. CHIMERA is constructed with three key properties: (1) it provides rich, long CoT reasoning trajectories synthesized by state-of-the-art reasoning models; (2) it has broad and structured coverage, spanning 8 major scientific disciplines and over 1K fine-grained topics organized via a model-generated hierarchical taxonomy; and (3) it employs a fully automated, scalable evaluation pipeline that uses strong reasoning models to cross-validate both problem validity and answer correctness. We use CHIMERA to post-train a 4B Qwen3 model. Despite the dataset's modest size, the resulting model achieves strong performance on a suite of challenging reasoning benchmarks, including GPQA-Diamond, AIME 24/25/26, HMMT 25, and Humanity's Last Exam, approaching or matching the reasoning performance of substantially larger models such as DeepSeek-R1 and Qwen3-235B.",
-      "published": "2026-03-01T03:23:41Z",
-      "updated": "2026-03-01T03:23:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.00889v1"
+      "summary": "We introduce Pencil Puzzle Bench, a framework for evaluating large language model reasoning through pencil puzzles, a family of constraint-satisfaction problems closely related to NP-complete problems, with deterministic, step-level verification. From a database of 62,231 puzzles across 94 varieties with verified unique solutions, we select a benchmark of 300 puzzles spanning 20 varieties and evaluate 51 models from 11 providers in two modes: direct ask (single-shot) and agentic (multi-turn with iterative verification). A key differentiator of our benchmark is that every intermediate board state can be checked against variety-specific constraints, localizing errors to the exact rule violated, providing the infrastructure for dense, per-move reward signals for process supervision and reinforcement learning. Our evaluation reveals two distinct axes of capability: (1) reasoning effort scaling, where GPT-5.2 improves 81x from no reasoning to maximum effort; and (2) agentic iteration, where Claude Opus 4.6 rises from 0.3% to 30.0% through iterative checking, while GPT-5.2@xhigh improves from 20.2% to 56.0%. Agentic attempts span a median of 29 turns over 17 minutes, with the longest exceeding 1,221 turns and 14.3 hours - a demanding test of long-context utilization, not just reasoning.",
+      "published": "2026-03-02T17:40:54Z",
+      "updated": "2026-03-02T17:40:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02119v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.24276v3",
-      "title": "G-reasoner: Foundation Models for Unified Reasoning over Graph-structured Knowledge",
+      "id": "http://arxiv.org/abs/2506.15498v3",
+      "title": "SPARE: Single-Pass Annotation with Reference-Guided Evaluation for Automatic Process Supervision and Reward Modelling",
       "authors": [
-        "Linhao Luo",
-        "Zicheng Zhao",
-        "Junnan Liu",
-        "Zhangchi Qiu",
-        "Junnan Dong",
-        "Serge Panev",
-        "Chen Gong",
-        "Thuy-Trang Vu",
-        "Gholamreza Haffari",
-        "Dinh Phung",
-        "Alan Wee-Chung Liew",
-        "Shirui Pan"
+        "Md Imbesat Hassan Rizvi",
+        "Xiaodan Zhu",
+        "Iryna Gurevych"
       ],
-      "summary": "Large language models (LLMs) excel at complex reasoning but remain limited by static and incomplete parametric knowledge. Retrieval-augmented generation (RAG) mitigates this by incorporating external knowledge, yet existing RAGs struggle with knowledge-intensive tasks due to fragmented information and weak modeling of knowledge structure. Graphs offer a natural way to model relationships within knowledge, but LLMs are inherently unstructured and cannot effectively reason over graph-structured data. Recent graph-enhanced RAG (GraphRAG) attempts to bridge this gap by constructing tailored graphs and enabling LLMs to reason on them. However, these methods often depend on ad-hoc graph designs, heuristic search, or costly agent pipelines, which hinder scalability and generalization. To address these challenges, we present G-reasoner, a unified framework that integrates graph and language foundation models for scalable reasoning over diverse graph-structured knowledge. Central to our approach is QuadGraph, a standardized four-layer abstraction that unifies heterogeneous knowledge sources into a common graph representation. Building on this, we introduce a 34M-parameter graph foundation model (GFM) that jointly captures graph topology and textual semantics, and is integrated with LLMs to enhance reasoning in downstream applications. To ensure scalability and efficiency, mixed-precision training and distributed message-passing are implemented to scale GFM with more GPUs. Extensive experiments on six benchmarks show that G-reasoner consistently outperforms state-of-the-art baselines, significantly enhances LLM reasoning, and achieves strong efficiency and cross-graph generalization.",
-      "published": "2025-09-29T04:38:12Z",
-      "updated": "2026-03-01T03:15:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.24276v3"
+      "summary": "Process or step-wise supervision has played a crucial role in advancing complex multi-step reasoning capabilities of Large Language Models (LLMs). However, efficient, high-quality automated process annotation remains a significant challenge. To address this, we introduce Single-Pass Annotation with Reference-Guided Evaluation (SPARE), a novel structured framework that enables efficient per-step annotation by jointly aligning solution steps to reference solutions and determine its accuracy with explicit reasoning in single generation. We demonstrate SPARE's effectiveness across four diverse datasets spanning mathematical reasoning (GSM8K, MATH), multi-hop question answering (MuSiQue-Ans), and spatial reasoning (SpaRP), showing consistent improvements in two applications: (1) training Process Reward Models (PRMs) for ranking and aggregating multiple generations, and (2) fine-tuning models via offline reinforcement learning for greedy decoding. On ProcessBench, SPARE demonstrates data-efficient out-of-distribution generalization, using only $\\sim$16% of training samples compared to human-labeled and other synthetically trained baselines. Additionally, it achieves competitive performance with MCTS-based methods while offering 2.3$\\times$ speedup in terms of total token count. Manual analysis reveals complementary precision-recall characteristics with MCTS approaches, suggesting potential for ensemble methods. These results establish SPARE as a practical and scalable solution for automatic process supervision in LLM reasoning.",
+      "published": "2025-06-18T14:37:59Z",
+      "updated": "2026-03-02T17:34:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.15498v3"
     }
   ]
 }
