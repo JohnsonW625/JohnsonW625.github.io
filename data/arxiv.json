@@ -1,211 +1,190 @@
 {
-  "generated_at_utc": "2026-03-09T02:04:55Z",
+  "generated_at_utc": "2026-03-10T01:57:06Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.06578v1",
-      "title": "Multimodal Large Language Models as Image Classifiers",
+      "id": "http://arxiv.org/abs/2601.06426v2",
+      "title": "NC-Bench: An LLM Benchmark for Evaluating Conversational Competence",
       "authors": [
-        "Nikita Kisel",
-        "Illia Volkov",
-        "Klara Janouskova",
-        "Jiri Matas"
+        "Robert J. Moore",
+        "Sungeun An",
+        "Farhan Ahmed",
+        "Jay Pankaj Gala"
       ],
-      "summary": "Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results from weak multiple-choice distractors, and an open-world setting that underperforms only due to poor output mapping. We additionally quantify the impact of commonly overlooked design choices - batch size, image ordering, and text encoder selection - showing they substantially affect accuracy. Evaluating on ReGT, our multilabel reannotation of 625 ImageNet-1k classes, reveals that MLLMs benefit most from corrected labels (up to +10.8%), substantially narrowing the perceived gap with supervised models. Much of the reported MLLMs underperformance on classification is thus an artifact of noisy ground truth and flawed evaluation protocol rather than genuine model deficiency. Models less reliant on supervised training signals prove most sensitive to annotation quality. Finally, we show that MLLMs can assist human annotators: in a controlled case study, annotators confirmed or integrated MLLMs predictions in approximately 50% of difficult cases, demonstrating their potential for large-scale dataset curation.",
-      "published": "2026-03-06T18:59:58Z",
-      "updated": "2026-03-06T18:59:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06578v1"
+      "summary": "The Natural Conversation Benchmark (NC-Bench) introduces a new approach to evaluating the general conversational competence of large language models (LLMs). Unlike prior benchmarks that focus on the content of model behavior, NC-Bench focuses on the form and structure of natural conversation. Grounded in the IBM Natural Conversation Framework (NCF), NC-Bench comprises three distinct sets: (1) the basic set evaluates fundamental sequence management practices, such as answering inquiries, repairing responses, and closing conversational pairs; (2) the retrieval-augmented generation (RAG) set applies the same sequence management patterns as the first set but incorporates information-seeking via RAG; (3) the complex request set extends to requests involving more intricate sequence management patterns. Each set tests a model's ability to produce contextually appropriate conversational actions in response to characteristic interaction patterns. Initial evaluations across six open-source models and 14 interaction patterns show that models perform well on basic answering tasks, struggle more with repair tasks (especially repeat), have mixed performance on closing sequences, and find complex multi-turn requests most challenging. By operationalizing fundamental principles of human conversation, NC-Bench provides a lightweight, extensible, and theory-grounded framework for assessing and improving the conversational abilities of LLMs beyond topical or task-specific benchmarks.",
+      "published": "2026-01-10T04:57:24Z",
+      "updated": "2026-03-08T01:10:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.06426v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06577v1",
-      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
+      "id": "http://arxiv.org/abs/2603.07392v1",
+      "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
       "authors": [
-        "Lijiang Li",
-        "Zuwei Long",
-        "Yunhang Shen",
-        "Heting Gao",
-        "Haoyu Cao",
-        "Xing Sun",
-        "Caifeng Shan",
-        "Ran He",
-        "Chaoyou Fu"
+        "Jiyeon Kim",
+        "Hyunji Lee",
+        "Dylan Zhou",
+        "Sue Hyun Park",
+        "Seunghyun Yoon",
+        "Trung Bui",
+        "Franck Dernoncourt",
+        "Sungmin Cha",
+        "Minjoon Seo"
       ],
-      "summary": "While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal systems. Drawing inspiration from these pioneering research, we introduce Omni-Diffusion, the first any-to-any multimodal language model built entirely on mask-based discrete diffusion models, which unifies understanding and generation across text, speech, and images. Omni-Diffusion employs a unified mask-based discrete diffusion model to directly capture the joint distribution over discrete multimodal tokens. This approach supports not only bimodal tasks but also more complex scenarios involving multiple modalities. On a diverse set of benchmarks, our method outperforms or performs on par with existing multimodal systems that process two or more modalities, highlighting the significant promise of diffusion models in powering the next generation of multimodal foundation models. Project webpage: https://omni-diffusion.github.io.",
-      "published": "2026-03-06T18:59:57Z",
-      "updated": "2026-03-06T18:59:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06577v1"
+      "summary": "LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.",
+      "published": "2026-03-08T00:38:39Z",
+      "updated": "2026-03-08T00:38:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07392v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06576v1",
-      "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
+      "id": "http://arxiv.org/abs/2603.07390v1",
+      "title": "Deterministic Fuzzy Triage for Legal Compliance Classification and Evidence Retrieval",
       "authors": [
-        "Thomas Monninger",
-        "Shaoyuan Xie",
-        "Qi Alfred Chen",
-        "Sihao Ding"
+        "Rian Atri"
       ],
-      "summary": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
-      "published": "2026-03-06T18:59:55Z",
-      "updated": "2026-03-06T18:59:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06576v1"
+      "summary": "Legal teams increasingly use machine learning to triage large volumes of contractual evidence, but many models are opaque, non-deterministic, and difficult to align with frameworks such as HIPAA or NERC-CIP. We study a simple, reproducible alternative based on deterministic dual encoders and transparent fuzzy triage bands. We train a RoBERTa-base dual encoder with a 512-dimensional projection and cosine similarity on the ACORD benchmark for graded clause retrieval, then fine-tune it on a CUAD-derived binary compliance dataset. Across five random seeds (40-44) on a single NVIDIA A100 GPU, the model achieves ACORD-style retrieval performance of NDCG@5 0.38-0.42, NDCG@10 0.45-0.50, and 4-star Precision@5 about 0.37 on the test split. On CUAD-derived binary labels, it achieves AUC 0.98-0.99 and F1 0.22-0.30 depending on positive-class weighting, outperforming majority and random baselines in a highly imbalanced setting with a positive rate of about 0.6%. We then map scalar compliance scores into three regions: auto-noncompliant, auto-compliant, and human-review. Thresholds are tuned on validation data to maximize automatic decision coverage subject to an empirical error-rate constraint of at most 2% over auto-decided examples. The result is a seed-stable system summarized by a small number of scalar parameters. We argue that deterministic encoders, calibrated fuzzy bands, and explicit error constraints provide a practical middle ground between hand-crafted rules and opaque large language models, supporting explainable evidence triage, reproducible audit trails, and concrete mappings to legal review concepts.",
+      "published": "2026-03-08T00:31:34Z",
+      "updated": "2026-03-08T00:31:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07390v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.03837v3",
-      "title": "Accelerating Scientific Research with Gemini: Case Studies and Common Techniques",
+      "id": "http://arxiv.org/abs/2603.07379v1",
+      "title": "SoK: Agentic Retrieval-Augmented Generation (RAG): Taxonomy, Architectures, Evaluation, and Research Directions",
       "authors": [
-        "David P. Woodruff",
-        "Vincent Cohen-Addad",
-        "Lalit Jain",
-        "Jieming Mao",
-        "Song Zuo",
-        "MohammadHossein Bateni",
-        "Simina Branzei",
-        "Michael P. Brenner",
-        "Lin Chen",
-        "Ying Feng",
-        "Lance Fortnow",
-        "Gang Fu",
-        "Ziyi Guan",
-        "Zahra Hadizadeh",
-        "Mohammad T. Hajiaghayi",
-        "Mahdi JafariRaviz",
-        "Adel Javanmard",
-        "Karthik C. S.",
-        "Ken-ichi Kawarabayashi",
-        "Ravi Kumar",
-        "Silvio Lattanzi",
-        "Euiwoong Lee",
-        "Yi Li",
-        "Ioannis Panageas",
-        "Dimitris Paparas",
-        "Benjamin Przybocki",
-        "Bernardo Subercaseaux",
-        "Ola Svensson",
-        "Shayan Taherijam",
-        "Xuan Wu",
-        "Eylon Yogev",
-        "Morteza Zadimoghaddam",
-        "Samson Zhou",
-        "Yossi Matias",
-        "James Manyika",
-        "Vahab Mirrokni"
+        "Saroj Mishra",
+        "Suman Niroula",
+        "Umesh Yadav",
+        "Dilip Thakur",
+        "Srijan Gyawali",
+        "Shiva Gaire"
       ],
-      "summary": "Recent advances in large language models (LLMs) have opened new avenues for accelerating scientific research. While models are increasingly capable of assisting with routine tasks, their ability to contribute to novel, expert-level mathematical discovery is less understood. We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variants), to solve open problems, refute conjectures, and generate new proofs across diverse areas in theoretical computer science, as well as other areas such as economics, optimization, and physics. Based on these experiences, we extract common techniques for effective human-AI collaboration in theoretical research, such as iterative refinement, problem decomposition, and cross-disciplinary knowledge transfer. While the majority of our results stem from this interactive, conversational methodology, we also highlight specific instances that push beyond standard chat interfaces. These include deploying the model as a rigorous adversarial reviewer to detect subtle flaws in existing proofs, and embedding it within a \"neuro-symbolic\" loop that autonomously writes and executes code to verify complex derivations. Together, these examples highlight the potential of AI not just as a tool for automation, but as a versatile, genuine partner in the creative process of scientific discovery.",
-      "published": "2026-02-03T18:56:17Z",
-      "updated": "2026-03-06T18:48:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.03837v3"
+      "summary": "Retrieval-Augmented Generation (RAG) systems are increasingly evolving into agentic architectures where large language models autonomously coordinate multi-step reasoning, dynamic memory management, and iterative retrieval strategies. Despite rapid industrial adoption, current research lacks a systematic understanding of Agentic RAG as a sequential decision-making system, leading to highly fragmented architectures, inconsistent evaluation methodologies, and unresolved reliability risks. This Systematization of Knowledge (SoK) paper provides the first unified framework for understanding these autonomous systems. We formalize agentic retrieval-generation loops as finite-horizon partially observable Markov decision processes, explicitly modeling their control policies and state transitions. Building upon this formalization, we develop a comprehensive taxonomy and modular architectural decomposition that categorizes systems by their planning mechanisms, retrieval orchestration, memory paradigms, and tool-invocation behaviors. We further analyze the critical limitations of traditional static evaluation practices and identify severe systemic risks inherent to autonomous loops, including compounding hallucination propagation, memory poisoning, retrieval misalignment, and cascading tool-execution vulnerabilities. Finally, we outline key doctoral-scale research directions spanning stable adaptive retrieval, cost-aware orchestration, formal trajectory evaluation, and oversight mechanisms, providing a definitive roadmap for building reliable, controllable, and scalable agentic retrieval systems.",
+      "published": "2026-03-07T23:38:57Z",
+      "updated": "2026-03-07T23:38:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07379v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06542v1",
-      "title": "RAMoEA-QA: Hierarchical Specialization for Robust Respiratory Audio Question Answering",
+      "id": "http://arxiv.org/abs/2603.07375v1",
+      "title": "Multi-Agentic AI for Conflict-Aware rApp Policy Orchestration in Open RAN",
       "authors": [
-        "Gaia A. Bertolino",
-        "Yuwei Zhang",
-        "Tong Xia",
-        "Domenico Talia",
-        "Cecilia Mascolo"
+        "Haiyuan Li",
+        "Yulei Wu",
+        "Dimitra Simeonidou"
       ],
-      "summary": "Conversational generative AI is rapidly entering healthcare, where general-purpose models must integrate heterogeneous patient signals and support diverse interaction styles while producing clinically meaningful outputs. In respiratory care, non-invasive audio, such as recordings captured via mobile microphones, enables scalable screening and longitudinal monitoring, but the heterogeneity challenge is particularly acute: recordings vary widely across devices, environments, and acquisition protocols, and questions span multiple intents and question formats. Existing biomedical audio-language QA systems are typically monolithic, without any specialization mechanisms for tackling diverse respiratory corpora and query intents. They are also only validated in limited settings, leaving it unclear how reliably they handle the shifts encountered in real-world settings. To address these limitations, we introduce RAMoEA-QA, a hierarchically routed generative model for respiratory audio question answering that unifies multiple question types and supports both discrete and continuous targets within a single multimodal system. RAMoEA-QA applies two-stage conditional specialization: an Audio Mixture-of-Experts routes each recording to a suitable pre-trained audio encoder, and a Language Mixture-of-Adapters selects a LoRA adapter on a shared frozen LLM to match the query intent and answer format. By specializing both acoustic representations and generation behaviour per example, RAMoEA-QA consistently outperforms strong baselines and routing ablations with minimal parameter overhead, improving in-domain test accuracy to 0.72 (vs. 0.61 and 0.67 for state-of-the-art baselines) and exhibiting the strongest generalization for diagnosis under domain, modality, and task shifts.",
-      "published": "2026-03-06T18:29:15Z",
-      "updated": "2026-03-06T18:29:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06542v1"
+      "summary": "Open Radio Access Network (RAN) enables flexible, AI-driven control of mobile networks through disaggregated, multi-vendor components. In this architecture, xApps handle real-time functions, whereas rApps in the non-real-time controller generate strategic policies. However, current rApp development remains largely manual, brittle, and poorly scalable as xApp diversity proliferates. In this work, we propose a Multi-Agentic AI framework to automate rApp policy generation and orchestration. The architecture integrates three specialized large language model (LLM)-based agents, Perception, Reasoning, and Refinement, supported by retrieval-augmented generation (RAG) and memory-based analogical reasoning. These agents collectively analyze potential conflicts, synthesize intent-aligned control pipelines, and incrementally refine deployment decisions. Experiments across diverse deployment scenarios demonstrate that the proposed system achieves over 70% improvement in deployment accuracy and 95% reduction in reasoning cost compared to baseline methods, while maintaining zero-shot generalization to unseen intents. These results establish a scalable and conflict-aware solution for fully autonomous, zero-touch rApp orchestration in Open RAN.",
+      "published": "2026-03-07T23:34:20Z",
+      "updated": "2026-03-07T23:34:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07375v1"
     },
     {
-      "id": "http://arxiv.org/abs/2508.18093v2",
-      "title": "Agri-Query: A Case Study on RAG vs. Long-Context LLMs for Cross-Lingual Technical Question Answering",
+      "id": "http://arxiv.org/abs/2603.07368v1",
+      "title": "Position: LLMs Must Use Functor-Based and RAG-Driven Bias Mitigation for Fairness",
       "authors": [
-        "Julius Gun",
-        "Timo Oksanen"
+        "Ravi Ranjan",
+        "Utkarsh Grover",
+        "Agorista Polyzou"
       ],
-      "summary": "We present a case study evaluating large language models (LLMs) with 128K-token context windows on a technical question answering (QA) task. Our benchmark is built on a user manual for an agricultural machine, available in English, French, and German. It simulates a cross-lingual information retrieval scenario where questions are posed in English against all three language versions of the manual. The evaluation focuses on realistic \"needle-in-a-haystack\" challenges and includes unanswerable questions to test for hallucinations. We compare nine long-context LLMs using direct prompting against three Retrieval-Augmented Generation (RAG) strategies (keyword, semantic, hybrid), with an LLM-as-a-judge for evaluation. Our findings for this specific manual show that Hybrid RAG consistently outperforms direct long-context prompting. Models like Gemini 2.5 Flash and the smaller Qwen 2.5 7B achieve high accuracy (over 85%) across all languages with RAG. This paper contributes a detailed analysis of LLM performance in a specialized industrial domain and an open framework for similar evaluations, highlighting practical trade-offs and challenges.",
-      "published": "2025-08-25T14:54:46Z",
-      "updated": "2026-03-06T18:23:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.18093v2"
+      "summary": "Biases in large language models (LLMs) often manifest as systematic distortions in associations between demographic attributes and professional or social roles, reinforcing harmful stereotypes across gender, ethnicity, and geography. This position paper advocates for addressing demographic and gender biases in LLMs through a dual-pronged methodology, integrating category-theoretic transformations and retrieval-augmented generation (RAG). Category theory provides a rigorous, structure-preserving mathematical framework that maps biased semantic domains to unbiased canonical forms via functors, ensuring bias elimination while preserving semantic integrity. Complementing this, RAG dynamically injects diverse, up-to-date external knowledge during inference, directly countering ingrained biases within model parameters. By combining structural debiasing through functor-based mappings and contextual grounding via RAG, we outline a comprehensive framework capable of delivering equitable and fair model outputs. Our synthesis of the current literature validates the efficacy of each approach individually, while addressing potential critiques demonstrates the robustness of this integrated strategy. Ensuring fairness in LLMs, therefore, demands both the mathematical rigor of category-theoretic transformations and the adaptability of retrieval augmentation.",
+      "published": "2026-03-07T22:40:44Z",
+      "updated": "2026-03-07T22:40:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07368v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16069v2",
-      "title": "The Limits of Long-Context Reasoning in Automated Bug Fixing",
+      "id": "http://arxiv.org/abs/2603.07365v1",
+      "title": "Scaling Laws in the Tiny Regime: How Small Models Change Their Mistakes",
       "authors": [
-        "Ravi Raju",
-        "Mengmeng Ji",
-        "Shubhangi Upasani",
-        "Bo Li",
-        "Urmish Thakker"
+        "Mohammed Alnemari",
+        "Rizwan Qureshi",
+        "Nader Begrazadah"
       ],
-      "summary": "Rapidly increasing context lengths have led to the assumption that large language models (LLMs) can directly reason over entire codebases. Concurrently, recent advances in LLMs have enabled strong performance on software engineering benchmarks, particularly when paired with agentic workflows. In this work, we systematically evaluate whether current LLMs can reliably perform long-context code debugging and patch generation. Using SWE-bench Verified as a controlled experimental setting, we first evaluate state-of-the-art models within an agentic harness (mini-SWE-agent), where performance improves substantially: GPT-5-nano achieves up to a 31\\% resolve rate on 100 samples, and open-source models such as Deepseek-R1-0528 obtain competitive results. However, token-level analysis shows that successful agentic trajectories typically remain under 20k-30k tokens, and that longer accumulated contexts correlate with lower success rates, indicating that agentic success primarily arises from task decomposition into short-context steps rather than effective long-context reasoning. To directly test long-context capability, we construct a data pipeline where we artificially inflate the context length of the input by placing the relevant files into the context (ensuring perfect retrieval recall); we then study single-shot patch generation under genuinely long contexts (64k tokens). Despite this setup, performance degrades sharply: Qwen3-Coder-30B-A3B achieves only a 7\\% resolve rate at 64k context, while GPT-5-nano solves none of the tasks. Qualitative analysis reveals systematic failure modes, including hallucinated diffs, incorrect file targets, and malformed patch headers. Overall, our findings highlight a significant gap between nominal context length and usable context capacity in current LLMs, and suggest that existing agentic coding benchmarks do not meaningfully evaluate long-context reasoning.",
-      "published": "2026-02-17T22:51:40Z",
-      "updated": "2026-03-06T18:01:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16069v2"
+      "summary": "Neural scaling laws describe how model performance improves as a power law with size, but existing work focuses on models above 100M parameters. The sub-20M regime -- where TinyML and edge AI operate -- remains unexamined. We train 90 models (22K--19.8M parameters) across two architectures (plain ConvNet, MobileNetV2) on CIFAR-100, varying width while holding depth and training fixed. Both follow approximate power laws in error rate: $α= 0.156 \\pm 0.002$ (ScaleCNN) and $α= 0.106 \\pm 0.001$ (MobileNetV2) across five seeds. Since prior work fit cross-entropy loss rather than error rate, direct exponent comparison is approximate; with that caveat, these are 1.4--2x steeper than $α\\approx 0.076$ for large language models. The power law does not hold uniformly: local exponents decay with scale, and MobileNetV2 saturates at 19.8M parameters ($α_{\\mathrm{local}} = 0.006$). Error structure also changes. Jaccard overlap between error sets of the smallest and largest ScaleCNN is only 0.35 (25 seed pairs, $\\pm 0.004$) -- compression changes which inputs are misclassified, not merely how many. Small models concentrate capacity on easy classes (Gini: 0.26 at 22K vs. 0.09 at 4.7M) while abandoning the hardest (bottom-5 accuracy: 10% vs. 53%). Counter to expectation, the smallest models are best calibrated (ECE = 0.013 vs. peak 0.110 at mid-size). Aggregate accuracy is therefore misleading for edge deployment; validation must happen at the target model size.",
+      "published": "2026-03-07T22:25:45Z",
+      "updated": "2026-03-07T22:25:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07365v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.15751v2",
-      "title": "Sysformer: Safeguarding Frozen Large Language Models with Adaptive System Prompts",
+      "id": "http://arxiv.org/abs/2603.07360v1",
+      "title": "The Yerkes-Dodson Curve for AI Agents: Emergent Cooperation Under Environmental Pressure in Multi-Agent LLM Simulations",
       "authors": [
-        "Kartik Sharma",
-        "Yiqiao Jin",
-        "Vineeth Rakesh",
-        "Yingtong Dou",
-        "Menghai Pan",
-        "Mahashweta Das",
-        "Srijan Kumar"
+        "Ivan Pasichnyk"
       ],
-      "summary": "As large language models (LLMs) are deployed in safety-critical settings, it is essential to ensure that their responses comply with safety standards. Prior research has revealed that LLMs often fail to grasp the notion of safe behaviors, resulting in either unjustified refusals to harmless prompts or the generation of harmful content. While substantial efforts have been made to improve their robustness, existing defenses often rely on costly fine-tuning of model parameters or employ suboptimal heuristic techniques. In this work, we take a novel approach to safeguard LLMs by learning to adapt the system prompts in instruction-tuned LLMs. While LLMs are typically pre-trained to follow a fixed system prompt, we investigate the impact of tailoring the system prompt to each specific user input on the safety of the responses. To this end, we propose $\\textbf{Sysformer}$, a trans$\\textbf{former}$ model that updates an initial $\\textbf{sys}$tem prompt to a more robust system prompt in the LLM input embedding space while attending to the user prompt. While keeping the LLM parameters frozen, the Sysformer is trained to refuse to respond to a set of harmful prompts while responding ideally to a set of safe ones. Through extensive experiments on $5$ LLMs from different families and $2$ recent benchmarks, we demonstrate that Sysformer can significantly enhance the robustness of LLMs, leading to upto $80\\%$ gain in the refusal rate on harmful prompts while enhancing the compliance with the safe prompts by upto $90\\%$. Results also generalize well to sophisticated jailbreaking attacks, making LLMs upto $100\\%$ more robust against different attack strategies. We hope our findings lead to cheaper safeguarding of LLMs and motivate future investigations into designing variable system prompts.",
-      "published": "2025-06-18T05:48:05Z",
-      "updated": "2026-03-06T17:55:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.15751v2"
+      "summary": "Designing environments that maximize the rate of emergent behavior development in AI agents remains an open problem. We present the first systematic study of stress-performance relationships in large language model (LLM) multi-agent systems, drawing an explicit parallel to the Yerkes-Dodson law from cognitive psychology. Using a grid-world survival arena, we conduct 22 experiments across four phases, varying environmental pressure through resource scarcity (upkeep cost) and reproductive competition (sexual selection). Our key finding is that cooperative behavior follows an inverted-U curve: trade interactions peak at 29 under medium pressure (upkeep=5), while both low and extreme pressure produce 8--12 trades. Under extreme pressure, behavioral repertoire collapses to movement-only within 5--12 turns. We further show that sexual selection -- a softer pressure mechanism where all agents survive but not all reproduce -- eliminates inter-agent aggression entirely and produces communicative behavior absent under survival pressure. These results suggest that environmental pressure calibration is a viable curriculum design strategy for LLM agent development, analogous to the inverted-U relationship between arousal and performance in biological systems.",
+      "published": "2026-03-07T22:09:03Z",
+      "updated": "2026-03-07T22:09:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07360v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.00276v2",
-      "title": "Localizing and Correcting Errors for LLM-based Planners",
+      "id": "http://arxiv.org/abs/2502.08942v3",
+      "title": "Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative",
       "authors": [
-        "Aditya Kumar",
-        "William W. Cohen"
+        "Zihao Li",
+        "Xiao Lin",
+        "Zhining Liu",
+        "Jiaru Zou",
+        "Ziwei Wu",
+        "Lecheng Zheng",
+        "Dongqi Fu",
+        "Yada Zhu",
+        "Hendrik Hamann",
+        "Hanghang Tong",
+        "Jingrui He"
       ],
-      "summary": "Large language models (LLMs) have demonstrated strong reasoning capabilities on math and coding, but frequently fail on symbolic classical planning tasks. Our studies, as well as prior work, show that LLM-generated plans routinely violate domain constraints given in their instructions (e.g., walking through walls). To address this failure, we propose iteratively augmenting instructions with Localized In-Context Learning (L-ICL) demonstrations: targeted corrections for specific failing steps. Specifically, L-ICL identifies the first constraint violation in a trace and injects a minimal input-output example giving the correct behavior for the failing step. Our proposed technique of L-ICL is much effective than explicit instructions or traditional ICL, which adds complete problem-solving trajectories, and many other baselines. For example, on an 8x8 gridworld, L-ICL produces valid plans 89% of the time with only 60 training examples, compared to 59% for the best baseline, an increase of 30%. L-ICL also shows dramatic improvements in other domains (gridworld navigation, mazes, Sokoban, and BlocksWorld), and on several LLM architectures.",
-      "published": "2026-01-30T19:56:15Z",
-      "updated": "2026-03-06T17:37:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.00276v2"
+      "summary": "While many advances in time series models focus exclusively on numerical data, research on multimodal time series, particularly those involving contextual textual information, remains in its infancy. With recent progress in large language models and time series learning, we revisit the integration of paired texts with time series through the Platonic Representation Hypothesis, which posits that representations of different modalities converge to shared spaces. In this context, we identify that time-series-paired texts may naturally exhibit periodic properties that closely mirror those of the original time series. Building on this insight, we propose a novel framework, Texts as Time Series (TaTS), which considers the time-series-paired texts to be auxiliary variables of the time series. TaTS can be plugged into any existing numerical-only time series models and effectively enable them to handle time series data with paired texts. Through extensive experiments on both multimodal time series forecasting and imputation tasks across benchmark datasets with various existing time series models, we demonstrate that TaTS can enhance multimodal predictive performance without modifying model architectures. Our Code is available at https://github.com/iDEA-iSAIL-Lab-UIUC/TaTS.",
+      "published": "2025-02-13T03:43:27Z",
+      "updated": "2026-03-07T21:50:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.08942v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06503v1",
-      "title": "Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing",
+      "id": "http://arxiv.org/abs/2502.08650v7",
+      "title": "Who is Responsible? The Data, Models, Users or Regulations? A Comprehensive Survey on Responsible Generative AI for a Sustainable Future",
       "authors": [
-        "Anmol Gulati",
-        "Sahil Sen",
-        "Waqar Sarguroh",
-        "Kevin Paul"
+        "Shaina Raza",
+        "Rizwan Qureshi",
+        "Anam Zahid",
+        "Amgad Muneer",
+        "Anas Zafar",
+        "Safiullah Kamawal",
+        "Ferhat Sadak",
+        "Joseph Fioresi",
+        "Muhammaed Saeed",
+        "Ranjan Sapkota",
+        "Aditya Jain",
+        "Muneeb Ul Hassan",
+        "Aizan Zafar",
+        "Hasan Maqbool",
+        "Ashmal Vayani",
+        "Jia Wu",
+        "Maged Shoman"
       ],
-      "summary": "Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.",
-      "published": "2026-03-06T17:36:39Z",
-      "updated": "2026-03-06T17:36:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06503v1"
+      "summary": "Generative AI is rapidly moving from research to deployment, elevating the need for responsible development, evaluation, and governance. We conduct a PRISMA guided review of 232 studies (November 2022 - December 2025), spanning large language models, vision language models, diffusion models, and agentic pipelines. We make four contributions: (1) the first survey bridging governance principles, technical evaluation, and domain deployment across all four system types; (2) a ten-criterion rubric (C1-C10) scoring major AI safety benchmarks on risk-surface coverage, paired with a policy crosswalk mapping benchmarks to regulatory requirements; (3) twelve lifecycle KPIs, explainability guidance for foundation models, and a testbed catalogue; and (4) domain-specific analysis across healthcare, finance, education, arts, agriculture, and defense. Three findings emerge: benchmark coverage is dense for bias and toxicity but sparse for privacy, provenance, deepfakes, and system-level failures in agentic settings; evaluations remain largely static and task local, limiting audit portability; and inconsistent documentation complicates cross-release comparison. We outline a research agenda prioritizing adaptive multimodal evaluation, privacy and provenance testing, deepfake risk assessment, calibration reporting, versioned artifacts, and continuous monitoring. This survey offers a structured path to align generative AI evaluation with governance needs for safe and accountable deployment.",
+      "published": "2025-01-15T20:59:42Z",
+      "updated": "2026-03-07T21:26:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.08650v7"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06495v1",
-      "title": "COLD-Steer: Steering Large Language Models via In-Context One-step Learning Dynamics",
+      "id": "http://arxiv.org/abs/2512.22364v2",
+      "title": "Cost Trade-offs of Reasoning and Non-Reasoning Large Language Models in Text-to-SQL",
       "authors": [
-        "Kartik Sharma",
-        "Rakshit S. Trivedi"
+        "Saurabh Deochake",
+        "Debajyoti Mukhopadhyay"
       ],
-      "summary": "Activation steering methods enable inference-time control of large language model (LLM) behavior without retraining, but current approaches face a fundamental trade-off: sample-efficient methods suboptimally capture steering signals from labeled examples, while methods that better extract these signals require hundreds to thousands of examples. We introduce COLD-Steer, a training-free framework that steers LLM activations by approximating the representational changes that would result from gradient descent on in-context examples. Our key insight is that the effect of fine-tuning on a small set of examples can be efficiently approximated at inference time without actual parameter updates. We formalize this through two complementary approaches: (i) a unit kernel approximation method that updates the activations directly using gradients with respect to them, normalized across examples, and (ii) a finite-difference approximation requiring only two forward passes regardless of example count. Experiments across a variety of steering tasks and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates accommodating diverse perspectives without extensive demonstration data, which we validate through our experiments on pluralistic alignment tasks. Our framework opens new possibilities for adaptive, context-aware model control that can flexibly address varying loss-driven human preferences through principled approximation of learning dynamics rather than specialized training procedures.",
-      "published": "2026-03-06T17:27:27Z",
-      "updated": "2026-03-06T17:27:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06495v1"
+      "summary": "While Text-to-SQL systems achieve high accuracy, existing efficiency metrics like the Valid Efficiency Score prioritize execution time, a metric we show is fundamentally decoupled from consumption-based cloud billing. This paper evaluates cloud query execution cost trade-offs between reasoning and non-reasoning Large Language Models by performing 180 Text-to-SQL query executions across six LLMs on Google BigQuery using the 230 GB StackOverflow dataset. Our analysis reveals that reasoning models process 44.5% fewer bytes than non-reasoning counterparts while maintaining equivalent correctness at 96.7% to 100%, and that execution time correlates weakly with query cost at $r=0.16$, indicating that speed optimization does not imply cost efficiency. Non-reasoning models also exhibit extreme cost variance of up to 3.4$\\times$, producing outliers exceeding 36 GB per query, over 20$\\times$ the best model's 1.8 GB average, due to missing partition filters and inefficient joins. We identify these prevalent inefficiency patterns and provide deployment guidelines to mitigate financial risks in cost-sensitive enterprise environments.",
+      "published": "2025-12-26T19:51:35Z",
+      "updated": "2026-03-07T21:01:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.22364v2"
     },
     {
-      "id": "http://arxiv.org/abs/2508.02833v4",
-      "title": "TIC-GRPO: Provable and Efficient Optimization for Reinforcement Learning from Human Feedback",
+      "id": "http://arxiv.org/abs/2603.07329v1",
+      "title": "The Third Ambition: Artificial Intelligence and the Science of Human Behavior",
       "authors": [
-        "Lei Pang",
-        "Jun Luo",
-        "Ruinan Jin"
+        "W. Russell Neuman",
+        "Chad Coleman"
       ],
-      "summary": "Group Relative Policy Optimization (GRPO), recently introduced by DeepSeek, is a critic-free reinforcement learning algorithm for fine-tuning large language models. GRPO replaces the value function in Proximal Policy Optimization (PPO) with group-normalized rewards while retaining PPO-style token-level importance sampling based on an old policy. Our theoretical analysis reveals that the GRPO update rule estimates the policy gradient at the old policy rather than the current one; however, since the old policy is refreshed every few steps, the resulting discrepancy remains small and the induced bias is negligible in practice. To empirically validate this insight, we conduct an ablation study that entirely removes importance sampling and performs multiple optimization steps using gradients estimated at a fixed old policy. Remarkably, this simplified variant attains performance comparable to standard GRPO. Motivated by this finding, we propose Trajectory-level Importance-Corrected GRPO (TIC-GRPO), a new algorithm that replaces token-level importance ratios with a single trajectory-level probability ratio, thereby yielding an estimate of the current policy gradient while preserving the critic-free structure. Furthermore, we present the first convergence analysis for GRPO-style methods and show that TIC-GRPO converges faster than GRPO. Finally, empirical results across math reasoning and coding tasks demonstrate the superiority of TIC-GRPO.",
-      "published": "2025-08-04T19:01:19Z",
-      "updated": "2026-03-06T17:14:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.02833v4"
+      "summary": "Contemporary artificial intelligence research has been organized around two dominant ambitions: productivity, which treats AI systems as tools for accelerating work and economic output, and alignment, which focuses on ensuring that increasingly capable systems behave safely and in accordance with human values. This paper articulates and develops a third, emerging ambition: the use of large language models (LLMs) as scientific instruments for studying human behavior, culture, and moral reasoning. Trained on unprecedented volumes of human-produced text, LLMs encode large-scale regularities in how people argue, justify, narrate, and negotiate norms across social domains. We argue that these models can be understood as condensates of human symbolic behavior, compressed, generative representations that render patterns of collective discourse computationally accessible. The paper situates this third ambition within long-standing traditions of computational social science, content analysis, survey research, and comparative-historical inquiry, while clarifying the epistemic limits of treating model output as evidence. We distinguish between base models and fine-tuned systems, showing how alignment interventions can systematically reshape or obscure the cultural regularities learned during pretraining, and we identify instruct-only and modular adaptation regimes as pragmatic compromises for behavioral research. We review emerging methodological approaches including prompt-based experiments, synthetic population sampling, comparative-historical modeling, and ablation studies and show how each maps onto familiar social-scientific designs while operating at unprecedented scale.",
+      "published": "2026-03-07T20:21:58Z",
+      "updated": "2026-03-07T20:21:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07329v1"
     }
   ]
 }
