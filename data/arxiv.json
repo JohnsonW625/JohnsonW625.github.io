@@ -1,187 +1,207 @@
 {
-  "generated_at_utc": "2026-03-11T01:56:57Z",
+  "generated_at_utc": "2026-03-12T02:03:40Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.09652v1",
-      "title": "MiniAppBench: Evaluating the Shift from Text to Interactive HTML Responses in LLM-Powered Assistants",
+      "id": "http://arxiv.org/abs/2603.11025v1",
+      "title": "LLMGreenRec: LLM-Based Multi-Agent Recommender System for Sustainable E-Commerce",
       "authors": [
-        "Zuhao Zhang",
-        "Chengyue Yu",
-        "Yuante Li",
-        "Chenyi Zhuang",
-        "Linjian Mo",
-        "Shuai Li"
+        "Hao N. Nguyen",
+        "Hieu M. Nguyen",
+        "Son Van Nguyen",
+        "Nguyen Thi Hanh"
       ],
-      "summary": "With the rapid advancement of Large Language Models (LLMs) in code generation, human-AI interaction is evolving from static text responses to dynamic, interactive HTML-based applications, which we term MiniApps. These applications require models to not only render visual interfaces but also construct customized interaction logic that adheres to real-world principles. However, existing benchmarks primarily focus on algorithmic correctness or static layout reconstruction, failing to capture the capabilities required for this new paradigm. To address this gap, we introduce MiniAppBench, the first comprehensive benchmark designed to evaluate principle-driven, interactive application generation. Sourced from a real-world application with 10M+ generations, MiniAppBench distills 500 tasks across six domains (e.g., Games, Science, and Tools). Furthermore, to tackle the challenge of evaluating open-ended interactions where no single ground truth exists, we propose MiniAppEval, an agentic evaluation framework. Leveraging browser automation, it performs human-like exploratory testing to systematically assess applications across three dimensions: Intention, Static, and Dynamic. Our experiments reveal that current LLMs still face significant challenges in generating high-quality MiniApps, while MiniAppEval demonstrates high alignment with human judgment, establishing a reliable standard for future research. Our code is available in github.com/MiniAppBench.",
-      "published": "2026-03-10T13:30:03Z",
-      "updated": "2026-03-10T13:30:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09652v1"
+      "summary": "Rising environmental awareness in e-commerce necessitates recommender systems that not only guide users to sustainable products but also minimize their own digital carbon footprints. Traditional session-based systems, optimized for short-term conversions, often fail to capture nuanced user intents for eco-friendly choices, perpetuating a gap between green intentions and actions. To tackle this, we introduce LLMGreenRec, a novel multi-agent framework that leverages Large Language Models (LLMs) to promote sustainable consumption. Through collaborative analysis of user interactions and iterative prompt refinement, LLMGreenRec's specialized agents deduce green-oriented user intents and prioritize eco-friendly product recommendations. Notably, this intent-driven approach also reduces unnecessary interactions and energy consumption. Extensive experiments on benchmark datasets validate LLMGreenRec's effectiveness in recommending sustainable products, demonstrating a robust solution that fosters a responsible digital economy.",
+      "published": "2026-03-11T17:49:53Z",
+      "updated": "2026-03-11T17:49:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.11025v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09638v1",
-      "title": "Tracking Cancer Through Text: Longitudinal Extraction From Radiology Reports Using Open-Source Large Language Models",
+      "id": "http://arxiv.org/abs/2603.11021v1",
+      "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
       "authors": [
-        "Luc Builtjes",
-        "Alessa Hering"
+        "Tycho F. A. van der Ouderaa",
+        "Mart van Baalen",
+        "Paul Whatmough",
+        "Markus Nagel"
       ],
-      "summary": "Radiology reports capture crucial longitudinal information on tumor burden, treatment response, and disease progression, yet their unstructured narrative format complicates automated analysis. While large language models (LLMs) have advanced clinical text processing, most state-of-the-art systems remain proprietary, limiting their applicability in privacy-sensitive healthcare environments. We present a fully open-source, locally deployable pipeline for longitudinal information extraction from radiology reports, implemented using the \\texttt{llm\\_extractinator} framework. The system applies the \\texttt{qwen2.5-72b} model to extract and link target, non-target, and new lesion data across time points in accordance with RECIST criteria. Evaluation on 50 Dutch CT Thorax/Abdomen report pairs yielded high extraction performance, with attribute-level accuracies of 93.7\\% for target lesions, 94.9\\% for non-target lesions, and 94.0\\% for new lesions. The approach demonstrates that open-source LLMs can achieve clinically meaningful performance in multi-timepoint oncology tasks while ensuring data privacy and reproducibility. These results highlight the potential of locally deployable LLMs for scalable extraction of structured longitudinal data from routine clinical text.",
-      "published": "2026-03-10T13:13:43Z",
-      "updated": "2026-03-10T13:13:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09638v1"
+      "summary": "Scalar quantization of large language models (LLMs) is fundamentally limited by information-theoretic bounds. While vector quantization (VQ) overcomes these limits by encoding blocks of parameters jointly, practical implementations must avoid the need for expensive lookup mechanisms or other explicit codebook storage. Lattice approaches address this through highly structured and dense packing. This paper explores the Leech lattice, which, with its optimal sphere packing and kissing configurations at 24 dimensions, is the highest dimensional lattice known with such optimal properties. To make the Leech lattice usable for LLM quantization, we extend an existing search algorithm based on the extended Golay code construction, to i) support indexing, enabling conversion to and from bitstrings without materializing the codebook, ii) allow angular search over union of Leech lattice shells, iii) propose fully-parallelisable dequantization kernel. Together this yields a practical algorithm, namely Leech Lattice Vector Quantization (LLVQ). LLVQ delivers state-of-the-art LLM quantization performance, outperforming recent methods such as Quip\\#, QTIP, and PVQ. These results highlight the importance of high-dimensional lattices for scalable, theoretically grounded model compression.",
+      "published": "2026-03-11T17:48:45Z",
+      "updated": "2026-03-11T17:48:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.11021v1"
     },
     {
-      "id": "http://arxiv.org/abs/2505.11237v2",
-      "title": "Concept Drift Guided LayerNorm Tuning for Efficient Multimodal Metaphor Identification",
+      "id": "http://arxiv.org/abs/2603.11008v1",
+      "title": "A Systematic Study of Pseudo-Relevance Feedback with LLMs",
       "authors": [
-        "Wenhao Qian",
-        "Zhenzhen Hu",
-        "Zijie Song",
-        "Jia Li"
+        "Nour Jedidi",
+        "Jimmy Lin"
       ],
-      "summary": "Metaphorical imagination, the ability to connect seemingly unrelated concepts, is fundamental to human cognition and communication. While understanding linguistic metaphors has advanced significantly, grasping multimodal metaphors, such as those found in internet memes, presents unique challenges due to their unconventional expressions and implied meanings. Existing methods for multimodal metaphor identification often struggle to bridge the gap between literal and figurative interpretations. Additionally, generative approaches that utilize large language models or text-to-image models, while promising, suffer from high computational costs. This paper introduces \\textbf{C}oncept \\textbf{D}rift \\textbf{G}uided \\textbf{L}ayerNorm \\textbf{T}uning (\\textbf{CDGLT}), a novel and training-efficient framework for multimodal metaphor identification. CDGLT incorporates two key innovations: (1) Concept Drift, a mechanism that leverages Spherical Linear Interpolation (SLERP) of cross-modal embeddings from a CLIP encoder to generate a new, divergent concept embedding. This drifted concept helps to alleviate the gap between literal features and the figurative task. (2) A prompt construction strategy, that adapts the method of feature extraction and fusion using pre-trained language models for the multimodal metaphor identification task. CDGLT achieves state-of-the-art performance on the MET-Meme benchmark while significantly reducing training costs compared to existing generative methods. Ablation studies demonstrate the effectiveness of both Concept Drift and our adapted LN Tuning approach. Our method represents a significant step towards efficient and accurate multimodal metaphor understanding. The code is available: \\href{https://github.com/Qianvenh/CDGLT}{https://github.com/Qianvenh/CDGLT}.",
-      "published": "2025-05-16T13:27:57Z",
-      "updated": "2026-03-10T13:05:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.11237v2"
+      "summary": "Pseudo-relevance feedback (PRF) methods built on large language models (LLMs) can be organized along two key design dimensions: the feedback source, which is where the feedback text is derived from and the feedback model, which is how the given feedback text is used to refine the query representation. However, the independent role that each dimension plays is unclear, as both are often entangled in empirical evaluations. In this paper, we address this gap by systematically studying how the choice of feedback source and feedback model impact PRF effectiveness through controlled experimentation. Across 13 low-resource BEIR tasks with five LLM PRF methods, our results show: (1) the choice of feedback model can play a critical role in PRF effectiveness; (2) feedback derived solely from LLM-generated text provides the most cost-effective solution; and (3) feedback derived from the corpus is most beneficial when utilizing candidate documents from a strong first-stage retriever. Together, our findings provide a better understanding of which elements in the PRF design space are most important.",
+      "published": "2026-03-11T17:31:50Z",
+      "updated": "2026-03-11T17:31:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.11008v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09599v1",
-      "title": "Preparing Students for AI-Driven Agile Development: A Project-Based AI Engineering Curriculum",
+      "id": "http://arxiv.org/abs/2512.22471v4",
+      "title": "The Bayesian Geometry of Transformer Attention",
       "authors": [
-        "Andreas Rausch",
-        "Stefan Wittek",
-        "Tobias Geger",
-        "David Inkermann"
+        "Naman Agarwal",
+        "Siddhartha R. Dalal",
+        "Vishal Misra"
       ],
-      "summary": "Generative AI and agentic tools are reshaping agile software development, yet many engineering curricula still teach agile methods and AI competencies separately and largely lecture-based. This paper presents a project-based AI Engineering curriculum designed to prepare students for AI-driven agile development by integrating agile practices and AI-enabled engineering throughout the program. We contribute (1) the curriculum concept and guiding principles, (2) a case study of interdisciplinary, AI-enabled agile student projects, and (3) early evidence from a mixed-methods evaluation. In our case study, second-semester bachelor students work in teams over seven two-week sprints on a realistic software product. AI tools are embedded into everyday agile engineering tasks - requirements clarification, backlog refinement, architectural reasoning, coding support, testing, and documentation - paired with reflection on human responsibility and quality. Initial results indicate that the integrated approach supports hands-on competence development in AI-assisted engineering. Key observations highlight the need for agile teaching adaptations due to rapid tool evolution, the critical role of oral verification to ensure foundational learning. We close with lessons learned and recommendations for educators designing agile project-based curricula in the age of AI.",
-      "published": "2026-03-10T12:44:23Z",
-      "updated": "2026-03-10T12:44:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09599v1"
+      "summary": "Transformers often appear to perform Bayesian reasoning in context, but verifying this rigorously has been impossible: natural data lack analytic posteriors, and large models conflate reasoning with memorization. We address this by constructing \\emph{Bayesian wind tunnels} -- controlled environments where the true posterior is known in closed form and memorization is provably impossible. In these settings, small transformers reproduce Bayesian posteriors with $10^{-3}$-$10^{-4}$ bit accuracy, while capacity-matched MLPs fail by orders of magnitude, establishing a clear architectural separation. Across two tasks -- bijection elimination and Hidden Markov Model (HMM) state tracking -- we find that transformers implement Bayesian inference through a consistent geometric mechanism: residual streams serve as the belief substrate, feed-forward networks perform the posterior update, and attention provides content-addressable routing. Geometric diagnostics reveal orthogonal key bases, progressive query-key alignment, and a low-dimensional value manifold parameterized by posterior entropy. During training this manifold unfurls while attention patterns remain stable, a \\emph{frame-precision dissociation} predicted by recent gradient analyses. Taken together, these results demonstrate that hierarchical attention realizes Bayesian inference by geometric design, explaining both the necessity of attention and the failure of flat architectures. Bayesian wind tunnels provide a foundation for mechanistically connecting small, verifiable systems to reasoning phenomena observed in large language models.",
+      "published": "2025-12-27T05:28:58Z",
+      "updated": "2026-03-11T17:22:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.22471v4"
     },
     {
-      "id": "http://arxiv.org/abs/2509.07968v2",
-      "title": "SimpleQA Verified: A Reliable Factuality Benchmark to Measure Parametric Knowledge",
+      "id": "http://arxiv.org/abs/2506.07527v3",
+      "title": "Learning What Reinforcement Learning Can't: Interleaved Online Fine-Tuning for Hardest Questions",
       "authors": [
-        "Lukas Haas",
-        "Gal Yona",
-        "Giovanni D'Antonio",
-        "Sasha Goldshtein",
-        "Dipanjan Das"
+        "Lu Ma",
+        "Hao Liang",
+        "Meiyi Qiang",
+        "Lexiang Tang",
+        "Xiaochen Ma",
+        "Zhen Hao Wong",
+        "Junbo Niu",
+        "Chengyu Shen",
+        "Runming He",
+        "Yanhao Li",
+        "Bin Cui",
+        "Wentao Zhang"
       ],
-      "summary": "We introduce SimpleQA Verified, a 1,000-prompt benchmark for evaluating Large Language Model (LLM) short-form factuality based on OpenAI's SimpleQA. It addresses critical limitations in OpenAI's benchmark, including noisy and incorrect labels, topical biases, and question redundancy. SimpleQA Verified was created through a rigorous multi-stage filtering process involving de-duplication, topic balancing, and source reconciliation to produce a more reliable and challenging evaluation set, alongside improvements in the autorater prompt. On this new benchmark, Gemini 2.5 Pro achieves a state-of-the-art F1-score of 55.6, outperforming other frontier models, including GPT-5. This work provides the research community with a higher-fidelity tool to track genuine progress in parametric model factuality and to mitigate hallucinations. The benchmark dataset, evaluation code, and leaderboard are available at: https://www.kaggle.com/benchmarks/deepmind/simpleqa-verified.",
-      "published": "2025-09-09T17:53:58Z",
-      "updated": "2026-03-10T12:28:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.07968v2"
+      "summary": "Recent advances in large language model (LLM) reasoning have shown that sophisticated behaviors such as planning and self-reflection can emerge through reinforcement learning (RL). However, despite these successes, RL in its current form remains insufficient to induce capabilities that exceed the limitations of the base model, as it is primarily optimized based on existing knowledge of the model rather than facilitating the acquisition of new information. To address this limitation, we employ supervised fine-tuning (SFT) to learn what RL cannot, which enables the incorporation of new knowledge and reasoning patterns by leveraging high-quality demonstration data. We analyze the training dynamics of RL and SFT for LLM reasoning and find that RL excels at maintaining and improving performance on questions within the model's original capabilities, while SFT is more effective at enabling progress on questions beyond the current scope of the model. Motivated by the complementary strengths of RL and SFT, we introduce a novel training approach, \\textbf{ReLIFT} (\\textbf{Re}inforcement \\textbf{L}earning \\textbf{I}nterleaved with Online \\textbf{F}ine-\\textbf{T}uning). In ReLIFT, the model is primarily trained using RL, but when it encounters challenging questions, high-quality solutions are collected for fine-tuning, and the training process alternates between RL and fine-tuning to enhance the model's reasoning abilities. ReLIFT achieves an average improvement of over +5.2 points across five competition-level benchmarks and one out-of-distribution benchmark compared to other zero-RL models. Furthermore, we demonstrate that ReLIFT outperforms both RL and SFT while using only 13\\% of the detailed demonstration data, highlighting its scalability. These results provide compelling evidence that ReLIFT overcomes the fundamental limitations of RL and underscores the significant potential.",
+      "published": "2025-06-09T08:11:20Z",
+      "updated": "2026-03-11T17:08:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.07527v3"
     },
     {
-      "id": "http://arxiv.org/abs/2508.12365v4",
-      "title": "TaoSR1: The Thinking Model for E-commerce Relevance Search",
+      "id": "http://arxiv.org/abs/2503.03114v3",
+      "title": "PromCopilot: Simplifying Prometheus Metric Querying in Cloud Native Online Service Systems via Large Language Models",
       "authors": [
-        "Chenhe Dong",
-        "Shaowei Yao",
-        "Pengkun Jiao",
-        "Jianhui Yang",
-        "Yiming Jin",
-        "Zerui Huang",
-        "Xiaojiang Zhou",
-        "Dan Ou",
-        "Haihong Tang",
-        "Bo Zheng"
+        "Chenxi Zhang",
+        "Bicheng Zhang",
+        "Dingyu Yang",
+        "Xin Peng",
+        "Miao Chen",
+        "Senyu Xie",
+        "Gang Chen",
+        "Wei Bi",
+        "Wei Li"
       ],
-      "summary": "Query-product relevance prediction is a core task in e-commerce search. BERT-based models excel at semantic matching but lack complex reasoning capabilities. While Large Language Models (LLMs) are explored, most still use discriminative fine-tuning or distill to smaller models for deployment. We propose a framework to directly deploy LLMs for this task, addressing key challenges: Chain-of-Thought (CoT) error accumulation, discriminative hallucination, and deployment feasibility. Our framework, TaoSR1, involves three stages: (1) Supervised Fine-Tuning (SFT) with CoT to instill reasoning; (2) Offline sampling with a pass@N strategy and Direct Preference Optimization (DPO) to improve generation quality; and (3) Difficulty-based dynamic sampling with Group Relative Policy Optimization (GRPO) to mitigate discriminative hallucination. Additionally, post-CoT processing and a cumulative probability-based partitioning method enable efficient online deployment. TaoSR1 significantly outperforms baselines on offline datasets and achieves substantial gains in online side-by-side human evaluations, introducing a novel paradigm for applying CoT reasoning to relevance classification.",
-      "published": "2025-08-17T13:48:48Z",
-      "updated": "2026-03-10T12:18:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.12365v4"
+      "summary": "With the increasing complexity of modern online service systems, understanding the state and behavior of the systems is essential for ensuring their reliability and stability. Therefore, metric monitoring systems are widely used and become an important infrastructure in online service systems. Engineers usually interact with metrics data by manually writing domain-specific language (DSL) queries to achieve various analysis objectives. However, writing these queries can be challenging and time-consuming, as it requires engineers to have high programming skills and understand the context of the system. In this paper, we focus on PromQL, which is the metric query DSL provided by the widely used metric monitoring system Prometheus. We aim to simplify metrics querying by enabling engineers to interact with metrics data in Prometheus through natural language, and we call this task text-to-PromQL. Building upon the insight, this paper proposes PromCopilot, a Large Language Model-based text-to-PromQL framework. PromCopilot first uses a knowledge graph to describe the complex context of a cloud native online service system. Then, through the synergistic reasoning of LLMs and the knowledge graph, PromCopilot transforms engineers' natural language questions into PromQL queries. To evaluate PromCopilot, we manually construct the first text-to-PromQL benchmark dataset which contains 280 metric query questions. The experiment results show that PromCopilot is effective in text-to-PromQL. When using GPT-4 as the backbone LLM, PromCopilot achieves an accuracy of 69.1\\% in translating natural language questions to PromQL queries when using. To the best of our knowledge, this paper is the first study of text-to-PromQL, and PromCopilot pioneered the DSL generation framework for metric querying and analysis.",
+      "published": "2025-03-05T02:22:01Z",
+      "updated": "2026-03-11T16:58:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.03114v3"
     },
     {
-      "id": "http://arxiv.org/abs/2503.01236v2",
-      "title": "LLM-Advisor: An LLM Benchmark for Cost-efficient Path Planning across Multiple Terrains",
+      "id": "http://arxiv.org/abs/2603.10969v1",
+      "title": "TOSSS: a CVE-based Software Security Benchmark for Large Language Models",
       "authors": [
-        "Ling Xiao",
-        "Toshihiko Yamasaki"
+        "Marc Damie",
+        "Murat Bilgehan Ertan",
+        "Domenico Essoussi",
+        "Angela Makhanu",
+        "Gaëtan Peter",
+        "Roos Wensveen"
       ],
-      "summary": "Cost-efficient path planning across multiple terrains is a crucial task in robot navigation, requiring the identification of a path from the start to the goal that not only avoids obstacles but also minimizes the overall travel cost. This is especially crucial for real-world applications where robots need to navigate diverse terrains in outdoor environments with limited opportunities for recharging or refueling. Despite its practical importance, cost-efficient path planning across heterogeneous terrains has received relatively limited attention in prior work. In this paper, we propose LLM-Advisor, a prompt-based, planner-agnostic framework that leverages large language models (LLMs) as non-decisive post-processing advisors for cost refinement, without modifying the underlying planner. While we observe that LLMs may occasionally produce implausible suggestions, we introduce two effective hallucination-mitigation strategies. We further introduce two datasets, MultiTerraPath and RUGD_v2, for systematic evaluation of cost-efficient path planning. Extensive experiments reveal that state-of-the-art LLMs, including GPT-4o, GPT-4-turbo, Gemini-2.5-Flash, and Claude-Opus-4, perform poorly in zero-shot terrain-aware path planning, highlighting their limited spatial reasoning capability. In contrast, the proposed LLM-Advisor (with GPT-4o) improves cost efficiency for 72.37% of A*-planned paths, 69.47% of RRT*-planned paths, and 78.70% of LLM-A*-planned paths. On the MultiTerraPath dataset, LLM-Advisor demonstrates stronger performance on the hard subset, further validating its applicability to real-world scenarios.",
-      "published": "2025-03-03T07:02:10Z",
-      "updated": "2026-03-10T12:06:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2503.01236v2"
+      "summary": "With their increasing capabilities, Large Language Models (LLMs) are now used across many industries. They have become useful tools for software engineers and support a wide range of development tasks. As LLMs are increasingly used in software development workflows, a critical question arises: are LLMs good at software security? At the same time, organizations worldwide invest heavily in cybersecurity to reduce exposure to disruptive attacks. The integration of LLMs into software engineering workflows may introduce new vulnerabilities and weaken existing security efforts. We introduce TOSSS (Two-Option Secure Snippet Selection), a benchmark that measures the ability of LLMs to choose between secure and vulnerable code snippets. Existing security benchmarks for LLMs cover only a limited range of vulnerabilities. In contrast, TOSSS relies on the CVE database and provides an extensible framework that can integrate newly disclosed vulnerabilities over time. Our benchmark gives each model a security score between 0 and 1 based on its behavior; a score of 1 indicates that the model always selects the secure snippet, while a score of 0 indicates that it always selects the vulnerable one. We evaluate 14 widely used open-source and closed-source models on C/C++ and Java code and observe scores ranging from 0.48 to 0.89. LLM providers already publish many benchmark scores for their models, and TOSSS could become a complementary security-focused score to include in these reports.",
+      "published": "2026-03-11T16:54:01Z",
+      "updated": "2026-03-11T16:54:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.10969v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09544v1",
-      "title": "Compartmentalization-Aware Automated Program Repair",
+      "id": "http://arxiv.org/abs/2602.14286v2",
+      "title": "Online LLM watermark detection via e-processes",
       "authors": [
-        "Jia Hu",
-        "Youcheng Sun",
-        "Pierre Olivier"
+        "Weijie Su",
+        "Ruodu Wang",
+        "Zinan Zhao"
       ],
-      "summary": "Software compartmentalization breaks down an application into compartments isolated from each other: an attacker taking over a compartment will be confined to it, limiting the damage they can cause to the rest of the application. Despite the security promises of this approach, recent studies have shown that most existing compartmentalized software is plagued by vulnerabilities at cross-compartment interfaces, allowing an attacker taking over a compartment to escape its confinement and negate the security guarantees expected from compartmentalization. In that context, securing cross-compartment interfaces is notoriously difficult and engineering-intensive. In light of recent advances in Automated Program Repair (APR), notably through the use of Large Language Models (LLMs), this paper presents a work in progress investigating the suitability of LLM-based APR at securing cross-compartment interfaces as automatically as possible. We observe that existing APR approaches and general purpose/code-centric LLMs used as is are unfit for this task, and present the design, implementation, and early results of a new APR framework dedicated to compartment interface safety. The framework integrates into a feedback loop 1) a specialized fuzzer uncovering cross-compartment interface vulnerabilities; 2) a patch generation component bridging the lack of compartmentalization awareness of existing LLMs with a series of analysis techniques; and 3) a patch validation component assessing the effectiveness of generated vulnerability fixes. We validate our framework over a sample interface vulnerability, comparing it to a naive use of general-purpose LLMs, and discuss future research avenues.",
-      "published": "2026-03-10T11:55:23Z",
-      "updated": "2026-03-10T11:55:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09544v1"
+      "summary": "Watermarking for large language models (LLMs) has emerged as an effective tool for distinguishing AI-generated text from human-written content. Statistically, watermark schemes induce dependence between generated tokens and a pseudo-random sequence, reducing watermark detection to a hypothesis testing problem on independence. We develop a unified framework for LLM watermark detection based on e-processes, providing anytime-valid guarantees for online testing. We propose various methods to construct empirically adaptive e-processes that can enhance the detection power. The proposed methods are applicable to any sequential testing problem where independent pivotal statistics are available. In addition, theoretical results are established to characterize the power properties of the proposed procedures. Some experiments demonstrate that the proposed framework achieves competitive performance compared to existing watermark detection methods.",
+      "published": "2026-02-15T19:37:06Z",
+      "updated": "2026-03-11T16:32:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.14286v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09536v1",
-      "title": "Dynamic Multimodal Expression Generation for LLM-Driven Pedagogical Agents: From User Experience Perspective",
+      "id": "http://arxiv.org/abs/2603.10933v1",
+      "title": "Bridging the Skill Gap in Clinical CBCT Interpretation with CBCTRepD",
       "authors": [
-        "Ninghao Wan",
-        "Jiarun Song",
-        "Fuzheng Yang"
+        "Qinxin Wu",
+        "Fucheng Niu",
+        "Hengchuan Zhu",
+        "Yifan Sun",
+        "Ye Shen",
+        "Xu Li",
+        "Han Wu",
+        "Leqi Liu",
+        "Zhiwen Pan",
+        "Zuozhu Liu",
+        "Fudong Zhu",
+        "Bin Feng"
       ],
-      "summary": "In virtual reality (VR) educational scenarios, Pedagogical agents (PAs) enhance immersive learning through realistic appearances and interactive behaviors. However, most existing PAs rely on static speech and simple gestures. This limitation reduces their ability to dynamically adapt to the semantic context of instructional content. As a result, interactions often lack naturalness and effectiveness in the teaching process. To address this challenge, this study proposes a large language model (LLM)-driven multimodal expression generation method that constructs semantically sensitive prompts to generate coordinated speech and gesture instructions, enabling dynamic alignment between instructional semantics and multimodal expressive behaviors. A VR-based PA prototype was developed and evaluated through user experience-oriented subjective experiments. Results indicate that dynamically generated multimodal expressions significantly enhance learners' perceived learning effectiveness, engagement, and intention to use, while effectively alleviating feelings of fatigue and boredom during the learning process. Furthermore, the combined dynamic expression of speech and gestures notably enhances learners' perceptions of human-likeness and social presence. The findings provide new insights and design guidelines for building more immersive and naturally expressive intelligent PAs.",
-      "published": "2026-03-10T11:48:37Z",
-      "updated": "2026-03-10T11:48:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09536v1"
+      "summary": "Generative AI has advanced rapidly in medical report generation; however, its application to oral and maxillofacial CBCT reporting remains limited, largely because of the scarcity of high-quality paired CBCT-report data and the intrinsic complexity of volumetric CBCT interpretation. To address this, we introduce CBCTRepD, a bilingual oral and maxillofacial CBCT report-generation system designed for integration into routine radiologist-AI co-authoring workflows. We curated a large-scale, high-quality paired CBCT-report dataset comprising approximately 7,408 studies, covering 55 oral disease entities across diverse acquisition settings, and used it to develop the system. We further established a clinically grounded, multi-level evaluation framework that assesses both direct AI-generated drafts and radiologist-edited collaboration reports using automatic metrics together with radiologist- and clinician-centered evaluation. Using this framework, we show that CBCTRepD achieves superior report-generation performance and produces drafts with writing quality and standardization comparable to those of intermediate radiologists. More importantly, in radiologist-AI collaboration, CBCTRepD provides consistent and clinically meaningful benefits across experience levels: it helps novice radiologists improve toward intermediate-level reporting, enables intermediate radiologists to approach senior-level performance, and even assists senior radiologists by reducing omission-related errors, including clinically important missed lesions. By improving report structure, reducing omissions, and promoting attention to co-existing lesions across anatomical regions, CBCTRepD shows strong and reliable potential as a practical assistant for real-world CBCT reporting across multi-level care settings.",
+      "published": "2026-03-11T16:18:07Z",
+      "updated": "2026-03-11T16:18:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.10933v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09533v1",
-      "title": "Enhancing Debunking Effectiveness through LLM-based Personality Adaptation",
+      "id": "http://arxiv.org/abs/2508.20744v2",
+      "title": "From Law to Gherkin: A Human-Centred Quasi-Experiment on the Quality of LLM-Generated Behavioural Specifications from Food-Safety Regulations",
       "authors": [
-        "Pietro Dell'Oglio",
-        "Alessandro Bondielli",
-        "Francesco Marcelloni",
-        "Lucia C. Passaro"
+        "Shabnam Hassani",
+        "Mehrdad Sabetzadeh",
+        "Daniel Amyot"
       ],
-      "summary": "This study proposes a novel methodology for generating personalized fake news debunking messages by prompting Large Language Models (LLMs) with persona-based inputs aligned to the Big Five personality traits: Extraversion, Agreeableness, Conscientiousness, Neuroticism, and Openness. Our approach guides LLMs to transform generic debunking content into personalized versions tailored to specific personality profiles. To assess the effectiveness of these transformations, we employ a separate LLM as an automated evaluator simulating corresponding personality traits, thereby eliminating the need for costly human evaluation panels. Our results show that personalized messages are generally seen as more persuasive than generic ones. We also find that traits like Openness tend to increase persuadability, while Neuroticism can lower it. Differences between LLM evaluators suggest that using multiple models provides a clearer picture. Overall, this work demonstrates a practical way to create more targeted debunking messages exploiting LLMs, while also raising important ethical questions about how such technology might be used.",
-      "published": "2026-03-10T11:44:17Z",
-      "updated": "2026-03-10T11:44:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09533v1"
+      "summary": "Context: Laws and regulations increasingly shape software design, development, and quality assurance in regulated domains. Because legal provisions are written in technology-neutral language, deriving concrete specifications, requirements, and acceptance criteria to verify software compliance is difficult and error-prone. Recent advances in generative AI, especially large language models (LLMs), may help automate this process. Objective: We present the first systematic human-subject evaluation of LLMs' ability to derive Gherkin behavioural specifications from legal texts using a quasi-experimental design. Gherkin is a domain-specific language for scenario-based system behaviour descriptions in Given-When-Then form and is well suited to automation in software development. Methods: Ten participants evaluated 60 Gherkin specifications generated from food-safety regulations by Claude and Llama. Each participant assessed 12 specifications across five criteria: relevance, clarity, completeness, singularity, and time savings. Each specification was evaluated by two participants, yielding 120 assessments with quantitative ratings and qualitative feedback. Results: Ratings were uniformly high in the top two categories: relevance 95%, clarity 100%, completeness 94.2%, singularity 93.4%, and time savings 91.7%. No statistically reliable differences were found across participants or between LLMs. Qualitative feedback noted occasional omissions, hallucinations, and mixed intents, underscoring the need for human oversight, especially in safety-critical domains. Conclusion: In food safety, LLMs can assist in deriving Gherkin specifications from legal texts, but omissions and hallucinations require systematic human review.",
+      "published": "2025-08-28T13:04:34Z",
+      "updated": "2026-03-11T16:05:10Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.20744v2"
     },
     {
-      "id": "http://arxiv.org/abs/2508.18722v3",
-      "title": "VistaWise: Building Cost-Effective Agent with Cross-Modal Knowledge Graph for Minecraft",
+      "id": "http://arxiv.org/abs/2410.21271v5",
+      "title": "EoRA: Fine-tuning-free Compensation for Compressed LLM with Eigenspace Low-Rank Approximation",
       "authors": [
-        "Honghao Fu",
-        "Junlong Ren",
-        "Qi Chai",
-        "Deheng Ye",
-        "Yujun Cai",
-        "Hao Wang"
+        "Shih-Yang Liu",
+        "Maksim Khadkevich",
+        "Nai Chit Fung",
+        "Charbel Sakr",
+        "Chao-Han Huck Yang",
+        "Chien-Yi Wang",
+        "Saurav Muralidharan",
+        "Hongxu Yin",
+        "Kwang-Ting Cheng",
+        "Jan Kautz",
+        "Yu-Chiang Frank Wang",
+        "Pavlo Molchanov",
+        "Min-Hung Chen"
       ],
-      "summary": "Large language models (LLMs) have shown significant promise in embodied decision-making tasks within virtual open-world environments. Nonetheless, their performance is hindered by the absence of domain-specific knowledge. Methods that finetune on large-scale domain-specific data entail prohibitive development costs. This paper introduces VistaWise, a cost-effective agent framework that integrates cross-modal domain knowledge and finetunes a dedicated object detection model for visual analysis. It reduces the requirement for domain-specific training data from millions of samples to a few hundred. VistaWise integrates visual information and textual dependencies into a cross-modal knowledge graph (KG), enabling a comprehensive and accurate understanding of multimodal environments. We also equip the agent with a retrieval-based pooling strategy to extract task-related information from the KG, and a desktop-level skill library to support direct operation of the Minecraft desktop client via mouse and keyboard inputs. Experimental results demonstrate that VistaWise achieves state-of-the-art performance across various open-world tasks, highlighting its effectiveness in reducing development costs while enhancing agent performance.",
-      "published": "2025-08-26T06:39:15Z",
-      "updated": "2026-03-10T11:25:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.18722v3"
+      "summary": "While post-training compression techniques effectively reduce the memory footprint, latency, and power consumption of Large Language Models (LLMs), they often result in noticeable accuracy degradation and remain limited by hardware and kernel constraints that restrict supported compression formats ultimately reducing flexibility across a wide range of deployment scenarios. In this work, we propose EoRA, a novel fine-tuning-free method that augments compressed LLMs with low-rank matrices, allowing users to rapidly enhance task-specific performance and freely balance the trade-off between accuracy and computational overhead beyond the constraints of compression formats. EoRA consistently outperforms prior training-free low rank methods in recovering the accuracy of compressed LLMs, achieving notable accuracy improvements (e.g., $\\mathbf{10.84\\%}$ on ARC-Challenge, $\\mathbf{6.74\\%}$ on MathQA, and $\\mathbf{11.45\\%}$ on GSM8K) for LLaMA3-8B compressed to 3-bit. We also introduce an optimized CUDA kernel, accelerating inference by up to 1.4x and reducing memory overhead through quantizing EoRA. Overall, EoRA offers a prompt solution for improving the accuracy of compressed models under varying user requirements, enabling more efficient and flexible deployment of LLMs. Code is available at https://github.com/NVlabs/EoRA.",
+      "published": "2024-10-28T17:59:03Z",
+      "updated": "2026-03-11T16:03:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.21271v5"
     },
     {
-      "id": "http://arxiv.org/abs/2603.08501v2",
-      "title": "Fanar-Sadiq: A Multi-Agent Architecture for Grounded Islamic QA",
+      "id": "http://arxiv.org/abs/2603.08935v2",
+      "title": "PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration",
       "authors": [
-        "Ummar Abbas",
-        "Mourad Ouzzani",
-        "Mohamed Y. Eltabakh",
-        "Omar Sinan",
-        "Gagan Bhatia",
-        "Hamdy Mubarak",
-        "Majd Hawasly",
-        "Mohammed Qusay Hashim",
-        "Kareem Darwish",
-        "Firoj Alam"
+        "Abdul Rehman Akbar",
+        "Samuel Wales-McGrath",
+        "Alejadro Levya",
+        "Lina Gokhale",
+        "Rajendra Singh",
+        "Wei Chen",
+        "Anil Parwani",
+        "Muhammad Khalid Khan Niazi"
       ],
-      "summary": "Large language models (LLMs) can answer religious knowledge queries fluently, yet they often hallucinate and misattribute sources, which is especially consequential in Islamic settings where users expect grounding in canonical texts (Qur'an and Hadith) and jurisprudential (fiqh) nuance. Retrieval-augmented generation (RAG) reduces some of these limitations by grounding generation in external evidence. However, a single ``retrieve-then-generate'' pipeline is limited to deal with the diversity of Islamic queries. Users may request verbatim scripture, fatwa-style guidance with citations or rule-constrained computations such as zakat and inheritance that require strict arithmetic and legal invariants. In this work, we present a bilingual (Arabic/English) multi-agent Islamic assistant, called Fanar-Sadiq, which is a core component of the Fanar AI platform. Fanar-Sadiq routes Islamic-related queries to specialized modules within an agentic, tool-using architecture. The system supports intent-aware routing, retrieval-grounded fiqh answers with deterministic citation normalization and verification traces, exact verse lookup with quotation validation, and deterministic calculators for Sunni zakat and inheritance with madhhab-sensitive branching. We evaluate the complete end-to-end system on public Islamic QA benchmarks and demonstrate effectiveness and efficiency. Our system is currently publicly and freely accessible through API and a Web application, and has been accessed $\\approx$1.9M times in less than a year.",
-      "published": "2026-03-09T15:35:12Z",
-      "updated": "2026-03-10T11:16:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.08501v2"
+      "summary": "Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms.",
+      "published": "2026-03-09T21:09:24Z",
+      "updated": "2026-03-11T16:00:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.08935v2"
     }
   ]
 }
