@@ -1,207 +1,214 @@
 {
-  "generated_at_utc": "2026-03-12T02:03:40Z",
+  "generated_at_utc": "2026-03-13T02:01:01Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.11025v1",
-      "title": "LLMGreenRec: LLM-Based Multi-Agent Recommender System for Sustainable E-Commerce",
+      "id": "http://arxiv.org/abs/2603.12266v1",
+      "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
       "authors": [
-        "Hao N. Nguyen",
-        "Hieu M. Nguyen",
-        "Son Van Nguyen",
-        "Nguyen Thi Hanh"
+        "Haozhan Shen",
+        "Shilin Yan",
+        "Hongwei Xue",
+        "Shuaiqi Lu",
+        "Xiaojun Tang",
+        "Guannan Zhang",
+        "Tiancheng Zhao",
+        "Jianwei Yin"
       ],
-      "summary": "Rising environmental awareness in e-commerce necessitates recommender systems that not only guide users to sustainable products but also minimize their own digital carbon footprints. Traditional session-based systems, optimized for short-term conversions, often fail to capture nuanced user intents for eco-friendly choices, perpetuating a gap between green intentions and actions. To tackle this, we introduce LLMGreenRec, a novel multi-agent framework that leverages Large Language Models (LLMs) to promote sustainable consumption. Through collaborative analysis of user interactions and iterative prompt refinement, LLMGreenRec's specialized agents deduce green-oriented user intents and prioritize eco-friendly product recommendations. Notably, this intent-driven approach also reduces unnecessary interactions and energy consumption. Extensive experiments on benchmark datasets validate LLMGreenRec's effectiveness in recommending sustainable products, demonstrating a robust solution that fosters a responsible digital economy.",
-      "published": "2026-03-11T17:49:53Z",
-      "updated": "2026-03-11T17:49:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.11025v1"
+      "summary": "Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., \"if a permission dialog appears and the color of the interface is green, click Allow\") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.",
+      "published": "2026-03-12T17:59:56Z",
+      "updated": "2026-03-12T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12266v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.11021v1",
-      "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
+      "id": "http://arxiv.org/abs/2603.12262v1",
+      "title": "Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously",
       "authors": [
-        "Tycho F. A. van der Ouderaa",
-        "Mart van Baalen",
-        "Paul Whatmough",
-        "Markus Nagel"
+        "Yiran Guan",
+        "Liang Yin",
+        "Dingkang Liang",
+        "Jianzhong Ju",
+        "Zhenbo Luo",
+        "Jian Luan",
+        "Yuliang Liu",
+        "Xiang Bai"
       ],
-      "summary": "Scalar quantization of large language models (LLMs) is fundamentally limited by information-theoretic bounds. While vector quantization (VQ) overcomes these limits by encoding blocks of parameters jointly, practical implementations must avoid the need for expensive lookup mechanisms or other explicit codebook storage. Lattice approaches address this through highly structured and dense packing. This paper explores the Leech lattice, which, with its optimal sphere packing and kissing configurations at 24 dimensions, is the highest dimensional lattice known with such optimal properties. To make the Leech lattice usable for LLM quantization, we extend an existing search algorithm based on the extended Golay code construction, to i) support indexing, enabling conversion to and from bitstrings without materializing the codebook, ii) allow angular search over union of Leech lattice shells, iii) propose fully-parallelisable dequantization kernel. Together this yields a practical algorithm, namely Leech Lattice Vector Quantization (LLVQ). LLVQ delivers state-of-the-art LLM quantization performance, outperforming recent methods such as Quip\\#, QTIP, and PVQ. These results highlight the importance of high-dimensional lattices for scalable, theoretically grounded model compression.",
-      "published": "2026-03-11T17:48:45Z",
-      "updated": "2026-03-11T17:48:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.11021v1"
+      "summary": "Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response latency. To address this trade-off, we propose Video Streaming Thinking (VST), a novel paradigm for streaming video understanding. It supports a thinking while watching mechanism, which activates reasoning over incoming video clips during streaming. This design improves timely comprehension and coherent cognition while preserving real-time responsiveness by amortizing LLM reasoning latency over video playback. Furthermore, we introduce a comprehensive post-training pipeline that integrates VST-SFT, which structurally adapts the offline VideoLLM to causal streaming reasoning, and VST-RL, which provides end-to-end improvement through self-exploration in a multi-turn video interaction environment. Additionally, we devise an automated training-data synthesis pipeline that uses video knowledge graphs to generate high-quality streaming QA pairs, with an entity-relation grounded streaming Chain-of-Thought to enforce multi-evidence reasoning and sustained attention to the video stream. Extensive evaluations show that VST-7B performs strongly on online benchmarks, e.g. 79.5% on StreamingBench and 59.3% on OVO-Bench. Meanwhile, VST remains competitive on offline long-form or reasoning benchmarks. Compared with Video-R1, VST responds 15.7 times faster and achieves +5.4% improvement on VideoHolmes, demonstrating higher efficiency and strong generalization across diverse video understanding tasks. Code, data, and models will be released at https://github.com/1ranGuan/VST.",
+      "published": "2026-03-12T17:59:51Z",
+      "updated": "2026-03-12T17:59:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12262v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.11008v1",
-      "title": "A Systematic Study of Pseudo-Relevance Feedback with LLMs",
+      "id": "http://arxiv.org/abs/2603.12254v1",
+      "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
       "authors": [
-        "Nour Jedidi",
-        "Jimmy Lin"
-      ],
-      "summary": "Pseudo-relevance feedback (PRF) methods built on large language models (LLMs) can be organized along two key design dimensions: the feedback source, which is where the feedback text is derived from and the feedback model, which is how the given feedback text is used to refine the query representation. However, the independent role that each dimension plays is unclear, as both are often entangled in empirical evaluations. In this paper, we address this gap by systematically studying how the choice of feedback source and feedback model impact PRF effectiveness through controlled experimentation. Across 13 low-resource BEIR tasks with five LLM PRF methods, our results show: (1) the choice of feedback model can play a critical role in PRF effectiveness; (2) feedback derived solely from LLM-generated text provides the most cost-effective solution; and (3) feedback derived from the corpus is most beneficial when utilizing candidate documents from a strong first-stage retriever. Together, our findings provide a better understanding of which elements in the PRF design space are most important.",
-      "published": "2026-03-11T17:31:50Z",
-      "updated": "2026-03-11T17:31:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.11008v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2512.22471v4",
-      "title": "The Bayesian Geometry of Transformer Attention",
-      "authors": [
-        "Naman Agarwal",
-        "Siddhartha R. Dalal",
-        "Vishal Misra"
-      ],
-      "summary": "Transformers often appear to perform Bayesian reasoning in context, but verifying this rigorously has been impossible: natural data lack analytic posteriors, and large models conflate reasoning with memorization. We address this by constructing \\emph{Bayesian wind tunnels} -- controlled environments where the true posterior is known in closed form and memorization is provably impossible. In these settings, small transformers reproduce Bayesian posteriors with $10^{-3}$-$10^{-4}$ bit accuracy, while capacity-matched MLPs fail by orders of magnitude, establishing a clear architectural separation. Across two tasks -- bijection elimination and Hidden Markov Model (HMM) state tracking -- we find that transformers implement Bayesian inference through a consistent geometric mechanism: residual streams serve as the belief substrate, feed-forward networks perform the posterior update, and attention provides content-addressable routing. Geometric diagnostics reveal orthogonal key bases, progressive query-key alignment, and a low-dimensional value manifold parameterized by posterior entropy. During training this manifold unfurls while attention patterns remain stable, a \\emph{frame-precision dissociation} predicted by recent gradient analyses. Taken together, these results demonstrate that hierarchical attention realizes Bayesian inference by geometric design, explaining both the necessity of attention and the failure of flat architectures. Bayesian wind tunnels provide a foundation for mechanistically connecting small, verifiable systems to reasoning phenomena observed in large language models.",
-      "published": "2025-12-27T05:28:58Z",
-      "updated": "2026-03-11T17:22:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.22471v4"
-    },
-    {
-      "id": "http://arxiv.org/abs/2506.07527v3",
-      "title": "Learning What Reinforcement Learning Can't: Interleaved Online Fine-Tuning for Hardest Questions",
-      "authors": [
-        "Lu Ma",
-        "Hao Liang",
-        "Meiyi Qiang",
-        "Lexiang Tang",
-        "Xiaochen Ma",
-        "Zhen Hao Wong",
-        "Junbo Niu",
-        "Chengyu Shen",
-        "Runming He",
-        "Yanhao Li",
-        "Bin Cui",
-        "Wentao Zhang"
-      ],
-      "summary": "Recent advances in large language model (LLM) reasoning have shown that sophisticated behaviors such as planning and self-reflection can emerge through reinforcement learning (RL). However, despite these successes, RL in its current form remains insufficient to induce capabilities that exceed the limitations of the base model, as it is primarily optimized based on existing knowledge of the model rather than facilitating the acquisition of new information. To address this limitation, we employ supervised fine-tuning (SFT) to learn what RL cannot, which enables the incorporation of new knowledge and reasoning patterns by leveraging high-quality demonstration data. We analyze the training dynamics of RL and SFT for LLM reasoning and find that RL excels at maintaining and improving performance on questions within the model's original capabilities, while SFT is more effective at enabling progress on questions beyond the current scope of the model. Motivated by the complementary strengths of RL and SFT, we introduce a novel training approach, \\textbf{ReLIFT} (\\textbf{Re}inforcement \\textbf{L}earning \\textbf{I}nterleaved with Online \\textbf{F}ine-\\textbf{T}uning). In ReLIFT, the model is primarily trained using RL, but when it encounters challenging questions, high-quality solutions are collected for fine-tuning, and the training process alternates between RL and fine-tuning to enhance the model's reasoning abilities. ReLIFT achieves an average improvement of over +5.2 points across five competition-level benchmarks and one out-of-distribution benchmark compared to other zero-RL models. Furthermore, we demonstrate that ReLIFT outperforms both RL and SFT while using only 13\\% of the detailed demonstration data, highlighting its scalability. These results provide compelling evidence that ReLIFT overcomes the fundamental limitations of RL and underscores the significant potential.",
-      "published": "2025-06-09T08:11:20Z",
-      "updated": "2026-03-11T17:08:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.07527v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2503.03114v3",
-      "title": "PromCopilot: Simplifying Prometheus Metric Querying in Cloud Native Online Service Systems via Large Language Models",
-      "authors": [
-        "Chenxi Zhang",
-        "Bicheng Zhang",
-        "Dingyu Yang",
-        "Xin Peng",
-        "Miao Chen",
-        "Senyu Xie",
-        "Gang Chen",
-        "Wei Bi",
-        "Wei Li"
-      ],
-      "summary": "With the increasing complexity of modern online service systems, understanding the state and behavior of the systems is essential for ensuring their reliability and stability. Therefore, metric monitoring systems are widely used and become an important infrastructure in online service systems. Engineers usually interact with metrics data by manually writing domain-specific language (DSL) queries to achieve various analysis objectives. However, writing these queries can be challenging and time-consuming, as it requires engineers to have high programming skills and understand the context of the system. In this paper, we focus on PromQL, which is the metric query DSL provided by the widely used metric monitoring system Prometheus. We aim to simplify metrics querying by enabling engineers to interact with metrics data in Prometheus through natural language, and we call this task text-to-PromQL. Building upon the insight, this paper proposes PromCopilot, a Large Language Model-based text-to-PromQL framework. PromCopilot first uses a knowledge graph to describe the complex context of a cloud native online service system. Then, through the synergistic reasoning of LLMs and the knowledge graph, PromCopilot transforms engineers' natural language questions into PromQL queries. To evaluate PromCopilot, we manually construct the first text-to-PromQL benchmark dataset which contains 280 metric query questions. The experiment results show that PromCopilot is effective in text-to-PromQL. When using GPT-4 as the backbone LLM, PromCopilot achieves an accuracy of 69.1\\% in translating natural language questions to PromQL queries when using. To the best of our knowledge, this paper is the first study of text-to-PromQL, and PromCopilot pioneered the DSL generation framework for metric querying and analysis.",
-      "published": "2025-03-05T02:22:01Z",
-      "updated": "2026-03-11T16:58:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2503.03114v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2603.10969v1",
-      "title": "TOSSS: a CVE-based Software Security Benchmark for Large Language Models",
-      "authors": [
-        "Marc Damie",
-        "Murat Bilgehan Ertan",
-        "Domenico Essoussi",
-        "Angela Makhanu",
-        "Gaëtan Peter",
-        "Roos Wensveen"
-      ],
-      "summary": "With their increasing capabilities, Large Language Models (LLMs) are now used across many industries. They have become useful tools for software engineers and support a wide range of development tasks. As LLMs are increasingly used in software development workflows, a critical question arises: are LLMs good at software security? At the same time, organizations worldwide invest heavily in cybersecurity to reduce exposure to disruptive attacks. The integration of LLMs into software engineering workflows may introduce new vulnerabilities and weaken existing security efforts. We introduce TOSSS (Two-Option Secure Snippet Selection), a benchmark that measures the ability of LLMs to choose between secure and vulnerable code snippets. Existing security benchmarks for LLMs cover only a limited range of vulnerabilities. In contrast, TOSSS relies on the CVE database and provides an extensible framework that can integrate newly disclosed vulnerabilities over time. Our benchmark gives each model a security score between 0 and 1 based on its behavior; a score of 1 indicates that the model always selects the secure snippet, while a score of 0 indicates that it always selects the vulnerable one. We evaluate 14 widely used open-source and closed-source models on C/C++ and Java code and observe scores ranging from 0.48 to 0.89. LLM providers already publish many benchmark scores for their models, and TOSSS could become a complementary security-focused score to include in these reports.",
-      "published": "2026-03-11T16:54:01Z",
-      "updated": "2026-03-11T16:54:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.10969v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2602.14286v2",
-      "title": "Online LLM watermark detection via e-processes",
-      "authors": [
-        "Weijie Su",
-        "Ruodu Wang",
-        "Zinan Zhao"
-      ],
-      "summary": "Watermarking for large language models (LLMs) has emerged as an effective tool for distinguishing AI-generated text from human-written content. Statistically, watermark schemes induce dependence between generated tokens and a pseudo-random sequence, reducing watermark detection to a hypothesis testing problem on independence. We develop a unified framework for LLM watermark detection based on e-processes, providing anytime-valid guarantees for online testing. We propose various methods to construct empirically adaptive e-processes that can enhance the detection power. The proposed methods are applicable to any sequential testing problem where independent pivotal statistics are available. In addition, theoretical results are established to characterize the power properties of the proposed procedures. Some experiments demonstrate that the proposed framework achieves competitive performance compared to existing watermark detection methods.",
-      "published": "2026-02-15T19:37:06Z",
-      "updated": "2026-03-11T16:32:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.14286v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2603.10933v1",
-      "title": "Bridging the Skill Gap in Clinical CBCT Interpretation with CBCTRepD",
-      "authors": [
-        "Qinxin Wu",
-        "Fucheng Niu",
-        "Hengchuan Zhu",
-        "Yifan Sun",
-        "Ye Shen",
-        "Xu Li",
-        "Han Wu",
-        "Leqi Liu",
-        "Zhiwen Pan",
-        "Zuozhu Liu",
-        "Fudong Zhu",
-        "Bin Feng"
-      ],
-      "summary": "Generative AI has advanced rapidly in medical report generation; however, its application to oral and maxillofacial CBCT reporting remains limited, largely because of the scarcity of high-quality paired CBCT-report data and the intrinsic complexity of volumetric CBCT interpretation. To address this, we introduce CBCTRepD, a bilingual oral and maxillofacial CBCT report-generation system designed for integration into routine radiologist-AI co-authoring workflows. We curated a large-scale, high-quality paired CBCT-report dataset comprising approximately 7,408 studies, covering 55 oral disease entities across diverse acquisition settings, and used it to develop the system. We further established a clinically grounded, multi-level evaluation framework that assesses both direct AI-generated drafts and radiologist-edited collaboration reports using automatic metrics together with radiologist- and clinician-centered evaluation. Using this framework, we show that CBCTRepD achieves superior report-generation performance and produces drafts with writing quality and standardization comparable to those of intermediate radiologists. More importantly, in radiologist-AI collaboration, CBCTRepD provides consistent and clinically meaningful benefits across experience levels: it helps novice radiologists improve toward intermediate-level reporting, enables intermediate radiologists to approach senior-level performance, and even assists senior radiologists by reducing omission-related errors, including clinically important missed lesions. By improving report structure, reducing omissions, and promoting attention to co-existing lesions across anatomical regions, CBCTRepD shows strong and reliable potential as a practical assistant for real-world CBCT reporting across multi-level care settings.",
-      "published": "2026-03-11T16:18:07Z",
-      "updated": "2026-03-11T16:18:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.10933v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2508.20744v2",
-      "title": "From Law to Gherkin: A Human-Centred Quasi-Experiment on the Quality of LLM-Generated Behavioural Specifications from Food-Safety Regulations",
-      "authors": [
-        "Shabnam Hassani",
-        "Mehrdad Sabetzadeh",
-        "Daniel Amyot"
-      ],
-      "summary": "Context: Laws and regulations increasingly shape software design, development, and quality assurance in regulated domains. Because legal provisions are written in technology-neutral language, deriving concrete specifications, requirements, and acceptance criteria to verify software compliance is difficult and error-prone. Recent advances in generative AI, especially large language models (LLMs), may help automate this process. Objective: We present the first systematic human-subject evaluation of LLMs' ability to derive Gherkin behavioural specifications from legal texts using a quasi-experimental design. Gherkin is a domain-specific language for scenario-based system behaviour descriptions in Given-When-Then form and is well suited to automation in software development. Methods: Ten participants evaluated 60 Gherkin specifications generated from food-safety regulations by Claude and Llama. Each participant assessed 12 specifications across five criteria: relevance, clarity, completeness, singularity, and time savings. Each specification was evaluated by two participants, yielding 120 assessments with quantitative ratings and qualitative feedback. Results: Ratings were uniformly high in the top two categories: relevance 95%, clarity 100%, completeness 94.2%, singularity 93.4%, and time savings 91.7%. No statistically reliable differences were found across participants or between LLMs. Qualitative feedback noted occasional omissions, hallucinations, and mixed intents, underscoring the need for human oversight, especially in safety-critical domains. Conclusion: In food safety, LLMs can assist in deriving Gherkin specifications from legal texts, but omissions and hallucinations require systematic human review.",
-      "published": "2025-08-28T13:04:34Z",
-      "updated": "2026-03-11T16:05:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.20744v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2410.21271v5",
-      "title": "EoRA: Fine-tuning-free Compensation for Compressed LLM with Eigenspace Low-Rank Approximation",
-      "authors": [
-        "Shih-Yang Liu",
-        "Maksim Khadkevich",
-        "Nai Chit Fung",
-        "Charbel Sakr",
-        "Chao-Han Huck Yang",
-        "Chien-Yi Wang",
-        "Saurav Muralidharan",
-        "Hongxu Yin",
-        "Kwang-Ting Cheng",
+        "Baifeng Shi",
+        "Stephanie Fu",
+        "Long Lian",
+        "Hanrong Ye",
+        "David Eigen",
+        "Aaron Reite",
+        "Boyi Li",
         "Jan Kautz",
-        "Yu-Chiang Frank Wang",
+        "Song Han",
+        "David M. Chan",
         "Pavlo Molchanov",
-        "Min-Hung Chen"
+        "Trevor Darrell",
+        "Hongxu Yin"
       ],
-      "summary": "While post-training compression techniques effectively reduce the memory footprint, latency, and power consumption of Large Language Models (LLMs), they often result in noticeable accuracy degradation and remain limited by hardware and kernel constraints that restrict supported compression formats ultimately reducing flexibility across a wide range of deployment scenarios. In this work, we propose EoRA, a novel fine-tuning-free method that augments compressed LLMs with low-rank matrices, allowing users to rapidly enhance task-specific performance and freely balance the trade-off between accuracy and computational overhead beyond the constraints of compression formats. EoRA consistently outperforms prior training-free low rank methods in recovering the accuracy of compressed LLMs, achieving notable accuracy improvements (e.g., $\\mathbf{10.84\\%}$ on ARC-Challenge, $\\mathbf{6.74\\%}$ on MathQA, and $\\mathbf{11.45\\%}$ on GSM8K) for LLaMA3-8B compressed to 3-bit. We also introduce an optimized CUDA kernel, accelerating inference by up to 1.4x and reducing memory overhead through quantizing EoRA. Overall, EoRA offers a prompt solution for improving the accuracy of compressed models under varying user requirements, enabling more efficient and flexible deployment of LLMs. Code is available at https://github.com/NVlabs/EoRA.",
-      "published": "2024-10-28T17:59:03Z",
-      "updated": "2026-03-11T16:03:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2410.21271v5"
+      "summary": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+      "published": "2026-03-12T17:58:52Z",
+      "updated": "2026-03-12T17:58:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12254v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.08935v2",
-      "title": "PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration",
+      "id": "http://arxiv.org/abs/2603.12252v1",
+      "title": "EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models",
       "authors": [
-        "Abdul Rehman Akbar",
-        "Samuel Wales-McGrath",
-        "Alejadro Levya",
-        "Lina Gokhale",
-        "Rajendra Singh",
-        "Wei Chen",
-        "Anil Parwani",
-        "Muhammad Khalid Khan Niazi"
+        "Xuanlang Dai",
+        "Yujie Zhou",
+        "Long Xing",
+        "Jiazi Bu",
+        "Xilin Wei",
+        "Yuhong Liu",
+        "Beichen Zhang",
+        "Kai Chen",
+        "Yuhang Zang"
       ],
-      "summary": "Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms.",
-      "published": "2026-03-09T21:09:24Z",
-      "updated": "2026-03-11T16:00:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.08935v2"
+      "summary": "Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the decoding process. Invariant guidance during decoding prevents DiT from progressively decomposing complex instructions into actionable denoising steps, even with correct MLLM encodings. To this end, we propose Endogenous Chain-of-Thought (EndoCoT), a novel framework that first activates MLLMs' reasoning potential by iteratively refining latent thought states through an iterative thought guidance module, and then bridges these states to the DiT's denoising process. Second, a terminal thought grounding module is applied to ensure the reasoning trajectory remains grounded in textual supervision by aligning the final state with ground-truth answers. With these two components, the MLLM text encoder delivers meticulously reasoned guidance, enabling the DiT to execute it progressively and ultimately solve complex tasks in a step-by-step manner. Extensive evaluations across diverse benchmarks (e.g., Maze, TSP, VSP, and Sudoku) achieve an average accuracy of 92.1%, outperforming the strongest baseline by 8.3 percentage points.",
+      "published": "2026-03-12T17:58:48Z",
+      "updated": "2026-03-12T17:58:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12252v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12229v1",
+      "title": "Language Model Teams as Distributed Systems",
+      "authors": [
+        "Elizabeth Mieczkowski",
+        "Katherine M. Collins",
+        "Ilia Sucholutsky",
+        "Natalia Vélez",
+        "Thomas L. Griffiths"
+      ],
+      "summary": "Large language models (LLMs) are growing increasingly capable, prompting recent interest in LLM teams. Yet, despite increased deployment of LLM teams at scale, we lack a principled framework for addressing key questions such as when a team is helpful, how many agents to use, how structure impacts performance -- and whether a team is better than a single agent. Rather than designing and testing these possibilities through trial-and-error, we propose using distributed systems as a principled foundation for creating and evaluating LLM teams. We find that many of the fundamental advantages and challenges studied in distributed computing also arise in LLM teams, highlighting the rich practical insights that can come from the cross-talk of these two fields of study.",
+      "published": "2026-03-12T17:49:34Z",
+      "updated": "2026-03-12T17:49:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12229v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12226v1",
+      "title": "Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspiration",
+      "authors": [
+        "Priyanka Kargupta",
+        "Shuhaib Mehri",
+        "Dilek Hakkani-Tur",
+        "Jiawei Han"
+      ],
+      "summary": "Despite interdisciplinary research leading to larger and longer-term impact, most work remains confined to single-domain academic silos. Recent AI-based approaches to scientific discovery show promise for interdisciplinary research, but many prioritize rapidly designing experiments and solutions, bypassing the exploratory, collaborative reasoning processes that drive creative interdisciplinary breakthroughs. As a result, prior efforts largely prioritize automating scientific discovery rather than augmenting the reasoning processes that underlie scientific disruption. We present Idea-Catalyst, a novel framework that systematically identifies interdisciplinary insights to support creative reasoning in both humans and large language models. Starting from an abstract research goal, Idea-Catalyst is designed to assist the brainstorming stage, explicitly avoiding premature anchoring on specific solutions. The framework embodies key metacognitive features of interdisciplinary reasoning: (a) defining and assessing research goals, (b) awareness of a domain's opportunities and unresolved challenges, and (c) strategic exploration of interdisciplinary ideas based on impact potential. Concretely, Idea-Catalyst decomposes an abstract goal (e.g., improving human-AI collaboration) into core target-domain research questions that guide the analysis of progress and open challenges within that domain. These challenges are reformulated as domain-agnostic conceptual problems, enabling retrieval from external disciplines (e.g., Psychology, Sociology) that address analogous issues. By synthesizing and recontextualizing insights from these domains back into the target domain, Idea-Catalyst ranks source domains by their interdisciplinary potential. Empirically, this targeted integration improves average novelty by 21% and insightfulness by 16%, while remaining grounded in the original research problem.",
+      "published": "2026-03-12T17:48:34Z",
+      "updated": "2026-03-12T17:48:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12226v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2512.05391v3",
+      "title": "LoC-Path: Learning to Compress for Pathology Multimodal Large Language Models",
+      "authors": [
+        "Qingqiao Hu",
+        "Weimin Lyu",
+        "Meilong Xu",
+        "Kehan Qi",
+        "Xiaoling Hu",
+        "Saumya Gupta",
+        "Jiawei Zhou",
+        "Chao Chen"
+      ],
+      "summary": "Whole Slide Image (WSI) MLLMs are difficult to build and deploy because gigapixel slides induce thousands of visual tokens, while only a small fraction of regions is diagnostically relevant. Existing slide-level pathology MLLMs typically combine heavy slide-level encoders with long visual prefixes, making end-to-end slide-level development and deployment expensive under limited computational resources. We revisit this regime and show that WSI tile features are highly redundant at both global and local scales, while task-relevant evidence is sparse and query-dependent. We therefore introduce LoC-Path, a resource-efficient slide-level MLLM that compresses before fusion. LoC-Path uses a Sparse Token Merger (STM) and an MAE-pretrained resampler to replace expensive slide-level encoding with a compact latent interface, then uses a Token Importance Scorer (TIS) to select the most relevant latents and a Cross-Attention Routing Adapter (CARA) to fuse them into a few LLM decoder layers. This design lowers both multimodal tuning cost and inference-time latency/memory by avoiding heavy slide-level encoding and long visual prefixes. Extensive experiments show that LoC-Path remains competitive with prior slide-level MLLMs while making end-to-end development and deployment more practical under limited computational resources.",
+      "published": "2025-12-05T03:16:46Z",
+      "updated": "2026-03-12T17:45:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.05391v3"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12208v1",
+      "title": "ForensicZip: More Tokens are Better but Not Necessary in Forensic Vision-Language Models",
+      "authors": [
+        "Yingxin Lai",
+        "Zitong Yu",
+        "Jun Wang",
+        "Linlin Shen",
+        "Yong Xu",
+        "Xiaochun Cao"
+      ],
+      "summary": "Multimodal Large Language Models (MLLMs) enable interpretable multimedia forensics by generating textual rationales for forgery detection. However, processing dense visual sequences incurs high computational costs, particularly for high-resolution images and videos. Visual token pruning is a practical acceleration strategy, yet existing methods are largely semantic-driven, retaining salient objects while discarding background regions where manipulation traces such as high-frequency anomalies and temporal jitters often reside. To address this issue, we introduce ForensicZip, a training-free framework that reformulates token compression from a forgery-driven perspective. ForensicZip models temporal token evolution as a Birth-Death Optimal Transport problem with a slack dummy node, quantifying physical discontinuities indicating transient generative artifacts. The forensic scoring further integrates transport-based novelty with high-frequency priors to separate forensic evidence from semantic content under large-ratio compression. Experiments on deepfake and AIGC benchmarks show that at 10\\% token retention, ForensicZip achieves $2.97\\times$ speedup and over 90\\% FLOPs reduction while maintaining state-of-the-art detection performance.",
+      "published": "2026-03-12T17:30:49Z",
+      "updated": "2026-03-12T17:30:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12208v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12206v1",
+      "title": "CLASP: Defending Hybrid Large Language Models Against Hidden State Poisoning Attacks",
+      "authors": [
+        "Alexandre Le Mercier",
+        "Thomas Demeester",
+        "Chris Develder"
+      ],
+      "summary": "State space models (SSMs) like Mamba have gained significant traction as efficient alternatives to Transformers, achieving linear complexity while maintaining competitive performance. However, Hidden State Poisoning Attacks (HiSPAs), a recently discovered vulnerability that corrupts SSM memory through adversarial strings, pose a critical threat to these architectures and their hybrid variants. Framing the HiSPA mitigation task as a binary classification problem at the token level, we introduce the CLASP model to defend against this threat. CLASP exploits distinct patterns in Mamba's block output embeddings (BOEs) and uses an XGBoost classifier to identify malicious tokens with minimal computational overhead. We consider a realistic scenario in which both SSMs and HiSPAs are likely to be used: an LLM screening résumés to identify the best candidates for a role. Evaluated on a corpus of 2,483 résumés totaling 9.5M tokens with controlled injections, CLASP achieves 95.9% token-level F1 score and 99.3% document-level F1 score on malicious tokens detection. Crucially, the model generalizes to unseen attack patterns: under leave-one-out cross-validation, performance remains high (96.9% document-level F1), while under clustered cross-validation with structurally novel triggers, it maintains useful detection capability (91.6% average document-level F1). Operating independently of any downstream model, CLASP processes 1,032 tokens per second with under 4GB VRAM consumption, potentially making it suitable for real-world deployment as a lightweight front-line defense for SSM-based and hybrid architectures. All code and detailed results are available at https://anonymous.4open.science/r/hispikes-91C0.",
+      "published": "2026-03-12T17:29:55Z",
+      "updated": "2026-03-12T17:29:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12206v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12201v1",
+      "title": "IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse",
+      "authors": [
+        "Yushi Bai",
+        "Qian Dong",
+        "Ting Jiang",
+        "Xin Lv",
+        "Zhengxiao Du",
+        "Aohan Zeng",
+        "Jie Tang",
+        "Juanzi Li"
+      ],
+      "summary": "Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82$\\times$ prefill speedup and 1.48$\\times$ decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).",
+      "published": "2026-03-12T17:27:21Z",
+      "updated": "2026-03-12T17:27:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12201v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2601.06550v2",
+      "title": "LLMTrack: Semantic Multi-Object Tracking with Multi-modal Large Language Models",
+      "authors": [
+        "Pan Liao",
+        "Feng Yang",
+        "Di Wu",
+        "Jinwen Yu",
+        "Yuhua Zhu",
+        "Wenhui Zhao",
+        "Dingwen Zhang"
+      ],
+      "summary": "Multi-Object Tracking (MOT) is evolving from geometric localization to Semantic MOT (SMOT) to answer complex relational queries, yet progress is hindered by semantic data scarcity and a structural disconnect between tracking architectures and Multi-modal Large Language Models (MLLMs). To address this, we introduce Grand-SMOT, a large-scale, open-world benchmark providing high-density, dual-stream narratives that comprehensively decouple individual behaviors from environmental contexts. Furthermore, we propose LLMTrack, the first framework to seamlessly integrate MLLMs into the SMOT task. LLMTrack establishes a Macro-Understanding-First paradigm, utilizing a novel Spatio-Temporal Fusion Module to align discrete geometric trajectories with continuous semantic features, effectively suppressing temporal hallucinations during online processing. Extensive experiments demonstrate that LLMTrack achieves state-of-the-art geometric tracking performance while delivering a qualitative leap in dynamic semantic reasoning. Notably, our analysis reveals that high-quality semantic narratives empower the language model to deduce complex social interactions naturally, demonstrating that direct cognitive reasoning is more effective than cumbersome explicit visual modeling. Ultimately, our contributions bridge the gap between perceptual tracking and cognitive reasoning, establishing a robust new foundation for comprehensive video understanding and intelligent narrative generation.",
+      "published": "2026-01-10T12:18:12Z",
+      "updated": "2026-03-12T17:26:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.06550v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.12191v1",
+      "title": "Long-Context Encoder Models for Polish Language Understanding",
+      "authors": [
+        "Sławomir Dadas",
+        "Rafał Poświata",
+        "Marek Kozłowski",
+        "Małgorzata Grębowiec",
+        "Michał Perełkiewicz",
+        "Paweł Klimiuk",
+        "Przemysław Boruta"
+      ],
+      "summary": "While decoder-only Large Language Models (LLMs) have recently dominated the NLP landscape, encoder-only architectures remain a cost-effective and parameter-efficient standard for discriminative tasks. However, classic encoders like BERT are limited by a short context window, which is insufficient for processing long documents. In this paper, we address this limitation for the Polish by introducing a high-quality Polish model capable of processing sequences of up to 8192 tokens. The model was developed by employing a two-stage training procedure that involves positional embedding adaptation and full parameter continuous pre-training. Furthermore, we propose compressed model variants trained via knowledge distillation. The models were evaluated on 25 tasks, including the KLEJ benchmark, a newly introduced financial task suite (FinBench), and other classification and regression tasks, specifically those requiring long-document understanding. The results demonstrate that our model achieves the best average performance among Polish and multilingual models, significantly outperforming competitive solutions in long-context tasks while maintaining comparable quality on short texts.",
+      "published": "2026-03-12T17:21:45Z",
+      "updated": "2026-03-12T17:21:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.12191v1"
     }
   ]
 }
