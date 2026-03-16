@@ -1,214 +1,189 @@
 {
-  "generated_at_utc": "2026-03-15T02:23:48Z",
+  "generated_at_utc": "2026-03-16T02:24:54Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.12266v1",
-      "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
+      "id": "http://arxiv.org/abs/2603.13220v1",
+      "title": "A Generative Model of Conspicuous Consumption and Status Signaling",
       "authors": [
-        "Haozhan Shen",
-        "Shilin Yan",
-        "Hongwei Xue",
-        "Shuaiqi Lu",
-        "Xiaojun Tang",
-        "Guannan Zhang",
-        "Tiancheng Zhao",
-        "Jianwei Yin"
+        "Logan Cross",
+        "Jordi Grau-Moya",
+        "William A. Cunningham",
+        "Alexander Sasha Vezhnevets",
+        "Joel Z. Leibo"
       ],
-      "summary": "Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., \"if a permission dialog appears and the color of the interface is green, click Allow\") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.",
-      "published": "2026-03-12T17:59:56Z",
-      "updated": "2026-03-12T17:59:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12266v1"
+      "summary": "Status signaling drives human behavior and the allocation of scarce resources such as mating opportunities, yet the generative mechanisms governing how specific goods, signals, or behaviors acquire prestige remain a puzzle. Classical frameworks, such as Costly Signaling Theory, treat preferences as fixed and struggle to explain how semiotic meaning changes based on context or drifts dynamically over time, occasionally reaching tipping points. In this work, we propose a computational theory of status grounded in the theory of appropriateness, positing that status symbols emerge endogenously through a feedback loop of social observation and predictive pattern completion. We validate this theory using simulations of groups of Large Language Model (LLM)-based agents in the Concordia framework. By experimentally manipulating social visibility within naturalistic agent daily routines, we demonstrate that social interactions transform functional demand into status-seeking behavior. We observe the emergence of price run-ups and positive price elasticity (Veblen effects) for both real-world luxury items and procedurally generated synthetic goods, ruling out pretraining bias as the sole driver. Furthermore, we demonstrate that \"influencer\" agents can drive the endogenous formation of distinct subcultures through targeted sanctioning, and find that similar social influence effects generalize to non-monetary signaling behaviors. This work provides a generative bridge between micro-level cognition and macro-level economic and sociological phenomena, offering a new methodology for forecasting how cultural conventions emerge from interaction.",
+      "published": "2026-03-13T17:56:28Z",
+      "updated": "2026-03-13T17:56:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13220v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12262v1",
-      "title": "Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously",
+      "id": "http://arxiv.org/abs/2602.08917v2",
+      "title": "Automatic In-Domain Exemplar Construction and LLM-Based Refinement of Multi-LLM Expansions for Query Expansion",
       "authors": [
-        "Yiran Guan",
-        "Liang Yin",
-        "Dingkang Liang",
-        "Jianzhong Ju",
-        "Zhenbo Luo",
-        "Jian Luan",
-        "Yuliang Liu",
-        "Xiang Bai"
+        "Minghan Li",
+        "Ercong Nie",
+        "Siqi Zhao",
+        "Tongna Chen",
+        "Huiping Huang",
+        "Guodong Zhou"
       ],
-      "summary": "Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response latency. To address this trade-off, we propose Video Streaming Thinking (VST), a novel paradigm for streaming video understanding. It supports a thinking while watching mechanism, which activates reasoning over incoming video clips during streaming. This design improves timely comprehension and coherent cognition while preserving real-time responsiveness by amortizing LLM reasoning latency over video playback. Furthermore, we introduce a comprehensive post-training pipeline that integrates VST-SFT, which structurally adapts the offline VideoLLM to causal streaming reasoning, and VST-RL, which provides end-to-end improvement through self-exploration in a multi-turn video interaction environment. Additionally, we devise an automated training-data synthesis pipeline that uses video knowledge graphs to generate high-quality streaming QA pairs, with an entity-relation grounded streaming Chain-of-Thought to enforce multi-evidence reasoning and sustained attention to the video stream. Extensive evaluations show that VST-7B performs strongly on online benchmarks, e.g. 79.5% on StreamingBench and 59.3% on OVO-Bench. Meanwhile, VST remains competitive on offline long-form or reasoning benchmarks. Compared with Video-R1, VST responds 15.7 times faster and achieves +5.4% improvement on VideoHolmes, demonstrating higher efficiency and strong generalization across diverse video understanding tasks. Code, data, and models will be released at https://github.com/1ranGuan/VST.",
-      "published": "2026-03-12T17:59:51Z",
-      "updated": "2026-03-12T17:59:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12262v1"
+      "summary": "Query expansion with large language models is promising but often relies on hand-crafted prompts, manually chosen exemplars, or a single LLM, making it non-scalable and sensitive to domain shift. We present an automated, domain-adaptive QE framework that builds in-domain exemplar pools by harvesting pseudo-relevant passages using a BM25-MonoT5 pipeline. A training-free cluster-based strategy selects diverse demonstrations, yielding strong and stable in-context QE without supervision. To further exploit model complementarity, we introduce a two-LLM ensemble in which two heterogeneous LLMs independently generate expansions and a refinement LLM consolidates them into one coherent expansion. Across TREC DL20, DBPedia, and SciFact, the refined ensemble delivers consistent and statistically significant gains over BM25, Rocchio, zero-shot, and fixed few-shot baselines. The framework offers a reproducible testbed for exemplar selection and multi-LLM generation, and a practical, label-free solution for real-world QE.",
+      "published": "2026-02-09T17:16:39Z",
+      "updated": "2026-03-13T17:55:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.08917v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12254v1",
-      "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
+      "id": "http://arxiv.org/abs/2603.13213v1",
+      "title": "MoEKD: Mixture-of-Experts Knowledge Distillation for Robust and High-Performing Compressed Code Models",
       "authors": [
-        "Baifeng Shi",
-        "Stephanie Fu",
-        "Long Lian",
-        "Hanrong Ye",
-        "David Eigen",
-        "Aaron Reite",
-        "Boyi Li",
-        "Jan Kautz",
-        "Song Han",
-        "David M. Chan",
-        "Pavlo Molchanov",
-        "Trevor Darrell",
-        "Hongxu Yin"
+        "Md. Abdul Awal",
+        "Mrigank Rochan",
+        "Chanchal K. Roy"
       ],
-      "summary": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
-      "published": "2026-03-12T17:58:52Z",
-      "updated": "2026-03-12T17:58:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12254v1"
+      "summary": "Large language models for code have achieved strong performance across diverse software analytics tasks, yet their real-world adoption remains limited by high computational demands, slow inference speeds, significant energy consumption, and environmental impact. Knowledge distillation (KD) offers a practical solution by transferring knowledge from a large model to a smaller and more efficient model. Despite its effectiveness, recent studies show that models distilled from a single source often exhibit degraded adversarial robustness, even when robustness-aware distillation techniques are employed. These observations suggest a fundamental limitation of single-source distillation in simultaneously transferring high-quality and robust knowledge. To overcome this limitation, we propose Mixture of Experts Knowledge Distillation (MoEKD), a KD framework that leverages a Mixture of Experts (MoE) architecture to enable more effective and robust knowledge transfer from multiple specialized experts into a compact model. MoEKD decomposes the distillation process into expert and router training, aggregation of expert knowledge through a learned routing mechanism, and distillation from the aggregated knowledge. We evaluate MoEKD on the vulnerability detection task using CodeBERT and GraphCodeBERT models. Experimental results show that MoEKD not only improves adversarial robustness by up to 35.8%, but also enhances predictive performance by up to 13%, compared to state-of-the-art KD baselines, including Compressor and AVATAR. Furthermore, an ablation study demonstrates that aggregating expert knowledge enables ultra-compact models to maintain competitive performance even when their size is reduced by approximately half. Overall, these results highlight the effectiveness of multi-expert knowledge aggregation in addressing key limitations of existing single-source KD approaches.",
+      "published": "2026-03-13T17:49:01Z",
+      "updated": "2026-03-13T17:49:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13213v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12252v1",
-      "title": "EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models",
+      "id": "http://arxiv.org/abs/2603.13201v1",
+      "title": "Neuron-Aware Data Selection In Instruction Tuning For Large Language Models",
       "authors": [
-        "Xuanlang Dai",
-        "Yujie Zhou",
-        "Long Xing",
-        "Jiazi Bu",
-        "Xilin Wei",
-        "Yuhong Liu",
-        "Beichen Zhang",
-        "Kai Chen",
-        "Yuhang Zang"
+        "Xin Chen",
+        "Junchao Wu",
+        "Shu Yang",
+        "Runzhe Zhan",
+        "Zeyu Wu",
+        "Min Yang",
+        "Shujian Huang",
+        "Lidia S. Chao",
+        "Derek F. Wong"
       ],
-      "summary": "Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the decoding process. Invariant guidance during decoding prevents DiT from progressively decomposing complex instructions into actionable denoising steps, even with correct MLLM encodings. To this end, we propose Endogenous Chain-of-Thought (EndoCoT), a novel framework that first activates MLLMs' reasoning potential by iteratively refining latent thought states through an iterative thought guidance module, and then bridges these states to the DiT's denoising process. Second, a terminal thought grounding module is applied to ensure the reasoning trajectory remains grounded in textual supervision by aligning the final state with ground-truth answers. With these two components, the MLLM text encoder delivers meticulously reasoned guidance, enabling the DiT to execute it progressively and ultimately solve complex tasks in a step-by-step manner. Extensive evaluations across diverse benchmarks (e.g., Maze, TSP, VSP, and Sudoku) achieve an average accuracy of 92.1%, outperforming the strongest baseline by 8.3 percentage points.",
-      "published": "2026-03-12T17:58:48Z",
-      "updated": "2026-03-12T17:58:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12252v1"
+      "summary": "Instruction Tuning (IT) has been proven to be an effective approach to unlock the powerful capabilities of large language models (LLMs). Recent studies indicate that excessive IT data can degrade LLMs performance, while carefully selecting a small subset of high-quality IT data can significantly enhance their capabilities. Therefore, identifying the most efficient subset data from the IT dataset to effectively develop either specific or general abilities in LLMs has become a critical challenge. To address this, we propose a novel and efficient framework called NAIT. NAIT evaluates the impact of IT data on LLMs performance by analyzing the similarity of neuron activation patterns between the IT dataset and the target domain capability. Specifically, NAIT captures neuron activation patterns from in-domain datasets of target domain capabilities to construct reusable and transferable neuron activation features. It then evaluates and selects optimal samples based on the similarity between candidate samples and the expected activation features of the target capabilities. Experimental results show that training on the 10\\% Alpaca-GPT4 IT data subset selected by NAIT consistently outperforms methods that rely on external advanced models or uncertainty-based features across various tasks. Our findings also reveal the transferability of neuron activation features across different capabilities of LLMs. In particular, IT data with more logical reasoning and programmatic features possesses strong general transferability, enabling models to develop stronger capabilities across multiple tasks, while a stable core subset of data is sufficient to consistently activate fundamental model capabilities and universally improve performance across diverse tasks.",
+      "published": "2026-03-13T17:39:03Z",
+      "updated": "2026-03-13T17:39:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13201v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12229v1",
-      "title": "Language Model Teams as Distributed Systems",
+      "id": "http://arxiv.org/abs/2410.10862v3",
+      "title": "Superficial Safety Alignment Hypothesis",
       "authors": [
-        "Elizabeth Mieczkowski",
-        "Katherine M. Collins",
-        "Ilia Sucholutsky",
-        "Natalia Vélez",
-        "Thomas L. Griffiths"
+        "Jianwei Li",
+        "Jung-Eun Kim"
       ],
-      "summary": "Large language models (LLMs) are growing increasingly capable, prompting recent interest in LLM teams. Yet, despite increased deployment of LLM teams at scale, we lack a principled framework for addressing key questions such as when a team is helpful, how many agents to use, how structure impacts performance -- and whether a team is better than a single agent. Rather than designing and testing these possibilities through trial-and-error, we propose using distributed systems as a principled foundation for creating and evaluating LLM teams. We find that many of the fundamental advantages and challenges studied in distributed computing also arise in LLM teams, highlighting the rich practical insights that can come from the cross-talk of these two fields of study.",
-      "published": "2026-03-12T17:49:34Z",
-      "updated": "2026-03-12T17:49:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12229v1"
+      "summary": "As large language models (LLMs) are overwhelmingly more and more integrated into various applications, ensuring they generate safe responses is a pressing need. Previous studies on alignment have largely focused on general instruction-following but have often overlooked the distinct properties of safety alignment, such as the brittleness of safety mechanisms. To bridge the gap, we propose the Superficial Safety Alignment Hypothesis (SSAH), which posits that safety alignment teaches an otherwise unsafe model to choose the correct reasoning direction-fulfill or refuse users' requests-interpreted as an implicit binary classification task. Through SSAH, we hypothesize that only a few essential components can establish safety guardrails in LLMs. We successfully identify four types of attribute-critical components: Safety Critical Unit (SCU), Utility Critical Unit (UCU), Complex Unit (CU), and Redundant Unit (RU). Our findings show that freezing certain safety-critical components during fine-tuning allows the model to retain its safety attributes while adapting to new tasks. Similarly, we show that leveraging redundant units in the pre-trained model as an \"alignment budget\" can effectively minimize the alignment tax while achieving the alignment goal. All considered, this paper concludes that the atomic functional unit for safety in LLMs is at the neuron level and underscores that safety alignment should not be complicated. We have code implementation and other information on the project website: https://ssa-h.github.io/.",
+      "published": "2024-10-07T19:53:35Z",
+      "updated": "2026-03-13T17:29:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.10862v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12226v1",
-      "title": "Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspiration",
+      "id": "http://arxiv.org/abs/2508.05880v2",
+      "title": "Large language models show fragile cognitive reasoning about human emotions",
       "authors": [
-        "Priyanka Kargupta",
-        "Shuhaib Mehri",
-        "Dilek Hakkani-Tur",
-        "Jiawei Han"
+        "Sree Bhattacharyya",
+        "Evgenii Kuriabov",
+        "Lucas Craig",
+        "Tharun Dilliraj",
+        "Reginald B. Adams,",
+        "Jia Li",
+        "James Z. Wang"
       ],
-      "summary": "Despite interdisciplinary research leading to larger and longer-term impact, most work remains confined to single-domain academic silos. Recent AI-based approaches to scientific discovery show promise for interdisciplinary research, but many prioritize rapidly designing experiments and solutions, bypassing the exploratory, collaborative reasoning processes that drive creative interdisciplinary breakthroughs. As a result, prior efforts largely prioritize automating scientific discovery rather than augmenting the reasoning processes that underlie scientific disruption. We present Idea-Catalyst, a novel framework that systematically identifies interdisciplinary insights to support creative reasoning in both humans and large language models. Starting from an abstract research goal, Idea-Catalyst is designed to assist the brainstorming stage, explicitly avoiding premature anchoring on specific solutions. The framework embodies key metacognitive features of interdisciplinary reasoning: (a) defining and assessing research goals, (b) awareness of a domain's opportunities and unresolved challenges, and (c) strategic exploration of interdisciplinary ideas based on impact potential. Concretely, Idea-Catalyst decomposes an abstract goal (e.g., improving human-AI collaboration) into core target-domain research questions that guide the analysis of progress and open challenges within that domain. These challenges are reformulated as domain-agnostic conceptual problems, enabling retrieval from external disciplines (e.g., Psychology, Sociology) that address analogous issues. By synthesizing and recontextualizing insights from these domains back into the target domain, Idea-Catalyst ranks source domains by their interdisciplinary potential. Empirically, this targeted integration improves average novelty by 21% and insightfulness by 16%, while remaining grounded in the original research problem.",
-      "published": "2026-03-12T17:48:34Z",
-      "updated": "2026-03-12T17:48:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12226v1"
+      "summary": "Affective computing seeks to support the holistic development of artificial intelligence by enabling machines to engage with human emotion. Recent foundation models, particularly large language models (LLMs), have been trained and evaluated on emotion-related tasks, typically using supervised learning with discrete emotion labels. Such evaluations largely focus on surface phenomena, such as recognizing expressed or evoked emotions, leaving open whether these systems reason about emotion in cognitively meaningful ways. Here we ask whether LLMs can reason about emotions through underlying cognitive dimensions rather than labels alone. Drawing on cognitive appraisal theory, we introduce CoRE, a large-scale benchmark designed to probe the implicit cognitive structures LLMs use when interpreting emotionally charged situations. We assess alignment with human appraisal patterns, internal consistency, cross-model generalization, and robustness to contextual variation. We find that LLMs capture systematic relations between cognitive appraisals and emotions but show misalignment with human judgments and instability across contexts.",
+      "published": "2025-08-07T22:19:15Z",
+      "updated": "2026-03-13T17:27:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.05880v2"
     },
     {
-      "id": "http://arxiv.org/abs/2512.05391v3",
-      "title": "LoC-Path: Learning to Compress for Pathology Multimodal Large Language Models",
+      "id": "http://arxiv.org/abs/2603.13191v1",
+      "title": "From Experiments to Expertise: Scientific Knowledge Consolidation for AI-Driven Computational Research",
       "authors": [
-        "Qingqiao Hu",
-        "Weimin Lyu",
-        "Meilong Xu",
-        "Kehan Qi",
-        "Xiaoling Hu",
-        "Saumya Gupta",
-        "Jiawei Zhou",
-        "Chao Chen"
+        "Haonan Huang"
       ],
-      "summary": "Whole Slide Image (WSI) MLLMs are difficult to build and deploy because gigapixel slides induce thousands of visual tokens, while only a small fraction of regions is diagnostically relevant. Existing slide-level pathology MLLMs typically combine heavy slide-level encoders with long visual prefixes, making end-to-end slide-level development and deployment expensive under limited computational resources. We revisit this regime and show that WSI tile features are highly redundant at both global and local scales, while task-relevant evidence is sparse and query-dependent. We therefore introduce LoC-Path, a resource-efficient slide-level MLLM that compresses before fusion. LoC-Path uses a Sparse Token Merger (STM) and an MAE-pretrained resampler to replace expensive slide-level encoding with a compact latent interface, then uses a Token Importance Scorer (TIS) to select the most relevant latents and a Cross-Attention Routing Adapter (CARA) to fuse them into a few LLM decoder layers. This design lowers both multimodal tuning cost and inference-time latency/memory by avoiding heavy slide-level encoding and long visual prefixes. Extensive experiments show that LoC-Path remains competitive with prior slide-level MLLMs while making end-to-end development and deployment more practical under limited computational resources.",
-      "published": "2025-12-05T03:16:46Z",
-      "updated": "2026-03-12T17:45:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.05391v3"
+      "summary": "While large language models (LLMs) have transformed AI agents into proficient executors of computational materials science, performing a hundred simulations does not make a researcher. What distinguishes research from routine execution is the progressive accumulation of knowledge -- learning which approaches fail, recognizing patterns across systems, and applying understanding to new problems. However, the prevailing paradigm in AI-driven computational science treats each execution in isolation, largely discarding hard-won insights between runs. Here we present QMatSuite, an open-source platform closing this gap. Agents record findings with full provenance, retrieve knowledge before new calculations, and in dedicated reflection sessions correct erroneous findings and synthesize observations into cross-compound patterns. In benchmarks on a six-step quantum-mechanical simulation workflow, accumulated knowledge reduces reasoning overhead by 67% and improves accuracy from 47% to 3% deviation from literature -- and when transferred to an unfamiliar material, achieves 1% deviation with zero pipeline failures.",
+      "published": "2026-03-13T17:25:47Z",
+      "updated": "2026-03-13T17:25:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13191v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12208v1",
-      "title": "ForensicZip: More Tokens are Better but Not Necessary in Forensic Vision-Language Models",
+      "id": "http://arxiv.org/abs/2603.13189v1",
+      "title": "LLM Constitutional Multi-Agent Governance",
       "authors": [
-        "Yingxin Lai",
-        "Zitong Yu",
-        "Jun Wang",
-        "Linlin Shen",
-        "Yong Xu",
-        "Xiaochun Cao"
+        "J. de Curtò",
+        "I. de Zarzà"
       ],
-      "summary": "Multimodal Large Language Models (MLLMs) enable interpretable multimedia forensics by generating textual rationales for forgery detection. However, processing dense visual sequences incurs high computational costs, particularly for high-resolution images and videos. Visual token pruning is a practical acceleration strategy, yet existing methods are largely semantic-driven, retaining salient objects while discarding background regions where manipulation traces such as high-frequency anomalies and temporal jitters often reside. To address this issue, we introduce ForensicZip, a training-free framework that reformulates token compression from a forgery-driven perspective. ForensicZip models temporal token evolution as a Birth-Death Optimal Transport problem with a slack dummy node, quantifying physical discontinuities indicating transient generative artifacts. The forensic scoring further integrates transport-based novelty with high-frequency priors to separate forensic evidence from semantic content under large-ratio compression. Experiments on deepfake and AIGC benchmarks show that at 10\\% token retention, ForensicZip achieves $2.97\\times$ speedup and over 90\\% FLOPs reduction while maintaining state-of-the-art detection performance.",
-      "published": "2026-03-12T17:30:49Z",
-      "updated": "2026-03-12T17:30:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12208v1"
+      "summary": "Large Language Models (LLMs) can generate persuasive influence strategies that shift cooperative behavior in multi-agent populations, but a critical question remains: does the resulting cooperation reflect genuine prosocial alignment, or does it mask erosion of agent autonomy, epistemic integrity, and distributional fairness? We introduce Constitutional Multi-Agent Governance (CMAG), a two-stage framework that interposes between an LLM policy compiler and a networked agent population, combining hard constraint filtering with soft penalized-utility optimization that balances cooperation potential against manipulation risk and autonomy pressure. We propose the Ethical Cooperation Score (ECS), a multiplicative composite of cooperation, autonomy, integrity, and fairness that penalizes cooperation achieved through manipulative means. In experiments on scale-free networks of 80 agents under adversarial conditions (70% violating candidates), we benchmark three regimes: full CMAG, naive filtering, and unconstrained optimization. While unconstrained optimization achieves the highest raw cooperation (0.873), it yields the lowest ECS (0.645) due to severe autonomy erosion (0.867) and fairness degradation (0.888). CMAG attains an ECS of 0.741, a 14.9% improvement, while preserving autonomy at 0.985 and integrity at 0.995, with only modest cooperation reduction to 0.770. The naive ablation (ECS = 0.733) confirms that hard constraints alone are insufficient. Pareto analysis shows CMAG dominates the cooperation-autonomy trade-off space, and governance reduces hub-periphery exposure disparities by over 60%. These findings establish that cooperation is not inherently desirable without governance: constitutional constraints are necessary to ensure that LLM-mediated influence produces ethically stable outcomes rather than manipulative equilibria.",
+      "published": "2026-03-13T17:21:26Z",
+      "updated": "2026-03-13T17:21:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13189v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12206v1",
-      "title": "CLASP: Defending Hybrid Large Language Models Against Hidden State Poisoning Attacks",
+      "id": "http://arxiv.org/abs/2603.13173v1",
+      "title": "Semantic Invariance in Agentic AI",
       "authors": [
-        "Alexandre Le Mercier",
-        "Thomas Demeester",
-        "Chris Develder"
+        "I. de Zarzà",
+        "J. de Curtò",
+        "Jordi Cabot",
+        "Pietro Manzoni",
+        "Carlos T. Calafate"
       ],
-      "summary": "State space models (SSMs) like Mamba have gained significant traction as efficient alternatives to Transformers, achieving linear complexity while maintaining competitive performance. However, Hidden State Poisoning Attacks (HiSPAs), a recently discovered vulnerability that corrupts SSM memory through adversarial strings, pose a critical threat to these architectures and their hybrid variants. Framing the HiSPA mitigation task as a binary classification problem at the token level, we introduce the CLASP model to defend against this threat. CLASP exploits distinct patterns in Mamba's block output embeddings (BOEs) and uses an XGBoost classifier to identify malicious tokens with minimal computational overhead. We consider a realistic scenario in which both SSMs and HiSPAs are likely to be used: an LLM screening résumés to identify the best candidates for a role. Evaluated on a corpus of 2,483 résumés totaling 9.5M tokens with controlled injections, CLASP achieves 95.9% token-level F1 score and 99.3% document-level F1 score on malicious tokens detection. Crucially, the model generalizes to unseen attack patterns: under leave-one-out cross-validation, performance remains high (96.9% document-level F1), while under clustered cross-validation with structurally novel triggers, it maintains useful detection capability (91.6% average document-level F1). Operating independently of any downstream model, CLASP processes 1,032 tokens per second with under 4GB VRAM consumption, potentially making it suitable for real-world deployment as a lightweight front-line defense for SSM-based and hybrid architectures. All code and detailed results are available at https://anonymous.4open.science/r/hispikes-91C0.",
-      "published": "2026-03-12T17:29:55Z",
-      "updated": "2026-03-12T17:29:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12206v1"
+      "summary": "Large Language Models (LLMs) increasingly serve as autonomous reasoning agents in decision support, scientific problem-solving, and multi-agent coordination systems. However, deploying LLM agents in consequential applications requires assurance that their reasoning remains stable under semantically equivalent input variations, a property we term semantic invariance.Standard benchmark evaluations, which assess accuracy on fixed, canonical problem formulations, fail to capture this critical reliability dimension. To address this shortcoming, in this paper we present a metamorphic testing framework for systematically assessing the robustness of LLM reasoning agents, applying eight semantic-preserving transformations (identity, paraphrase, fact reordering, expansion, contraction, academic context, business context, and contrastive formulation) across seven foundation models spanning four distinct architectural families: Hermes (70B, 405B), Qwen3 (30B-A3B, 235B-A22B), DeepSeek-R1, and gpt-oss (20B, 120B). Our evaluation encompasses 19 multi-step reasoning problems across eight scientific domains. The results reveal that model scale does not predict robustness: the smaller Qwen3-30B-A3B achieves the highest stability (79.6% invariant responses, semantic similarity 0.91), while larger models exhibit greater fragility.",
+      "published": "2026-03-13T17:08:44Z",
+      "updated": "2026-03-13T17:08:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13173v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12201v1",
-      "title": "IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse",
+      "id": "http://arxiv.org/abs/2511.20555v2",
+      "title": "PILOT: Command-line Interface Fuzzing via Path-Guided, Iterative Large Language Model Prompting",
       "authors": [
-        "Yushi Bai",
-        "Qian Dong",
-        "Ting Jiang",
-        "Xin Lv",
-        "Zhengxiao Du",
-        "Aohan Zeng",
-        "Jie Tang",
-        "Juanzi Li"
+        "Momoko Shiraishi",
+        "Yinzhi Cao",
+        "Takahiro Shinagawa"
       ],
-      "summary": "Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82$\\times$ prefill speedup and 1.48$\\times$ decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).",
-      "published": "2026-03-12T17:27:21Z",
-      "updated": "2026-03-12T17:27:21Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12201v1"
+      "summary": "Command-line interface (CLI) fuzzing tests programs by mutating both command-line options and input file contents, thus enabling discovery of vulnerabilities that only manifest under specific option-input combinations. Prior works of CLI fuzzing face the challenges of generating semantics-rich option strings and input files, which cannot reach deeply embedded target functions. This often leads to a misdetection of such a deep vulnerability using existing CLI fuzzing techniques. In this paper, we design a novel Path-guided, Iterative LLM-Orchestrated Testing framework, called PILOT, to fuzz CLI applications. The key insight is to provide potential call paths to target functions as context to LLM so that it can better generate CLI option strings and input files. Then, PILOT iteratively repeats the process, and provides reached functions as additional context so that target functions are reached. Our evaluation on real-world CLI applications demonstrates that PILOT achieves higher coverage than state-of-the-art fuzzing approaches and discovers 51 zero-day vulnerabilities. We responsibly disclosed all the vulnerabilities to their developers and so far 41 have been confirmed by their developers with 33 being fixed and three assigned CVE identifiers.",
+      "published": "2025-11-25T17:54:10Z",
+      "updated": "2026-03-13T17:06:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.20555v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.06550v2",
-      "title": "LLMTrack: Semantic Multi-Object Tracking with Multi-modal Large Language Models",
+      "id": "http://arxiv.org/abs/2603.13154v1",
+      "title": "ESG-Bench: Benchmarking Long-Context ESG Reports for Hallucination Mitigation",
       "authors": [
-        "Pan Liao",
-        "Feng Yang",
-        "Di Wu",
-        "Jinwen Yu",
-        "Yuhua Zhu",
-        "Wenhui Zhao",
-        "Dingwen Zhang"
+        "Siqi Sun",
+        "Ben Peng Wu",
+        "Mali Jin",
+        "Peizhen Bai",
+        "Hanpei Zhang",
+        "Xingyi Song"
       ],
-      "summary": "Multi-Object Tracking (MOT) is evolving from geometric localization to Semantic MOT (SMOT) to answer complex relational queries, yet progress is hindered by semantic data scarcity and a structural disconnect between tracking architectures and Multi-modal Large Language Models (MLLMs). To address this, we introduce Grand-SMOT, a large-scale, open-world benchmark providing high-density, dual-stream narratives that comprehensively decouple individual behaviors from environmental contexts. Furthermore, we propose LLMTrack, the first framework to seamlessly integrate MLLMs into the SMOT task. LLMTrack establishes a Macro-Understanding-First paradigm, utilizing a novel Spatio-Temporal Fusion Module to align discrete geometric trajectories with continuous semantic features, effectively suppressing temporal hallucinations during online processing. Extensive experiments demonstrate that LLMTrack achieves state-of-the-art geometric tracking performance while delivering a qualitative leap in dynamic semantic reasoning. Notably, our analysis reveals that high-quality semantic narratives empower the language model to deduce complex social interactions naturally, demonstrating that direct cognitive reasoning is more effective than cumbersome explicit visual modeling. Ultimately, our contributions bridge the gap between perceptual tracking and cognitive reasoning, establishing a robust new foundation for comprehensive video understanding and intelligent narrative generation.",
-      "published": "2026-01-10T12:18:12Z",
-      "updated": "2026-03-12T17:26:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.06550v2"
+      "summary": "As corporate responsibility increasingly incorporates environmental, social, and governance (ESG) criteria, ESG reporting is becoming a legal requirement in many regions and a key channel for documenting sustainability practices and assessing firms' long-term and ethical performance. However, the length and complexity of ESG disclosures make them difficult to interpret and automate the analysis reliably. To support scalable and trustworthy analysis, this paper introduces ESG-Bench, a benchmark dataset for ESG report understanding and hallucination mitigation in large language models (LLMs). ESG-Bench contains human-annotated question-answer (QA) pairs grounded in real-world ESG report contexts, with fine-grained labels indicating whether model outputs are factually supported or hallucinated. Framing ESG report analysis as a QA task with verifiability constraints enables systematic evaluation of LLMs' ability to extract and reason over ESG content and provides a new use case: mitigating hallucinations in socially sensitive, compliance-critical settings. We design task-specific Chain-of-Thought (CoT) prompting strategies and fine-tune multiple state-of-the-art LLMs on ESG-Bench using CoT-annotated rationales. Our experiments show that these CoT-based methods substantially outperform standard prompting and direct fine-tuning in reducing hallucinations, and that the gains transfer to existing QA benchmarks beyond the ESG domain.",
+      "published": "2026-03-13T16:48:05Z",
+      "updated": "2026-03-13T16:48:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13154v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.12191v1",
-      "title": "Long-Context Encoder Models for Polish Language Understanding",
+      "id": "http://arxiv.org/abs/2506.07597v3",
+      "title": "Instructing Large Language Models for Low-Resource Languages: A Systematic Study for Basque",
       "authors": [
-        "Sławomir Dadas",
-        "Rafał Poświata",
-        "Marek Kozłowski",
-        "Małgorzata Grębowiec",
-        "Michał Perełkiewicz",
-        "Paweł Klimiuk",
-        "Przemysław Boruta"
+        "Oscar Sainz",
+        "Naiara Perez",
+        "Julen Etxaniz",
+        "Joseba Fernandez de Landa",
+        "Itziar Aldabe",
+        "Iker García-Ferrero",
+        "Aimar Zabala",
+        "Ekhi Azurmendi",
+        "German Rigau",
+        "Eneko Agirre",
+        "Mikel Artetxe",
+        "Aitor Soroa"
       ],
-      "summary": "While decoder-only Large Language Models (LLMs) have recently dominated the NLP landscape, encoder-only architectures remain a cost-effective and parameter-efficient standard for discriminative tasks. However, classic encoders like BERT are limited by a short context window, which is insufficient for processing long documents. In this paper, we address this limitation for the Polish by introducing a high-quality Polish model capable of processing sequences of up to 8192 tokens. The model was developed by employing a two-stage training procedure that involves positional embedding adaptation and full parameter continuous pre-training. Furthermore, we propose compressed model variants trained via knowledge distillation. The models were evaluated on 25 tasks, including the KLEJ benchmark, a newly introduced financial task suite (FinBench), and other classification and regression tasks, specifically those requiring long-document understanding. The results demonstrate that our model achieves the best average performance among Polish and multilingual models, significantly outperforming competitive solutions in long-context tasks while maintaining comparable quality on short texts.",
-      "published": "2026-03-12T17:21:45Z",
-      "updated": "2026-03-12T17:21:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.12191v1"
+      "summary": "Instructing language models with user intent requires large instruction datasets, which are only available for a limited set of languages. In this paper, we explore alternatives to conventional instruction adaptation pipelines in low-resource scenarios. We assume a realistic scenario for low-resource languages, where only the following are available: corpora in the target language, existing open-weight multilingual base and instructed backbone LLMs, and synthetically generated instructions sampled from the instructed backbone. We present a comprehensive set of experiments for Basque that systematically study different combinations of these components evaluated on benchmarks and human preferences from 1,680 participants. Our conclusions show that target language corpora are essential, with synthetic instructions yielding robust models, and, most importantly, that using as backbone an instruction-tuned model outperforms using a base non-instructed model. Scaling up to Llama 3.1 Instruct 70B as backbone, our model comes near frontier models of much larger sizes for Basque, without using any Basque instructions. We release code, models, instruction datasets, and human preferences to support full reproducibility in future research on low-resource language adaptation. https://github.com/hitz-zentroa/latxa-instruct",
+      "published": "2025-06-09T09:54:47Z",
+      "updated": "2026-03-13T16:44:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.07597v3"
     }
   ]
 }
