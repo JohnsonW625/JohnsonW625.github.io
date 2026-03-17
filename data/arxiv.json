@@ -1,189 +1,212 @@
 {
-  "generated_at_utc": "2026-03-16T02:24:54Z",
+  "generated_at_utc": "2026-03-17T02:04:15Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.13220v1",
-      "title": "A Generative Model of Conspicuous Consumption and Status Signaling",
+      "id": "http://arxiv.org/abs/2601.04658v2",
+      "title": "LAMB: LLM-based Audio Captioning with Modality Gap Bridging via Cauchy-Schwarz Divergence",
       "authors": [
-        "Logan Cross",
-        "Jordi Grau-Moya",
-        "William A. Cunningham",
-        "Alexander Sasha Vezhnevets",
-        "Joel Z. Leibo"
+        "Hyeongkeun Lee",
+        "Jongmin Choi",
+        "KiHyun Nam",
+        "Joon Son Chung"
       ],
-      "summary": "Status signaling drives human behavior and the allocation of scarce resources such as mating opportunities, yet the generative mechanisms governing how specific goods, signals, or behaviors acquire prestige remain a puzzle. Classical frameworks, such as Costly Signaling Theory, treat preferences as fixed and struggle to explain how semiotic meaning changes based on context or drifts dynamically over time, occasionally reaching tipping points. In this work, we propose a computational theory of status grounded in the theory of appropriateness, positing that status symbols emerge endogenously through a feedback loop of social observation and predictive pattern completion. We validate this theory using simulations of groups of Large Language Model (LLM)-based agents in the Concordia framework. By experimentally manipulating social visibility within naturalistic agent daily routines, we demonstrate that social interactions transform functional demand into status-seeking behavior. We observe the emergence of price run-ups and positive price elasticity (Veblen effects) for both real-world luxury items and procedurally generated synthetic goods, ruling out pretraining bias as the sole driver. Furthermore, we demonstrate that \"influencer\" agents can drive the endogenous formation of distinct subcultures through targeted sanctioning, and find that similar social influence effects generalize to non-monetary signaling behaviors. This work provides a generative bridge between micro-level cognition and macro-level economic and sociological phenomena, offering a new methodology for forecasting how cultural conventions emerge from interaction.",
-      "published": "2026-03-13T17:56:28Z",
-      "updated": "2026-03-13T17:56:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13220v1"
+      "summary": "Automated Audio Captioning aims to describe the semantic content of input audio. Recent works have employed large language models (LLMs) as a text decoder to leverage their reasoning capabilities. However, prior approaches that project audio features into the LLM embedding space without considering cross-modal alignment fail to fully utilize these capabilities. To address this, we propose LAMB, an LLM-based audio captioning framework that bridges the modality gap between audio embeddings and the LLM text embedding space. LAMB incorporates a Cross-Modal Aligner that minimizes Cauchy-Schwarz divergence while maximizing mutual information, yielding tighter alignment between audio and text at both global and token levels. We further design a Two-Stream Adapter that extracts semantically enriched audio embeddings, thereby delivering richer information to the Cross-Modal Aligner. Finally, leveraging the aligned audio embeddings, a proposed Token Guide directly computes scores within the LLM text embedding space to steer the output logits of generated captions. Experimental results confirm that our framework strengthens the reasoning capabilities of the LLM decoder, achieving state-of-the-art performance on AudioCaps.",
+      "published": "2026-01-08T07:05:35Z",
+      "updated": "2026-03-16T08:13:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.04658v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.08917v2",
-      "title": "Automatic In-Domain Exemplar Construction and LLM-Based Refinement of Multi-LLM Expansions for Query Expansion",
+      "id": "http://arxiv.org/abs/2603.14951v1",
+      "title": "GT-PCQA: Geometry-Texture Decoupled Point Cloud Quality Assessment with MLLM",
       "authors": [
-        "Minghan Li",
-        "Ercong Nie",
-        "Siqi Zhao",
-        "Tongna Chen",
-        "Huiping Huang",
-        "Guodong Zhou"
+        "Guohua Zhang",
+        "Jian Jin",
+        "Meiqin Liu",
+        "Chao Yao",
+        "Weisi Lin",
+        "Yao Zhao"
       ],
-      "summary": "Query expansion with large language models is promising but often relies on hand-crafted prompts, manually chosen exemplars, or a single LLM, making it non-scalable and sensitive to domain shift. We present an automated, domain-adaptive QE framework that builds in-domain exemplar pools by harvesting pseudo-relevant passages using a BM25-MonoT5 pipeline. A training-free cluster-based strategy selects diverse demonstrations, yielding strong and stable in-context QE without supervision. To further exploit model complementarity, we introduce a two-LLM ensemble in which two heterogeneous LLMs independently generate expansions and a refinement LLM consolidates them into one coherent expansion. Across TREC DL20, DBPedia, and SciFact, the refined ensemble delivers consistent and statistically significant gains over BM25, Rocchio, zero-shot, and fixed few-shot baselines. The framework offers a reproducible testbed for exemplar selection and multi-LLM generation, and a practical, label-free solution for real-world QE.",
-      "published": "2026-02-09T17:16:39Z",
-      "updated": "2026-03-13T17:55:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.08917v2"
+      "summary": "With the rapid advancement of Multi-modal Large Language Models (MLLMs), MLLM-based Image Quality Assessment (IQA) methods have shown promising generalization. However, directly extending these MLLM-based IQA methods to PCQA remains challenging. On the one hand, existing PCQA datasets are limited in scale, which hinders stable and effective instruction tuning of MLLMs. On the other hand, due to large-scale image-text pretraining, MLLMs tend to rely on texture-dominant reasoning and are insufficiently sensitive to geometric structural degradations that are critical for PCQA. To address these gaps, we propose a novel MLLM-based no-reference PCQA framework, termed GT-PCQA, which is built upon two key strategies. First, to enable stable and effective instruction tuning under scarce PCQA supervision, a 2D-3D joint training strategy is proposed. This strategy formulates PCQA as a relative quality comparison problem to unify large-scale IQA datasets with limited PCQA datasets. It incorporates a parameter-efficient Low-Rank Adaptation (LoRA) scheme to support instruction tuning. Second, a geometry-texture decoupling strategy is presented, which integrates a dual-prompt mechanism with an alternating optimization scheme to mitigate the inherent texture-dominant bias of pre-trained MLLMs, while enhancing sensitivity to geometric structural degradations. Extensive experiments demonstrate that GT-PCQA achieves competitive performance and exhibits strong generalization.",
+      "published": "2026-03-16T08:04:30Z",
+      "updated": "2026-03-16T08:04:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.14951v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13213v1",
-      "title": "MoEKD: Mixture-of-Experts Knowledge Distillation for Robust and High-Performing Compressed Code Models",
+      "id": "http://arxiv.org/abs/2603.02097v3",
+      "title": "ClinConsensus: A Consensus-Based Benchmark for Evaluating Chinese Medical LLMs across Difficulty Levels",
       "authors": [
-        "Md. Abdul Awal",
-        "Mrigank Rochan",
-        "Chanchal K. Roy"
+        "Xiang Zheng",
+        "Han Li",
+        "Wenjie Luo",
+        "Weiqi Zhai",
+        "Yiyuan Li",
+        "Chuanmiao Yan",
+        "Tianyi Tang",
+        "Yubo Ma",
+        "Kexin Yang",
+        "Dayiheng Liu",
+        "Hu Wei",
+        "Bing Zhao"
       ],
-      "summary": "Large language models for code have achieved strong performance across diverse software analytics tasks, yet their real-world adoption remains limited by high computational demands, slow inference speeds, significant energy consumption, and environmental impact. Knowledge distillation (KD) offers a practical solution by transferring knowledge from a large model to a smaller and more efficient model. Despite its effectiveness, recent studies show that models distilled from a single source often exhibit degraded adversarial robustness, even when robustness-aware distillation techniques are employed. These observations suggest a fundamental limitation of single-source distillation in simultaneously transferring high-quality and robust knowledge. To overcome this limitation, we propose Mixture of Experts Knowledge Distillation (MoEKD), a KD framework that leverages a Mixture of Experts (MoE) architecture to enable more effective and robust knowledge transfer from multiple specialized experts into a compact model. MoEKD decomposes the distillation process into expert and router training, aggregation of expert knowledge through a learned routing mechanism, and distillation from the aggregated knowledge. We evaluate MoEKD on the vulnerability detection task using CodeBERT and GraphCodeBERT models. Experimental results show that MoEKD not only improves adversarial robustness by up to 35.8%, but also enhances predictive performance by up to 13%, compared to state-of-the-art KD baselines, including Compressor and AVATAR. Furthermore, an ablation study demonstrates that aggregating expert knowledge enables ultra-compact models to maintain competitive performance even when their size is reduced by approximately half. Overall, these results highlight the effectiveness of multi-expert knowledge aggregation in addressing key limitations of existing single-source KD approaches.",
-      "published": "2026-03-13T17:49:01Z",
-      "updated": "2026-03-13T17:49:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13213v1"
+      "summary": "Large language models (LLMs) are increasingly applied to health management, showing promise across disease prevention, clinical decision-making, and long-term care. However, existing medical benchmarks remain largely static and task-isolated, failing to capture the openness, longitudinal structure, and safety-critical complexity of real-world clinical workflows. We introduce ClinConsensus, a Chinese medical benchmark curated, validated, and quality-controlled by clinical experts. ClinConsensus comprises 2500 open-ended cases spanning the full continuum of care--from prevention and intervention to long-term follow-up--covering 36 medical specialties, 12 common clinical task types, and progressively increasing levels of complexity. To enable reliable evaluation of such complex scenarios, we adopt a rubric-based grading protocol and propose the Clinically Applicable Consistency Score (CACS@k). We further introduce a dual-judge evaluation framework, combining a high-capability LLM-as-judge with a distilled, locally deployable judge model trained via supervised fine-tuning, enabling scalable and reproducible evaluation aligned with physician judgment. Using ClinConsensus, we conduct a comprehensive assessment of several leading LLMs and reveal substantial heterogeneity across task themes, care stages, and medical specialties. While top-performing models achieve comparable overall scores, they differ markedly in reasoning, evidence use, and longitudinal follow-up capabilities, and clinically actionable treatment planning remains a key bottleneck. We release ClinConsensus as an extensible benchmark to support the development and evaluation of medical LLMs that are robust, clinically grounded, and ready for real-world deployment.",
+      "published": "2026-03-02T17:17:18Z",
+      "updated": "2026-03-16T08:02:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.02097v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13201v1",
-      "title": "Neuron-Aware Data Selection In Instruction Tuning For Large Language Models",
+      "id": "http://arxiv.org/abs/2410.08950v2",
+      "title": "On the Adversarial Transferability of Generalized \"Skip Connections\"",
       "authors": [
-        "Xin Chen",
-        "Junchao Wu",
-        "Shu Yang",
-        "Runzhe Zhan",
-        "Zeyu Wu",
-        "Min Yang",
-        "Shujian Huang",
-        "Lidia S. Chao",
-        "Derek F. Wong"
+        "Yisen Wang",
+        "Yichuan Mo",
+        "Dongxian Wu",
+        "Mingjie Li",
+        "Xingjun Ma",
+        "Zhouchen Lin"
       ],
-      "summary": "Instruction Tuning (IT) has been proven to be an effective approach to unlock the powerful capabilities of large language models (LLMs). Recent studies indicate that excessive IT data can degrade LLMs performance, while carefully selecting a small subset of high-quality IT data can significantly enhance their capabilities. Therefore, identifying the most efficient subset data from the IT dataset to effectively develop either specific or general abilities in LLMs has become a critical challenge. To address this, we propose a novel and efficient framework called NAIT. NAIT evaluates the impact of IT data on LLMs performance by analyzing the similarity of neuron activation patterns between the IT dataset and the target domain capability. Specifically, NAIT captures neuron activation patterns from in-domain datasets of target domain capabilities to construct reusable and transferable neuron activation features. It then evaluates and selects optimal samples based on the similarity between candidate samples and the expected activation features of the target capabilities. Experimental results show that training on the 10\\% Alpaca-GPT4 IT data subset selected by NAIT consistently outperforms methods that rely on external advanced models or uncertainty-based features across various tasks. Our findings also reveal the transferability of neuron activation features across different capabilities of LLMs. In particular, IT data with more logical reasoning and programmatic features possesses strong general transferability, enabling models to develop stronger capabilities across multiple tasks, while a stable core subset of data is sufficient to consistently activate fundamental model capabilities and universally improve performance across diverse tasks.",
-      "published": "2026-03-13T17:39:03Z",
-      "updated": "2026-03-13T17:39:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13201v1"
+      "summary": "Skip connection is an essential ingredient for modern deep models to be deeper and more powerful. Despite their huge success in normal scenarios (state-of-the-art classification performance on natural examples), we investigate and identify an interesting property of skip connections under adversarial scenarios, namely, the use of skip connections allows easier generation of highly transferable adversarial examples. Specifically, in ResNet-like models (with skip connections), we find that biasing backpropagation to favor gradients from skip connections--while suppressing those from residual modules via a decay factor--allows one to craft adversarial examples with high transferability. Based on this insight, we propose the Skip Gradient Method (SGM). Although starting from ResNet-like models in vision domains, we further extend SGM to more advanced architectures, including Vision Transformers (ViTs), models with varying-length paths, and other domains such as natural language processing. We conduct comprehensive transfer-based attacks against diverse model families, including ResNets, Transformers, Inceptions, Neural Architecture Search-based models, and Large Language Models (LLMs). The results demonstrate that employing SGM can greatly improve the transferability of crafted attacks in almost all cases. Furthermore, we demonstrate that SGM can still be effective under more challenging settings such as ensemble-based attacks, targeted attacks, and against defense equipped models. At last, we provide theoretical explanations and empirical insights on how SGM works. Our findings not only motivate new adversarial research into the architectural characteristics of models but also open up further challenges for secure model architecture design. Our code is available at https://github.com/mo666666/SGM.",
+      "published": "2024-10-11T16:17:47Z",
+      "updated": "2026-03-16T07:53:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.08950v2"
     },
     {
-      "id": "http://arxiv.org/abs/2410.10862v3",
-      "title": "Superficial Safety Alignment Hypothesis",
+      "id": "http://arxiv.org/abs/2511.06680v2",
+      "title": "Steering LLMs toward Korean Local Speech: Iterative Refinement Framework for Faithful Dialect Translation",
       "authors": [
-        "Jianwei Li",
-        "Jung-Eun Kim"
+        "Keunhyeung Park",
+        "Seunguk Yu",
+        "Youngbin Kim"
       ],
-      "summary": "As large language models (LLMs) are overwhelmingly more and more integrated into various applications, ensuring they generate safe responses is a pressing need. Previous studies on alignment have largely focused on general instruction-following but have often overlooked the distinct properties of safety alignment, such as the brittleness of safety mechanisms. To bridge the gap, we propose the Superficial Safety Alignment Hypothesis (SSAH), which posits that safety alignment teaches an otherwise unsafe model to choose the correct reasoning direction-fulfill or refuse users' requests-interpreted as an implicit binary classification task. Through SSAH, we hypothesize that only a few essential components can establish safety guardrails in LLMs. We successfully identify four types of attribute-critical components: Safety Critical Unit (SCU), Utility Critical Unit (UCU), Complex Unit (CU), and Redundant Unit (RU). Our findings show that freezing certain safety-critical components during fine-tuning allows the model to retain its safety attributes while adapting to new tasks. Similarly, we show that leveraging redundant units in the pre-trained model as an \"alignment budget\" can effectively minimize the alignment tax while achieving the alignment goal. All considered, this paper concludes that the atomic functional unit for safety in LLMs is at the neuron level and underscores that safety alignment should not be complicated. We have code implementation and other information on the project website: https://ssa-h.github.io/.",
-      "published": "2024-10-07T19:53:35Z",
-      "updated": "2026-03-13T17:29:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2410.10862v3"
+      "summary": "Standard-to-dialect machine translation remains challenging due to a persistent dialect gap in large language models and evaluation distortions inherent in n-gram metrics, which favor source copying over authentic dialect translation. In this paper, we propose the dialect refinement (DIA-REFINE) framework, which guides LLMs toward faithful target dialect outputs through an iterative loop of translation, verification, and feedback using external dialect classifiers. To address the limitations of n-gram-based metrics, we introduce the dialect fidelity score (DFS) to quantify linguistic shift and the target dialect ratio (TDR) to measure the success of dialect translation. Experiments on Korean dialects across zero-shot and in-context learning baselines demonstrate that DIA-REFINE consistently enhances dialect fidelity. The proposed metrics distinguish between False Success cases, where high n-gram scores obscure failures in dialectal translation, and True Attempt cases, where genuine attempts at dialectal translation yield low n-gram scores. We also observed that models exhibit varying degrees of responsiveness to the framework, and that integrating in-context examples further improves the translation of dialectal expressions. Our work establishes a robust framework for goal-directed, inclusive dialect translation, providing both rigorous evaluation and critical insights into model performance.",
+      "published": "2025-11-10T03:52:24Z",
+      "updated": "2026-03-16T07:53:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.06680v2"
     },
     {
-      "id": "http://arxiv.org/abs/2508.05880v2",
-      "title": "Large language models show fragile cognitive reasoning about human emotions",
+      "id": "http://arxiv.org/abs/2603.07101v2",
+      "title": "Grounding Machine Creativity in Game Design Knowledge Representations: Empirical Probing of LLM-Based Executable Synthesis of Goal Playable Patterns under Structural Constraints",
       "authors": [
-        "Sree Bhattacharyya",
-        "Evgenii Kuriabov",
-        "Lucas Craig",
-        "Tharun Dilliraj",
-        "Reginald B. Adams,",
-        "Jia Li",
-        "James Z. Wang"
+        "Hugh Xuechen Liu",
+        "Kıvanç Tatar"
       ],
-      "summary": "Affective computing seeks to support the holistic development of artificial intelligence by enabling machines to engage with human emotion. Recent foundation models, particularly large language models (LLMs), have been trained and evaluated on emotion-related tasks, typically using supervised learning with discrete emotion labels. Such evaluations largely focus on surface phenomena, such as recognizing expressed or evoked emotions, leaving open whether these systems reason about emotion in cognitively meaningful ways. Here we ask whether LLMs can reason about emotions through underlying cognitive dimensions rather than labels alone. Drawing on cognitive appraisal theory, we introduce CoRE, a large-scale benchmark designed to probe the implicit cognitive structures LLMs use when interpreting emotionally charged situations. We assess alignment with human appraisal patterns, internal consistency, cross-model generalization, and robustness to contextual variation. We find that LLMs capture systematic relations between cognitive appraisals and emotions but show misalignment with human judgments and instability across contexts.",
-      "published": "2025-08-07T22:19:15Z",
-      "updated": "2026-03-13T17:27:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.05880v2"
+      "summary": "Creatively translating complex gameplay ideas into executable artifacts (e.g., games as Unity projects and code) remains a central challenge in computational game creativity. Gameplay design patterns provide a structured representation for describing gameplay phenomena, enabling designers to decompose high-level ideas into entities, constraints, and rule-driven dynamics. Among them, goal patterns formalize common player-objective relationships. Goal Playable Concepts (GPCs) operationalize these abstractions as playable Unity engine implementations, supporting experiential exploration and compositional gameplay design. We frame scalable playable pattern realization as a problem of constrained executable creative synthesis: generated artifacts must satisfy Unity's syntactic and architectural requirements while preserving the semantic gameplay meanings encoded in goal patterns. This dual constraint limits scalability. Therefore, we investigate whether contemporary large language models (LLMs) can perform such synthesis under engine-level structural constraints and generate Unity code (as games) structured and conditioned by goal playable patterns. Using 26 goal pattern instantiations, we compare a direct generation baseline (natural language -> C# -> Unity) with pipelines conditioned on a human-authored Unity-specific intermediate representation (IR), across three IR configurations and two open-source models (DeepSeek-Coder-V2-Lite-Instruct and Qwen2.5-Coder-7B-Instruct). Compilation success is evaluated via automated Unity replay. We propose grounding and hygiene failure modes, identifying structural and project-level grounding as primary bottlenecks.",
+      "published": "2026-03-07T08:24:47Z",
+      "updated": "2026-03-16T07:36:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.07101v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13191v1",
-      "title": "From Experiments to Expertise: Scientific Knowledge Consolidation for AI-Driven Computational Research",
+      "id": "http://arxiv.org/abs/2603.14919v1",
+      "title": "Which stylistic features fool ChatGPT research evaluations?",
       "authors": [
-        "Haonan Huang"
+        "Kayvan Kousha",
+        "Mike Thelwall"
       ],
-      "summary": "While large language models (LLMs) have transformed AI agents into proficient executors of computational materials science, performing a hundred simulations does not make a researcher. What distinguishes research from routine execution is the progressive accumulation of knowledge -- learning which approaches fail, recognizing patterns across systems, and applying understanding to new problems. However, the prevailing paradigm in AI-driven computational science treats each execution in isolation, largely discarding hard-won insights between runs. Here we present QMatSuite, an open-source platform closing this gap. Agents record findings with full provenance, retrieve knowledge before new calculations, and in dedicated reflection sessions correct erroneous findings and synthesize observations into cross-compound patterns. In benchmarks on a six-step quantum-mechanical simulation workflow, accumulated knowledge reduces reasoning overhead by 67% and improves accuracy from 47% to 3% deviation from literature -- and when transferred to an unfamiliar material, achieves 1% deviation with zero pipeline failures.",
-      "published": "2026-03-13T17:25:47Z",
-      "updated": "2026-03-13T17:25:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13191v1"
+      "summary": "Large Language Models (LLMs) have the potential to be used to support research evaluation and have a moderate capability to estimate the research quality of a journal article from its title and abstract. This paper assesses whether there are language-related factors unrelated to the quality of the research that influence ChatGPT's scores. Using a dataset of 99,277 journal articles submitted to the UK-wide Research Excellence Framework (REF) 2021 assessments, we calculated several readability indicators from abstracts and correlated them with ChatGPT scores and departmental REF scores. From the results, linguistic complexity and length were more strongly associated with ChatGPT research quality scores than with REF expert scores in many subject areas. Although cause-and-effect was not tested, these results suggest that ChatGPT may be more likely than human experts to reward linguistic complexity, with a potential bias towards longer and less readable abstracts in many fields. The apparent preference of LLMs for complex language is an undesirable feature for practical applications of LLMs for research quality evaluation, unless solutions can be found.",
+      "published": "2026-03-16T07:25:46Z",
+      "updated": "2026-03-16T07:25:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.14919v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13189v1",
-      "title": "LLM Constitutional Multi-Agent Governance",
+      "id": "http://arxiv.org/abs/2603.14916v1",
+      "title": "EditHF-1M: A Million-Scale Rich Human Preference Feedback for Image Editing",
       "authors": [
-        "J. de Curtò",
-        "I. de Zarzà"
+        "Zitong Xu",
+        "Huiyu Duan",
+        "Zhongpeng Ji",
+        "Xinyun Zhang",
+        "Yutao Liu",
+        "Xiongkuo Min",
+        "Ke Gu",
+        "Jian Zhang",
+        "Shusong Xu",
+        "Jinwei Chen",
+        "Bo Li",
+        "Guangtao Zhai"
       ],
-      "summary": "Large Language Models (LLMs) can generate persuasive influence strategies that shift cooperative behavior in multi-agent populations, but a critical question remains: does the resulting cooperation reflect genuine prosocial alignment, or does it mask erosion of agent autonomy, epistemic integrity, and distributional fairness? We introduce Constitutional Multi-Agent Governance (CMAG), a two-stage framework that interposes between an LLM policy compiler and a networked agent population, combining hard constraint filtering with soft penalized-utility optimization that balances cooperation potential against manipulation risk and autonomy pressure. We propose the Ethical Cooperation Score (ECS), a multiplicative composite of cooperation, autonomy, integrity, and fairness that penalizes cooperation achieved through manipulative means. In experiments on scale-free networks of 80 agents under adversarial conditions (70% violating candidates), we benchmark three regimes: full CMAG, naive filtering, and unconstrained optimization. While unconstrained optimization achieves the highest raw cooperation (0.873), it yields the lowest ECS (0.645) due to severe autonomy erosion (0.867) and fairness degradation (0.888). CMAG attains an ECS of 0.741, a 14.9% improvement, while preserving autonomy at 0.985 and integrity at 0.995, with only modest cooperation reduction to 0.770. The naive ablation (ECS = 0.733) confirms that hard constraints alone are insufficient. Pareto analysis shows CMAG dominates the cooperation-autonomy trade-off space, and governance reduces hub-periphery exposure disparities by over 60%. These findings establish that cooperation is not inherently desirable without governance: constitutional constraints are necessary to ensure that LLM-mediated influence produces ethically stable outcomes rather than manipulative equilibria.",
-      "published": "2026-03-13T17:21:26Z",
-      "updated": "2026-03-13T17:21:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13189v1"
+      "summary": "Recent text-guided image editing (TIE) models have achieved remarkable progress, while many edited images still suffer from issues such as artifacts, unexpected editings, unaesthetic contents. Although some benchmarks and methods have been proposed for evaluating edited images, scalable evaluation models are still lacking, which limits the development of human feedback reward models for image editing. To address the challenges, we first introduce \\textbf{EditHF-1M}, a million-scale image editing dataset with over 29M human preference pairs and 148K human mean opinion ratings, both evaluated from three dimensions, \\textit{i.e.}, visual quality, instruction alignment, and attribute preservation. Based on EditHF-1M, we propose \\textbf{EditHF}, a multimodal large language model (MLLM) based evaluation model, to provide human-aligned feedback from image editing. Finally, we introduce \\textbf{EditHF-Reward}, which utilizes EditHF as the reward signal to optimize the text-guided image editing models through reinforcement learning. Extensive experiments show that EditHF achieves superior alignment with human preferences and demonstrates strong generalization on other datasets. Furthermore, we fine-tune the Qwen-Image-Edit using EditHF-Reward, achieving significant performance improvements, which demonstrates the ability of EditHF to serve as a reward model to scale-up the image editing. Both the dataset and code will be released in our GitHub repository: https://github.com/IntMeGroup/EditHF.",
+      "published": "2026-03-16T07:24:56Z",
+      "updated": "2026-03-16T07:24:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.14916v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13173v1",
-      "title": "Semantic Invariance in Agentic AI",
+      "id": "http://arxiv.org/abs/2510.24358v2",
+      "title": "Automatically Benchmarking LLM Code Agents through Agent-Driven Annotation and Evaluation",
       "authors": [
-        "I. de Zarzà",
-        "J. de Curtò",
-        "Jordi Cabot",
-        "Pietro Manzoni",
-        "Carlos T. Calafate"
+        "Lingyue Fu",
+        "Bolun Zhang",
+        "Hao Guan",
+        "Yaoming Zhu",
+        "Lin Qiu",
+        "Weiwen Liu",
+        "Xuezhi Cao",
+        "Xunliang Cai",
+        "Weinan Zhang",
+        "Yong Yu"
       ],
-      "summary": "Large Language Models (LLMs) increasingly serve as autonomous reasoning agents in decision support, scientific problem-solving, and multi-agent coordination systems. However, deploying LLM agents in consequential applications requires assurance that their reasoning remains stable under semantically equivalent input variations, a property we term semantic invariance.Standard benchmark evaluations, which assess accuracy on fixed, canonical problem formulations, fail to capture this critical reliability dimension. To address this shortcoming, in this paper we present a metamorphic testing framework for systematically assessing the robustness of LLM reasoning agents, applying eight semantic-preserving transformations (identity, paraphrase, fact reordering, expansion, contraction, academic context, business context, and contrastive formulation) across seven foundation models spanning four distinct architectural families: Hermes (70B, 405B), Qwen3 (30B-A3B, 235B-A22B), DeepSeek-R1, and gpt-oss (20B, 120B). Our evaluation encompasses 19 multi-step reasoning problems across eight scientific domains. The results reveal that model scale does not predict robustness: the smaller Qwen3-30B-A3B achieves the highest stability (79.6% invariant responses, semantic similarity 0.91), while larger models exhibit greater fragility.",
-      "published": "2026-03-13T17:08:44Z",
-      "updated": "2026-03-13T17:08:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13173v1"
+      "summary": "Recent advances in code agents have enabled automated software development at the project level, supported by large language models (LLMs). However, existing benchmarks for code agent evaluation face two major limitations. First, creating high-quality project-level evaluation datasets requires extensive domain expertise, leading to prohibitive annotation costs and limited diversity. Second, while recent Agent-as-a-Judge paradigms address the rigidity of traditional unit tests by enabling flexible metrics, their reliance on In-Context Learning (ICL) with general LLMs often results in inaccurate assessments that misalign with human standards. To address these challenges, we propose an agent-driven benchmark construction pipeline that leverages human supervision to efficiently generate diverse project-level tasks. Based on this, we introduce PRDBench, comprising 50 real-world Python projects across 20 domains, each with structured Product Requirement Documents (PRDs) and comprehensive criteria. Furthermore, to overcome the inaccuracy of general LLM judges, we propose a highly reliable evaluation framework powered by a specialized, fine-tuned model. Based on Qwen3-Coder-30B, our dedicated PRDJudge achieves over 90% human alignment in fixed-interface scenarios. Extensive experiments demonstrate that our suite provides a scalable, robust, and highly accurate framework for assessing state-of-the-art code agents.",
+      "published": "2025-10-28T12:26:45Z",
+      "updated": "2026-03-16T07:22:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.24358v2"
     },
     {
-      "id": "http://arxiv.org/abs/2511.20555v2",
-      "title": "PILOT: Command-line Interface Fuzzing via Path-Guided, Iterative Large Language Model Prompting",
+      "id": "http://arxiv.org/abs/2507.07610v7",
+      "title": "SpatialViz-Bench: A Cognitively-Grounded Benchmark for Diagnosing Spatial Visualization in MLLMs",
       "authors": [
-        "Momoko Shiraishi",
-        "Yinzhi Cao",
-        "Takahiro Shinagawa"
+        "Siting Wang",
+        "Minnan Pei",
+        "Luoyang Sun",
+        "Cheng Deng",
+        "Yuchen Li",
+        "Kun Shao",
+        "Zheng Tian",
+        "Haifeng Zhang",
+        "Jun Wang"
       ],
-      "summary": "Command-line interface (CLI) fuzzing tests programs by mutating both command-line options and input file contents, thus enabling discovery of vulnerabilities that only manifest under specific option-input combinations. Prior works of CLI fuzzing face the challenges of generating semantics-rich option strings and input files, which cannot reach deeply embedded target functions. This often leads to a misdetection of such a deep vulnerability using existing CLI fuzzing techniques. In this paper, we design a novel Path-guided, Iterative LLM-Orchestrated Testing framework, called PILOT, to fuzz CLI applications. The key insight is to provide potential call paths to target functions as context to LLM so that it can better generate CLI option strings and input files. Then, PILOT iteratively repeats the process, and provides reached functions as additional context so that target functions are reached. Our evaluation on real-world CLI applications demonstrates that PILOT achieves higher coverage than state-of-the-art fuzzing approaches and discovers 51 zero-day vulnerabilities. We responsibly disclosed all the vulnerabilities to their developers and so far 41 have been confirmed by their developers with 33 being fixed and three assigned CVE identifiers.",
-      "published": "2025-11-25T17:54:10Z",
-      "updated": "2026-03-13T17:06:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.20555v2"
+      "summary": "Humans can imagine and manipulate visual images mentally, a capability known as spatial visualization. While many multi-modal benchmarks assess reasoning on visible visual information, the ability to infer unseen relationships through spatial visualization remains insufficiently evaluated as a spatial skill. This reliance on publicly sourced problems from IQ tests or math competitions risks data contamination and compromises assessment reliability. To this end, we introduce SpatialViz-Bench, a comprehensive multi-modal benchmark for spatial visualization with 12 tasks across 4 sub-abilities, comprising 1,180 programmatically generated problems, a scalable framework that allows for expansion to ensure fair and continuously reliable evaluations. Our evaluation of 27 Multi-modal Large Language Models (MLLMs) reveals wide performance variations, demonstrates the benchmark's strong discriminative power, and uncovers counter-intuitive findings: Chain-of-Thought (CoT) prompting paradoxically degrades accuracy on open-source models. Through statistical and qualitative analysis of error types, SpatialViz-Bench demonstrates that state-of-the-art MLLMs exhibit deficiencies in spatial visualization tasks, thereby addressing a significant lacuna in the field. The benchmark data and evaluation code are publicly available.",
+      "published": "2025-07-10T10:27:20Z",
+      "updated": "2026-03-16T07:21:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.07610v7"
     },
     {
-      "id": "http://arxiv.org/abs/2603.13154v1",
-      "title": "ESG-Bench: Benchmarking Long-Context ESG Reports for Hallucination Mitigation",
+      "id": "http://arxiv.org/abs/2505.15030v5",
+      "title": "A Systematic Evaluation of On-Device LLMs: Quantization, Performance, and Resources",
       "authors": [
-        "Siqi Sun",
-        "Ben Peng Wu",
-        "Mali Jin",
-        "Peizhen Bai",
-        "Hanpei Zhang",
-        "Xingyi Song"
+        "Qingyu Song",
+        "Rui Liu",
+        "Wei Lin",
+        "Peiyu Liao",
+        "Wenqian Zhao",
+        "Yiwen Wang",
+        "Shoubo Hu",
+        "Yining Jiang",
+        "Mochun Long",
+        "Hui-Ling Zhen",
+        "Ning Jiang",
+        "Mingxuan Yuan",
+        "Qiao Xiang",
+        "Hong Xu"
       ],
-      "summary": "As corporate responsibility increasingly incorporates environmental, social, and governance (ESG) criteria, ESG reporting is becoming a legal requirement in many regions and a key channel for documenting sustainability practices and assessing firms' long-term and ethical performance. However, the length and complexity of ESG disclosures make them difficult to interpret and automate the analysis reliably. To support scalable and trustworthy analysis, this paper introduces ESG-Bench, a benchmark dataset for ESG report understanding and hallucination mitigation in large language models (LLMs). ESG-Bench contains human-annotated question-answer (QA) pairs grounded in real-world ESG report contexts, with fine-grained labels indicating whether model outputs are factually supported or hallucinated. Framing ESG report analysis as a QA task with verifiability constraints enables systematic evaluation of LLMs' ability to extract and reason over ESG content and provides a new use case: mitigating hallucinations in socially sensitive, compliance-critical settings. We design task-specific Chain-of-Thought (CoT) prompting strategies and fine-tune multiple state-of-the-art LLMs on ESG-Bench using CoT-annotated rationales. Our experiments show that these CoT-based methods substantially outperform standard prompting and direct fine-tuning in reducing hallucinations, and that the gains transfer to existing QA benchmarks beyond the ESG domain.",
-      "published": "2026-03-13T16:48:05Z",
-      "updated": "2026-03-13T16:48:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.13154v1"
+      "summary": "Deploying Large Language Models (LLMs) on edge devices enhances privacy but faces performance hurdles due to limited resources. We introduce a systematic methodology to evaluate on-device LLMs, balancing capability, efficiency, and resource constraints. Through an extensive analysis of models (0.5B-14B) and seven post-training quantization (PTQ) methods on commodity hardware, we demonstrate that: 1) Heavily quantized large models consistently outperform smaller, high-precision models, with a performance threshold at ~3.5 effective bits-per-weight (BPW); 2) Resource utilization scales linearly with BPW, though power and memory footprints vary by quantization algorithm; and 3) With a reduction in model size, the primary constraint on throughput transitions from communication overhead to computational latency. We conclude by offering guidelines for optimizing LLMs in resource-constrained edge environments. Our codebase is available at https://anonymous.4open.science/r/LLMOnDevice/.",
+      "published": "2025-05-21T02:23:01Z",
+      "updated": "2026-03-16T07:07:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.15030v5"
     },
     {
-      "id": "http://arxiv.org/abs/2506.07597v3",
-      "title": "Instructing Large Language Models for Low-Resource Languages: A Systematic Study for Basque",
+      "id": "http://arxiv.org/abs/2602.20722v2",
+      "title": "Buffer Matters: Unleashing the Power of Off-Policy Reinforcement Learning in Large Language Model Reasoning",
       "authors": [
-        "Oscar Sainz",
-        "Naiara Perez",
-        "Julen Etxaniz",
-        "Joseba Fernandez de Landa",
-        "Itziar Aldabe",
-        "Iker García-Ferrero",
-        "Aimar Zabala",
-        "Ekhi Azurmendi",
-        "German Rigau",
-        "Eneko Agirre",
-        "Mikel Artetxe",
-        "Aitor Soroa"
+        "Xu Wan",
+        "Yansheng Wang",
+        "Wenqi Huang",
+        "Mingyang Sun"
       ],
-      "summary": "Instructing language models with user intent requires large instruction datasets, which are only available for a limited set of languages. In this paper, we explore alternatives to conventional instruction adaptation pipelines in low-resource scenarios. We assume a realistic scenario for low-resource languages, where only the following are available: corpora in the target language, existing open-weight multilingual base and instructed backbone LLMs, and synthetically generated instructions sampled from the instructed backbone. We present a comprehensive set of experiments for Basque that systematically study different combinations of these components evaluated on benchmarks and human preferences from 1,680 participants. Our conclusions show that target language corpora are essential, with synthetic instructions yielding robust models, and, most importantly, that using as backbone an instruction-tuned model outperforms using a base non-instructed model. Scaling up to Llama 3.1 Instruct 70B as backbone, our model comes near frontier models of much larger sizes for Basque, without using any Basque instructions. We release code, models, instruction datasets, and human preferences to support full reproducibility in future research on low-resource language adaptation. https://github.com/hitz-zentroa/latxa-instruct",
-      "published": "2025-06-09T09:54:47Z",
-      "updated": "2026-03-13T16:44:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.07597v3"
+      "summary": "Traditional on-policy Reinforcement Learning with Verifiable Rewards (RLVR) frameworks suffer from experience waste and reward homogeneity, which directly hinders learning efficiency on difficult samples during large language models post-training. In this paper, we introduce Batch Adaptation Policy Optimization (BAPO), an off-policy RLVR framework to improve the data efficiency in large language models post-training. It dynamically selects training batches by re-evaluating historically difficult samples and reusing high-quality ones, while holding a lower bound guarantee for policy improvement. Extensive experiments further demonstrate that BAPO achieves an average 12.5% improvement over GRPO across mathematics, planning, and visual reasoning tasks. Crucially, BAPO successfully resolves 40.7% of problems that base models consistently fail to solve.",
+      "published": "2026-02-24T09:35:43Z",
+      "updated": "2026-03-16T07:07:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.20722v2"
     }
   ]
 }
