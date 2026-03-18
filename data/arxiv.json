@@ -1,212 +1,244 @@
 {
-  "generated_at_utc": "2026-03-17T02:04:15Z",
+  "generated_at_utc": "2026-03-18T02:07:54Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2601.04658v2",
-      "title": "LAMB: LLM-based Audio Captioning with Modality Gap Bridging via Cauchy-Schwarz Divergence",
+      "id": "http://arxiv.org/abs/2603.16867v1",
+      "title": "Efficient Reasoning on the Edge",
       "authors": [
-        "Hyeongkeun Lee",
-        "Jongmin Choi",
-        "KiHyun Nam",
-        "Joon Son Chung"
+        "Yelysei Bondarenko",
+        "Thomas Hehn",
+        "Rob Hesselink",
+        "Romain Lepert",
+        "Fabio Valerio Massoli",
+        "Evgeny Mironov",
+        "Leyla Mirvakhabova",
+        "Tribhuvanesh Orekondy",
+        "Spyridon Stasis",
+        "Andrey Kuzmin",
+        "Anna Kuzina",
+        "Markus Nagel",
+        "Ankita Nayak",
+        "Corrado Rainone",
+        "Ork de Rooij",
+        "Paul N Whatmough",
+        "Arash Behboodi",
+        "Babak Ehteshami Bejnordi"
       ],
-      "summary": "Automated Audio Captioning aims to describe the semantic content of input audio. Recent works have employed large language models (LLMs) as a text decoder to leverage their reasoning capabilities. However, prior approaches that project audio features into the LLM embedding space without considering cross-modal alignment fail to fully utilize these capabilities. To address this, we propose LAMB, an LLM-based audio captioning framework that bridges the modality gap between audio embeddings and the LLM text embedding space. LAMB incorporates a Cross-Modal Aligner that minimizes Cauchy-Schwarz divergence while maximizing mutual information, yielding tighter alignment between audio and text at both global and token levels. We further design a Two-Stream Adapter that extracts semantically enriched audio embeddings, thereby delivering richer information to the Cross-Modal Aligner. Finally, leveraging the aligned audio embeddings, a proposed Token Guide directly computes scores within the LLM text embedding space to steer the output logits of generated captions. Experimental results confirm that our framework strengthens the reasoning capabilities of the LLM decoder, achieving state-of-the-art performance on AudioCaps.",
-      "published": "2026-01-08T07:05:35Z",
-      "updated": "2026-03-16T08:13:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.04658v2"
+      "summary": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
+      "published": "2026-03-17T17:59:51Z",
+      "updated": "2026-03-17T17:59:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16867v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.14951v1",
-      "title": "GT-PCQA: Geometry-Texture Decoupled Point Cloud Quality Assessment with MLLM",
+      "id": "http://arxiv.org/abs/2603.16862v1",
+      "title": "Chronos: Temporal-Aware Conversational Agents with Structured Event Retrieval for Long-Term Memory",
       "authors": [
-        "Guohua Zhang",
-        "Jian Jin",
-        "Meiqin Liu",
-        "Chao Yao",
-        "Weisi Lin",
-        "Yao Zhao"
+        "Sahil Sen",
+        "Elias Lumer",
+        "Anmol Gulati",
+        "Vamse Kumar Subbiah"
       ],
-      "summary": "With the rapid advancement of Multi-modal Large Language Models (MLLMs), MLLM-based Image Quality Assessment (IQA) methods have shown promising generalization. However, directly extending these MLLM-based IQA methods to PCQA remains challenging. On the one hand, existing PCQA datasets are limited in scale, which hinders stable and effective instruction tuning of MLLMs. On the other hand, due to large-scale image-text pretraining, MLLMs tend to rely on texture-dominant reasoning and are insufficiently sensitive to geometric structural degradations that are critical for PCQA. To address these gaps, we propose a novel MLLM-based no-reference PCQA framework, termed GT-PCQA, which is built upon two key strategies. First, to enable stable and effective instruction tuning under scarce PCQA supervision, a 2D-3D joint training strategy is proposed. This strategy formulates PCQA as a relative quality comparison problem to unify large-scale IQA datasets with limited PCQA datasets. It incorporates a parameter-efficient Low-Rank Adaptation (LoRA) scheme to support instruction tuning. Second, a geometry-texture decoupling strategy is presented, which integrates a dual-prompt mechanism with an alternating optimization scheme to mitigate the inherent texture-dominant bias of pre-trained MLLMs, while enhancing sensitivity to geometric structural degradations. Extensive experiments demonstrate that GT-PCQA achieves competitive performance and exhibits strong generalization.",
-      "published": "2026-03-16T08:04:30Z",
-      "updated": "2026-03-16T08:04:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.14951v1"
+      "summary": "Recent advances in Large Language Models (LLMs) have enabled conversational AI agents to engage in extended multi-turn interactions spanning weeks or months. However, existing memory systems struggle to reason over temporally grounded facts and preferences that evolve across months of interaction and lack effective retrieval strategies for multi-hop, time-sensitive queries over long dialogue histories. We introduce Chronos, a novel temporal-aware memory framework that decomposes raw dialogue into subject-verb-object event tuples with resolved datetime ranges and entity aliases, indexing them in a structured event calendar alongside a turn calendar that preserves full conversational context. At query time, Chronos applies dynamic prompting to generate tailored retrieval guidance for each question, directing the agent on what to retrieve, how to filter across time ranges, and how to approach multi-hop reasoning through an iterative tool-calling loop over both calendars. We evaluate Chronos with 8 LLMs, both open-source and closed-source, on the LongMemEvalS benchmark comprising 500 questions spanning six categories of dialogue history tasks. Chronos Low achieves 92.60% and Chronos High scores 95.60% accuracy, setting a new state of the art with an improvement of 7.67% over the best prior system. Ablation results reveal the events calendar accounts for a 58.9% gain on the baseline while all other components yield improvements between 15.5% and 22.3%. Notably, Chronos Low alone surpasses prior approaches evaluated under their strongest model configurations.",
+      "published": "2026-03-17T17:59:20Z",
+      "updated": "2026-03-17T17:59:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16862v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.02097v3",
-      "title": "ClinConsensus: A Consensus-Based Benchmark for Evaluating Chinese Medical LLMs across Difficulty Levels",
+      "id": "http://arxiv.org/abs/2603.16859v1",
+      "title": "SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models",
       "authors": [
-        "Xiang Zheng",
-        "Han Li",
-        "Wenjie Luo",
-        "Weiqi Zhai",
-        "Yiyuan Li",
-        "Chuanmiao Yan",
-        "Tianyi Tang",
-        "Yubo Ma",
-        "Kexin Yang",
-        "Dayiheng Liu",
-        "Hu Wei",
-        "Bing Zhao"
+        "Tianyu Xie",
+        "Jinfa Huang",
+        "Yuexiao Ma",
+        "Rongfang Luo",
+        "Yan Yang",
+        "Wang Chen",
+        "Yuhui Zeng",
+        "Ruize Fang",
+        "Yixuan Zou",
+        "Xiawu Zheng",
+        "Jiebo Luo",
+        "Rongrong Ji"
       ],
-      "summary": "Large language models (LLMs) are increasingly applied to health management, showing promise across disease prevention, clinical decision-making, and long-term care. However, existing medical benchmarks remain largely static and task-isolated, failing to capture the openness, longitudinal structure, and safety-critical complexity of real-world clinical workflows. We introduce ClinConsensus, a Chinese medical benchmark curated, validated, and quality-controlled by clinical experts. ClinConsensus comprises 2500 open-ended cases spanning the full continuum of care--from prevention and intervention to long-term follow-up--covering 36 medical specialties, 12 common clinical task types, and progressively increasing levels of complexity. To enable reliable evaluation of such complex scenarios, we adopt a rubric-based grading protocol and propose the Clinically Applicable Consistency Score (CACS@k). We further introduce a dual-judge evaluation framework, combining a high-capability LLM-as-judge with a distilled, locally deployable judge model trained via supervised fine-tuning, enabling scalable and reproducible evaluation aligned with physician judgment. Using ClinConsensus, we conduct a comprehensive assessment of several leading LLMs and reveal substantial heterogeneity across task themes, care stages, and medical specialties. While top-performing models achieve comparable overall scores, they differ markedly in reasoning, evidence use, and longitudinal follow-up capabilities, and clinically actionable treatment planning remains a key bottleneck. We release ClinConsensus as an extensible benchmark to support the development and evaluation of medical LLMs that are robust, clinically grounded, and ready for real-world deployment.",
-      "published": "2026-03-02T17:17:18Z",
-      "updated": "2026-03-16T08:02:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.02097v3"
+      "summary": "Omni-modal large language models (OLMs) redefine human-machine interaction by natively integrating audio, vision, and text. However, existing OLM benchmarks remain anchored to static, accuracy-centric tasks, leaving a critical gap in assessing social interactivity, the fundamental capacity to navigate dynamic cues in natural dialogues. To this end, we propose SocialOmni, a comprehensive benchmark that operationalizes the evaluation of this conversational interactivity across three core dimensions: (i) speaker separation and identification (who is speaking), (ii) interruption timing control (when to interject), and (iii) natural interruption generation (how to phrase the interruption). SocialOmni features 2,000 perception samples and a quality-controlled diagnostic set of 209 interaction-generation instances with strict temporal and contextual constraints, complemented by controlled audio-visual inconsistency scenarios to test model robustness. We benchmarked 12 leading OLMs, which uncovers significant variance in their social-interaction capabilities across models. Furthermore, our analysis reveals a pronounced decoupling between a model's perceptual accuracy and its ability to generate contextually appropriate interruptions, indicating that understanding-centric metrics alone are insufficient to characterize conversational social competence. More encouragingly, these diagnostics from SocialOmni yield actionable signals for bridging the perception-interaction divide in future OLMs.",
+      "published": "2026-03-17T17:58:44Z",
+      "updated": "2026-03-17T17:58:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16859v1"
     },
     {
-      "id": "http://arxiv.org/abs/2410.08950v2",
-      "title": "On the Adversarial Transferability of Generalized \"Skip Connections\"",
+      "id": "http://arxiv.org/abs/2603.16856v1",
+      "title": "Online Experiential Learning for Language Models",
       "authors": [
-        "Yisen Wang",
-        "Yichuan Mo",
-        "Dongxian Wu",
-        "Mingjie Li",
-        "Xingjun Ma",
-        "Zhouchen Lin"
+        "Tianzhu Ye",
+        "Li Dong",
+        "Qingxiu Dong",
+        "Xun Wu",
+        "Shaohan Huang",
+        "Furu Wei"
       ],
-      "summary": "Skip connection is an essential ingredient for modern deep models to be deeper and more powerful. Despite their huge success in normal scenarios (state-of-the-art classification performance on natural examples), we investigate and identify an interesting property of skip connections under adversarial scenarios, namely, the use of skip connections allows easier generation of highly transferable adversarial examples. Specifically, in ResNet-like models (with skip connections), we find that biasing backpropagation to favor gradients from skip connections--while suppressing those from residual modules via a decay factor--allows one to craft adversarial examples with high transferability. Based on this insight, we propose the Skip Gradient Method (SGM). Although starting from ResNet-like models in vision domains, we further extend SGM to more advanced architectures, including Vision Transformers (ViTs), models with varying-length paths, and other domains such as natural language processing. We conduct comprehensive transfer-based attacks against diverse model families, including ResNets, Transformers, Inceptions, Neural Architecture Search-based models, and Large Language Models (LLMs). The results demonstrate that employing SGM can greatly improve the transferability of crafted attacks in almost all cases. Furthermore, we demonstrate that SGM can still be effective under more challenging settings such as ensemble-based attacks, targeted attacks, and against defense equipped models. At last, we provide theoretical explanations and empirical insights on how SGM works. Our findings not only motivate new adversarial research into the architectural characteristics of models but also open up further challenges for secure model architecture design. Our code is available at https://github.com/mo666666/SGM.",
-      "published": "2024-10-11T16:17:47Z",
-      "updated": "2026-03-16T07:53:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2410.08950v2"
+      "summary": "The prevailing paradigm for improving large language models relies on offline training with human annotations or simulated environments, leaving the rich experience accumulated during real-world deployment entirely unexploited. We propose Online Experiential Learning (OEL), a framework that enables language models to continuously improve from their own deployment experience. OEL operates in two stages: first, transferable experiential knowledge is extracted and accumulated from interaction trajectories collected on the user side; second, this knowledge is consolidated into model parameters via on-policy context distillation, requiring no access to the user-side environment. The two stages are iterated to form an online learning loop, where the improved model collects higher-quality trajectories that yield richer experiential knowledge for subsequent rounds. We evaluate OEL on text-based game environments across multiple model scales and both thinking and non-thinking variants. OEL achieves consistent improvements over successive iterations, enhancing both task accuracy and token efficiency while preserving out-of-distribution performance. Our analysis further shows that extracted experiential knowledge is significantly more effective than raw trajectories, and that on-policy consistency between the knowledge source and the policy model is critical for effective learning.",
+      "published": "2026-03-17T17:57:49Z",
+      "updated": "2026-03-17T17:57:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16856v1"
     },
     {
-      "id": "http://arxiv.org/abs/2511.06680v2",
-      "title": "Steering LLMs toward Korean Local Speech: Iterative Refinement Framework for Faithful Dialect Translation",
+      "id": "http://arxiv.org/abs/2603.16843v1",
+      "title": "Internalizing Agency from Reflective Experience",
       "authors": [
-        "Keunhyeung Park",
-        "Seunguk Yu",
-        "Youngbin Kim"
+        "Rui Ge",
+        "Yichao Fu",
+        "Yuyang Qian",
+        "Junda Su",
+        "Yiming Zhao",
+        "Peng Zhao",
+        "Hao Zhang"
       ],
-      "summary": "Standard-to-dialect machine translation remains challenging due to a persistent dialect gap in large language models and evaluation distortions inherent in n-gram metrics, which favor source copying over authentic dialect translation. In this paper, we propose the dialect refinement (DIA-REFINE) framework, which guides LLMs toward faithful target dialect outputs through an iterative loop of translation, verification, and feedback using external dialect classifiers. To address the limitations of n-gram-based metrics, we introduce the dialect fidelity score (DFS) to quantify linguistic shift and the target dialect ratio (TDR) to measure the success of dialect translation. Experiments on Korean dialects across zero-shot and in-context learning baselines demonstrate that DIA-REFINE consistently enhances dialect fidelity. The proposed metrics distinguish between False Success cases, where high n-gram scores obscure failures in dialectal translation, and True Attempt cases, where genuine attempts at dialectal translation yield low n-gram scores. We also observed that models exhibit varying degrees of responsiveness to the framework, and that integrating in-context examples further improves the translation of dialectal expressions. Our work establishes a robust framework for goal-directed, inclusive dialect translation, providing both rigorous evaluation and critical insights into model performance.",
-      "published": "2025-11-10T03:52:24Z",
-      "updated": "2026-03-16T07:53:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.06680v2"
+      "summary": "Large language models are increasingly deployed as autonomous agents that must plan, act, and recover from mistakes through long-horizon interaction with environments that provide rich feedback. However, prevailing outcome-driven post-training methods (e.g., RL with verifiable rewards) primarily optimize final success signals, leaving rich environment feedback underutilized. Consequently, they often lead to distribution sharpening: the policy becomes better at reproducing a narrow set of already-successful behaviors, while failing to improve the feedback-grounded agency needed to expand problem-solving capacity (e.g., Pass@k) in long-horizon settings. To address this, we propose LEAFE (Learning Feedback-Grounded Agency from Reflective Experience), a framework that internalizes recovery agency from reflective experience. Specifically, during exploration, the agent summarizes environment feedback into actionable experience, backtracks to earlier decision points, and explores alternative branches with revised actions. We then distill these experience-guided corrections into the model through supervised fine-tuning, enabling the policy to recover more effectively in future interactions. Across a diverse set of interactive coding and agentic tasks under fixed interaction budgets, LEAFE consistently improves Pass@1 over the base model and achieves higher Pass@k than outcome-driven baselines (GRPO) and experience-based methods such as Early Experience, with gains of up to 14% on Pass@128.",
+      "published": "2026-03-17T17:50:47Z",
+      "updated": "2026-03-17T17:50:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16843v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.07101v2",
-      "title": "Grounding Machine Creativity in Game Design Knowledge Representations: Empirical Probing of LLM-Based Executable Synthesis of Goal Playable Patterns under Structural Constraints",
+      "id": "http://arxiv.org/abs/2603.16827v1",
+      "title": "Prompt Programming for Cultural Bias and Alignment of Large Language Models",
       "authors": [
-        "Hugh Xuechen Liu",
-        "Kıvanç Tatar"
+        "Maksim Eren",
+        "Eric Michalak",
+        "Brian Cook",
+        "Johnny Seales"
       ],
-      "summary": "Creatively translating complex gameplay ideas into executable artifacts (e.g., games as Unity projects and code) remains a central challenge in computational game creativity. Gameplay design patterns provide a structured representation for describing gameplay phenomena, enabling designers to decompose high-level ideas into entities, constraints, and rule-driven dynamics. Among them, goal patterns formalize common player-objective relationships. Goal Playable Concepts (GPCs) operationalize these abstractions as playable Unity engine implementations, supporting experiential exploration and compositional gameplay design. We frame scalable playable pattern realization as a problem of constrained executable creative synthesis: generated artifacts must satisfy Unity's syntactic and architectural requirements while preserving the semantic gameplay meanings encoded in goal patterns. This dual constraint limits scalability. Therefore, we investigate whether contemporary large language models (LLMs) can perform such synthesis under engine-level structural constraints and generate Unity code (as games) structured and conditioned by goal playable patterns. Using 26 goal pattern instantiations, we compare a direct generation baseline (natural language -> C# -> Unity) with pipelines conditioned on a human-authored Unity-specific intermediate representation (IR), across three IR configurations and two open-source models (DeepSeek-Coder-V2-Lite-Instruct and Qwen2.5-Coder-7B-Instruct). Compilation success is evaluated via automated Unity replay. We propose grounding and hygiene failure modes, identifying structural and project-level grounding as primary bottlenecks.",
-      "published": "2026-03-07T08:24:47Z",
-      "updated": "2026-03-16T07:36:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.07101v2"
+      "summary": "Culture shapes reasoning, values, prioritization, and strategic decision-making, yet large language models (LLMs) often exhibit cultural biases that misalign with target populations. As LLMs are increasingly used for strategic decision-making, policy support, and document engineering tasks such as summarization, categorization, and compliance-oriented auditing, improving cultural alignment is important for ensuring that downstream analyses and recommendations reflect target-population value profiles rather than default model priors. Previous work introduced a survey-grounded cultural alignment framework and showed that culture-specific prompting can reduce misalignment, but it primarily evaluated proprietary models and relied on manual prompt engineering. In this paper, we validate and extend that framework by reproducing its social sciences survey based projection and distance metrics on open-weight LLMs, testing whether the same cultural skew and benefits of culture conditioning persist outside closed LLM systems. Building on this foundation, we introduce use of prompt programming with DSPy for this problem-treating prompts as modular, optimizable programs-to systematically tune cultural conditioning by optimizing against cultural-distance objectives. In our experiments, we show that prompt optimization often improves upon cultural prompt engineering, suggesting prompt compilation with DSPy can provide a more stable and transferable route to culturally aligned LLM responses.",
+      "published": "2026-03-17T17:34:40Z",
+      "updated": "2026-03-17T17:34:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16827v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.14919v1",
-      "title": "Which stylistic features fool ChatGPT research evaluations?",
+      "id": "http://arxiv.org/abs/2603.16822v1",
+      "title": "Surg$Σ$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence",
       "authors": [
-        "Kayvan Kousha",
-        "Mike Thelwall"
+        "Zhitao Zeng",
+        "Mengya Xu",
+        "Jian Jiang",
+        "Pengfei Guo",
+        "Yunqiu Xu",
+        "Zhu Zhuo",
+        "Chang Han Low",
+        "Yufan He",
+        "Dong Yang",
+        "Chenxi Lin",
+        "Yiming Gu",
+        "Jiaxin Guo",
+        "Yutong Ban",
+        "Daguang Xu",
+        "Qi Dou",
+        "Yueming Jin"
       ],
-      "summary": "Large Language Models (LLMs) have the potential to be used to support research evaluation and have a moderate capability to estimate the research quality of a journal article from its title and abstract. This paper assesses whether there are language-related factors unrelated to the quality of the research that influence ChatGPT's scores. Using a dataset of 99,277 journal articles submitted to the UK-wide Research Excellence Framework (REF) 2021 assessments, we calculated several readability indicators from abstracts and correlated them with ChatGPT scores and departmental REF scores. From the results, linguistic complexity and length were more strongly associated with ChatGPT research quality scores than with REF expert scores in many subject areas. Although cause-and-effect was not tested, these results suggest that ChatGPT may be more likely than human experts to reward linguistic complexity, with a potential bias towards longer and less readable abstracts in many fields. The apparent preference of LLMs for complex language is an undesirable feature for practical applications of LLMs for research quality evaluation, unless solutions can be found.",
-      "published": "2026-03-16T07:25:46Z",
-      "updated": "2026-03-16T07:25:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.14919v1"
+      "summary": "Surgical intelligence has the potential to improve the safety and consistency of surgical care, yet most existing surgical AI frameworks remain task-specific and struggle to generalize across procedures and institutions. Although multimodal foundation models, particularly multimodal large language models, have demonstrated strong cross-task capabilities across various medical domains, their advancement in surgery remains constrained by the lack of large-scale, systematically curated multimodal data. To address this challenge, we introduce Surg$Σ$, a spectrum of large-scale multimodal data and foundation models for surgical intelligence. At the core of this framework lies Surg$Σ$-DB, a large-scale multimodal data foundation designed to support diverse surgical tasks. Surg$Σ$-DB consolidates heterogeneous surgical data sources (including open-source datasets, curated in-house clinical collections and web-source data) into a unified schema, aiming to improve label consistency and data standardization across heterogeneous datasets. Surg$Σ$-DB spans 6 clinical specialties and diverse surgical types, providing rich image- and video-level annotations across 18 practical surgical tasks covering understanding, reasoning, planning, and generation, at an unprecedented scale (over 5.98M conversations). Beyond conventional multimodal conversations, Surg$Σ$-DB incorporates hierarchical reasoning annotations, providing richer semantic cues to support deeper contextual understanding in complex surgical scenarios. We further provide empirical evidence through recently developed surgical foundation models built upon Surg$Σ$-DB, illustrating the practical benefits of large-scale multimodal annotations, unified semantic design, and structured reasoning annotations for improving cross-task generalization and interpretability.",
+      "published": "2026-03-17T17:27:32Z",
+      "updated": "2026-03-17T17:27:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16822v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.14916v1",
-      "title": "EditHF-1M: A Million-Scale Rich Human Preference Feedback for Image Editing",
+      "id": "http://arxiv.org/abs/2603.16817v1",
+      "title": "Is Conformal Factuality for RAG-based LLMs Robust? Novel Metrics and Systematic Insights",
       "authors": [
-        "Zitong Xu",
-        "Huiyu Duan",
-        "Zhongpeng Ji",
-        "Xinyun Zhang",
-        "Yutao Liu",
-        "Xiongkuo Min",
-        "Ke Gu",
-        "Jian Zhang",
-        "Shusong Xu",
-        "Jinwei Chen",
+        "Yi Chen",
+        "Daiwei Chen",
+        "Sukrut Madhav Chikodikar",
+        "Caitlyn Heqi Yin",
+        "Ramya Korlakai Vinayak"
+      ],
+      "summary": "Large language models (LLMs) frequently hallucinate, limiting their reliability in knowledge-intensive applications. Retrieval-augmented generation (RAG) and conformal factuality have emerged as potential ways to address this limitation. While RAG aims to ground responses in retrieved evidence, it provides no statistical guarantee that the final output is correct. Conformal factuality filtering offers distribution-free statistical reliability by scoring and filtering atomic claims using a threshold calibrated on held-out data, however, the informativeness of the final output is not guaranteed. We systematically analyze the reliability and usefulness of conformal factuality for RAG-based LLMs across generation, scoring, calibration, robustness, and efficiency. We propose novel informativeness-aware metrics that better reflect task utility under conformal filtering. Across three benchmarks and multiple model families, we find that (i) conformal filtering suffers from low usefulness at high factuality levels due to vacuous outputs, (ii) conformal factuality guarantee is not robust to distribution shifts and distractors, highlighting the limitation that requires calibration data to closely match deployment conditions, and (iii) lightweight entailment-based verifiers match or outperform LLM-based model confidence scorers while requiring over $100\\times$ fewer FLOPs. Overall, our results expose factuality-informativeness trade-offs and fragility of conformal filtering framework under distribution shifts and distractors, highlighting the need for new approaches for reliability with robustness and usefulness as key metrics, and provide actionable guidance for building RAG pipelines that are both reliable and computationally efficient.",
+      "published": "2026-03-17T17:20:08Z",
+      "updated": "2026-03-17T17:20:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16817v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2507.15015v3",
+      "title": "MetaCrit: A Critical Thinking Framework for Self-Regulated LLM Reasoning",
+      "authors": [
+        "Xinmeng Hou",
+        "Ziting Chang",
+        "Zhouquan Lu",
+        "Chen Wenli",
+        "Liang Wan",
+        "Wei Feng",
+        "Hai Hu",
+        "Qing Guo"
+      ],
+      "summary": "Large language models (LLMs) fail on over one-third of multi-hop questions with counterfactual premises and remain vulnerable to adversarial prompts that trigger biased or factually incorrect responses, which exposes a fundamental deficit in self-regulated reasoning. We propose \\textbf{MetaCrit}, a multi-agent framework grounded in Nelson and Narens' metacognitive regulation theory. MetaCrit decomposes reasoning regulation into four agents: object-level generation, a \\emph{monitoring} agent that assesses response validity, a \\emph{control} agent that critiques logical soundness, and a meta-level synthesizer that integrates all signals into a final response. Evaluation across eight benchmarks, four model backbones, and a college-level analytical writing study shows that MetaCrit significantly improves content truthfulness and logical soundness while eliminating toxic outputs. Its modular design allows individual agents to be integrated into existing frameworks as drop-in components without architectural modifications.",
+      "published": "2025-07-20T15:55:13Z",
+      "updated": "2026-03-17T17:18:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.15015v3"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.05829v3",
+      "title": "Test-Time Adaptation via Many-Shot Prompting: Benefits, Limits, and Pitfalls",
+      "authors": [
+        "Shubhangi Upasani",
+        "Chen Wu",
+        "Jay Rainton",
         "Bo Li",
-        "Guangtao Zhai"
+        "Urmish Thakker",
+        "Changran Hu",
+        "Qizheng Zhang"
       ],
-      "summary": "Recent text-guided image editing (TIE) models have achieved remarkable progress, while many edited images still suffer from issues such as artifacts, unexpected editings, unaesthetic contents. Although some benchmarks and methods have been proposed for evaluating edited images, scalable evaluation models are still lacking, which limits the development of human feedback reward models for image editing. To address the challenges, we first introduce \\textbf{EditHF-1M}, a million-scale image editing dataset with over 29M human preference pairs and 148K human mean opinion ratings, both evaluated from three dimensions, \\textit{i.e.}, visual quality, instruction alignment, and attribute preservation. Based on EditHF-1M, we propose \\textbf{EditHF}, a multimodal large language model (MLLM) based evaluation model, to provide human-aligned feedback from image editing. Finally, we introduce \\textbf{EditHF-Reward}, which utilizes EditHF as the reward signal to optimize the text-guided image editing models through reinforcement learning. Extensive experiments show that EditHF achieves superior alignment with human preferences and demonstrates strong generalization on other datasets. Furthermore, we fine-tune the Qwen-Image-Edit using EditHF-Reward, achieving significant performance improvements, which demonstrates the ability of EditHF to serve as a reward model to scale-up the image editing. Both the dataset and code will be released in our GitHub repository: https://github.com/IntMeGroup/EditHF.",
-      "published": "2026-03-16T07:24:56Z",
-      "updated": "2026-03-16T07:24:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.14916v1"
+      "summary": "Test-time adaptation enables large language models (LLMs) to modify their behavior at inference without updating model parameters. A common approach is many-shot prompting, where large numbers of in-context learning (ICL) examples are injected as an input-space test-time update. Although performance can improve as more demonstrations are added, the reliability and limits of this update mechanism remain poorly understood, particularly for open-source models. We present an empirical study of many-shot prompting across tasks and model backbones, analyzing how performance varies with update magnitude, example ordering, and selection policy. We further study Dynamic and Reinforced ICL as alternative test-time update strategies that control which information is injected and how it constrains model behavior. We find that many-shot prompting is effective for structured tasks where demonstrations provide high information gain, but is highly sensitive to selection strategy and often shows limited benefits for open-ended generation tasks. Overall, we characterize the practical limits of prompt-based test-time adaptation and outline when input-space updates are beneficial versus harmful.",
+      "published": "2026-03-06T02:25:02Z",
+      "updated": "2026-03-17T17:10:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.05829v3"
     },
     {
-      "id": "http://arxiv.org/abs/2510.24358v2",
-      "title": "Automatically Benchmarking LLM Code Agents through Agent-Driven Annotation and Evaluation",
+      "id": "http://arxiv.org/abs/2602.22479v3",
+      "title": "Efficient Continual Learning in Language Models via Thalamically Routed Cortical Columns",
       "authors": [
-        "Lingyue Fu",
-        "Bolun Zhang",
-        "Hao Guan",
-        "Yaoming Zhu",
-        "Lin Qiu",
-        "Weiwen Liu",
-        "Xuezhi Cao",
-        "Xunliang Cai",
-        "Weinan Zhang",
-        "Yong Yu"
+        "Afshin Khadangi"
       ],
-      "summary": "Recent advances in code agents have enabled automated software development at the project level, supported by large language models (LLMs). However, existing benchmarks for code agent evaluation face two major limitations. First, creating high-quality project-level evaluation datasets requires extensive domain expertise, leading to prohibitive annotation costs and limited diversity. Second, while recent Agent-as-a-Judge paradigms address the rigidity of traditional unit tests by enabling flexible metrics, their reliance on In-Context Learning (ICL) with general LLMs often results in inaccurate assessments that misalign with human standards. To address these challenges, we propose an agent-driven benchmark construction pipeline that leverages human supervision to efficiently generate diverse project-level tasks. Based on this, we introduce PRDBench, comprising 50 real-world Python projects across 20 domains, each with structured Product Requirement Documents (PRDs) and comprehensive criteria. Furthermore, to overcome the inaccuracy of general LLM judges, we propose a highly reliable evaluation framework powered by a specialized, fine-tuned model. Based on Qwen3-Coder-30B, our dedicated PRDJudge achieves over 90% human alignment in fixed-interface scenarios. Extensive experiments demonstrate that our suite provides a scalable, robust, and highly accurate framework for assessing state-of-the-art code agents.",
-      "published": "2025-10-28T12:26:45Z",
-      "updated": "2026-03-16T07:22:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.24358v2"
+      "summary": "Large language models deployed in the wild must adapt to evolving data, user behavior, and task mixtures without erasing previously acquired capabilities. In practice, this remains difficult: sequential updates induce catastrophic forgetting, while many stabilization methods rely on external procedures that are costly, brittle, or difficult to scale. We present TRC$^{2}$ (Thalamically Routed Cortical Columns), a decoder-only architecture that makes continual adaptation a property of the backbone itself. TRC$^{2}$ combines stacked cortical columns with a thalamic modulatory pathway for selective inter-column communication and a hippocampal pathway for event-selective retrieval, delayed surprise-based writing, and replay-driven consolidation. This design localizes fast plasticity while preserving a slower stable computation pathway. We further introduce a causal memory-update scheme and an online replay controller that adjusts consolidation strength from measured forgetting. Across a task-sequential language-modeling stream over C4, WikiText-103, and GSM8K, TRC$^{2}$ consistently improves task-boundary modeling quality and substantially reduces cumulative forgetting relative to Transformer, Mamba, MoE, and DeepSeek baselines trained under the same pipeline. Ablations show that the thalamic and hippocampal components are central to the retention gains, while the full model remains competitive in throughput and training cost.",
+      "published": "2026-02-25T23:38:16Z",
+      "updated": "2026-03-17T17:02:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22479v3"
     },
     {
-      "id": "http://arxiv.org/abs/2507.07610v7",
-      "title": "SpatialViz-Bench: A Cognitively-Grounded Benchmark for Diagnosing Spatial Visualization in MLLMs",
+      "id": "http://arxiv.org/abs/2603.16790v1",
+      "title": "InCoder-32B: Code Foundation Model for Industrial Scenarios",
       "authors": [
-        "Siting Wang",
-        "Minnan Pei",
-        "Luoyang Sun",
-        "Cheng Deng",
-        "Yuchen Li",
-        "Kun Shao",
-        "Zheng Tian",
-        "Haifeng Zhang",
-        "Jun Wang"
+        "Jian Yang",
+        "Wei Zhang",
+        "Jiajun Wu",
+        "Junhang Cheng",
+        "Shawn Guo",
+        "Haowen Wang",
+        "Weicheng Gu",
+        "Yaxin Du",
+        "Joseph Li",
+        "Fanglin Xu",
+        "Yizhi Li",
+        "Lin Jing",
+        "Yuanbo Wang",
+        "Yuhan Gao",
+        "Ruihao Gong",
+        "Chuan Hao",
+        "Ran Tao",
+        "Aishan Liu",
+        "Tuney Zheng",
+        "Ganqu Cui",
+        "Zhoujun Li",
+        "Mingjie Tang",
+        "Chenghua Lin",
+        "Wayne Xin Zhao",
+        "Xianglong Liu",
+        "Ming Zhou",
+        "Bryan Dai",
+        "Weifeng Lv"
       ],
-      "summary": "Humans can imagine and manipulate visual images mentally, a capability known as spatial visualization. While many multi-modal benchmarks assess reasoning on visible visual information, the ability to infer unseen relationships through spatial visualization remains insufficiently evaluated as a spatial skill. This reliance on publicly sourced problems from IQ tests or math competitions risks data contamination and compromises assessment reliability. To this end, we introduce SpatialViz-Bench, a comprehensive multi-modal benchmark for spatial visualization with 12 tasks across 4 sub-abilities, comprising 1,180 programmatically generated problems, a scalable framework that allows for expansion to ensure fair and continuously reliable evaluations. Our evaluation of 27 Multi-modal Large Language Models (MLLMs) reveals wide performance variations, demonstrates the benchmark's strong discriminative power, and uncovers counter-intuitive findings: Chain-of-Thought (CoT) prompting paradoxically degrades accuracy on open-source models. Through statistical and qualitative analysis of error types, SpatialViz-Bench demonstrates that state-of-the-art MLLMs exhibit deficiencies in spatial visualization tasks, thereby addressing a significant lacuna in the field. The benchmark data and evaluation code are publicly available.",
-      "published": "2025-07-10T10:27:20Z",
-      "updated": "2026-03-16T07:21:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.07610v7"
-    },
-    {
-      "id": "http://arxiv.org/abs/2505.15030v5",
-      "title": "A Systematic Evaluation of On-Device LLMs: Quantization, Performance, and Resources",
-      "authors": [
-        "Qingyu Song",
-        "Rui Liu",
-        "Wei Lin",
-        "Peiyu Liao",
-        "Wenqian Zhao",
-        "Yiwen Wang",
-        "Shoubo Hu",
-        "Yining Jiang",
-        "Mochun Long",
-        "Hui-Ling Zhen",
-        "Ning Jiang",
-        "Mingxuan Yuan",
-        "Qiao Xiang",
-        "Hong Xu"
-      ],
-      "summary": "Deploying Large Language Models (LLMs) on edge devices enhances privacy but faces performance hurdles due to limited resources. We introduce a systematic methodology to evaluate on-device LLMs, balancing capability, efficiency, and resource constraints. Through an extensive analysis of models (0.5B-14B) and seven post-training quantization (PTQ) methods on commodity hardware, we demonstrate that: 1) Heavily quantized large models consistently outperform smaller, high-precision models, with a performance threshold at ~3.5 effective bits-per-weight (BPW); 2) Resource utilization scales linearly with BPW, though power and memory footprints vary by quantization algorithm; and 3) With a reduction in model size, the primary constraint on throughput transitions from communication overhead to computational latency. We conclude by offering guidelines for optimizing LLMs in resource-constrained edge environments. Our codebase is available at https://anonymous.4open.science/r/LLMOnDevice/.",
-      "published": "2025-05-21T02:23:01Z",
-      "updated": "2026-03-16T07:07:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.15030v5"
-    },
-    {
-      "id": "http://arxiv.org/abs/2602.20722v2",
-      "title": "Buffer Matters: Unleashing the Power of Off-Policy Reinforcement Learning in Large Language Model Reasoning",
-      "authors": [
-        "Xu Wan",
-        "Yansheng Wang",
-        "Wenqi Huang",
-        "Mingyang Sun"
-      ],
-      "summary": "Traditional on-policy Reinforcement Learning with Verifiable Rewards (RLVR) frameworks suffer from experience waste and reward homogeneity, which directly hinders learning efficiency on difficult samples during large language models post-training. In this paper, we introduce Batch Adaptation Policy Optimization (BAPO), an off-policy RLVR framework to improve the data efficiency in large language models post-training. It dynamically selects training batches by re-evaluating historically difficult samples and reusing high-quality ones, while holding a lower bound guarantee for policy improvement. Extensive experiments further demonstrate that BAPO achieves an average 12.5% improvement over GRPO across mathematics, planning, and visual reasoning tasks. Crucially, BAPO successfully resolves 40.7% of problems that base models consistently fail to solve.",
-      "published": "2026-02-24T09:35:43Z",
-      "updated": "2026-03-16T07:07:21Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.20722v2"
+      "summary": "Recent code large language models have achieved remarkable progress on general programming tasks. Nevertheless, their performance degrades significantly in industrial scenarios that require reasoning about hardware semantics, specialized language constructs, and strict resource constraints. To address these challenges, we introduce InCoder-32B (Industrial-Coder-32B), the first 32B-parameter code foundation model unifying code intelligence across chip design, GPU kernel optimization, embedded systems, compiler optimization, and 3D modeling. By adopting an efficient architecture, we train InCoder-32B from scratch with general code pre-training, curated industrial code annealing, mid-training that progressively extends context from 8K to 128K tokens with synthetic industrial reasoning data, and post-training with execution-grounded verification. We conduct extensive evaluation on 14 mainstream general code benchmarks and 9 industrial benchmarks spanning 4 specialized domains. Results show InCoder-32B achieves highly competitive performance on general tasks while establishing strong open-source baselines across industrial domains.",
+      "published": "2026-03-17T17:01:35Z",
+      "updated": "2026-03-17T17:01:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16790v1"
     }
   ]
 }
