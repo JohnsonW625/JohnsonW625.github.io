@@ -1,196 +1,235 @@
 {
-  "generated_at_utc": "2026-03-19T02:08:43Z",
+  "generated_at_utc": "2026-03-20T02:02:39Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.18003v1",
-      "title": "Universal Skeleton Understanding via Differentiable Rendering and MLLMs",
+      "id": "http://arxiv.org/abs/2603.19235v1",
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
       "authors": [
-        "Ziyi Wang",
-        "Peiming Li",
-        "Xinshun Wang",
-        "Yang Tang",
-        "Kai-Kuang Ma",
-        "Mengyuan Liu"
+        "Xianjin Wu",
+        "Dingkang Liang",
+        "Tianrui Feng",
+        "Kui Xia",
+        "Yumeng Zhang",
+        "Xiaofan Li",
+        "Xiao Tan",
+        "Xiang Bai"
       ],
-      "summary": "Multimodal large language models (MLLMs) exhibit strong visual-language reasoning, yet remain confined to their native modalities and cannot directly process structured, non-visual data such as human skeletons. Existing methods either compress skeleton dynamics into lossy feature vectors for text alignment, or quantize motion into discrete tokens that generalize poorly across heterogeneous skeleton formats. We present SkeletonLLM, which achieves universal skeleton understanding by translating arbitrary skeleton sequences into the MLLM's native visual modality. At its core is DrAction, a differentiable, format-agnostic renderer that converts skeletal kinematics into compact image sequences. Because the pipeline is end-to-end differentiable, MLLM gradients can directly guide the rendering to produce task-informative visual tokens. To further enhance reasoning capabilities, we introduce a cooperative training strategy: Causal Reasoning Distillation transfers structured, step-by-step reasoning from a teacher model, while Discriminative Finetuning sharpens decision boundaries between confusable actions. SkeletonLLM demonstrates strong generalization on diverse tasks including recognition, captioning, reasoning, and cross-format transfer -- suggesting a viable path for applying MLLMs to non-native modalities. Code will be released upon acceptance.",
-      "published": "2026-03-18T17:59:12Z",
-      "updated": "2026-03-18T17:59:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.18003v1"
+      "summary": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+      "published": "2026-03-19T17:59:58Z",
+      "updated": "2026-03-19T17:59:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19235v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.18002v1",
-      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+      "id": "http://arxiv.org/abs/2603.19225v1",
+      "title": "FinTradeBench: A Financial Reasoning Benchmark for LLMs",
       "authors": [
-        "Kevin Qu",
-        "Haozhe Qi",
-        "Mihai Dusmanu",
-        "Mahdi Rad",
-        "Rui Wang",
-        "Marc Pollefeys"
+        "Yogesh Agrawal",
+        "Aniruddha Dutta",
+        "Md Mahadi Hasan",
+        "Santu Karmaker",
+        "Aritra Dutta"
       ],
-      "summary": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
-      "published": "2026-03-18T17:59:10Z",
-      "updated": "2026-03-18T17:59:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.18002v1"
+      "summary": "Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data and rarely evaluate reasoning over how company stocks trade in the market or their interactions with fundamentals. To take advantage of the strengths of both approaches, we introduce FinTradeBench, a benchmark for evaluating financial reasoning that integrates company fundamentals and trading signals. FinTradeBench contains 1,400 questions grounded in NASDAQ-100 companies over a ten-year historical window. The benchmark is organized into three reasoning categories: fundamentals-focused, trading-signal-focused, and hybrid questions requiring cross-signal reasoning. To ensure reliability at scale, we adopt a calibration-then-scaling framework that combines expert seed questions, multi-model response generation, intra-model self-filtering, numerical auditing, and human-LLM judge alignment. We evaluate 14 LLMs under zero-shot prompting and retrieval-augmented settings and witness a clear performance gap. Retrieval substantially improves reasoning over textual fundamentals, but provides limited benefit for trading-signal reasoning. These findings highlight fundamental challenges in the numerical and time-series reasoning for current LLMs and motivate future research in financial intelligence.",
+      "published": "2026-03-19T17:59:41Z",
+      "updated": "2026-03-19T17:59:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19225v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17998v1",
-      "title": "The Unreasonable Effectiveness of Text Embedding Interpolation for Continuous Image Steering",
+      "id": "http://arxiv.org/abs/2603.19221v1",
+      "title": "Online Learning and Equilibrium Computation with Ranking Feedback",
       "authors": [
-        "Yigit Ekin",
-        "Yossi Gandelsman"
+        "Mingyang Liu",
+        "Yongshan Chen",
+        "Zhiyuan Fan",
+        "Gabriele Farina",
+        "Asuman Ozdaglar",
+        "Kaiqing Zhang"
       ],
-      "summary": "We present a training-free framework for continuous and controllable image editing at test time for text-conditioned generative models. In contrast to prior approaches that rely on additional training or manual user intervention, we find that a simple steering in the text-embedding space is sufficient to produce smooth edit control. Given a target concept (e.g., enhancing photorealism or changing facial expression), we use a large language model to automatically construct a small set of debiased contrastive prompt pairs, from which we compute a steering vector in the generator's text-encoder space. We then add this vector directly to the input prompt representation to control generation along the desired semantic axis. To obtain a continuous control, we propose an elastic range search procedure that automatically identifies an effective interval of steering magnitudes, avoiding both under-steering (no-edit) and over-steering (changing other attributes). Adding the scaled versions of the same vector within this interval yields smooth and continuous edits. Since our method modifies only textual representations, it naturally generalizes across text-conditioned modalities, including image and video generation. To quantify the steering continuity, we introduce a new evaluation metric that measures the uniformity of semantic change across edit strengths. We compare the continuous editing behavior across methods and find that, despite its simplicity and lightweight design, our approach is comparable to training-based alternatives, outperforming other training-free methods.",
-      "published": "2026-03-18T17:57:53Z",
-      "updated": "2026-03-18T17:57:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17998v1"
+      "summary": "Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \\emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \\emph{ranking} over a set of proposed actions at each timestep. We consider two ranking mechanisms: rankings induced by the \\emph{instantaneous} utility at the current timestep, and rankings induced by the \\emph{time-average} utility up to the current timestep, under both \\emph{full-information} and \\emph{bandit} feedback settings. Using the standard external-regret metric, we show that sublinear regret is impossible with instantaneous-utility ranking feedback in general. Moreover, when the ranking model is relatively deterministic, \\emph{i.e.}, under the Plackett-Luce model with a temperature that is sufficiently small, sublinear regret is also impossible with time-average utility ranking feedback. We then develop new algorithms that achieve sublinear regret under the additional assumption that the utility sequence has sublinear total variation. Notably, for full-information time-average utility ranking feedback, this additional assumption can be removed. As a consequence, when all players in a normal-form game follow our algorithms, repeated play yields an approximate coarse correlated equilibrium. We also demonstrate the effectiveness of our algorithms in an online large-language-model routing task.",
+      "published": "2026-03-19T17:59:07Z",
+      "updated": "2026-03-19T17:59:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19221v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17980v1",
-      "title": "Feeling the Space: Egomotion-Aware Video Representation for Efficient and Accurate 3D Scene Understanding",
+      "id": "http://arxiv.org/abs/2603.19217v1",
+      "title": "LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs",
       "authors": [
-        "Shuyao Shi",
-        "Kang G. Shin"
+        "Keda Tao",
+        "Yuhua Zheng",
+        "Jia Xu",
+        "Wenjie Du",
+        "Kele Shao",
+        "Hesong Wang",
+        "Xueyi Chen",
+        "Xin Jin",
+        "Junhan Zhu",
+        "Bohan Yu",
+        "Weiqiang Wang",
+        "Jian Liu",
+        "Can Qin",
+        "Yulun Zhang",
+        "Ming-Hsuan Yang",
+        "Huan Wang"
       ],
-      "summary": "Recent Multimodal Large Language Models (MLLMs) have shown high potential for spatial reasoning within 3D scenes. However, they typically rely on computationally expensive 3D representations like point clouds or reconstructed Bird's-Eye View (BEV) maps, or lack physical grounding to resolve ambiguities in scale and size. This paper significantly enhances MLLMs with egomotion modality data, captured by Inertial Measurement Units (IMUs) concurrently with the video. In particular, we propose a novel framework, called Motion-MLLM, introducing two key components: (1) a cascaded motion-visual keyframe filtering module that leverages both IMU data and visual features to efficiently select a sparse yet representative set of keyframes, and (2) an asymmetric cross-modal fusion module where motion tokens serve as intermediaries that channel egomotion cues and cross-frame visual context into the visual representation. By grounding visual content in physical egomotion trajectories, Motion-MLLM can reason about absolute scale and spatial relationships across the scene. Our extensive evaluation shows that Motion-MLLM makes significant improvements in various tasks related to 3D scene understanding and spatial reasoning. Compared to state-of-the-art (SOTA) methods based on video frames and explicit 3D data, Motion-MLLM exhibits similar or even higher accuracy with significantly less overhead (i.e., 1.40$\\times$ and 1.63$\\times$ higher cost-effectiveness, respectively).",
-      "published": "2026-03-18T17:42:49Z",
-      "updated": "2026-03-18T17:42:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17980v1"
+      "summary": "Recent advancements in omnimodal large language models (OmniLLMs) have significantly improved the comprehension of audio and video inputs. However, current evaluations primarily focus on short audio and video clips ranging from 10 seconds to 5 minutes, failing to reflect the demands of real-world applications, where videos typically run for tens of minutes. To address this critical gap, we introduce LVOmniBench, a new benchmark designed specifically for the cross-modal comprehension of long-form audio and video. This dataset comprises high-quality videos sourced from open platforms that feature rich audio-visual dynamics. Through rigorous manual selection and annotation, LVOmniBench comprises 275 videos, ranging in duration from 10 to 90 minutes, and 1,014 question-answer (QA) pairs. LVOmniBench aims to rigorously evaluate the capabilities of OmniLLMs across domains, including long-term memory, temporal localization, fine-grained understanding, and multimodal perception. Our extensive evaluation reveals that current OmniLLMs encounter significant challenges when processing extended audio-visual inputs. Open-source models generally achieve accuracies below 35%, whereas the Gemini 3 Pro reaches a peak accuracy of approximately 65%. We anticipate that this dataset, along with our empirical findings, will stimulate further research and the development of advanced models capable of resolving complex cross-modal understanding problems within long-form audio-visual contexts.",
+      "published": "2026-03-19T17:58:13Z",
+      "updated": "2026-03-19T17:58:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19217v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17962v1",
-      "title": "ConGA: Guidelines for Contextual Gender Annotation. A Framework for Annotating Gender in Machine Translation",
+      "id": "http://arxiv.org/abs/2603.19215v1",
+      "title": "$R$-equivalence on Cubic Surfaces I: Existing Cases with Non-Trivial Universal Equivalence",
       "authors": [
-        "Argentina Anna Rescigno",
-        "Eva Vanmassenhove",
-        "Johanna Monti"
+        "Dimitri Kanevsky",
+        "Julian Salazar",
+        "Matt Harvey"
       ],
-      "summary": "Handling gender across languages remains a persistent challenge for Machine Translation (MT) and Large Language Models (LLMs), especially when translating from gender-neutral languages into morphologically gendered ones, such as English to Italian. English largely omits grammatical gender, while Italian requires explicit agreement across multiple grammatical categories. This asymmetry often leads MT systems to default to masculine forms, reinforcing bias and reducing translation accuracy. To address this issue, we present the Contextual Gender Annotation (ConGA) framework, a linguistically grounded set of guidelines for word-level gender annotation. The scheme distinguishes between semantic gender in English through three tags, Masculine (M), Feminine (F), and Ambiguous (A), and grammatical gender realisation in Italian (Masculine (M), Feminine (F)), combined with entity-level identifiers for cross-sentence tracking. We apply ConGA to the gENder-IT dataset, creating a gold-standard resource for evaluating gender bias in translation. Our results reveal systematic masculine overuse and inconsistent feminine realisation, highlighting persistent limitations of current MT systems. By combining fine-grained linguistic annotation with quantitative evaluation, this work offers both a methodology and a benchmark for building more gender-aware and multilingual NLP systems.",
-      "published": "2026-03-18T17:31:47Z",
-      "updated": "2026-03-18T17:31:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17962v1"
+      "summary": "Let $V$ be a smooth cubic surface over a $p$-adic field $k$ with good reduction. Swinnerton-Dyer (1981) proved that $R$-equivalence is trivial on $V(k)$ except perhaps if $V$ is one of three special types--those whose $R$-equivalence he could not bound by proving the universal (admissible) equivalence is trivial. We consider all surfaces $V$ currently known to have non-trivial universal equivalence. Beyond being intractable to Swinnerton-Dyer's approach, we observe that if these surfaces also had non-trivial $R$-equivalence, they would contradict Colliot-Thélène and Sansuc's conjecture regarding the $k$-rationality of universal torsors for geometrically rational surfaces. By devising new methods to study $R$-equivalence, we prove that for 2-adic surfaces with all-Eckardt reductions (the third special type, which contains every existing case of non-trivial universal equivalence), $R$-equivalence is trivial or of exponent 2. For the explicit cases, we confirm triviality: the diagonal cubic $X^3+Y^3+Z^3+ζ_3 T^3=0$ over $\\mathbb{Q}_2(ζ_3)$--answering a long-standing question of Manin's (Cubic Forms, 1972)--and the cubic with universal equivalence of exponent 2 (Kanevsky, 1982). This is the first in a series of works derived from a year of interactions with generative AI models such as AlphaEvolve and Gemini 3 Deep Think, with the latter proving many of our lemmas. We disclose the timeline and nature of their use towards this paper, and describe our broader AI-assisted research program in a companion report (in preparation).",
+      "published": "2026-03-19T17:57:38Z",
+      "updated": "2026-03-19T17:57:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19215v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17952v1",
-      "title": "Gender Disambiguation in Machine Translation: Diagnostic Evaluation in Decoder-Only Architectures",
+      "id": "http://arxiv.org/abs/2603.19209v1",
+      "title": "Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders",
       "authors": [
-        "Chiara Manna",
-        "Hosein Mohebbi",
-        "Afra Alishahi",
-        "Frédéric Blain",
-        "Eva Vanmassenhove"
+        "Shang-Jui Ray Kuo",
+        "Paola Cascante-Bonilla"
       ],
-      "summary": "While Large Language Models achieve state-of-the-art results across a wide range of NLP tasks, they remain prone to systematic biases. Among these, gender bias is particularly salient in MT, due to systematic differences across languages in whether and how gender is marked. As a result, translation often requires disambiguating implicit source signals into explicit gender-marked forms. In this context, standard benchmarks may capture broad disparities but fail to reflect the full complexity of gender bias in modern MT. In this paper, we extend recent frameworks on bias evaluation by: (i) introducing a novel measure coined \"Prior Bias\", capturing a model's default gender assumptions, and (ii) applying the framework to decoder-only MT models. Our results show that, despite their scale and state-of-the-art status, decoder-only models do not generally outperform encoder-decoder architectures on gender-specific metrics; however, post-training (e.g., instruction tuning) not only improves contextual awareness but also reduces the masculine Prior Bias.",
-      "published": "2026-03-18T17:26:36Z",
-      "updated": "2026-03-18T17:26:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17952v1"
+      "summary": "Large vision--language models (VLMs) often use a frozen vision backbone, whose image features are mapped into a large language model through a lightweight connector. While transformer-based encoders are the standard visual backbone, we ask whether state space model (SSM) vision backbones can be a strong alternative. We systematically evaluate SSM vision backbones for VLMs in a controlled setting. Under matched ImageNet-1K initialization, the SSM backbone achieves the strongest overall performance across both VQA and grounding/localization. We further adapt both SSM and ViT-family backbones with detection or segmentation training and find that dense-task tuning generally improves performance across families; after this adaptation, the SSM backbone remains competitive while operating at a substantially smaller model scale. We further observe that (i) higher ImageNet accuracy or larger backbones do not reliably translate into better VLM performance, and (ii) some visual backbones are unstable in localization. Based on these findings, we propose stabilization strategies that improve robustness for both backbone families and highlight SSM backbones as a strong alternative to transformer-based vision encoders in VLMs.",
+      "published": "2026-03-19T17:56:32Z",
+      "updated": "2026-03-19T17:56:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19209v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17942v1",
-      "title": "Efficient Training-Free Multi-Token Prediction via Embedding-Space Probing",
+      "id": "http://arxiv.org/abs/2501.09749v2",
+      "title": "Enhancing Lexicon-Based Text Embeddings with Large Language Models",
       "authors": [
-        "Raghavv Goel",
-        "Mukul Gagrani",
-        "Mingu Lee",
-        "Chris Lott"
+        "Yibin Lei",
+        "Tao Shen",
+        "Yu Cao",
+        "Andrew Yates"
       ],
-      "summary": "Large language models (LLMs) exhibit latent multi-token prediction (MTP) capabilities despite being trained solely for next-token generation. We propose a simple, training-free MTP approach that probes an LLM using on-the-fly mask tokens drawn from its embedding space, enabling parallel prediction of future tokens without modifying model weights or relying on auxiliary draft models. Our method constructs a speculative token tree by sampling top-K candidates from mask-token logits and applies a lightweight pruning strategy to retain high-probability continuations. During decoding, candidate predictions are verified in parallel, resulting in lossless generation while substantially reducing the number of model calls and improving token throughput. Across benchmarks, our probing-based MTP consistently outperforms existing training-free baselines, increasing acceptance length by approximately 12\\% on LLaMA3 and 8--12\\% on Qwen3, and achieving throughput gains of up to 15--19\\%. Finally, we provide theoretical insights and empirical evidence showing that decoder layers naturally align mask-token representations with next-token states, enabling accurate multi-step prediction without retraining or auxiliary models.",
-      "published": "2026-03-18T17:14:01Z",
-      "updated": "2026-03-18T17:14:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17942v1"
+      "summary": "Recent large language models (LLMs) have demonstrated exceptional performance on general-purpose text embedding tasks. While dense embeddings have dominated related research, we introduce the first lexicon-based embeddings (LENS) leveraging LLMs that achieve competitive performance on these tasks. LENS consolidates the vocabulary space through token embedding clustering to handle the issue of token redundancy in LLM vocabularies. To further improve performance, we investigate bidirectional attention and various pooling strategies. Specifically, LENS simplifies lexical matching with redundant vocabularies by assigning each dimension to a specific token cluster, where semantically similar tokens are grouped together. Extensive experiments demonstrate that LENS outperforms dense embeddings on the Massive Text Embedding Benchmark (MTEB), delivering compact representations with dimensionality comparable to dense counterparts. Furthermore, LENS inherently supports efficient embedding dimension pruning without any specialized objectives like Matryoshka Representation Learning. Notably, combining LENS with dense embeddings achieves state-of-the-art performance on the retrieval subset of MTEB (i.e., BEIR).",
+      "published": "2025-01-16T18:57:20Z",
+      "updated": "2026-03-19T17:55:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.09749v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17917v1",
-      "title": "Only relative ranks matter in weight-clustered large language models",
+      "id": "http://arxiv.org/abs/2603.19195v1",
+      "title": "How Auditory Knowledge in LLM Backbones Shapes Audio Language Models: A Holistic Evaluation",
       "authors": [
-        "Borja Aizpurua",
-        "Sukhbinder Singh",
-        "Román Orús"
+        "Ke-Han Lu",
+        "Szu-Wei Fu",
+        "Chao-Han Huck Yang",
+        "Zhehuai Chen",
+        "Sung-Feng Huang",
+        "Chih-Kai Yang",
+        "Yi-Cheng Lin",
+        "Chi-Yuan Hsiao",
+        "Wenze Ren",
+        "En-Pei Hu",
+        "Yu-Han Huang",
+        "An-Yu Cheng",
+        "Cheng-Han Chiang",
+        "Yu Tsao",
+        "Yu-Chiang Frank Wang",
+        "Hung-yi Lee"
       ],
-      "summary": "Large language models (LLMs) contain billions of parameters, yet many exact values are not essential. We show that what matters most is the relative rank of weights-whether one connection is stronger or weaker than another-rather than precise magnitudes. To reduce the number of unique weight values, we apply weight clustering to pretrained models, replacing every weight matrix with K shared values from K-means. For Llama 3.1-8B-Instruct and SmolLM2-135M, reducing each matrix to only 16-64 distinct values preserves strong accuracy without retraining, providing a simple, training-free method to compress LLMs on disk. Optionally fine-tuning only the cluster means (centroids) recovers 30-40 percent of the remaining accuracy gap at minimal cost. We then systematically randomize cluster means while keeping assignments fixed. Scrambling the relative ranks of the clusters degrades quality sharply-perplexity can increase by orders of magnitude-even when global statistics such as mean and variance are preserved. In contrast, rank-preserving randomizations cause almost no loss at mid and late layers. On the other hand, when many layers are perturbed simultaneously, progressive layer-by-layer replacement reveals that scale drift-not rank distortion-is the dominant collapse mechanism; however, an affine correction w' = aw + b with a > 0 (which preserves both rank order and overall weight distribution) can substantially delay this drift. This rank-based perspective offers a new lens on model compression and robustness.",
-      "published": "2026-03-18T16:55:13Z",
-      "updated": "2026-03-18T16:55:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17917v1"
+      "summary": "Large language models (LLMs) have been widely used as knowledge backbones of Large Audio Language Models (LALMs), yet how much auditory knowledge they encode through text-only pre-training and how this affects downstream performance remains unclear. We study this gap by comparing different LLMs under two text-only and one audio-grounded setting: (1) direct probing on AKB-2000, a curated benchmark testing the breadth and depth of auditory knowledge; (2) cascade evaluation, where LLMs reason over text descriptions from an audio captioner; and (3) audio-grounded evaluation, where each LLM is fine-tuned into a Large Audio Language Model (LALM) with an audio encoder. Our findings reveal that auditory knowledge varies substantially across families, and text-only results are strongly correlated with audio performance. Our work provides empirical grounding for a comprehensive understanding of LLMs in audio research.",
+      "published": "2026-03-19T17:50:07Z",
+      "updated": "2026-03-19T17:50:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19195v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17915v1",
-      "title": "IndicSafe: A Benchmark for Evaluating Multilingual LLM Safety in South Asia",
+      "id": "http://arxiv.org/abs/2511.08905v3",
+      "title": "iSeal: Encrypted Fingerprinting for Reliable LLM Ownership Verification",
       "authors": [
-        "Priyaranjan Pattnayak",
-        "Sanchari Chowdhuri"
+        "Zixun Xiong",
+        "Gaoyi Wu",
+        "Qingyang Yu",
+        "Mingyu Derek Ma",
+        "Lingfeng Yao",
+        "Miao Pan",
+        "Xiaojiang Du",
+        "Hao Wang"
       ],
-      "summary": "As large language models (LLMs) are deployed in multilingual settings, their safety behavior in culturally diverse, low-resource languages remains poorly understood. We present the first systematic evaluation of LLM safety across 12 Indic languages, spoken by over 1.2 billion people but underrepresented in LLM training data. Using a dataset of 6,000 culturally grounded prompts spanning caste, religion, gender, health, and politics, we assess 10 leading LLMs on translated variants of the prompt. Our analysis reveals significant safety drift: cross-language agreement is just 12.8\\%, and \\texttt{SAFE} rate variance exceeds 17\\% across languages. Some models over-refuse benign prompts in low-resource scripts, overflag politically sensitive topics, while others fail to flag unsafe generations. We quantify these failures using prompt-level entropy, category bias scores, and multilingual consistency indices. Our findings highlight critical safety generalization gaps in multilingual LLMs and show that safety alignment does not transfer evenly across languages. We release \\textsc{IndicSafe}, the first benchmark to enable culturally informed safety evaluation for Indic deployments, and advocate for language-aware alignment strategies grounded in regional harms.",
-      "published": "2026-03-18T16:54:07Z",
-      "updated": "2026-03-18T16:54:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17915v1"
+      "summary": "Given the high cost of large language model (LLM) training from scratch, safeguarding LLM intellectual property (IP) has become increasingly crucial. As the standard paradigm for IP ownership verification, LLM fingerprinting thus plays a vital role in addressing this challenge. Existing LLM fingerprinting methods verify ownership by extracting or injecting model-specific features. However, they overlook potential attacks during the verification process, leaving them ineffective when the model thief fully controls the LLM's inference process. In such settings, attackers may share prompt-response pairs to enable fingerprint unlearning or manipulate outputs to evade exact-match verification. We propose iSeal, the first fingerprinting method designed for reliable verification when the model thief controls the suspected LLM in an end-to-end manner. It injects unique features into both the model and an external module, reinforced by an error-correction mechanism and a similarity-based verification strategy. These components are resistant to verification-time attacks, including collusion-based fingerprint unlearning and response manipulation, backed by both theoretical analysis and empirical results. iSeal achieves 100 percent Fingerprint Success Rate (FSR) on 12 LLMs against more than 10 attacks, while baselines fail under unlearning and response manipulations.",
+      "published": "2025-11-12T02:30:19Z",
+      "updated": "2026-03-19T17:47:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.08905v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17902v1",
-      "title": "Differential Privacy in Generative AI Agents: Analysis and Optimal Tradeoffs",
+      "id": "http://arxiv.org/abs/2603.19182v1",
+      "title": "Box Maze: A Process-Control Architecture for Reliable LLM Reasoning",
       "authors": [
-        "Ya-Ting Yang",
-        "Quanyan Zhu"
+        "Zou Qiang"
       ],
-      "summary": "Large language models (LLMs) and AI agents are increasingly integrated into enterprise systems to access internal databases and generate context-aware responses. While such integration improves productivity and decision support, the model outputs may inadvertently reveal sensitive information. Although many prior efforts focus on protecting the privacy of user prompts, relatively few studies consider privacy risks from the enterprise data perspective. Hence, this paper develops a probabilistic framework for analyzing privacy leakage in AI agents based on differential privacy. We model response generation as a stochastic mechanism that maps prompts and datasets to distributions over token sequences. Within this framework, we introduce token-level and message-level differential privacy and derive privacy bounds that relate privacy leakage to generation parameters such as temperature and message length. We further formulate a privacy-utility design problem that characterizes optimal temperature selection.",
-      "published": "2026-03-18T16:35:12Z",
-      "updated": "2026-03-18T16:35:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17902v1"
+      "summary": "Large language models (LLMs) demonstrate strong generative capabilities but remain vulnerable to hallucination and unreliable reasoning under adversarial prompting. Existing safety approaches -- such as reinforcement learning from human feedback (RLHF) and output filtering -- primarily operate at the behavioral level and may lack explicit architectural mechanisms for enforcing reasoning process integrity. This paper proposes the Box Maze framework, a conceptual process-control architecture that decomposes LLM reasoning into three explicit layers: memory grounding, structured inference, and boundary enforcement. We introduce preliminary simulation-based evaluation involving progressive boundary erosion scenarios across multiple heterogeneous LLM systems (DeepSeek-V3, Doubao, Qwen). Results from n=50 adversarial scenarios suggest that explicit cognitive control layers may improve consistency in boundary maintenance, with architectural constraints reducing boundary failure rates from approximately 40% (baseline RLHF) to below 1% under adversarial conditions. While current validation is simulation-based, these preliminary results indicate that process-level control may offer a promising direction for improving reliability in large language model reasoning.",
+      "published": "2026-03-19T17:41:18Z",
+      "updated": "2026-03-19T17:41:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.19182v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.16309v2",
-      "title": "Omnilingual MT: Machine Translation for 1,600 Languages",
+      "id": "http://arxiv.org/abs/2603.03415v2",
+      "title": "Farther the Shift, Sparser the Representation: Analyzing OOD Mechanisms in LLMs",
       "authors": [
-        "Omnilingual MT Team",
-        "Belen Alastruey",
-        "Niyati Bafna",
-        "Andrea Caciolai",
-        "Kevin Heffernan",
-        "Artyom Kozhevnikov",
-        "Christophe Ropers",
-        "Eduardo Sánchez",
-        "Charles-Eric Saint-James",
-        "Ioannis Tsiamas",
-        "Chierh Cheng",
-        "Joe Chuang",
-        "Paul-Ambroise Duquenne",
-        "Mark Duppenthaler",
-        "Nate Ekberg",
-        "Cynthia Gao",
-        "Pere Lluís Huguet Cabot",
-        "João Maria Janeiro",
-        "Jean Maillard",
-        "Gabriel Mejia Gonzalez",
-        "Holger Schwenk",
-        "Edan Toledo",
-        "Arina Turkatenko",
-        "Albert Ventayol-Boada",
-        "Rashel Moritz",
-        "Alexandre Mourachko",
-        "Surya Parimi",
-        "Mary Williamson",
-        "Shireen Yates",
-        "David Dale",
-        "Marta R. Costa-jussà"
+        "Mingyu Jin",
+        "Yutong Yin",
+        "Jingcheng Niu",
+        "Qingcheng Zeng",
+        "Wujiang Xu",
+        "Mengnan Du",
+        "Wei Cheng",
+        "Zhaoran Wang",
+        "Tianlong Chen",
+        "Dimitris N. Metaxas"
       ],
-      "summary": "High-quality machine translation (MT) can scale to hundreds of languages, setting a high bar for multilingual systems. However, compared to the world's 7,000 languages, current systems still offer only limited coverage: about 200 languages on the target side, and maybe a few hundreds more on the source side, supported due to cross-lingual transfer. And even these numbers have been hard to evaluate due to the lack of reliable benchmarks and metrics. We present Omnilingual Machine Translation (OMT), the first MT system supporting more than 1,600 languages. This scale is enabled by a comprehensive data strategy that integrates large public multilingual corpora with newly created datasets, including manually curated MeDLEY bitext. We explore two ways of specializing a Large Language model (LLM) for machine translation: as a decoder-only model (OMT-LLaMA) or as a module in an encoder-decoder architecture (OMT-NLLB). Notably, all our 1B to 8B parameter models match or exceed the MT performance of a 70B LLM baseline, revealing a clear specialization advantage and enabling strong translation quality in low-compute settings. Moreover, our evaluation of English-to-1,600 translations further shows that while baseline models can interpret undersupported languages, they frequently fail to generate them with meaningful fidelity; OMT-LLaMA models substantially expand the set of languages for which coherent generation is feasible. Additionally, OMT models improve in cross-lingual transfer, being close to solving the \"understanding\" part of the puzzle in MT for the 1,600 evaluated. Our leaderboard and main human-created evaluation datasets (BOUQuET and Met-BOUQuET) are dynamically evolving towards Omnilinguality and freely available.",
-      "published": "2026-03-17T09:43:42Z",
-      "updated": "2026-03-18T16:25:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.16309v2"
+      "summary": "In this work, we investigate how Large Language Models (LLMs) adapt their internal representations when encountering inputs of increasing difficulty, quantified as the degree of out-of-distribution (OOD) shift. We reveal a consistent and quantifiable phenomenon: as task difficulty increases, whether through harder reasoning questions, longer contexts, or adding answer choices, the last hidden states of LLMs become substantially sparser. In short, \\textbf{\\textit{the farther the shift, the sparser the representations}}. This sparsity--difficulty relation is observable across diverse models and domains, suggesting that language models respond to unfamiliar or complex inputs by concentrating computation into specialized subspaces in the last hidden state. Through a series of controlled analyses with a learning dynamic explanation, we demonstrate that this sparsity is not incidental but an adaptive mechanism for stabilizing reasoning under OOD. Leveraging this insight, we design \\textit{Sparsity-Guided Curriculum In-Context Learning (SG-ICL)}, a strategy that explicitly uses representation sparsity to schedule few-shot demonstrations, leading to considerable performance enhancements. Our study provides new mechanistic insights into how LLMs internalize OOD challenges. The source code is available at the URL: https://github.com/MingyuJ666/sparsityLLM.",
+      "published": "2026-03-03T18:48:15Z",
+      "updated": "2026-03-19T17:36:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.03415v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.17891v1",
-      "title": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+      "id": "http://arxiv.org/abs/2507.02768v2",
+      "title": "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment",
       "authors": [
-        "Arpit Singh Gautam",
-        "Saurabh Jha"
+        "Ke-Han Lu",
+        "Zhehuai Chen",
+        "Szu-Wei Fu",
+        "Chao-Han Huck Yang",
+        "Sung-Feng Huang",
+        "Chih-Kai Yang",
+        "Chee-En Yu",
+        "Chun-Wei Chen",
+        "Wei-Chih Chen",
+        "Chien-yu Huang",
+        "Yi-Cheng Lin",
+        "Yu-Xiang Lin",
+        "Chi-An Fu",
+        "Chun-Yi Kuan",
+        "Wenze Ren",
+        "Xuanjun Chen",
+        "Wei-Ping Huang",
+        "En-Pei Hu",
+        "Tzu-Quan Lin",
+        "Yuan-Kuei Wu",
+        "Kuan-Po Huang",
+        "Hsiao-Ying Huang",
+        "Huang-Cheng Chou",
+        "Kai-Wei Chang",
+        "Cheng-Han Chiang",
+        "Boris Ginsburg",
+        "Yu-Chiang Frank Wang",
+        "Hung-yi Lee"
       ],
-      "summary": "Post training quantization is essential for deploying large language models (LLMs) on resource constrained hardware, yet state of the art methods enforce uniform bit widths across layers, yielding suboptimal accuracy efficiency trade offs. We present RAMP (Reinforcement Adaptive Mixed Precision), an off policy Soft Actor Critic framework that learns per layer bit width assignments to minimize perplexity under a global bit budget. The policy conditions on an 11 dimensional embedding of activation statistics, weight properties, and structural descriptors, enabling zero shot transfer across model families and scales. To enable stable sub 4 bit quantization, we introduce Scale Folding, a preconditioning technique that migrates activation outliers into weights via per channel scaling and normalization layer compensation. A quality prioritized reward with asymmetric penalties and budget cliffs drives rapid convergence. On Llama 2 7B, RAMP achieves 5.54 perplexity at 3.68GB (3.65 effective bits), outperforming uniform 4 bit AWQ (5.60 at 3.90 GB) and GPTQ by 6% in size and 1% to3% in quality. Critically, a policy trained only on Llama 2 7B generalizes zero shot to Llama 2 13B and Mistral 7B, often surpassing target specific training, supporting the hypothesis that quantization sensitivity is primarily architectural. The HALO pipeline exports allocations to GGUF format for kernel free inference on CPUs, GPUs, and edge devices, retaining 99.5% of FP16 commonsense reasoning performance.",
-      "published": "2026-03-18T16:16:28Z",
-      "updated": "2026-03-18T16:16:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.17891v1"
+      "summary": "We introduce DeSTA2.5-Audio, a general-purpose Large Audio Language Model (LALM) designed for robust auditory perception and instruction-following. Recent LALMs augment Large Language Models (LLMs) with auditory capabilities by training on large-scale audio-instruction datasets. However, existing LALMs have often suffered from the catastrophic forgetting of the LLM's original abilities. Therefore, balancing knowledge retention and audio perception has become a critical challenge. To address this, we revisit the data construction pipeline and propose a self-generated cross-modal alignment strategy in which the backbone LLM generates its own training targets, named DeSTA. This approach aims at preserving the LLM's native language proficiency thereby enabling zero-shot generalization without task-specific tuning. We construct DeSTA-AQA5M, a large-scale, task-agnostic dataset containing 5 million training samples derived from 7,000 hours of audio spanning 50 diverse datasets, including speech, environmental sounds, and music. DeSTA2.5-Audio achieves state-of-the-art or competitive performance across a wide range of audio-language benchmarks, including Dynamic-SUPERB, MMAU, SAKURA, Speech-IFEval, and VoiceBench. Comprehensive comparative studies demonstrate that our self-generated strategy outperforms existing training strategies. Our findings underscore the importance of carefully designed data construction in LALM development and offer practical insights for building robust, general-purpose LALMs.",
+      "published": "2025-07-03T16:28:25Z",
+      "updated": "2026-03-19T17:35:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.02768v2"
     }
   ]
 }
