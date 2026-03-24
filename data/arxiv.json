@@ -1,221 +1,195 @@
 {
-  "generated_at_utc": "2026-03-23T02:10:03Z",
+  "generated_at_utc": "2026-03-24T02:01:57Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.20192v1",
-      "title": "LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation",
+      "id": "http://arxiv.org/abs/2603.22016v1",
+      "title": "ROM: Real-time Overthinking Mitigation via Streaming Detection and Intervention",
       "authors": [
-        "Jiazheng Xing",
-        "Fei Du",
-        "Hangjie Yuan",
-        "Pengwei Liu",
-        "Hongbin Xu",
-        "Hai Ci",
-        "Ruigang Niu",
-        "Weihua Chen",
-        "Fan Wang",
-        "Yong Liu"
+        "Xinyan Wang",
+        "Xiaogeng Liu",
+        "Chaowei Xiao"
       ],
-      "summary": "Recent advances in diffusion models have significantly improved text-to-video generation, enabling personalized content creation with fine-grained control over both foreground and background elements. However, precise face-attribute alignment across subjects remains challenging, as existing methods lack explicit mechanisms to ensure intra-group consistency. Addressing this gap requires both explicit modeling strategies and face-attribute-aware data resources. We therefore propose LumosX, a framework that advances both data and model design. On the data side, a tailored collection pipeline orchestrates captions and visual cues from independent videos, while multimodal large language models (MLLMs) infer and assign subject-specific dependencies. These extracted relational priors impose a finer-grained structure that amplifies the expressive control of personalized video generation and enables the construction of a comprehensive benchmark. On the modeling side, Relational Self-Attention and Relational Cross-Attention intertwine position-aware embeddings with refined attention dynamics to inscribe explicit subject-attribute dependencies, enforcing disciplined intra-group cohesion and amplifying the separation between distinct subject clusters. Comprehensive evaluations on our benchmark demonstrate that LumosX achieves state-of-the-art performance in fine-grained, identity-consistent, and semantically aligned personalized multi-subject video generation. Code and models are available at https://jiazheng-xing.github.io/lumosx-home/.",
-      "published": "2026-03-20T17:59:46Z",
-      "updated": "2026-03-20T17:59:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20192v1"
+      "summary": "Large Reasoning Models (LRMs) achieve strong accuracy on challenging tasks by generating long Chain-of-Thought traces, but suffer from overthinking. Even after reaching the correct answer, they continue generating redundant reasoning steps. This behavior increases latency and compute cost and can also lead to answer drift. Existing mitigation methods either require training-heavy backbone modification or rely on hand-crafted heuristics that do not truly capture overthinking patterns. We propose ROM, the first method that formulates overthinking mitigation as a streaming prediction-and-control problem. ROM attaches a lightweight detection head to the late-layer hidden states of a frozen large language model backbone. It monitors tokens in real time and triggers an early transition to the final answer once overthinking is detected. We also introduce token-level supervision based on solution correctness boundaries and a data augmentation strategy that reduces distilled-data bias. Across seven benchmarks, ROM achieves the highest accuracy (93.51%), the shortest responses (1,159 tokens), and the best response efficiency. Compared with the vanilla baseline, it reduces response length by 47.2% and improves efficiency by 121%. These results show that streaming detection is a promising approach to real-time overthinking mitigation.",
+      "published": "2026-03-23T14:26:57Z",
+      "updated": "2026-03-23T14:26:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.22016v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20182v1",
-      "title": "IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning",
+      "id": "http://arxiv.org/abs/2510.24358v3",
+      "title": "Automatically Benchmarking LLM Code Agents through Agent-Driven Annotation and Evaluation",
       "authors": [
-        "Fan Yang",
-        "Soumya Teotia",
-        "Shaunak A. Mehta",
-        "Prajit KrisshnaKumar",
-        "Quanting Xie",
-        "Jun Liu",
-        "Yueqi Song",
-        "Li Wenkai",
-        "Atsunori Moteki",
-        "Kanji Uchino",
-        "Yonatan Bisk"
+        "Lingyue Fu",
+        "Bolun Zhang",
+        "Hao Guan",
+        "Yaoming Zhu",
+        "Lin Qiu",
+        "Weiwen Liu",
+        "Xuezhi Cao",
+        "Xunliang Cai",
+        "Weinan Zhang",
+        "Yong Yu"
       ],
-      "summary": "Although robot-to-robot (R2R) communication improves indoor scene understanding beyond what a single robot can achieve, R2R alone cannot overcome partial observability without substantial exploration overhead or scaling team size. In contrast, many indoor environments already include low-cost Internet of Things (IoT) sensors (e.g., cameras) that provide persistent, building-wide context beyond onboard perception. We therefore introduce IndoorR2X, the first benchmark and simulation framework for Large Language Model (LLM)-driven multi-robot task planning with Robot-to-Everything (R2X) perception and communication in indoor environments. IndoorR2X integrates observations from mobile robots and static IoT devices to construct a global semantic state that supports scalable scene understanding, reduces redundant exploration, and enables high-level coordination through LLM-based planning. IndoorR2X provides configurable simulation environments, sensor layouts, robot teams, and task suites to systematically evaluate high-level semantic coordination strategies. Extensive experiments across diverse settings demonstrate that IoT-augmented world modeling improves multi-robot efficiency and reliability, and we highlight key insights and failure modes for advancing LLM-based collaboration between robot teams and indoor IoT sensors.",
-      "published": "2026-03-20T17:57:26Z",
-      "updated": "2026-03-20T17:57:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20182v1"
+      "summary": "Recent advances in code agents have enabled automated software development at the project level, supported by large language models (LLMs). However, existing benchmarks for code agent evaluation face two major limitations. First, creating high-quality project-level evaluation datasets requires extensive domain expertise, leading to prohibitive annotation costs and limited diversity. Second, while recent Agent-as-a-Judge paradigms address the rigidity of traditional unit tests by enabling flexible metrics, their reliance on In-Context Learning (ICL) with general LLMs often results in inaccurate assessments that misalign with human standards. To address these challenges, we propose an agent-driven benchmark construction pipeline that leverages human supervision to efficiently generate diverse project-level tasks. Based on this, we introduce PRDBench, comprising 50 real-world Python projects across 20 domains, each with structured Product Requirement Documents (PRDs) and comprehensive criteria. Furthermore, to overcome the inaccuracy of general LLM judges, we propose a highly reliable evaluation framework powered by a specialized, fine-tuned model. Based on Qwen3-Coder-30B, our dedicated PRDJudge achieves over 90% human alignment in fixed-interface scenarios. Extensive experiments demonstrate that our suite provides a scalable, robust, and highly accurate framework for assessing state-of-the-art code agents.",
+      "published": "2025-10-28T12:26:45Z",
+      "updated": "2026-03-23T14:11:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.24358v3"
     },
     {
-      "id": "http://arxiv.org/abs/2511.16665v3",
-      "title": "Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter",
+      "id": "http://arxiv.org/abs/2603.20114v2",
+      "title": "Current LLMs still cannot 'talk much' about grammar modules: Evidence from syntax",
       "authors": [
-        "Qinghao Hu",
-        "Shang Yang",
-        "Junxian Guo",
-        "Xiaozhe Yao",
-        "Yujun Lin",
-        "Yuxian Gu",
-        "Han Cai",
-        "Chuang Gan",
-        "Ana Klimovic",
-        "Song Han"
+        "Mohammed Q. Shormani"
       ],
-      "summary": "The emergence of Large Language Models (LLMs) with strong reasoning capabilities marks a significant milestone, unlocking new frontiers in complex problem-solving. However, training these reasoning models, typically using Reinforcement Learning (RL), encounters critical efficiency bottlenecks: response generation during RL training exhibits a persistent long-tail distribution, where a few very long responses dominate execution time, wasting resources and inflating costs. To address this, we propose TLT, a system that accelerates reasoning RL training losslessly by integrating adaptive speculative decoding. Applying speculative decoding in RL is challenging due to the dynamic workloads, evolving target model, and draft model training overhead. TLT overcomes these obstacles with two synergistic components: (1) Adaptive Drafter, a lightweight draft model trained continuously on idle GPUs during long-tail generation to maintain alignment with the target model at no extra cost; and (2) Adaptive Rollout Engine, which maintains a memory-efficient pool of pre-captured CUDAGraphs and adaptively select suitable SD strategies for each input batch. Evaluations demonstrate that TLT achieves over 1.7x end-to-end RL training speedup over state-of-the-art systems, preserves the model accuracy, and yields a high-quality draft model as a free byproduct suitable for efficient deployment. Code is released at https://github.com/mit-han-lab/fastrl.",
-      "published": "2025-11-20T18:59:25Z",
-      "updated": "2026-03-20T17:56:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.16665v3"
+      "summary": "We aim to examine the extent to which Large Language Models (LLMs) can 'talk much' about grammar modules, providing evidence from syntax core properties translated by ChatGPT into Arabic. We collected 44 terms from generative syntax previous works, including books and journal articles, as well as from our experience in the field. These terms were translated by humans, and then by ChatGPT-5. We then analyzed and compared both translations. We used an analytical and comparative approach in our analysis. Findings unveil that LLMs still cannot 'talk much' about the core syntax properties embedded in the terms under study involving several syntactic and semantic challenges: only 25% of ChatGPT translations were accurate, while 38.6% were inaccurate, and 36.4.% were partially correct, which we consider appropriate. Based on these findings, a set of actionable strategies were proposed, the most notable of which is a close collaboration between AI specialists and linguists to better LLMs' working mechanism for accurate or at least appropriate translation.",
+      "published": "2026-03-20T16:37:51Z",
+      "updated": "2026-03-23T14:03:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.20114v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20179v1",
-      "title": "AI Agents Can Already Autonomously Perform Experimental High Energy Physics",
+      "id": "http://arxiv.org/abs/2603.21975v1",
+      "title": "SecureBreak -- A dataset towards safe and secure models",
       "authors": [
-        "Eric A. Moreno",
-        "Samuel Bright-Thonney",
-        "Andrzej Novak",
-        "Dolores Garcia",
-        "Philip Harris"
+        "Marco Arazzi",
+        "Vignesh Kumar Kembu",
+        "Antonino Nocera"
       ],
-      "summary": "Large language model-based AI agents are now able to autonomously execute substantial portions of a high energy physics (HEP) analysis pipeline with minimal expert-curated input. Given access to a HEP dataset, an execution framework, and a corpus of prior experimental literature, we find that Claude Code succeeds in automating all stages of a typical analysis: event selection, background estimation, uncertainty quantification, statistical inference, and paper drafting. We argue that the experimental HEP community is underestimating the current capabilities of these systems, and that most proposed agentic workflows are too narrowly scoped or scaffolded to specific analysis structures. We present a proof-of-concept framework, Just Furnish Context (JFC), that integrates autonomous analysis agents with literature-based knowledge retrieval and multi-agent review, and show that this is sufficient to plan, execute, and document a credible high energy physics analysis. We demonstrate this by conducting analyses on open data from ALEPH, DELPHI, and CMS to perform electroweak, QCD, and Higgs boson measurements. Rather than replacing physicists, these tools promise to offload the repetitive technical burden of analysis code development, freeing researchers to focus on physics insight, truly novel method development, and rigorous validation. Given these developments, we advocate for new strategies for how the community trains students, organizes analysis efforts, and allocates human expertise.",
-      "published": "2026-03-20T17:55:27Z",
-      "updated": "2026-03-20T17:55:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20179v1"
+      "summary": "Large language models are becoming pervasive core components in many real-world applications. As a consequence, security alignment represents a critical requirement for their safe deployment. Although previous related works focused primarily on model architectures and alignment methodologies, these approaches alone cannot ensure the complete elimination of harmful generations. This concern is reinforced by the growing body of scientific literature showing that attacks, such as jailbreaking and prompt injection, can bypass existing security alignment mechanisms. As a consequence, additional security strategies are needed both to provide qualitative feedback on the robustness of the obtained security alignment at the training stage, and to create an ``ultimate'' defense layer to block unsafe outputs possibly produced by deployed models. To provide a contribution in this scenario, this paper introduces SecureBreak, a safety-oriented dataset designed to support the development of AI-driven solutions for detecting harmful LLM outputs caused by residual weaknesses in security alignment. The dataset is highly reliable due to careful manual annotation, where labels are assigned conservatively to ensure safety. It performs well in detecting unsafe content across multiple risk categories. Tests with pre-trained LLMs show improved results after fine-tuning on SecureBreak. Overall, the dataset is useful both for post-generation safety filtering and for guiding further model alignment and security improvements.",
+      "published": "2026-03-23T13:41:05Z",
+      "updated": "2026-03-23T13:41:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21975v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.01211v2",
-      "title": "A Unified Framework to Quantify Cultural Intelligence of AI",
+      "id": "http://arxiv.org/abs/2603.21972v1",
+      "title": "Demystifying Reinforcement Learning for Long-Horizon Tool-Using Agents: A Comprehensive Recipe",
       "authors": [
-        "Sunipa Dev",
-        "Vinodkumar Prabhakaran",
-        "Rutledge Chin Feman",
-        "Aida Davani",
-        "Remi Denton",
-        "Charu Kalia",
-        "Piyawat Lertvittayakumjorn",
-        "Madhurima Maji",
-        "Rida Qadri",
-        "Negar Rostamzadeh",
-        "Renee Shelby",
-        "Romina Stella",
-        "Hayk Stepanyan",
-        "Erin van Liemt",
-        "Aishwarya Verma",
-        "Oscar Wahltinez",
-        "Edem Wornyo",
-        "Andrew Zaldivar",
-        "Saška Mojsilović"
+        "Xixi Wu",
+        "Qianguo Sun",
+        "Ruiyang Zhang",
+        "Chao Song",
+        "Junlong Wu",
+        "Yiyan Qi",
+        "Hong Cheng"
       ],
-      "summary": "As generative AI technologies are increasingly being launched across the globe, assessing their competence to operate in different cultural contexts is exigently becoming a priority. While recent years have seen numerous and much-needed efforts on cultural benchmarking, these efforts have largely focused on specific aspects of culture and evaluation. While these efforts contribute to our understanding of cultural competence, a unified and systematic evaluation approach is needed for us as a field to comprehensively assess diverse cultural dimensions at scale. Drawing on measurement theory, we present a principled framework to aggregate multifaceted indicators of cultural capabilities into a unified assessment of cultural intelligence. We start by developing a working definition of culture that includes identifying core domains of culture. We then introduce a broad-purpose, systematic, and extensible framework for assessing cultural intelligence of AI systems. Drawing on theoretical framing from psychometric measurement validity theory, we decouple the background concept (i.e., cultural intelligence) from its operationalization via measurement. We conceptualize cultural intelligence as a suite of core capabilities spanning diverse domains, which we then operationalize through a set of indicators designed for reliable measurement. Finally, we identify the considerations, challenges, and research pathways to meaningfully measure these indicators, specifically focusing on data collection, probing strategies, and evaluation metrics.",
-      "published": "2026-03-01T18:14:52Z",
-      "updated": "2026-03-20T17:50:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.01211v2"
+      "summary": "Reinforcement Learning (RL) is essential for evolving Large Language Models (LLMs) into autonomous agents capable of long-horizon planning, yet a practical recipe for scaling RL in complex, multi-turn environments remains elusive. This paper presents a systematic empirical study using TravelPlanner, a challenging testbed requiring tool orchestration to satisfy multifaceted constraints. We decompose the agentic RL design space along 5 axes: reward shaping, model scaling, data composition, algorithm selection, and environmental stability. Our controlled experiments yield 7 key takeaways, e.g., (1) reward and algorithm choices are scale-dependent as smaller models benefit from staged rewards and enhanced exploration, whereas larger models converge efficiently with simpler dense rewards, (2) ~ 1K training samples with a balanced difficulty mixture mark a sweet spot for both in-domain and out-of-domain performance, and (3) environmental stability is critical to prevent policy degradation. Based on our distilled recipe, our RL-trained models achieve state-of-the-art performance on TravelPlanner, significantly outperforming leading LLMs.",
+      "published": "2026-03-23T13:40:08Z",
+      "updated": "2026-03-23T13:40:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21972v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20170v1",
-      "title": "Learning Dynamic Belief Graphs for Theory-of-mind Reasoning",
+      "id": "http://arxiv.org/abs/2412.01583v3",
+      "title": "3DSceneEditor: Controllable 3D Scene Editing with Gaussian Splatting",
       "authors": [
-        "Ruxiao Chen",
-        "Xilei Zhao",
-        "Thomas J. Cova",
-        "Frank A. Drews",
-        "Susu Xu"
+        "Ziyang Yan",
+        "Yihua Shao",
+        "Minwen Liao",
+        "Siyu Chen",
+        "Nan Wang",
+        "Muyuan Lin",
+        "Jenq-Neng Hwang",
+        "Hao Zhao",
+        "Fabio Remondino",
+        "Lei Li"
       ],
-      "summary": "Theory of Mind (ToM) reasoning with Large Language Models (LLMs) requires inferring how people's implicit, evolving beliefs shape what they seek and how they act under uncertainty -- especially in high-stakes settings such as disaster response, emergency medicine, and human-in-the-loop autonomy. Prior approaches either prompt LLMs directly or use latent-state models that treat beliefs as static and independent, often producing incoherent mental models over time and weak reasoning in dynamic contexts. We introduce a structured cognitive trajectory model for LLM-based ToM that represents mental state as a dynamic belief graph, jointly inferring latent beliefs, learning their time-varying dependencies, and linking belief evolution to information seeking and decisions. Our model contributes (i) a novel projection from textualized probabilistic statements to consistent probabilistic graphical model updates, (ii) an energy-based factor graph representation of belief interdependencies, and (iii) an ELBO-based objective that captures belief accumulation and delayed decisions. Across multiple real-world disaster evacuation datasets, our model significantly improves action prediction and recovers interpretable belief trajectories consistent with human reasoning, providing a principled module for augmenting LLMs with ToM in high-uncertainty environment. https://anonymous.4open.science/r/ICML_submission-6373/",
-      "published": "2026-03-20T17:46:55Z",
-      "updated": "2026-03-20T17:46:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20170v1"
+      "summary": "The creation of 3D scenes has traditionally been both labor-intensive and costly, requiring designers to meticulously configure 3D assets and environments. Recent advancements in generative AI, including text-to-3D and image-to-3D methods, have dramatically reduced the complexity and cost of this process. However, current techniques for editing complex 3D scenes continue to rely on generally interactive multi-step, 2D-to-3D projection methods and diffusion-based techniques, which often lack precision in control and hamper interactive-rate performance. In this work, we propose ***3DSceneEditor***, a fully 3D-based paradigm for interactive-rate, precise editing of intricate 3D scenes using Gaussian Splatting. Unlike conventional methods, 3DSceneEditor operates through a streamlined 3D pipeline, enabling direct Gaussian-based manipulation for efficient, high-quality edits based on input prompts. The proposed framework (i) integrates a pre-trained instance segmentation model for semantic labeling; (ii) employs a zero-shot grounding approach with CLIP to align target objects with user prompts; and (iii) applies scene modifications, such as object addition, repositioning, recoloring, replacing, and removal--directly on Gaussians. Extensive experimental results show that 3DSceneEditor surpasses existing state-of-the-art techniques in terms of both editing precision and efficiency, establishing a new benchmark for efficient and interactive 3D scene customization.",
+      "published": "2024-12-02T15:03:55Z",
+      "updated": "2026-03-23T13:37:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.01583v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20161v1",
-      "title": "Semantic Token Clustering for Efficient Uncertainty Quantification in Large Language Models",
+      "id": "http://arxiv.org/abs/2603.21970v1",
+      "title": "Parameter-Efficient Fine-Tuning for Medical Text Summarization: A Comparative Study of Lora, Prompt Tuning, and Full Fine-Tuning",
       "authors": [
-        "Qi Cao",
-        "Andrew Gambardella",
-        "Takeshi Kojima",
-        "Yutaka Matsuo",
-        "Yusuke Iwasawa"
+        "Ulugbek Shernazarov",
+        "Rostislav Svitsov",
+        "Bin Shi"
       ],
-      "summary": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse tasks. However, the truthfulness of their outputs is not guaranteed, and their tendency toward overconfidence further limits reliability. Uncertainty quantification offers a promising way to identify potentially unreliable outputs, but most existing methods rely on repeated sampling or auxiliary models, introducing substantial computational overhead. To address these limitations, we propose Semantic Token Clustering (STC), an efficient uncertainty quantification method that leverages the semantic information inherently encoded in LLMs. Specifically, we group tokens into semantically consistent clusters using embedding clustering and prefix matching, and quantify uncertainty based on the probability mass aggregated over the corresponding semantic cluster. Our approach requires only a single generation and does not depend on auxiliary models. Experimental results show that STC achieves performance comparable to state-of-the-art baselines while substantially reducing computational overhead.",
-      "published": "2026-03-20T17:37:33Z",
-      "updated": "2026-03-20T17:37:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20161v1"
+      "summary": "Fine-tuning large language models for domain-specific tasks such as medical text summarization demands substantial computational resources. Parameter-efficient fine-tuning (PEFT) methods offer promising alternatives by updating only a small fraction of parameters. This paper compares three adaptation approaches-Low-Rank Adaptation (LoRA), Prompt Tuning, and Full Fine-Tuning-across the Flan-T5 model family on the PubMed medical summarization dataset. Through experiments with multiple random seeds, we demonstrate that LoRA consistently outperforms full fine-tuning, achieving 43.52 +/- 0.18 ROUGE-1 on Flan-T5-Large with only 0.6% trainable parameters compared to 40.67 +/- 0.21 for full fine-tuning. Sensitivity analyses examine the impact of LoRA rank and prompt token count. Our findings suggest the low-rank constraint provides beneficial regularization, challenging assumptions about the necessity of full parameter updates. Code is available at https://github.com/eracoding/llm-medical-summarization",
+      "published": "2026-03-23T13:35:11Z",
+      "updated": "2026-03-23T13:35:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21970v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.06858v2",
-      "title": "Patch Validation in Automated Vulnerability Repair",
+      "id": "http://arxiv.org/abs/2603.21957v1",
+      "title": "Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention",
       "authors": [
-        "Zheng Yu",
-        "Wenxuan Shi",
-        "Xinqian Sun",
-        "Zheyun Feng",
-        "Meng Xu",
-        "Xinyu Xing"
+        "Junhao Du",
+        "Jialong Xue",
+        "Anqi Li",
+        "Jincheng Dai",
+        "Guo Lu"
       ],
-      "summary": "Automated Vulnerability Repair (AVR) systems, especially those leveraging large language models (LLMs), have demonstrated promising results in patching vulnerabilities -- that is, if we trust their patch validation methodology. Ground-truth patches from human developers often come with new tests that not only ensure mitigation of the vulnerability but also encode extra semantics such as root cause location, optimal fix strategy, or subtle coding styles or conventions. And yet, none of the recent AVR systems verify that the auto-generated patches additionally pass these new tests (termed as $\\text{PoC}^+$ tests). This is a subtle yet critical omission. To fill this gap, we constructed a benchmark, $\\textrm{PVBench}$, with 209 cases spanning 20 projects. Each case includes basic tests (functional tests before the patch and the PoC exploit) as well as the associated $\\text{PoC}^+$ tests. Evaluated on three state-of-the-art AVR systems, we find that over 40\\% of patches validated as correct by basic tests fail under $\\text{PoC}^+$ testing, revealing substantial overestimation on patch success rates. Analyzing these patches that are falsely labeled as correct, we suggest that AVR tools should improve in three critical areas: root cause analysis, adherence to program specifications, and capturing developer intention.",
-      "published": "2026-03-06T20:22:36Z",
-      "updated": "2026-03-20T17:34:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.06858v2"
+      "summary": "Video large language models (Video-LLMs) face high computational costs due to large volumes of visual tokens. Existing token compression methods typically adopt a two-stage spatiotemporal compression strategy, relying on stage-specific metrics and an implicit assumption of spatiotemporal separability. Under extremely low retention ratios, however, such approaches often result in unbalanced allocation and loss of visual evidence essential for question answering. We reformulate token compression as a spatiotemporal allocation task within a global token retention pool. We propose a unified selection mechanism that integrates attention weights and semantic similarity to globally select tokens with high contribution and low redundancy. Unselected tokens are merged via clustering and refilled, preserving information integrity. Inside the LLM, we further introduce text-aware merging to perform secondary compression based on query relevance. Without requiring retraining, our method serves as a plug-and-play module compatible with existing Video-LLMs. Experiments show that retaining only about 2% of visual tokens preserves 90.1% of baseline performance across multiple benchmarks, while reducing FLOPs to roughly 2.6%. These benefits generalize across diverse backbones, decreasing end-to-end inference latency and memory consumption. Our unified spatiotemporal token compression strategy establishes the state-of-the-art in video understanding under ultra-low token retention.",
+      "published": "2026-03-23T13:15:22Z",
+      "updated": "2026-03-23T13:15:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21957v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20133v1",
-      "title": "Reasoning Gets Harder for LLMs Inside A Dialogue",
+      "id": "http://arxiv.org/abs/2506.04559v3",
+      "title": "Reasoning-Aligned Perception Decoupling for Scalable Multi-modal Reasoning",
       "authors": [
-        "Ivan Kartáč",
-        "Mateusz Lango",
-        "Ondřej Dušek"
+        "Yunhao Gou",
+        "Kai Chen",
+        "Zhili Liu",
+        "Lanqing Hong",
+        "Xin Jin",
+        "Zhenguo Li",
+        "James T. Kwok",
+        "Yu Zhang"
       ],
-      "summary": "Large Language Models (LLMs) achieve strong performance on many reasoning benchmarks, yet these evaluations typically focus on isolated tasks that differ from real-world usage in task-oriented dialogue (TOD). In this setting, LLMs must perform reasoning inherently while generating text and adhering to instructions on role, format, and style. This mismatch raises concerns about whether benchmark performance accurately reflects models' reasoning robustness in TOD setting. We investigate how framing reasoning tasks within TOD affects LLM performance by introducing BOULDER, a new dynamic benchmark covering eight travel-related tasks that require arithmetic, spatial, and temporal reasoning with both commonsense and formal aspects. Each problem is presented in both isolated and dialogue-based variants, enabling controlled comparison while mitigating data contamination. Experiments on eight LLMs reveal a substantial and consistent performance gap between isolated and dialogue settings. Through ablations and qualitative analysis, we show that this gap is largely driven by the multi-turn nature of dialogue, with additional effects from role conditioning and tool-use requirements. Our results highlight the need to evaluate LLM reasoning in realistic interactive scenarios.",
-      "published": "2026-03-20T17:01:09Z",
-      "updated": "2026-03-20T17:01:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20133v1"
+      "summary": "Recent breakthroughs in reasoning language models have significantly advanced text-based reasoning. On the other hand, Multi-modal Large Language Models (MLLMs) still lag behind, hindered by their outdated internal LLMs. Upgrading these LLMs is often prohibitively expensive, as it requires costly vision-language alignment retraining. To address this issue, we introduce Perception-Reasoning Decoupling, which modularizes the MLLM's reasoning component and makes it easily replaceable. This approach redefines the MLLM's role to convert multi-modal inputs into detailed textual outputs that can be processed by any powerful, external, text-only LLM reasoners. To align the MLLM's perceptual output with the final reasoning task, we propose a novel reinforcement learning algorithm called Visual Perception Optimization (VPO). VPO rewards the MLLM based on the correctness of answers generated by the external reasoner to produce faithful and query-relevant captions. Together, this decoupling pipeline and VPO form our Reasoning-Aligned PerceptIon Decoupling (RAPID) approach. Empirical results show that RAPID achieves significant performance gains on multi-modal reasoning benchmarks. Crucially, RAPID enables a novel inference-time scaling paradigm: Once trained with VPO, the MLLM can be paired with any state-of-the-art LLM reasoner for consistent performance improvement without retraining.",
+      "published": "2025-06-05T02:28:07Z",
+      "updated": "2026-03-23T13:10:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.04559v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20132v1",
-      "title": "Revisiting Gene Ontology Knowledge Discovery with Hierarchical Feature Selection and Virtual Study Group of AI Agents",
+      "id": "http://arxiv.org/abs/2602.01082v2",
+      "title": "EvoOpt-LLM: Evolving industrial optimization models with large language models",
       "authors": [
-        "Cen Wan",
-        "Alex A. Freitas"
+        "Yiliu He",
+        "Tianle Li",
+        "Binghao Ji",
+        "Zhiyuan Liu",
+        "Di Huang"
       ],
-      "summary": "Large language models have achieved great success in multiple challenging tasks, and their capacity can be further boosted by the emerging agentic AI techniques. This new computing paradigm has already started revolutionising the traditional scientific discovery pipelines. In this work, we propose a novel agentic AI-based knowledge discovery-oriented virtual study group that aims to extract meaningful ageing-related biological knowledge considering highly ageing-related Gene Ontology terms that are selected by hierarchical feature selection methods. We investigate the performance of the proposed agentic AI framework by considering four different model organisms' ageing-related Gene Ontology terms and validate the biological findings by reviewing existing research articles. It is found that the majority of the AI agent-generated scientific claims can be supported by existing literatures and the proposed internal mechanisms of the virtual study group also play an important role in the designed agentic AI-based knowledge discovery framework.",
-      "published": "2026-03-20T17:00:36Z",
-      "updated": "2026-03-20T17:00:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20132v1"
+      "summary": "Optimization modeling via mixed-integer linear programming (MILP) is fundamental to industrial planning and scheduling, yet translating natural-language requirements into solver-executable models and maintaining them under evolving business rules remains highly expertise-intensive. While large language models (LLMs) offer promising avenues for automation, existing methods often suffer from low data efficiency, limited solver-level validity, and poor scalability to industrial-scale problems. To address these challenges, we present EvoOpt-LLM, a unified LLM-based framework supporting the full lifecycle of industrial optimization modeling, including automated model construction, dynamic business-constraint injection, and end-to-end variable pruning. Built on a 7B-parameter LLM and adapted via parameter-efficient LoRA fine-tuning, EvoOpt-LLM achieves a generation rate of 91% and an executability rate of 65.9% with only 3,000 training samples, with critical performance gains emerging under 1,500 samples. The constraint injection module reliably augments existing MILP models while preserving original objectives, and the variable pruning module enhances computational efficiency, achieving an F1 score of ~0.56 on medium-sized LP models with only 400 samples. EvoOpt-LLM demonstrates a practical, data-efficient approach to industrial optimization modeling, reducing reliance on expert intervention while improving adaptability and solver efficiency.",
+      "published": "2026-02-01T07:58:55Z",
+      "updated": "2026-03-23T13:10:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.01082v2"
     },
     {
-      "id": "http://arxiv.org/abs/2504.09775v5",
-      "title": "Understanding and Optimizing Multi-Stage AI Inference Pipelines",
+      "id": "http://arxiv.org/abs/2603.21944v1",
+      "title": "Group3D: MLLM-Driven Semantic Grouping for Open-Vocabulary 3D Object Detection",
       "authors": [
-        "Abhimanyu Rajeshkumar Bambhaniya",
-        "Hanjiang Wu",
-        "Suvinay Subramanian",
-        "Sudarshan Srinivasan",
-        "Souvik Kundu",
-        "Amir Yazdanbakhsh",
-        "Midhilesh Elavazhagan",
-        "Madhu Kumar",
-        "Tushar Krishna"
+        "Youbin Kim",
+        "Jinho Park",
+        "Hogun Park",
+        "Eunbyung Park"
       ],
-      "summary": "The rapid evolution of Large Language Models (LLMs) has driven the need for increasingly sophisticated inference pipelines and hardware platforms. Modern LLM serving extends beyond traditional prefill-decode workflows, incorporating multi-stage processes such as Retrieval Augmented Generation (RAG), key-value (KV) cache retrieval, dynamic model routing, and multi step reasoning. These stages exhibit diverse computational demands, requiring distributed systems that integrate GPUs, ASICs, CPUs, and memory-centric architectures. However, existing simulators lack the fidelity to model these heterogeneous, multi-engine workflows, limiting their ability to inform architectural decisions. To address this gap, we introduce MIST, a Heterogeneous Multi-stage LLM inference Execution Simulator. MIST models diverse request stages; including RAG, KV retrieval, reasoning, prefill, and decode across complex hardware hierarchies. MIST supports heterogeneous clients executing multiple models concurrently unlike prior frameworks while incorporating advanced batching strategies and multi-level memory hierarchies. By integrating real hardware traces with analytical modeling, MIST captures critical trade-offs such as memory bandwidth contention, inter-cluster communication latency, and batching efficiency in hybrid CPU-accelerator deployments. Through case studies, we explore the impact of reasoning stages on end-to-end latency, optimal batching strategies for hybrid pipelines, and the architectural implications of remote KV cache retrieval. MIST empowers system designers to navigate the evolving landscape of LLM inference, providing actionable insights into optimizing hardware-software co-design for next-generation AI workloads.",
-      "published": "2025-04-14T00:29:49Z",
-      "updated": "2026-03-20T16:55:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.09775v5"
+      "summary": "Open-vocabulary 3D object detection aims to localize and recognize objects beyond a fixed training taxonomy. In multi-view RGB settings, recent approaches often decouple geometry-based instance construction from semantic labeling, generating class-agnostic fragments and assigning open-vocabulary categories post hoc. While flexible, such decoupling leaves instance construction governed primarily by geometric consistency, without semantic constraints during merging. When geometric evidence is view-dependent and incomplete, this geometry-only merging can lead to irreversible association errors, including over-merging of distinct objects or fragmentation of a single instance. We propose Group3D, a multi-view open-vocabulary 3D detection framework that integrates semantic constraints directly into the instance construction process. Group3D maintains a scene-adaptive vocabulary derived from a multimodal large language model (MLLM) and organizes it into semantic compatibility groups that encode plausible cross-view category equivalence. These groups act as merge-time constraints: 3D fragments are associated only when they satisfy both semantic compatibility and geometric consistency. This semantically gated merging mitigates geometry-driven over-merging while absorbing multi-view category variability. Group3D supports both pose-known and pose-free settings, relying only on RGB observations. Experiments on ScanNet and ARKitScenes demonstrate that Group3D achieves state-of-the-art performance in multi-view open-vocabulary 3D detection, while exhibiting strong generalization in zero-shot scenarios. The project page is available at https://ubin108.github.io/Group3D/.",
+      "published": "2026-03-23T13:01:14Z",
+      "updated": "2026-03-23T13:01:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21944v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.20122v1",
-      "title": "Evolving Jailbreaks: Automated Multi-Objective Long-Tail Attacks on Large Language Models",
+      "id": "http://arxiv.org/abs/2510.13170v2",
+      "title": "Putting on the Thinking Hats: A Survey on Chain of Thought Fine-tuning from the Perspective of Human Reasoning Mechanism",
       "authors": [
-        "Wenjing Hong",
-        "Zhonghua Rong",
-        "Li Wang",
-        "Feng Chang",
-        "Jian Zhu",
-        "Ke Tang",
-        "Zexuan Zhu",
-        "Yew-Soon Ong"
+        "Xiaoshu Chen",
+        "Sihang Zhou",
+        "Ke Liang",
+        "Duanyang Yuan",
+        "Haoyuan Chen",
+        "Xiaoyu Sun",
+        "Lingyuan Meng",
+        "Xinwang Liu"
       ],
-      "summary": "Large Language Models (LLMs) have been widely deployed, especially through free Web-based applications that expose them to diverse user-generated inputs, including those from long-tail distributions such as low-resource languages and encrypted private data. This open-ended exposure increases the risk of jailbreak attacks that undermine model safety alignment. While recent studies have shown that leveraging long-tail distributions can facilitate such jailbreaks, existing approaches largely rely on handcrafted rules, limiting the systematic evaluation of these security and privacy vulnerabilities. In this work, we present EvoJail, an automated framework for discovering long-tail distribution attacks via multi-objective evolutionary search. EvoJail formulates long-tail attack prompt generation as a multi-objective optimization problem that jointly maximizes attack effectiveness and minimizes output perplexity, and introduces a semantic-algorithmic solution representation to capture both high-level semantic intent and low-level structural transformations of encryption-decryption logic. Building upon this representation, EvoJail integrates LLM-assisted operators into a multi-objective evolutionary framework, enabling adaptive and semantically informed mutation and crossover for efficiently exploring a highly structured and open-ended search space. Extensive experiments demonstrate that EvoJail consistently discovers diverse and effective long-tail jailbreak strategies, achieving competitive performance with existing methods in both individual and ensemble level.",
-      "published": "2026-03-20T16:45:04Z",
-      "updated": "2026-03-20T16:45:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.20122v1"
+      "summary": "Chain of thought (CoT) fine-tuning aims to endow large language models (LLMs) with reasoning capabilities by training them on curated reasoning traces. It leverages both supervised and reinforced fine-tuning to cultivate human-like reasoning skills in LLMs, including detailed planning, divergent thinking, intuitive judgment, timely reflection, internal thinking, and fact perception, etc. As CoT fine-tuning has advanced, LLMs have demonstrated substantial improvements in tasks such as mathematical reasoning and code generation. However, existing surveys about CoT fine-tuning primarily focus on technical aspects and overlook a systematic analysis from the perspective of human reasoning mechanisms. Given that the ultimate goal of CoT fine-tuning is to enable LLMs to reason like humans, it is crucial to investigate this technique through the lens of human cognition. To fill this gap, we present the first comprehensive survey of CoT fine-tuning grounded in human reasoning theory. Specifically, inspired by the well-known Six Thinking Hats framework, which systematically characterizes common human thinking modes using six metaphorical hats, we classify and examine CoT fine-tuning methods through this lens. Furthermore, building upon this theory, we outline potential directions for future research in CoT fine-tuning. In addition, we compile a comprehensive overview of existing datasets and model performances, and a real-time GitHub repository \\footnote{https://github.com/AI-Chen/Awesome-CoT-Finetuning} that continuously tracks recent advances in this area is maintained. We hope this survey will serve as a valuable resource to inspire innovation and foster progress in this rapidly evolving field.",
+      "published": "2025-10-15T05:54:13Z",
+      "updated": "2026-03-23T12:46:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.13170v2"
     }
   ]
 }
