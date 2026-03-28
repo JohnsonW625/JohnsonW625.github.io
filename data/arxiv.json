@@ -1,202 +1,188 @@
 {
-  "generated_at_utc": "2026-03-26T02:13:39Z",
+  "generated_at_utc": "2026-03-28T02:05:56Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.24591v1",
-      "title": "Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini",
+      "id": "http://arxiv.org/abs/2603.25733v1",
+      "title": "SlotVTG: Object-Centric Adapter for Generalizable Video Temporal Grounding",
       "authors": [
-        "Ruofei Du",
-        "Benjamin Hersh",
-        "David Li",
-        "Nels Numan",
-        "Xun Qian",
-        "Yanhe Chen",
-        "Zhongyi Zhou",
-        "Xingyue Chen",
-        "Jiahao Ren",
-        "Robert Timothy Bettridge",
-        "Steve Toh",
-        "David Kim"
+        "Jiwook Han",
+        "Geo Ahn",
+        "Youngrae Kim",
+        "Jinwoo Choi"
       ],
-      "summary": "While large language models have accelerated software development through \"vibe coding\", prototyping intelligent Extended Reality (XR) experiences remains inaccessible due to the friction of complex game engines and low-level sensor integration. To bridge this gap, we contribute XR Blocks, an open-source, modular WebXR framework that abstracts spatial computing complexities into high-level, human-centered primitives. Building upon this foundation, we present Vibe Coding XR, an end-to-end rapid prototyping workflow that leverages LLMs to translate natural language intent directly into functional XR software. Using a web-based interface, creators can transform high-level prompts (e.g., \"create a dandelion that reacts to hand\") into interactive WebXR applications in under a minute. We provide a preliminary technical evaluation on a pilot dataset (VCXR60) alongside diverse application scenarios highlighting mixed-reality realism, multi-modal interaction, and generative AI integrations. By democratizing spatial software creation, this work empowers practitioners to bypass low-level hurdles and rapidly move from \"idea to reality.\" Code and live demos are available at https://xrblocks.github.io/gem and https://github.com/google/xrblocks.",
-      "published": "2026-03-25T17:58:56Z",
-      "updated": "2026-03-25T17:58:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24591v1"
+      "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance on Video Temporal Grounding (VTG). However, their coarse recognition capabilities are insufficient for fine-grained temporal understanding, making task-specific fine-tuning indispensable. This fine-tuning causes models to memorize dataset-specific shortcuts rather than faithfully grounding in the actual visual content, leading to poor Out-of-Domain (OOD) generalization. Object-centric learning offers a promising remedy by decomposing scenes into entity-level representations, but existing approaches require re-running the entire multi-stage training pipeline from scratch. We propose SlotVTG, a framework that steers MLLMs toward object-centric, input-grounded visual reasoning at minimal cost. SlotVTG introduces a lightweight slot adapter that decomposes visual tokens into abstract slots via slot attention and reconstructs the original sequence, where objectness priors from a self-supervised vision model encourage semantically coherent slot formation. Cross-domain evaluation on standard VTG benchmarks demonstrates that our approach significantly improves OOD robustness while maintaining competitive In-Domain (ID) performance with minimal overhead.",
+      "published": "2026-03-26T17:59:31Z",
+      "updated": "2026-03-26T17:59:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25733v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24579v1",
-      "title": "MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination",
+      "id": "http://arxiv.org/abs/2603.25711v1",
+      "title": "Seeing to Ground: Visual Attention for Hallucination-Resilient MDLLMs",
       "authors": [
-        "Zhuo Li",
-        "Yupeng Zhang",
-        "Pengyu Cheng",
-        "Jiajun Song",
-        "Mengyu Zhou",
-        "Hao Li",
-        "Shujie Hu",
-        "Yu Qin",
-        "Erchao Zhao",
-        "Xiaoxi Jiang",
-        "Guanjun Jiang"
+        "Vishal Narnaware",
+        "Animesh Gupta",
+        "Kevin Zhai",
+        "Zhenyi Wang",
+        "Mubarak Shah"
       ],
-      "summary": "Hallucination remains a critical bottleneck for large language models (LLMs), undermining their reliability in real-world applications, especially in Retrieval-Augmented Generation (RAG) systems. While existing hallucination detection methods employ LLM-as-a-judge to verify LLM outputs against retrieved evidence, they suffer from inherent confirmation bias, where the verifier inadvertently reproduces the errors of the original generation. To address this, we introduce Multi-Agent Reinforced Self-Check for Hallucination (MARCH), a framework that enforces rigorous factual alignment by leveraging deliberate information asymmetry. MARCH orchestrates a collaborative pipeline of three specialized agents: a Solver, a Proposer, and a Checker. The Solver generates an initial RAG response, which the Proposer decomposes into claim-level verifiable atomic propositions. Crucially, the Checker validates these propositions against retrieved evidence in isolation, deprived of the Solver's original output. This well-crafted information asymmetry scheme breaks the cycle of self-confirmation bias. By training this pipeline with multi-agent reinforcement learning (MARL), we enable the agents to co-evolve and optimize factual adherence. Extensive experiments across hallucination benchmarks demonstrate that MARCH substantially reduces hallucination rates. Notably, an 8B-parameter LLM equipped with MARCH achieves performance competitive with powerful closed-source models. MARCH paves a scalable path for factual self-improvement of LLMs through co-evolution. The code is at https://github.com/Qwen-Applications/MARCH.",
-      "published": "2026-03-25T17:54:10Z",
-      "updated": "2026-03-25T17:54:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24579v1"
+      "summary": "Multimodal Diffusion Large Language Models (MDLLMs) achieve high-concurrency generation through parallel masked decoding, yet the architectures remain prone to multimodal hallucinations. This structural vulnerability stems from an algorithmic flaw: the decoder ranks candidate tokens based on textual likelihood without verifying localized visual support. We establish that this language-only ranking induces an objective mismatch, where language probability mass acts as a misspecified proxy for the intended multimodal task. Consequently, we reinterpret hallucination as a localized optimization error, a phenomenon where the decoder exploits language shortcuts to maximize a proxy score at the expense of visual grounding. To address this objective mismatch, we introduce VISAGE, a training-free decoding framework that calibrates the objective at inference time. VISAGE estimates the proxy discrepancy by quantifying the spatial entropy of cross-attention distributions. By enforcing a localization consensus across attention heads, the method penalizes spatially uniform distributions and re-ranks token commitments to favor visually grounded outcomes. We provide an analytical stability guarantee establishing that VISAGE maintains a bounded objective loss under estimation error. Evaluations across hallucination-sensitive and general-purpose benchmarks demonstrate the robustness of the framework, yielding relative gains of 8.59% on MMMU-val and 7.75% on HallusionBench.",
+      "published": "2026-03-26T17:53:49Z",
+      "updated": "2026-03-26T17:53:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25711v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.18019v2",
-      "title": "Is Multilingual LLM Watermarking Truly Multilingual? Scaling Robustness to 100+ Languages via Back-Translation",
+      "id": "http://arxiv.org/abs/2509.03345v2",
+      "title": "Do Language Models Follow Occam's Razor? An Evaluation of Parsimony in Inductive and Abductive Reasoning",
       "authors": [
-        "Asim Mohamed",
-        "Martin Gubri"
+        "Yunxin Sun",
+        "Abulhair Saparov"
       ],
-      "summary": "Multilingual watermarking aims to make large language model (LLM) outputs traceable across languages, yet current methods still fall short. Despite claims of cross-lingual robustness, they are evaluated only on high-resource languages. We show that existing multilingual watermarking methods are not truly multilingual: they fail to remain robust under translation attacks in medium- and low-resource languages. We trace this failure to semantic clustering, which fails when the tokenizer vocabulary contains too few full-word tokens for a given language. To address this, we introduce STEAM, a detection method that uses Bayesian optimisation to search among 133 candidate languages for the back-translation that best recovers the watermark strength. It is compatible with any watermarking method, robust across different tokenizers and languages, non-invasive, and easily extendable to new languages. With average gains of +0.23 AUC and +37% TPR@1%, STEAM provides a scalable approach toward fairer watermarking across the diversity of languages.",
-      "published": "2025-10-20T18:51:20Z",
-      "updated": "2026-03-25T17:52:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.18019v2"
+      "summary": "Non-deductive reasoning, encompassing inductive and abductive reasoning, is essential in addressing complex real-world questions. One key feature of inductive and abductive reasoning is that there are many valid hypotheses; the simplest ones (those that adhere to Occam's Razor) are often most useful. However, this aspect is ignored in recent work that evaluates the non-deductive reasoning capabilities of large language models (LLMs). This work fills this gap, focusing on understanding whether the inductive and abductive reasoning capabilities of LLMs adhere to Occam's Razor, while also examining the correctness of their reasoning. To accomplish this goal, we introduce a framework to synthetically generate reasoning questions that (a) require inductive reasoning and abductive reasoning simultaneously; (b) is readily extended to produce any abductive/inductive reasoning question expressible in first-order logic. The task for the intelligent agent is to produce hypotheses to explain observations under a given world model. We also propose a new automated metric to assess whether hypotheses quantitatively adhere to Occam's Razor; those hypotheses that are correct and simplest are considered high-quality. Our findings on state-of-the-art LLMs suggest that LLMs can perform inductive and abductive reasoning in simple scenarios, but struggle with complex world models and with producing high-quality hypotheses, even with popular reasoning-enhancing techniques such as in-context learning and RLVR.",
+      "published": "2025-09-03T14:22:42Z",
+      "updated": "2026-03-26T17:43:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.03345v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24558v1",
-      "title": "LensWalk: Agentic Video Understanding by Planning How You See in Videos",
+      "id": "http://arxiv.org/abs/2506.13734v3",
+      "title": "Instruction Following by Principled Boosting Attention of Large Language Models",
       "authors": [
-        "Keliang Li",
-        "Yansong Li",
-        "Hongze Shen",
-        "Mengdi Liu",
-        "Hong Chang",
-        "Shiguang Shan"
+        "Vitoria Guardieiro",
+        "Avishree Khare",
+        "Adam Stein",
+        "Eric Wong"
       ],
-      "summary": "The dense, temporal nature of video presents a profound challenge for automated analysis. Despite the use of powerful Vision-Language Models, prevailing methods for video understanding are limited by the inherent disconnect between reasoning and perception: they rely on static, pre-processed information and cannot actively seek raw evidence from video as their understanding evolves. To address this, we introduce LensWalk, a flexible agentic framework that empowers a Large Language Model reasoner to control its own visual observation actively. LensWalk establishes a tight reason-plan-observe loop where the agent dynamically specifies, at each step, the temporal scope and sampling density of the video it observes. Using a suite of versatile, Vision-Language Model based tools parameterized by these specifications, the agent can perform broad scans for cues, focus on specific segments for fact extraction, and stitch evidence from multiple moments for holistic verification. This design allows for progressive, on-demand evidence gathering that directly serves the agent's evolving chain of thought. Without requiring any model fine-tuning, LensWalk delivers substantial, plug-and-play performance gains on multiple model recipes, boosting their accuracy by over 5\\% on challenging long-video benchmarks like LVBench and Video-MME. Our analysis reveals that enabling an agent to control how it sees is key to unlocking more accurate, robust, and interpretable video reasoning.",
-      "published": "2026-03-25T17:38:54Z",
-      "updated": "2026-03-25T17:38:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24558v1"
+      "summary": "Large language models' behavior is often shaped by instructions such as system prompts, refusal boundaries, privacy constraints, and tool-use rules that must hold at inference time. Yet in practice these constraints can be violated under long contexts or when user-provided context conflicts with them, creating reliability and safety risks. This motivates inference-time interventions that strengthen instruction influence without retraining. One such intervention is attention steering, which biases attention toward instruction tokens. In this work, we present a unifying theory for attention steering methods by formalizing instruction following as rule-based competition between instruction rules and context-derived rules, with attention mediating which rules dominate. We prove that boosting attention to instruction tokens tilts this competition, making it harder for context to override instruction-following. However, excessive boosting can suppress task-relevant context that should be incorporated alongside the instruction. Guided by this theory, we propose Instruction Attention Boosting (InstABoost), a simple intervention that applies a constant additive bias to instruction-key attention logits across all layers and heads. We evaluate InstABoost against prompting, latent steering, and prior attention steering methods across 15 tasks. InstABoost matches or outperforms all baselines while avoiding the fluency collapse of latent methods and the instruction over-focus of prior attention methods, achieving a stronger steering-quality tradeoff.",
+      "published": "2025-06-16T17:42:35Z",
+      "updated": "2026-03-26T17:42:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.13734v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24556v1",
-      "title": "Evaluating Chunking Strategies For Retrieval-Augmented Generation in Oil and Gas Enterprise Documents",
+      "id": "http://arxiv.org/abs/2408.13366v2",
+      "title": "CodeRefine: A Pipeline for Enhancing LLM-Generated Code Implementations of Research Papers",
       "authors": [
-        "Samuel Taiwo",
-        "Mohd Amaluddin Yusoff"
+        "Ekaterina Trofimova",
+        "Emil Sataev",
+        "Abhijit Singh Jowhari"
       ],
-      "summary": "Retrieval-Augmented Generation (RAG) has emerged as a framework to address the constraints of Large Language Models (LLMs). Yet, its effectiveness fundamentally hinges on document chunking - an often-overlooked determinant of its quality. This paper presents an empirical study quantifying performance differences across four chunking strategies: fixed-size sliding window, recursive, breakpoint-based semantic, and structure-aware. We evaluated these methods using a proprietary corpus of oil and gas enterprise documents, including text-heavy manuals, table-heavy specifications, and piping and instrumentation diagrams (P and IDs). Our findings show that structure-aware chunking yields higher overall retrieval effectiveness, particularly in top-K metrics, and incurs significantly lower computational costs than semantic or baseline strategies. Crucially, all four methods demonstrated limited effectiveness on P and IDs, underscoring a core limitation of purely text-based RAG within visually and spatially encoded documents. We conclude that while explicit structure preservation is essential for specialised domains, future work must integrate multimodal models to overcome current limitations.",
-      "published": "2026-03-25T17:35:24Z",
-      "updated": "2026-03-25T17:35:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24556v1"
+      "summary": "This paper presents CodeRefine, a novel framework for automatically transforming research paper methodologies into functional code using Large Language Models (LLMs). Our multi-step approach first extracts and summarizes key text chunks from papers, analyzes their code relevance, and creates a knowledge graph using a predefined ontology. Code is then generated from this structured representation and enhanced through a proposed retrospective retrieval-augmented generation approach. CodeRefine addresses the challenge of bridging theoretical research and practical implementation, offering a more accurate alternative to LLM zero-shot prompting. Evaluations on diverse scientific papers demonstrate CodeRefine's ability to improve code implementation from the paper, potentially accelerating the adoption of cutting-edge algorithms in real-world applications.",
+      "published": "2024-08-23T20:51:04Z",
+      "updated": "2026-03-26T17:41:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2408.13366v2"
     },
     {
-      "id": "http://arxiv.org/abs/2511.08126v2",
-      "title": "Quantification and object perception in Multimodal Large Language Models and human linguistic cognition",
+      "id": "http://arxiv.org/abs/2505.24840v2",
+      "title": "The LLM Bottleneck: Why Open-Source Vision LLMs Struggle with Hierarchical Visual Recognition",
       "authors": [
-        "Raquel Montero",
-        "Natalia Moskvina",
-        "Paolo Morosi",
-        "Tamara Serrano",
-        "Elena Pagliarini",
-        "Evelina Leivada"
+        "Yuwen Tan",
+        "Yuan Qing",
+        "Boqing Gong"
       ],
-      "summary": "Quantification has been proven to be a particularly difficult linguistic phenomenon for (Multimodal) Large Language Models (MLLMs). However, given that quantification interfaces with the logic, pragmatic, and numerical domains, the exact reasons for the poor performance are still unclear. This paper looks at three key features of human quantification shared cross-linguistically that have remained so far unexplored in the (M)LLM literature: the ordering of quantifiers into scales, the ranges of use and prototypicality, and the biases inherent in the human approximate number system. The aim is to determine how these features are encoded in the models' architecture, how they may differ from humans, and whether the results are affected by the type of model (thinking vs. instruct) and the language under investigation. Results show that although thinking models showed a high accuracy in the numerosity estimation task and in the organization of quantifiers into scales, there are still key differences between humans and LLMs across all model types, particularly in terms of ranges of use and prototypicality values. This work, thus, paves the way for addressing the nature of MLLMs as semantic and pragmatic agents, while the cross-linguistic lens can elucidate whether their abilities are robust and stable across different languages.",
-      "published": "2025-11-11T11:30:21Z",
-      "updated": "2026-03-25T17:29:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.08126v2"
+      "summary": "This paper reveals that many open-source large language models (LLMs) lack hierarchical knowledge about our visual world, unaware of even well-established biology taxonomies. This shortcoming makes LLMs a bottleneck for vision LLMs' hierarchical visual recognition (e.g., recognizing Anemone Fish but not Vertebrate). We arrive at these findings using about one million four-choice visual question answering (VQA) tasks constructed from six taxonomies and four image datasets. Interestingly, finetuning a vision LLM using our VQA tasks reaffirms LLMs' bottleneck effect because the VQA tasks improve the LLMs' hierarchical consistency more than the vision LLMs'. We conjecture that one cannot make open-source vision LLMs understand visual concepts hierarchically until LLMs possess corresponding taxonomy knowledge.",
+      "published": "2025-05-30T17:40:46Z",
+      "updated": "2026-03-26T17:38:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.24840v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24535v1",
-      "title": "Representation Learning to Study Temporal Dynamics in Tutorial Scaffolding",
+      "id": "http://arxiv.org/abs/2601.10102v3",
+      "title": "When Identity Overrides Incentives: Representational Choices as Governance Decisions in Multi-Agent LLM Systems",
       "authors": [
-        "Conrad Borchers",
-        "Jiayi Zhang",
-        "Ashish Gurung"
+        "Viswonathan Manoranjan",
+        "Snehalkumar `Neil' S. Gaikwad"
       ],
-      "summary": "Adaptive scaffolding enhances learning, yet the field lacks robust methods for measuring it within authentic tutoring dialogue. This gap has become more pressing with the rise of remote human tutoring and large language model-based systems. We introduce an embedding-based approach that analyzes scaffolding dynamics by aligning the semantics of dialogue turns, problem statements, and correct solutions. Specifically, we operationalize alignment by computing cosine similarity between tutor and student contributions and task-relevant content. We apply this framework to 1,576 real-world mathematics tutoring dialogues from the Eedi Question Anchored Tutoring Dialogues dataset. The analysis reveals systematic differences in task alignment and distinct temporal patterns in how participants ground their contributions in problem and solution content. Further, mixed-effects models show that role-specific semantic alignment predicts tutorial progression beyond baseline features such as message order and length. Tutor contributions exhibited stronger grounding in problem content early in interactions. In contrast, student solution alignment was modestly positively associated with progression. These findings support scaffolding as a continuous, role-sensitive process grounded in task semantics. By capturing role-specific alignment over time, this approach provides a principled method for analyzing instructional dialogue and evaluating conversational tutoring systems.",
-      "published": "2026-03-25T17:11:56Z",
-      "updated": "2026-03-25T17:11:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24535v1"
+      "summary": "Large language models are increasingly deployed in multi-agent systems for strategic tasks, yet how design choices such as role-based personas and payoff visibility affect behavior remains poorly understood. We investigate whether LLM agents function as payoff-sensitive strategic actors or as identity-driven role followers. Using a 2x2 factorial experiment (persona presence x payoff visibility) with four models (Qwen-7B/32B, Llama-8B, Mistral-7B), we test 53 environmental policy scenarios in four-agent strategic games. We find that personas suppress payoff-aligned behavior: with personas present, all models achieve near-zero Nash equilibrium in Tragedy-dominant scenarios despite complete payoff information. Nearly every equilibrium reached is Green Transition. Removing personas and providing explicit payoffs are both near-necessary for payoff-aligned behavior, enabling only Qwen models to reach 65--90\\% equilibrium rates. Our results reveal three behavioral profiles: Qwen adapts to framing, Mistral is disrupted without finding Tragedy equilibrium, and Llama remains near-invariant. We show that the same binary design choice can shift equilibrium attainment by up to 90 percentage points, establishing that representational choices are not implementation details but governance decisions.",
+      "published": "2026-01-15T06:14:01Z",
+      "updated": "2026-03-26T17:33:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.10102v3"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24533v1",
-      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+      "id": "http://arxiv.org/abs/2511.07436v2",
+      "title": "Analysing Environmental Efficiency in AI for X-Ray Diagnosis",
       "authors": [
-        "Zichuan Lin",
-        "Feiyu Liu",
-        "Yijun Yang",
-        "Jiafei Lyu",
-        "Yiming Gao",
-        "Yicheng Liu",
-        "Zhicong Lu",
-        "Yangbin Yu",
-        "Mingyu Yang",
-        "Junyou Li",
-        "Deheng Ye",
-        "Jie Jiang"
+        "Liam Kearns"
       ],
-      "summary": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
-      "published": "2026-03-25T17:10:29Z",
-      "updated": "2026-03-25T17:10:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24533v1"
+      "summary": "The integration of AI tools into medical applications has aimed to improve the efficiency of diagnosis. The emergence of large language models (LLMs), such as ChatGPT and Claude, has expanded this integration even further despite a concern for their environmental impact. Because of LLM versatility and ease of use through APIs, these larger models are often utilised even though smaller, custom models can be used instead. In this paper, LLMs and small discriminative models are integrated into a Mendix application to detect Covid-19 in chest X-rays. These discriminative models are also used to provide knowledge bases for LLMs to improve accuracy. This provides a benchmark study of 14 different model configurations for comparison of diagnostic accuracy and environmental impact. The findings indicated that while smaller models reduced the carbon footprint of the application, the output was biased towards a positive diagnosis and the output probabilities were lacking confidence. Meanwhile, restricting LLMs to only give probabilistic output caused poor performance in both accuracy and carbon footprint, demonstrating the risk of using LLMs as a universal AI solution. While using the smaller LLM GPT-4.1-Nano reduced the carbon footprint by 94.2% compared to the larger models, this was still disproportionate to the discriminative models; the most efficient solution was the Covid-Net model. Although it had a larger carbon footprint than other small models, its carbon footprint was 99.9% less than when using GPT-4.5-Preview, whilst achieving an accuracy of 95.5%, the highest of all models examined. This paper contributes to knowledge by comparing generative and discriminative models in Covid-19 detection as well as highlighting the environmental risk of using generative tools for classification tasks.",
+      "published": "2025-10-31T14:19:57Z",
+      "updated": "2026-03-26T17:32:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.07436v2"
     },
     {
-      "id": "http://arxiv.org/abs/2504.09271v2",
-      "title": "Linguistic Comparison of AI- and Human-Written Responses to Online Mental Health Queries",
+      "id": "http://arxiv.org/abs/2603.25681v1",
+      "title": "Self-Improvement of Large Language Models: A Technical Overview and Future Outlook",
       "authors": [
-        "Koustuv Saha",
-        "Yoshee Jain",
-        "Violeta J. Rodriguez",
-        "Munmun De Choudhury"
+        "Haoyan Yang",
+        "Mario Xerri",
+        "Solha Park",
+        "Huajian Zhang",
+        "Yiyang Feng",
+        "Sai Akhil Kogilathota",
+        "Jiawei Zhou"
       ],
-      "summary": "The ubiquity and widespread use of digital and online technologies have transformed mental health support, with online mental health communities (OMHCs) providing safe spaces for peer support. More recently, generative AI and large language models (LLMs) have introduced new possibilities for scalable, around-the-clock mental health assistance that could potentially augment and supplement the capabilities of OMHCs. Although genAI shows promise in delivering immediate and personalized responses, its effectiveness in replicating the nuanced, experience-based support of human peers remains an open question. In this study, we harnessed 24,114 posts and 138,758 online community (OC) responses from 55 OMHCs on Reddit. We prompted several state-of-the-art LLMs (GPT-4-Turbo, Llama-3, and Mistral-7B) with these posts, and compared their responses to human-written (OC) responses based on a variety of linguistic measures across psycholinguistics and lexico-semantics. Our findings revealed that AI responses are more verbose, readable, and analytically structured, but lack linguistic diversity and personal narratives inherent in human--human interactions. Through a qualitative examination, we found validation as well as complementary insights into the nature of AI responses, such as its neutral stance and the absence of seeking back-and-forth clarifications. We discuss the ethical and practical implications of integrating generative AI into OMHCs, advocating for frameworks that balance AI's scalability and timeliness with the irreplaceable authenticity, social interactiveness, and expertise of human connections that form the ethos of online support communities.",
-      "published": "2025-04-12T16:20:02Z",
-      "updated": "2026-03-25T17:04:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.09271v2"
+      "summary": "As large language models (LLMs) continue to advance, improving them solely through human supervision is becoming increasingly costly and limited in scalability. As models approach human-level capabilities in certain domains, human feedback may no longer provide sufficiently informative signals for further improvement. At the same time, the growing ability of models to make autonomous decisions and execute complex actions naturally enables abstractions in which components of the model development process can be progressively automated. Together, these challenges and opportunities have driven increasing interest in self-improvement, where models autonomously generate data, evaluate outputs, and iteratively refine their own capabilities. In this paper, we present a system-level perspective on self-improving language models and introduce a unified framework that organizes existing techniques. We conceptualize the self-improvement system as a closed-loop lifecycle, consisting of four tightly coupled processes: data acquisition, data selection, model optimization, and inference refinement, along with an autonomous evaluation layer. Within this framework, the model itself plays a central role in driving each stage: collecting or generating data, selecting informative signals, updating its parameters, and refining outputs, while the autonomous evaluation layer continuously monitors progress and guides the improvement cycle across stages. Following this lifecycle perspective, we systematically review and analyze representative methods for each component from a technical standpoint. We further discuss current limitations and outline our vision for future research toward fully self-improving LLMs.",
+      "published": "2026-03-26T17:32:37Z",
+      "updated": "2026-03-26T17:32:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25681v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.21430v2",
-      "title": "DomAgent: Leveraging Knowledge Graphs and Case-Based Reasoning for Domain-Specific Code Generation",
+      "id": "http://arxiv.org/abs/2603.25674v1",
+      "title": "Measuring What Matters -- or What's Convenient?: Robustness of LLM-Based Scoring Systems to Construct-Irrelevant Factors",
       "authors": [
-        "Shuai Wang",
-        "Dhasarathy Parthasarathy",
-        "Robert Feldt",
-        "Yinan Yu"
+        "Cole Walsh",
+        "Rodica Ivan"
       ],
-      "summary": "Large language models (LLMs) have shown impressive capabilities in code generation. However, because most LLMs are trained on public domain corpora, directly applying them to real-world software development often yields low success rates, as these scenarios frequently require domain-specific knowledge. In particular, domain-specific tasks usually demand highly specialized solutions, which are often underrepresented or entirely absent in the training data of generic LLMs. To address this challenge, we propose DomAgent, an autonomous coding agent that bridges this gap by enabling LLMs to generate domain-adapted code through structured reasoning and targeted retrieval. A core component of DomAgent is DomRetriever, a novel retrieval module that emulates how humans learn domain-specific knowledge, by combining conceptual understanding with experiential examples. It dynamically integrates top-down knowledge-graph reasoning with bottom-up case-based reasoning, enabling iterative retrieval and synthesis of structured knowledge and representative cases to ensure contextual relevance and broad task coverage. DomRetriever can operate as part of DomAgent or independently with any LLM for flexible domain adaptation. We evaluate DomAgent on an open benchmark dataset in the data science domain (DS-1000) and further apply it to real-world truck software development tasks. Experimental results show that DomAgent significantly enhances domain-specific code generation, enabling small open-source models to close much of the performance gap with large proprietary LLMs in complex, real-world applications. The code is available at: https://github.com/Wangshuaiia/DomAgent.",
-      "published": "2026-03-22T22:39:32Z",
-      "updated": "2026-03-25T16:56:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.21430v2"
+      "summary": "Automated systems have been widely adopted across the educational testing industry for open-response assessment and essay scoring. These systems commonly achieve performance levels comparable to or superior than trained human raters, but have frequently been demonstrated to be vulnerable to the influence of construct-irrelevant factors (i.e., features of responses that are unrelated to the construct assessed) and adversarial conditions. Given the rising usage of large language models in automated scoring systems, there is a renewed focus on ``hallucinations'' and the robustness of these LLM-based automated scoring approaches to construct-irrelevant factors. This study investigates the effects of construct-irrelevant factors on a dual-architecture LLM-based scoring system designed to score short essay-like open-response items in a situational judgment test. It was found that the scoring system was generally robust to padding responses with meaningless text, spelling errors, and writing sophistication. Duplicating large passages of text resulted in lower scores predicted by the system, on average, contradicting results from previous studies of non-LLM-based scoring systems, while off-topic responses were heavily penalized by the scoring system. These results provide encouraging support for the robustness of future LLM-based scoring systems when designed with construct relevance in mind.",
+      "published": "2026-03-26T17:29:20Z",
+      "updated": "2026-03-26T17:29:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25674v1"
     },
     {
-      "id": "http://arxiv.org/abs/2511.17330v2",
-      "title": "Agentic Verification of Software Systems",
+      "id": "http://arxiv.org/abs/2509.18664v2",
+      "title": "An Experimental Evaluation of an AI-Powered Interactive Learning Platform",
       "authors": [
-        "Haoxin Tu",
-        "Huan Zhao",
-        "Yahui Song",
-        "Mehtab Zafar",
-        "Ruijie Meng",
-        "Abhik Roychoudhury"
+        "Courtney Heldreth",
+        "Diana Akrong",
+        "Laura M. Vardoulakis",
+        "Nicole E. Miller",
+        "Yael Haramaty",
+        "Lidan Hackmon",
+        "Lior Belinsky",
+        "Abraham Ortiz Tapia",
+        "Lucy Tootill",
+        "Scott Siebert"
       ],
-      "summary": "Automatically generated code is gaining traction recently, owing to the prevalence of Large Language Models (LLMs). Further, the AlphaProof initiative has demonstrated the possibility of using AI for general mathematical reasoning. Reasoning about computer programs (software) can be accomplished via general mathematical reasoning; however, it tends to be more structured and richer in contexts. This forms an attractive proposition, since then AI agents can be used to reason about voluminous code that gets generated by AI. In this work, we present a first LLM agent, AutoRocq, for conducting program verification. Unlike past works, which rely on extensive training of LLMs on proof examples, our agent learns on-the-fly and improves the proof via an iterative refinement loop. The iterative improvement of the proof is achieved by the proof agent communicating with the Rocq (formerly Coq) theorem prover to get additional context and feedback. The final result of the iteration is a proof derivation checked by the Rocq theorem prover. In this way, our proof construction involves autonomous collaboration between the proof agent and the theorem prover. This autonomy facilitates the search for proofs and decision-making in deciding on the structure of the proof tree. Experimental evaluation on SV-COMP benchmarks and on Linux kernel modules shows promising efficacy in achieving automated program verification. As automation in code generation becomes more widespread, we posit that our proof agent can be potentially integrated with AI coding agents to achieve a generate and validate loop, thus moving closer to the vision of trusted automatic programming.",
-      "published": "2025-11-21T15:51:48Z",
-      "updated": "2026-03-25T16:53:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.17330v2"
+      "summary": "Generative AI, which is capable of transforming static content into dynamic learning experiences, holds the potential to revolutionize student engagement in educational contexts. However, questions still remain around whether or not these tools are effective at facilitating student learning. In this research, we test the effectiveness of an AI-powered platform incorporating multiple representations and assessment through Learn Your Way, an experimental research platform that transforms textbook chapters into dynamic visual and audio representations. Through a between-subjects, mixed methods experiment with 60 US-based students, we demonstrate that students who used Learn Your Way had a more positive learning experience and had better learning outcomes compared to students learning the same content through a digital textbook. These findings indicate that AI-driven tools, capable of providing choice among interactive representations of content, constitute an effective and promising method for enhancing student learning.",
+      "published": "2025-09-23T05:31:40Z",
+      "updated": "2026-03-26T17:26:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.18664v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24484v1",
-      "title": "Video-Only ToM: Enhancing Theory of Mind in Multimodal Large Language Models",
+      "id": "http://arxiv.org/abs/2410.15281v5",
+      "title": "LLM4AD: Large Language Models for Autonomous Driving -- Concept, Review, Benchmark, Experiments, and Future Trends",
       "authors": [
-        "Siqi Liu",
-        "Xinyang Li",
-        "Bochao Zou",
-        "Junbao Zhuo",
-        "Huimin Ma",
-        "Jiansheng Chen"
+        "Can Cui",
+        "Yunsheng Ma",
+        "Sung-Yeon Park",
+        "Zichong Yang",
+        "Yupeng Zhou",
+        "Peiran Liu",
+        "Juanwu Lu",
+        "Juntong Peng",
+        "Jiaru Zhang",
+        "Ruqi Zhang",
+        "Lingxi Li",
+        "Yaobin Chen",
+        "Jitesh H. Panchal",
+        "Amr Abdelraouf",
+        "Rohit Gupta",
+        "Kyungtae Han",
+        "Ziran Wang"
       ],
-      "summary": "As large language models (LLMs) continue to advance, there is increasing interest in their ability to infer human mental states and demonstrate a human-like Theory of Mind (ToM). Most existing ToM evaluations, however, are centered on text-based inputs, while scenarios relying solely on visual information receive far less attention. This leaves a gap, since real-world human-AI interaction typically requires multimodal understanding. In addition, many current methods regard the model as a black box and rarely probe how its internal attention behaves in multiple-choice question answering (QA). The impact of LLM hallucinations on such tasks is also underexplored from an interpretability perspective. To address these issues, we introduce VisionToM, a vision-oriented intervention framework designed to strengthen task-aware reasoning. The core idea is to compute intervention vectors that align visual representations with the correct semantic targets, thereby steering the model's attention through different layers of visual features. This guidance reduces the model's reliance on spurious linguistic priors, leading to more reliable multimodal language model (MLLM) outputs and better QA performance. Experiments on the EgoToM benchmark-an egocentric, real-world video dataset for ToM with three multiple-choice QA settings-demonstrate that our method substantially improves the ToM abilities of MLLMs. Furthermore, results on an additional open-ended generation task show that VisionToM enables MLLMs to produce free-form explanations that more accurately capture agents' mental states, pushing machine-human collaboration toward greater alignment.",
-      "published": "2026-03-25T16:24:50Z",
-      "updated": "2026-03-25T16:24:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24484v1"
+      "summary": "With the broader adoption and highly successful development of Large Language Models (LLMs), there has been growing interest and demand for applying LLMs to autonomous driving technology. Driven by their natural language understanding and reasoning capabilities, LLMs have the potential to enhance various aspects of autonomous driving systems, from perception and scene understanding to interactive decision-making. This paper first introduces the novel concept of designing Large Language Models for Autonomous Driving (LLM4AD), followed by a review of existing LLM4AD studies. Then, a comprehensive benchmark is proposed for evaluating the instruction-following and reasoning abilities of LLM4AD systems, which includes LaMPilot-Bench, CARLA Leaderboard 1.0 Benchmark in simulation and NuPlanQA for multi-view visual question answering. Furthermore, extensive real-world experiments are conducted on autonomous vehicle platforms, examining both on-cloud and on-edge LLM deployment for personalized decision-making and motion control. Next, the future trends of integrating language diffusion models into autonomous driving are explored, exemplified by the proposed ViLaD (Vision-Language Diffusion) framework. Finally, the main challenges of LLM4AD are discussed, including latency, deployment, security and privacy, safety, trust and transparency, and personalization.",
+      "published": "2024-10-20T04:36:19Z",
+      "updated": "2026-03-26T17:19:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.15281v5"
     }
   ]
 }
