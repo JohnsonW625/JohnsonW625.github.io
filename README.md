@@ -7,6 +7,12 @@
 - Pac-Man page: `https://johnsonw625.github.io/pacman.html`
 - arXiv page: `https://johnsonw625.github.io/arxiv.html`
 
+## BST236 Midterm: Tutorial and video (on this blog)
+
+- Written tutorial (workflow design, agents/skills): https://minitim222.github.io/bst236-midterm-project/tutorial/
+- Tutorial video: https://www.youtube.com/watch?v=Rdb_bQ0VkDM
+- Same content is linked and embedded on the homepage: `https://johnsonw625.github.io/index.html#bst236-tutorial`
+
 ## Progress
 
 - Problem 1 (GitHub blog homepage): Completed
