@@ -1,176 +1,226 @@
 {
-  "generated_at_utc": "2026-03-31T02:22:48Z",
+  "generated_at_utc": "2026-04-03T02:13:05Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.28655v1",
-      "title": "Safeguarding LLMs Against Misuse and AI-Driven Malware Using Steganographic Canaries",
+      "id": "http://arxiv.org/abs/2603.29399v2",
+      "title": "ELT-Bench-Verified: Benchmark Quality Issues Underestimate AI Agent Capabilities",
       "authors": [
-        "Md Raz",
-        "Venkata Sai Charan Putrevu",
-        "Meet Udeshi",
-        "Prashanth Krishnamurthy",
-        "Farshad Khorrami",
-        "Ramesh Karri"
+        "Christopher Zanoli",
+        "Andrea Giovannini",
+        "Tengjun Jin",
+        "Ana Klimovic",
+        "Yotam Perlitz"
       ],
-      "summary": "AI-powered malware increasingly exploits cloud-hosted generative-AI services and large language models (LLMs) as analysis engines for reconnaissance and code generation. Simultaneously, enterprise uploads expose sensitive documents to third-party AI vendors. Both threats converge at the AI service ingestion boundary, yet existing defenses focus on endpoints and network perimeters, leaving organizations with limited visibility once plaintext reaches an LLM service. To address this, we present a framework based on steganographic canary files: realistic documents carrying cryptographically derived identifiers embedded via complementary encoding channels. A pre-ingestion filter extracts and verifies these identifiers before LLM processing, enabling passive, format-agnostic detection without semantic classification. We support two modes of operation where Mode A marks existing sensitive documents with layered symbolic encodings (whitespace substitution, zero-width character insertion, homoglyph substitution), while Mode B generates synthetic canary documents using linguistic steganography (arithmetic coding over GPT-2), augmented with compatible symbolic layers. We model increasing document pre-processing and adversarial capability for both modes via a four-tier transport-transform taxonomy: All methods achieve 100% identifier recovery under benign and sanitization workflows (Tiers 1-2). The hybrid Mode B maintains 97% through targeted adversarial transforms (Tier 3). An end-to-end case study against an LLM-orchestrated ransomware pipeline confirms that both modes detect and block canary-bearing uploads before file encryption begins. To our knowledge, this is the first framework to systematically combine symbolic and linguistic text steganography into layered canary documents for detecting unauthorized LLM processing, evaluated against a transport-threat taxonomy tailored to AI malware.",
-      "published": "2026-03-30T16:40:55Z",
-      "updated": "2026-03-30T16:40:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28655v1"
+      "summary": "Constructing Extract-Load-Transform (ELT) pipelines is a labor-intensive data engineering task and a high-impact target for AI automation. On ELT-Bench, the first benchmark for end-to-end ELT pipeline construction, AI agents initially showed low success rates, suggesting they lacked practical utility. We revisit these results and identify two factors causing a substantial underestimation of agent capabilities. First, re-evaluating ELT-Bench with upgraded large language models reveals that the extraction and loading stage is largely solved, while transformation performance improves significantly. Second, we develop an Auditor-Corrector methodology that combines scalable LLM-driven root-cause analysis with rigorous human validation (inter-annotator agreement Fleiss' kappa = 0.85) to audit benchmark quality. Applying this to ELT-Bench uncovers that most failed transformation tasks contain benchmark-attributable errors -- including rigid evaluation scripts, ambiguous specifications, and incorrect ground truth -- that penalize correct agent outputs. Based on these findings, we construct ELT-Bench-Verified, a revised benchmark with refined evaluation logic and corrected ground truth. Re-evaluating on this version yields significant improvement attributable entirely to benchmark correction. Our results show that both rapid model improvement and benchmark quality issues contributed to underestimating agent capabilities. More broadly, our findings echo observations of pervasive annotation errors in text-to-SQL benchmarks, suggesting quality issues are systemic in data engineering evaluation. Systematic quality auditing should be standard practice for complex agentic tasks. We release ELT-Bench-Verified to provide a more reliable foundation for progress in AI-driven data engineering automation.",
+      "published": "2026-03-31T08:02:16Z",
+      "updated": "2026-04-02T17:59:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.29399v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28653v1",
-      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations",
+      "id": "http://arxiv.org/abs/2604.02322v1",
+      "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning",
       "authors": [
-        "Kaushitha Silva",
-        "Srinath Perera"
+        "Bangji Yang",
+        "Hongbo Ma",
+        "Jiajun Fan",
+        "Ge Liu"
       ],
-      "summary": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable signal if we model them as noisy sensors guided by bayesian updates. To this end, we introduce BACE (Bayesian Anchored Co-Evolution), a framework that reformulates synthesis as a Bayesian co-evolutionary process where code and test populations are evolved, guided by belief distributions that are reciprocally updated based on noisy interaction evidence. By anchoring this search on minimal public examples, BACE prevents the co-evolutionary drift typical of self-validating loops. Extensive evaluations on LiveCodeBench v6 (post-March 2025) reveal that BACE achieves superior performance across both proprietary models and open-weight small language models.",
-      "published": "2026-03-30T16:40:11Z",
-      "updated": "2026-03-30T16:40:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28653v1"
+      "summary": "Large Language Models employing Chain-of-Thought reasoning achieve strong performance but suffer from excessive token consumption that inflates inference costs. Existing efficiency methods such as explicit length penalties, difficulty estimators, or multi-stage curricula either degrade reasoning quality or require complex training pipelines. We introduce Batched Contextual Reinforcement, a minimalist, single-stage training paradigm that unlocks efficient reasoning through a simple structural modification: training the model to solve N problems simultaneously within a shared context window, rewarded purely by per-instance accuracy. This formulation creates an implicit token budget that yields several key findings: (1) We identify a novel task-scaling law: as the number of concurrent problems N increases during inference, per-problem token usage decreases monotonically while accuracy degrades far more gracefully than baselines, establishing N as a controllable throughput dimension. (2) BCR challenges the traditional accuracy-efficiency trade-off by demonstrating a \"free lunch\" phenomenon at standard single-problem inference. Across both 1.5B and 4B model families, BCR reduces token usage by 15.8% to 62.6% while consistently maintaining or improving accuracy across five major mathematical benchmarks. (3) Qualitative analyses reveal emergent self-regulated efficiency, where models autonomously eliminate redundant metacognitive loops without explicit length supervision. (4) Crucially, we empirically demonstrate that implicit budget constraints successfully circumvent the adversarial gradients and catastrophic optimization collapse inherent to explicit length penalties, offering a highly stable, constraint-based alternative for length control. These results prove BCR practical, showing simple structural incentives unlock latent high-density reasoning in LLMs.",
+      "published": "2026-04-02T17:58:50Z",
+      "updated": "2026-04-02T17:58:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02322v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28643v1",
-      "title": "The Ultimate Tutorial for AI-driven Scale Development in Generative Psychometrics: Releasing AIGENIE from its Bottle",
+      "id": "http://arxiv.org/abs/2604.02320v1",
+      "title": "Large-scale Codec Avatars: The Unreasonable Effectiveness of Large-scale Avatar Pretraining",
       "authors": [
-        "Lara Russell-Lasalandra",
-        "Hudson Golino",
-        "Luis Eduardo Garrido",
-        "Alexander P. Christensen"
+        "Junxuan Li",
+        "Rawal Khirodkar",
+        "Chengan He",
+        "Zhongshi Jiang",
+        "Giljoo Nam",
+        "Lingchen Yang",
+        "Jihyun Lee",
+        "Egor Zakharov",
+        "Zhaoen Su",
+        "Rinat Abdrashitov",
+        "Yuan Dong",
+        "Julieta Martinez",
+        "Kai Li",
+        "Qingyang Tan",
+        "Takaaki Shiratori",
+        "Matthew Hu",
+        "Peihong Guo",
+        "Xuhua Huang",
+        "Ariyan Zarei",
+        "Marco Pesavento",
+        "Yichen Xu",
+        "He Wen",
+        "Teng Deng",
+        "Wyatt Borsos",
+        "Anjali Thakrar",
+        "Jean-Charles Bazin",
+        "Carsten Stoll",
+        "Ginés Hidalgo",
+        "James Booth",
+        "Lucy Wang",
+        "Xiaowen Ma",
+        "Yu Rong",
+        "Sairanjith Thalanki",
+        "Chen Cao",
+        "Christian Häne",
+        "Abhishek Kar",
+        "Sofien Bouaziz",
+        "Jason Saragih",
+        "Yaser Sheikh",
+        "Shunsuke Saito"
       ],
-      "summary": "Psychological scale development has traditionally required extensive expert involvement, iterative revision, and large-scale pilot testing before psychometric evaluation can begin. The `AIGENIE` R package implements the AI-GENIE framework (Automatic Item Generation with Network-Integrated Evaluation), which integrates large language model (LLM) text generation with network psychometric methods to automate the early stages of this process. The package generates candidate item pools using LLMs, transforms them into high-dimensional embeddings, and applies a multi-step reduction pipeline -- Exploratory Graph Analysis (EGA), Unique Variable Analysis (UVA), and bootstrap EGA -- to produce structurally validated item pools entirely *in silico*. This tutorial introduces the package across six parts: installation and setup, understanding Application Programming Interfaces (APIs), text generation, item generation, the `AIGENIE` function, and the `GENIE` function. Two running examples illustrate the package's use: the Big Five personality model (a well-established construct) and AI Anxiety (an emerging construct). The package supports multiple LLM providers (OpenAI, Anthropic, Groq, HuggingFace, and local models), offers a fully offline mode with no external API calls, and provides the `GENIE()` function for researchers who wish to apply the psychometric reduction pipeline to existing item pools regardless of their origin. The `AIGENIE` package is freely available on R-universe at https://laralee.r-universe.dev/AIGENIE.",
-      "published": "2026-03-30T16:25:37Z",
-      "updated": "2026-03-30T16:25:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28643v1"
+      "summary": "High-quality 3D avatar modeling faces a critical trade-off between fidelity and generalization. On the one hand, multi-view studio data enables high-fidelity modeling of humans with precise control over expressions and poses, but it struggles to generalize to real-world data due to limited scale and the domain gap between the studio environment and the real world. On the other hand, recent large-scale avatar models trained on millions of in-the-wild samples show promise for generalization across a wide range of identities, yet the resulting avatars are often of low-quality due to inherent 3D ambiguities. To address this, we present Large-Scale Codec Avatars (LCA), a high-fidelity, full-body 3D avatar model that generalizes to world-scale populations in a feedforward manner, enabling efficient inference. Inspired by the success of large language models and vision foundation models, we present, for the first time, a pre/post-training paradigm for 3D avatar modeling at scale: we pretrain on 1M in-the-wild videos to learn broad priors over appearance and geometry, then post-train on high-quality curated data to enhance expressivity and fidelity. LCA generalizes across hair styles, clothing, and demographics while providing precise, fine-grained facial expressions and finger-level articulation control, with strong identity preservation. Notably, we observe emergent generalization to relightability and loose garment support to unconstrained inputs, and zero-shot robustness to stylized imagery, despite the absence of direct supervision.",
+      "published": "2026-04-02T17:58:40Z",
+      "updated": "2026-04-02T17:58:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02320v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09938v2",
-      "title": "Model Merging in the Era of Large Language Models: Methods, Applications, and Future Directions",
+      "id": "http://arxiv.org/abs/2510.00039v2",
+      "title": "AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents",
       "authors": [
+        "Hossein Sholehrasa",
+        "Amirhossein Ghanaatian",
+        "Doina Caragea",
+        "Lisa A. Tell",
+        "Jim E. Riviere",
+        "Majid Jaberi-Douraki"
+      ],
+      "summary": "Pharmacokinetics (PK) plays a critical role in drug development and regulatory decision-making for human and veterinary medicine, directly affecting public health through drug safety and efficacy assessments. However, PK data are often embedded in complex, heterogeneous tables with variable structures and inconsistent terminologies, posing significant challenges for automated PK data retrieval and standardization. AutoPK, a novel two-stage framework for accurate and scalable extraction of PK data from complex scientific tables. In the first stage, AutoPK identifies and extracts PK parameter variants using large language models (LLMs), a hybrid similarity metric, and LLM-based validation. The second stage filters relevant rows, converts the table into a key-value text format, and uses an LLM to reconstruct a standardized table. Evaluated on a real-world dataset of 605 PK tables, including captions and footnotes, AutoPK shows significant improvements in precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA 3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and 0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled open-source models like Gemma 3-27B to outperform commercial systems such as GPT-4o Mini on several PK parameters. AutoPK enables scalable and high-confidence PK data extraction, making it well-suited for critical applications in veterinary pharmacology, drug safety monitoring, and public health decision-making, while addressing heterogeneous table structures and terminology and demonstrating generalizability across key PK parameters. Code and data: https://github.com/hosseinsholehrasa/AutoPK",
+      "published": "2025-09-26T22:05:32Z",
+      "updated": "2026-04-02T17:48:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.00039v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.25638v2",
+      "title": "Beyond Via: Analysis and Estimation of the Impact of Large Language Models in Academic Papers",
+      "authors": [
+        "Mingmeng Geng",
+        "Yuhang Dong",
+        "Thierry Poibeau"
+      ],
+      "summary": "Through an analysis of arXiv papers, we report several shifts in word usage that are likely driven by large language models (LLMs) but have not previously received sufficient attention, such as the increased frequency of \"beyond\" and \"via\" in titles and the decreased frequency of \"the\" and \"of\" in abstracts. Due to the similarities among different LLMs, experiments show that current classifiers struggle to accurately determine which specific model generated a given text in multi-class classification tasks. Meanwhile, variations across LLMs also result in evolving patterns of word usage in academic papers. By adopting a direct and highly interpretable linear approach and accounting for differences between models and prompts, we quantitatively assess these effects and show that real-world LLM usage is heterogeneous and dynamic.",
+      "published": "2026-03-26T16:49:00Z",
+      "updated": "2026-04-02T17:45:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25638v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.02289v1",
+      "title": "Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation",
+      "authors": [
+        "Chongjie Ye",
+        "Cheng Cao",
+        "Chuanyu Pan",
+        "Yiming Hao",
+        "Yihao Zhi",
+        "Yuanming Hu",
+        "Xiaoguang Han"
+      ],
+      "summary": "Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis under-constrained. Existing methods often rely on indirect pipelines that edit in 2D and lift results into 3D via optimization, sacrificing geometric consistency. We present Omni123, a 3D-native foundation model that unifies text-to-2D and text-to-3D generation within a single autoregressive framework. Our key insight is that cross-modal consistency between images and 3D can serve as an implicit structural constraint. By representing text, images, and 3D as discrete tokens in a shared sequence space, the model leverages abundant 2D data as a geometric prior to improve 3D representations. We introduce an interleaved X-to-X training paradigm that coordinates diverse cross-modal tasks over heterogeneous paired datasets without requiring fully aligned text-image-3D triplets. By traversing semantic-visual-geometric cycles (e.g., text to image to 3D to image) within autoregressive sequences, the model jointly enforces semantic alignment, appearance fidelity, and multi-view geometric consistency. Experiments show that Omni123 significantly improves text-guided 3D generation and editing, demonstrating a scalable path toward multimodal 3D world models.",
+      "published": "2026-04-02T17:29:38Z",
+      "updated": "2026-04-02T17:29:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02289v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.02288v1",
+      "title": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing",
+      "authors": [
+        "Gengsheng Li",
+        "Tianyu Yang",
+        "Junfeng Fang",
         "Mingyang Song",
-        "Mao Zheng"
+        "Mao Zheng",
+        "Haiyun Guo",
+        "Dan Zhang",
+        "Jinqiao Wang",
+        "Tat-Seng Chua"
       ],
-      "summary": "Model merging combines the parameters of multiple neural networks into a single model without additional training. As fine-tuned large language models (LLMs) proliferate, merging offers a computationally efficient alternative to ensembles and full retraining, enabling practitioners to compose specialized capabilities at minimal cost. This survey examines model merging in the LLM era through the \\textbf{FUSE} taxonomy, organized along \\textbf{F}oundations, \\textbf{U}nification Strategies, \\textbf{S}cenarios, and \\textbf{E}cosystem. We first establish the theoretical underpinnings of merging, including loss landscape geometry and mode connectivity, then systematically review the algorithmic space spanning weight averaging, task vector arithmetic, sparsification-enhanced methods, mixture-of-experts architectures, and evolutionary optimization. We further examine downstream applications across multi-task learning, safety alignment, domain specialization, and federated learning, and survey the supporting ecosystem of tools and evaluation benchmarks. Finally, we identify key open challenges and future directions, aiming to equip researchers and practitioners with a structured foundation for advancing model merging.",
-      "published": "2026-03-10T17:31:55Z",
-      "updated": "2026-03-30T16:23:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09938v2"
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) has become a standard paradigm for post-training large language models. While Group Relative Policy Optimization (GRPO) is widely adopted, its coarse credit assignment uniformly penalizes failed rollouts, lacking the token-level focus needed to efficiently address specific deviations. Self-Distillation Policy Optimization (SDPO) addresses this by providing denser, more targeted logit-level supervision that facilitates rapid early improvement, yet it frequently collapses during prolonged training. We trace this late-stage instability to two intrinsic flaws: self-distillation on already-correct samples introduces optimization ambiguity, and the self-teacher's signal reliability progressively degrades. To resolve these issues, we propose Sample-Routed Policy Optimization (SRPO), a unified on-policy framework that routes correct samples to GRPO's reward-aligned reinforcement and failed samples to SDPO's targeted logit-level correction. SRPO further incorporates an entropy-aware dynamic weighting mechanism to suppress high-entropy, unreliable distillation targets while emphasizing confident ones. Evaluated across five benchmarks and two model scales, SRPO achieves both the rapid early improvement of SDPO and the long-horizon stability of GRPO. It consistently surpasses the peak performance of both baselines, raising the five-benchmark average on Qwen3-8B by 3.4% over GRPO and 6.3% over SDPO, while simultaneously yielding moderate response lengths and lowering per-step compute cost by up to 17.2%.",
+      "published": "2026-04-02T17:29:18Z",
+      "updated": "2026-04-02T17:29:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02288v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28622v1",
-      "title": "Trust-Aware Routing for Distributed Generative AI Inference at the Edge",
+      "id": "http://arxiv.org/abs/2603.10913v2",
+      "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
       "authors": [
-        "Chanh Nguyen",
-        "Erik Elmroth"
+        "Parishad BehnamGhader",
+        "Vaibhav Adlakha",
+        "Fabian David Schmidt",
+        "Nicolas Chapados",
+        "Marius Mosbach",
+        "Siva Reddy"
       ],
-      "summary": "Emerging deployments of Generative AI increasingly execute inference across decentralized and heterogeneous edge devices rather than on a single trusted server. In such environments, a single device failure or misbehavior can disrupt the entire inference process, making traditional best-effort peer-to-peer routing insufficient. Coordinating distributed generative inference therefore requires mechanisms that explicitly account for reliability, performance variability, and trust among participating peers. In this paper, we present G-TRAC, a trust-aware coordination framework that integrates algorithmic path selection with system-level protocol design to ensure robust distributed inference. First, we formulate the routing problem as a \\textit{Risk-Bounded Shortest Path} computation and introduce a polynomial-time solution that combines trust-floor pruning with Dijkstra's search, achieving sub-millisecond median routing latency at practical edge scales, and remaining below 10 ms at larger scales. Second, to operationally support the routing logic in dynamic environments, the framework employs a \\textit{Hybrid Trust Architecture} that maintains global reputation state at stable anchors while disseminating lightweight updates to edge peers via background synchronization. Experimental evaluation on a heterogeneous testbed of commodity devices demonstrates that G-TRAC significantly improves inference completion rates, effectively isolates unreliable peers, and sustains robust execution even under node failures and network partitions.",
-      "published": "2026-03-30T16:07:11Z",
-      "updated": "2026-03-30T16:07:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28622v1"
+      "summary": "Fine-tuning LLM-based text embedders via contrastive learning maps inputs and outputs into a new representational space, discarding the LLM's output semantics. We propose LLM2Vec-Gen, a self-supervised alternative that instead produces embeddings directly in the LLM's output space by learning to represent the model's potential response. Specifically, trainable special tokens are appended to the input and optimized to compress the LLM's own response into a fixed-length embedding, guided by an unsupervised embedding teacher and a reconstruction objective. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 8.8% over the unsupervised embedding teacher. Since the embeddings preserve the LLM's response-space semantics, they inherit capabilities such as safety alignment (up to 22.6% reduction in harmful content retrieval) and reasoning (up to 35.6% improvement on reasoning-intensive retrieval). Finally, the learned embeddings are also interpretable: they can be decoded back into text to reveal their semantic content.",
+      "published": "2026-03-11T15:58:47Z",
+      "updated": "2026-04-02T17:09:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.10913v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28618v1",
-      "title": "Seeing with You: Perception-Reasoning Coevolution for Multimodal Reasoning",
+      "id": "http://arxiv.org/abs/2603.16880v2",
+      "title": "NeuroNarrator: A Generalist EEG-to-Text Foundation Model for Clinical Interpretation via Spectro-Spatial Grounding and Temporal State-Space Reasoning",
       "authors": [
-        "Ziqi Miao",
-        "Haonan Jia",
-        "Lijun Li",
-        "Chen Qian",
-        "Yuan Xiong",
-        "Wenting Yan",
-        "Jing Shao"
+        "Guoan Wang",
+        "Shihao Yang",
+        "Jun-en Ding",
+        "Hao Zhu",
+        "Feng Liu"
       ],
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) has substantially enhanced the reasoning capabilities of multimodal large language models (MLLMs). However, existing RLVR approaches typically rely on outcome-driven optimization that updates both perception and reasoning using a shared reward based solely on the final answer. This shared reward blurs credit assignment, frequently improving reasoning patterns while failing to reliably enhance the accuracy of upstream visual evidence extraction. To address this perception bottleneck, we introduce PRCO (Perception-Reasoning Coevolution), a dual-role RLVR framework with a shared policy. PRCO consists of two cooperative roles: an Observer that generates an evidence caption tailored to the question and a Solver that predicts the final answer based on this caption. Crucially, PRCO employs role-specific reward signals: the Solver is optimized using verifiable outcome rewards on the final answer, while the Observer receives a utility reward derived from the Solver's downstream success. Extensive experiments across eight challenging multimodal reasoning benchmarks demonstrate that PRCO yields consistent improvements across model scales by over 7 points on average accuracy compared to the base model, outperforming prior open-source RL-tuned baselines.",
-      "published": "2026-03-30T16:03:56Z",
-      "updated": "2026-03-30T16:03:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28618v1"
+      "summary": "Electroencephalography (EEG) provides a non-invasive window into neural dynamics at high temporal resolution and plays a pivotal role in clinical neuroscience research. Despite this potential, prevailing computational approaches to EEG analysis remain largely confined to task-specific classification objectives or coarse-grained pattern recognition, offering limited support for clinically meaningful interpretation. To address these limitations, we introduce NeuroNarrator, the first generalist EEG-to-text foundation model designed to translate electrophysiological segments into precise clinical narratives. A cornerstone of this framework is the curation of NeuroCorpus-160K, the first harmonized large-scale resource pairing over 160,000 EEG segments with structured, clinically grounded natural-language descriptions. Our architecture first aligns temporal EEG waveforms with spatial topographic maps via a rigorous contrastive objective, establishing spectro-spatially grounded representations. Building on this grounding, we condition a Large Language Model through a state-space-inspired formulation that integrates historical temporal and spectral context to support coherent clinical narrative generation. This approach establishes a principled bridge between continuous signal dynamics and discrete clinical language, enabling interpretable narrative generation that facilitates expert interpretation and supports clinical reporting workflows. Extensive evaluations across diverse benchmarks and zero-shot transfer tasks highlight NeuroNarrator's capacity to integrate temporal, spectral, and spatial dynamics, positioning it as a foundational framework for time-frequency-aware, open-ended clinical interpretation of electrophysiological data.",
+      "published": "2026-02-24T21:10:42Z",
+      "updated": "2026-04-02T17:07:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.16880v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28613v1",
-      "title": "TGIF2: Extended Text-Guided Inpainting Forgery Dataset & Benchmark",
+      "id": "http://arxiv.org/abs/2507.05660v2",
+      "title": "Optimus: A Robust Defense Framework for Mitigating Toxicity while Fine-Tuning Conversational AI",
       "authors": [
-        "Hannes Mareen",
-        "Dimitrios Karageorgiou",
-        "Paschalis Giakoumoglou",
-        "Peter Lambert",
-        "Symeon Papadopoulos",
-        "Glenn Van Wallendael"
+        "Aravind Cheruvu",
+        "Shravya Kanchi",
+        "Sifat Muhammad Abdullah",
+        "Nicholas Kong",
+        "Daphne Yao",
+        "Murtuza Jadliwala",
+        "Bimal Viswanath"
       ],
-      "summary": "Generative AI has made text-guided inpainting a powerful image editing tool, but at the same time a growing challenge for media forensics. Existing benchmarks, including our text-guided inpainting forgery (TGIF) dataset, show that image forgery localization (IFL) methods can localize manipulations in spliced images but struggle not in fully regenerated (FR) images, while synthetic image detection (SID) methods can detect fully regenerated images but cannot perform localization. With new generative inpainting models emerging and the open problem of localization in FR images remaining, updated datasets and benchmarks are needed. We introduce TGIF2, an extended version of TGIF, that captures recent advances in text-guided inpainting and enables a deeper analysis of forensic robustness. TGIF2 augments the original dataset with edits generated by FLUX.1 models, as well as with random non-semantic masks. Using the TGIF2 dataset, we conduct a forensic evaluation spanning IFL and SID, including fine-tuning IFL methods on FR images and generative super-resolution attacks. Our experiments show that both IFL and SID methods degrade on FLUX.1 manipulations, highlighting limited generalization. Additionally, while fine-tuning improves localization on FR images, evaluation with random non-semantic masks reveals object bias. Furthermore, generative super-resolution significantly weakens forensic traces, demonstrating that common image enhancement operations can undermine current forensic pipelines. In summary, TGIF2 provides an updated dataset and benchmark, which enables new insights into the challenges posed by modern inpainting and AI-based image enhancements. TGIF2 is available at https://github.com/IDLabMedia/tgif-dataset.",
-      "published": "2026-03-30T15:59:16Z",
-      "updated": "2026-03-30T15:59:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28613v1"
+      "summary": "Customizing Large Language Models (LLMs) on untrusted datasets poses severe risks of injecting toxic behaviors. In this work, we introduce Optimus, a novel defense framework designed to mitigate fine-tuning harms while preserving conversational utility. Unlike existing defenses that rely heavily on precise toxicity detection or restrictive filtering, Optimus addresses the critical challenge of ensuring robust mitigation even when toxicity classifiers are imperfect or biased. Optimus integrates a training-free toxicity classification scheme that repurposes the safety alignment of commodity LLMs, and employs a dual-strategy alignment process combining synthetic \"healing data\" with Direct Preference Optimization (DPO) to efficiently steer models toward safety. Extensive evaluations demonstrate that Optimus mitigates toxicity even when relying on extremely biased classifiers (with up to 85% degradation in Recall). Optimus outperforms the state-of-the-art defense StarDSS and exhibits strong resilience against adaptive adversarial and jailbreak attacks. Our source code and datasets are available at https://github.com/secml-lab-vt/Optimus",
+      "published": "2025-07-08T04:40:09Z",
+      "updated": "2026-04-02T16:59:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.05660v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28610v1",
-      "title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning",
+      "id": "http://arxiv.org/abs/2602.22340v2",
+      "title": "Conversational Successes and Breakdowns in Everyday Smart Glasses Use",
       "authors": [
-        "Huanxuan Liao",
-        "Zhongtao Jiang",
-        "Yupu Hao",
-        "Yuqiao Tan",
-        "Shizhu He",
-        "Jun Zhao",
-        "Kun Xu",
-        "Kang Liu"
+        "Xiuqi Tommy Zhu",
+        "Xiaoan Liu",
+        "Casper Harteveld",
+        "Smit Desai",
+        "Eileen McGivney"
       ],
-      "summary": "Multimodal Large Language Models (MLLMs) achieve stronger visual understanding by scaling input fidelity, yet the resulting visual token growth makes jointly sustaining high spatial resolution and long temporal context prohibitive. We argue that the bottleneck lies not in how post-encoding representations are compressed but in the volume of pixels the encoder receives, and address it with ResAdapt, an Input-side adaptation framework that learns how much visual budget each frame should receive before encoding. ResAdapt couples a lightweight Allocator with an unchanged MLLM backbone, so the backbone retains its native visual-token interface while receiving an operator-transformed input. We formulate allocation as a contextual bandit and train the Allocator with Cost-Aware Policy Optimization (CAPO), which converts sparse rollout feedback into a stable accuracy-cost learning signal. Across budget-controlled video QA, temporal grounding, and image reasoning tasks, ResAdapt improves low-budget operating points and often lies on or near the efficiency-accuracy frontier, with the clearest gains on reasoning-intensive benchmarks under aggressive compression. Notably, ResAdapt supports up to 16x more frames at the same visual budget while delivering over 15% performance gain. Code is available at https://github.com/Xnhyacinth/ResAdapt.",
-      "published": "2026-03-30T15:57:32Z",
-      "updated": "2026-03-30T15:57:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28610v1"
+      "summary": "Non-Display Smart Glasses hold the potential to support everyday activities by combining continuous environmental sensing with voice-only interaction powered by large language models (LLMs). Understanding how conversational successes and breakdowns arise in everyday contexts can better inform the design of future voice-only interfaces. To investigate this, we conducted a month-long collaborative autoethnography (n=2) to identify patterns of successes and breakdowns when using such devices. We then compare these patterns with prior findings on voice-only interactions to highlight the unique affordances and opportunities offered by non-display smart glasses.",
+      "published": "2026-02-25T19:05:27Z",
+      "updated": "2026-04-02T16:33:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.22340v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.28607v1",
-      "title": "One stout to rule them all: Reconciling artificial intelligence, data science and malted alcoholic beverages",
+      "id": "http://arxiv.org/abs/2604.02238v1",
+      "title": "Generative AI Spotlights the Human Core of Data Science: Implications for Education",
       "authors": [
-        "Dmitrii Usynin",
-        "Elena Shmakova",
-        "Michael Rheinberger"
+        "Nathan Taback"
       ],
-      "summary": "Beer is a phenomenal beverage. It has previously shaped the history of many peoples, states and cultures. The beauty of beer is its versatility. Starting from the original implementations that were murky or diluted, over time researchers found novel approaches to gradually develop beverages that are diverse, intense and are pleasant for the end user. Recently, the industry came up with the so-called \\textit{craft beers}, that often differ from the commercial beers in production volume (due to lower capacities of the craft beer producers) and tasting profile (often having more intense unusual flavours). However, while it is often relatively easy to judge if a particular commercial beer is likely to be enjoyable, the same cannot be said about craft beers, as there are far too many styles, implementations and ingredients involved in their production. This creates a gap between the beverage producers and the consumers due to the inability of the former to judge the preferences and the consumption trends of the latter. As a response to this challenge we present a novel collaborative beverage-related data collection and analysis framework - the Distributed Beverage Analysis (DBA). The idea behind this study is to identify the common trends and support them by empirical evidence to better understand the needs of the consumers. We empirically verify DBA at the biannual \\textit{Kraft Bier Fest} conducted by Vienna Kraft brewery in (you guessed it) Vienna. To showcase a need in such kind of analysis, we evaluate various large language models (LLMs) against our collaborative framework and confirm that many AI models cannot be reliably used to reason over the trends and patterns in the evolving world of craft beer.",
-      "published": "2026-03-30T15:56:28Z",
-      "updated": "2026-03-30T15:56:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28607v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2603.28605v1",
-      "title": "Unsafe2Safe: Controllable Image Anonymization for Downstream Utility",
-      "authors": [
-        "Mih Dinh",
-        "SouYoung Jin"
-      ],
-      "summary": "Large-scale image datasets frequently contain identifiable or sensitive content, raising privacy risks when training models that may memorize and leak such information. We present Unsafe2Safe, a fully automated pipeline that detects privacy-prone images and rewrites only their sensitive regions using multimodally guided diffusion editing. Unsafe2Safe operates in two stages. Stage 1 uses a vision-language model to (i) inspect images for privacy risks, (ii) generate paired private and public captions that respectively include and omit sensitive attributes, and (iii) prompt a large language model to produce structured, identity-neutral edit instructions conditioned on the public caption. Stage 2 employs instruction-driven diffusion editors to apply these dual textual prompts, producing privacy-safe images that preserve global structure and task-relevant semantics while neutralizing private content. To measure anonymization quality, we introduce a unified evaluation suite covering Quality, Cheating, Privacy, and Utility dimensions. Across MS-COCO, Caltech101, and MIT Indoor67, Unsafe2Safe reduces face similarity, text similarity, and demographic predictability by large margins, while maintaining downstream model accuracy comparable to training on raw data. Fine-tuning diffusion editors on our automatically generated triplets (private caption, public caption, edit instruction) further improves both privacy protection and semantic fidelity. Unsafe2Safe provides a scalable, principled solution for constructing large, privacy-safe datasets without sacrificing visual consistency or downstream utility.",
-      "published": "2026-03-30T15:54:47Z",
-      "updated": "2026-03-30T15:54:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28605v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2512.05658v2",
-      "title": "Multilingual Medical Reasoning for Question Answering with Large Language Models",
-      "authors": [
-        "Pietro Ferrazzi",
-        "Aitor Soroa",
-        "Rodrigo Agerri"
-      ],
-      "summary": "Large Language Models (LLMs) with reasoning capabilities have recently demonstrated strong potential in medical Question Answering (QA). Existing approaches are largely English-focused and primarily rely on distillation from general-purpose LLMs, raising concerns about the reliability of their medical knowledge. In this work, we present a method to generate multilingual reasoning traces based on medical knowledge extracted from Wikipedia. We produce 500k traces in English, Italian, and Spanish, using a retrieval-augmented generation approach over medical information from Wikipedia. The traces are generated to solve medical questions drawn from MedQA and MedMCQA, which we extend to Italian and Spanish. We test our pipeline in both in-domain and out-of-domain settings across Medical QA benchmarks, and demonstrate that our reasoning traces improve performance both when utilized via in-context learning (few-shot) and supervised fine-tuning, yielding state-of-the-art results among 8B-parameter LLMs. We believe that these resources can support the development of more transparent clinical decision-support tools in multilingual settings. We release the full suite of resources: reasoning traces, translated QA datasets, Medical-Wikipedia, and fine-tuned models.",
-      "published": "2025-12-05T12:05:46Z",
-      "updated": "2026-03-30T15:46:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.05658v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2603.28596v1",
-      "title": "Moving Beyond Review: Applying Language Models to Planning and Translation in Reflection",
-      "authors": [
-        "Seyed Parsa Neshaei",
-        "Richard Lee Davis",
-        "Tanja Käser"
-      ],
-      "summary": "Reflective writing is known to support the development of students' metacognitive skills, yet learners often struggle to engage in deep reflection, limiting learning gains. Although large language models (LLMs) have been shown to improve writing skills, their use as conversational agents for reflective writing has produced mixed results and has largely focused on providing feedback on reflective texts, rather than support during planning and organizing. In this paper, inspired by the Cognitive Process Theory of writing (CPT), we propose the first application of LLMs to the planning and translation steps of reflective writing. We introduce Pensée, a tool to explore the effects of explicit AI support during these stages by scaffolding structured reflection planning using a conversational agent, and supporting translation by automatically extracting key concepts. We evaluate Pensée in a controlled between-subjects experiment (N=93), manipulating AI support across writing phases. Results show significantly greater reflection depth and structural quality when learners receive support during planning and translation stages of CPT, though these effects reduce in a delayed post-test. Analyses of learner behavior and perceptions further illustrate how CPT-aligned conversational support shapes reflection processes and learner experience, contributing empirical evidence for theory-driven uses of LLMs in AI-supported reflective writing.",
-      "published": "2026-03-30T15:42:38Z",
-      "updated": "2026-03-30T15:42:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.28596v1"
+      "summary": "Generative AI (GAI) reveals an irreducible human core at the center of data science: advances in GAI should sharpen, rather than diminish, the focus on human reasoning in data science education. GAI can now execute many routine data science workflows, including cleaning, summarizing, visualizing, modeling, and drafting reports. Yet the competencies that matter most remain irreducibly human: problem formulation, measurement and design, causal identification, statistical and computational reasoning, ethics and accountability, and sensemaking. Drawing on Donoho's Greater Data Science framework, Nolan and Temple Lang's vision of computational literacy, and the McLuhan-Culkin insight that we shape our tools and thereafter our tools shape us, this paper traces the emergence of data science through three converging lineages: Tukey's intellectual vision of data analysis as a science, the commercial logic of surveillance capitalism that created industrial demand for data scientists, and the academic programs that followed. Mapping GAI's impact onto Donoho's six divisions of Greater Data Science shows that computing with data (GDS3) has been substantially automated, while data gathering, preparation, and exploration (GDS1) and science about data science (GDS6) still require essential human input. The educational implication is that data science curricula should focus on this human core while teaching students how to contribute effectively within iterative prompt-output-prompt cycles using retrieval-augmented generation, and that learning outcomes and assessments should explicitly evaluate reasoning and judgment.",
+      "published": "2026-04-02T16:31:32Z",
+      "updated": "2026-04-02T16:31:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02238v1"
     }
   ]
 }
