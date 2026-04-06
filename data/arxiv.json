@@ -1,226 +1,195 @@
 {
-  "generated_at_utc": "2026-04-05T02:27:15Z",
+  "generated_at_utc": "2026-04-06T02:28:38Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.29399v2",
-      "title": "ELT-Bench-Verified: Benchmark Quality Issues Underestimate AI Agent Capabilities",
+      "id": "http://arxiv.org/abs/2604.03216v1",
+      "title": "BAS: A Decision-Theoretic Approach to Evaluating Large Language Model Confidence",
       "authors": [
-        "Christopher Zanoli",
-        "Andrea Giovannini",
-        "Tengjun Jin",
-        "Ana Klimovic",
-        "Yotam Perlitz"
+        "Sean Wu",
+        "Fredrik K. Gustafsson",
+        "Edward Phillips",
+        "Boyan Gao",
+        "Anshul Thakur",
+        "David A. Clifton"
       ],
-      "summary": "Constructing Extract-Load-Transform (ELT) pipelines is a labor-intensive data engineering task and a high-impact target for AI automation. On ELT-Bench, the first benchmark for end-to-end ELT pipeline construction, AI agents initially showed low success rates, suggesting they lacked practical utility. We revisit these results and identify two factors causing a substantial underestimation of agent capabilities. First, re-evaluating ELT-Bench with upgraded large language models reveals that the extraction and loading stage is largely solved, while transformation performance improves significantly. Second, we develop an Auditor-Corrector methodology that combines scalable LLM-driven root-cause analysis with rigorous human validation (inter-annotator agreement Fleiss' kappa = 0.85) to audit benchmark quality. Applying this to ELT-Bench uncovers that most failed transformation tasks contain benchmark-attributable errors -- including rigid evaluation scripts, ambiguous specifications, and incorrect ground truth -- that penalize correct agent outputs. Based on these findings, we construct ELT-Bench-Verified, a revised benchmark with refined evaluation logic and corrected ground truth. Re-evaluating on this version yields significant improvement attributable entirely to benchmark correction. Our results show that both rapid model improvement and benchmark quality issues contributed to underestimating agent capabilities. More broadly, our findings echo observations of pervasive annotation errors in text-to-SQL benchmarks, suggesting quality issues are systemic in data engineering evaluation. Systematic quality auditing should be standard practice for complex agentic tasks. We release ELT-Bench-Verified to provide a more reliable foundation for progress in AI-driven data engineering automation.",
-      "published": "2026-03-31T08:02:16Z",
-      "updated": "2026-04-02T17:59:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.29399v2"
+      "summary": "Large language models (LLMs) often produce confident but incorrect answers in settings where abstention would be safer. Standard evaluation protocols, however, require a response and do not account for how confidence should guide decisions under different risk preferences. To address this gap, we introduce the Behavioral Alignment Score (BAS), a decision-theoretic metric for evaluating how well LLM confidence supports abstention-aware decision making. BAS is derived from an explicit answer-or-abstain utility model and aggregates realized utility across a continuum of risk thresholds, yielding a measure of decision-level reliability that depends on both the magnitude and ordering of confidence. We show theoretically that truthful confidence estimates uniquely maximize expected BAS utility, linking calibration to decision-optimal behavior. BAS is related to proper scoring rules such as log loss, but differs structurally: log loss penalizes underconfidence and overconfidence symmetrically, whereas BAS imposes an asymmetric penalty that strongly prioritizes avoiding overconfident errors. Using BAS alongside widely used metrics such as ECE and AURC, we then construct a benchmark of self-reported confidence reliability across multiple LLMs and tasks. Our results reveal substantial variation in decision-useful confidence, and while larger and more accurate models tend to achieve higher BAS, even frontier models remain prone to severe overconfidence. Importantly, models with similar ECE or AURC can exhibit very different BAS due to highly overconfident errors, highlighting limitations of standard metrics. We further show that simple interventions, such as top-$k$ confidence elicitation and post-hoc calibration, can meaningfully improve confidence reliability. Overall, our work provides both a principled metric and a comprehensive benchmark for evaluating LLM confidence reliability.",
+      "published": "2026-04-03T17:44:32Z",
+      "updated": "2026-04-03T17:44:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03216v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02322v1",
-      "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning",
+      "id": "http://arxiv.org/abs/2604.03202v1",
+      "title": "Prosocial Persuasion at Scale? Large Language Models Outperform Humans in Donation Appeals Across Levels of Personalization",
       "authors": [
-        "Bangji Yang",
-        "Hongbo Ma",
-        "Jiajun Fan",
-        "Ge Liu"
+        "John Caffier",
+        "Olga Stavrova",
+        "Bennett Kleinberg"
       ],
-      "summary": "Large Language Models employing Chain-of-Thought reasoning achieve strong performance but suffer from excessive token consumption that inflates inference costs. Existing efficiency methods such as explicit length penalties, difficulty estimators, or multi-stage curricula either degrade reasoning quality or require complex training pipelines. We introduce Batched Contextual Reinforcement, a minimalist, single-stage training paradigm that unlocks efficient reasoning through a simple structural modification: training the model to solve N problems simultaneously within a shared context window, rewarded purely by per-instance accuracy. This formulation creates an implicit token budget that yields several key findings: (1) We identify a novel task-scaling law: as the number of concurrent problems N increases during inference, per-problem token usage decreases monotonically while accuracy degrades far more gracefully than baselines, establishing N as a controllable throughput dimension. (2) BCR challenges the traditional accuracy-efficiency trade-off by demonstrating a \"free lunch\" phenomenon at standard single-problem inference. Across both 1.5B and 4B model families, BCR reduces token usage by 15.8% to 62.6% while consistently maintaining or improving accuracy across five major mathematical benchmarks. (3) Qualitative analyses reveal emergent self-regulated efficiency, where models autonomously eliminate redundant metacognitive loops without explicit length supervision. (4) Crucially, we empirically demonstrate that implicit budget constraints successfully circumvent the adversarial gradients and catastrophic optimization collapse inherent to explicit length penalties, offering a highly stable, constraint-based alternative for length control. These results prove BCR practical, showing simple structural incentives unlock latent high-density reasoning in LLMs.",
-      "published": "2026-04-02T17:58:50Z",
-      "updated": "2026-04-02T17:58:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02322v1"
+      "summary": "Large Language Models (LLMs) are increasingly regarded as having the potential to generate persuasive content at scale. While previous studies have focused on the risks associated with LLM-generated misinformation, the role of LLMs in enabling prosocial persuasion is still underexplored. We investigate whether donation appeals authored by LLMs are as effective as those written by humans across degrees of personalization. Two preregistered online experiments (Study 1: N = 658; Study 2: N = 642) manipulated Personalization (generic vs. personalized vs. falsely personalized) and Content source (human vs. LLM) and presented participants with donation appeals for charities. We assessed how participants distributed their bonus money across the charities, how they engaged with the donation appeals, and how persuasive they found them. In both experiments, LLM-generated content yielded more donations, resulted in higher engagement, and was rated as more persuasive than human-authored content. There was a gain associated with personalization (Study 2) and a penalty for false personalization (Study 1). Our results suggest that LLMs may be a suitable technology for generating content that can encourage prosocial behavior.",
+      "published": "2026-04-03T17:25:07Z",
+      "updated": "2026-04-03T17:25:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03202v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02320v1",
-      "title": "Large-scale Codec Avatars: The Unreasonable Effectiveness of Large-scale Avatar Pretraining",
+      "id": "http://arxiv.org/abs/2604.03179v1",
+      "title": "Understanding the Role of Hallucination in Reinforcement Post-Training of Multimodal Reasoning Models",
       "authors": [
-        "Junxuan Li",
-        "Rawal Khirodkar",
-        "Chengan He",
-        "Zhongshi Jiang",
-        "Giljoo Nam",
-        "Lingchen Yang",
-        "Jihyun Lee",
-        "Egor Zakharov",
-        "Zhaoen Su",
-        "Rinat Abdrashitov",
-        "Yuan Dong",
-        "Julieta Martinez",
-        "Kai Li",
-        "Qingyang Tan",
-        "Takaaki Shiratori",
-        "Matthew Hu",
-        "Peihong Guo",
-        "Xuhua Huang",
-        "Ariyan Zarei",
-        "Marco Pesavento",
-        "Yichen Xu",
-        "He Wen",
-        "Teng Deng",
-        "Wyatt Borsos",
-        "Anjali Thakrar",
-        "Jean-Charles Bazin",
-        "Carsten Stoll",
-        "Ginés Hidalgo",
-        "James Booth",
-        "Lucy Wang",
-        "Xiaowen Ma",
-        "Yu Rong",
-        "Sairanjith Thalanki",
-        "Chen Cao",
-        "Christian Häne",
-        "Abhishek Kar",
-        "Sofien Bouaziz",
-        "Jason Saragih",
-        "Yaser Sheikh",
-        "Shunsuke Saito"
+        "Gengwei Zhang",
+        "Jie Peng",
+        "Zhen Tan",
+        "Mufan Qiu",
+        "Hossein Nourkhiz Mahjoub",
+        "Vaishnav Tadiparthi",
+        "Kwonjoon Lee",
+        "Yanyong Zhang",
+        "Tianlong Chen"
       ],
-      "summary": "High-quality 3D avatar modeling faces a critical trade-off between fidelity and generalization. On the one hand, multi-view studio data enables high-fidelity modeling of humans with precise control over expressions and poses, but it struggles to generalize to real-world data due to limited scale and the domain gap between the studio environment and the real world. On the other hand, recent large-scale avatar models trained on millions of in-the-wild samples show promise for generalization across a wide range of identities, yet the resulting avatars are often of low-quality due to inherent 3D ambiguities. To address this, we present Large-Scale Codec Avatars (LCA), a high-fidelity, full-body 3D avatar model that generalizes to world-scale populations in a feedforward manner, enabling efficient inference. Inspired by the success of large language models and vision foundation models, we present, for the first time, a pre/post-training paradigm for 3D avatar modeling at scale: we pretrain on 1M in-the-wild videos to learn broad priors over appearance and geometry, then post-train on high-quality curated data to enhance expressivity and fidelity. LCA generalizes across hair styles, clothing, and demographics while providing precise, fine-grained facial expressions and finger-level articulation control, with strong identity preservation. Notably, we observe emergent generalization to relightability and loose garment support to unconstrained inputs, and zero-shot robustness to stylized imagery, despite the absence of direct supervision.",
-      "published": "2026-04-02T17:58:40Z",
-      "updated": "2026-04-02T17:58:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02320v1"
+      "summary": "The recent success of reinforcement learning (RL) in large reasoning models has inspired the growing adoption of RL for post-training Multimodal Large Language Models (MLLMs) to enhance their visual reasoning capabilities. Although many studies have reported improved performance, it remains unclear whether RL training truly enables models to learn from visual information. In this work, we propose the Hallucination-as-Cue Framework, an analytical framework designed to investigate the effects of RL-based post-training on multimodal reasoning models from the perspective of model hallucination. Specifically, we introduce hallucination-inductive, modality-specific corruptions that remove or replace essential information required to derive correct answers, thereby forcing the model to reason by hallucination. By applying these corruptions during both training and evaluation, our framework provides a unique perspective for diagnosing RL training dynamics and understanding the intrinsic properties of datasets. Through extensive experiments and analyses across multiple multimodal reasoning benchmarks, we reveal that the role of model hallucination for RL-training is more significant than previously recognized. For instance, we find that RL post-training under purely hallucination-inductive settings can still significantly improve models' reasoning performance, and in some cases even outperform standard training. These findings challenge prevailing assumptions about MLLM reasoning training and motivate the development of more modality-aware RL-based training designs.",
+      "published": "2026-04-03T16:56:34Z",
+      "updated": "2026-04-03T16:56:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03179v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.00039v2",
-      "title": "AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents",
+      "id": "http://arxiv.org/abs/2604.03174v1",
+      "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
       "authors": [
-        "Hossein Sholehrasa",
-        "Amirhossein Ghanaatian",
-        "Doina Caragea",
-        "Lisa A. Tell",
-        "Jim E. Riviere",
-        "Majid Jaberi-Douraki"
+        "Prakhar Bansal",
+        "Shivangi Agarwal"
       ],
-      "summary": "Pharmacokinetics (PK) plays a critical role in drug development and regulatory decision-making for human and veterinary medicine, directly affecting public health through drug safety and efficacy assessments. However, PK data are often embedded in complex, heterogeneous tables with variable structures and inconsistent terminologies, posing significant challenges for automated PK data retrieval and standardization. AutoPK, a novel two-stage framework for accurate and scalable extraction of PK data from complex scientific tables. In the first stage, AutoPK identifies and extracts PK parameter variants using large language models (LLMs), a hybrid similarity metric, and LLM-based validation. The second stage filters relevant rows, converts the table into a key-value text format, and uses an LLM to reconstruct a standardized table. Evaluated on a real-world dataset of 605 PK tables, including captions and footnotes, AutoPK shows significant improvements in precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA 3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and 0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled open-source models like Gemma 3-27B to outperform commercial systems such as GPT-4o Mini on several PK parameters. AutoPK enables scalable and high-confidence PK data extraction, making it well-suited for critical applications in veterinary pharmacology, drug safety monitoring, and public health decision-making, while addressing heterogeneous table structures and terminology and demonstrating generalizability across key PK parameters. Code and data: https://github.com/hosseinsholehrasa/AutoPK",
-      "published": "2025-09-26T22:05:32Z",
-      "updated": "2026-04-02T17:48:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.00039v2"
+      "summary": "Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning. This survey provides a unified account of augmentation strategies along a single axis: the degree of structured context supplied at inference time. We cover in-context learning and prompt engineering, Retrieval-Augmented Generation (RAG), GraphRAG, and CausalRAG. Beyond conceptual comparison, we provide a transparent literature-screening protocol, a claim-audit framework, and a structured cross-paper evidence synthesis that distinguishes higher-confidence findings from emerging results. The paper concludes with a deployment-oriented decision framework and concrete research priorities for trustworthy retrieval-augmented NLP.",
+      "published": "2026-04-03T16:49:09Z",
+      "updated": "2026-04-03T16:49:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03174v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.25638v2",
-      "title": "Beyond Via: Analysis and Estimation of the Impact of Large Language Models in Academic Papers",
+      "id": "http://arxiv.org/abs/2604.03173v1",
+      "title": "Detecting and Correcting Reference Hallucinations in Commercial LLMs and Deep Research Agents",
       "authors": [
-        "Mingmeng Geng",
-        "Yuhang Dong",
-        "Thierry Poibeau"
+        "Delip Rao",
+        "Eric Wong",
+        "Chris Callison-Burch"
       ],
-      "summary": "Through an analysis of arXiv papers, we report several shifts in word usage that are likely driven by large language models (LLMs) but have not previously received sufficient attention, such as the increased frequency of \"beyond\" and \"via\" in titles and the decreased frequency of \"the\" and \"of\" in abstracts. Due to the similarities among different LLMs, experiments show that current classifiers struggle to accurately determine which specific model generated a given text in multi-class classification tasks. Meanwhile, variations across LLMs also result in evolving patterns of word usage in academic papers. By adopting a direct and highly interpretable linear approach and accounting for differences between models and prompts, we quantitatively assess these effects and show that real-world LLM usage is heterogeneous and dynamic.",
-      "published": "2026-03-26T16:49:00Z",
-      "updated": "2026-04-02T17:45:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.25638v2"
+      "summary": "Large language models and deep research agents supply citation URLs to support their claims, yet the reliability of these citations has not been systematically measured. We address six research questions about citation URL validity using 10 models and agents on DRBench (53,090 URLs) and 3 models on ExpertQA (168,021 URLs across 32 academic fields). We find that 3--13\\% of citation URLs are hallucinated -- they have no record in the Wayback Machine and likely never existed -- while 5--18\\% are non-resolving overall. Deep research agents generate substantially more citations per query than search-augmented LLMs but hallucinate URLs at higher rates. Domain effects are pronounced: non-resolving rates range from 5.4\\% (Business) to 11.4\\% (Theology), with per-model effects even larger. Decomposing failures reveals that some models fabricate every non-resolving URL, while others show substantial link-rot fractions indicating genuine retrieval. As a solution, we release urlhealth, an open-source tool for URL liveness checking and stale-vs-hallucinated classification using the Wayback Machine. In agentic self-correction experiments, models equipped with urlhealth reduce non-resolving citation URLs by $6\\textrm{--}79\\times$ to under 1\\%, though effectiveness depends on the model's tool-use competence. The tool and all data are publicly available. Our characterization findings, failure taxonomy, and open-source tooling establish that citation URL validity is both measurable at scale and correctable in practice.",
+      "published": "2026-04-03T16:49:02Z",
+      "updated": "2026-04-03T16:49:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03173v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02289v1",
-      "title": "Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation",
+      "id": "http://arxiv.org/abs/2603.24591v2",
+      "title": "Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini",
       "authors": [
-        "Chongjie Ye",
-        "Cheng Cao",
-        "Chuanyu Pan",
-        "Yiming Hao",
-        "Yihao Zhi",
-        "Yuanming Hu",
-        "Xiaoguang Han"
+        "Ruofei Du",
+        "Benjamin Hersh",
+        "David Li",
+        "Nels Numan",
+        "Xun Qian",
+        "Yanhe Chen",
+        "Zhongyi Zhou",
+        "Xingyue Chen",
+        "Jiahao Ren",
+        "Robert Timothy Bettridge",
+        "Xiang 'Anthony' Chen",
+        "Faraz Faruqi",
+        "Steve Toh",
+        "David Kim"
       ],
-      "summary": "Recent multimodal large language models have achieved strong performance in unified text and image understanding and generation, yet extending such native capability to 3D remains challenging due to limited data. Compared to abundant 2D imagery, high-quality 3D assets are scarce, making 3D synthesis under-constrained. Existing methods often rely on indirect pipelines that edit in 2D and lift results into 3D via optimization, sacrificing geometric consistency. We present Omni123, a 3D-native foundation model that unifies text-to-2D and text-to-3D generation within a single autoregressive framework. Our key insight is that cross-modal consistency between images and 3D can serve as an implicit structural constraint. By representing text, images, and 3D as discrete tokens in a shared sequence space, the model leverages abundant 2D data as a geometric prior to improve 3D representations. We introduce an interleaved X-to-X training paradigm that coordinates diverse cross-modal tasks over heterogeneous paired datasets without requiring fully aligned text-image-3D triplets. By traversing semantic-visual-geometric cycles (e.g., text to image to 3D to image) within autoregressive sequences, the model jointly enforces semantic alignment, appearance fidelity, and multi-view geometric consistency. Experiments show that Omni123 significantly improves text-guided 3D generation and editing, demonstrating a scalable path toward multimodal 3D world models.",
-      "published": "2026-04-02T17:29:38Z",
-      "updated": "2026-04-02T17:29:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02289v1"
+      "summary": "While large language models (LLMs) have accelerated 2D software development through intent-driven \"vibe coding\", prototyping intelligent Extended Reality (XR) experiences remains a major challenge. The fundamental barrier is not just the steep learning curve for human creators, but that low-level sensor APIs and complex game engine hierarchies are ill-suited for LLM reasoning, routinely exceeding context windows and inducing syntax hallucinations. To bridge this gap, we contribute XR Blocks, an open-source, LLM-native WebXR framework. Unlike traditional engines, XR Blocks introduces a semantic \"Reality Model\" that aligns spatial computing primitives (users, physical environments, and agents) with natural language, providing a robust, concise vocabulary optimized for generative AI. Building upon this foundation, we present Vibe Coding XR, an end-to-end prototyping workflow that leverages LLMs to translate high-level prompts (e.g., \"create a dandelion that reacts to my hand\") directly into functional, physics-aware mixed-reality applications. To minimize the friction of on-device testing, the workflow introduces a seamless desktop \"simulated reality\" to headset deployment loop. Finally, we introduce VCXR60, a pilot dataset of 60 XR prompts paired with an automated evaluation pipeline. Our technical evaluation demonstrates high one-shot execution success, enabling practitioners to bypass lowlevel hurdles and rapidly move from \"idea to reality\". Code and live demos are available at https://github.com/google/xrblocks and http://xrblocks.github.io/gem.",
+      "published": "2026-03-25T17:58:56Z",
+      "updated": "2026-04-03T16:34:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.24591v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02288v1",
-      "title": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing",
+      "id": "http://arxiv.org/abs/2604.03159v1",
+      "title": "BibTeX Citation Hallucinations in Scientific Publishing Agents: Evaluation and Mitigation",
       "authors": [
-        "Gengsheng Li",
-        "Tianyu Yang",
-        "Junfeng Fang",
-        "Mingyang Song",
-        "Mao Zheng",
-        "Haiyun Guo",
-        "Dan Zhang",
-        "Jinqiao Wang",
-        "Tat-Seng Chua"
+        "Delip Rao",
+        "Chris Callison-Burch"
       ],
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) has become a standard paradigm for post-training large language models. While Group Relative Policy Optimization (GRPO) is widely adopted, its coarse credit assignment uniformly penalizes failed rollouts, lacking the token-level focus needed to efficiently address specific deviations. Self-Distillation Policy Optimization (SDPO) addresses this by providing denser, more targeted logit-level supervision that facilitates rapid early improvement, yet it frequently collapses during prolonged training. We trace this late-stage instability to two intrinsic flaws: self-distillation on already-correct samples introduces optimization ambiguity, and the self-teacher's signal reliability progressively degrades. To resolve these issues, we propose Sample-Routed Policy Optimization (SRPO), a unified on-policy framework that routes correct samples to GRPO's reward-aligned reinforcement and failed samples to SDPO's targeted logit-level correction. SRPO further incorporates an entropy-aware dynamic weighting mechanism to suppress high-entropy, unreliable distillation targets while emphasizing confident ones. Evaluated across five benchmarks and two model scales, SRPO achieves both the rapid early improvement of SDPO and the long-horizon stability of GRPO. It consistently surpasses the peak performance of both baselines, raising the five-benchmark average on Qwen3-8B by 3.4% over GRPO and 6.3% over SDPO, while simultaneously yielding moderate response lengths and lowering per-step compute cost by up to 17.2%.",
-      "published": "2026-04-02T17:29:18Z",
-      "updated": "2026-04-02T17:29:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02288v1"
+      "summary": "Large language models with web search are increasingly used in scientific publishing agents, yet they still produce BibTeX entries with pervasive field-level errors. Prior evaluations tested base models without search, which does not reflect current practice. We construct a benchmark of 931 papers across four scientific domains and three citation tiers -- popular, low-citation, and recent post-cutoff -- designed to disentangle parametric memory from search dependence, with version-aware ground truth accounting for multiple citable versions of the same paper. Three search-enabled frontier models (GPT-5, Claude Sonnet-4.6, Gemini-3 Flash) generate BibTeX entries scored on nine fields and a six-way error taxonomy, producing ~23,000 field-level observations. Overall accuracy is 83.6%, but only 50.9% of entries are fully correct; accuracy drops 27.7pp from popular to recent papers, revealing heavy reliance on parametric memory even when search is available. Field-error co-occurrence analysis identifies two failure modes: wholesale entry substitution (identity fields fail together) and isolated field error. We evaluate clibib, an open-source tool for deterministic BibTeX retrieval from the Zotero Translation Server with CrossRef fallback, as a mitigation mechanism. In a two-stage integration where baseline entries are revised against authoritative records, accuracy rises +8.0pp to 91.5%, fully correct entries rise from 50.9% to 78.3%, and regression rate is only 0.8%. An ablation comparing single-stage and two-stage integration shows that separating search from revision yields larger gains and lower regression (0.8% vs. 4.8%), demonstrating that integration architecture matters independently of model capability. We release the benchmark, error taxonomy, and clibib tool to support evaluation and mitigation of citation hallucinations in LLM-based scientific writing.",
+      "published": "2026-04-03T16:30:58Z",
+      "updated": "2026-04-03T16:30:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03159v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.10913v2",
-      "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+      "id": "http://arxiv.org/abs/2411.10656v2",
+      "title": "Precision or Peril: A PoC of Python Code Quality from Quantized Large Language Models",
       "authors": [
-        "Parishad BehnamGhader",
-        "Vaibhav Adlakha",
-        "Fabian David Schmidt",
-        "Nicolas Chapados",
-        "Marius Mosbach",
-        "Siva Reddy"
+        "Eric L. Melin",
+        "Adam J. Torek",
+        "Nasir U. Eisty",
+        "Casey Kennington"
       ],
-      "summary": "Fine-tuning LLM-based text embedders via contrastive learning maps inputs and outputs into a new representational space, discarding the LLM's output semantics. We propose LLM2Vec-Gen, a self-supervised alternative that instead produces embeddings directly in the LLM's output space by learning to represent the model's potential response. Specifically, trainable special tokens are appended to the input and optimized to compress the LLM's own response into a fixed-length embedding, guided by an unsupervised embedding teacher and a reconstruction objective. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 8.8% over the unsupervised embedding teacher. Since the embeddings preserve the LLM's response-space semantics, they inherit capabilities such as safety alignment (up to 22.6% reduction in harmful content retrieval) and reasoning (up to 35.6% improvement on reasoning-intensive retrieval). Finally, the learned embeddings are also interpretable: they can be decoded back into text to reveal their semantic content.",
-      "published": "2026-03-11T15:58:47Z",
-      "updated": "2026-04-02T17:09:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.10913v2"
+      "summary": "Context: Large Language Models (LLMs) like GPT-5 and LLaMA-405b exhibit advanced code generation abilities, but their deployment demands substantial computation resources and energy. Quantization can reduce memory footprint and hardware requirements, yet may degrade code quality. Objective: This study investigates code generation performance of smaller LLMs, examines the effect of quantization, and identifies common code quality issues as a proof of concepts (PoC). Method: Four open-source LLMs are evaluated on Python benchmarks using code similarity metrics, with an analysis on 8-bit and 4-bit quantization, alongside static code quality assessment. Results: While smaller LLMs can generate functional code, benchmark performance is limited. Quantization impacts are variable, and generated code exhibits quality and maintainability concerns. Conclusions: LLM-generated code should be carefully validated before integration into software projects.",
+      "published": "2024-11-16T01:31:29Z",
+      "updated": "2026-04-03T16:24:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2411.10656v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.16880v2",
-      "title": "NeuroNarrator: A Generalist EEG-to-Text Foundation Model for Clinical Interpretation via Spectro-Spatial Grounding and Temporal State-Space Reasoning",
+      "id": "http://arxiv.org/abs/2603.18545v2",
+      "title": "CoDA: Exploring Chain-of-Distribution Attacks and Post-Hoc Token-Space Repair for Medical Vision-Language Models",
       "authors": [
-        "Guoan Wang",
-        "Shihao Yang",
-        "Jun-en Ding",
-        "Hao Zhu",
-        "Feng Liu"
+        "Xiang Chen",
+        "Fangfang Yang",
+        "Chunlei Meng",
+        "Yuxian Dong",
+        "Ang Li",
+        "Yiwei Wei",
+        "Jiahuan Long",
+        "Jiujiang Guo",
+        "Chengyin Hu"
       ],
-      "summary": "Electroencephalography (EEG) provides a non-invasive window into neural dynamics at high temporal resolution and plays a pivotal role in clinical neuroscience research. Despite this potential, prevailing computational approaches to EEG analysis remain largely confined to task-specific classification objectives or coarse-grained pattern recognition, offering limited support for clinically meaningful interpretation. To address these limitations, we introduce NeuroNarrator, the first generalist EEG-to-text foundation model designed to translate electrophysiological segments into precise clinical narratives. A cornerstone of this framework is the curation of NeuroCorpus-160K, the first harmonized large-scale resource pairing over 160,000 EEG segments with structured, clinically grounded natural-language descriptions. Our architecture first aligns temporal EEG waveforms with spatial topographic maps via a rigorous contrastive objective, establishing spectro-spatially grounded representations. Building on this grounding, we condition a Large Language Model through a state-space-inspired formulation that integrates historical temporal and spectral context to support coherent clinical narrative generation. This approach establishes a principled bridge between continuous signal dynamics and discrete clinical language, enabling interpretable narrative generation that facilitates expert interpretation and supports clinical reporting workflows. Extensive evaluations across diverse benchmarks and zero-shot transfer tasks highlight NeuroNarrator's capacity to integrate temporal, spectral, and spatial dynamics, positioning it as a foundational framework for time-frequency-aware, open-ended clinical interpretation of electrophysiological data.",
-      "published": "2026-02-24T21:10:42Z",
-      "updated": "2026-04-02T17:07:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.16880v2"
+      "summary": "Medical vision--language models (MVLMs) are increasingly used as perceptual backbones in radiology pipelines and as the visual front end of multimodal assistants, yet their reliability under real clinical workflows remains underexplored. Prior robustness evaluations often assume clean, curated inputs or study isolated corruptions, overlooking routine acquisition, reconstruction, display, and delivery operations that preserve clinical readability while shifting image statistics. To address this gap, we propose CoDA, a chain-of-distribution framework that constructs clinically plausible pipeline shifts by composing acquisition-like shading, reconstruction and display remapping, and delivery and export degradations. Under masked structural-similarity constraints, CoDA jointly optimizes stage compositions and parameters to induce failures while preserving visual plausibility. Across brain MRI, chest X-ray, and abdominal CT, CoDA substantially degrades the zero-shot performance of CLIP-style MVLMs, with chained compositions consistently more damaging than any single stage. We also evaluate multimodal large language models (MLLMs) as technical-authenticity auditors of imaging realism and quality rather than pathology. Proprietary multimodal models show degraded auditing reliability and persistent high-confidence errors on CoDA-shifted samples, while the medical-specific MLLMs we test exhibit clear deficiencies in medical image quality auditing. Finally, we introduce a post-hoc repair strategy based on teacher-guided token-space adaptation with patch-level alignment, which improves accuracy on archived CoDA outputs. Overall, our findings characterize a clinically grounded threat surface for MVLM deployment and show that lightweight alignment improves robustness in deployment.",
+      "published": "2026-03-19T07:00:44Z",
+      "updated": "2026-04-03T16:16:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.18545v2"
     },
     {
-      "id": "http://arxiv.org/abs/2507.05660v2",
-      "title": "Optimus: A Robust Defense Framework for Mitigating Toxicity while Fine-Tuning Conversational AI",
+      "id": "http://arxiv.org/abs/2604.03147v1",
+      "title": "Valence-Arousal Subspace in LLMs: Circular Emotion Geometry and Multi-Behavioral Control",
       "authors": [
-        "Aravind Cheruvu",
-        "Shravya Kanchi",
-        "Sifat Muhammad Abdullah",
-        "Nicholas Kong",
-        "Daphne Yao",
-        "Murtuza Jadliwala",
-        "Bimal Viswanath"
+        "Lihao Sun",
+        "Lewen Yan",
+        "Xiaoya Lu",
+        "Andrew Lee",
+        "Jie Zhang",
+        "Jing Shao"
       ],
-      "summary": "Customizing Large Language Models (LLMs) on untrusted datasets poses severe risks of injecting toxic behaviors. In this work, we introduce Optimus, a novel defense framework designed to mitigate fine-tuning harms while preserving conversational utility. Unlike existing defenses that rely heavily on precise toxicity detection or restrictive filtering, Optimus addresses the critical challenge of ensuring robust mitigation even when toxicity classifiers are imperfect or biased. Optimus integrates a training-free toxicity classification scheme that repurposes the safety alignment of commodity LLMs, and employs a dual-strategy alignment process combining synthetic \"healing data\" with Direct Preference Optimization (DPO) to efficiently steer models toward safety. Extensive evaluations demonstrate that Optimus mitigates toxicity even when relying on extremely biased classifiers (with up to 85% degradation in Recall). Optimus outperforms the state-of-the-art defense StarDSS and exhibits strong resilience against adaptive adversarial and jailbreak attacks. Our source code and datasets are available at https://github.com/secml-lab-vt/Optimus",
-      "published": "2025-07-08T04:40:09Z",
-      "updated": "2026-04-02T16:59:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.05660v2"
+      "summary": "We present a method to identify a valence-arousal (VA) subspace within large language model representations. From 211k emotion-labeled texts, we derive emotion steering vectors, then learn VA axes as linear combinations of their top PCA components via ridge regression on the model's self-reported valence-arousal scores. The resulting VA subspace exhibits circular geometry consistent with established models of human emotion perception. Projections along our recovered VA subspace correlate with human-crowdsourced VA ratings across 44k lexical items. Furthermore, steering generation along these axes produces monotonic shifts in the corresponding affective dimensions of model outputs. Steering along these directions also induces near-monotonic bidirectional control over refusal and sycophancy: increasing arousal decreases refusal and increases sycophancy, and vice versa. These effects replicate across Llama-3.1-8B, Qwen3-8B, and Qwen3-14B, demonstrating cross-architecture generality. We provide a mechanistic account for these effects and prior emotionally-framed controls: refusal-associated tokens (\"I can't,\" \"sorry\") occupy low-arousal, negative-valence regions, so VA steering directly modulates their emission probability.",
+      "published": "2026-04-03T16:08:05Z",
+      "updated": "2026-04-03T16:08:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03147v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.22340v2",
-      "title": "Conversational Successes and Breakdowns in Everyday Smart Glasses Use",
+      "id": "http://arxiv.org/abs/2603.25852v2",
+      "title": "Building to Understand: Examining Teens' Technical and Socio-Ethical Pieces of Understandings in the Construction of Small Generative Language Models",
       "authors": [
-        "Xiuqi Tommy Zhu",
-        "Xiaoan Liu",
-        "Casper Harteveld",
-        "Smit Desai",
-        "Eileen McGivney"
+        "Luis Morales-Navarro",
+        "Daniel J. Noh",
+        "Lucianne Servat",
+        "Carly Netting",
+        "Yasmin B. Kafai",
+        "Danaé Metaxa"
       ],
-      "summary": "Non-Display Smart Glasses hold the potential to support everyday activities by combining continuous environmental sensing with voice-only interaction powered by large language models (LLMs). Understanding how conversational successes and breakdowns arise in everyday contexts can better inform the design of future voice-only interfaces. To investigate this, we conducted a month-long collaborative autoethnography (n=2) to identify patterns of successes and breakdowns when using such devices. We then compare these patterns with prior findings on voice-only interactions to highlight the unique affordances and opportunities offered by non-display smart glasses.",
-      "published": "2026-02-25T19:05:27Z",
-      "updated": "2026-04-02T16:33:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.22340v2"
+      "summary": "The rising adoption of generative AI/ML technologies increases the need to support teens in developing AI/ML literacies. Child-computer interaction research argues that construction activities can support young people in understanding these systems and their implications. Recent exploratory studies demonstrate the feasibility of engaging teens in the construction of very small generative language models (LMs). However, it is unclear how constructing such models may foster the development of teens' understanding of these systems from technical and socio-ethical perspectives. We conducted a week-long participatory design workshop in which sixteen teenagers constructed very small LMs to generate recipes, screenplays, and songs. Using thematic analysis, we identified technical and socio-ethical pieces of understandings that teens exhibited while designing generative LMs. This paper contributes (a) evidence of the kinds of pieces of understandings that teens have when constructing LMs and (b) a theory-backed framing to study novices' understandings of AI/ML systems.",
+      "published": "2026-03-26T19:20:39Z",
+      "updated": "2026-04-03T16:06:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25852v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02238v1",
-      "title": "Generative AI Spotlights the Human Core of Data Science: Implications for Education",
+      "id": "http://arxiv.org/abs/2604.03141v1",
+      "title": "Beyond Precision: Importance-Aware Recall for Factuality Evaluation in Long-Form LLM Generation",
       "authors": [
-        "Nathan Taback"
+        "Nazanin Jafari",
+        "James Allan",
+        "Mohit Iyyer"
       ],
-      "summary": "Generative AI (GAI) reveals an irreducible human core at the center of data science: advances in GAI should sharpen, rather than diminish, the focus on human reasoning in data science education. GAI can now execute many routine data science workflows, including cleaning, summarizing, visualizing, modeling, and drafting reports. Yet the competencies that matter most remain irreducibly human: problem formulation, measurement and design, causal identification, statistical and computational reasoning, ethics and accountability, and sensemaking. Drawing on Donoho's Greater Data Science framework, Nolan and Temple Lang's vision of computational literacy, and the McLuhan-Culkin insight that we shape our tools and thereafter our tools shape us, this paper traces the emergence of data science through three converging lineages: Tukey's intellectual vision of data analysis as a science, the commercial logic of surveillance capitalism that created industrial demand for data scientists, and the academic programs that followed. Mapping GAI's impact onto Donoho's six divisions of Greater Data Science shows that computing with data (GDS3) has been substantially automated, while data gathering, preparation, and exploration (GDS1) and science about data science (GDS6) still require essential human input. The educational implication is that data science curricula should focus on this human core while teaching students how to contribute effectively within iterative prompt-output-prompt cycles using retrieval-augmented generation, and that learning outcomes and assessments should explicitly evaluate reasoning and judgment.",
-      "published": "2026-04-02T16:31:32Z",
-      "updated": "2026-04-02T16:31:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02238v1"
+      "summary": "Evaluating the factuality of long-form output generated by large language models (LLMs) remains challenging, particularly when responses are open-ended and contain many fine-grained factual statements. Existing evaluation methods primarily focus on precision: they decompose a response into atomic claims and verify each claim against external knowledge sources such as Wikipedia. However, this overlooks an equally important dimension of factuality: recall, whether the generated response covers the relevant facts that should be included. We propose a comprehensive factuality evaluation framework that jointly measures precision and recall. Our method leverages external knowledge sources to construct reference facts and determine whether they are captured in generated text. We further introduce an importance-aware weighting scheme based on relevance and salience. Our analysis reveals that current LLMs perform substantially better on precision than on recall, suggesting that factual incompleteness remains a major limitation of long-form generation and that models are generally better at covering highly important facts than the full set of relevant facts.",
+      "published": "2026-04-03T16:03:56Z",
+      "updated": "2026-04-03T16:03:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.03141v1"
     }
   ]
 }
