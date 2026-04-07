@@ -1,195 +1,197 @@
 {
-  "generated_at_utc": "2026-04-06T02:28:38Z",
+  "generated_at_utc": "2026-04-07T02:23:40Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.03216v1",
-      "title": "BAS: A Decision-Theoretic Approach to Evaluating Large Language Model Confidence",
+      "id": "http://arxiv.org/abs/2604.04932v1",
+      "title": "Beyond the Final Actor: Modeling the Dual Roles of Creator and Editor for Fine-Grained LLM-Generated Text Detection",
       "authors": [
-        "Sean Wu",
-        "Fredrik K. Gustafsson",
-        "Edward Phillips",
-        "Boyan Gao",
-        "Anshul Thakur",
-        "David A. Clifton"
+        "Yang Li",
+        "Qiang Sheng",
+        "Zhengjia Wang",
+        "Yehan Yang",
+        "Danding Wang",
+        "Juan Cao"
       ],
-      "summary": "Large language models (LLMs) often produce confident but incorrect answers in settings where abstention would be safer. Standard evaluation protocols, however, require a response and do not account for how confidence should guide decisions under different risk preferences. To address this gap, we introduce the Behavioral Alignment Score (BAS), a decision-theoretic metric for evaluating how well LLM confidence supports abstention-aware decision making. BAS is derived from an explicit answer-or-abstain utility model and aggregates realized utility across a continuum of risk thresholds, yielding a measure of decision-level reliability that depends on both the magnitude and ordering of confidence. We show theoretically that truthful confidence estimates uniquely maximize expected BAS utility, linking calibration to decision-optimal behavior. BAS is related to proper scoring rules such as log loss, but differs structurally: log loss penalizes underconfidence and overconfidence symmetrically, whereas BAS imposes an asymmetric penalty that strongly prioritizes avoiding overconfident errors. Using BAS alongside widely used metrics such as ECE and AURC, we then construct a benchmark of self-reported confidence reliability across multiple LLMs and tasks. Our results reveal substantial variation in decision-useful confidence, and while larger and more accurate models tend to achieve higher BAS, even frontier models remain prone to severe overconfidence. Importantly, models with similar ECE or AURC can exhibit very different BAS due to highly overconfident errors, highlighting limitations of standard metrics. We further show that simple interventions, such as top-$k$ confidence elicitation and post-hoc calibration, can meaningfully improve confidence reliability. Overall, our work provides both a principled metric and a comprehensive benchmark for evaluating LLM confidence reliability.",
-      "published": "2026-04-03T17:44:32Z",
-      "updated": "2026-04-03T17:44:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03216v1"
+      "summary": "The misuse of large language models (LLMs) requires precise detection of synthetic text. Existing works mainly follow binary or ternary classification settings, which can only distinguish pure human/LLM text or collaborative text at best. This remains insufficient for the nuanced regulation, as the LLM-polished human text and humanized LLM text often trigger different policy consequences. In this paper, we explore fine-grained LLM-generated text detection under a rigorous four-class setting. To handle such complexities, we propose RACE (Rhetorical Analysis for Creator-Editor Modeling), a fine-grained detection method that characterizes the distinct signatures of creator and editor. Specifically, RACE utilizes Rhetorical Structure Theory to construct a logic graph for the creator's foundation while extracting Elementary Discourse Unit-level features for the editor's style. Experiments show that RACE outperforms 12 baselines in identifying fine-grained types with low false alarms, offering a policy-aligned solution for LLM regulation.",
+      "published": "2026-04-06T17:59:55Z",
+      "updated": "2026-04-06T17:59:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04932v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03202v1",
-      "title": "Prosocial Persuasion at Scale? Large Language Models Outperform Humans in Donation Appeals Across Levels of Personalization",
+      "id": "http://arxiv.org/abs/2604.04929v1",
+      "title": "Rethinking Model Efficiency: Multi-Agent Inference with Large Models",
       "authors": [
-        "John Caffier",
-        "Olga Stavrova",
-        "Bennett Kleinberg"
+        "Sixun Dong",
+        "Juhua Hu",
+        "Steven Li",
+        "Wei Wen",
+        "Qi Qian"
       ],
-      "summary": "Large Language Models (LLMs) are increasingly regarded as having the potential to generate persuasive content at scale. While previous studies have focused on the risks associated with LLM-generated misinformation, the role of LLMs in enabling prosocial persuasion is still underexplored. We investigate whether donation appeals authored by LLMs are as effective as those written by humans across degrees of personalization. Two preregistered online experiments (Study 1: N = 658; Study 2: N = 642) manipulated Personalization (generic vs. personalized vs. falsely personalized) and Content source (human vs. LLM) and presented participants with donation appeals for charities. We assessed how participants distributed their bonus money across the charities, how they engaged with the donation appeals, and how persuasive they found them. In both experiments, LLM-generated content yielded more donations, resulted in higher engagement, and was rated as more persuasive than human-authored content. There was a gain associated with personalization (Study 2) and a penalty for false personalization (Study 1). Our results suggest that LLMs may be a suitable technology for generating content that can encourage prosocial behavior.",
-      "published": "2026-04-03T17:25:07Z",
-      "updated": "2026-04-03T17:25:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03202v1"
+      "summary": "Most vision-language models (VLMs) apply a large language model (LLM) as the decoder, where the response tokens are generated sequentially through autoregression. Therefore, the number of output tokens can be the bottleneck of the end-to-end latency. However, different models may require vastly different numbers of output tokens to achieve comparable performance. In this work, we conduct a comprehensive analysis of the latency across different components of VLMs on simulated data. The experiment shows that a large model with fewer output tokens can be more efficient than a small model with a long output sequence. The empirical study on diverse real-world benchmarks confirms the observation that a large model can achieve better or comparable performance as a small model with significantly fewer output tokens. To leverage the efficiency of large models, we propose a multi-agent inference framework that keeps large models with short responses but transfers the key reasoning tokens from the small model when necessary. The comparison on benchmark tasks demonstrates that by reusing the reasoning tokens from small models, it can help approach the performance of a large model with its own reasoning, which confirms the effectiveness of our proposal.",
+      "published": "2026-04-06T17:59:35Z",
+      "updated": "2026-04-06T17:59:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04929v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03179v1",
-      "title": "Understanding the Role of Hallucination in Reinforcement Post-Training of Multimodal Reasoning Models",
+      "id": "http://arxiv.org/abs/2604.04921v1",
+      "title": "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
       "authors": [
-        "Gengwei Zhang",
-        "Jie Peng",
-        "Zhen Tan",
-        "Mufan Qiu",
-        "Hossein Nourkhiz Mahjoub",
-        "Vaishnav Tadiparthi",
-        "Kwonjoon Lee",
-        "Yanyong Zhang",
-        "Tianlong Chen"
+        "Weian Mao",
+        "Xi Lin",
+        "Wei Huang",
+        "Yuxin Xie",
+        "Tianfu Fu",
+        "Bohan Zhuang",
+        "Song Han",
+        "Yukang Chen"
       ],
-      "summary": "The recent success of reinforcement learning (RL) in large reasoning models has inspired the growing adoption of RL for post-training Multimodal Large Language Models (MLLMs) to enhance their visual reasoning capabilities. Although many studies have reported improved performance, it remains unclear whether RL training truly enables models to learn from visual information. In this work, we propose the Hallucination-as-Cue Framework, an analytical framework designed to investigate the effects of RL-based post-training on multimodal reasoning models from the perspective of model hallucination. Specifically, we introduce hallucination-inductive, modality-specific corruptions that remove or replace essential information required to derive correct answers, thereby forcing the model to reason by hallucination. By applying these corruptions during both training and evaluation, our framework provides a unique perspective for diagnosing RL training dynamics and understanding the intrinsic properties of datasets. Through extensive experiments and analyses across multiple multimodal reasoning benchmarks, we reveal that the role of model hallucination for RL-training is more significant than previously recognized. For instance, we find that RL post-training under purely hallucination-inductive settings can still significantly improve models' reasoning performance, and in some cases even outperform standard training. These findings challenge prevailing assumptions about MLLM reasoning training and motivate the development of more modality-aware RL-based training designs.",
-      "published": "2026-04-03T16:56:34Z",
-      "updated": "2026-04-03T16:56:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03179v1"
+      "summary": "Extended reasoning in large language models (LLMs) creates severe KV cache memory bottlenecks. Leading KV cache compression methods estimate KV importance using attention scores from recent post-RoPE queries. However, queries rotate with position during RoPE, making representative queries very few, leading to poor top-key selection and unstable reasoning. To avoid this issue, we turn to the pre-RoPE space, where we observe that Q and K vectors are highly concentrated around fixed non-zero centers and remain stable across positions -- Q/K concentration. We show that this concentration causes queries to preferentially attend to keys at specific distances (e.g., nearest keys), with the centers determining which distances are preferred via a trigonometric series. Based on this, we propose TriAttention to estimate key importance by leveraging these centers. Via the trigonometric series, we use the distance preference characterized by these centers to score keys according to their positions, and also leverage Q/K norms as an additional signal for importance estimation. On AIME25 with 32K-token generation, TriAttention matches Full Attention reasoning accuracy while achieving 2.5x higher throughput or 10.7x KV memory reduction, whereas leading baselines achieve only about half the accuracy at the same efficiency. TriAttention enables OpenClaw deployment on a single consumer GPU, where long context would otherwise cause out-of-memory with Full Attention.",
+      "published": "2026-04-06T17:58:42Z",
+      "updated": "2026-04-06T17:58:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04921v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03174v1",
-      "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
+      "id": "http://arxiv.org/abs/2601.08565v2",
+      "title": "Rewriting Video: Text-Driven Reauthoring of Video Footage",
       "authors": [
-        "Prakhar Bansal",
-        "Shivangi Agarwal"
+        "Sitong Wang",
+        "Anh Truong",
+        "Lydia B. Chilton",
+        "Dingzeyu Li"
       ],
-      "summary": "Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning. This survey provides a unified account of augmentation strategies along a single axis: the degree of structured context supplied at inference time. We cover in-context learning and prompt engineering, Retrieval-Augmented Generation (RAG), GraphRAG, and CausalRAG. Beyond conceptual comparison, we provide a transparent literature-screening protocol, a claim-audit framework, and a structured cross-paper evidence synthesis that distinguishes higher-confidence findings from emerging results. The paper concludes with a deployment-oriented decision framework and concrete research priorities for trustworthy retrieval-augmented NLP.",
-      "published": "2026-04-03T16:49:09Z",
-      "updated": "2026-04-03T16:49:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03174v1"
+      "summary": "Video is a powerful medium for communication and storytelling, yet reauthoring existing footage remains challenging. Even simple edits often demand expertise, time, and careful planning, constraining how creators envision and shape their narratives. Recent advances in generative AI suggest a new paradigm: what if editing a video were as straightforward as rewriting text? To investigate this, we present a tech probe and a study on text-driven video reauthoring. Our approach involves two technical contributions: (1) a generative reconstruction algorithm that reverse-engineers video into an editable text prompt, and (2) an interactive probe, Rewrite Kit, that allows creators to manipulate these prompts. A technical evaluation of the algorithm reveals a critical human-AI perceptual gap. A probe study with 12 creators surfaced novel use cases such as virtual reshooting, synthetic continuity, and aesthetic restyling. It also highlighted key tensions around coherence, control, and creative alignment in this new paradigm. Our work contributes empirical insights into the opportunities and challenges of text-driven video reauthoring, offering design implications for future co-creative video tools.",
+      "published": "2026-01-13T13:49:05Z",
+      "updated": "2026-04-06T17:51:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.08565v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03173v1",
-      "title": "Detecting and Correcting Reference Hallucinations in Commercial LLMs and Deep Research Agents",
+      "id": "http://arxiv.org/abs/2506.08125v2",
+      "title": "Not All Tokens Matter: Towards Efficient LLM Reasoning via Token Significance in Reinforcement Learning",
       "authors": [
-        "Delip Rao",
-        "Eric Wong",
-        "Chris Callison-Burch"
+        "Hanbing Liu",
+        "Lang Cao",
+        "Yuanyi Ren",
+        "Mengyu Zhou",
+        "Haoyu Dong",
+        "Xiaojun Ma",
+        "Shi Han",
+        "Dongmei Zhang"
       ],
-      "summary": "Large language models and deep research agents supply citation URLs to support their claims, yet the reliability of these citations has not been systematically measured. We address six research questions about citation URL validity using 10 models and agents on DRBench (53,090 URLs) and 3 models on ExpertQA (168,021 URLs across 32 academic fields). We find that 3--13\\% of citation URLs are hallucinated -- they have no record in the Wayback Machine and likely never existed -- while 5--18\\% are non-resolving overall. Deep research agents generate substantially more citations per query than search-augmented LLMs but hallucinate URLs at higher rates. Domain effects are pronounced: non-resolving rates range from 5.4\\% (Business) to 11.4\\% (Theology), with per-model effects even larger. Decomposing failures reveals that some models fabricate every non-resolving URL, while others show substantial link-rot fractions indicating genuine retrieval. As a solution, we release urlhealth, an open-source tool for URL liveness checking and stale-vs-hallucinated classification using the Wayback Machine. In agentic self-correction experiments, models equipped with urlhealth reduce non-resolving citation URLs by $6\\textrm{--}79\\times$ to under 1\\%, though effectiveness depends on the model's tool-use competence. The tool and all data are publicly available. Our characterization findings, failure taxonomy, and open-source tooling establish that citation URL validity is both measurable at scale and correctable in practice.",
-      "published": "2026-04-03T16:49:02Z",
-      "updated": "2026-04-03T16:49:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03173v1"
+      "summary": "Large language models (LLMs) show strong reasoning abilities but often produce unnecessarily long explanations that reduce efficiency. Although reinforcement learning (RL) has been used to improve reasoning, most methods focus on accuracy and rely on uniform length-based rewards that overlook the differing contributions of individual tokens, often harming correctness. We revisit length optimization in RL through the perspective of token significance. Observing that many chain-of-thought (CoT) tokens contribute little to the final answer, we introduce a significance-aware length reward that selectively penalizes insignificance tokens, reducing redundancy while preserving essential reasoning. We also propose a dynamic length reward that encourages more detailed reasoning early in training and gradually shifts toward conciseness as learning progresses. Integrating these components into standard policy optimization yields a framework that improves both reasoning efficiency and accuracy. Experiments across multiple benchmarks demonstrate substantial reductions in response length while preserving or improving correctness, highlighting the importance of modeling token significance for efficient LLM reasoning.",
+      "published": "2025-06-09T18:27:26Z",
+      "updated": "2026-04-06T17:47:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.08125v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24591v2",
-      "title": "Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini",
+      "id": "http://arxiv.org/abs/2604.04894v1",
+      "title": "Rethinking Exploration in RLVR: From Entropy Regularization to Refinement via Bidirectional Entropy Modulation",
       "authors": [
-        "Ruofei Du",
-        "Benjamin Hersh",
-        "David Li",
-        "Nels Numan",
-        "Xun Qian",
-        "Yanhe Chen",
-        "Zhongyi Zhou",
-        "Xingyue Chen",
-        "Jiahao Ren",
-        "Robert Timothy Bettridge",
-        "Xiang 'Anthony' Chen",
-        "Faraz Faruqi",
-        "Steve Toh",
-        "David Kim"
+        "Hengrui Gu",
+        "Xiaotian Han",
+        "Yujing Bian",
+        "Kaixiong Zhou"
       ],
-      "summary": "While large language models (LLMs) have accelerated 2D software development through intent-driven \"vibe coding\", prototyping intelligent Extended Reality (XR) experiences remains a major challenge. The fundamental barrier is not just the steep learning curve for human creators, but that low-level sensor APIs and complex game engine hierarchies are ill-suited for LLM reasoning, routinely exceeding context windows and inducing syntax hallucinations. To bridge this gap, we contribute XR Blocks, an open-source, LLM-native WebXR framework. Unlike traditional engines, XR Blocks introduces a semantic \"Reality Model\" that aligns spatial computing primitives (users, physical environments, and agents) with natural language, providing a robust, concise vocabulary optimized for generative AI. Building upon this foundation, we present Vibe Coding XR, an end-to-end prototyping workflow that leverages LLMs to translate high-level prompts (e.g., \"create a dandelion that reacts to my hand\") directly into functional, physics-aware mixed-reality applications. To minimize the friction of on-device testing, the workflow introduces a seamless desktop \"simulated reality\" to headset deployment loop. Finally, we introduce VCXR60, a pilot dataset of 60 XR prompts paired with an automated evaluation pipeline. Our technical evaluation demonstrates high one-shot execution success, enabling practitioners to bypass lowlevel hurdles and rapidly move from \"idea to reality\". Code and live demos are available at https://github.com/google/xrblocks and http://xrblocks.github.io/gem.",
-      "published": "2026-03-25T17:58:56Z",
-      "updated": "2026-04-03T16:34:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24591v2"
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) has significantly advanced the reasoning capabilities of large language models (LLMs). However, it faces a fundamental limitation termed \\textit{restricted exploration}, where the policy rapidly converges to a narrow set of solutions. While entropy regularization is a popular approach used to sustain exploration, it often proves unreliable for LLMs, suffering from high hyperparameter sensitivity and yielding only marginal performance gains. Motivated by these inefficiencies, we propose to rethink the relationship between policy entropy and exploration. By deriving a parametric formulation of group-relative advantage estimation and analyzing entropy dynamics, we conceptually decompose policy entropy into \\textit{informative entropy}, which preserves diverse solution paths, and \\textit{spurious entropy}, which erodes reasoning patterns. Our analysis reveals that, in contrast to blind maximization, effective exploration requires \\textit{entropy refinement}-a mechanism implicitly embedded in group-relative advantage estimation that sustains informative entropy on positive rollouts while suppressing spurious entropy on negative ones. Guided by this insight, we propose \\textbf{AsymGRPO}, an exploratory framework that explicitly decouples the modulation of positive and negative rollouts. This allows for independent control over the preservation of informative entropy and the suppression of spurious noise. Extensive experiments demonstrate that AsymGRPO achieves superior performance compared to strong baselines and exhibits the potential to synergize with existing entropy regularization methods.",
+      "published": "2026-04-06T17:42:38Z",
+      "updated": "2026-04-06T17:42:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04894v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03159v1",
-      "title": "BibTeX Citation Hallucinations in Scientific Publishing Agents: Evaluation and Mitigation",
+      "id": "http://arxiv.org/abs/2506.01897v4",
+      "title": "MLorc: Momentum Low-rank Compression for Memory Efficient Large Language Model Adaptation",
       "authors": [
-        "Delip Rao",
-        "Chris Callison-Burch"
+        "Wei Shen",
+        "Zhang Yaxiang",
+        "Minhui Huang",
+        "Mengfan Xu",
+        "Jiawei Zhang",
+        "Cong Shen"
       ],
-      "summary": "Large language models with web search are increasingly used in scientific publishing agents, yet they still produce BibTeX entries with pervasive field-level errors. Prior evaluations tested base models without search, which does not reflect current practice. We construct a benchmark of 931 papers across four scientific domains and three citation tiers -- popular, low-citation, and recent post-cutoff -- designed to disentangle parametric memory from search dependence, with version-aware ground truth accounting for multiple citable versions of the same paper. Three search-enabled frontier models (GPT-5, Claude Sonnet-4.6, Gemini-3 Flash) generate BibTeX entries scored on nine fields and a six-way error taxonomy, producing ~23,000 field-level observations. Overall accuracy is 83.6%, but only 50.9% of entries are fully correct; accuracy drops 27.7pp from popular to recent papers, revealing heavy reliance on parametric memory even when search is available. Field-error co-occurrence analysis identifies two failure modes: wholesale entry substitution (identity fields fail together) and isolated field error. We evaluate clibib, an open-source tool for deterministic BibTeX retrieval from the Zotero Translation Server with CrossRef fallback, as a mitigation mechanism. In a two-stage integration where baseline entries are revised against authoritative records, accuracy rises +8.0pp to 91.5%, fully correct entries rise from 50.9% to 78.3%, and regression rate is only 0.8%. An ablation comparing single-stage and two-stage integration shows that separating search from revision yields larger gains and lower regression (0.8% vs. 4.8%), demonstrating that integration architecture matters independently of model capability. We release the benchmark, error taxonomy, and clibib tool to support evaluation and mitigation of citation hallucinations in LLM-based scientific writing.",
-      "published": "2026-04-03T16:30:58Z",
-      "updated": "2026-04-03T16:30:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03159v1"
+      "summary": "With increasing size of large language models (LLMs), full-parameter fine-tuning imposes substantial memory demands. To alleviate this, we propose a novel memory-efficient training paradigm called Momentum Low-rank compression (MLorc). The key idea of MLorc is to compress and reconstruct the momentum of matrix parameters during training to reduce memory consumption. Compared to LoRA, MLorc avoids enforcing a fixed-rank constraint on weight update matrices and thus enables full-parameter learning. Compared to GaLore, MLorc directly compress the momentum rather than gradients, thereby better preserving the training dynamics of full-parameter fine-tuning. We provide a theoretical guarantee for its convergence under mild assumptions. Empirically, MLorc consistently outperforms other memory-efficient training methods, matches or even exceeds the performance of full fine-tuning at small ranks (e.g., $r=4$), and generalizes well across different optimizers, all while not compromising time or memory efficiency.",
+      "published": "2025-06-02T17:21:10Z",
+      "updated": "2026-04-06T17:40:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.01897v4"
     },
     {
-      "id": "http://arxiv.org/abs/2411.10656v2",
-      "title": "Precision or Peril: A PoC of Python Code Quality from Quantized Large Language Models",
+      "id": "http://arxiv.org/abs/2603.03756v2",
+      "title": "MOOSE-Star: Unlocking Tractable Training for Scientific Discovery by Breaking the Complexity Barrier",
       "authors": [
-        "Eric L. Melin",
-        "Adam J. Torek",
-        "Nasir U. Eisty",
-        "Casey Kennington"
+        "Zonglin Yang",
+        "Lidong Bing"
       ],
-      "summary": "Context: Large Language Models (LLMs) like GPT-5 and LLaMA-405b exhibit advanced code generation abilities, but their deployment demands substantial computation resources and energy. Quantization can reduce memory footprint and hardware requirements, yet may degrade code quality. Objective: This study investigates code generation performance of smaller LLMs, examines the effect of quantization, and identifies common code quality issues as a proof of concepts (PoC). Method: Four open-source LLMs are evaluated on Python benchmarks using code similarity metrics, with an analysis on 8-bit and 4-bit quantization, alongside static code quality assessment. Results: While smaller LLMs can generate functional code, benchmark performance is limited. Quantization impacts are variable, and generated code exhibits quality and maintainability concerns. Conclusions: LLM-generated code should be carefully validated before integration into software projects.",
-      "published": "2024-11-16T01:31:29Z",
-      "updated": "2026-04-03T16:24:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2411.10656v2"
+      "summary": "While large language models (LLMs) show promise in scientific discovery, existing research focuses on inference or feedback-driven training, leaving the direct modeling of the generative reasoning process, $P(\\text{hypothesis}|\\text{background})$ ($P(h|b)$), unexplored. We demonstrate that directly training $P(h|b)$ is mathematically intractable due to the combinatorial complexity ($O(N^k)$) inherent in retrieving and composing inspirations from a vast knowledge base. To break this barrier, we introduce MOOSE-Star, a unified framework enabling tractable training and scalable inference. In the best case, MOOSE-Star reduces complexity from exponential to logarithmic ($O(\\log N)$) by (1) training on decomposed subtasks derived from the probabilistic equation of discovery, (2) employing motivation-guided hierarchical search to enable logarithmic retrieval and prune irrelevant subspaces, and (3) utilizing bounded composition for robustness against retrieval noise. To facilitate this, we release TOMATO-Star, a dataset of 108,717 decomposed papers (38,400 GPU hours) for training. Furthermore, we show that while brute-force sampling hits a ''complexity wall,'' MOOSE-Star exhibits continuous test-time scaling.",
+      "published": "2026-03-04T06:11:18Z",
+      "updated": "2026-04-06T17:27:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.03756v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.18545v2",
-      "title": "CoDA: Exploring Chain-of-Distribution Attacks and Post-Hoc Token-Space Repair for Medical Vision-Language Models",
+      "id": "http://arxiv.org/abs/2604.04872v1",
+      "title": "Synthetic Sandbox for Training Machine Learning Engineering Agents",
       "authors": [
-        "Xiang Chen",
-        "Fangfang Yang",
-        "Chunlei Meng",
-        "Yuxian Dong",
-        "Ang Li",
-        "Yiwei Wei",
-        "Jiahuan Long",
-        "Jiujiang Guo",
-        "Chengyin Hu"
+        "Yuhang Zhou",
+        "Lizhu Zhang",
+        "Yifan Wu",
+        "Jiayi Liu",
+        "Xiangjun Fan",
+        "Zhuokai Zhao",
+        "Hong Yan"
       ],
-      "summary": "Medical vision--language models (MVLMs) are increasingly used as perceptual backbones in radiology pipelines and as the visual front end of multimodal assistants, yet their reliability under real clinical workflows remains underexplored. Prior robustness evaluations often assume clean, curated inputs or study isolated corruptions, overlooking routine acquisition, reconstruction, display, and delivery operations that preserve clinical readability while shifting image statistics. To address this gap, we propose CoDA, a chain-of-distribution framework that constructs clinically plausible pipeline shifts by composing acquisition-like shading, reconstruction and display remapping, and delivery and export degradations. Under masked structural-similarity constraints, CoDA jointly optimizes stage compositions and parameters to induce failures while preserving visual plausibility. Across brain MRI, chest X-ray, and abdominal CT, CoDA substantially degrades the zero-shot performance of CLIP-style MVLMs, with chained compositions consistently more damaging than any single stage. We also evaluate multimodal large language models (MLLMs) as technical-authenticity auditors of imaging realism and quality rather than pathology. Proprietary multimodal models show degraded auditing reliability and persistent high-confidence errors on CoDA-shifted samples, while the medical-specific MLLMs we test exhibit clear deficiencies in medical image quality auditing. Finally, we introduce a post-hoc repair strategy based on teacher-guided token-space adaptation with patch-level alignment, which improves accuracy on archived CoDA outputs. Overall, our findings characterize a clinically grounded threat surface for MVLM deployment and show that lightweight alignment improves robustness in deployment.",
-      "published": "2026-03-19T07:00:44Z",
-      "updated": "2026-04-03T16:16:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.18545v2"
+      "summary": "As large language model agents advance beyond software engineering (SWE) tasks toward machine learning engineering (MLE), verifying agent behavior becomes orders of magnitude more expensive: while SWE tasks can be verified via fast-executing unit tests, MLE verification requires running full ML pipelines -- data preprocessing, model training, and metric evaluation -- on large datasets at each rollout step, rendering trajectory-wise on-policy reinforcement learning (RL) prohibitively slow. Existing approaches retreat to supervised fine-tuning (SFT) or offline proxy rewards, sacrificing the exploration and generalization benefits of on-policy RL. We observe that sandbox data size is the primary source of this bottleneck. Based on this insight, we introduce SandMLE, a multi-agent framework that generates diverse, verifiable synthetic MLE environments from a small number of seed tasks, preserving the structural and technical complexity of real-world problems while constraining datasets to micro-scale (each task is paired with only 50-200 training samples). Through extensive experiments, we show that SandMLE reduces execution time by over 13 times, enabling large-scale, on-policy trajectory-wise RL for the first time in the MLE domain. On MLE-bench-lite, SandMLE yields significant gains over SFT baselines across Qwen3-8B, 14B, and 30B-A3B, with relative medal rate improvements ranging from 20.3% to 66.9%. Furthermore, the trained policy generalizes across unseen agentic scaffolds, achieving up to 32.4% better HumanRank score on MLE-Dojo.",
+      "published": "2026-04-06T17:19:29Z",
+      "updated": "2026-04-06T17:19:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04872v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03147v1",
-      "title": "Valence-Arousal Subspace in LLMs: Circular Emotion Geometry and Multi-Behavioral Control",
+      "id": "http://arxiv.org/abs/2604.04869v1",
+      "title": "Optimizing LLM Prompt Engineering with DSPy Based Declarative Learning",
       "authors": [
-        "Lihao Sun",
-        "Lewen Yan",
-        "Xiaoya Lu",
-        "Andrew Lee",
-        "Jie Zhang",
-        "Jing Shao"
+        "Shiek Ruksana",
+        "Sailesh Kiran Kurra",
+        "Thipparthi Sanjay Baradwaj"
       ],
-      "summary": "We present a method to identify a valence-arousal (VA) subspace within large language model representations. From 211k emotion-labeled texts, we derive emotion steering vectors, then learn VA axes as linear combinations of their top PCA components via ridge regression on the model's self-reported valence-arousal scores. The resulting VA subspace exhibits circular geometry consistent with established models of human emotion perception. Projections along our recovered VA subspace correlate with human-crowdsourced VA ratings across 44k lexical items. Furthermore, steering generation along these axes produces monotonic shifts in the corresponding affective dimensions of model outputs. Steering along these directions also induces near-monotonic bidirectional control over refusal and sycophancy: increasing arousal decreases refusal and increases sycophancy, and vice versa. These effects replicate across Llama-3.1-8B, Qwen3-8B, and Qwen3-14B, demonstrating cross-architecture generality. We provide a mechanistic account for these effects and prior emotionally-framed controls: refusal-associated tokens (\"I can't,\" \"sorry\") occupy low-arousal, negative-valence regions, so VA steering directly modulates their emission probability.",
-      "published": "2026-04-03T16:08:05Z",
-      "updated": "2026-04-03T16:08:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03147v1"
+      "summary": "Large Language Models (LLMs) have shown strong performance across a wide range of natural language processing tasks; however, their effectiveness is highly dependent on prompt design, structure, and embedded reasoning signals. Conventional prompt engineering methods largely rely on heuristic trial-and-error processes, which limits scalability, reproducibility, and generalization across tasks. DSPy, a declarative framework for optimizing text-processing pipelines, offers an alternative approach by enabling automated, modular, and learnable prompt construction for LLM-based systems.This paper presents a systematic study of DSPy-based declarative learning for prompt optimization, with emphasis on prompt synthesis, correction, calibration, and adaptive reasoning control. We introduce a unified DSPy LLM architecture that combines symbolic planning, gradient free optimization, and automated module rewriting to reduce hallucinations, improve factual grounding, and avoid unnecessary prompt complexity. Experimental evaluations conducted on reasoning tasks, retrieval-augmented generation, and multi-step chain-of-thought benchmarks demonstrate consistent gains in output reliability, efficiency, and generalization across models. The results show improvements of up to 30 to 45% in factual accuracy and a reduction of approximately 25% in hallucination rates. Finally, we outline key limitations and discuss future research directions for declarative prompt optimization frameworks.",
+      "published": "2026-04-06T17:17:57Z",
+      "updated": "2026-04-06T17:17:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.04869v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.25852v2",
-      "title": "Building to Understand: Examining Teens' Technical and Socio-Ethical Pieces of Understandings in the Construction of Small Generative Language Models",
+      "id": "http://arxiv.org/abs/2509.18052v3",
+      "title": "The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies",
       "authors": [
-        "Luis Morales-Navarro",
-        "Daniel J. Noh",
-        "Lucianne Servat",
-        "Carly Netting",
-        "Yasmin B. Kafai",
-        "Danaé Metaxa"
+        "Jiaxu Zhou",
+        "Jen-tse Huang",
+        "Xuhui Zhou",
+        "Man Ho Lam",
+        "Xintao Wang",
+        "Hao Zhu",
+        "Wenxuan Wang",
+        "Maarten Sap"
       ],
-      "summary": "The rising adoption of generative AI/ML technologies increases the need to support teens in developing AI/ML literacies. Child-computer interaction research argues that construction activities can support young people in understanding these systems and their implications. Recent exploratory studies demonstrate the feasibility of engaging teens in the construction of very small generative language models (LMs). However, it is unclear how constructing such models may foster the development of teens' understanding of these systems from technical and socio-ethical perspectives. We conducted a week-long participatory design workshop in which sixteen teenagers constructed very small LMs to generate recipes, screenplays, and songs. Using thematic analysis, we identified technical and socio-ethical pieces of understandings that teens exhibited while designing generative LMs. This paper contributes (a) evidence of the kinds of pieces of understandings that teens have when constructing LMs and (b) a theory-backed framing to study novices' understandings of AI/ML systems.",
-      "published": "2026-03-26T19:20:39Z",
-      "updated": "2026-04-03T16:06:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.25852v2"
+      "summary": "Large language models (LLMs) are increasingly deployed to simulate human collective behaviors, yet the methodological rigor of these \"AI societies\" remains under-explored. Through a systematic audit of 39 recent studies, we identify six pervasive flaws-spanning agent profiles, interaction, memory, control, unawareness, and realism (PIMMUR). Our analysis reveals that 89.7% of studies violate at least one principle, undermining simulation validity. We demonstrate that frontier LLMs correctly identify the underlying social experiment in 50.8% of cases, while 61.0% of prompts exert excessive control that pre-determines outcomes. By reproducing five representative experiments (e.g., telephone game), we show that reported collective phenomena often vanish or reverse when PIMMUR principles are enforced, suggesting that many \"emergent\" behaviors are methodological artifacts rather than genuine social dynamics. Our findings suggest that current AI simulations may capture model-specific biases rather than universal human social behaviors, raising critical concerns about the use of LLMs as scientific proxies for human society.",
+      "published": "2025-09-22T17:27:29Z",
+      "updated": "2026-04-06T17:12:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.18052v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.03141v1",
-      "title": "Beyond Precision: Importance-Aware Recall for Factuality Evaluation in Long-Form LLM Generation",
+      "id": "http://arxiv.org/abs/2510.13851v2",
+      "title": "EvoEdit: Evolving Null-space Alignment for Robust and Efficient Knowledge Editing",
       "authors": [
-        "Nazanin Jafari",
-        "James Allan",
-        "Mohit Iyyer"
+        "Sicheng Lyu",
+        "Yu Gu",
+        "Xinyu Wang",
+        "Jerry Huang",
+        "Sitao Luan",
+        "Yufei Cui",
+        "Xiao-Wen Chang",
+        "Peng Lu"
       ],
-      "summary": "Evaluating the factuality of long-form output generated by large language models (LLMs) remains challenging, particularly when responses are open-ended and contain many fine-grained factual statements. Existing evaluation methods primarily focus on precision: they decompose a response into atomic claims and verify each claim against external knowledge sources such as Wikipedia. However, this overlooks an equally important dimension of factuality: recall, whether the generated response covers the relevant facts that should be included. We propose a comprehensive factuality evaluation framework that jointly measures precision and recall. Our method leverages external knowledge sources to construct reference facts and determine whether they are captured in generated text. We further introduce an importance-aware weighting scheme based on relevance and salience. Our analysis reveals that current LLMs perform substantially better on precision than on recall, suggesting that factual incompleteness remains a major limitation of long-form generation and that models are generally better at covering highly important facts than the full set of relevant facts.",
-      "published": "2026-04-03T16:03:56Z",
-      "updated": "2026-04-03T16:03:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.03141v1"
+      "summary": "Large language models (LLMs) require continual updates to rectify outdated or erroneous knowledge. Model editing has emerged as a compelling paradigm for introducing targeted modifications without the computational burden of full retraining. Existing approaches are mainly based on a locate-then-edit framework. However, in sequential editing contexts, where multiple updates are applied over time, they exhibit significant limitations and suffer from catastrophic interference, i.e., new edits compromise previously integrated updates and degrade preserved knowledge. To address these challenges, we introduce EvoEdit, a novel editing strategy that mitigates catastrophic interference through sequential null-space alignment, enabling stable and efficient model editing. By performing sequential null-space alignment for each incoming edit, EvoEdit preserves both original and previously modified knowledge representations and maintains output invariance on preserved knowledge even across long edit sequences, effectively mitigating interference. Evaluations on real-world sequential knowledge-editing benchmarks show that EvoEdit achieves better or comparable performance than prior state-of-the-art locate-then-edit techniques, with up to 3.53 times speedup. Overall, these results underscore the necessity of developing more principled approaches for designing LLMs in dynamically evolving information settings, while providing a simple yet effective solution with strong theoretical guarantees.",
+      "published": "2025-10-11T21:36:14Z",
+      "updated": "2026-04-06T17:06:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.13851v2"
     }
   ]
 }
