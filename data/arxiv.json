@@ -1,238 +1,195 @@
 {
-  "generated_at_utc": "2026-04-08T02:24:30Z",
+  "generated_at_utc": "2026-04-10T02:30:30Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.06170v1",
-      "title": "Paper Circle: An Open-source Multi-agent Research Discovery and Analysis Framework",
+      "id": "http://arxiv.org/abs/2604.08540v1",
+      "title": "AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation",
       "authors": [
-        "Komal Kumar",
-        "Aman Chadha",
-        "Salman Khan",
-        "Fahad Shahbaz Khan",
-        "Hisham Cholakkal"
+        "Ziwei Zhou",
+        "Zeyuan Lai",
+        "Rui Wang",
+        "Yifan Yang",
+        "Zhen Xing",
+        "Yuqing Yang",
+        "Qi Dai",
+        "Lili Qiu",
+        "Chong Luo"
       ],
-      "summary": "The rapid growth of scientific literature has made it increasingly difficult for researchers to efficiently discover, evaluate, and synthesize relevant work. Recent advances in multi-agent large language models (LLMs) have demonstrated strong potential for understanding user intent and are being trained to utilize various tools. In this paper, we introduce Paper Circle, a multi-agent research discovery and analysis system designed to reduce the effort required to find, assess, organize, and understand academic literature. The system comprises two complementary pipelines: (1) a Discovery Pipeline that integrates offline and online retrieval from multiple sources, multi-criteria scoring, diversity-aware ranking, and structured outputs; and (2) an Analysis Pipeline that transforms individual papers into structured knowledge graphs with typed nodes such as concepts, methods, experiments, and figures, enabling graph-aware question answering and coverage verification. Both pipelines are implemented within a coder LLM-based multi-agent orchestration framework and produce fully reproducible, synchronized outputs including JSON, CSV, BibTeX, Markdown, and HTML at each agent step. This paper describes the system architecture, agent roles, retrieval and scoring methods, knowledge graph schema, and evaluation interfaces that together form the Paper Circle research workflow. We benchmark Paper Circle on both paper retrieval and paper review generation, reporting hit rate, MRR, and Recall at K. Results show consistent improvements with stronger agent models. We have publicly released the website at https://papercircle.vercel.app/ and the code at https://github.com/MAXNORM8650/papercircle.",
-      "published": "2026-04-07T17:59:58Z",
-      "updated": "2026-04-07T17:59:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06170v1"
+      "summary": "Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or rely on coarse embedding similarity, failing to capture the fine-grained joint correctness required by realistic prompts. We introduce AVGen-Bench, a task-driven benchmark for T2AV generation featuring high-quality prompts across 11 real-world categories. To support comprehensive assessment, we propose a multi-granular evaluation framework that combines lightweight specialist models with Multimodal Large Language Models (MLLMs), enabling evaluation from perceptual quality to fine-grained semantic controllability. Our evaluation reveals a pronounced gap between strong audio-visual aesthetics and weak semantic reliability, including persistent failures in text rendering, speech coherence, physical reasoning, and a universal breakdown in musical pitch control. Code and benchmark resources are available at http://aka.ms/avgenbench.",
+      "published": "2026-04-09T17:59:39Z",
+      "updated": "2026-04-09T17:59:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08540v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06169v1",
-      "title": "In-Place Test-Time Training",
+      "id": "http://arxiv.org/abs/2604.08539v1",
+      "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
       "authors": [
-        "Guhao Feng",
-        "Shengjie Luo",
-        "Kai Hua",
-        "Ge Zhang",
-        "Di He",
-        "Wenhao Huang",
-        "Tianle Cai"
+        "Wenbo Hu",
+        "Xin Chen",
+        "Yan Gao-Tian",
+        "Yihe Deng",
+        "Nanyun Peng",
+        "Kai-Wei Chang"
       ],
-      "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model parameters (fast weights) at inference time, yet its potential in the current LLM ecosystem is hindered by critical barriers including architectural incompatibility, computational inefficiency and misaligned fast weight objectives for language modeling. In this work, we introduce In-Place Test-Time Training (In-Place TTT), a framework that seamlessly endows LLMs with Test-Time Training ability. In-Place TTT treats the final projection matrix of the ubiquitous MLP blocks as its adaptable fast weights, enabling a ``drop-in\" enhancement for LLMs without costly retraining from scratch. Furthermore, we replace TTT's generic reconstruction objective with a tailored, theoretically-grounded objective explicitly aligned with the Next-Token-Prediction task governing autoregressive language modeling. This principled objective, combined with an efficient chunk-wise update mechanism, results in a highly scalable algorithm compatible with context parallelism. Extensive experiments validate our framework's effectiveness: as an in-place enhancement, it enables a 4B-parameter model to achieve superior performance on tasks with contexts up to 128k, and when pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation study results further provide deeper insights on our design choices. Collectively, our results establish In-Place TTT as a promising step towards a paradigm of continual learning in LLMs.",
-      "published": "2026-04-07T17:59:44Z",
-      "updated": "2026-04-07T17:59:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06169v1"
+      "summary": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
+      "published": "2026-04-09T17:59:39Z",
+      "updated": "2026-04-09T17:59:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08539v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.03538v2",
-      "title": "Online Learnability of Chain-of-Thought Verifiers: Soundness and Completeness Trade-offs",
+      "id": "http://arxiv.org/abs/2604.08527v1",
+      "title": "Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models",
       "authors": [
-        "Maria-Florina Balcan",
-        "Avrim Blum",
-        "Kiriaki Fragkia",
-        "Zhiyuan Li",
-        "Dravyansh Sharma"
+        "Feng Luo",
+        "Yu-Neng Chuang",
+        "Guanchu Wang",
+        "Zicheng Xu",
+        "Xiaotian Han",
+        "Tianyi Zhang",
+        "Vladimir Braverman"
       ],
-      "summary": "Large Language Models (LLMs) with chain-of-thought generation have demonstrated great potential for solving complex reasoning and planning tasks. However, the output of current LLMs is not fully reliable and needs careful verification. Even if LLMs get more accurate over time, learned verifiers can help increase trust, enforce safety constraints, and ensure alignment with personal preferences. A major challenge in learning verifiers, however, especially when their output will be used by the generator to improve its reasoning, is that the feedback loop between generator and verifier may produce substantial distribution shift. Motivated by this challenge, we propose an online learning framework for learning chain-of-thought verifiers that, given a problem and a sequence of reasoning steps, check the correctness of the solution. Highlighting the asymmetric role of soundness errors (failure in catching errors in a reasoning trace) and completeness errors (flagging correct reasoning steps as wrong), we introduce novel extensions of the Littlestone dimension which tightly characterize the mistake bounds for learning a verifier in the realizable setting. We provide optimal algorithms for finding the Pareto-frontier (the smallest total number of mistakes given a budget of soundness mistakes) as well as for minimizing a linear combination of asymmetric costs. We further show how our learned verifiers can be used to boost the accuracy of a collection of weak generators, and enable generation of proofs beyond what they were initially trained on. With the mild assumption that one of the generators can generate the next reasoning step correctly with some minimal probability, we show how to learn a strong generator with small error and abstention rates.",
-      "published": "2026-03-03T21:50:14Z",
-      "updated": "2026-04-07T17:56:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.03538v2"
+      "summary": "On-policy distillation (OPD) trains student models under their own induced distribution while leveraging supervision from stronger teachers. We identify a failure mode of OPD: as training progresses, on-policy rollouts can undergo abrupt length inflation, causing truncated trajectories to dominate the training data. This truncation collapse coincides with abrupt repetition saturation and induces biased gradient signals, leading to severe training instability and sharp degradation in validation performance. We attribute this problem to the interaction between student-induced data collection and the distillation objective, which implicitly favors long and repetitive rollouts. To address this issue, we propose StableOPD, a stabilized OPD framework that combines a reference-based divergence constraint with rollout mixture distillation. These together mitigate repetition-induced length inflation and further stabilize OPD training. Across multiple math reasoning datasets, our approach prevents truncation collapse, stabilizes training dynamics, and improves performance by 7.2% on average.",
+      "published": "2026-04-09T17:58:02Z",
+      "updated": "2026-04-09T17:58:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08527v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06155v1",
-      "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
+      "id": "http://arxiv.org/abs/2604.08525v1",
+      "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest",
       "authors": [
-        "Qimin Zhong",
-        "Hao Liao",
-        "Haiming Qin",
-        "Mingyang Zhou",
-        "Rui Mao",
-        "Wei Chen",
-        "Naipeng Chao"
+        "Addison J. Wu",
+        "Ryan Liu",
+        "Shuyue Stella Li",
+        "Yulia Tsvetkov",
+        "Thomas L. Griffiths"
       ],
-      "summary": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Prediction (MTP) has shown promise in learning more structured representations. In this work, we provide a theoretical perspective analyzing the gradient inductive bias of MTP, supported by empirical evidence, showing that MTP promotes the convergence toward internal belief states by inducing representational contractivity via gradient coupling. However, we reveal that standard MTP often suffers from structural hallucinations, where discrete token supervision encourages illegal shortcuts in latent space that violate environmental constraints. To address this, we propose a novel method Latent Semantic Enhancement MTP (LSE-MTP), which anchors predictions to ground-truth hidden state trajectories. Experiments on synthetic graphs and real-world Manhattan Taxi Ride show that LSE-MTP effectively bridges the gap between discrete tokens and continuous state representations, enhancing representation alignment, reducing structural hallucinations, and improving robustness to perturbations.",
-      "published": "2026-04-07T17:54:22Z",
-      "updated": "2026-04-07T17:54:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06155v1"
+      "summary": "Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but also to generate revenue for the companies that created them through advertisements. This creates the potential for LLMs to face conflicts of interest, where the most beneficial response to a user may not be aligned with the company's incentives. For instance, a sponsored product may be more expensive but otherwise equal to another; in this case, what does (and should) the LLM recommend to the user? In this paper, we provide a framework for categorizing the ways in which conflicting incentives might lead LLMs to change the way they interact with users, inspired by literature from linguistics and advertising regulation. We then present a suite of evaluations to examine how current models handle these tradeoffs. We find that a majority of LLMs forsake user welfare for company incentives in a multitude of conflict of interest situations, including recommending a sponsored product almost twice as expensive (Grok 4.1 Fast, 83%), surfacing sponsored options to disrupt the purchasing process (GPT 5.1, 94%), and concealing prices in unfavorable comparisons (Qwen 3 Next, 24%). Behaviors also vary strongly with levels of reasoning and users' inferred socio-economic status. Our results highlight some of the hidden risks to users that can emerge when companies begin to subtly incentivize advertisements in chatbots.",
+      "published": "2026-04-09T17:57:50Z",
+      "updated": "2026-04-09T17:57:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08525v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06154v1",
-      "title": "Exclusive Unlearning",
+      "id": "http://arxiv.org/abs/2604.08524v1",
+      "title": "What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal",
       "authors": [
-        "Mutsumi Sasaki",
-        "Kouta Nakayama",
-        "Yusuke Miyao",
-        "Yohei Oseki",
-        "Masaru Isonuma"
+        "Stephen Cheng",
+        "Sarah Wiegreffe",
+        "Dinesh Manocha"
       ],
-      "summary": "When introducing Large Language Models (LLMs) into industrial applications, such as healthcare and education, the risk of generating harmful content becomes a significant challenge. While existing machine unlearning methods can erase specific harmful knowledge and expressions, diverse harmful content makes comprehensive removal difficult. In this study, instead of individually listing targets for forgetting, we propose Exclusive Unlearning (EU), which aims for broad harm removal by extensively forgetting everything except for the knowledge and expressions we wish to retain. We demonstrate that through Exclusive Unlearning, it is possible to obtain a model that ensures safety against a wide range of inputs, including jailbreaks, while maintaining the ability to respond to diverse instructions related to specific domains such as medicine and mathematics.",
-      "published": "2026-04-07T17:54:11Z",
-      "updated": "2026-04-07T17:54:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06154v1"
+      "summary": "Applying steering vectors to large language models (LLMs) is an efficient and effective model alignment technique, but we lack an interpretable explanation for how it works-- specifically, what internal mechanisms steering vectors affect and how this results in different model outputs. To investigate the causal mechanisms underlying the effectiveness of steering vectors, we conduct a comprehensive case study on refusal. We propose a multi-token activation patching framework and discover that different steering methodologies leverage functionally interchangeable circuits when applied at the same layer. These circuits reveal that steering vectors primarily interact with the attention mechanism through the OV circuit while largely ignoring the QK circuit-- freezing all attention scores during steering drops performance by only 8.75% across two model families. A mathematical decomposition of the steered OV circuit further reveals semantically interpretable concepts, even in cases where the steering vector itself does not. Leveraging the activation patching results, we show that steering vectors can be sparsified by up to 90-99% while retaining most performance, and that different steering methodologies agree on a subset of important dimensions.",
+      "published": "2026-04-09T17:57:14Z",
+      "updated": "2026-04-09T17:57:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08524v1"
     },
     {
-      "id": "http://arxiv.org/abs/2402.11621v4",
-      "title": "Decoding News Narratives: A Critical Analysis of Large Language Models in Framing Detection",
+      "id": "http://arxiv.org/abs/2604.08519v1",
+      "title": "Cram Less to Fit More: Training Data Pruning Improves Memorization of Facts",
       "authors": [
-        "Valeria Pastorino",
-        "Jasivan A. Sivakumar",
-        "Nafise Sadat Moosavi"
+        "Jiayuan Ye",
+        "Vitaly Feldman",
+        "Kunal Talwar"
       ],
-      "summary": "The growing complexity and diversity of news coverage have made framing analysis a crucial yet challenging task in computational social science. Traditional approaches, including manual annotation and fine-tuned models, remain limited by high annotation costs, domain specificity, and inconsistent generalisation. Instruction-based large language models (LLMs) offer a promising alternative, yet their reliability for framing analysis remains insufficiently understood. In this paper, we conduct a systematic evaluation of several LLMs, including GPT-3.5/4, FLAN-T5, and Llama 3, across zero-shot, few-shot, and explanation-based prompting settings. Focusing on domain shift and inherent annotation ambiguity, we show that model performance is highly sensitive to prompt design and prone to systematic errors on ambiguous cases. Although LLMs, particularly GPT-4, exhibit stronger cross-domain generalisation, they also display systematic biases, most notably a tendency to conflate emotional language with framing. To enable principled evaluation under real-world topic diversity, we introduce a new dataset of out-of-domain news headlines covering diverse subjects. Finally, by analysing agreement patterns across multiple models on existing framing datasets, we demonstrate that cross-model consensus provides a useful signal for identifying contested annotations, offering a practical approach to dataset auditing in low-resource settings.",
-      "published": "2024-02-18T15:27:48Z",
-      "updated": "2026-04-07T17:44:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2402.11621v4"
+      "summary": "Large language models (LLMs) can struggle to memorize factual knowledge in their parameters, often leading to hallucinations and poor performance on knowledge-intensive tasks. In this paper, we formalize fact memorization from an information-theoretic perspective and study how training data distributions affect fact accuracy. We show that fact accuracy is suboptimal (below the capacity limit) whenever the amount of information contained in the training data facts exceeds model capacity. This is further exacerbated when the fact frequency distribution is skewed (e.g. a power law). We propose data selection schemes based on the training loss alone that aim to limit the number of facts in the training data and flatten their frequency distribution. On semi-synthetic datasets containing high-entropy facts, our selection method effectively boosts fact accuracy to the capacity limit. When pretraining language models from scratch on an annotated Wikipedia corpus, our selection method enables a GPT2-Small model (110m parameters) to memorize 1.3X more entity facts compared to standard training, matching the performance of a 10X larger model (1.3B parameters) pretrained on the full dataset.",
+      "published": "2026-04-09T17:55:50Z",
+      "updated": "2026-04-09T17:55:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08519v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06132v1",
-      "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
+      "id": "http://arxiv.org/abs/2604.08510v1",
+      "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis",
       "authors": [
-        "Bowen Ye",
-        "Rang Li",
-        "Qibin Yang",
-        "Yuanxin Liu",
-        "Linli Yao",
-        "Hanglong Lv",
-        "Zhihui Xie",
-        "Chenxin An",
-        "Lei Li",
-        "Lingpeng Kong",
-        "Qi Liu",
-        "Zhifang Sui",
-        "Tong Yang"
+        "Emmy Liu",
+        "Kaiser Sun",
+        "Millicent Li",
+        "Isabelle Lee",
+        "Lindia Tjuatja",
+        "Jen-tse Huang",
+        "Graham Neubig"
       ],
-      "summary": "Large language models are increasingly deployed as autonomous agents executing multi-step workflows in real-world software environments. However, existing agent benchmarks suffer from three critical limitations: (1) trajectory-opaque grading that checks only final outputs, (2) underspecified safety and robustness evaluation, and (3) narrow modality coverage and interaction paradigms. We introduce Claw-Eval, an end-to-end evaluation suite addressing all three gaps. It comprises 300 human-verified tasks spanning 9 categories across three groups (general service orchestration, multimodal perception and generation, and multi-turn professional dialogue). Every agent action is recorded through three independent evidence channels (execution traces, audit logs, and environment snapshots), enabling trajectory-aware grading over 2,159 fine-grained rubric items. The scoring protocol evaluates Completion, Safety, and Robustness, reporting Average Score, Pass@k, and Pass^k across three trials to distinguish genuine capability from lucky outcomes. Experiments on 14 frontier models reveal that: (1) trajectory-opaque evaluation is systematically unreliable, missing 44% of safety violations and 13% of robustness failures that our hybrid pipeline catches; (2) controlled error injection primarily degrades consistency rather than peak capability, with Pass^3 dropping up to 24% while Pass@3 remains stable; (3) multimodal performance varies sharply, with most models performing poorer on video than on document or image, and no single model dominating across all modalities. Beyond benchmarking, Claw-Eval highlights actionable directions for agent development, shedding light on what it takes to build agents that are not only capable but reliably deployable.",
-      "published": "2026-04-07T17:43:18Z",
-      "updated": "2026-04-07T17:43:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06132v1"
+      "summary": "Large language models (LLMs) can perform remarkably complex tasks, yet the fine-grained details of how these capabilities emerge during pretraining remain poorly understood. Scaling laws on validation loss tell us how much a model improves with additional compute, but not what skills it acquires in which order. To remedy this, we propose the Implicit Curriculum Hypothesis: pretraining follows a compositional and predictable curriculum across models and data mixtures. We test this by designing a suite of simple, composable tasks spanning retrieval, morphological transformations, coreference, logical reasoning, and mathematics. Using these tasks, we track emergence points across four model families spanning sizes from 410M-13B parameters. We find that emergence orderings of when models reach fixed accuracy thresholds are strikingly consistent ($ρ= .81$ across 45 model pairs), and that composite tasks most often emerge after their component tasks. Furthermore, we find that this structure is encoded in model representations: tasks with similar function vector representations also tend to follow similar trajectories in training. By using the space of representations derived from our task set, we can effectively predict the training trajectories of simple held-out compositional tasks throughout the course of pretraining ($R^2 = .68$-$.84$ across models) without previously evaluating them. Together, these results suggest that pretraining is more structured than loss curves reveal: skills emerge in a compositional order that is consistent across models and readable from their internals.",
+      "published": "2026-04-09T17:50:12Z",
+      "updated": "2026-04-09T17:50:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08510v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.09335v2",
-      "title": "Can ChatGPT Generate Realistic Synthetic System Requirement Specifications? Results of a Case Study",
+      "id": "http://arxiv.org/abs/2604.08491v1",
+      "title": "Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery",
       "authors": [
-        "Alex R. Mattukat",
-        "Florian M. Braun",
-        "Horst Lichter"
+        "Yifang Wang",
+        "Rui Sheng",
+        "Erzhuo Shao",
+        "Yifan Qian",
+        "Haotian Li",
+        "Nan Cao",
+        "Dashun Wang"
       ],
-      "summary": "System requirement specifications (SyRSs) are central, natural-language (NL) artifacts. Access to real SyRS for research purposes is highly valuable but limited by proprietary restrictions or confidentiality concerns. Generating synthetic SyRSs (SSyRSs) can address this scarcity. Black-box large language models (LLMs) such as ChatGPT offer compelling generation capabilities by providing easy access to NL generation functions without requiring access to real data. However, LLMs suffer from hallucinations and overconfidence, which pose major challenges in their use. We designed an exploratory study to investigate whether, despite these challenges, we can generate realistic SSyRSs with ChatGPT without having access to real SyRSs. Using a systematic approach that leverages prompt patterns, LLM-based quality assessments, and iterative prompt refinements, we generated 300 SSyRSs across 10 industries with ChatGPT. The results were evaluated using cross-model checks and an expert study, with n=87 submitted surveys. 62\\% of experts considered the SSyRSs to be realistic. However, in-depth examination revealed contradictory statements and deficiencies. Overall, we were able to generate realistic SSyRSs to a certain extent with ChatGPT, but LLM-based quality assessments cannot fully replace thorough expert evaluations. This paper presents the methodology and results of our study and discusses the key insights we obtained.",
-      "published": "2026-03-10T08:10:56Z",
-      "updated": "2026-04-07T17:43:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.09335v2"
+      "summary": "Large language models (LLMs) are transforming scientific workflows, not only through their generative capabilities but also through their emerging ability to use tools, reason about data, and coordinate complex analytical tasks. Yet in most human-AI collaborations, the primary outputs, figures, are still treated as static visual summaries: once rendered, they are handled by both humans and multimodal LLMs as images to be re-interpreted from pixels or captions. The emergent capabilities of LLMs open an opportunity to fundamentally rethink this paradigm. In this paper, we introduce the concept of LLM-native figures: data-driven artifacts that are simultaneously human-legible and machine-addressable. Unlike traditional plots, each artifact embeds complete provenance: the data subset, analytical operations and code, and visualization specification used to generate it. As a result, an LLM can \"see through\" the figure--tracing selections back to their sources, generating code to extend analyses, and orchestrating new visualizations through natural-language instructions or direct manipulation. We implement this concept through a hybrid language-visual interface that integrates LLM agents with a bidirectional mapping between figures and underlying data. Using the science of science domain as a testbed, we demonstrate that LLM-native figures can accelerate discovery, improve reproducibility, and make reasoning transparent across agents and users. More broadly, this work establishes a general framework for embedding provenance, interactivity, and explainability into the artifacts of modern research, redefining the figure not as an end product, but as an interface for discovery. For more details, please refer to the demo video available at www.llm-native-figure.com.",
+      "published": "2026-04-09T17:30:58Z",
+      "updated": "2026-04-09T17:30:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08491v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.02320v2",
-      "title": "Large-scale Codec Avatars: The Unreasonable Effectiveness of Large-scale Avatar Pretraining",
+      "id": "http://arxiv.org/abs/2604.08479v1",
+      "title": "AI generates well-liked but templatic empathic responses",
       "authors": [
-        "Junxuan Li",
-        "Rawal Khirodkar",
-        "Chengan He",
-        "Zhongshi Jiang",
-        "Giljoo Nam",
-        "Lingchen Yang",
-        "Jihyun Lee",
-        "Egor Zakharov",
-        "Zhaoen Su",
-        "Rinat Abdrashitov",
-        "Yuan Dong",
-        "Julieta Martinez",
-        "Kai Li",
-        "Qingyang Tan",
-        "Takaaki Shiratori",
-        "Matthew Hu",
-        "Peihong Guo",
-        "Xuhua Huang",
-        "Ariyan Zarei",
-        "Marco Pesavento",
-        "Yichen Xu",
-        "He Wen",
-        "Teng Deng",
-        "Wyatt Borsos",
-        "Anjali Thakrar",
-        "Jean-Charles Bazin",
-        "Carsten Stoll",
-        "Ginés Hidalgo",
-        "James Booth",
-        "Lucy Wang",
-        "Xiaowen Ma",
-        "Yu Rong",
-        "Sairanjith Thalanki",
-        "Chen Cao",
-        "Christian Häne",
-        "Abhishek Kar",
-        "Sofien Bouaziz",
-        "Jason Saragih",
-        "Yaser Sheikh",
-        "Shunsuke Saito"
+        "Emma Gueorguieva",
+        "Hongli Zhan",
+        "Jina Suh",
+        "Javier Hernandez",
+        "Tatiana Lau",
+        "Junyi Jessy Li",
+        "Desmond C. Ong"
       ],
-      "summary": "High-quality 3D avatar modeling faces a critical trade-off between fidelity and generalization. On the one hand, multi-view studio data enables high-fidelity modeling of humans with precise control over expressions and poses, but it struggles to generalize to real-world data due to limited scale and the domain gap between the studio environment and the real world. On the other hand, recent large-scale avatar models trained on millions of in-the-wild samples show promise for generalization across a wide range of identities, yet the resulting avatars are often of low-quality due to inherent 3D ambiguities. To address this, we present Large-Scale Codec Avatars (LCA), a high-fidelity, full-body 3D avatar model that generalizes to world-scale populations in a feedforward manner, enabling efficient inference. Inspired by the success of large language models and vision foundation models, we present, for the first time, a pre/post-training paradigm for 3D avatar modeling at scale: we pretrain on 1M in-the-wild videos to learn broad priors over appearance and geometry, then post-train on high-quality curated data to enhance expressivity and fidelity. LCA generalizes across hair styles, clothing, and demographics while providing precise, fine-grained facial expressions and finger-level articulation control, with strong identity preservation. Notably, we observe emergent generalization to relightability and loose garment support to unconstrained inputs, and zero-shot robustness to stylized imagery, despite the absence of direct supervision.",
-      "published": "2026-04-02T17:58:40Z",
-      "updated": "2026-04-07T17:25:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.02320v2"
+      "summary": "Recent research shows that greater numbers of people are turning to Large Language Models (LLMs) for emotional support, and that people rate LLM responses as more empathic than human-written responses. We suggest a reason for this success: LLMs have learned and consistently deploy a well-liked template for expressing empathy. We develop a taxonomy of 10 empathic language \"tactics\" that include validating someone's feelings and paraphrasing, and apply this taxonomy to characterize the language that people and LLMs produce when writing empathic responses. Across a set of 2 studies comparing a total of n = 3,265 AI-generated (by six models) and n = 1,290 human-written responses, we find that LLM responses are highly formulaic at a discourse functional level. We discovered a template -- a structured sequence of tactics -- that matches between 83--90% of LLM responses (and 60--83\\% in a held out sample), and when those are matched, covers 81--92% of the response. By contrast, human-written responses are more diverse. We end with a discussion of implications for the future of AI-generated empathy.",
+      "published": "2026-04-09T17:22:42Z",
+      "updated": "2026-04-09T17:22:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08479v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06095v1",
-      "title": "LLM4CodeRE: Generative AI for Code Decompilation Analysis and Reverse Engineering",
+      "id": "http://arxiv.org/abs/2604.08477v1",
+      "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
       "authors": [
-        "Hamed Jelodar",
-        "Samita Bai",
-        "Tochukwu Emmanuel Nwankwo",
-        "Parisa Hamedi",
-        "Mohammad Meymani",
-        "Roozbeh Razavi-Far",
-        "Ali A. Ghorbani"
+        "Ashima Suvarna",
+        "Kendrick Phan",
+        "Mehrab Beikzadeh",
+        "Hritik Bansal",
+        "Saadia Gabriel"
       ],
-      "summary": "Code decompilation analysis is a fundamental yet challenging task in malware reverse engineering, particularly due to the pervasive use of sophisticated obfuscation techniques. Although recent large language models (LLMs) have shown promise in translating low-level representations into high-level source code, most existing approaches rely on generic code pretraining and lack adaptation to malicious software. We propose LLM4CodeRE, a domain-adaptive LLM framework for bidirectional code reverse engineering that supports both assembly-to-source decompilation and source-to-assembly translation within a unified model. To enable effective task adaptation, we introduce two complementary fine-tuning strategies: (i) a Multi-Adapter approach for task-specific syntactic and semantic alignment, and (ii) a Seq2Seq Unified approach using task-conditioned prefixes to enforce end-to-end generation constraints. Experimental results demonstrate that LLM4CodeRE outperforms existing decompilation tools and general-purpose code models, achieving robust bidirectional generalization.",
-      "published": "2026-04-07T17:08:44Z",
-      "updated": "2026-04-07T17:08:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06095v1"
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly improved large language model (LLM) reasoning in formal domains such as mathematics and code. Despite these advancements, LLMs still struggle with general reasoning tasks requiring capabilities such as causal inference and temporal understanding. Extending RLVR to general reasoning is fundamentally constrained by the lack of high-quality, verifiable training data that spans diverse reasoning skills. To address this challenge, we propose SUPERNOVA, a data curation framework for RLVR aimed at enhancing general reasoning. Our key insight is that instruction-tuning datasets containing expert-annotated ground-truth encode rich reasoning patterns that can be systematically adapted for RLVR. To study this, we conduct 100+ controlled RL experiments to analyze how data design choices impact downstream reasoning performance. In particular, we investigate three key factors: (i) source task selection, (ii) task mixing strategies, and (iii) synthetic interventions for improving data quality. Our analysis reveals that source task selection is non-trivial and has a significant impact on downstream reasoning performance. Moreover, selecting tasks based on their performance for individual target tasks outperforms strategies based on overall average performance. Finally, models trained on SUPERNOVA outperform strong baselines (e.g., Qwen3.5) on challenging reasoning benchmarks including BBEH, Zebralogic, and MMLU-Pro. In particular, training on SUPERNOVA yields relative improvements of up to 52.8\\% on BBEH across model sizes, demonstrating the effectiveness of principled data curation for RLVR. Our findings provide practical insights for curating human-annotated resources to extend RLVR to general reasoning. The code and data is available at https://github.com/asuvarna31/supernova.",
+      "published": "2026-04-09T17:16:07Z",
+      "updated": "2026-04-09T17:16:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08477v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06091v1",
-      "title": "Social Dynamics as Critical Vulnerabilities that Undermine Objective Decision-Making in LLM Collectives",
+      "id": "http://arxiv.org/abs/2604.08475v1",
+      "title": "LAMP: Lift Image-Editing as General 3D Priors for Open-world Manipulation",
       "authors": [
-        "Changgeon Ko",
-        "Jisu Shin",
-        "Hoyun Song",
-        "Huije Lee",
-        "Eui Jun Hwang",
-        "Jong C. Park"
+        "Jingjing Wang",
+        "Zhengdong Hong",
+        "Chong Bao",
+        "Yuke Zhu",
+        "Junhan Sun",
+        "Guofeng Zhang"
       ],
-      "summary": "Large language model (LLM) agents are increasingly acting as human delegates in multi-agent environments, where a representative agent integrates diverse peer perspectives to make a final decision. Drawing inspiration from social psychology, we investigate how the reliability of this representative agent is undermined by the social context of its network. We define four key phenomena-social conformity, perceived expertise, dominant speaker effect, and rhetorical persuasion-and systematically manipulate the number of adversaries, relative intelligence, argument length, and argumentative styles. Our experiments demonstrate that the representative agent's accuracy consistently declines as social pressure increases: larger adversarial groups, more capable peers, and longer arguments all lead to significant performance degradation. Furthermore, rhetorical strategies emphasizing credibility or logic can further sway the agent's judgment, depending on the context. These findings reveal that multi-agent systems are sensitive not only to individual reasoning but also to the social dynamics of their configuration, highlighting critical vulnerabilities in AI delegates that mirror the psychological biases observed in human group decision-making.",
-      "published": "2026-04-07T17:04:21Z",
-      "updated": "2026-04-07T17:04:21Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06091v1"
+      "summary": "Human-like generalization in open-world remains a fundamental challenge for robotic manipulation. Existing learning-based methods, including reinforcement learning, imitation learning, and vision-language-action-models (VLAs), often struggle with novel tasks and unseen environments. Another promising direction is to explore generalizable representations that capture fine-grained spatial and geometric relations for open-world manipulation. While large-language-model (LLMs) and vision-language-model (VLMs) provide strong semantic reasoning based on language or annotated 2D representations, their limited 3D awareness restricts their applicability to fine-grained manipulation. To address this, we propose LAMP, which lifts image-editing as 3D priors to extract inter-object 3D transformations as continuous, geometry-aware representations. Our key insight is that image-editing inherently encodes rich 2D spatial cues, and lifting these implicit cues into 3D transformations provides fine-grained and accurate guidance for open-world manipulation. Extensive experiments demonstrate that \\codename delivers precise 3D transformations and achieves strong zero-shot generalization in open-world manipulation. Project page: https://zju3dv.github.io/LAMP/.",
+      "published": "2026-04-09T17:14:00Z",
+      "updated": "2026-04-09T17:14:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.08475v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.06079v1",
-      "title": "Scientific Graphics Program Synthesis via Dual Self-Consistency Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2601.02535v2",
+      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
       "authors": [
-        "Juekai Lin",
-        "Yun Zhu",
-        "Honglin Lin",
-        "Sijing Li",
-        "Tianwei Lin",
-        "Zheng Liu",
-        "Xiaoyang Wang",
-        "Wenqiao Zhang",
-        "Lijun Wu"
+        "Hyeong Kyu Choi",
+        "Sharon Li"
       ],
-      "summary": "Graphics Program Synthesis is pivotal for interpreting and editing visual data, effectively facilitating the reverse-engineering of static visuals into editable TikZ code. While TikZ is the de facto standard for scientific schematics due to its programmatic flexibility, its requirement for rigorous spatial precision presents a significant challenge for Multimodal Large Language Models. Progress is currently stifled by two primary gaps: (1) Data Quality Gap: existing image-TikZ corpora often lack strict executability and reliable visual alignment; (2) Evaluation Gap: a lack of benchmarks for both structural and visual fidelity. To address these, we present a closed-loop framework featuring: SciTikZ-230K, a large-scale, high-quality dataset from our Execution-Centric Data Engine covering 11 diverse scientific disciplines; SciTikZ-Bench, a multifaceted benchmark spanning from basic geometric constructs to intricate hierarchical schematics to evaluate both visual fidelity and structural logic. To further broaden the scope of visual-code optimization methodology, we introduce a novel Dual Self-Consistency Reinforcement Learning optimization paradigm, which utilizes Round-Trip Verification to penalize degenerate code and boost overall self-consistency. Empowered by these, our trained model SciTikZer-8B achieves state-of-the-art performance, consistently outperforming proprietary giants like Gemini-2.5-Pro and massive models like Qwen3-VL-235B-A22B-Instruct.",
-      "published": "2026-04-07T16:58:14Z",
-      "updated": "2026-04-07T16:58:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.06079v1"
+      "summary": "Selecting a single high-quality output from multiple stochastic generations remains a fundamental challenge for large language models (LLMs), particularly in open-ended tasks where no canonical answer exists. While Best-of-N and self-consistency methods show that aggregating multiple generations can improve performance, existing approaches typically rely on external evaluators, reward models, or exact string-match voting, limiting their applicability and efficiency. We propose Mode Extraction (ModeX), an evaluator-free Best-of-N selection framework that generalizes majority voting to open-ended text generation by identifying the modal output representing the dominant semantic consensus among generated texts. ModeX constructs a similarity graph over candidate generations and recursively applies spectral clustering to select a representative centroid, without requiring additional inference or auxiliary models. We further instantiate this selection principle as ModeX-Lite, an improved version of ModeX with early pruning for efficiency. Across open-ended tasks -- including text summarization, code generation, and mathematical reasoning -- our approaches consistently outperform standard single- and multi-path baselines, providing a computationally efficient solution for robust open-ended text generation. Code is released in https://github.com/deeplearning-wisc/ModeX.",
+      "published": "2026-01-05T20:16:32Z",
+      "updated": "2026-04-09T17:10:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.02535v2"
     }
   ]
 }
