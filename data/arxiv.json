@@ -1,195 +1,195 @@
 {
-  "generated_at_utc": "2026-04-12T02:32:05Z",
+  "generated_at_utc": "2026-04-13T02:36:55Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.08540v1",
-      "title": "AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation",
+      "id": "http://arxiv.org/abs/2604.09547v1",
+      "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
       "authors": [
-        "Ziwei Zhou",
-        "Zeyuan Lai",
-        "Rui Wang",
-        "Yifan Yang",
-        "Zhen Xing",
-        "Yuqing Yang",
-        "Qi Dai",
-        "Lili Qiu",
-        "Chong Luo"
+        "Shukang Yin",
+        "Sirui Zhao",
+        "Hanchao Wang",
+        "Baozhi Jia",
+        "Xianquan Wang",
+        "Chaoyou Fu",
+        "Enhong Chen"
       ],
-      "summary": "Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or rely on coarse embedding similarity, failing to capture the fine-grained joint correctness required by realistic prompts. We introduce AVGen-Bench, a task-driven benchmark for T2AV generation featuring high-quality prompts across 11 real-world categories. To support comprehensive assessment, we propose a multi-granular evaluation framework that combines lightweight specialist models with Multimodal Large Language Models (MLLMs), enabling evaluation from perceptual quality to fine-grained semantic controllability. Our evaluation reveals a pronounced gap between strong audio-visual aesthetics and weak semantic reliability, including persistent failures in text rendering, speech coherence, physical reasoning, and a universal breakdown in musical pitch control. Code and benchmark resources are available at http://aka.ms/avgenbench.",
-      "published": "2026-04-09T17:59:39Z",
-      "updated": "2026-04-09T17:59:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08540v1"
+      "summary": "Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88x inference speedup.",
+      "published": "2026-04-10T17:59:56Z",
+      "updated": "2026-04-10T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09547v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08539v1",
-      "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
+      "id": "http://arxiv.org/abs/2604.09544v1",
+      "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
       "authors": [
-        "Wenbo Hu",
-        "Xin Chen",
-        "Yan Gao-Tian",
-        "Yihe Deng",
-        "Nanyun Peng",
-        "Kai-Wei Chang"
+        "Hadas Orgad",
+        "Boyi Wei",
+        "Kaden Zheng",
+        "Martin Wattenberg",
+        "Peter Henderson",
+        "Seraphina Goldfarb-Tarrant",
+        "Yonatan Belinkov"
       ],
-      "summary": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
-      "published": "2026-04-09T17:59:39Z",
-      "updated": "2026-04-09T17:59:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08539v1"
+      "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
+      "published": "2026-04-10T17:58:31Z",
+      "updated": "2026-04-10T17:58:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09544v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08527v1",
-      "title": "Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models",
+      "id": "http://arxiv.org/abs/2510.23636v3",
+      "title": "LLM4Delay: Flight Delay Prediction via Cross-Modality Adaptation of Large Language Models and Aircraft Trajectory Representation",
       "authors": [
-        "Feng Luo",
-        "Yu-Neng Chuang",
-        "Guanchu Wang",
-        "Zicheng Xu",
-        "Xiaotian Han",
-        "Tianyi Zhang",
-        "Vladimir Braverman"
+        "Thaweerath Phisannupawong",
+        "Joshua Julian Damanik",
+        "Han-Lim Choi"
       ],
-      "summary": "On-policy distillation (OPD) trains student models under their own induced distribution while leveraging supervision from stronger teachers. We identify a failure mode of OPD: as training progresses, on-policy rollouts can undergo abrupt length inflation, causing truncated trajectories to dominate the training data. This truncation collapse coincides with abrupt repetition saturation and induces biased gradient signals, leading to severe training instability and sharp degradation in validation performance. We attribute this problem to the interaction between student-induced data collection and the distillation objective, which implicitly favors long and repetitive rollouts. To address this issue, we propose StableOPD, a stabilized OPD framework that combines a reference-based divergence constraint with rollout mixture distillation. These together mitigate repetition-induced length inflation and further stabilize OPD training. Across multiple math reasoning datasets, our approach prevents truncation collapse, stabilizes training dynamics, and improves performance by 7.2% on average.",
-      "published": "2026-04-09T17:58:02Z",
-      "updated": "2026-04-09T17:58:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08527v1"
+      "summary": "Flight delay prediction has become a key focus in air traffic management (ATM), as delays reflect inefficiencies in the system. This paper proposes LLM4Delay, a large language model (LLM)-based framework for predicting flight delays from the perspective of air traffic controllers monitoring aircraft after they enter the terminal maneuvering area (TMA). LLM4Delay is designed to integrate textual aeronautical information, including flight data, weather reports, and aerodrome notices, together with multiple trajectories that model airspace conditions, forming a comprehensive delay-relevant context. By jointly leveraging comprehensive textual and trajectory contexts via instance-level projection, an effective cross-modality adaptation strategy that maps multiple instance-level trajectory representations into the language modality, the framework improves delay prediction accuracy. LLM4Delay demonstrates superior performance compared to existing ATM frameworks and prior time-series-to-language adaptation methods. This highlights the complementary roles of textual and trajectory data while leveraging knowledge from both the pretrained trajectory encoder and the pretrained LLM. The proposed framework enables continuous updates to predictions as new information becomes available, indicating potential operational relevance.",
+      "published": "2025-10-24T12:21:27Z",
+      "updated": "2026-04-10T17:52:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.23636v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08525v1",
-      "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest",
+      "id": "http://arxiv.org/abs/2604.09531v1",
+      "title": "VisionFoundry: Teaching VLMs Visual Perception with Synthetic Images",
       "authors": [
-        "Addison J. Wu",
-        "Ryan Liu",
-        "Shuyue Stella Li",
-        "Yulia Tsvetkov",
-        "Thomas L. Griffiths"
+        "Guanyu Zhou",
+        "Yida Yin",
+        "Wenhao Chai",
+        "Shengbang Tong",
+        "Xingyu Fu",
+        "Zhuang Liu"
       ],
-      "summary": "Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but also to generate revenue for the companies that created them through advertisements. This creates the potential for LLMs to face conflicts of interest, where the most beneficial response to a user may not be aligned with the company's incentives. For instance, a sponsored product may be more expensive but otherwise equal to another; in this case, what does (and should) the LLM recommend to the user? In this paper, we provide a framework for categorizing the ways in which conflicting incentives might lead LLMs to change the way they interact with users, inspired by literature from linguistics and advertising regulation. We then present a suite of evaluations to examine how current models handle these tradeoffs. We find that a majority of LLMs forsake user welfare for company incentives in a multitude of conflict of interest situations, including recommending a sponsored product almost twice as expensive (Grok 4.1 Fast, 83%), surfacing sponsored options to disrupt the purchasing process (GPT 5.1, 94%), and concealing prices in unfavorable comparisons (Qwen 3 Next, 24%). Behaviors also vary strongly with levels of reasoning and users' inferred socio-economic status. Our results highlight some of the hidden risks to users that can emerge when companies begin to subtly incentivize advertisements in chatbots.",
-      "published": "2026-04-09T17:57:50Z",
-      "updated": "2026-04-09T17:57:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08525v1"
+      "summary": "Vision-language models (VLMs) still struggle with visual perception tasks such as spatial understanding and viewpoint recognition. One plausible contributing factor is that natural image datasets provide limited supervision for low-level visual skills. This motivates a practical question: can targeted synthetic supervision, generated from only a task keyword such as Depth Order, address these weaknesses? To investigate this question, we introduce VisionFoundry, a task-aware synthetic data generation pipeline that takes only the task name as input and uses large language models (LLMs) to generate questions, answers, and text-to-image (T2I) prompts, then synthesizes images with T2I models and verifies consistency with a proprietary VLM, requiring no reference images or human annotation. Using VisionFoundry, we construct VisionFoundry-10K, a synthetic visual question answering (VQA) dataset containing 10k image-question-answer triples spanning 10 tasks. Models trained on VisionFoundry-10K achieve substantial improvements on visual perception benchmarks: +7% on MMVP and +10% on CV-Bench-3D, while preserving broader capabilities and showing favorable scaling behavior as data size increases. Our results suggest that limited task-targeted supervision is an important contributor to this bottleneck and that synthetic supervision is a promising path toward more systematic training for VLMs.",
+      "published": "2026-04-10T17:48:51Z",
+      "updated": "2026-04-10T17:48:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09531v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08524v1",
-      "title": "What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal",
+      "id": "http://arxiv.org/abs/2604.09515v1",
+      "title": "When LLMs Lag Behind: Knowledge Conflicts from Evolving APIs in Code Generation",
       "authors": [
-        "Stephen Cheng",
-        "Sarah Wiegreffe",
-        "Dinesh Manocha"
+        "Ahmed Nusayer Ashik",
+        "Shaowei Wang",
+        "Tse-Hsun Chen",
+        "Muhammad Asaduzzaman",
+        "Yuan Tian"
       ],
-      "summary": "Applying steering vectors to large language models (LLMs) is an efficient and effective model alignment technique, but we lack an interpretable explanation for how it works-- specifically, what internal mechanisms steering vectors affect and how this results in different model outputs. To investigate the causal mechanisms underlying the effectiveness of steering vectors, we conduct a comprehensive case study on refusal. We propose a multi-token activation patching framework and discover that different steering methodologies leverage functionally interchangeable circuits when applied at the same layer. These circuits reveal that steering vectors primarily interact with the attention mechanism through the OV circuit while largely ignoring the QK circuit-- freezing all attention scores during steering drops performance by only 8.75% across two model families. A mathematical decomposition of the steered OV circuit further reveals semantically interpretable concepts, even in cases where the steering vector itself does not. Leveraging the activation patching results, we show that steering vectors can be sparsified by up to 90-99% while retaining most performance, and that different steering methodologies agree on a subset of important dimensions.",
-      "published": "2026-04-09T17:57:14Z",
-      "updated": "2026-04-09T17:57:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08524v1"
+      "summary": "The rapid evolution of software libraries creates a significant challenge for Large Language Models (LLMs), whose static parametric knowledge often becomes stale post-training. While retrieval-augmented generation (RAG) is commonly used to provide up-to-date API specifications, \"context-memory conflict\" arises when external instructions contradict a model's internal parametric knowledge. This paper presents a systematic empirical study of LLM code generation under API evolution (e.g., API deprecation, API modification, and API addition), by constructing a benchmark of 270 real-world updates from eight Python libraries. We evaluate four LLM families of 11 models. Our results show that without comprehensive documentation, LLMs struggle to prioritize external context, averaging only 42.55% of generated code examples are executable in the target environment. While structured documentation and larger model scales improve LLMs' ability to update adoption, they do not fully resolve executability issues with a low 66.36% executable rate. In addition, reasoning-based strategies (e.g., Self-Reflection) significantly boost LLMs' performance with 11% improvement on executable rate. Our findings highlight the persistence of outdated patterns from LLMs, even when API update specifications are provided, and emphasize the need for evolution-aware benchmarks and techniques.",
+      "published": "2026-04-10T17:37:26Z",
+      "updated": "2026-04-10T17:37:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09515v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08519v1",
-      "title": "Cram Less to Fit More: Training Data Pruning Improves Memorization of Facts",
+      "id": "http://arxiv.org/abs/2604.09514v1",
+      "title": "Many Ways to Be Fake: Benchmarking Fake News Detection Under Strategy-Driven AI Generation",
       "authors": [
-        "Jiayuan Ye",
-        "Vitaly Feldman",
-        "Kunal Talwar"
+        "Xinyu Wang",
+        "Sai Koneru",
+        "Wenbo Zhang",
+        "Wenliang Zheng",
+        "Saksham Ranjan",
+        "Sarah Rajtmajer"
       ],
-      "summary": "Large language models (LLMs) can struggle to memorize factual knowledge in their parameters, often leading to hallucinations and poor performance on knowledge-intensive tasks. In this paper, we formalize fact memorization from an information-theoretic perspective and study how training data distributions affect fact accuracy. We show that fact accuracy is suboptimal (below the capacity limit) whenever the amount of information contained in the training data facts exceeds model capacity. This is further exacerbated when the fact frequency distribution is skewed (e.g. a power law). We propose data selection schemes based on the training loss alone that aim to limit the number of facts in the training data and flatten their frequency distribution. On semi-synthetic datasets containing high-entropy facts, our selection method effectively boosts fact accuracy to the capacity limit. When pretraining language models from scratch on an annotated Wikipedia corpus, our selection method enables a GPT2-Small model (110m parameters) to memorize 1.3X more entity facts compared to standard training, matching the performance of a 10X larger model (1.3B parameters) pretrained on the full dataset.",
-      "published": "2026-04-09T17:55:50Z",
-      "updated": "2026-04-09T17:55:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08519v1"
+      "summary": "Recent advances in large language models (LLMs) have enabled the large-scale generation of highly fluent and deceptive news-like content. While prior work has often treated fake news detection as a binary classification problem, modern fake news increasingly arises through human-AI collaboration, where strategic inaccuracies are embedded within otherwise accurate and credible narratives. These mixed-truth cases represent a realistic and consequential threat, yet they remain underrepresented in existing benchmarks. To address this gap, we introduce MANYFAKE, a synthetic benchmark containing 6,798 fake news articles generated through multiple strategy-driven prompting pipelines that capture many ways fake news can be constructed and refined. Using this benchmark, we evaluate a range of state-of-the-art fake news detectors. Our results show that even advanced reasoning-enabled models approach saturation on fully fabricated stories, but remain brittle when falsehoods are subtle, optimized, and interwoven with accurate information.",
+      "published": "2026-04-10T17:36:00Z",
+      "updated": "2026-04-10T17:36:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09514v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08510v1",
-      "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis",
+      "id": "http://arxiv.org/abs/2604.09512v1",
+      "title": "Integrated electro-optic attention nonlinearities for transformers",
       "authors": [
-        "Emmy Liu",
-        "Kaiser Sun",
-        "Millicent Li",
-        "Isabelle Lee",
-        "Lindia Tjuatja",
-        "Jen-tse Huang",
-        "Graham Neubig"
+        "Luis Mickeler",
+        "Kai Lion",
+        "Alfonso Nardi",
+        "Jost Kellner",
+        "Pierre Didier",
+        "Bhavin J. Shastri",
+        "Niao He",
+        "Rachel Grange"
       ],
-      "summary": "Large language models (LLMs) can perform remarkably complex tasks, yet the fine-grained details of how these capabilities emerge during pretraining remain poorly understood. Scaling laws on validation loss tell us how much a model improves with additional compute, but not what skills it acquires in which order. To remedy this, we propose the Implicit Curriculum Hypothesis: pretraining follows a compositional and predictable curriculum across models and data mixtures. We test this by designing a suite of simple, composable tasks spanning retrieval, morphological transformations, coreference, logical reasoning, and mathematics. Using these tasks, we track emergence points across four model families spanning sizes from 410M-13B parameters. We find that emergence orderings of when models reach fixed accuracy thresholds are strikingly consistent ($ρ= .81$ across 45 model pairs), and that composite tasks most often emerge after their component tasks. Furthermore, we find that this structure is encoded in model representations: tasks with similar function vector representations also tend to follow similar trajectories in training. By using the space of representations derived from our task set, we can effectively predict the training trajectories of simple held-out compositional tasks throughout the course of pretraining ($R^2 = .68$-$.84$ across models) without previously evaluating them. Together, these results suggest that pretraining is more structured than loss curves reveal: skills emerge in a compositional order that is consistent across models and readable from their internals.",
-      "published": "2026-04-09T17:50:12Z",
-      "updated": "2026-04-09T17:50:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08510v1"
+      "summary": "Transformers have emerged as the dominant neural-network architecture, achieving state-of-the-art performance in language processing and computer vision. At the core of these models lies the attention mechanism, which requires a nonlinear, non-negative mapping using the Softmax function. However, although Softmax operations account for less than 1% of the total operation count, they can disproportionately bottleneck overall inference latency. Here, we use thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements to drastically reduce the latency of nonlinear computations. We implement electro-optic alternatives to digital Softmax and Sigmoid, and evaluate their performance in Vision Transformers and Large Language Models. Our system maintains highly competitive accuracy, even under aggressive 4-bit input-output quantization of the analog units. We further characterize system noise at encoding speeds up to 10 GBaud and assess model robustness under various noise conditions. Our findings suggest that TFLN modulators can serve as nonlinear function units within hybrid co-packaged hardware, enabling high-speed and energy-efficient nonlinear computation.",
+      "published": "2026-04-10T17:30:51Z",
+      "updated": "2026-04-10T17:30:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09512v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08491v1",
-      "title": "Figures as Interfaces: Toward LLM-Native Artifacts for Scientific Discovery",
+      "id": "http://arxiv.org/abs/2502.06809v3",
+      "title": "Neurons Speak in Ranges: Breaking Free from Discrete Neuronal Attribution",
       "authors": [
-        "Yifang Wang",
-        "Rui Sheng",
-        "Erzhuo Shao",
-        "Yifan Qian",
-        "Haotian Li",
-        "Nan Cao",
-        "Dashun Wang"
+        "Muhammad Umair Haider",
+        "Hammad Rizwan",
+        "Hassan Sajjad",
+        "Peizhong Ju",
+        "A. B. Siddique"
       ],
-      "summary": "Large language models (LLMs) are transforming scientific workflows, not only through their generative capabilities but also through their emerging ability to use tools, reason about data, and coordinate complex analytical tasks. Yet in most human-AI collaborations, the primary outputs, figures, are still treated as static visual summaries: once rendered, they are handled by both humans and multimodal LLMs as images to be re-interpreted from pixels or captions. The emergent capabilities of LLMs open an opportunity to fundamentally rethink this paradigm. In this paper, we introduce the concept of LLM-native figures: data-driven artifacts that are simultaneously human-legible and machine-addressable. Unlike traditional plots, each artifact embeds complete provenance: the data subset, analytical operations and code, and visualization specification used to generate it. As a result, an LLM can \"see through\" the figure--tracing selections back to their sources, generating code to extend analyses, and orchestrating new visualizations through natural-language instructions or direct manipulation. We implement this concept through a hybrid language-visual interface that integrates LLM agents with a bidirectional mapping between figures and underlying data. Using the science of science domain as a testbed, we demonstrate that LLM-native figures can accelerate discovery, improve reproducibility, and make reasoning transparent across agents and users. More broadly, this work establishes a general framework for embedding provenance, interactivity, and explainability into the artifacts of modern research, redefining the figure not as an end product, but as an interface for discovery. For more details, please refer to the demo video available at www.llm-native-figure.com.",
-      "published": "2026-04-09T17:30:58Z",
-      "updated": "2026-04-09T17:30:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08491v1"
+      "summary": "Pervasive polysemanticity in large language models (LLMs) undermines discrete neuron-concept attribution, posing a significant challenge for model interpretation and control. We systematically analyze both encoder and decoder based LLMs across diverse datasets, and observe that even highly salient neurons for specific semantic concepts consistently exhibit polysemantic behavior. Importantly, we uncover a consistent pattern: concept-conditioned activation magnitudes of neurons form distinct, often Gaussian-like distributions with minimal overlap. Building on this observation, we hypothesize that interpreting and intervening on concept-specific activation ranges can enable more precise interpretability and targeted manipulation in LLMs. To this end, we introduce NeuronLens, a novel range-based interpretation and manipulation framework, that localizes concept attribution to activation ranges within a neuron. Extensive empirical evaluations show that range-based interventions enable effective manipulation of target concepts while causing substantially less collateral degradation to auxiliary concepts and overall model performance compared to neuron-level masking.",
+      "published": "2025-02-04T03:33:55Z",
+      "updated": "2026-04-10T17:29:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.06809v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08479v1",
-      "title": "AI generates well-liked but templatic empathic responses",
+      "id": "http://arxiv.org/abs/2604.09502v1",
+      "title": "Strategic Algorithmic Monoculture:Experimental Evidence from Coordination Games",
       "authors": [
-        "Emma Gueorguieva",
-        "Hongli Zhan",
-        "Jina Suh",
-        "Javier Hernandez",
-        "Tatiana Lau",
-        "Junyi Jessy Li",
-        "Desmond C. Ong"
+        "Gonzalo Ballestero",
+        "Hadi Hosseini",
+        "Samarth Khanna",
+        "Ran I. Shorrer"
       ],
-      "summary": "Recent research shows that greater numbers of people are turning to Large Language Models (LLMs) for emotional support, and that people rate LLM responses as more empathic than human-written responses. We suggest a reason for this success: LLMs have learned and consistently deploy a well-liked template for expressing empathy. We develop a taxonomy of 10 empathic language \"tactics\" that include validating someone's feelings and paraphrasing, and apply this taxonomy to characterize the language that people and LLMs produce when writing empathic responses. Across a set of 2 studies comparing a total of n = 3,265 AI-generated (by six models) and n = 1,290 human-written responses, we find that LLM responses are highly formulaic at a discourse functional level. We discovered a template -- a structured sequence of tactics -- that matches between 83--90% of LLM responses (and 60--83\\% in a held out sample), and when those are matched, covers 81--92% of the response. By contrast, human-written responses are more diverse. We end with a discussion of implications for the future of AI-generated empathy.",
-      "published": "2026-04-09T17:22:42Z",
-      "updated": "2026-04-09T17:22:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08479v1"
+      "summary": "AI agents increasingly operate in multi-agent environments where outcomes depend on coordination. We distinguish primary algorithmic monoculture -- baseline action similarity -- from strategic algorithmic monoculture, whereby agents adjust similarity in response to incentives. We implement a simple experimental design that cleanly separates these forces, and deploy it on human and large language model (LLM) subjects. LLMs exhibit high levels of baseline similarity (primary monoculture) and, like humans, they regulate it in response to coordination incentives (strategic monoculture). While LLMs coordinate extremely well on similar actions, they lag behind humans in sustaining heterogeneity when divergence is rewarded.",
+      "published": "2026-04-10T17:14:46Z",
+      "updated": "2026-04-10T17:14:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09502v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08477v1",
-      "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+      "id": "http://arxiv.org/abs/2604.09497v1",
+      "title": "BERT-as-a-Judge: A Robust Alternative to Lexical Methods for Efficient Reference-Based LLM Evaluation",
       "authors": [
-        "Ashima Suvarna",
-        "Kendrick Phan",
-        "Mehrab Beikzadeh",
-        "Hritik Bansal",
-        "Saadia Gabriel"
+        "Hippolyte Gisserot-Boukhlef",
+        "Nicolas Boizard",
+        "Emmanuel Malherbe",
+        "Céline Hudelot",
+        "Pierre Colombo"
       ],
-      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly improved large language model (LLM) reasoning in formal domains such as mathematics and code. Despite these advancements, LLMs still struggle with general reasoning tasks requiring capabilities such as causal inference and temporal understanding. Extending RLVR to general reasoning is fundamentally constrained by the lack of high-quality, verifiable training data that spans diverse reasoning skills. To address this challenge, we propose SUPERNOVA, a data curation framework for RLVR aimed at enhancing general reasoning. Our key insight is that instruction-tuning datasets containing expert-annotated ground-truth encode rich reasoning patterns that can be systematically adapted for RLVR. To study this, we conduct 100+ controlled RL experiments to analyze how data design choices impact downstream reasoning performance. In particular, we investigate three key factors: (i) source task selection, (ii) task mixing strategies, and (iii) synthetic interventions for improving data quality. Our analysis reveals that source task selection is non-trivial and has a significant impact on downstream reasoning performance. Moreover, selecting tasks based on their performance for individual target tasks outperforms strategies based on overall average performance. Finally, models trained on SUPERNOVA outperform strong baselines (e.g., Qwen3.5) on challenging reasoning benchmarks including BBEH, Zebralogic, and MMLU-Pro. In particular, training on SUPERNOVA yields relative improvements of up to 52.8\\% on BBEH across model sizes, demonstrating the effectiveness of principled data curation for RLVR. Our findings provide practical insights for curating human-annotated resources to extend RLVR to general reasoning. The code and data is available at https://github.com/asuvarna31/supernova.",
-      "published": "2026-04-09T17:16:07Z",
-      "updated": "2026-04-09T17:16:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08477v1"
+      "summary": "Accurate evaluation is central to the large language model (LLM) ecosystem, guiding model selection and downstream adoption across diverse use cases. In practice, however, evaluating generative outputs typically relies on rigid lexical methods to extract and assess answers, which can conflate a model's true problem-solving ability with its compliance with predefined formatting guidelines. While recent LLM-as-a-Judge approaches mitigate this issue by assessing semantic correctness rather than strict structural conformity, they also introduce substantial computational overhead, making evaluation costly. In this work, we first systematically investigate the limitations of lexical evaluation through a large-scale empirical study spanning 36 models and 15 downstream tasks, demonstrating that such methods correlate poorly with human judgments. To address this limitation, we introduce BERT-as-a-Judge, an encoder-driven approach for assessing answer correctness in reference-based generative settings, robust to variations in output phrasing, and requiring only lightweight training on synthetically annotated question-candidate-reference triplets. We show that it consistently outperforms the lexical baseline while matching the performance of much larger LLM judges, providing a compelling tradeoff between the two and enabling reliable, scalable evaluation. Finally, through extensive experimentation, we provide detailed insights into BERT-as-a-Judge's performance to offer practical guidance for practitioners, and release all project artifacts to foster downstream adoption.",
+      "published": "2026-04-10T17:08:40Z",
+      "updated": "2026-04-10T17:08:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09497v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.08475v1",
-      "title": "LAMP: Lift Image-Editing as General 3D Priors for Open-world Manipulation",
+      "id": "http://arxiv.org/abs/2511.04256v2",
+      "title": "SSPO: Subsentence-level Policy Optimization",
       "authors": [
-        "Jingjing Wang",
-        "Zhengdong Hong",
-        "Chong Bao",
-        "Yuke Zhu",
-        "Junhan Sun",
-        "Guofeng Zhang"
+        "Kun Yang",
+        "Zikang chen",
+        "Yanmeng Wang",
+        "Zhigen Li",
+        "Ning Cheng",
+        "Shaojun Wang",
+        "Jing Xiao"
       ],
-      "summary": "Human-like generalization in open-world remains a fundamental challenge for robotic manipulation. Existing learning-based methods, including reinforcement learning, imitation learning, and vision-language-action-models (VLAs), often struggle with novel tasks and unseen environments. Another promising direction is to explore generalizable representations that capture fine-grained spatial and geometric relations for open-world manipulation. While large-language-model (LLMs) and vision-language-model (VLMs) provide strong semantic reasoning based on language or annotated 2D representations, their limited 3D awareness restricts their applicability to fine-grained manipulation. To address this, we propose LAMP, which lifts image-editing as 3D priors to extract inter-object 3D transformations as continuous, geometry-aware representations. Our key insight is that image-editing inherently encodes rich 2D spatial cues, and lifting these implicit cues into 3D transformations provides fine-grained and accurate guidance for open-world manipulation. Extensive experiments demonstrate that \\codename delivers precise 3D transformations and achieves strong zero-shot generalization in open-world manipulation. Project page: https://zju3dv.github.io/LAMP/.",
-      "published": "2026-04-09T17:14:00Z",
-      "updated": "2026-04-09T17:14:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.08475v1"
+      "summary": "As a key component of large language model (LLM) post-training, Reinforcement Learning from Verifiable Rewards (RLVR) has substantially improved reasoning performance. However, existing RLVR algorithms exhibit distinct stability issues: GRPO (Group Relative Policy Optimization) often suffers from unstable policy updates, while GSPO (Group Sequence Policy Optimization) can retain high-variance tokens. In GRPO, the importance ratio is computed at the token level, which overemphasizes individual tokens and makes learning sensitive to outliers, potentially causing training collapse. GSPO instead computes a response-level importance ratio, mitigating variance and reducing the accumulation of token-level noise present in GRPO. Nevertheless, our experiments show that GSPO frequently yields a near-zero clipping fraction: extreme token-level ratios can be diluted by other tokens in the same response, causing the entire response to be retained and resulting in unstable updates. We propose SSPO, which computes importance ratios at the subsentence level, striking a balance between GRPO and GSPO. SSPO alleviates training collapse and excessive variance while avoiding the failure mode in which the clipping mechanism indiscriminately retains entire responses. Moreover, we incorporate subsentence-level entropy into PPO-CLIP to adaptively adjust the clipping bounds: we encourage exploration for high-entropy tokens while tightening the clipping range for low-entropy tokens. Empirically, SSPO achieves an average score of 46.72 across five datasets on Qwen2.5-1.5B-Math model, outperforming GRPO (43.01) and GSPO (44.42), and attains state-of-the-art results on four datasets. On Qwen2.5-7B-Math model, SSPO also achieves the highest averaged scores over five baseline methods. These results demonstrate SSPO's effectiveness in RLVR.",
+      "published": "2025-11-06T10:48:31Z",
+      "updated": "2026-04-10T17:03:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.04256v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.02535v2",
-      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+      "id": "http://arxiv.org/abs/2604.09493v1",
+      "title": "Policy-Aware Edge LLM-RAG Framework for Internet of Battlefield Things Mission Orchestration",
       "authors": [
-        "Hyeong Kyu Choi",
-        "Sharon Li"
+        "Om Solanki",
+        "Lopamudra Praharaj",
+        "Deepti Gupta",
+        "Maanak Gupta"
       ],
-      "summary": "Selecting a single high-quality output from multiple stochastic generations remains a fundamental challenge for large language models (LLMs), particularly in open-ended tasks where no canonical answer exists. While Best-of-N and self-consistency methods show that aggregating multiple generations can improve performance, existing approaches typically rely on external evaluators, reward models, or exact string-match voting, limiting their applicability and efficiency. We propose Mode Extraction (ModeX), an evaluator-free Best-of-N selection framework that generalizes majority voting to open-ended text generation by identifying the modal output representing the dominant semantic consensus among generated texts. ModeX constructs a similarity graph over candidate generations and recursively applies spectral clustering to select a representative centroid, without requiring additional inference or auxiliary models. We further instantiate this selection principle as ModeX-Lite, an improved version of ModeX with early pruning for efficiency. Across open-ended tasks -- including text summarization, code generation, and mathematical reasoning -- our approaches consistently outperform standard single- and multi-path baselines, providing a computationally efficient solution for robust open-ended text generation. Code is released in https://github.com/deeplearning-wisc/ModeX.",
-      "published": "2026-01-05T20:16:32Z",
-      "updated": "2026-04-09T17:10:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.02535v2"
+      "summary": "Large Language Models (LLMs) offer a promising interface for intent-driven control of autonomous cyber-physical systems, but their direct use in mission-critical Internet of Battlefield Things (IoBT) environments raises significant safety, reliability, and policy-compliance concerns. This paper presents a Policy-Aware Large Language Model Retrieval-Augmented Generation (referred as PA-LLM-RAG), an edge-deployed LLM orchestration framework for IoBT mission control that integrates retrieval-augmented reasoning and independent command verification. The proposed PA-LLM-RAG framework combines a lightweight retrieval module that grounds decisions in operational policies and telemetry with a locally hosted LLM for mission planning and a secondary JudgeLLM for validating user generated commands prior to execution. To evaluate PA-LLM-RAG, we implement a simulated IoBT environment using RoboDK and assess four open-source LLMs across controlled mission scenarios of increasing complexity, including baseline operations, threat detection, coverage recovery, multi-event coordination, and policy-violation requests. Experimental results demonstrate that the framework effectively detects policy-violating commands while maintaining low-latency response suitable for edge deployment. Gemma-2B achieving the highest overall reliability with 4.17 sec latency and 100% success rate. The findings highlight a clear tradeoff between reasoning capacity and responsiveness across models and show that combining deterministic safeguards with JudgeLLM verification significantly improves reliability in LLM-driven IoBT orchestration.",
+      "published": "2026-04-10T17:01:37Z",
+      "updated": "2026-04-10T17:01:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.09493v1"
     }
   ]
 }
