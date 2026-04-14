@@ -1,195 +1,207 @@
 {
-  "generated_at_utc": "2026-04-13T02:36:55Z",
+  "generated_at_utc": "2026-04-14T02:30:43Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.09547v1",
-      "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
+      "id": "http://arxiv.org/abs/2412.17574v3",
+      "title": "HumanVBench: Probing Human-Centric Video Understanding in MLLMs with Automatically Synthesized Benchmarks",
       "authors": [
-        "Shukang Yin",
-        "Sirui Zhao",
-        "Hanchao Wang",
-        "Baozhi Jia",
-        "Xianquan Wang",
-        "Chaoyou Fu",
-        "Enhong Chen"
+        "Ting Zhou",
+        "Daoyuan Chen",
+        "Qirui Jiao",
+        "Bolin Ding",
+        "Yaliang Li",
+        "Ying Shen"
       ],
-      "summary": "Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88x inference speedup.",
-      "published": "2026-04-10T17:59:56Z",
-      "updated": "2026-04-10T17:59:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09547v1"
+      "summary": "Evaluating the nuanced human-centric video understanding capabilities of Multimodal Large Language Models (MLLMs) remains a great challenge, as existing benchmarks often overlook the intricacies of emotion, behavior, and cross-modal alignment. We introduce HumanVBench, a comprehensive video benchmark designed to rigorously probe these capabilities across 16 fine-grained tasks. A cornerstone of our work is a novel and scalable benchmark construction methodology, featuring two automated pipelines that synthesize high-quality video annotations and challenging multiple-choice questions with minimal human labor. By leveraging state-of-the-art models for annotation and systematically converting model-induced errors into plausible distractors, our framework provides a generalizable ``machine'' for creating nuanced evaluation suites. Our extensive evaluation of 30 leading MLLMs on HumanVBench reveals critical deficiencies, particularly in perceiving subtle emotions and aligning speech with visual cues, with even top proprietary models falling short of human performance. We open-source HumanVBench and our synthesis pipelines to catalyze the development of more socially intelligent and capable video MLLMs.",
+      "published": "2024-12-23T13:45:56Z",
+      "updated": "2026-04-13T15:05:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.17574v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09544v1",
-      "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+      "id": "http://arxiv.org/abs/2604.11589v1",
+      "title": "MLLM-as-a-Judge Exhibits Model Preference Bias",
       "authors": [
-        "Hadas Orgad",
-        "Boyi Wei",
-        "Kaden Zheng",
-        "Martin Wattenberg",
-        "Peter Henderson",
-        "Seraphina Goldfarb-Tarrant",
-        "Yonatan Belinkov"
+        "Shuitsu Koyama",
+        "Yuiga Wada",
+        "Daichi Yashima",
+        "Komei Sugiura"
       ],
-      "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
-      "published": "2026-04-10T17:58:31Z",
-      "updated": "2026-04-10T17:58:31Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09544v1"
+      "summary": "Automatic evaluation using multimodal large language models (MLLMs), commonly referred to as MLLM-as-a-Judge, has been widely used to measure model performance. If such MLLM-as-a-Judge methods were biased, they could distort model comparisons and benchmark-driven scientific progress. However, it remains unclear to what extent MLLM-as-a-Judge methods favor or disfavor text generated by specific MLLMs. In this study, we propose Philautia-Eval to investigate such model-specific preference bias. Philautia-Eval quantifies the degree of the bias by disentangling preference tendencies from differences in generation quality. Using 1.29M caption-score pairs collected from 12 MLLMs, we found that representative MLLMs tend to exhibit self-preference bias. Moreover, experimental results indicate mutual preference bias within particular model families, which is potentially driven by reused connectors and overlapping instruction-tuning resources. Finally, we introduce a simple ensemble of MLLMs, Pomms. Our results demonstrated that Pomms effectively mitigated the model-specific preference bias while maintaining performance.",
+      "published": "2026-04-13T15:04:40Z",
+      "updated": "2026-04-13T15:04:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11589v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.23636v3",
-      "title": "LLM4Delay: Flight Delay Prediction via Cross-Modality Adaptation of Large Language Models and Aircraft Trajectory Representation",
+      "id": "http://arxiv.org/abs/2604.02369v3",
+      "title": "Beyond Message Passing: A Semantic View of Agent Communication Protocols",
       "authors": [
-        "Thaweerath Phisannupawong",
-        "Joshua Julian Damanik",
-        "Han-Lim Choi"
+        "Dun Yuan",
+        "Fuyuan Lyu",
+        "Ye Yuan",
+        "Weixu Zhang",
+        "Bowei He",
+        "Jiayi Geng",
+        "Linfeng Du",
+        "Zipeng Sun",
+        "Yankai Chen",
+        "Changjiang Han",
+        "Jikun Kang",
+        "Xi Chen",
+        "Haolun Wu",
+        "Xue Liu"
       ],
-      "summary": "Flight delay prediction has become a key focus in air traffic management (ATM), as delays reflect inefficiencies in the system. This paper proposes LLM4Delay, a large language model (LLM)-based framework for predicting flight delays from the perspective of air traffic controllers monitoring aircraft after they enter the terminal maneuvering area (TMA). LLM4Delay is designed to integrate textual aeronautical information, including flight data, weather reports, and aerodrome notices, together with multiple trajectories that model airspace conditions, forming a comprehensive delay-relevant context. By jointly leveraging comprehensive textual and trajectory contexts via instance-level projection, an effective cross-modality adaptation strategy that maps multiple instance-level trajectory representations into the language modality, the framework improves delay prediction accuracy. LLM4Delay demonstrates superior performance compared to existing ATM frameworks and prior time-series-to-language adaptation methods. This highlights the complementary roles of textual and trajectory data while leveraging knowledge from both the pretrained trajectory encoder and the pretrained LLM. The proposed framework enables continuous updates to predictions as new information becomes available, indicating potential operational relevance.",
-      "published": "2025-10-24T12:21:27Z",
-      "updated": "2026-04-10T17:52:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.23636v3"
+      "summary": "Agent communication protocols are becoming critical infrastructure for large language model (LLM) systems that must use tools, coordinate with other agents, and operate across heterogeneous environments. This work presents a human-inspired perspective on this emerging landscape by organizing agent communication into three layers: communication, syntactic, and semantic. Under this framework, we systematically analyze 18 representative protocols and compare how they support reliable transport, structured interaction, and meaning-level coordination. Our analysis shows a clear imbalance in current protocol design. Most protocols provide increasingly mature support for transport, streaming, schema definition, and lifecycle management, but offer limited protocol-level mechanisms for clarification, context alignment, and verification. As a result, semantic responsibilities are often pushed into prompts, wrappers, or application-specific orchestration logic, creating hidden interoperability and maintenance costs. To make this gap actionable, we further identify major forms of technical debt in today's protocol ecosystem and distill practical guidance for selecting protocols under different deployment settings. We conclude by outlining a research agenda for interoperable, secure, and semantically robust agent ecosystems that move beyond message passing toward shared understanding.",
+      "published": "2026-03-30T00:40:30Z",
+      "updated": "2026-04-13T15:03:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.02369v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09531v1",
-      "title": "VisionFoundry: Teaching VLMs Visual Perception with Synthetic Images",
+      "id": "http://arxiv.org/abs/2604.11582v1",
+      "title": "A Triadic Suffix Tokenization Scheme for Numerical Reasoning",
       "authors": [
-        "Guanyu Zhou",
-        "Yida Yin",
-        "Wenhao Chai",
-        "Shengbang Tong",
-        "Xingyu Fu",
-        "Zhuang Liu"
+        "Olga Chetverina"
       ],
-      "summary": "Vision-language models (VLMs) still struggle with visual perception tasks such as spatial understanding and viewpoint recognition. One plausible contributing factor is that natural image datasets provide limited supervision for low-level visual skills. This motivates a practical question: can targeted synthetic supervision, generated from only a task keyword such as Depth Order, address these weaknesses? To investigate this question, we introduce VisionFoundry, a task-aware synthetic data generation pipeline that takes only the task name as input and uses large language models (LLMs) to generate questions, answers, and text-to-image (T2I) prompts, then synthesizes images with T2I models and verifies consistency with a proprietary VLM, requiring no reference images or human annotation. Using VisionFoundry, we construct VisionFoundry-10K, a synthetic visual question answering (VQA) dataset containing 10k image-question-answer triples spanning 10 tasks. Models trained on VisionFoundry-10K achieve substantial improvements on visual perception benchmarks: +7% on MMVP and +10% on CV-Bench-3D, while preserving broader capabilities and showing favorable scaling behavior as data size increases. Our results suggest that limited task-targeted supervision is an important contributor to this bottleneck and that synthetic supervision is a promising path toward more systematic training for VLMs.",
-      "published": "2026-04-10T17:48:51Z",
-      "updated": "2026-04-10T17:48:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09531v1"
+      "summary": "Standard subword tokenization methods fragment numbers inconsistently, causing large language models (LLMs) to lose positional and decimal structure - a primary driver of errors in arithmetic and scientific reasoning. We introduce Triadic Suffix Tokenization (TST), a deterministic scheme that partitions digits into three-digit triads and annotates each triad with an explicit magnitude marker. Critically, the scheme defines a fixed, one-to-one mapping between suffixes and orders of magnitude for the integer part (thousands, millions, billions, etc.) and a parallel system of replicated markers for fractional depth (tenths, thousandths, millionths, etc.). Unlike approaches that rely on positional inference, this method provides a consistent gradient signal, which should ensure stable convergence. Two implementation variants are proposed: (1) a vocabulary-based approach that adds at most 10,000 fixed tokens to an existing vocabulary, covering 33 orders of magnitude ($10^{-15}$ to $10^{18}$); and (2) a suffix-marker approach that uses a small set of special tokens to denote magnitude dynamically. Both variants preserve exact digits while making order-of-magnitude relationships transparent at the token level. The framework is inherently scalable, allowing for linear vocabulary expansion to accommodate arbitrary precision and range. TST is architecture-agnostic and can be integrated as a drop-in preprocessing step. Experimental validation is deferred to future work.",
+      "published": "2026-04-13T14:58:24Z",
+      "updated": "2026-04-13T14:58:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11582v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09515v1",
-      "title": "When LLMs Lag Behind: Knowledge Conflicts from Evolving APIs in Code Generation",
+      "id": "http://arxiv.org/abs/2601.17172v2",
+      "title": "Who Gets Which Message? Auditing Demographic Bias in LLM-Generated Targeted Text",
       "authors": [
-        "Ahmed Nusayer Ashik",
-        "Shaowei Wang",
-        "Tse-Hsun Chen",
-        "Muhammad Asaduzzaman",
-        "Yuan Tian"
+        "Tunazzina Islam"
       ],
-      "summary": "The rapid evolution of software libraries creates a significant challenge for Large Language Models (LLMs), whose static parametric knowledge often becomes stale post-training. While retrieval-augmented generation (RAG) is commonly used to provide up-to-date API specifications, \"context-memory conflict\" arises when external instructions contradict a model's internal parametric knowledge. This paper presents a systematic empirical study of LLM code generation under API evolution (e.g., API deprecation, API modification, and API addition), by constructing a benchmark of 270 real-world updates from eight Python libraries. We evaluate four LLM families of 11 models. Our results show that without comprehensive documentation, LLMs struggle to prioritize external context, averaging only 42.55% of generated code examples are executable in the target environment. While structured documentation and larger model scales improve LLMs' ability to update adoption, they do not fully resolve executability issues with a low 66.36% executable rate. In addition, reasoning-based strategies (e.g., Self-Reflection) significantly boost LLMs' performance with 11% improvement on executable rate. Our findings highlight the persistence of outdated patterns from LLMs, even when API update specifications are provided, and emphasize the need for evolution-aware benchmarks and techniques.",
-      "published": "2026-04-10T17:37:26Z",
-      "updated": "2026-04-10T17:37:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09515v1"
+      "summary": "Large language models (LLMs) are increasingly capable of generating personalized, persuasive text at scale, raising new questions about bias and fairness in automated communication. This paper presents the first systematic analysis of how LLMs behave when tasked with demographic-conditioned targeted messaging. We introduce a controlled evaluation framework using three leading models: GPT-4o, Llama-3.3, and Mistral-Large-2.1, across two generation settings: Standalone Generation, which isolates intrinsic demographic effects, and Context-Rich Generation, which incorporates thematic and regional context to emulate realistic targeting. We evaluate generated messages along three dimensions: lexical content, language style, and persuasive framing. We instantiate this framework on climate communication and find consistent age- and gender-based asymmetries across models: male- and youth-targeted messages emphasize agency, innovation, and assertiveness, while female- and senior-targeted messages stress warmth, care, and tradition. Contextual prompts systematically amplify these disparities, with persuasion scores significantly higher for messages tailored to younger or male audiences. Our findings demonstrate how demographic stereotypes can surface and intensify in LLM-generated targeted communication, underscoring the need for bias-aware generation pipelines and transparent auditing frameworks that explicitly account for demographic conditioning in socially sensitive applications.",
+      "published": "2026-01-23T21:07:59Z",
+      "updated": "2026-04-13T14:57:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.17172v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09514v1",
-      "title": "Many Ways to Be Fake: Benchmarking Fake News Detection Under Strategy-Driven AI Generation",
+      "id": "http://arxiv.org/abs/2604.11554v1",
+      "title": "Relax: An Asynchronous Reinforcement Learning Engine for Omni-Modal Post-Training at Scale",
       "authors": [
-        "Xinyu Wang",
-        "Sai Koneru",
-        "Wenbo Zhang",
-        "Wenliang Zheng",
-        "Saksham Ranjan",
-        "Sarah Rajtmajer"
+        "Liujie Zhang",
+        "Benzhe Ning",
+        "Rui Yang",
+        "Xiaoyan Yu",
+        "Jiaxing Li",
+        "Lumeng Wu",
+        "Jia Liu",
+        "Minghao Li",
+        "Weihang Chen",
+        "Weiqi Hu",
+        "Lei Zhang"
       ],
-      "summary": "Recent advances in large language models (LLMs) have enabled the large-scale generation of highly fluent and deceptive news-like content. While prior work has often treated fake news detection as a binary classification problem, modern fake news increasingly arises through human-AI collaboration, where strategic inaccuracies are embedded within otherwise accurate and credible narratives. These mixed-truth cases represent a realistic and consequential threat, yet they remain underrepresented in existing benchmarks. To address this gap, we introduce MANYFAKE, a synthetic benchmark containing 6,798 fake news articles generated through multiple strategy-driven prompting pipelines that capture many ways fake news can be constructed and refined. Using this benchmark, we evaluate a range of state-of-the-art fake news detectors. Our results show that even advanced reasoning-enabled models approach saturation on fully fabricated stories, but remain brittle when falsehoods are subtle, optimized, and interwoven with accurate information.",
-      "published": "2026-04-10T17:36:00Z",
-      "updated": "2026-04-10T17:36:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09514v1"
+      "summary": "Reinforcement learning (RL) post-training has proven effective at unlocking reasoning, self-reflection, and tool-use capabilities in large language models. As models extend to omni-modal inputs and agentic multi-turn workflows, RL training systems face three interdependent challenges: heterogeneous data flows, operational robustness at scale, and the staleness -- throughput tradeoff. We present \\textbf{Relax} (Reinforcement Engine Leveraging Agentic X-modality), an open-source RL training engine that addresses these challenges through three co-designed architectural layers. First, an \\emph{omni-native architecture} builds multimodal support into the full stack -- from data preprocessing and modality-aware parallelism to inference generation -- rather than retrofitting it onto a text-centric pipeline. Second, each RL role runs as an independent, fault-isolated service that can be scaled, recovered, and upgraded without global coordination. Third, service-level decoupling enables asynchronous training via the TransferQueue data bus, where a single staleness parameter smoothly interpolates among on-policy, near-on-policy, and fully asynchronous execution. Relax achieves a 1.20$\\times$ end-to-end speedup over veRL on Qwen3-4B on-policy training. Its fully async mode delivers a 1.76$\\times$ speedup over colocate on Qwen3-4B and a 2.00$\\times$ speedup on Qwen3-Omni-30B, while all modes converge to the same reward level. Relax supports R3 (Rollout Routing Replay)~\\cite{ma2025r3} for MoE models with only 1.9\\% overhead, compared to 32\\% degradation in veRL under the same configuration. It further demonstrates stable omni-modal RL convergence on Qwen3-Omni across image, text, and audio, sustaining over 2{,}000 steps on video without degradation. Relax is available at https://github.com/rednote-ai/Relax.",
+      "published": "2026-04-13T14:42:03Z",
+      "updated": "2026-04-13T14:42:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11554v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09512v1",
-      "title": "Integrated electro-optic attention nonlinearities for transformers",
+      "id": "http://arxiv.org/abs/2604.11547v1",
+      "title": "Eliciting Medical Reasoning with Knowledge-enhanced Data Synthesis: A Semi-Supervised Reinforcement Learning Approach",
       "authors": [
-        "Luis Mickeler",
-        "Kai Lion",
-        "Alfonso Nardi",
-        "Jost Kellner",
-        "Pierre Didier",
-        "Bhavin J. Shastri",
-        "Niao He",
-        "Rachel Grange"
+        "Haolin Li",
+        "Shuyang Jiang",
+        "Ruipeng Zhang",
+        "Jiangchao Yao",
+        "Ya Zhang",
+        "Yanfeng Wang"
       ],
-      "summary": "Transformers have emerged as the dominant neural-network architecture, achieving state-of-the-art performance in language processing and computer vision. At the core of these models lies the attention mechanism, which requires a nonlinear, non-negative mapping using the Softmax function. However, although Softmax operations account for less than 1% of the total operation count, they can disproportionately bottleneck overall inference latency. Here, we use thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements to drastically reduce the latency of nonlinear computations. We implement electro-optic alternatives to digital Softmax and Sigmoid, and evaluate their performance in Vision Transformers and Large Language Models. Our system maintains highly competitive accuracy, even under aggressive 4-bit input-output quantization of the analog units. We further characterize system noise at encoding speeds up to 10 GBaud and assess model robustness under various noise conditions. Our findings suggest that TFLN modulators can serve as nonlinear function units within hybrid co-packaged hardware, enabling high-speed and energy-efficient nonlinear computation.",
-      "published": "2026-04-10T17:30:51Z",
-      "updated": "2026-04-10T17:30:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09512v1"
+      "summary": "While large language models hold promise for complex medical applications, their development is hindered by the scarcity of high-quality reasoning data. To address this issue, existing approaches typically distill chain-of-thought reasoning traces from large proprietary models via supervised fine-tuning, then conduct reinforcement learning (RL). These methods exhibit limited improvement on underrepresented domains like rare diseases while incurring substantial costs from generating complex reasoning chains. To efficiently enhance medical reasoning, we propose MedSSR, a Medical Knowledge-enhanced data Synthesis and Semi-supervised Reinforcement learning framework. Our framework first employs rare disease knowledge to synthesize distribution-controllable reasoning questions. We then utilize the policy model itself to generate high-quality pseudo-labels. This enables a two-stage, intrinsic-to-extrinsic training paradigm: self-supervised RL on the pseudo-labeled synthetic data, followed by supervised RL on the human-annotated real data. MedSSR scales model training efficiently without relying on costly trace distillation. Extensive experiments on Qwen and Llama demonstrate that our method outperforms existing methods across ten medical benchmarks, achieving up to +5.93% gain on rare-disease tasks. Our code is available at https://github.com/tdlhl/MedSSR.",
+      "published": "2026-04-13T14:37:38Z",
+      "updated": "2026-04-13T14:37:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11547v1"
     },
     {
-      "id": "http://arxiv.org/abs/2502.06809v3",
-      "title": "Neurons Speak in Ranges: Breaking Free from Discrete Neuronal Attribution",
+      "id": "http://arxiv.org/abs/2604.11546v1",
+      "title": "RLSpoofer: A Lightweight Evaluator for LLM Watermark Spoofing Resilience",
       "authors": [
-        "Muhammad Umair Haider",
-        "Hammad Rizwan",
-        "Hassan Sajjad",
-        "Peizhong Ju",
-        "A. B. Siddique"
+        "Hanbo Huang",
+        "Xuan Gong",
+        "Yiran Zhang",
+        "Hao Zheng",
+        "Shiyu Liang"
       ],
-      "summary": "Pervasive polysemanticity in large language models (LLMs) undermines discrete neuron-concept attribution, posing a significant challenge for model interpretation and control. We systematically analyze both encoder and decoder based LLMs across diverse datasets, and observe that even highly salient neurons for specific semantic concepts consistently exhibit polysemantic behavior. Importantly, we uncover a consistent pattern: concept-conditioned activation magnitudes of neurons form distinct, often Gaussian-like distributions with minimal overlap. Building on this observation, we hypothesize that interpreting and intervening on concept-specific activation ranges can enable more precise interpretability and targeted manipulation in LLMs. To this end, we introduce NeuronLens, a novel range-based interpretation and manipulation framework, that localizes concept attribution to activation ranges within a neuron. Extensive empirical evaluations show that range-based interventions enable effective manipulation of target concepts while causing substantially less collateral degradation to auxiliary concepts and overall model performance compared to neuron-level masking.",
-      "published": "2025-02-04T03:33:55Z",
-      "updated": "2026-04-10T17:29:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2502.06809v3"
+      "summary": "Large language model (LLM) watermarking has emerged as a promising approach for detecting and attributing AI-generated text, yet its robustness to black-box spoofing remains insufficiently evaluated. Existing evaluation methods often demand extensive datasets and white-box access to algorithmic internals, limiting their practical applicability. In this paper, we study watermark resilience against spoofing fundamentally from a distributional perspective. We first establish a \\textit{local capacity bottleneck}, which theoretically characterizes the probability mass that can be reallocated under KL-bounded local updates while preserving semantic fidelity. Building on this, we propose RLSpoofer, a reinforcement learning-based black-box spoofing attack that requires only 100 human-watermarked paraphrase training pairs and zero access to the watermarking internals or detectors. Despite weak supervision, it empowers a 4B model to achieve a 62.0\\% spoof success rate with minimal semantic shift on PF-marked texts, dwarfing the 6\\% of baseline models trained on up to 10,000 samples. Our findings expose the fragile spoofing resistance of current LLM watermarking paradigms, providing a lightweight evaluation framework and stressing the urgent need for more robust schemes.",
+      "published": "2026-04-13T14:37:11Z",
+      "updated": "2026-04-13T14:37:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11546v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09502v1",
-      "title": "Strategic Algorithmic Monoculture:Experimental Evidence from Coordination Games",
+      "id": "http://arxiv.org/abs/2604.11543v1",
+      "title": "NovBench: Evaluating Large Language Models on Academic Paper Novelty Assessment",
       "authors": [
-        "Gonzalo Ballestero",
-        "Hadi Hosseini",
-        "Samarth Khanna",
-        "Ran I. Shorrer"
+        "Wenqing Wu",
+        "Yi Zhao",
+        "Yuzhuo Wang",
+        "Siyou Li",
+        "Juexi Shao",
+        "Yunfei Long",
+        "Chengzhi Zhang"
       ],
-      "summary": "AI agents increasingly operate in multi-agent environments where outcomes depend on coordination. We distinguish primary algorithmic monoculture -- baseline action similarity -- from strategic algorithmic monoculture, whereby agents adjust similarity in response to incentives. We implement a simple experimental design that cleanly separates these forces, and deploy it on human and large language model (LLM) subjects. LLMs exhibit high levels of baseline similarity (primary monoculture) and, like humans, they regulate it in response to coordination incentives (strategic monoculture). While LLMs coordinate extremely well on similar actions, they lag behind humans in sustaining heterogeneity when divergence is rewarded.",
-      "published": "2026-04-10T17:14:46Z",
-      "updated": "2026-04-10T17:14:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09502v1"
+      "summary": "Novelty is a core requirement in academic publishing and a central focus of peer review, yet the growing volume of submissions has placed increasing pressure on human reviewers. While large language models (LLMs), including those fine-tuned on peer review data, have shown promise in generating review comments, the absence of a dedicated benchmark has limited systematic evaluation of their ability to assess research novelty. To address this gap, we introduce NovBench, the first large-scale benchmark designed to evaluate LLMs' capability to generate novelty evaluations in support of human peer review. NovBench comprises 1,684 paper-review pairs from a leading NLP conference, including novelty descriptions extracted from paper introductions and corresponding expert-written novelty evaluations. We focus on both sources because the introduction provides a standardized and explicit articulation of novelty claims, while expert-written novelty evaluations constitute one of the current gold standards of human judgment. Furthermore, we propose a four-dimensional evaluation framework (including Relevance, Correctness, Coverage, and Clarity) to assess the quality of LLM-generated novelty evaluations. Extensive experiments on both general and specialized LLMs under different prompting strategies reveal that current models exhibit limited understanding of scientific novelty, and that fine--tuned models often suffer from instruction-following deficiencies. These findings underscore the need for targeted fine-tuning strategies that jointly improve novelty comprehension and instruction adherence.",
+      "published": "2026-04-13T14:35:17Z",
+      "updated": "2026-04-13T14:35:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11543v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09497v1",
-      "title": "BERT-as-a-Judge: A Robust Alternative to Lexical Methods for Efficient Reference-Based LLM Evaluation",
+      "id": "http://arxiv.org/abs/2603.28653v2",
+      "title": "BACE: LLM-based Code Generation through Bayesian Anchored Co-Evolution of Code and Test Populations",
       "authors": [
-        "Hippolyte Gisserot-Boukhlef",
-        "Nicolas Boizard",
-        "Emmanuel Malherbe",
-        "Céline Hudelot",
-        "Pierre Colombo"
+        "Kaushitha Silva",
+        "Srinath Perera"
       ],
-      "summary": "Accurate evaluation is central to the large language model (LLM) ecosystem, guiding model selection and downstream adoption across diverse use cases. In practice, however, evaluating generative outputs typically relies on rigid lexical methods to extract and assess answers, which can conflate a model's true problem-solving ability with its compliance with predefined formatting guidelines. While recent LLM-as-a-Judge approaches mitigate this issue by assessing semantic correctness rather than strict structural conformity, they also introduce substantial computational overhead, making evaluation costly. In this work, we first systematically investigate the limitations of lexical evaluation through a large-scale empirical study spanning 36 models and 15 downstream tasks, demonstrating that such methods correlate poorly with human judgments. To address this limitation, we introduce BERT-as-a-Judge, an encoder-driven approach for assessing answer correctness in reference-based generative settings, robust to variations in output phrasing, and requiring only lightweight training on synthetically annotated question-candidate-reference triplets. We show that it consistently outperforms the lexical baseline while matching the performance of much larger LLM judges, providing a compelling tradeoff between the two and enabling reliable, scalable evaluation. Finally, through extensive experimentation, we provide detailed insights into BERT-as-a-Judge's performance to offer practical guidance for practitioners, and release all project artifacts to foster downstream adoption.",
-      "published": "2026-04-10T17:08:40Z",
-      "updated": "2026-04-10T17:08:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09497v1"
+      "summary": "Large Language Models (LLMs) have demonstrated impressive capabilities in code generation. While an interactive feedback loop can improve performance, writing effective tests is a non-trivial task. Early multi-agent frameworks, such as AgentCoder, automated this process but relied on generated tests as absolute ground truth. This approach is fragile: incorrect code frequently passes faulty or trivial tests, while valid solutions are often degraded to satisfy incorrect assertions. Addressing this limitation, newer methods have largely abandoned test generation in favor of planning and reasoning based on examples. We argue, however, that generated tests remain a valuable signal if we model them as noisy sensors guided by bayesian updates. To this end, we introduce BACE (Bayesian Anchored Co-Evolution), a framework that reformulates synthesis as a Bayesian co-evolutionary process where code and test populations are evolved, guided by belief distributions that are reciprocally updated based on noisy interaction evidence. By anchoring this search on minimal public examples, BACE prevents the co-evolutionary drift typical of self-validating loops. Extensive evaluations on LiveCodeBench v6 (post-March 2025) reveal that BACE achieves superior performance across both proprietary models and open-weight small language models.",
+      "published": "2026-03-30T16:40:11Z",
+      "updated": "2026-04-13T14:35:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.28653v2"
     },
     {
-      "id": "http://arxiv.org/abs/2511.04256v2",
-      "title": "SSPO: Subsentence-level Policy Optimization",
+      "id": "http://arxiv.org/abs/2604.11540v1",
+      "title": "A collaborative agent with two lightweight synergistic models for autonomous crystal materials research",
       "authors": [
-        "Kun Yang",
-        "Zikang chen",
-        "Yanmeng Wang",
-        "Zhigen Li",
-        "Ning Cheng",
-        "Shaojun Wang",
-        "Jing Xiao"
+        "Tongyu Shi",
+        "Yutang Li",
+        "Zhanyuan Li",
+        "Qian Liu",
+        "Jie Zhou",
+        "Wenhe Xu",
+        "Yang Li",
+        "Dawei Dai",
+        "Rui He",
+        "Wenhua Zhou",
+        "Jiahong Wang",
+        "Xue-Feng Yu"
       ],
-      "summary": "As a key component of large language model (LLM) post-training, Reinforcement Learning from Verifiable Rewards (RLVR) has substantially improved reasoning performance. However, existing RLVR algorithms exhibit distinct stability issues: GRPO (Group Relative Policy Optimization) often suffers from unstable policy updates, while GSPO (Group Sequence Policy Optimization) can retain high-variance tokens. In GRPO, the importance ratio is computed at the token level, which overemphasizes individual tokens and makes learning sensitive to outliers, potentially causing training collapse. GSPO instead computes a response-level importance ratio, mitigating variance and reducing the accumulation of token-level noise present in GRPO. Nevertheless, our experiments show that GSPO frequently yields a near-zero clipping fraction: extreme token-level ratios can be diluted by other tokens in the same response, causing the entire response to be retained and resulting in unstable updates. We propose SSPO, which computes importance ratios at the subsentence level, striking a balance between GRPO and GSPO. SSPO alleviates training collapse and excessive variance while avoiding the failure mode in which the clipping mechanism indiscriminately retains entire responses. Moreover, we incorporate subsentence-level entropy into PPO-CLIP to adaptively adjust the clipping bounds: we encourage exploration for high-entropy tokens while tightening the clipping range for low-entropy tokens. Empirically, SSPO achieves an average score of 46.72 across five datasets on Qwen2.5-1.5B-Math model, outperforming GRPO (43.01) and GSPO (44.42), and attains state-of-the-art results on four datasets. On Qwen2.5-7B-Math model, SSPO also achieves the highest averaged scores over five baseline methods. These results demonstrate SSPO's effectiveness in RLVR.",
-      "published": "2025-11-06T10:48:31Z",
-      "updated": "2026-04-10T17:03:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.04256v2"
+      "summary": "Current large language models require hundreds of billions of parameters yet struggle with domain-specific reasoning and tool coordination in materials science. Here, we present MatBrain, a lightweight collaborative agent system with two synergistic models specialization for crystal materials research. MatBrain employs a dual-model architecture: Mat-R1 (30B parameters) as the analytical model providing expert-level domain reasoning, and Mat-T1 (14B parameters) as the executive model orchestrating tool-based actions. Entropy analysis confirms that this architecture resolves the conflict between tool planning and analytical reasoning by decoupling their distinct entropy dynamics. Enabled by this dual-model architecture and structural efficiency, MatBrain significantly outperforms larger general-purpose models while reducing the hardware deployment barrier by over 95%. MatBrain exhibits versatility across structure generation, property prediction, and synthesis planning tasks. Applied to catalyst design, MatBrain generated 30,000 candidate structures and identified 38 promising materials within 48 hours, achieving approximately 100-fold acceleration over traditional approaches. These results demonstrate the potential of lightweight collaborative intelligence for advancing materials research capabilities.",
+      "published": "2026-04-13T14:33:19Z",
+      "updated": "2026-04-13T14:33:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.11540v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.09493v1",
-      "title": "Policy-Aware Edge LLM-RAG Framework for Internet of Battlefield Things Mission Orchestration",
+      "id": "http://arxiv.org/abs/2512.01512v2",
+      "title": "MCAT: Scaling Many-to-Many Speech-to-Text Translation with MLLMs to 70 Languages",
       "authors": [
-        "Om Solanki",
-        "Lopamudra Praharaj",
-        "Deepti Gupta",
-        "Maanak Gupta"
+        "Yexing Du",
+        "Kaiyuan Liu",
+        "Youcheng Pan",
+        "Bo Yang",
+        "Keqi Deng",
+        "Xie Chen",
+        "Yang Xiang",
+        "Ming Liu",
+        "Bing Qin",
+        "YaoWei Wang"
       ],
-      "summary": "Large Language Models (LLMs) offer a promising interface for intent-driven control of autonomous cyber-physical systems, but their direct use in mission-critical Internet of Battlefield Things (IoBT) environments raises significant safety, reliability, and policy-compliance concerns. This paper presents a Policy-Aware Large Language Model Retrieval-Augmented Generation (referred as PA-LLM-RAG), an edge-deployed LLM orchestration framework for IoBT mission control that integrates retrieval-augmented reasoning and independent command verification. The proposed PA-LLM-RAG framework combines a lightweight retrieval module that grounds decisions in operational policies and telemetry with a locally hosted LLM for mission planning and a secondary JudgeLLM for validating user generated commands prior to execution. To evaluate PA-LLM-RAG, we implement a simulated IoBT environment using RoboDK and assess four open-source LLMs across controlled mission scenarios of increasing complexity, including baseline operations, threat detection, coverage recovery, multi-event coordination, and policy-violation requests. Experimental results demonstrate that the framework effectively detects policy-violating commands while maintaining low-latency response suitable for edge deployment. Gemma-2B achieving the highest overall reliability with 4.17 sec latency and 100% success rate. The findings highlight a clear tradeoff between reasoning capacity and responsiveness across models and show that combining deterministic safeguards with JudgeLLM verification significantly improves reliability in LLM-driven IoBT orchestration.",
-      "published": "2026-04-10T17:01:37Z",
-      "updated": "2026-04-10T17:01:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.09493v1"
+      "summary": "Multimodal Large Language Models (MLLMs) have achieved great success in Speech-to-Text Translation (S2TT) tasks. However, current research is constrained by two key challenges: language coverage and efficiency. Most of the popular S2TT datasets are substantially English-centric, which restricts the scaling-up of MLLMs' many-to-many translation capabilities. Moreover, the inference speed of MLLMs degrades dramatically when the speech is converted into long sequences (e.g., 750 tokens). To address these limitations, we propose a Multilingual Cost-effective Accelerated Speech-to-Text Translator (MCAT) framework, which includes two innovations. First, a language scaling method that leverages curriculum learning and a data balancing strategy is introduced to extend the language coverage supported by MLLMs to 70 languages and achieve mutual translation among these languages. Second, an optimized speech adapter module is designed to reduce the length of the speech sequence to only 30 tokens. Extensive experiments were conducted on MLLMs of different scales (9B and 27B). The experimental results demonstrate that MCAT not only surpasses state-of-the-art end-to-end models on the FLEURS dataset across 70x69 directions but also enhances inference efficiency. The code and models are released at https://github.com/yxduir/m2m-70.",
+      "published": "2025-12-01T10:39:12Z",
+      "updated": "2026-04-13T14:21:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.01512v2"
     }
   ]
 }
