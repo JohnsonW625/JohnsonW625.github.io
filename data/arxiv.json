@@ -1,11 +1,177 @@
 {
-  "generated_at_utc": "2026-04-16T02:35:54Z",
+  "generated_at_utc": "2026-04-18T02:22:49Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.14149v1",
+      "id": "http://arxiv.org/abs/2604.15270v1",
+      "title": "Enhancing Large Language Models with Retrieval Augmented Generation for Software Testing and Inspection Automation",
+      "authors": [
+        "Zoe Fingleton",
+        "Nazanin Siavash",
+        "Armin Moin"
+      ],
+      "summary": "In this paper, we focus on automating two of the widely used Verification and Validation (V&V) activities in the Software Development Lifecycle (SDLC): Software testing and software inspection (also known as review). Concerning the former, we concentrate on automated test case generation using Large Language Models (LLMs). For the latter, we enable inspection of the source code by LLMs. To address the known LLM hallucination problem, in which LLMs confidently produce incorrect outputs, we implement a Retrieval Augmented Generation (RAG) pipeline to integrate supplementary knowledge sources and provide additional context to the LLM. Our experimental results indicate that incorporating external context via the RAG pipeline has a generally positive impact on both test case generation and code inspection. This novel approach reduces the total project cost by saving human testers'/inspectors' time. It also improves the effectiveness and efficiency of these V&V activities, as evidenced by our experimental study.",
+      "published": "2026-04-16T17:41:49Z",
+      "updated": "2026-04-16T17:41:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.15270v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.10681v2",
+      "title": "Critical-CoT: A Robust Defense Framework against Reasoning-Level Backdoor Attacks in Large Language Models",
+      "authors": [
+        "Vu Tuan Truong",
+        "Long Bao Le"
+      ],
+      "summary": "Large Language Models (LLMs), despite their impressive capabilities across domains, have been shown to be vulnerable to backdoor attacks. Prior backdoor strategies predominantly operate at the token level, where an injected trigger causes the model to generate a specific target word, choice, or class (depending on the task). Recent advances, however, exploit the long-form reasoning tendencies of modern LLMs to conduct reasoning-level backdoors: once triggered, the victim model inserts one or more malicious reasoning steps into its chain-of-thought (CoT). These attacks are substantially harder to detect, as the backdoored answer remains plausible and consistent with the poisoned reasoning trajectory. Yet, defenses tailored to this type of backdoor remain largely unexplored. To bridge this gap, we propose Critical-CoT, a novel defense mechanism that conducts a two-stage fine-tuning (FT) process on LLMs to develop critical thinking behaviors, enabling them to automatically identify potential backdoors and refuse to generate malicious reasoning steps. Extensive experiments across multiple LLMs and datasets demonstrate that Critical-CoT provides strong robustness against both in-context learning-based and FT-based backdoor attacks. Notably, Critical-CoT exhibits strong cross-domain and cross-task generalization. Our code is available at hthttps://github.com/tuanvu171/Critical-CoT.",
+      "published": "2026-04-12T15:19:35Z",
+      "updated": "2026-04-16T17:29:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.10681v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2507.23121v2",
+      "title": "Uncovering the Fragility of Trustworthy LLMs through Chinese Textual Ambiguity",
+      "authors": [
+        "Xinwei Wu",
+        "Haojie Li",
+        "Hongyu Liu",
+        "Xinyu Ji",
+        "Ruohan Li",
+        "Yule Chen",
+        "Yigeng Zhang"
+      ],
+      "summary": "In this work, we study a critical research problem regarding the trustworthiness of large language models (LLMs): how LLMs behave when encountering ambiguous narrative text, with a particular focus on Chinese textual ambiguity. We created a benchmark dataset by collecting and generating ambiguous sentences with context and their corresponding disambiguated pairs, representing multiple possible interpretations. These annotated examples are systematically categorized into 3 main categories and 9 subcategories. Through experiments, we discovered significant fragility in LLMs when handling ambiguity, revealing behavior that differs substantially from humans. Specifically, LLMs cannot reliably distinguish ambiguous text from unambiguous text, show overconfidence in interpreting ambiguous text as having a single meaning rather than multiple meanings, and exhibit overthinking when attempting to understand the various possible meanings. Our findings highlight a fundamental limitation in current LLMs that has significant implications for their deployment in real-world applications where linguistic ambiguity is common, calling for improved approaches to handle uncertainty in language understanding. The dataset and code are publicly available at this GitHub repository: https://github.com/ictup/LLM-Chinese-Textual-Disambiguation.",
+      "published": "2025-07-30T21:50:19Z",
+      "updated": "2026-04-16T17:24:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.23121v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.15244v1",
+      "title": "From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning",
+      "authors": [
+        "Kiran Purohit",
+        "Ramasuri Narayanam",
+        "Soumyabrata Pal"
+      ],
+      "summary": "Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard, a verification-aware speculative decoding framework that performs step-level verification using only model-internal signals. At each step, SpecGuard samples multiple draft candidates and selects the most consistent step, which is then validated using an ensemble of two lightweight model-internal signals: (i) an attention-based grounding score that measures attribution to the input and previously accepted steps, and (ii) a log-probability-based score that captures token-level confidence. These signals jointly determine whether a step is accepted or recomputed using the target, allocating compute selectively. Experiments across a range of reasoning benchmarks show that SpecGuard improves accuracy by 3.6% while reducing latency by ~11%, outperforming both SD and reward-guided SD.",
+      "published": "2026-04-16T17:20:13Z",
+      "updated": "2026-04-16T17:20:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.15244v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.15236v1",
+      "title": "Agentic Microphysics: A Manifesto for Generative AI Safety",
+      "authors": [
+        "Federico Pierucci",
+        "Matteo Prandi",
+        "Marcantonio Bracale Syrnikov",
+        "Marcello Galisai",
+        "Piercosma Bisconti"
+      ],
+      "summary": "This paper advances a methodological proposal for safety research in agentic AI. As systems acquire planning, memory, tool use, persistent identity, and sustained interaction, safety can no longer be analysed primarily at the level of the isolated model. Population-level risks arise from structured interaction among agents, through processes of communication, observation, and mutual influence that shape collective behaviour over time. As the object of analysis shifts, a methodological gap emerges. Approaches focused either on single agents or on aggregate outcomes do not identify the interaction-level mechanisms that generate collective risks or the design variables that control them. A framework is required that links local interaction structure to population-level dynamics in a causally explicit way, allowing both explanation and intervention. We introduce two linked concepts. Agentic microphysics defines the level of analysis: local interaction dynamics where one agent's output becomes another's input under specific protocol conditions. Generative safety defines the methodology: growing phenomena and elicit risks from micro-level conditions to identify sufficient mechanisms, detect thresholds, and design effective interventions.",
+      "published": "2026-04-16T17:11:28Z",
+      "updated": "2026-04-16T17:11:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.15236v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2601.20868v2",
+      "title": "Rethinking LLM-Driven Heuristic Design: Generating Efficient and Specialized Solvers via Dynamics-Aware Optimization",
+      "authors": [
+        "Rongzheng Wang",
+        "Yihong Huang",
+        "Muquan Li",
+        "Jiakai Li",
+        "Di Liang",
+        "Bob Simons",
+        "Pei Ke",
+        "Shuang Liang",
+        "Ke Qin"
+      ],
+      "summary": "Large Language Models (LLMs) have advanced the field of Combinatorial Optimization through automated heuristic generation. Instead of relying on manual design, this LLM-Driven Heuristic Design (LHD) process leverages LLMs to iteratively generate and refine solvers to achieve high performance. However, existing LHD frameworks face two critical limitations: (1) Endpoint-only evaluation, which ranks solvers solely by final gap to a reference solution, ignoring the convergence process and runtime efficiency; (2) High adaptation costs, where distribution shifts necessitate re-adaptation to generate specialized solvers for heterogeneous instance groups. To address these issues, we propose Dynamics-Aware Solver Heuristics (DASH), a framework that co-optimizes solver search mechanisms and runtime schedules guided by a convergence-aware metric, thereby identifying efficient and high-performance solvers. Furthermore, to mitigate expensive re-adaptation, DASH incorporates Profiled Library Retrieval (PLR), which maintains group-specialized solvers for profile-aware warm starts. These solvers are archived concurrently during evolution, allowing DASH to reuse matched specialists across heterogeneous distributions without restarting adaptation. Experiments on four combinatorial optimization problems demonstrate that DASH improves runtime efficiency by over 4 times while outperforming prior LHD baselines in the overall balance between gap and runtime across diverse problem scales. Furthermore, by enabling profile-aware warm starts, DASH maintains lower gap under distribution shift while reducing LLM adaptation costs by about 90%.",
+      "published": "2026-01-14T05:06:42Z",
+      "updated": "2026-04-16T17:09:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.20868v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2506.19807v4",
+      "title": "KnowRL: Exploring Knowledgeable Reinforcement Learning for Factuality",
+      "authors": [
+        "Baochang Ren",
+        "Shuofei Qiao",
+        "Da Zheng",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "summary": "Large Language Models (LLMs), particularly slow-thinking models, often exhibit severe hallucination, outputting incorrect content due to an inability to accurately recognize knowledge boundaries during reasoning. While Reinforcement Learning (RL) can enhance complex reasoning abilities, its outcome-oriented reward mechanism often lacks factual supervision over the thinking process, further exacerbating the hallucination problem. To address the high hallucination in slow-thinking models, we propose Knowledge-enhanced RL, KnowRL. KnowRL guides models to perform fact-based slow thinking by integrating a factuality reward, based on knowledge verification, into the RL training process, helping them recognize their knowledge boundaries. KnowRL guides models to perform fact-based slow thinking by integrating a factuality reward, based on knowledge verification, into the RL training process, helping them recognize their knowledge boundaries. This targeted factual input during RL training enables the model to learn and internalize fact-based reasoning strategies. By directly rewarding adherence to facts within the reasoning steps, KnowRL fosters a more reliable thinking process. Experimental results on three hallucination evaluation datasets and two reasoning evaluation datasets demonstrate that KnowRL effectively mitigates hallucinations in slow-thinking models while maintaining their original strong reasoning capabilities. Our code is available at https://github.com/zjunlp/KnowRL.",
+      "published": "2025-06-24T17:17:17Z",
+      "updated": "2026-04-16T16:50:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.19807v4"
+    },
+    {
+      "id": "http://arxiv.org/abs/2601.07667v2",
+      "title": "Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference",
+      "authors": [
+        "Rei Taniguchi",
+        "Yuyang Dong",
+        "Makoto Onizuka",
+        "Chuan Xiao"
+      ],
+      "summary": "Due to the prevalence of large language models (LLMs), key-value (KV) cache reduction for LLM inference has received remarkable attention. Among numerous works that have been proposed in recent years, layer-wise token pruning approaches, which select a subset of tokens at particular layers to retain in KV cache and prune others, are one of the most popular schemes. They primarily adopt a set of pre-defined layers, at which tokens are selected. Such design is inflexible in the sense that the accuracy significantly varies across tasks and deteriorates in harder tasks such as KV retrieval. In this paper, we propose ASL, a training-free method that adaptively chooses the selection layer for KV cache reduction, exploiting the variance of token ranks ordered by attention score. The proposed method balances the performance across different tasks while meeting the user-specified KV budget requirement. ASL operates during the prefilling stage and can be jointly used with existing KV cache reduction methods such as SnapKV to optimize the decoding stage. By evaluations on the InfiniteBench, RULER, and NIAH benchmarks, we show that ASL, equipped with one-shot token selection, adaptively trades inference speed for accuracy, outperforming state-of-the-art layer-wise token pruning methods in difficult tasks.",
+      "published": "2026-01-12T15:47:35Z",
+      "updated": "2026-04-16T16:46:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.07667v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2603.13683v2",
+      "title": "Preconditioned Test-Time Adaptation for Out-of-Distribution Debiasing in Narrative Generation",
+      "authors": [
+        "Hanwen Shen",
+        "Ting Ying",
+        "Jiajie Lu",
+        "Shanshan Wang"
+      ],
+      "summary": "Although debiased large language models (LLMs) excel at handling known or low-bias prompts, they often fail on unfamiliar and high-bias prompts. We demonstrate via out-of-distribution (OOD) detection that these high-bias prompts cause a distribution shift, degrading static model performance. To enable real-time correction, we propose CAP-TTA, a test-time adaptation framework. CAP-TTA triggers context-aware LoRA updates only when a bias-risk score exceeds a set threshold. By utilizing an offline precomputed diagonal preconditioner, it ensures fast and stable optimization. Across multiple benchmarks and human evaluations, CAP-TTA effectively reduces toxicity/bias score with significantly lower latency than standard optimization methods (e.g., AdamW or SGD). Furthermore, it prevents catastrophic forgetting, and substantially improves narrative fluency over state-of-the-art baselines without compromising debiasing performance.",
+      "published": "2026-03-14T01:37:23Z",
+      "updated": "2026-04-16T16:26:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13683v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.15186v1",
+      "title": "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines",
+      "authors": [
+        "Marcel Wagenländer",
+        "Otto White",
+        "Britannio Jarrett",
+        "Pedro Silvestre",
+        "Yanda Tao",
+        "Guo Li",
+        "Huanzhou Zhu",
+        "Llúis Vilanova",
+        "Peter Pietzuch"
+      ],
+      "summary": "Agentic workflows carry out complex tasks by orchestrating multiple large language models (LLMs) and tools. Serving such workflows at a target throughput with low latency is challenging because they can be defined using arbitrary agentic frameworks and exhibit unpredictable execution times: execution may branch, fan-out, or recur in data-dependent ways. Since LLMs in workflows often outnumber available GPUs, their execution also leads to GPU oversubscription. We describe Scepsy, a new agentic serving system that efficiently schedules arbitrary multi-LLM agentic workflows onto a GPU cluster. Scepsy exploits the insight that, while agentic workflows have unpredictable end-to-end latencies, the shares of each LLM's total execution times are comparatively stable across executions. Scepsy decides on GPU allocations based on these aggregate shares: first, it profiles the LLMs under different parallelism degrees. It then uses these statistics to construct an Aggregate LLM Pipeline, which is a lightweight latency/throughput predictor for allocations. To find a GPU allocation that minimizes latency while achieving a target throughput, Scepsy uses the Aggregate LLM Pipeline to explore a search space over fractional GPU shares, tensor parallelism degrees, and replica counts. It uses a hierarchical heuristic to place the best allocation onto the GPU cluster, minimizing fragmentation, while respecting network topology constraints. Our evaluation on realistic agentic workflows shows that Scepsy achieves up to 2.4x higher throughput and 27x lower latency compared to systems that optimize LLMs independently or rely on user-specified allocations.",
+      "published": "2026-04-16T16:15:29Z",
+      "updated": "2026-04-16T16:15:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.15186v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23657v4",
+      "title": "Secret Leak Detection in Software Issue Reports using LLMs: A Comprehensive Evaluation",
+      "authors": [
+        "Sadif Ahmed",
+        "Md Nafiu Rahman",
+        "Zahin Wahab",
+        "Gias Uddin",
+        "Rifat Shahriyar"
+      ],
+      "summary": "In the digital era, accidental exposure of sensitive information such as API keys, tokens, and credentials is a growing security threat. While most prior work focuses on detecting secrets in source code, leakage in software issue reports remains largely unexplored. This study fills that gap through a large-scale analysis and a practical detection pipeline for exposed secrets in GitHub issues. Our pipeline combines regular expression-based extraction with large language model (LLM)-based contextual classification to detect real secrets and reduce false positives. We build a benchmark of 54,148 instances from public GitHub issues, including 5,881 manually verified true secrets. Using this dataset, we evaluate entropy-based baselines and keyword heuristics used by prior secret detection tools, classical machine learning, deep learning, and LLM-based methods. Regex and entropy based approaches achieve high recall but poor precision, while smaller models such as RoBERTa and CodeBERT greatly improve performance (F1 = 92.70%). Proprietary models like GPT-4o perform moderately in few-shot settings (F1 = 80.13%), and fine-tuned open-source larger LLMs such as Qwen and LLaMA reach up to 94.49% F1. Finally, we also validate our approach on 178 real-world GitHub repositories, achieving an F1-score of 81.6% which demonstrates our approach's strong ability to generalize to in-the-wild scenarios.",
+      "published": "2024-10-31T06:14:17Z",
+      "updated": "2026-04-16T16:14:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.23657v4"
+    },
+    {
+      "id": "http://arxiv.org/abs/2604.14149v2",
       "title": "One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding",
       "authors": [
         "Zheyu Zhang",
@@ -15,193 +181,10 @@
         "Vimal Bhat",
         "Yu-Xiong Wang"
       ],
-      "summary": "Long video understanding is inherently challenging for vision-language models (VLMs) because of the extensive number of frames. With each video frame typically expanding into tens or hundreds of tokens, the limited context length of large language models (LLMs) forces the VLMs to perceive the frames sparsely and lose temporal information. To address this, we explore extreme video token compression towards \\emph{one token per frame} at the final LLM layer. Our key insight is that heuristic-based compression, widely adopted by previous methods, is prone to information loss, and this necessitates supervising LLM layers into \\emph{learnable} and \\emph{progressive} modules for \\emph{token-level compression} (LP-Comp). Such compression enables our VLM to digest 2x-4x more frames with improved performance. To further increase the token efficiency, we investigate \\emph{frame-level compression}, which selects the frames most relevant to the queries via the internal attention scores of the LLM layers, named \\emph{question-conditioned compression} (QC-Comp). As a notable distinction from previous studies, we mitigate the position bias of LLM attention in long contexts, \\emph{i.e.}, the over-concentration on the beginning and end of a sequence, by splitting long videos into short segments and employing local attention. Collectively, our combined \\emph{token-level} and \\emph{frame-level} leads to an e\\textbf{x}treme compression model for long video understanding, named \\textbf{\\name}, achieving a significantly larger compression ratio and enabling denser frame sampling. Our \\name is finetuned from VideoChat-Flash with a data-efficient \\emph{supervised compression tuning} stage that only requires 2.5\\% of the supervised fine-tuning data, yet boosts the accuracy from 42.9\\% to 46.2\\% on LVBench and enhances multiple other long video benchmarks.",
+      "summary": "Long video understanding is inherently challenging for vision-language models (VLMs) because of the extensive number of frames. With each video frame typically expanding into tens or hundreds of tokens, the limited context length of large language models (LLMs) forces the VLMs to perceive the frames sparsely and lose temporal information. To address this, we explore extreme video token compression towards one token per frame at the final LLM layer. Our key insight is that heuristic-based compression, widely adopted by previous methods, is prone to information loss, and this necessitates supervising LLM layers into learnable and progressive modules for token-level compression (LP-Comp). Such compression enables our VLM to digest 2x-4x more frames with improved performance. To further increase the token efficiency, we investigate frame-level compression, which selects the frames most relevant to the queries via the internal attention scores of the LLM layers, named question-conditioned compression (QC-Comp). As a notable distinction from previous studies, we mitigate the position bias of LLM attention in long contexts, i.e., the over-concentration on the beginning and end of a sequence, by splitting long videos into short segments and employing local attention. Collectively, our combined token-level and frame-level leads to an extreme compression model for long video understanding, named XComp, achieving a significantly larger compression ratio and enabling denser frame sampling. Our XComp is finetuned from VideoChat-Flash with a data-efficient supervised compression tuning stage that only requires 2.5% of the supervised fine-tuning data, yet boosts the accuracy from 42.9% to 46.2% on LVBench and enhances multiple other long video benchmarks.",
       "published": "2026-04-15T17:59:52Z",
-      "updated": "2026-04-15T17:59:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14149v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14147v1",
-      "title": "ROSE: Retrieval-Oriented Segmentation Enhancement",
-      "authors": [
-        "Song Tang",
-        "Guangquan Jie",
-        "Henghui Ding",
-        "Yu-Gang Jiang"
-      ],
-      "summary": "Existing segmentation models based on multimodal large language models (MLLMs), such as LISA, often struggle with novel or emerging entities due to their inability to incorporate up-to-date knowledge. To address this challenge, we introduce the Novel Emerging Segmentation Task (NEST), which focuses on segmenting (i) novel entities that MLLMs fail to recognize due to their absence from training data, and (ii) emerging entities that exist within the model's knowledge but demand up-to-date external information for accurate recognition. To support the study of NEST, we construct a NEST benchmark using an automated pipeline that generates news-related data samples for comprehensive evaluation. Additionally, we propose ROSE: Retrieval-Oriented Segmentation Enhancement, a plug-and-play framework designed to augment any MLLM-based segmentation model. ROSE comprises four key components. First, an Internet Retrieval-Augmented Generation module is introduced to employ user-provided multimodal inputs to retrieve real-time web information. Then, a Textual Prompt Enhancer enriches the model with up-to-date information and rich background knowledge, improving the model's perception ability for emerging entities. Furthermore, a Visual Prompt Enhancer is proposed to compensate for MLLMs' lack of exposure to novel entities by leveraging internet-sourced images. To maintain efficiency, a WebSense module is introduced to intelligently decide when to invoke retrieval mechanisms based on user input. Experimental results demonstrate that ROSE significantly boosts performance on the NEST benchmark, outperforming a strong Gemini-2.0 Flash-based retrieval baseline by 19.2 in gIoU.",
-      "published": "2026-04-15T17:59:35Z",
-      "updated": "2026-04-15T17:59:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14147v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14128v1",
-      "title": "Rhetorical Questions in LLM Representations: A Linear Probing Study",
-      "authors": [
-        "Louie Hong Yao",
-        "Vishesh Anand",
-        "Yuan Zhuang",
-        "Tianyu Jiang"
-      ],
-      "summary": "Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them remains unclear. We analyze rhetorical questions in LLM representations using linear probes on two social-media datasets with different discourse contexts, and find that rhetorical signals emerge early and are most stably captured by last-token representations. Rhetorical questions are linearly separable from information-seeking questions within datasets, and remain detectable under cross-dataset transfer, reaching AUROC around 0.7-0.8. However, we demonstrate that transferability does not simply imply a shared representation. Probes trained on different datasets produce different rankings when applied to the same target corpus, with overlap among the top-ranked instances often below 0.2. Qualitative analysis shows that these divergences correspond to distinct rhetorical phenomena: some probes capture discourse-level rhetorical stance embedded in extended argumentation, while others emphasize localized, syntax-driven interrogative acts. Together, these findings suggest that rhetorical questions in LLM representations are encoded by multiple linear directions emphasizing different cues, rather than a single shared direction.",
-      "published": "2026-04-15T17:50:56Z",
-      "updated": "2026-04-15T17:50:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14128v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14126v1",
-      "title": "AI-assisted writing and the reorganization of scientific knowledge",
-      "authors": [
-        "Erjia Yan",
-        "Chaoqun Ni"
-      ],
-      "summary": "Generative AI systems such as ChatGPT are increasingly used in scientific writing, yet their broader implications for the organization of scientific knowledge remain unclear. We examine whether AI-assisted writing intensity, measured as the share of text in a paper that is predicted to exhibit features consistent with LLM-generated text, is associated with scientific disruption and knowledge recombination. Using approximately two million full-text research articles published between 2021 and 2024 and linked to citation networks, we document a sharp temporal pattern beginning in 2023. Before 2023, higher AI-assisted writing intensity is weakly or negatively associated with disruption; after 2023, the association becomes positive in within-author, within-field analyses. Over the same period, the positive association between AI-assisted writing intensity and cross-field citation breadth weakens substantially, and the negative association with citation concentration attenuates. Thus, the post-2023 increase in disruption is not accompanied by broader knowledge sourcing. These patterns suggest that generative AI is associated with more disruptive citation structures without a corresponding expansion in cross-field recombination. Rather than simply broadening the search space of science, AI-assisted writing may be associated with new forms of recombination built from relatively narrower knowledge inputs.",
-      "published": "2026-04-15T17:50:16Z",
-      "updated": "2026-04-15T17:50:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14126v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.13016v2",
-      "title": "Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe",
-      "authors": [
-        "Yaxuan Li",
-        "Yuxin Zuo",
-        "Bingxiang He",
-        "Jinqian Zhang",
-        "Chaojun Xiao",
-        "Cheng Qian",
-        "Tianyu Yu",
-        "Huan-ang Gao",
-        "Wenkai Yang",
-        "Zhiyuan Liu",
-        "Ning Ding"
-      ],
-      "summary": "On-policy distillation (OPD) has become a core technique in the post-training of large language models, yet its training dynamics remain poorly understood. This paper provides a systematic investigation of OPD dynamics and mechanisms. We first identify that two conditions govern whether OPD succeeds or fails: (i) the student and teacher should share compatible thinking patterns; and (ii) even with consistent thinking patterns and higher scores, the teacher must offer genuinely new capabilities beyond what the student has seen during training. We validate these findings through weak-to-strong reverse distillation, showing that same-family 1.5B and 7B teachers are distributionally indistinguishable from the student's perspective. Probing into the token-level mechanism, we show that successful OPD is characterized by progressive alignment on high-probability tokens at student-visited states, a small shared token set that concentrates most of the probability mass (97%-99%). We further propose two practical strategies to recover failing OPD: off-policy cold start and teacher-aligned prompt selection. Finally, we show that OPD's apparent free lunch of dense token-level reward comes at a cost, raising the question of whether OPD can scale to long-horizon distillation.",
-      "published": "2026-04-14T17:54:28Z",
-      "updated": "2026-04-15T17:48:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.13016v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.12358v2",
-      "title": "Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding",
-      "authors": [
-        "Jiwan Kim",
-        "Kibum Kim",
-        "Wonjoong Kim",
-        "Byung-Kwan Lee",
-        "Chanyoung Park"
-      ],
-      "summary": "Recently, visual token pruning has been studied to handle the vast number of visual tokens in Multimodal Large Language Models. However, we observe that while existing pruning methods perform reliably on simple visual understanding, they struggle to effectively generalize to complex visual reasoning tasks, a critical gap underexplored in previous studies. Through a systematic analysis, we identify Relevant Visual Information Shift (RVIS) during decoding as the primary failure driver. To address this, we propose Decoding-stage Shift-aware Token Pruning (DSTP), a training-free add-on framework that enables existing pruning methods to align visual tokens with shifting reasoning requirements during the decoding stage. Extensive experiments demonstrate that DSTP significantly mitigates performance degradation of pruning methods in complex reasoning tasks, while consistently yielding performance gains even across visual understanding benchmarks. Furthermore, DSTP demonstrates effectiveness across diverse state-of-the-art architectures, highlighting its generalizability and efficiency with minimal computational overhead.",
-      "published": "2026-04-14T06:48:31Z",
-      "updated": "2026-04-15T17:43:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.12358v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2512.24968v4",
-      "title": "Strategic Response of News Publishers to Generative AI",
-      "authors": [
-        "Hangcheng Zhao",
-        "Ron Berman"
-      ],
-      "summary": "Generative AI can adversely impact news publishers by lowering consumer demand. It can also reduce demand for newsroom employees, and increase the creation of news \"slop.\" However, it can also form a source of traffic referrals and an information-discovery channel that increases demand. We use high-frequency granular data to analyze the strategic response of news publishers to the introduction of Generative AI. Many publishers strategically blocked LLM access to their websites using the robots.txt file standard. Using a difference-in-differences approach, we find that large publishers who block GenAI bots experience reduced website traffic compared to not blocking. In addition, we find that large publishers shift toward richer content that is harder for LLMs to replicate, without increasing text volume. Finally, we find that the share of new editorial and content-production job postings rises over time. Together, these findings illustrate the levers that publishers choose to use to strategically respond to competitive Generative AI threats, and their consequences.",
-      "published": "2025-12-31T16:54:29Z",
-      "updated": "2026-04-15T17:42:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.24968v4"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14116v1",
-      "title": "TREX: Automating LLM Fine-tuning via Agent-Driven Tree-based Exploration",
-      "authors": [
-        "Zerun Ma",
-        "Guoqiang Wang",
-        "Xinchen Xie",
-        "Yicheng Chen",
-        "He Du",
-        "Bowen Li",
-        "Yanan Sun",
-        "Wenran Liu",
-        "Kai Chen",
-        "Yining Li"
-      ],
-      "summary": "While Large Language Models (LLMs) have empowered AI research agents to perform isolated scientific tasks, automating complex, real-world workflows, such as LLM training, remains a significant challenge. In this paper, we introduce TREX, a multi-agent system that automates the entire LLM training life-cycle. By orchestrating collaboration between two core modules-the Researcher and the Executor-the system seamlessly performs requirement analysis, open-domain literature and data research, formulation of training strategies, preparation of data recipes, and model training and evaluation. The multi-round experimental process is modeled as a search tree, enabling the system to efficiently plan exploration paths, reuse historical results, and distill high-level insights from iterative trials. To evaluate the capability of automated LLM training, we construct FT-Bench, a benchmark comprising 10 tasks derived from real-world scenarios, ranging from optimizing fundamental model capabilities to enhancing performance on domain-specific tasks. Experimental results demonstrate that the TREX agent consistently optimizes model performance on target tasks.",
-      "published": "2026-04-15T17:38:06Z",
-      "updated": "2026-04-15T17:38:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14116v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14111v1",
-      "title": "Interpretable Stylistic Variation in Human and LLM Writing Across Genres, Models, and Decoding Strategies",
-      "authors": [
-        "Swati Rallapalli",
-        "Shannon Gallagher",
-        "Ronald Yurko",
-        "Tyler Brooks",
-        "Chuck Loughin",
-        "Michele Sezgin",
-        "Violet Turri"
-      ],
-      "summary": "Large Language Models (LLMs) are now capable of generating highly fluent, human-like text. They enable many applications, but also raise concerns such as large scale spam, phishing, or academic misuse. While much work has focused on detecting LLM-generated text, only limited work has gone into understanding the stylistic differences between human-written and machine-generated text. In this work, we perform a large scale analysis of stylistic variation across human-written text and outputs from 11 LLMs spanning 8 different genres and 4 decoding strategies using Douglas Biber's set of lexicogrammatical and functional features. Our findings reveal insights that can guide intentional LLM usage. First, key linguistic differentiators of LLM-generated text seem robust to generation conditions (e.g., prompt settings to nudge them to generate human-like text, or availability of human-written text to continue the style); second, genre exerts a stronger influence on stylistic features than the source itself; third, chat variants of the models generally appear to be clustered together in stylistic space, and finally, model has a larger effect on the style than decoding strategy, with some exceptions. These results highlight the relative importance of model and genre over prompting and decoding strategies in shaping the stylistic behavior of machine-generated text.",
-      "published": "2026-04-15T17:31:21Z",
-      "updated": "2026-04-15T17:31:21Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14111v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2508.06433v4",
-      "title": "Memp: Exploring Agent Procedural Memory",
-      "authors": [
-        "Runnan Fang",
-        "Yuan Liang",
-        "Xiaobin Wang",
-        "Jialong Wu",
-        "Shuofei Qiao",
-        "Pengjun Xie",
-        "Fei Huang",
-        "Huajun Chen",
-        "Ningyu Zhang"
-      ],
-      "summary": "Large Language Models (LLMs) based agents excel at diverse tasks, yet they suffer from brittle procedural memory that is manually engineered or entangled in static parameters. In this work, we investigate strategies to endow agents with a learnable, updatable, and lifelong procedural memory. We propose Memp that distills past agent trajectories into both fine-grained, step-by-step instructions and higher-level, script-like abstractions, and explore the impact of different strategies for Build, Retrieval, and Update of procedural memory. Coupled with a dynamic regimen that continuously updates, corrects, and deprecates its contents, this repository evolves in lockstep with new experience. Empirical evaluation on TravelPlanner and ALFWorld shows that as the memory repository is refined, agents achieve steadily higher success rates and greater efficiency on analogous tasks. Moreover, procedural memory built from a stronger model retains its value: migrating the procedural memory to a weaker model can also yield substantial performance gains. Code is available at https://github.com/zjunlp/MemP.",
-      "published": "2025-08-08T16:20:56Z",
-      "updated": "2026-04-15T17:21:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2508.06433v4"
-    },
-    {
-      "id": "http://arxiv.org/abs/2601.05991v2",
-      "title": "3D Instruction Ambiguity Detection",
-      "authors": [
-        "Jiayu Ding",
-        "Haoran Tang",
-        "Hongbo Jin",
-        "Wei Gao",
-        "Ge Li"
-      ],
-      "summary": "In safety-critical domains, linguistic ambiguity can have severe consequences; a vague command like \"Pass me the vial\" in a surgical setting could lead to catastrophic errors. Yet, most embodied AI research overlooks this, assuming instructions are clear and focusing on execution rather than confirmation. To address this critical safety gap, we are the first to define 3D Instruction Ambiguity Detection, a fundamental new task where a model must determine if a command has a single, unambiguous meaning within a given 3D scene. To support this research, we build Ambi3D, the large-scale benchmark for this task, featuring over 700 diverse 3D scenes and around 22k instructions. Our analysis reveals a surprising limitation: state-of-the-art 3D Large Language Models (LLMs) struggle to reliably determine if an instruction is ambiguous. To address this challenge, we propose AmbiVer, a two-stage framework that collects explicit visual evidence from multiple views and uses it to guide an vision-language model (VLM) in judging instruction ambiguity. Extensive experiments demonstrate the challenge of our task and the effectiveness of AmbiVer, paving the way for safer and more trustworthy embodied AI. Code and dataset available at https://jiayuding031020.github.io/ambi3d/.",
-      "published": "2026-01-09T18:17:11Z",
-      "updated": "2026-04-15T17:18:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.05991v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.10015v2",
-      "title": "FinTrace: Holistic Trajectory-Level Evaluation of LLM Tool Calling for Long-Horizon Financial Tasks",
-      "authors": [
-        "Yupeng Cao",
-        "Haohang Li",
-        "Weijin Liu",
-        "Wenbo Cao",
-        "Anke Xu",
-        "Lingfei Qian",
-        "Xueqing Peng",
-        "Minxue Tang",
-        "Zhiyuan Yao",
-        "Jimin Huang",
-        "K. P. Subbalakshmi",
-        "Zining Zhu",
-        "Jordan W. Suchow",
-        "Yangyang Yu"
-      ],
-      "summary": "Recent studies demonstrate that tool-calling capability enables large language models (LLMs) to interact with external environments for long-horizon financial tasks. While existing benchmarks have begun evaluating financial tool calling, they focus on limited scenarios and rely on call-level metrics that fail to capture trajectory-level reasoning quality. To address this gap, we introduce FinTrace, a benchmark comprising 800 expert-annotated trajectories spanning 34 real-world financial task categories across multiple difficulty levels. FinTrace employs a rubric-based evaluation protocol with nine metrics organized along four axes -- action correctness, execution efficiency, process quality, and output quality -- enabling fine-grained assessment of LLM tool-calling behavior. Our evaluation of 13 LLMs reveals that while frontier models achieve strong tool selection, all models struggle with information utilization and final answer quality, exposing a critical gap between invoking the right tools and reasoning effectively over their outputs. To move beyond diagnosis, we construct FinTrace-Training, the first trajectory-level preference dataset for financial tool-calling, containing 8,196 curated trajectories with tool-augmented contexts and preference pairs. We fine-tune Qwen-3.5-9B using supervised fine-tuning followed by direct preference optimization (DPO) and show that training on FinTrace-Training consistently improves intermediate reasoning metrics, with DPO more effectively suppressing failure modes. However, end-to-end answer quality remains a bottleneck, indicating that trajectory-level improvements do not yet fully propagate to final output quality.",
-      "published": "2026-04-11T03:58:39Z",
-      "updated": "2026-04-15T16:59:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.10015v2"
+      "updated": "2026-04-16T15:48:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.14149v2"
     }
   ]
 }
