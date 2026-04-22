@@ -1,187 +1,211 @@
 {
-  "generated_at_utc": "2026-04-21T02:32:44Z",
+  "generated_at_utc": "2026-04-22T02:31:00Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2601.05543v2",
-      "title": "Closing the Modality Reasoning Gap for Speech Large Language Models",
+      "id": "http://arxiv.org/abs/2604.19742v1",
+      "title": "PlayCoder: Making LLM-Generated GUI Code Playable",
       "authors": [
-        "Chaoren Wang",
-        "Heng Lu",
-        "Xueyao Zhang",
-        "Shujie Liu",
-        "Yan Lu",
-        "Jinyu Li",
-        "Zhizheng Wu"
+        "Zhiyuan Peng",
+        "Wei Tao",
+        "Xin Yin",
+        "Chenhao Ying",
+        "Yuan Luo",
+        "Yiwen Guo"
       ],
-      "summary": "Although Speech Large Language Models have achieved notable progress, a substantial modality reasoning gap remains: their reasoning performance on speech inputs is markedly weaker than on text. This gap could be associated with representational drift across Transformer layers and behavior deviations in long-chain reasoning. To address this issue, we introduce TARS, a reinforcement-learning framework that aligns text-conditioned and speech-conditioned trajectories through an asymmetric reward design. The framework employs two dense and complementary signals: representation alignment, which measures layer-wise hidden-state similarity between speech- and text-conditioned trajectories, and behavior alignment, which evaluates semantic consistency between generated outputs and reference text completions. Experiments on challenging reasoning benchmarks, including MMSU and OBQA, show that our approach significantly narrows the modality reasoning gap and achieves state-of-the-art performance among 7B-scale Speech LLMs.",
-      "published": "2026-01-09T05:51:56Z",
-      "updated": "2026-04-20T10:33:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.05543v2"
+      "summary": "Large language models (LLMs) have achieved strong results in code generation, but their ability to generate GUI applications, especially games, remains insufficiently studied. Existing benchmarks mainly evaluate correctness through test cases, which are inadequate for GUI applications because these systems are interactive, event-driven, and require correct state transitions across sequences of user actions. Their evaluation therefore should consider interaction flows and UI logic rather than only pass/fail outcomes. To study this problem, we introduce PlayEval, a repository-aware benchmark built from 43 multilingual GUI applications in Python, TypeScript, and JavaScript. Unlike prior GUI benchmarks that are difficult to adapt to desktop environments, PlayEval covers six major GUI application categories and directly supports code-generation evaluation. We further propose Play@k, a metric that measures whether at least one of *k* generated candidates can be played end-to-end without logical errors. To support reliable evaluation, we develop PlayTester, an LLM-based agent that performs task-oriented GUI playthroughs and detects logic violations automatically. Experiments on 10 state-of-the-art code LLMs show that, despite high compilation rates, they achieve near-zero Play@3, revealing major weaknesses in generating logically correct GUI applications. To address this limitation, we present PlayCoder, a multi-agent, repository-aware framework that generates, evaluates, and iteratively repairs GUI application code in a closed loop. PlayCoder substantially improves both functional correctness and semantic alignment for open-source and closed-source models, reaching up to 38.1% Exec@3 and 20.3% Play@3. Case studies further show that it can uncover silent logic bugs missed by traditional metrics and fix them through targeted edits.",
+      "published": "2026-04-21T17:59:16Z",
+      "updated": "2026-04-21T17:59:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19742v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.02025v4",
-      "title": "Style over Story: Measuring LLM Narrative Preferences via Structured Selection",
+      "id": "http://arxiv.org/abs/2604.19716v1",
+      "title": "Discovering a Shared Logical Subspace: Steering LLM Logical Reasoning via Alignment of Natural-Language and Symbolic Views",
       "authors": [
-        "Donghoon Jung",
-        "Jiwoo Choi",
-        "Songeun Chae",
-        "Seohyon Jung"
+        "Feihao Fang",
+        "My T. Thai",
+        "Yuanyuan Lei"
       ],
-      "summary": "We introduce a constraint-selection-based experiment design for measuring narrative preferences of Large Language Models (LLMs). This design offers an interpretable lens on LLMs' narrative selection behavior. We developed a library of 200 narratology-grounded constraints and prompted selections from six LLMs under three different instruction types: basic, quality-focused, and creativity-focused. Findings demonstrate that models consistently prioritize Style over narrative content elements like Event, Character, and Setting. Style preferences remain stable across models and instruction types, whereas content elements show cross-model divergence and instructional sensitivity. These results suggest that LLMs have latent narrative preferences, which should inform how the NLP community evaluates and deploys models in creative domains.",
-      "published": "2025-10-02T13:57:14Z",
-      "updated": "2026-04-20T10:33:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.02025v4"
+      "summary": "Large Language Models (LLMs) still struggle with multi-step logical reasoning. Existing approaches either purely refine the reasoning chain in natural language form or attach a symbolic solver as an external module. In this work, we instead ask whether LLMs contain a shared internal logical subspace that simultaneously aligns natural-language and symbolic-language views of the reasoning process. Our hypothesis is that this logical subspace captures logical reasoning capabilities in LLMs that are shared across views while remaining independent of surface forms. To verify this, we employ Canonical Correlation Analysis on the paired residual activations from natural-language and symbolic-language reasoning chains, learning a low-dimensional subspace with maximum cross-view correlation. Furthermore, we design a training-free approach that steers LLMs reasoning chain along this logical subspace, thereby leveraging the complementary reasoning signals from both views. Experiments on four logical reasoning benchmarks demonstrate the effectiveness of our approach, improving accuracy by up to 11 percentage points and generalizing well on out-of-domain problems.",
+      "published": "2026-04-21T17:42:54Z",
+      "updated": "2026-04-21T17:42:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19716v1"
     },
     {
-      "id": "http://arxiv.org/abs/2507.15586v7",
-      "title": "Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation",
+      "id": "http://arxiv.org/abs/2510.17925v2",
+      "title": "SpecAgent: A Speculative Retrieval and Forecasting Agent for Code Completion",
       "authors": [
-        "Xinping Zhao",
-        "Shouzheng Huang",
-        "Yan Zhong",
-        "Xinshuo Hu",
-        "Meishan Zhang",
-        "Baotian Hu",
-        "Min Zhang"
+        "George Ma",
+        "Anurag Koul",
+        "Qi Chen",
+        "Yawen Wu",
+        "Sachit Kuhar",
+        "Yu Yu",
+        "Aritra Sengupta",
+        "Varun Kumar",
+        "Murali Krishna Ramanathan"
       ],
-      "summary": "Retrieval-Augmented Generation (RAG) effectively improves the accuracy of Large Language Models (LLMs). However, retrieval noises significantly undermine the quality of LLMs' generation, necessitating the development of denoising mechanisms. Previous works extract evidence straightforwardly without deep thinking, which may risk filtering out key clues and struggle with generalization. To this end, we propose EviOmni, which learns to extract rational evidence via reasoning first and then extracting. Specifically, EviOmni integrates evidence reasoning and evidence extraction into one unified trajectory, followed by knowledge token masking to avoid information leakage, optimized via on-policy reinforcement learning with verifiable rewards in terms of answer, length, and format. Extensive experiments on five benchmark datasets show the superiority of EviOmni, which provides compact and high-quality evidence, enhances the accuracy of downstream tasks, and supports both traditional and agentic RAG systems.",
-      "published": "2025-07-21T13:03:55Z",
-      "updated": "2026-04-20T10:32:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.15586v7"
+      "summary": "Large Language Models (LLMs) excel at code-related tasks but often struggle in realistic software repositories, where project-specific APIs and cross-file dependencies are crucial. Retrieval-augmented methods mitigate this by injecting repository context at inference time. The low inference-time latency budget affects either retrieval quality or the added latency adversely impacts user experience. We address this limitation with SpecAgent, an agent that improves both latency and code-generation quality by proactively exploring repository files during indexing and constructing speculative context that anticipates future edits in each file. This indexing-time asynchrony allows thorough context computation, masking latency, and the speculative nature of the context improves code-generation quality. Additionally, we identify the problem of future context leakage in existing benchmarks, which can inflate reported performance. To address this, we construct a synthetic, leakage-free benchmark that enables a more realistic evaluation of our agent against baselines. Experiments show that SpecAgent consistently achieves absolute gains of 9-11% (48-58% relative) compared to the best-performing baselines, while significantly reducing inference latency.",
+      "published": "2025-10-20T08:04:51Z",
+      "updated": "2026-04-21T17:40:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.17925v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.10294v5",
-      "title": "Reasoning Hijacking: The Fragility of Reasoning Alignment in Large Language Models",
+      "id": "http://arxiv.org/abs/2409.06080v2",
+      "title": "Regression with Large Language Models for Materials and Molecular Property Prediction",
       "authors": [
-        "Yuansen Liu",
-        "Yixuan Tang",
-        "Anthony Kum Hoe Tun"
+        "Ryan Jacobs",
+        "Maciej P. Polak",
+        "Lane E. Schultz",
+        "Hamed Mahdavi",
+        "Vasant Honavar",
+        "Dane Morgan"
       ],
-      "summary": "Current LLM safety research predominantly focuses on mitigating Goal Hijacking, preventing attackers from redirecting a model's high-level objective (e.g., from \"summarizing emails\" to \"phishing users\"). In this paper, we argue that this perspective is incomplete and highlight a critical vulnerability in Reasoning Alignment. We expose the inherent fragility of current alignment techniques by proposing a new adversarial prompt attack paradigm: Reasoning Hijacking. To demonstrate this vulnerability, we instantiate it via the Criteria Attack, which subverts model judgments by injecting spurious decision criteria without altering the high-level task goal. Unlike Goal Hijacking, which attempts to override the system prompt, Reasoning Hijacking keeps the task goal intact but manipulates the model's decision-making logic by injecting spurious reasoning shortcuts. Through extensive experiments on three different tasks (toxic comment, negative review, and spam detection), we demonstrate that even state-of-the-art models are highly fragile, consistently prioritizing injected heuristic shortcuts over rigorous semantic analysis. Crucially, because the model's explicit intent remains aligned with the user's instructions, these attacks can bypass defenses designed to detect goal deviation (e.g., SecAlign, StruQ), revealing a fundamental blind spot in the current safety landscape. Data and code are available at https://github.com/Yuan-Hou/criteria_attack.",
-      "published": "2026-01-15T11:12:08Z",
-      "updated": "2026-04-20T10:20:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.10294v5"
+      "summary": "We demonstrate the ability of large language models (LLMs) to perform material and molecular property regression tasks, a significant deviation from the conventional LLM use case. We benchmark the Large Language Model Meta AI (LLaMA) 3 on several molecular properties in the QM9 dataset and 28 materials properties. Only composition-based input strings are used as the model input and we fine tune on only the generative loss. We broadly find that LLaMA 3, when fine-tuned using the SMILES representation of molecules, provides useful regression results which can rival standard materials property prediction models like random forest or fully connected neural networks on the QM9 dataset. Not surprisingly, LLaMA 3 errors are 5-10x higher than those of the state-of-the-art models that were trained using far more granular representation of molecules (e.g., atom types and their coordinates) for the same task. Similarly, LLaMA 3 provides comparable, although slightly worse, accuracy relative to random forest and elemental descriptors when using just compound chemical description on our set of 28 materials properties. Interestingly, LLaMA 3 provides improved predictions compared to GPT-3.5 and GPT-4o. This work highlights the versatility of LLMs, suggesting that LLM-like generative models can potentially transcend their traditional applications to tackle complex physical phenomena, thus paving the way for future research and applications in chemistry, materials science and other scientific domains.",
+      "published": "2024-09-09T21:26:32Z",
+      "updated": "2026-04-21T17:27:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.06080v2"
     },
     {
-      "id": "http://arxiv.org/abs/2510.09351v2",
-      "title": "ReTraceQA: Evaluating Reasoning Traces of Small Language Models in Commonsense Question Answering",
+      "id": "http://arxiv.org/abs/2601.00679v2",
+      "title": "QSLM: A Performance- and Memory-aware Quantization Framework with Tiered Search Strategy for Spike-driven Language Models",
       "authors": [
-        "Francesco Maria Molfese",
-        "Luca Moroni",
-        "Ciro Porcaro",
-        "Simone Conia",
-        "Roberto Navigli"
+        "Rachmad Vidya Wicaksana Putra",
+        "Pasindu Wickramasinghe",
+        "Muhammad Shafique"
       ],
-      "summary": "While Small Language Models (SLMs) have demonstrated promising performance on an increasingly wide array of commonsense reasoning benchmarks, current evaluation practices rely almost exclusively on the accuracy of their final answers, neglecting the validity of the reasoning processes that lead to those answers. To address this issue, we present ReTraceQA, a novel benchmark that introduces process-level evaluation for commonsense reasoning tasks. Our expert-annotated dataset reveals that in a substantial portion of instances (14-24%), SLMs provide correct final answers despite flawed reasoning processes, suggesting that the capabilities of SLMs are often overestimated by evaluation metrics that focus only on comparing the final answer with the ground truth. Indeed, we show that, when employing strong Large Language Models (LLMs) as automated judges for reasoning-aware evaluation rather than answer-only metrics, SLM performance drops significantly across all models and datasets, with scores decreasing by up to 25%.",
-      "published": "2025-10-10T13:03:33Z",
-      "updated": "2026-04-20T10:17:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.09351v2"
+      "summary": "Large Language Models (LLMs) have been emerging as prominent AI models for solving many natural language tasks due to their high performance (e.g., accuracy) and capabilities in generating high-quality responses to the given inputs. However, their large computational cost, huge memory footprints, and high processing power/energy make it challenging for their embedded deployments. Amid several tinyLLMs, recent works have proposed spike-driven language models (SLMs) for significantly reducing the processing power/energy of LLMs. However, their memory footprints still remain too large for low-cost and resource-constrained embedded devices. Manual quantization approach may effectively compress SLM memory footprints, but it requires a huge design time and compute power to find the quantization setting for each network, hence making this approach not-scalable for handling different networks, performance requirements, and memory budgets. To bridge this gap, we propose QSLM, a novel framework that performs automated quantization for compressing pre-trained SLMs, while meeting the performance and memory constraints. To achieve this, QSLM first identifies the hierarchy of the given network architecture and the sensitivity of network layers under quantization, then employs a tiered quantization strategy (e.g., global-, block-, and module-level quantization) while leveraging a multi-objective performance-and-memory trade-off function to select the final quantization setting. Experimental results indicate that our QSLM reduces memory footprint by up to 86.5%, reduces power consumption by up to 20%, maintains high performance across different tasks (i.e., by up to 84.4% accuracy of sentiment classification on the SST-2 dataset and perplexity score of 23.2 for text generation on the WikiText-2 dataset) close to the original non-quantized model while meeting the performance and memory constraints.",
+      "published": "2026-01-02T13:05:33Z",
+      "updated": "2026-04-21T17:21:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.00679v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.18041v1",
-      "title": "JudgeMeNot: Personalizing Large Language Models to Emulate Judicial Reasoning in Hebrew",
+      "id": "http://arxiv.org/abs/2604.19699v1",
+      "title": "Epistemic orientation in parliamentary discourse is associated with deliberative democracy",
       "authors": [
-        "Itay Razumenko",
-        "Arnon Sturm",
-        "Nir Grinberg"
+        "Segun Aroyehun",
+        "Stephan Lewandowsky",
+        "David Garcia"
       ],
-      "summary": "Despite significant advances in large language models, personalizing them for individual decision-makers remains an open problem. Here, we introduce a synthetic-organic supervision pipeline that transforms raw judicial decisions into instruction-tuning data, enabling parameter-efficient fine-tuning of personalized models for individual judges in low-resource settings. We compare our approach to state-of-the-art personalization techniques across three different tasks and settings. The results show that Causal Language Modeling followed by synthetically generated instruction-tuning significantly outperforms all other baselines, providing significant improvements across lexical, stylistic, and semantic similarity. Notably, our model-generated outputs are indistinguishable from the reasoning of human judges, highlighting the viability of efficient personalization, even in low-resource settings.",
-      "published": "2026-04-20T10:05:19Z",
-      "updated": "2026-04-20T10:05:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.18041v1"
+      "summary": "The pursuit of truth is central to democratic deliberation and governance, yet political discourse reflects varying epistemic orientations, ranging from evidence-based reasoning grounded in verifiable information to intuition-based reasoning rooted in beliefs and subjective interpretation. We introduce a scalable approach to measure epistemic orientation using the Evidence--Minus--Intuition (EMI) score, derived from large language model (LLM) ratings and embedding-based semantic similarity. Applying this approach to 15 million parliamentary speech segments spanning 1946 to 2025 across seven countries, we examine temporal patterns in discourse and its association with deliberative democracy and governance. We find that EMI is positively associated with deliberative democracy within countries over time, with consistent relationships in both contemporaneous and lagged analyses. EMI is also positively associated with the transparency and predictable implementation of laws as a dimension of governance. These findings suggest that the epistemic nature of political discourse is crucial for both the quality of democracy and governance.",
+      "published": "2026-04-21T17:19:09Z",
+      "updated": "2026-04-21T17:19:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19699v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.18038v1",
-      "title": "First, Do No Harm (With LLMs): Mitigating Racial Bias via Agentic Workflows",
+      "id": "http://arxiv.org/abs/2604.19697v1",
+      "title": "Unveiling Fine-Grained Visual Traces: Evaluating Multimodal Interleaved Reasoning Chains in Multimodal STEM Tasks",
       "authors": [
-        "Sihao Xing",
-        "Zaur Gouliev"
+        "Jing Jin",
+        "Hao Liu",
+        "Yan Bai",
+        "Yihang Lou",
+        "Zhenke Wang",
+        "Tianrun Yuan",
+        "Juntong Chen",
+        "Yongkang Zhu",
+        "Fanhu Zeng",
+        "Xuanyu Zhu",
+        "Yige Xu"
       ],
-      "summary": "Large language models (LLMs) are increasingly used in clinical settings, raising concerns about racial bias in both generated medical text and clinical reasoning. Existing studies have identified bias in medical LLMs, but many focus on single models and give less attention to mitigation. This study uses the EU AI Act as a governance lens to evaluate five widely used LLMs across two tasks, namely synthetic patient-case generation and differential diagnosis ranking. Using race-stratified epidemiological distributions in the United States and expert differential diagnosis lists as benchmarks, we apply structured prompt templates and a two-part evaluation design to examine implicit and explicit racial bias. All models deviated from observed racial distributions in the synthetic case generation task, with GPT-4.1 showing the smallest overall deviation. In the differential diagnosis task, DeepSeek V3 produced the strongest overall results across the reported metrics. When embedded in an agentic workflow, DeepSeek V3 showed an improvement of 0.0348 in mean p-value, 0.1166 in median p-value, and 0.0949 in mean difference relative to the standalone model, although improvement was not uniform across every metric. These findings support multi-metric bias evaluation for AI systems used in medical settings and suggest that retrieval-based agentic workflows may reduce some forms of explicit bias in benchmarked diagnostic tasks. Detailed prompt templates, experimental datasets, and code pipelines are available on our GitHub.",
-      "published": "2026-04-20T10:02:38Z",
-      "updated": "2026-04-20T10:02:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.18038v1"
+      "summary": "Multimodal large language models (MLLMs) have shown promising reasoning abilities, yet evaluating their performance in specialized domains remains challenging. STEM reasoning is a particularly valuable testbed because it provides highly verifiable feedback, but existing benchmarks often permit unimodal shortcuts due to modality redundancy and focus mainly on final-answer accuracy, overlooking the reasoning process itself. To address this challenge, we introduce StepSTEM: a graduate-level benchmark of 283 problems across mathematics, physics, chemistry, biology, and engineering for fine-grained evaluation of cross-modal reasoning in MLLMs. StepSTEM is constructed through a rigorous curation pipeline that enforces strict complementarity between textual and visual inputs. We further propose a general step-level evaluation framework for both text-only chain-of-thought and interleaved image-text reasoning, using dynamic programming to align predicted reasoning steps with multiple reference solutions. Experiments across a wide range of models show that current MLLMs still rely heavily on textual reasoning, with even Gemini 3.1 Pro and Claude Opus 4.6 achieving only 38.29% accuracy. These results highlight substantial headroom for genuine cross-modal STEM reasoning and position StepSTEM as a benchmark for fine-grained evaluation of multimodal reasoning. Source code is available at https://github.com/lll-hhh/STEPSTEM.",
+      "published": "2026-04-21T17:17:37Z",
+      "updated": "2026-04-21T17:17:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19697v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.07794v3",
-      "title": "Emergent Structured Representations Support Flexible In-Context Inference in Large Language Models",
+      "id": "http://arxiv.org/abs/2601.15895v2",
+      "title": "Co-Constructing Alignment: A Participatory Approach to Situate AI Values",
       "authors": [
-        "Ningyu Xu",
-        "Qi Zhang",
-        "Xipeng Qiu",
-        "Xuanjing Huang"
+        "Anne Arzberger",
+        "Enrico Liscio",
+        "Maria Luce Lupetti",
+        "Inigo Martinez de Rituerto de Troya",
+        "Jie Yang"
       ],
-      "summary": "Large language models (LLMs) exhibit emergent behaviors suggestive of human-like reasoning. While recent work has identified structured conceptual representations within these models, it remains unclear whether they functionally rely on such representations for reasoning. Here we investigate the internal processing of LLMs during in-context inference across diverse tasks. Our results reveal a conceptual subspace emerging in middle to late layers, whose representational structure persists across contexts. Using causal mediation analyses, we demonstrate that this subspace is not merely an epiphenomenon but is functionally central to model predictions, establishing its causal role in inference. We further identify a layer-wise progression where attention heads in early-to-middle layers integrate contextual cues to construct and refine the subspace, which is subsequently leveraged by later layers to generate predictions. Together, these findings provide evidence that LLMs dynamically construct and use structured latent representations in context for inference, offering insights into the computational processes underlying flexible adaptation.",
-      "published": "2026-02-08T03:14:39Z",
-      "updated": "2026-04-20T10:02:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.07794v3"
+      "summary": "As AI systems become embedded in everyday practice, value misalignment has emerged as a pressing concern. Yet, dominant alignment approaches remain model centric, treating users as passive recipients of prespecified values rather than as epistemic agents who encounter and respond to misalignment during interactions. Drawing on situated perspectives, we frame alignment as an interactional practice co-constructed during human AI interaction. We investigate how users understand and wish to contribute to this process through a participatory workshop that combines misalignment diaries with generative design activities. We surface how misalignments materialise in practice and how users envision acting on them, grounded in the context of researchers using Large Language Models as research assistants. Our findings show that misalignments are experienced less as abstract ethical violations than as unexpected responses, and task or social breakdowns. Participants articulated roles ranging from adjusting and interpreting model behaviour to deliberate non-engagement as an alignment strategy. We conclude with implications for designing systems that support alignment as an ongoing, situated, and shared practice.",
+      "published": "2026-01-22T12:20:14Z",
+      "updated": "2026-04-21T17:15:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.15895v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.20867v2",
-      "title": "Generalizable Prompt Tuning for Audio-Language Models via Semantic Expansion",
+      "id": "http://arxiv.org/abs/2604.19689v1",
+      "title": "A-MAR: Agent-based Multimodal Art Retrieval for Fine-Grained Artwork Understanding",
       "authors": [
-        "Jaehyuk Jang",
-        "Wonjun Lee",
-        "Kangwook Ko",
-        "Changick Kim"
+        "Shuai Wang",
+        "Hongyi Zhu",
+        "Jia-Hong Huang",
+        "Yixian Shen",
+        "Chengxi Zeng",
+        "Stevan Rudinac",
+        "Monika Kackovic",
+        "Nachoem Wijnberg",
+        "Marcel Worring"
       ],
-      "summary": "Prompt tuning has achieved remarkable progress in vision-language models (VLMs) and is recently being adopted for audio-language models (ALMs). However, its generalization ability in ALMs remains largely underexplored. We observe that conventional prompt tuning for ALMs also suffers from the Base-New Tradeoff, and we identify that this issue stems from the disrupted semantic structure of the embedding space. To address this issue, we propose Semantically Expanded Prompt Tuning (SEPT)-a plug-and-play framework that explicitly regularizes the prompt embedding space by incorporating semantic neighbors generated by large language models. SEPT introduces a novel semantic expansion loss with margin constraints that promote intra-class compactness and inter-class separability, thereby enhancing the semantic structure of the prompt embedding space. For comprehensive evaluation, we establish the first benchmark setup for prompt generalization in ALMs, covering both base-to-new generalization and cross-dataset transferability. Extensive experiments demonstrate that SEPT consistently improves generalization performance across multiple prompt tuning baselines, while maintaining computational cost during inference.",
-      "published": "2026-01-06T12:47:32Z",
-      "updated": "2026-04-20T09:59:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.20867v2"
+      "summary": "Understanding artworks requires multi-step reasoning over visual content and cultural, historical, and stylistic context. While recent multimodal large language models show promise in artwork explanation, they rely on implicit reasoning and internalized knowl- edge, limiting interpretability and explicit evidence grounding. We propose A-MAR, an Agent-based Multimodal Art Retrieval framework that explicitly conditions retrieval on structured reasoning plans. Given an artwork and a user query, A-MAR first decomposes the task into a structured reasoning plan that specifies the goals and evidence requirements for each step. Retrieval is then conditionedon this plan, enabling targeted evidence selection and supporting step-wise, grounded explanations. To evaluate agent-based multi- modal reasoning within the art domain, we introduce ArtCoT-QA. This diagnostic benchmark features multi-step reasoning chains for diverse art-related queries, enabling a granular analysis that extends beyond simple final answer accuracy. Experiments on SemArt and Artpedia show that A-MAR consistently outperforms static, non planned retrieval and strong MLLM baselines in final explanation quality, while evaluations on ArtCoT-QA further demonstrate its advantages in evidence grounding and multi-step reasoning ability. These results highlight the importance of reasoning-conditioned retrieval for knowledge-intensive multimodal understanding and position A-MAR as a step toward interpretable, goal-driven AI systems, with particular relevance to cultural industries. The code and data are available at: https://github.com/ShuaiWang97/A-MAR.",
+      "published": "2026-04-21T17:11:48Z",
+      "updated": "2026-04-21T17:11:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19689v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.18031v1",
-      "title": "How Creative Are Large Language Models in Generating Molecules?",
+      "id": "http://arxiv.org/abs/2604.19667v1",
+      "title": "Chat2Workflow: A Benchmark for Generating Executable Visual Workflows with Natural Language",
       "authors": [
-        "Wen Tao",
-        "Yiwei Wang",
-        "Peng Zhou",
-        "Bryan Hooi",
-        "Wanlong Fang",
-        "Tianle Zhang",
-        "Xiao Luo",
-        "Yuansheng Liu",
-        "Alvin Chan"
+        "Yi Zhong",
+        "Buqiang Xu",
+        "Yijun Wang",
+        "Zifei Shan",
+        "Shuofei Qiao",
+        "Guozhou Zheng",
+        "Ningyu Zhang"
       ],
-      "summary": "Molecule generation requires satisfying multiple chemical and biological constraints while searching a large and structured chemical space. This makes it a non-binary problem, where effective models must identify non-obvious solutions under constraints while maintaining exploration to improve success by escaping local optima. From this perspective, creativity is a functional requirement in molecular generation rather than an aesthetic notion. Large language models (LLMs) can generate molecular representations directly from natural language prompts, but it remains unclear what type of creativity they exhibit in this setting and how it should be evaluated. In this work, we study the creative behavior of LLMs in molecular generation through a systematic empirical evaluation across physicochemical, ADMET, and biological activity tasks. We characterize creativity along two complementary dimensions, convergent creativity and divergent creativity, and analyze how different factors shape these behaviors. Our results indicate that LLMs exhibit distinct patterns of creative behavior in molecule generation, such as an increase in constraint satisfaction when additional constraints are imposed. Overall, our work is the first to reframe the abilities required for molecule generation as creativity, providing a systematic understanding of creativity in LLM-based molecular generation and clarifying the appropriate use of LLMs in molecular discovery pipelines.",
-      "published": "2026-04-20T09:57:43Z",
-      "updated": "2026-04-20T09:57:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.18031v1"
+      "summary": "At present, executable visual workflows have emerged as a mainstream paradigm in real-world industrial deployments, offering strong reliability and controllability. However, in current practice, such workflows are almost entirely constructed through manual engineering: developers must carefully design workflows, write prompts for each step, and repeatedly revise the logic as requirements evolve-making development costly, time-consuming, and error-prone. To study whether large language models can automate this multi-round interaction process, we introduce Chat2Workflow, a benchmark for generating executable visual workflows directly from natural language, and propose a robust agentic framework to mitigate recurrent execution errors. Chat2Workflow is built from a large collection of real-world business workflows, with each instance designed so that the generated workflow can be transformed and directly deployed to practical workflow platforms such as Dify and Coze. Experimental results show that while state-of-the-art language models can often capture high-level intent, they struggle to generate correct, stable, and executable workflows, especially under complex or changing requirements. Although our agentic framework yields up to 5.34% resolve rate gains, the remaining real-world gap positions Chat2Workflow as a foundation for advancing industrial-grade automation. Code is available at https://github.com/zjunlp/Chat2Workflow.",
+      "published": "2026-04-21T16:49:11Z",
+      "updated": "2026-04-21T16:49:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19667v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.09275v2",
-      "title": "Inflated Excellence or True Performance? Rethinking Medical Diagnostic Benchmarks with Dynamic Evaluation",
+      "id": "http://arxiv.org/abs/2604.19656v1",
+      "title": "Pause or Fabricate? Training Language Models for Grounded Reasoning",
       "authors": [
-        "Xiangxu Zhang",
-        "Lei Li",
-        "Yanyun Zhou",
-        "Xiao Zhou",
-        "Yingying Zhang",
-        "Xian Wu"
+        "Yiwen Qiu",
+        "Linjuan Wu",
+        "Yizhou Liu",
+        "Yuchen Yan",
+        "Jin Ma",
+        "Xu Tan",
+        "Yao Hu",
+        "Daoxin Zhang",
+        "Wenqi Zhang",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yongliang Shen"
       ],
-      "summary": "Medical diagnostics is a high-stakes and complex domain that is critical to patient care. However, current evaluations of large language models (LLMs) remain limited in capturing key challenges of clinical diagnostic scenarios. Most rely on benchmarks derived from public exams, raising contamination bias that can inflate performance, and they overlook the confounded nature of real consultations beyond textbook cases. Recent dynamic evaluations offer a promising alternative, but often remain insufficient for diagnosis-oriented benchmarking, with limited coverage of clinically grounded confounders and trustworthiness beyond accuracy. To address these gaps, we propose DyReMe, a dynamic benchmark for medical diagnostics that provides a controlled and scalable stress test of diagnostic robustness. Unlike static exam-style questions, DyReMe generates fresh, consultation-style cases that incorporate clinically grounded confounders, such as differential diagnoses and common misdiagnosis factors. It also varies expression styles to capture heterogeneous patient-style descriptions. Beyond accuracy, DyReMe evaluates LLMs on three additional clinically relevant dimensions: veracity, helpfulness, and consistency. Our experiments show that this dynamic approach yields more challenging assessments and exposes substantial weaknesses of stateof-the-art LLMs under clinically confounded diagnostic settings. These findings highlight the urgent need for evaluation frameworks that better assess trustworthy medical diagnostics 1 under clinically grounded confounders.",
-      "published": "2025-10-10T11:19:04Z",
-      "updated": "2026-04-20T09:54:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.09275v2"
+      "summary": "Large language models have achieved remarkable progress on complex reasoning tasks. However, they often implicitly fabricate information when inputs are incomplete, producing confident but unreliable conclusions -- a failure mode we term ungrounded reasoning. We argue that this issue arises not from insufficient reasoning capability, but from the lack of inferential boundary awareness -- the ability to recognize when the necessary premises for valid inference are missing. To address this issue, we propose Grounded Reasoning via Interactive Reinforcement Learning (GRIL), a multi-turn reinforcement learning framework for grounded reasoning under incomplete information. GRIL decomposes the reasoning process into two stages: clarify and pause, which identifies whether the available information is sufficient, and grounded reasoning, which performs task solving once the necessary premises are established. We design stage-specific rewards to penalize hallucinations, enabling models to detect gaps, stop proactively, and resume reasoning after clarification. Experiments on GSM8K-Insufficient and MetaMATH-Insufficient show that GRIL significantly improves premise detection (up to 45%), leading to a 30% increase in task success while reducing average response length by over 20%. Additional analyses confirm robustness to noisy user responses and generalization to out-of-distribution tasks.",
+      "published": "2026-04-21T16:45:29Z",
+      "updated": "2026-04-21T16:45:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.19656v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.04809v4",
-      "title": "SCALER:Synthetic Scalable Adaptive Learning Environment for Reasoning",
+      "id": "http://arxiv.org/abs/2604.16171v2",
+      "title": "JumpLoRA: Sparse Adapters for Continual Learning in Large Language Models",
       "authors": [
-        "Caijun Xu",
-        "Changyi Xiao",
-        "Zhongyuan Peng",
-        "Xinrun Wang",
-        "Yixin Cao"
+        "Alexandra Dragomir",
+        "Ioana Pintilie",
+        "Antonio Barbalau",
+        "Marius Dragoi",
+        "Florin Brad",
+        "Cristian Daniel Paduraru",
+        "Alexandru Tifrea",
+        "Elena Burceanu",
+        "Radu Tudor Ionescu"
       ],
-      "summary": "Reinforcement learning (RL) offers a principled way to enhance the reasoning capabilities of large language models, yet its effectiveness hinges on training signals that remain informative as models evolve. In practice, RL progress often slows when task difficulty becomes poorly aligned with model capability, or when training is dominated by a narrow set of recurring problem patterns. To jointly address these issues, we propose SCALER (Synthetic sCalable Adaptive Learning Environment for Reasoning), a framework that sustains effective learning signals through adaptive environment design. SCALER introduces a scalable synthesis pipeline that converts real-world programming problems into verifiable reasoning environments with controllable difficulty and unbounded instance generation, enabling RL training beyond finite datasets while preserving strong correctness guarantees. Building on this, SCALER further employs an adaptive multi-environment RL strategy that dynamically adjusts instance difficulty and curates the active set of environments to track the model's capability frontier and maintain distributional diversity. This co-adaptation prevents reward sparsity, mitigates overfitting to narrow task patterns, and supports sustained improvement throughout training. Extensive experiments show that SCALER consistently outperforms dataset-based RL baselines across diverse reasoning benchmarks and exhibits more stable, long-horizon training dynamics.",
-      "published": "2026-01-08T10:42:04Z",
-      "updated": "2026-04-20T09:53:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.04809v4"
+      "summary": "Adapter-based methods have become a cost-effective approach to continual learning (CL) for Large Language Models (LLMs), by sequentially learning a low-rank update matrix for each task. To mitigate catastrophic forgetting, state-of-the-art approaches impose constraints on new adapters with respect to the previous ones, by targeting either subspace or coordinate-wise interference. In this paper, we propose JumpLoRA, a novel framework to adaptively induce sparsity in the Low-Rank Adaptation (LoRA) blocks through the use of JumpReLU gating. The method achieves dynamic parameter isolation, which helps prevent task interference. We demonstrate that our method is highly modular and compatible with LoRA-based CL approaches. Specifically, it significantly boosts the performance of IncLoRA and outperforms the leading state-of-the-art CL method, ELLA.",
+      "published": "2026-04-17T15:38:37Z",
+      "updated": "2026-04-21T16:37:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.16171v2"
     }
   ]
 }
