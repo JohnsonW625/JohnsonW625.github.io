@@ -1,191 +1,183 @@
 {
-  "generated_at_utc": "2026-04-28T02:49:47Z",
+  "generated_at_utc": "2026-04-29T02:48:55Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.24657v1",
-      "title": "AgentWard: A Lifecycle Security Architecture for Autonomous AI Agents",
+      "id": "http://arxiv.org/abs/2604.25903v1",
+      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
       "authors": [
-        "Yixiang Zhang",
-        "Xinhao Deng",
-        "Jiaqing Wu",
-        "Yue Xiao",
-        "Ke Xu",
-        "Qi Li"
+        "Ajmain Inqiad Alam",
+        "Palash Roy",
+        "Chanchal K. Roy",
+        "Banani Roy",
+        "Kevin A. Schneider"
       ],
-      "summary": "Autonomous AI agents extend large language models into full runtime systems that load skills, ingest external content, maintain memory, plan multi-step actions, and invoke privileged tools. In such systems, security failures rarely remain confined to a single interface; instead, they can propagate across initialization, input processing, memory, decision-making, and execution, often becoming apparent only when harmful effects materialize in the environment. This paper presents AgentWard, a lifecycle-oriented, defense-in-depth architecture that systematically organizes protection across these five stages. AgentWard integrates stage-specific, heterogeneous controls with cross-layer coordination, enabling threats to be intercepted along their propagation paths while safeguarding critical assets. We detail the design rationale and architecture of five coordinated protection layers, and implement a plugin-native prototype on OpenClaw to demonstrate practical feasibility. This perspective provides a concrete blueprint for structuring runtime security controls, managing trust propagation, and enforcing execution containment in autonomous AI agents. Our code is available at https://github.com/FIND-Lab/AgentWard .",
-      "published": "2026-04-27T16:22:27Z",
-      "updated": "2026-04-27T16:22:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24657v1"
+      "summary": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49x memory reduction, (2) time reduction up to 8-10x for clone detection, up to 3x for summarization, and 4-7x for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT's design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
+      "published": "2026-04-28T17:48:16Z",
+      "updated": "2026-04-28T17:48:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25903v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24647v1",
-      "title": "DepthKV: Layer-Dependent KV Cache Pruning for Long-Context LLM Inference",
+      "id": "http://arxiv.org/abs/2604.25895v1",
+      "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
       "authors": [
-        "Zahra Dehghanighobadi",
-        "Asja Fischer"
+        "Steve Coyne"
       ],
-      "summary": "Long-context reasoning is a critical capability of large language models (LLMs), enabling applications such as long-document understanding, summarization, and code generation. However, efficient autoregressive inference relies on the key-value (KV) cache, whose memory footprint grows linearly with sequence length, leading to a major memory bottleneck. To mitigate this overhead, KV cache pruning methods discard cached tokens with low attention scores during inference. Most existing methods apply a uniform pruning ratio across layers, implicitly assuming that all layers contribute equally to overall model performance. We show that this assumption is suboptimal, as layers differ significantly in their sensitivity to pruning. We propose DepthKV, a layer-dependent pruning framework that allocates a fixed global KV budget across layers based on their sensitivity, rather than using a uniform allocation. Across multiple models and tasks, DepthKV consistently outperforms uniform pruning at the same global pruning ratio, demonstrating more effective utilization of the KV cache budget through layer-dependent allocation.",
-      "published": "2026-04-27T16:15:37Z",
-      "updated": "2026-04-27T16:15:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24647v1"
+      "summary": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.",
+      "published": "2026-04-28T17:39:14Z",
+      "updated": "2026-04-28T17:39:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25895v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24645v1",
-      "title": "K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology",
+      "id": "http://arxiv.org/abs/2411.14721v2",
+      "title": "MolReFlect: Towards In-Context Fine-grained Alignments between Molecules and Texts",
       "authors": [
-        "Soyeon Kim",
-        "Cheongwoong Kang",
-        "Myeongjin Lee",
-        "Eun-Chul Chang",
-        "Jaedeok Lee",
-        "Jaesik Choi"
+        "Jiatong Li",
+        "Yunqing Liu",
+        "Wei Liu",
+        "Jingdi Le",
+        "Di Zhang",
+        "Wenqi Fan",
+        "Dongzhan Zhou",
+        "Yuqiang Li",
+        "Qing Li"
       ],
-      "summary": "The development of practical (multimodal) large language model assistants for Korean weather forecasters is hindered by the absence of a multidimensional, expert-level evaluation framework grounded in authoritative sources. To address this, we introduce K-MetBench, a diagnostic benchmark grounded in national qualification exams. It exposes critical gaps across four dimensions: expert visual reasoning of charts, logical validity via expert-verified rationales, Korean-specific geo-cultural comprehension, and fine-grained domain analysis. Our evaluation of 55 models reveals a profound modality gap in interpreting specialized diagrams and a reasoning gap where models hallucinate logic despite correct predictions. Crucially, Korean models outperform significantly larger global models in local contexts, demonstrating that parameter scaling alone cannot resolve cultural dependencies. K-MetBench serves as a roadmap for developing reliable, culturally aware expert AI agents. The dataset is available at https://huggingface.co/datasets/soyeonbot/K-MetBench .",
-      "published": "2026-04-27T16:13:14Z",
-      "updated": "2026-04-27T16:13:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24645v1"
+      "summary": "Molecule discovery is a pivotal research field, impacting everything from medicine to materials. Recently, Large Language Models (LLMs) have been widely adopted in molecular understanding and generation, serving as a bridge between the molecular space and the natural language space, yet the alignment between molecules and their corresponding captions remains a significant challenge. Previous endeavors typically treat molecules as monolithic inputs, lacking an intermediate reasoning process and sacrificing explainability. In this work, we define fine-grained alignments as the precise correspondence between a molecule's sub-structures and the textual phrases that explain their properties. These alignments are crucial for LLMs to understand molecules in a more accurate and explainable manner. Normally, such fine-grained alignments require expert annotation, which is both costly and time-consuming. To allow LLMs to automatically label and learn the fine-grained alignments, we propose MolReFlect, a novel teacher-student framework, where a teacher LLM first generates and refines mappings between caption phrases and SMILES substructures and then explicitly teaches these detailed alignments to a student LLM. Experimental results demonstrate that MolReFlect enables LLMs to significantly outperform previous baselines, achieving the state-of-the-art performance in the molecule-caption translation task. Our codes are available via: https://github.com/phenixace/MolReFlect.",
+      "published": "2024-11-22T04:28:56Z",
+      "updated": "2026-04-28T17:16:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2411.14721v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.09159v3",
-      "title": "LLMs Meet Isolation Kernel: Lightweight, Learning-free Binary Embeddings for Fast Retrieval",
+      "id": "http://arxiv.org/abs/2602.23971v3",
+      "title": "Ask don't tell: Reducing sycophancy in large language models",
       "authors": [
-        "Zhibo Zhang",
-        "Yang Xu",
-        "Kai Ming Ting",
-        "Cam-Tu Nguyen"
+        "Magda Dubois",
+        "Cozmin Ududec",
+        "Christopher Summerfield",
+        "Lennart Luettgau"
       ],
-      "summary": "Large language models (LLMs) have recently enabled remarkable progress in text representation. However, their embeddings are typically high-dimensional, leading to substantial storage and retrieval overhead. Although recent approaches such as Matryoshka Representation Learning (MRL) and Contrastive Sparse Representation (CSR) alleviate these issues to some extent, they still suffer from retrieval accuracy degradation. This paper proposes Isolation Kernel Embedding or IKE, a learning-free method that transforms an LLM embedding into a binary embedding using Isolation Kernel (IK). Lightweight and based on binary encoding, IKE offers a low memory footprint and fast bitwise computation, lowering retrieval latency. Experiments on multiple text retrieval datasets demonstrate that IKE offers up to 16.7x faster retrieval and 16x lower memory usage than the original LLM embeddings, while maintaining comparable accuracy. Theoretically, we show that IKE works because it satisfies four essential criteria for effective binary hashing that other methods do not possess. Compared to CSR, IKE consistently achieves better retrieval efficiency and effectiveness. IKE also works effectively with graph-based indexing, demonstrating its superiority in balancing accuracy and latency compared to alternative compression techniques in the approximate nearest neighbor (ANN) search setting.",
-      "published": "2026-01-14T04:54:09Z",
-      "updated": "2026-04-27T16:12:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.09159v3"
+      "summary": "Sycophancy, the tendency of large language models to favour user-affirming responses over critical engagement, has been identified as an alignment failure, particularly in high-stakes advisory and social contexts. While prior work has documented conversational features correlated with sycophancy, we lack a systematic understanding of what provokes or prevents AI sycophancy. Here, we present a set of controlled experimental studies where we first isolate how input framing influences sycophancy, and second, leverage these findings to develop mitigation strategies. In a nested factorial design, we compare questions to various non-questions where we vary three orthogonal factors: epistemic certainty (statement, belief, conviction), perspective (I- vs user-perspective), and affirmation vs negation. We show that (1) sycophancy is substantially higher in response to non-questions compared to questions. Additionally, we find that (2) sycophancy increases monotonically with epistemic certainty conveyed by the user, and (3) is amplified by I-perspective framing. Building on this, we show that asking a model to convert non-questions into questions before answering significantly reduces sycophancy. Importantly, this effect is stronger than a simple baseline prompt asking models \"not to be sycophantic\". Our work offers a practical and effective input-level mitigation that both developers and users can easily adopt.",
+      "published": "2026-02-27T12:27:04Z",
+      "updated": "2026-04-28T17:07:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.23971v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.15390v3",
-      "title": "Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks",
+      "id": "http://arxiv.org/abs/2604.25866v1",
+      "title": "From Syntax to Emotion: A Mechanistic Analysis of Emotion Inference in LLMs",
       "authors": [
-        "Seyedreza Mohseni",
-        "Sarvesh Baskar",
-        "Edward Raff",
-        "Manas Gaur"
+        "Bangzhao Shu",
+        "Arinjay Singh",
+        "Mai ElSherief"
       ],
-      "summary": "Code deobfuscation is the task of recovering a readable version of a program while preserving its original behavior. In practice, this often requires days or even months of manual work with complex and expensive analysis tools. In this paper, we explore an alternative approach based on Chain-of-Thought (CoT) prompting, where a large language model is guided through explicit, step-by-step reasoning tailored for code analysis. We focus on control flow obfuscation, including Control Flow Flattening (CFF), Opaque Predicates, and their combination, and we measure both structural recovery of the control flow graph and preservation of program semantics. We evaluate five state-of-the-art large language models and show that CoT prompting significantly improves deobfuscation quality compared with simple prompting. We validate our approach on a diverse set of standard C benchmarks and report results using both structural metrics for control flow graphs and semantic metrics based on output similarity. Among the tested models and by applying CoT, GPT5 achieves the strongest overall performance, with an average gain of about 16% in control-flow graph reconstruction and about 20.5% in semantic preservation across our benchmarks compared to zero-shot prompting. Our results also show that model performance depends not only on the obfuscation level and the chosen obfuscator but also on the intrinsic complexity of the original control flow graph. Collectively, these findings suggest that CoT-guided large language models can serve as effective assistants for code deobfuscation, providing improved code explainability, more faithful control flow graph reconstruction, and better preservation of program behavior while potentially reducing the manual effort needed for reverse engineering.",
-      "published": "2026-04-16T06:08:07Z",
-      "updated": "2026-04-27T16:12:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.15390v3"
+      "summary": "Large language models (LLMs) are increasingly used in emotionally sensitive human-AI applications, yet little is known about how emotion recognition is internally represented. In this work, we investigate the internal mechanisms of emotion recognition in LLMs using sparse autoencoders (SAEs). By analyzing sparse feature activations across layers, we identify a consistent three-phase information flow, in which emotion-related features emerge only in the final phase. We further show that emotion representations comprise both shared features across emotions and emotion-specific features. Using phase-stratified causal tracing, we identify a small set of features that strongly influence emotion predictions, and show that both their number and causal impact vary across emotions; in particular, Disgust is more weakly and diffusely represented than other emotions. Finally, we propose an interpretable and data-efficient causal feature steering method that significantly improves emotion recognition performance across multiple models while largely preserving language modeling ability, and demonstrate that these improvements generalize across multiple emotion recognition datasets. Overall, our findings provide a systematic analysis of the internal mechanisms underlying emotion recognition in LLMs and introduce an efficient, interpretable, and controllable approach for improving model performance.",
+      "published": "2026-04-28T17:03:16Z",
+      "updated": "2026-04-28T17:03:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25866v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24623v1",
-      "title": "XGRAG: A Graph-Native Framework for Explaining KG-based Retrieval-Augmented Generation",
+      "id": "http://arxiv.org/abs/2604.25860v1",
+      "title": "Luminol-AIDetect: Fast Zero-shot Machine-Generated Text Detection based on Perplexity under Text Shuffling",
       "authors": [
-        "Zhuoling Li",
-        "Ha Linh Hong Tran Nguyen",
-        "Valeria Bladinieres",
-        "Maxim Romanovsky"
+        "Lucio La Cava",
+        "Andrea Tagarelli"
       ],
-      "summary": "Graph-based Retrieval-Augmented Generation (GraphRAG) extends traditional RAG by using knowledge graphs (KGs) to give large language models (LLMs) a structured, semantically coherent context, yielding more grounded answers. However, GraphRAG reasoning process remains a black-box, limiting our ability to understand how specific pieces of structured knowledge influence the final output. Existing explainability (XAI) methods for RAG systems, designed for text-based retrieval, are limited to interpreting an LLM response through the relational structures among knowledge components, creating a critical gap in transparency and trustworthiness. To address this, we introduce XGRAG, a novel framework that generates causally grounded explanations for GraphRAG systems by employing graph-based perturbation strategies, to quantify the contribution of individual graph components on the model answer. We conduct extensive experiments comparing XGRAG against RAG-Ex, an XAI baseline for standard RAG, and evaluate its robustness across various question types, narrative structures and LLMs. Our results demonstrate a 14.81% improvement in explanation quality over the baseline RAG-Ex across NarrativeQA, FairyTaleQA, and TriviaQA, evaluated by F1-score measuring alignment between generated explanations and original answers. Furthermore, XGRAG explanations exhibit a strong correlation with graph centrality measures, validating its ability to capture graph structure. XGRAG provides a scalable and generalizable approach towards trustworthy AI through transparent, graph-based explanations that enhance the interpretability of RAG systems.",
-      "published": "2026-04-27T15:52:20Z",
-      "updated": "2026-04-27T15:52:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24623v1"
+      "summary": "Machine-generated text (MGT) detection requires identifying structurally invariant signals across generation models, rather than relying on model-specific fingerprints. In this respect, we hypothesize that while large language models excel at local semantic consistency, their autoregressive nature results in a specific kind of structural fragility compared to human writing. We propose Luminol-AIDetect, a novel, zero-shot statistical approach that exposes this fragility through coherence disruption. By applying a simple randomized text-shuffling procedure, we demonstrate that the resulting shift in perplexity serves as a principled, model-agnostic discriminant, as MGT displays a characteristic dispersion in perplexity-under-shuffling that differs markedly from the more stable structural variability of human-written text. Luminol-AIDetect leverages this distinction to inform its decision process, where a handful of perplexity-based scalar features are extracted from an input text and its shuffled version, then detection is performed via density estimation and ensemble-based prediction. Evaluated across 8 content domains, 11 adversarial attack types, and 18 languages, Luminol-AIDetect demonstrates state-of-the-art performance, with gains up to 17x lower FPR while being cheaper than prior methods.",
+      "published": "2026-04-28T16:58:55Z",
+      "updated": "2026-04-28T16:58:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25860v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24621v1",
-      "title": "Evaluation of LLM-Based Software Engineering Tools: Practices, Challenges, and Future Directions",
+      "id": "http://arxiv.org/abs/2604.25855v1",
+      "title": "SIEVES: Selective Prediction Generalizes through Visual Evidence Scoring",
       "authors": [
-        "Utku Boran Torun",
-        "Veli Karakaya",
-        "Ali Babar",
-        "Eray Tüzün"
+        "Hector G. Rodriguez",
+        "Marcus Rohrbach"
       ],
-      "summary": "Large Language Models (LLMs) are increasingly embedded in software engineering (SE) tools, powering applications such as code generation, automated code review, and bug triage. As these LLM-based AI for Software Engineering (AI4SE) systems transition from experimental prototypes to widely deployed tools, the question of what it means to evaluate their behavior reliably has become both critical and unanswered. Unlike traditional SE or machine learning systems, LLM-based tools often produce open-ended, natural language outputs, admit multiple valid answers, and exhibit non-deterministic behavior across runs. These characteristics fundamentally challenge long-standing evaluation assumptions such as the existence of a single ground truth, deterministic outputs, and objective correctness. In this paper, we examine LLM evaluation as a general, task-dependent concept through the lens of SE tasks. We discuss why reliable evaluation is essential for trust, adoption, and meaningful assessment of LLM-based tools, summarize the current state of evaluation practices, and highlight their limitations in realistic AI4SE settings. We then identify key challenges facing current approaches, including the absence of stable ground truth, subjectivity and multi-dimensional quality, evaluation instability due to non-determinism, limitations of automated and model-based evaluation, and fragmentation of evaluation practices. Finally, we outline future directions aimed at advancing LLM evaluation toward more robust, scalable, and trustworthy methodologies, to stimulate discussion on principled evaluation practices that can keep pace with the growing role of LLMs in SE.",
-      "published": "2026-04-27T15:51:22Z",
-      "updated": "2026-04-27T15:51:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24621v1"
+      "summary": "Multimodal large language models (MLLMs) achieve ever-stronger performance on visual-language tasks. Even as traditional visual question answering benchmarks approach saturation, reliable deployment requires satisfying low error tolerances in real-world out-of-distribution (OOD) scenarios. Precisely, selective prediction aims to improve coverage, i.e. the share of inputs the system answers, while adhering to a user-defined risk level. This is typically achieved by assigning a confidence score to each answer and abstaining on those that fall below a certain threshold. To enable reliable generalization, we require reasoner models to produce localized visual evidence while answering, and design a selector that explicitly learns to estimate the quality of the localization provided by the reasoner. We show that SIEVES (Selective Prediction through Visual Evidence Scoring) improves coverage by up to three times on challenging OOD benchmarks (V* Bench, HR-Bench-8k, MME-RealWorld-Lite, VizWiz, and AdVQA), compared to non-grounding baselines. Beyond better generalization to OOD tasks, the design of the SIEVES selector enables transfer to proprietary reasoners without access to their weights or logits, such as o3 and Gemini-3-Pro, providing coverage boosts beyond those attributable to accuracy alone. We highlight that SIEVES generalizes across all five tested OOD datasets and reasoner models (Pixel-Reasoner, o3, and Gemini-3-Pro), without benchmark- or reasoner-specific training or adaptation.",
+      "published": "2026-04-28T16:57:29Z",
+      "updated": "2026-04-28T16:57:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25855v1"
     },
     {
-      "id": "http://arxiv.org/abs/2511.22681v2",
-      "title": "CacheTrap: Unveiling a Stealthier Gray-Box Trojan against LLMs",
+      "id": "http://arxiv.org/abs/2601.11100v2",
+      "title": "ReCreate: Reasoning and Creating Domain Agents Driven by Experience",
       "authors": [
-        "Mohaiminul Al Nahian",
-        "Abeer Matar A. Almalky",
-        "Gamana Aragonda",
-        "Ranyang Zhou",
-        "Sabbir Ahmed",
-        "Dmitry Ponomarev",
-        "Li Yang",
-        "Shaahin Angizi",
-        "Adnan Siraj Rakin"
+        "Zhezheng Hao",
+        "Hong Wang",
+        "Jian Luo",
+        "Jianqing Zhang",
+        "Yuyan Zhou",
+        "Qiang Lin",
+        "Can Wang",
+        "Hande Dong",
+        "Jiawei Chen"
       ],
-      "summary": "The rapid advancement of large language models (LLMs) has sparked growing interest in understanding their security vulnerabilities, particularly Trojan attacks that enable stealthy manipulation of model behavior. Traditional Trojan methods typically alter inputs and/or model weights, relying on white-box assumptions that require access to data or model internal parameters. In this work, we present CacheTrap, the first gray-box Trojan attack targeting the Key-Value (KV) cache of LLMs. This method induces a single-bit flip in the KV cache, serving as a transient trigger. When activated, this trigger causes the model to exhibit targeted actions without changing inputs or model weights. CacheTrap introduces an efficient search algorithm to locate vulnerable positions in the KV cache, independent of model weights or datasets. Extensive experiments on five open-source LLMs show a remarkable 100% attack success rate (with the trigger) while preserving benign accuracy (without the trigger) by flipping just one bit in the KV cache.",
-      "published": "2025-11-27T18:30:19Z",
-      "updated": "2026-04-27T15:41:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.22681v2"
+      "summary": "Large Language Model agents are reshaping the industrial landscape. However, most practical agents remain human-designed because tasks differ widely, making them labor-intensive to build. This situation poses a central question: can we automatically create and adapt domain agents in the wild? While several recent approaches have sought to automate agent creation, they typically treat agent generation as a black-box procedure and rely solely on final performance metrics to guide the process. Such strategies overlook critical evidence explaining why an agent succeeds or fails, and often require high computational costs. To address these limitations, we propose ReCreate, an experience-driven framework for the automatic creation of domain agents. ReCreate systematically leverages agent interaction histories, which provide rich concrete signals on both the causes of success or failure and the avenues for improvement. Specifically, we introduce an agent-as-optimizer paradigm that effectively learns from experience via three key components: (i) an experience storage and retrieval mechanism for on-demand inspection; (ii) a reasoning-creating synergy pipeline that maps execution experience into scaffold edits; and (iii) hierarchical updates that abstract instance-level details into reusable domain patterns. In experiments across diverse domains, ReCreate consistently outperforms human-designed agents and existing automated agent generation methods, even when starting from minimal seed scaffolds.",
+      "published": "2026-01-16T09:00:03Z",
+      "updated": "2026-04-28T16:55:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.11100v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24608v1",
-      "title": "Learning to Route Queries to Heads for Attention-based Re-ranking with Large Language Models",
+      "id": "http://arxiv.org/abs/2604.25847v1",
+      "title": "From Soliloquy to Agora: Memory-Enhanced LLM Agents with Decentralized Debate for Optimization Modeling",
       "authors": [
-        "Yuxing Tian",
-        "Fengran Mo",
-        "Zhiqi Huang",
-        "Weixu Zhang",
-        "Jian-Yun Nie"
+        "Jianghao Lin",
+        "Zi Ling",
+        "Chenyu Zhou",
+        "Tianyi Xu",
+        "Ruoqing Jiang",
+        "Zizhuo Wang",
+        "Dongdong Ge"
       ],
-      "summary": "Large Language Models (LLMs) have recently been explored as fine-grained zero-shot re-rankers by leveraging attention signals to estimate document relevance. However, existing methods either aggregate attention signals across all heads or rely on a statically selected subset identified by heuristic rules. This solution can be suboptimal because the informative heads can vary across queries or domains. Moreover, naively combining multiple heads can degrade performance due to redundancy or conflicting ranking signals. In this paper, we propose a query-dependent head selection method, RouteHead, for attention-based re-ranking with LLMs. Specifically, we learn a lightweight router that can map each query to an optimal head set, and relevance scores are computed by aggregating attention signals only from these heads. Since query-to-head optimal labels are unavailable, we first construct pseudo labels via an offline search. The router represents each head with a learnable embedding and represents each query using an embedding extracted from the hidden states of the frozen LLM. Then it is trained on the pseudo labels with a sparsity regularizer. Experiments on diverse benchmarks and multiple LLM backbones show that the proposed method consistently outperforms strong baselines.",
-      "published": "2026-04-27T15:36:54Z",
-      "updated": "2026-04-27T15:36:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24608v1"
+      "summary": "Optimization modeling underpins real-world decision-making in logistics, manufacturing, energy, and public services, but reliably solving such problems from natural-language requirements remains challenging for current large language models (LLMs). In this paper, we propose \\emph{Agora-Opt}, a modular agentic framework for optimization modeling that combines decentralized debate with a read-write memory bank. Agora-Opt allows multiple agent teams to independently produce end-to-end solutions and reconcile them through an outcome-grounded debate protocol, while memory stores solver-verified artifacts and past disagreement resolutions to support training-free improvement over time. This design is flexible across both backbones and methods: it reduces base-model lock-in, transfers across different LLM families, and can be layered onto existing pipelines with minimal coupling. Across public benchmarks, Agora-Opt achieves the strongest overall performance among all compared methods, outperforming strong zero-shot LLMs, training-centric approaches, and prior agentic baselines. Further analyses show robust gains across backbone choices and component variants, and demonstrate that decentralized debate offers a structural advantage over centralized selection by enabling agents to refine candidate solutions through interaction and even recover correct formulations when all initial candidates are flawed. These results suggest that reliable optimization modeling benefits from combining collaborative cross-checking with reusable experience, and position Agora-Opt as a practical and extensible foundation for trustworthy optimization modeling assistance. Our code and data are available at https://github.com/CHIANGEL/Agora-Opt.",
+      "published": "2026-04-28T16:53:37Z",
+      "updated": "2026-04-28T16:53:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25847v1"
     },
     {
-      "id": "http://arxiv.org/abs/2511.22700v2",
-      "title": "Invisible Hands: Gray-Box Bit Flip Attack for Steering LLMs Without Knowledge of Gradients, Data, and Weights",
+      "id": "http://arxiv.org/abs/2510.10150v3",
+      "title": "Rethinking Entropy Interventions in RLVR: An Entropy Change Perspective",
       "authors": [
-        "Abeer Matar A. Almalky",
-        "Ziyan Wang",
-        "Mohaiminul Al Nahian",
-        "Li Yang",
-        "Adnan Siraj Rakin"
+        "Zhezheng Hao",
+        "Hong Wang",
+        "Haoyang Liu",
+        "Jian Luo",
+        "Jiarui Yu",
+        "Hande Dong",
+        "Qiang Lin",
+        "Can Wang",
+        "Jiawei Chen"
       ],
-      "summary": "In recent years, large language models (LLMs) have achieved remarkable advances and are increasingly deployed in critical applications across diverse domains. This growing adoption raises urgent concerns about their security and robustness. In this work, we investigate the impact of Bit Flip Attacks (BFAs) on LLMs, which exploit hardware faults to corrupt model parameters, thereby threatening model integrity and performance. Existing BFA studies primarily assume a white-box setting with access to exact model weights and part of the dataset, and rely on progressive gradient-based bit-search strategies to identify vulnerable bits in model weights. However, gradient computation for LLMs is computationally expensive and memory intensive. In addition, assuming access to exact victim model weights and datasets is challenging due to increasingly strict user privacy regulations. To address these challenges, we propose the first gray-box BFA framework for LLMs, Invisible Hands, designed for efficient and practical deployment. Our method, Gradient-Data-Free-BFA, identifies vulnerable weight bits without requiring knowledge of model weights, gradients, or sample data. It introduces novel vulnerability index metrics that estimate the weights of susceptibility based solely on model architecture (Grey-Box). By eliminating data access and gradient computation, our approach significantly reduces memory overhead and scales efficiently across tasks with constant complexity. Experiments on six open-source LLMs demonstrate that adversarial objectives can be achieved with minimal weight perturbations, highlighting the effectiveness and practicality of Invisible Hands.",
-      "published": "2025-11-27T18:52:51Z",
-      "updated": "2026-04-27T15:24:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.22700v2"
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) serves as a cornerstone technique for enhancing the reasoning capabilities of Large Language Models (LLMs). However, its training is often plagued by \\emph{entropy collapse}, a rapid decline in policy entropy that limits exploration and undermines training effectiveness. While recent works attempt to mitigate this issue via several heuristic entropy interventions, the underlying mechanisms remain poorly understood. In this work, we conduct comprehensive theoretical and empirical analyses of entropy dynamics in RLVR, offering two main insights: (1) We derive a tight analytical approximation for token-level entropy change at each update step, revealing four governing factors and providing a unified theoretical framework to explain how existing methods influence entropy; (2) We reveal a fundamental limitation of recent approaches: they rely on heuristic adjustments to one or two of these factors, leaving other relevant factors unconsidered, thus inherently limiting their effectiveness. Motivated by these findings, we propose STEER, a principled entropy-modulation method that adaptively reweights tokens based on theoretically-estimated entropy variations. Extensive experiments across six mathematical reasoning and three coding benchmarks demonstrate that STEER effectively mitigates entropy collapse and consistently outperforms state-of-the-art baselines.",
+      "published": "2025-10-11T10:17:38Z",
+      "updated": "2026-04-28T16:53:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.10150v3"
     },
     {
-      "id": "http://arxiv.org/abs/2604.24594v1",
-      "title": "Skill Retrieval Augmentation for Agentic AI",
+      "id": "http://arxiv.org/abs/2604.25846v1",
+      "title": "Towards Agentic Investigation of Security Alerts",
       "authors": [
-        "Weihang Su",
-        "Jianming Long",
-        "Qingyao Ai",
-        "Yichen Tang",
-        "Changyue Wang",
-        "Yiteng Tu",
-        "Yiqun Liu"
+        "Even Eilertsen",
+        "Vasileios Mavroeidis",
+        "Gudmund Grov"
       ],
-      "summary": "As large language models (LLMs) evolve into agentic problem solvers, they increasingly rely on external, reusable skills to handle tasks beyond their native parametric capabilities. In existing agent systems, the dominant strategy for incorporating skills is to explicitly enumerate available skills within the context window. However, this strategy fails to scale: as skill corpora expand, context budgets are consumed rapidly, and the agent becomes markedly less accurate in identifying the right skill. To this end, this paper formulates Skill Retrieval Augmentation (SRA), a new paradigm in which agents dynamically retrieve, incorporate, and apply relevant skills from large external skill corpora on demand. To make this problem measurable, we construct a large-scale skill corpus and introduce SRA-Bench, the first benchmark for decomposed evaluation of the full SRA pipeline, covering skill retrieval, skill incorporation, and end-task execution. SRA-Bench contains 5,400 capability-intensive test instances and 636 manually constructed gold skills, which are mixed with web-collected distractor skills to form a large-scale corpus of 26,262 skills. Extensive experiments show that retrieval-based skill augmentation can substantially improve agent performance, validating the promise of the paradigm. At the same time, we uncover a fundamental gap in skill incorporation: current LLM agents tend to load skills at similar rates, regardless of whether a gold skill is retrieved or whether the task actually requires external capabilities. This shows that the bottleneck in skill augmentation lies not only in retrieval but also in the base model's ability to determine which skill to load and when external loading is actually needed. These findings position SRA as a distinct research problem and establish a foundation for the scalable augmentation of capabilities in future agent systems.",
-      "published": "2026-04-27T15:19:59Z",
-      "updated": "2026-04-27T15:19:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.24594v1"
+      "summary": "Security analysts are overwhelmed by the volume of alerts and the low context provided by many detection systems. Early-stage investigations typically require manual correlation across multiple log sources, a task that is usually time-consuming. In this paper, we present an experimental, agentic workflow that leverages large language models (LLMs) augmented with predefined queries and constrained tool access (structured SQL over Suricata logs and grep-based text search) to automate the first stages of alert investigation. The proposed workflow integrates queries to provide an overview of the available data, and LLM components that selects which queries to use based on the overview results, extracts raw evidence from the query results, and delivers a final verdict of the alert. Our results demonstrate that the LLM-powered workflow can investigate log sources, plan an investigation, and produce a final verdict that has a significantly higher accuracy than a verdict produced by the same LLM without the proposed workflow. By recognizing the inherent limitations of directly applying LLMs to high-volume and unstructured data, we propose combining existing investigation practices of real-world analysts with a structured approach to leverage LLMs as virtual security analysts, thereby assisting and reducing the manual workload.",
+      "published": "2026-04-28T16:52:12Z",
+      "updated": "2026-04-28T16:52:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.25846v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.21829v2",
-      "title": "Black-Box Skill Stealing Attack from Proprietary LLM Agents: An Empirical Study",
+      "id": "http://arxiv.org/abs/2602.11786v2",
+      "title": "Evaluating LLM Safety Under Repeated Inference via Accelerated Prompt Stress Testing",
       "authors": [
-        "Zihan Wang",
-        "Rui Zhang",
-        "Yu Liu",
-        "Chi Liu",
-        "Qingchuan Zhao",
-        "Hongwei Li",
-        "Guowen Xu"
+        "Keita Broadwater"
       ],
-      "summary": "Large language model (LLM) agents increasingly rely on skills to package reusable capabilities through instructions, tools, and resources. High-quality skills embed expert knowledge, curated workflows, and execution constraints into agents, fueling a growing skill economy through their value and scalability. Yet this ecosystem also creates a new attack surface, as adversaries can interact with public agent interfaces to extract hidden proprietary skill content. We present the first systematic study of black-box skill stealing against LLM agent systems. Compared with conventional system prompt stealing, skill stealing targets modular and structured capability packages whose leakage is directly actionable for copying, redistribution, and monetization, making the resulting harm potentially greater. To study this threat, we derive an attack taxonomy from prior prompt-stealing methods and build an automated stealing prompt generation agent. Starting from model-generated seed prompts, the framework expands attacks through scenario rationalization and structure injection while enforcing diversity via embedding-based filtering, yielding a reproducible pipeline for evaluating proprietary agent systems. We evaluate these attacks across commercial agent platforms and representative LLMs. Our results show that agent skills can often be extracted easily, posing a serious copyright risk. To mitigate this threat, we design defenses across the agent pipeline, focusing on input, inference, and output phase. Although these defenses substantially reduce leakage, the attack remains inexpensive and repeatable, and a single successful attempt is sufficient to compromise the protected skill. Overall, our findings suggest that these copyright risks remain largely overlooked across proprietary agent ecosystems, motivating stronger protection mechanisms.",
-      "published": "2026-04-23T16:18:47Z",
-      "updated": "2026-04-27T15:06:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.21829v2"
+      "summary": "Traditional benchmarks for large language models (LLMs), such as HELM and AIR-BENCH, primarily assess safety through breadth-oriented evaluation across diverse tasks and risk categories. However, real-world deployment often exposes a different class of risk: operational failures that arise under repeated inference on identical or near-identical prompts rather than from broad task-level underperformance. In high-stakes settings, response consistency and safety under sustained use are therefore critical. We introduce Accelerated Prompt Stress Testing (APST), a depth-oriented evaluation framework inspired by highly accelerated stress testing in reliability engineering. APST repeatedly samples identical prompts under controlled operational conditions (such as decoding temperature) to surface latent failure modes including hallucinations, refusal inconsistency, and unsafe completions. Rather than treating failures as isolated events, APST models them as stochastic outcomes of repeated inference and uses Bernoulli and binomial formulations to estimate per-inference failure probabilities. Applying APST to multiple instruction-tuned LLMs evaluated on AIR-BENCH 2024--derived safety and security prompts, we find that models with comparable shallow-evaluation scores can exhibit substantially different empirical failure rates under repeated sampling. These results show that single-sample or low-depth evaluation can obscure meaningful differences in deployment-relevant reliability. APST complements existing benchmark methodologies by providing a practical framework for estimating failure frequency under sustained use and comparing safety reliability across models and decoding configurations.",
+      "published": "2026-02-12T10:09:13Z",
+      "updated": "2026-04-28T16:38:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.11786v2"
     }
   ]
 }
