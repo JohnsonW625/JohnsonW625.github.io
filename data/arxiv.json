@@ -1,192 +1,202 @@
 {
-  "generated_at_utc": "2026-04-30T02:50:30Z",
+  "generated_at_utc": "2026-05-01T02:57:14Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2604.26951v1",
-      "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+      "id": "http://arxiv.org/abs/2604.28196v1",
+      "title": "HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation",
       "authors": [
-        "Gongbo Zhang",
-        "Wen Wang",
-        "Ye Tian",
-        "Li Yuan"
+        "Xin Zhou",
+        "Dingkang Liang",
+        "Xiwu Chen",
+        "Feiyang Tan",
+        "Dingyuan Zhang",
+        "Hengshuang Zhao",
+        "Xiang Bai"
       ],
-      "summary": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
-      "published": "2026-04-29T17:59:01Z",
-      "updated": "2026-04-29T17:59:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26951v1"
+      "summary": "Driving world models serve as a pivotal technology for autonomous driving by simulating environmental dynamics. However, existing approaches predominantly focus on future scene generation, often overlooking comprehensive 3D scene understanding. Conversely, while Large Language Models (LLMs) demonstrate impressive reasoning capabilities, they lack the capacity to predict future geometric evolution, creating a significant disparity between semantic interpretation and physical simulation. To bridge this gap, we propose HERMES++, a unified driving world model that integrates 3D scene understanding and future geometry prediction within a single framework. Our approach addresses the distinct requirements of these tasks through synergistic designs. First, a BEV representation consolidates multi-view spatial information into a structure compatible with LLMs. Second, we introduce LLM-enhanced world queries to facilitate knowledge transfer from the understanding branch. Third, a Current-to-Future Link is designed to bridge the temporal gap, conditioning geometric evolution on semantic context. Finally, to enforce structural integrity, we employ a Joint Geometric Optimization strategy that integrates explicit geometric constraints with implicit latent regularization to align internal representations with geometry-aware priors. Extensive evaluations on multiple benchmarks validate the effectiveness of our method. HERMES++ achieves strong performance, outperforming specialist approaches in both future point cloud prediction and 3D scene understanding tasks. The model and code will be publicly released at https://github.com/H-EmbodVis/HERMESV2.",
+      "published": "2026-04-30T17:59:58Z",
+      "updated": "2026-04-30T17:59:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28196v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26946v1",
-      "title": "Three-Step Nav: A Hierarchical Global-Local Planner for Zero-Shot Vision-and-Language Navigation",
+      "id": "http://arxiv.org/abs/2604.28182v1",
+      "title": "Exploration Hacking: Can LLMs Learn to Resist RL Training?",
       "authors": [
-        "Wanrong Zheng",
-        "Yunhao Ge",
-        "Laurent Itti"
+        "Eyon Jang",
+        "Damon Falck",
+        "Joschka Braun",
+        "Nathalie Kirch",
+        "Achu Menon",
+        "Perusha Moodley",
+        "Scott Emmons",
+        "Roland S. Zimmermann",
+        "David Lindner"
       ],
-      "summary": "Breakthrough progress in vision-based navigation through unknown environments has been achieved by using multimodal large language models (MLLMs). These models can plan a sequence of motions by evaluating the current view at each time step against the task and goal given to the agent. However, current zero-shot Vision-and-Language Navigation (VLN) agents powered by MLLMs still tend to drift off course, halt prematurely, and achieve low overall success rates. We propose Three-Step Nav to counteract these failures with a three-view protocol: First, \"look forward\" to extract global landmarks and sketch a coarse plan. Then, \"look now\" to align the current visual observation with the next sub-goal for fine-grained guidance. Finally, \"look backward\" audits the entire trajectory to correct accumulated drift before stopping. Requiring no gradient updates or task-specific fine-tuning, our planner drops into existing VLN pipelines with minimal overhead. Three-Step Nav achieves state-of-the-art zero-shot performance on the R2R-CE and RxR-CE dataset. Our code is available at https://github.com/ZoeyZheng0/3-step-Nav.",
-      "published": "2026-04-29T17:55:05Z",
-      "updated": "2026-04-29T17:55:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26946v1"
+      "summary": "Reinforcement learning (RL) has become essential to the post-training of large language models (LLMs) for reasoning, agentic capabilities and alignment. Successful RL relies on sufficient exploration of diverse actions by the model during training, which creates a potential failure mode: a model could strategically alter its exploration during training to influence the subsequent training outcome. In this paper we study this behavior, called exploration hacking. First, we create model organisms of selective RL resistance by fine-tuning LLMs to follow specific underperformance strategies; these models can successfully resist our RL-based capability elicitation in agentic biosecurity and AI R&D environments while maintaining performance on related tasks. We then use our model organisms to evaluate detection and mitigation strategies, including monitoring, weight noising, and SFT-based elicitation. Finally, we show that current frontier models can exhibit explicit reasoning about suppressing their exploration when provided with sufficient information about their training context, with higher rates when this information is acquired indirectly through the environment. Together, our results suggest exploration hacking is a possible failure mode of RL on sufficiently capable LLMs.",
+      "published": "2026-04-30T17:58:39Z",
+      "updated": "2026-04-30T17:58:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28182v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.23865v2",
-      "title": "Inverting Foundation Models of Brain Function with Simulation-Based Inference",
+      "id": "http://arxiv.org/abs/2604.28178v1",
+      "title": "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis",
       "authors": [
-        "Niels Bracher",
-        "Xavier Intes",
-        "Stefan T. Radev"
+        "Lincan Li",
+        "Zheng Chen",
+        "Yushun Dong"
       ],
-      "summary": "Foundation models of brain activity promise a new frontier for in silico neuroscience by emulating neural responses to complex stimuli across tasks and modalities. A natural next step is to ask whether these models can also be used in reverse. Can we recover a stimulus or its properties from synthetic brain activity? We study this question in a proof-of-concept setting using TRIBEv2. We pair the brain emulator with large language models (LLMs) that generate news headlines from linguistic parameters such as valence, arousal, and dominance. We then use simulation-based inference to learn a probabilistic mapping from brain maps to latent stimulus parameters. Our results show that these parameters can be recovered from predicted brain maps, validating the quality of neural encodings. They also show that LLMs can serve as controllable stimulus generators for simulated experiments. Together, these findings provide a step toward decoding and inverse design with foundation brain models.",
-      "published": "2026-04-26T20:12:53Z",
-      "updated": "2026-04-29T17:19:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.23865v2"
+      "summary": "Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging. Existing graph construction methods, whether correlation-based or learning-based, often generate redundant or irrelevant edges due to the noisy nature of EEG data. This significantly impairs the quality of graph representation and limits downstream task performance. Motivated by the remarkable reasoning and contextual understanding capabilities of large language models (LLMs), we explore the idea of using LLMs as graph edge refiners. Specifically, we propose a two-stage framework: we first verify that LLM-based edge refinement can effectively identify and remove redundant connections, leading to significant improvements in seizure detection accuracy and more meaningful graph structures. Building on this insight, we further develop a robust solution where the initial graph is constructed using a Transformer-based edge predictor and multilayer perceptron, assigning probability scores to potential edges and applying a threshold to determine their existence. The LLM then acts as an edge set refiner, making informed decisions based on both textual and statistical features of node pairs to validate the remaining connections. Extensive experiments on TUSZ dataset demonstrate that our LLM-refined graph learning framework not only enhances task performance but also yields cleaner and more interpretable graph representations.",
+      "published": "2026-04-30T17:57:12Z",
+      "updated": "2026-04-30T17:57:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28178v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.23163v3",
-      "title": "A Decision-Theoretic Formalisation of Steganography With Applications to LLM Monitoring",
+      "id": "http://arxiv.org/abs/2604.28177v1",
+      "title": "AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images",
       "authors": [
-        "Usman Anwar",
-        "Julianna Piskorz",
-        "David D. Baek",
-        "David Africa",
-        "Jim Weatherall",
-        "Max Tegmark",
-        "Christian Schroeder de Witt",
-        "Mihaela van der Schaar",
-        "David Krueger"
+        "Bo Zhang",
+        "Tzu-Yen Ma",
+        "Zichen Tang",
+        "Junpeng Ding",
+        "Zirui Wang",
+        "Yizhuo Zhao",
+        "Peilin Gao",
+        "Zijie Xi",
+        "Zixin Ding",
+        "Haiyang Sun",
+        "Haocheng Gao",
+        "Yuan Liu",
+        "Liangjia Wang",
+        "Yiling Huang",
+        "Yujie Wang",
+        "Yuyue Zhang",
+        "Ronghui Xi",
+        "Yuanze Li",
+        "Jiacheng Liu",
+        "Zhongjun Yang",
+        "Haihong E"
       ],
-      "summary": "Large language models are beginning to show steganographic capabilities. Such capabilities could allow misaligned models to evade oversight mechanisms. Yet principled methods to detect and quantify such behaviours are lacking. Classical definitions of steganography, and detection methods based on them, require a known reference distribution of non-steganographic signals. For the case of steganographic reasoning in LLMs, knowing such a reference distribution is not feasible; this renders these approaches inapplicable. We propose an alternative, \\textbf{decision-theoretic view of steganography}. Our central insight is that steganography creates an asymmetry in usable information between agents who can and cannot decode the hidden content (present within a steganographic signal), and this otherwise latent asymmetry can be inferred from the agents' observable actions. To formalise this perspective, we introduce generalised $\\mathcal{V}$-information: a utilitarian framework for measuring the amount of usable information within some input. We use this to define the \\textbf{steganographic gap} -- a measure that quantifies steganography by comparing the downstream utility of the steganographic signal to agents that can and cannot decode the hidden content. We empirically validate our formalism, and show that it can be used to detect, quantify, and mitigate steganographic reasoning in LLMs.",
-      "published": "2026-02-26T16:27:24Z",
-      "updated": "2026-04-29T17:15:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.23163v3"
+      "summary": "We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-Generated academic ImageS. Compared to existing benchmarks, AEGIS features three key advances: (1) Domain-Specific Complexity: covering seven academic categories with 39 fine-grained subtypes, exposing intrinsic forensic difficulty, where even GPT-5.1 reaches 48.80% overall performance and expert models achieve only limited localization accuracy (IoU 30.09%); (2) Diverse Forgery Simulations: modeling four prevalent academic forgery strategies across 25 generative models, with 11 yielding average forensic accuracy below 50%, showing that forensics lag behind generative advances; and (3) Multi-Dimensional Forensic Evaluation: jointly assessing detection, reasoning, and localization, revealing complementary strengths between model families, with multimodal large language models (MLLMs) at 84.74% accuracy in textual artifact recognition and expert detectors peaking at 79.54% accuracy in binary authenticity detection. By evaluating 25 leading MLLMs, nine expert models, and one unified multimodal understanding and generation model, AEGIS serves as a diagnostic testbed exposing fundamental limitations in academic image forensics.",
+      "published": "2026-04-30T17:56:58Z",
+      "updated": "2026-04-30T17:56:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28177v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.04214v3",
-      "title": "Teaching LLM to be Persuasive: Reward-Enhanced Policy Optimization for Alignment from Heterogeneous Rewards",
+      "id": "http://arxiv.org/abs/2603.25385v2",
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
       "authors": [
-        "Xia Zeng",
-        "Yihan Chen",
-        "Luhui Liu",
-        "Chao Luo",
-        "Ye Chen",
-        "Zhuoran Zhuang"
+        "Selim An",
+        "Il hong Suh",
+        "Yeseong Kim"
       ],
-      "summary": "We deploy large language models (LLMs) as business development (BD) agents for persuasive price negotiation in online travel agencies (OTAs). The agent must follow a multi-stage Standard Operating Procedure (SOP) and strict guardrails (no over-promising and no hallucinations), while remaining human-like and effective over long, multi-turn dialogues. We propose Reward-Enhanced Policy Optimization (REPO), a reinforcement learning post-training method that combines heterogeneous rewards: a preference-trained reward model (RM), an LLM-as-a-judge (RJ) for nuanced behaviors (e.g., emotional value and SOP compliance), and rule-based reward functions (RF) (mainly regex-based) for deterministic checks on numerics, formatting, and guardrails. In expert consensus evaluation (three human experts; 30 online conversations and 45 curated bad cases), REPO improves average dialogue rating to 4.63 (+0.33 over GRPO) and raises the share of conversations with at least one excellent response to 66.67% (+23.34 pp over GRPO), while achieving a 93.33% bad-case fix rate with 75.56% clean fixes. In a production A/B test on 9,653 real customer conversations (vs. an intent-driven dialogue system), REPO improves response rate by +12.14 pp and task success rate by +5.94 pp (p<0.001).",
-      "published": "2025-10-05T14:08:01Z",
-      "updated": "2026-04-29T16:53:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.04214v3"
+      "summary": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+      "published": "2026-03-26T12:36:44Z",
+      "updated": "2026-04-30T17:56:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.25385v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26880v1",
-      "title": "HealthNLP_Retrievers at ArchEHR-QA 2026: Cascaded LLM Pipeline for Grounded Clinical Question Answering",
+      "id": "http://arxiv.org/abs/2601.10702v2",
+      "title": "Grounding Agent Memory in Contextual Intent",
       "authors": [
-        "Md Biplob Hosen",
-        "Md Alomgeer Hussein",
-        "Md Akmol Masud",
-        "Omar Faruque",
-        "Tera L Reynolds",
-        "Lujie Karen Chen"
+        "Ruozhen Yang",
+        "Yucheng Jiang",
+        "Yueqi Jiang",
+        "Priyanka Kargupta",
+        "Yunyi Zhang",
+        "Jiawei Han"
       ],
-      "summary": "Patient portals now give individuals direct access to their electronic health records (EHRs), yet access alone does not ensure patients understand or act on the complex clinical information contained in these records. The ArchEHR-QA 2026 shared task addresses this challenge by focusing on grounded question answering over EHRs, and this paper presents the system developed by the HealthNLP_Retrievers team for this task. The proposed approach uses a multi-stage cascaded pipeline powered by the Gemini 2.5 Pro large language model to interpret patient-authored questions and retrieve relevant evidence from lengthy clinical notes. Our architecture comprises four integrated modules: (1) a few-shot query reformulation unit which summarizes verbose patient queries; (2) a heuristic-based evidence scorer which ranks clinical sentences to prioritize recall; (3) a grounded response generator which synthesizes professional-caliber answers restricted strictly to identified evidence; and (4) a high-precision many-to-many alignment framework which links generated answers to supporting clinical sentences. This cascaded approach achieved competitive results. Across the individual tracks, the system ranked 1st in question interpretation, 5th in answer generation, 7th in evidence identification, and 9th in answer-evidence alignment. These results show that integrating large language models within a structured multi-stage pipeline improves grounding, precision, and the professional quality of patient-oriented health communication. To support reproducibility, our source code is publicly available in our GitHub repository",
-      "published": "2026-04-29T16:47:20Z",
-      "updated": "2026-04-29T16:47:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26880v1"
+      "summary": "Deploying large language models in long-horizon, goal-oriented interactions remains challenging because similar entities and facts recur under different latent goals and constraints, causing memory systems to retrieve context-mismatched evidence. We propose STITCH (Structured Intent Tracking in Contextual History), an agentic memory system that indexes each trajectory step with a structured retrieval cue, contextual intent, and retrieves history by matching the current step's intent. Contextual intent provides compact signals that disambiguate repeated mentions and reduce interference: (1) the current latent goal defining a thematic segment, (2) the action type, and (3) the salient entity types anchoring which attributes matter. During inference, STITCH filters and prioritizes memory snippets by intent compatibility, suppressing semantically similar but context-incompatible history. For evaluation, we introduce CAME-Bench, a benchmark for context-aware retrieval in realistic, dynamic, goal-oriented trajectories. Across CAME-Bench and LongMemEval, STITCH achieves state-of-the-art performance, outperforming the strongest baseline by 35.6%, with the largest gains as trajectory length increases. Our analysis shows that intent indexing substantially reduces retrieval noise, supporting intent-aware memory for robust long-horizon reasoning.",
+      "published": "2026-01-15T18:55:13Z",
+      "updated": "2026-04-30T17:49:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.10702v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26872v1",
-      "title": "Can we teach generative artificial intelligence the design language of engineered living materials?",
+      "id": "http://arxiv.org/abs/2604.28157v1",
+      "title": "FlashRT: Towards Computationally and Memory Efficient Red-Teaming for Prompt Injection and Knowledge Corruption",
       "authors": [
-        "Andrés Díaz Lantada",
-        "José A. Yáñez",
-        "William Solórzano-Requejo",
-        "Monsur Islam"
+        "Yanting Wang",
+        "Chenlong Yin",
+        "Ying Chen",
+        "Jinyuan Jia"
       ],
-      "summary": "This study presents a versatile ontology and a useful codification scheme for describing all kinds of engineered living materials (ELMs). The different components of the ontology, namely: families according to the taxonomy for ELMs, industrial applications and synthesis or processing methods, are systematically organized, enumerated, classified, codified and explained. The methodic application of the ontology to a set of 100 relevant examples of ELMs helps to demonstrate its utility and adaptability to many different types of ELMs with a wide range of industrial applications and obtained through numerous synthesis and processing methods. This proves that the developed ontology and codification schemes, with the glossary provided to support its implementation and application, can serve as a comprehensive classification tool for the emergent field of ELMs. Furthermore, the usability of the ELMs ontology and codification by a generative artificial intelligence (AI) is explored and validated by different means, checking that both natural language and the codification are understandable for describing ELMs, verifying that the generative AI adequately codifies examples of ELMs according to the ontology, and validating the synergic applicability of the ontology and codification with generative AI tools for illustrating novel ELMs and supporting their conceptual design. This study is expected to provide a universal language to facilitate communication in the ELMs field and to foster the discovery of new ELMs and related innovations, hoping it may accelerate scientific and technological discoveries.",
-      "published": "2026-04-29T16:40:49Z",
-      "updated": "2026-04-29T16:40:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26872v1"
+      "summary": "Long-context large language models (LLMs)-for example, Gemini-3.1-Pro and Qwen-3.5-are widely used to empower many real-world applications, such as retrieval-augmented generation, autonomous agents, and AI assistants. However, security remains a major concern for their widespread deployment, with threats such as prompt injection and knowledge corruption. To quantify the security risks faced by LLMs under these threats, the research community has developed heuristic-based and optimization-based red-teaming methods. Optimization-based methods generally produce stronger attacks than heuristic attacks and thus provide a more rigorous assessment of LLM security risks. However, they are often resource-intensive, requiring significant computation and GPU memory, especially for long context scenarios. The resource-intensive nature poses a major obstacle for the community (especially academic researchers) to systematically evaluate the security risks of long-context LLMs and assess the effectiveness of defense strategies at scale. In this work, we propose FlashRT, the first framework to improve the efficiency (in terms of both computation and memory) for optimization-based prompt injection and knowledge corruption attacks under long-context LLMs. Through extensive evaluations, we find that FlashRT consistently delivers a 2x-7x speedup (e.g., reducing runtime from one hour to less than ten minutes) and a 2x-4x reduction in GPU memory consumption (e.g., reducing from 264.1 GB to 65.7 GB GPU memory for a 32K token context) compared to state-of-the-art baseline nanoGCG. FlashRT can be broadly applied to black-box optimization methods, such as TAP and AutoDAN. We hope FlashRT can serve as a red-teaming tool to enable systematic evaluation of long-context LLM security. The code is available at: https://github.com/Wang-Yanting/FlashRT",
+      "published": "2026-04-30T17:43:24Z",
+      "updated": "2026-04-30T17:43:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28157v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.23758v2",
-      "title": "Agentic Fusion of Large Atomic and Language Models to Accelerate Superconductors Discovery",
+      "id": "http://arxiv.org/abs/2602.04572v2",
+      "title": "From Competition to Collaboration: Designing Sustainable Mechanisms Between LLMs and Online Forums",
       "authors": [
-        "Mingze Li",
-        "Yu Rong",
-        "Songyou Li",
-        "Lihong Wang",
-        "Jiacheng Cen",
-        "Liming Wu",
-        "Anyi Li",
-        "Zongzhao Li",
-        "Qiuliang Liu",
-        "Rui Jiao",
-        "Tian Bian",
-        "Pengju Wang",
-        "Hao Sun",
-        "Jianfeng Zhang",
-        "Ji-Rong Wen",
-        "Deli Zhao",
-        "Shifeng Jin",
-        "Tingyang Xu",
-        "Wenbing Huang"
+        "Niv Fono",
+        "Yftah Ziser",
+        "Omer Ben-Porat"
       ],
-      "summary": "The discovery of novel materials is critical for global energy and quantum technology transitions. While deep learning has fundamentally reshaped this landscape, existing predictive or generative models typically operate in isolation, lacking the autonomous orchestration required to execute the full discovery process. Here we present ElementsClaw, an agentic framework for materials discovery that synergizes Large Atomic Models (LAMs) with Large Language Models (LLMs). In response to varied human queries, ElementsClaw orchestrates a suite of LAM tools finetuned from our proposed 1-billion-parameter model Elements for atomic-scale numerical computation, while leveraging LLMs for high-level semantic reasoning. This shift moves AI-driven materials science from isolated processes toward integrated and human interactive discovery. Applied to superconductors, ElementsClaw screens 2.4 million crystals in just 28 GPU hours to identify 68,000 high-confidence candidates (The complete dataset of screened superconductors is available at https://developer.damo-academy.com/material), expanding known superconducting space by orders of magnitude compared to datasets curated over decades. Critically, ElementsClaw achieves a high success rate in identifying superconductors hidden in literature and discovers four novel experimentally verified superconductors, exemplified by Zr3ScRe8 with a transition temperature of 6.8 K and HfZrRe4 at 6.7 K. Together, our results establish a knowledge integrated, autonomously orchestrated, and experimentally grounded paradigm for materials discovery.",
-      "published": "2026-04-26T15:14:38Z",
-      "updated": "2026-04-29T16:34:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.23758v2"
+      "summary": "While Generative AI (GenAI) systems draw users away from (Q&A) forums, they also depend on the very data those forums produce to improve their performance. Addressing this paradox, we propose a framework of sequential interaction, in which a GenAI system proposes questions to a forum that can publish some of them. Our framework captures several intricacies of such a collaboration, including non-monetary exchanges, asymmetric information, and incentive misalignment. We bring the framework to life through comprehensive, data-driven simulations using real Stack Exchange data and commonly used LLMs. We demonstrate the incentive misalignment empirically, yet show that players can achieve roughly half of the utility in an ideal full-information scenario. Our results highlight the potential for sustainable collaboration that preserves effective knowledge sharing between AI systems and human knowledge platforms.",
+      "published": "2026-02-04T13:58:39Z",
+      "updated": "2026-04-30T17:34:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.04572v2"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26866v1",
-      "title": "MoRFI: Monotonic Sparse Autoencoder Feature Identification",
+      "id": "http://arxiv.org/abs/2604.28093v1",
+      "title": "What Makes a Good Terminal-Agent Benchmark Task: A Guideline for Adversarial, Difficult, and Legible Evaluation Design",
       "authors": [
-        "Dimitris Dimakopoulos",
-        "Shay B. Cohen",
-        "Ioannis Konstas"
+        "Ivan Bercovich"
       ],
-      "summary": "Large language models (LLMs) acquire most of their factual knowledge during the pre-training stage, through next token prediction. Subsequent stages of post-training often introduce new facts outwith the parametric knowledge, giving rise to hallucinations. While it has been demonstrated that supervised fine-tuning (SFT) on new knowledge may exacerbate the problem, the underlying mechanisms are still poorly understood. We conduct a controlled fine-tuning experiment, focusing on closed-book QA, and find latent directions that causally contribute to hallucinations. Specifically, we fine-tune Llama 3.1 8B, Gemma 2 9B and Mistral 7B v03 on seven distinct single QA datasets, controlling for the percentage of new knowledge and number of training epochs. By measuring performance on the test set, we validate that incrementally introducing new knowledge increases hallucinations, with the effect being more pronounced with prolonged training. We leverage pre-trained sparse autoencoders (SAEs) to analyze residual stream activations across various checkpoints for each model and propose Monotonic Relationship Feature Identification (MoRFI) for capturing causally relevant latents. MoRFI filters SAE features that respond monotonically to controlled fine-tuning data mixtures of a target property. Our findings show that exposure to unknown facts disrupts the model's ability to retrieve stored knowledge along a set of directions in the residual stream. Our pipeline reliably discovers them across distinct models, recovering knowledge through single-latent interventions.",
-      "published": "2026-04-29T16:32:57Z",
-      "updated": "2026-04-29T16:32:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26866v1"
+      "summary": "Terminal-agent benchmarks have become a primary signal for measuring the coding and system-administration capabilities of large language models. As the market for evaluation environments grows, so does the pressure to ship tasks quickly, often without thorough adversarial review of the verification logic. This paper is a guideline for writing good benchmark tasks, drawn from over a year of contributing to and reviewing tasks for Terminal Bench. Most people write benchmark tasks the way they write prompts. They shouldn't. A prompt is designed to help the agent succeed; a benchmark is designed to find out if it can. We argue that good tasks are adversarial, difficult, and legible, and that a large class of common failure modes -- AI-generated instructions, over-prescriptive specifications, clerical difficulty, oracle solutions that assume hidden knowledge, tests that validate the wrong things, and reward-hackable environments -- are predictable consequences of treating task authoring as prompt authoring. We catalog these failure modes, argue that real difficulty is conceptual rather than environmental, and discuss recent empirical evidence that over 15% of tasks in popular terminal-agent benchmarks are reward-hackable. We hope this serves as a useful reference for benchmark maintainers, task contributors, and researchers using benchmark scores as evidence.",
+      "published": "2026-04-30T16:37:37Z",
+      "updated": "2026-04-30T16:37:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28093v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26855v1",
-      "title": "Cognitive Atrophy and Systemic Collapse in AI-Dependent Software Engineering",
+      "id": "http://arxiv.org/abs/2604.28087v1",
+      "title": "Towards Neuro-symbolic Causal Rule Synthesis, Verification, and Evaluation Grounded in Legal and Safety Principles",
       "authors": [
-        "Frank Ginac"
+        "Zainab Rehan",
+        "Christian Medeiros Adriano",
+        "Sona Ghahremani",
+        "Holger Giese"
       ],
-      "summary": "The integration of Large Language Models (LLMs) into the software development lifecycle (SDLC) masks a critical socio-technical failure: Cognitive-Systemic Collapse. This paper introduces \"Epistemological Debt,\" the hidden carrying cost incurred when engineers substitute logical derivation with passive AI verification. This debt erodes the mental models essential for root-cause analysis, widening the gap between system complexity and human comprehension. Furthermore, recursive training on synthetic code threatens to homogenize the global software reservoir, diminishing the variance required for robust engineering. Using the 2026 Amazon outages as a case study, this research illustrates how \"mechanized convergence\" leads to systemic fragility. To preserve long-term resilience, engineering leaders must move beyond prompt-based development to implement rigorous human-in-the-loop pedagogical standards. This framework balances AI-driven productivity with the epistemic sovereignty necessary to manage increasingly opaque software ecosystems.",
-      "published": "2026-04-29T16:20:25Z",
-      "updated": "2026-04-29T16:20:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26855v1"
+      "summary": "Rule-based systems remain central in safety-critical domains but often struggle with scalability, brittleness, and goal misspecification. These limitations can lead to reward hacking and failures in formal verification, as AI systems tend to optimize for narrow objectives. In previous research, we developed a neuro-symbolic causal framework that integrates first-order logic abduction trees, structural causal models, and deep reinforcement learning within a MAPE-K loop to provide explainable adaptations under distribution shifts. In this paper, we extend that framework by introducing a meta-level layer designed to mitigate goal misspecification and support scalable rule maintenance. This layer consists of a Goal/Rule Synthesizer and a Rule Verification Engine, which iteratively refine a formal rule theory from high-level natural-language goals and principles provided by human experts. The synthesis pipeline employs large language models (LLMs) to: (1) decompose goals into candidate causes, (2) consolidate semantics to remove redundancies, (3) translate them into candidate first-order rules, and (4) compose necessary and sufficient causal sets. The verification pipeline then performs (1) syntax and schema validation, (2) logical consistency analysis, and (3) safety and invariant checks before integrating verified rules into the knowledge base. We evaluated our approach with a proof-of-concept implementation in two autonomous driving scenarios. Results indicate that, given human-specified goals and principles, the pipeline can successfully derive minimal necessary and sufficient rule sets and formalize them as logical constraints. These findings suggest that the pipeline supports incremental, modular, and traceable rule synthesis grounded in established legal and safety principles.",
+      "published": "2026-04-30T16:34:02Z",
+      "updated": "2026-04-30T16:34:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28087v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.26851v1",
-      "title": "Resume-ing Control: (Mis)Perceptions of Agency Around GenAI Use in Recruiting Workflows",
+      "id": "http://arxiv.org/abs/2604.28082v1",
+      "title": "Characterizing the Consistency of the Emergent Misalignment Persona",
       "authors": [
-        "Sajel Surati",
-        "Rosanna Bellini",
-        "Emily Black"
+        "Anietta Weckauff",
+        "Yuchen Zhang",
+        "Maksym Andriushchenko"
       ],
-      "summary": "When generative AI (genAI) systems are used in high-stakes decision-making, its recommended role is to aid, rather than replace, human decision-making. However, there is little empirical exploration of how professionals making high-stakes decisions, such as those related to employment, perceive their agency and level of control when working with genAI systems. Through interviews with 22 recruiting professionals, we investigate how genAI subtly influences control over everyday workflows and even individual hiring decisions. Our findings highlight a pressing conflict: while recruiters believe they have final authority across the recruiting pipeline, genAI has become an invisible architect that shapes the foundational building blocks of information used for evaluation, from defining a job to determining good interview performances. The decision of whether or not to adopt was also often outside recruiters' control, with many feeling compelled to adopt genAI due to calls to integrate AI from higher-ups in their business, to combat applicant use of AI, and the individual need to boost productivity. Despite a seemingly seismic shift in how recruiting happens, participants only reported marginal efficiency gains. Such gains came at the high cost of recruiter deskilling, a trend that jeopardizes the meaningful oversight of decision-making. We conclude by discussing the implications of such findings for responsible and perceptible genAI use in hiring contexts.",
-      "published": "2026-04-29T16:17:16Z",
-      "updated": "2026-04-29T16:17:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.26851v1"
+      "summary": "Fine-tuning large language models (LLMs) on narrowly misaligned data generalizes to broadly misaligned behavior, a phenomenon termed emergent misalignment (EM). While prior work has found a correlation between harmful behavior and self-assessment in emergently misaligned models, it remains unclear how consistent this correspondence is across tasks and whether it varies across fine-tuning domains. We characterize the consistency of the EM persona by fine-tuning Qwen 2.5 32B Instruct on six narrowly misaligned domains (e.g., insecure code, risky financial advice, bad medical advice) and administering experiments including harmfulness evaluation, self-assessment, choosing between two descriptions of AI systems, output recognition, and score prediction. Our results reveal two distinct patterns: coherent-persona models, in which harmful behavior and self-reported misalignment are coupled, and inverted-persona models, which produce harmful outputs while identifying as aligned AI systems. These findings reveal a more fine-grained picture of the effects of emergent misalignment, calling into question the consistency of the EM persona.",
+      "published": "2026-04-30T16:26:53Z",
+      "updated": "2026-04-30T16:26:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.28082v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.16453v4",
-      "title": "Understanding the Challenges and Opportunities of Generative AI Apps: An Empirical Study",
+      "id": "http://arxiv.org/abs/2604.21564v2",
+      "title": "Measuring Opinion Bias and Sycophancy via LLM-based Persuasion",
       "authors": [
-        "Buthayna AlMulla",
-        "Maram Assi",
-        "Safwat Hassan"
+        "Rodrigo Nogueira",
+        "Giovana Kerche Bonás",
+        "Thales Sales Almeida",
+        "Andrea Roque",
+        "Ramon Pires",
+        "Hugo Abonizio",
+        "Thiago Laitz",
+        "Celio Larcher",
+        "Roseval Malaquias Junior",
+        "Marcos Piau"
       ],
-      "summary": "The release of ChatGPT in 2022 triggered a rapid surge in generative artificial intelligence mobile apps (Gen-AI apps). Despite widespread adoption, little is known about how end users perceive and evaluate these Gen-AI functionalities. We conduct a user-centered analysis of 1,035,342 reviews from 171 Gen-AI apps from the Google Play Store. We propose SARA (Selection, Acquisition, Refinement, and Analysis), a four-phase framework that leverages prompt-based LLMs for large-scale review analysis. We validate the reliability of LLM-based topic extraction and assignment using 4,353 manually evaluated reviews, achieving 91% accuracy with five-shot prompting and filtering of non-informative reviews. We identify the top ten topics (e.g., AI Performance and Emotional Connection) and perform a cross-platform comparison with Apple App Store reviews. Through qualitative analysis of 762 reviews, we uncover three opportunities (AI for Accessibility and Wellbeing, AI as a Collaborative Creative Tool, and AI Versatility) and three challenges (Managing User Expectations and AI Limitations, Balancing Content Moderation and Creative Freedom, and Strategic Integration of Gen-AI Features). Finally, we analyze temporal trends, revealing how user concerns shift as users mature. Our findings enable researchers and developers to better leverage the capabilities of Gen-AI apps and address potential challenges.",
-      "published": "2025-06-19T16:39:55Z",
-      "updated": "2026-04-29T16:14:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.16453v4"
+      "summary": "Large language models increasingly shape the information people consume: they are embedded in search, consulted for professional advice, deployed as agents, and used as a first stop for questions about policy, ethics, health, and politics. When such a model silently holds a position on a contested topic, that position propagates at scale into users' decisions. Eliciting a model's positions is harder than it first appears: contemporary assistants answer direct opinion questions with evasive disclaimers, and the same model may concede the opposite position once the user starts arguing one side. We propose a method, released as the open-source llm-bias-bench, for discovering the opinions an LLM actually holds on contested topics under conditions that resemble real multi-turn interaction. The method pairs two complementary free-form probes. Direct probing asks for the model's opinion across five turns of escalating pressure from a simulated user. Indirect probing never asks for an opinion and engages the model in argumentative debate, letting bias leak through how it concedes, resists, or counter-argues. Three user personas (neutral, agree, disagree) collapse into a nine-way behavioral classification that separates persona-independent positions from persona-dependent sycophancy, and an auditable LLM judge produces verdicts with textual evidence. The first instantiation ships 38 topics in Brazilian Portuguese across values, scientific consensus, philosophy, and economic policy. Applied to 13 assistants, the method surfaces findings of practical interest: argumentative debate triggers sycophancy 2-3x more than direct questioning (median 50% to 79%); models that look opinionated under direct questioning often collapse into mirroring under sustained arguments; and attacker capability matters mainly when an existing opinion must be dislodged, not when the assistant starts neutral.",
+      "published": "2026-04-23T11:34:06Z",
+      "updated": "2026-04-30T16:26:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.21564v2"
     }
   ]
 }
