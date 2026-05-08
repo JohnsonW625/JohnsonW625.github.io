@@ -1,171 +1,185 @@
 {
-  "generated_at_utc": "2026-05-07T02:47:13Z",
+  "generated_at_utc": "2026-05-08T02:51:02Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.05192v1",
-      "title": "Almost-Orthogonality in Lp Spaces: A Case Study with Grok",
+      "id": "http://arxiv.org/abs/2605.06663v1",
+      "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
       "authors": [
-        "Ziang Chen",
-        "Jaume de Dios Pont",
-        "Paata Ivanisvili",
-        "Jose Madrid",
-        "Haozhu Wang"
+        "Ryan Wang",
+        "Akshita Bhagia",
+        "Sewon Min"
       ],
-      "summary": "Carbery proposed the following sharpened form of triangle inequality for many functions: for any $p\\ge 2$ and any finite sequence $(f_j)_j\\subset L^p$ we have \\[ \\Big\\|\\sum_j f_j\\Big\\|_p \\ \\le\\ \\left(\\sup_{j} \\sum_{k} α_{jk}^{\\,c}\\right)^{1/p'} \\Big(\\sum_j \\|f_j\\|_p^p\\Big)^{1/p}, \\] where $c=2$, $1/p+1/p'=1$, and $α_{jk}=\\sqrt{\\frac{\\|f_{j}f_{k}\\|_{p/2}}{\\|f_{j}\\|_{p}\\|f_{k}\\|_{p}}}$. In the first part of this paper we construct a counterexample showing that this inequality fails for every $p>2$. We then prove that if an estimate of the above form holds, the exponent must satisfy $c\\le p'$. Finally, at the critical exponent $c=p'$, we establish the inequality for all integer values $p\\ge 2$. In the second part of the paper we obtain a sharp three-function bound \\[ \\Big\\|\\sum_{j=1}^{3} f_j\\Big\\|_p \\ \\le\\ \\left(1+2Γ^{c(p)}\\right)^{1/p'} \\Big(\\sum_{j=1}^{3} \\|f_j\\|_p^p\\Big)^{1/p}, \\] where $p \\geq 3$, $c(p) = \\frac{2\\ln(2)}{(p-2)\\ln(3)+2\\ln(2)}$ and $Γ=Γ(f_1,f_2,f_3)\\in[0,1]$ quantifies the degree of orthogonality among $f_1,f_2,f_3$. The exponent $c(p)$ is optimal, and improves upon the power $r(p) = \\frac{6}{5p-4}$ obtained previously by Carlen, Frank, and Lieb. Some intermediate lemmas and inequalities appearing in this work were explored with the assistance of the large language model Grok.",
-      "published": "2026-05-06T17:54:51Z",
-      "updated": "2026-05-06T17:54:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.05192v1"
+      "summary": "Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Experts (MoEs) seemingly offer a potential alternative by activating only a subset of experts per input, but in practice, restricting inference to a subset of experts for a given domain leads to severe performance degradation. This limits their practicality in memory-constrained settings, especially as models grow larger and sparser. We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors. Our key idea is to encourage tokens from similar domains to rely on similar experts. Since tokens within a document often share a domain, EMO restricts them to select experts from a shared pool, while allowing different documents to use different pools. This simple constraint enables coherent expert groupings to emerge during pretraining using document boundaries alone. We pretrain a 1B-active, 14B-total EMO on 1T tokens. As a full model, it matches standard MoE performance. Crucially, it enables selective expert use: retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute drop, whereas standard MoEs break under the same setting. We further find that expert subsets in EMO specialize at semantic levels (e.g., domains such as math or code), in contrast to the low-level syntactic specialization observed in standard MoEs. Altogether, our results demonstrate a path toward modular, memory-efficient deployment of large, sparse models and open new opportunities for composable architectures.",
+      "published": "2026-05-07T17:59:20Z",
+      "updated": "2026-05-07T17:59:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06663v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.20911v2",
-      "title": "FaSTA$^*$: Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing",
+      "id": "http://arxiv.org/abs/2605.06660v1",
+      "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
       "authors": [
-        "Advait Gupta",
-        "Rishie Raj",
-        "Dang Nguyen",
-        "Tianyi Zhou"
+        "Yuhang Lai",
+        "Jiazhan Feng",
+        "Yee Whye Teh",
+        "Ning Miao"
       ],
-      "summary": "We develop a cost-efficient neurosymbolic agent to address challenging multi-turn image editing tasks such as ``Detect the bench in the image while recoloring it to pink. Also, remove the cat for a clearer view and recolor the wall to yellow.'' It combines the fast, high-level subtask planning by large language models (LLMs) with the slow, accurate, tool-use, and local A$^*$ search per subtask to find a cost-efficient toolpath -- a sequence of calls to AI tools. To save the cost of A$^*$ on similar subtasks, we perform inductive reasoning on previously successful toolpaths via LLMs to continuously extract/refine frequently used subroutines and reuse them as new tools for future tasks in an adaptive fast-slow planning, where the higher-level subroutines are explored first, and only when they fail, the low-level A$^*$ search is activated. The reusable symbolic subroutines considerably save exploration cost on the same types of subtasks applied to similar images, yielding a human-like fast-slow toolpath agent ``FaSTA$^*$'': fast subtask planning followed by rule-based subroutine selection per subtask is attempted by LLMs at first, which is expected to cover most tasks, while slow A$^*$ search is only triggered for novel and challenging subtasks. By comparing with recent image editing approaches, we demonstrate FaSTA$^*$ is significantly more computationally efficient while remaining competitive with the state-of-the-art baseline in terms of success rate. Our code and data can be accessed at https://github.com/tianyi-lab/FaSTAR.",
-      "published": "2025-06-26T00:33:43Z",
-      "updated": "2026-05-06T17:42:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.20911v2"
+      "summary": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabling autonomous scientific research. Existing problem generation approaches either depend on expensive human expert involvement or adopt naive self-play paradigms, which frequently yield invalid problems due to reward hacking. This work introduces VHG, a verifier-enhanced hard problem generation framework built upon three-party self-play. By integrating an independent verifier into the conventional setter-solver duality, our design constrains the setter's reward to be jointly determined by problem validity (evaluated by the verifier) and difficulty (assessed by the solver). We instantiate two verifier variants: a Hard symbolic verifier and a Soft LLM-based verifier, with evaluations conducted on indefinite integral tasks and general mathematical reasoning tasks. Experimental results show that VHG substantially outperforms all baseline methods by a clear margin.",
+      "published": "2026-05-07T17:58:32Z",
+      "updated": "2026-05-07T17:58:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06660v1"
     },
     {
-      "id": "http://arxiv.org/abs/2505.00020v2",
-      "title": "Beyond Public Access in LLM Pre-Training Data",
+      "id": "http://arxiv.org/abs/2605.06654v1",
+      "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
       "authors": [
-        "Sruly Rosenblat",
-        "Tim O'Reilly",
-        "Ilan Strauss"
+        "Yuxing Liu",
+        "Jianyu Wang",
+        "Tong Zhang"
       ],
-      "summary": "Using a legally obtained dataset of 34 copyrighted O'Reilly Media books, we apply the DE-COP membership inference attack method to investigate whether OpenAI's large language models show recognition of copyrighted content. Our results based on this small sample suggest that GPT-4o, OpenAI's more recent and capable model, exhibits patterns consistent with recognition of pay-walled book content, with an AUROC score of 0.82 (95% bootstrapped CI: 0.60-0.96), though this wide confidence interval reflects substantial uncertainty due to the limited number of books tested. GPT-4o Mini, as a much smaller model, shows little recognition of any O'Reilly Media content with an AUROC score of 0.56 (0.28-0.83) for non-public data. Testing multiple models, with the same cutoff date, provides a partial control for potential language shifts over time that might bias our findings, though differences in model size, architecture, and potentially training data composition limit the strength of this control. These preliminary results underscore the importance of increased corporate transparency regarding pre-training data sources and the development of formal licensing frameworks for AI content training. Our principal contribution is our examination of public and non public data separately.",
-      "published": "2025-04-24T15:49:59Z",
-      "updated": "2026-05-06T17:41:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2505.00020v2"
+      "summary": "Optimizers play an important role in both pretraining and finetuning stages when training large language models (LLMs). In this paper, we present an observation that full finetuning with the same optimizer as in pretraining achieves a better learning-forgetting tradeoff, i.e., forgetting less while achieving the same or better performance on the new task, than other optimizers and, possibly surprisingly, LoRA, during the supervised finetuning (SFT) stage. We term this phenomenon optimizer-model consistency. To better understand it, through controlled experiments and theoretical analysis, we show that: 1) optimizers can shape the models by having regularization effects on the activations, leading to different landscapes around the pretrained checkpoints; 2) in response to this regularization effect, the weight update in SFT should follow some specific structures to lower forgetting of the knowledge learned in pretraining, which can be obtained by using the same optimizer. Moreover, we specifically compare Muon and AdamW when they are employed throughout the pretraining and SFT stages and find that Muon performs worse when finetuned for reasoning tasks. With a synthetic language modeling experiment, we demonstrate that this can come from Muon's strong tendency towards rote memorization, which may hurt pattern acquisition with a small amount of data, as for SFT.",
+      "published": "2026-05-07T17:57:02Z",
+      "updated": "2026-05-07T17:57:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06654v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.06856v3",
-      "title": "Vision-EKIPL: External Knowledge-Infused Policy Learning for Visual Reasoning",
+      "id": "http://arxiv.org/abs/2605.06650v1",
+      "title": "Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients",
       "authors": [
-        "Chaoyang Wang",
-        "Zeyu Zhang",
-        "Meng Meng",
-        "Xu Zhou",
-        "Haiyun Jiang"
+        "Mingwei Xu",
+        "Hao Fang"
       ],
-      "summary": "Visual reasoning is crucial for understanding complex multimodal data and advancing Artificial General Intelligence. Existing methods enhance the reasoning capability of Multimodal Large Language Models (MLLMs) through Reinforcement Learning (RL) fine-tuning (e.g., GRPO). However, current RL approaches sample action groups solely from the policy model itself, which limits the upper boundary of the model's reasoning capability and leads to inefficient training. To address these limitations, this paper proposes a novel RL framework called \\textbf{Vision-EKIPL}. The core of this framework lies in introducing high-quality actions generated by external auxiliary models during the RL training process to guide the optimization of the policy model. The policy learning with knowledge infusion from external models significantly expands the model's exploration space, effectively improves the reasoning boundary, and substantially accelerates training convergence speed and efficiency. Experimental results demonstrate that our proposed Vision-EKIPL achieved up to a 5\\% performance improvement on the Reason-RFT-CoT Benchmark compared to the state-of-the-art (SOTA). It reveals that Vision-EKIPL can overcome the limitations of traditional RL methods, significantly enhance the visual reasoning performance of MLLMs, and provide a new effective paradigm for research in this field.",
-      "published": "2025-06-07T16:37:46Z",
-      "updated": "2026-05-06T17:36:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.06856v3"
+      "summary": "Reinforcement learning with verifiable rewards (RLVR), due to the deterministic verification, becomes a dominant paradigm for enhancing the reasoning ability of large language models (LLMs). The community witnesses the rapid change from the Proximal Policy Optimization (PPO) to Group Relative Policy Optimization (GRPO), in which GRPO reduces the complicated advantage estimation with simple estimation over grouped positive and negative rollouts. However, we note that negative rollouts may admit no gradation of failure severity, and the combinatorial vastness makes penalizing a few sampled negatives unlikely to cover a meaningful reward signal under sparse binary rewards. In this work, we propose Positive-Only Policy Optimization (POPO), a novel RLVR framework in which learning can occur exclusively via online positive rollouts. Specifically, POPO utilizes bounded importance sampling over the positive rollout set. Thus, no disjoint negative rollouts are used for the gradient guidance. We show that implicit negative gradients can emerge naturally through reinforcing the positive probability via rollouts redistribution. Next, POPO stabilizes the policy optimization through two mechanisms. First, it applies a siamese policy network with a momentum-based adaptation law for stabilized policy evolution. Second, we replace the KL-divergence with a bounded similarity penalty term in the siamese representation space. We conduct extensive experiments using publicly available, well-established text-LLM models, e.g., the Qwen family, across all-level mathematical benchmarks. Our experiment demonstrates that POPO achieves performance comparable to, or even superior to GRPO. Notably, we show that POPO can achieve 36.67% in AIME 2025 with Qwen-Math-7B, outperforming GRPO 30.00%. Our ablation and sweep studies further illustrate the necessity and robustness of POPO components.",
+      "published": "2026-05-07T17:55:21Z",
+      "updated": "2026-05-07T17:55:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06650v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.05159v1",
-      "title": "PSK at SemEval-2026 Task 9: Multilingual Polarization Detection Using Ensemble Gemma Models with Synthetic Data Augmentation",
+      "id": "http://arxiv.org/abs/2605.06642v1",
+      "title": "StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction",
       "authors": [
-        "Srikar Kashyap Pulipaka"
+        "Xiangyuan Xue",
+        "Yifan Zhou",
+        "Zidong Wang",
+        "Shengji Tang",
+        "Philip Torr",
+        "Wanli Ouyang",
+        "Lei Bai",
+        "Zhenfei Yin"
       ],
-      "summary": "We present our system for SemEval-2026 Task 9: Multilingual Polarization Detection, a binary classification task spanning 22 languages. Our approach fine-tunes separate Gemma~3 models (12B and 27B parameters) per language using Low-Rank Adaptation (LoRA), augmented with synthetic data generated by a large language model (LLM). We employ three synthetic data strategies (direct generation, paraphrasing, and contrastive pair creation) using GPT-4o-mini, with a multi-stage quality filtering pipeline including embedding-based deduplication. We find that per-language threshold tuning on the development set yields 2 to 4\\% F1 improvements without retraining. We also use weighted ensembles of 12B and 27B model predictions with per-language strategy selection. Our final system achieves a mean macro-F1 of 0.811 across all 22 languages, ranking 2nd overall of the participating teams, with 1st place finishes in 3 languages and top-3 in 8 languages. We also find that alternative architectures (XLM-RoBERTa, Qwen3) that showed strong development set performance suffered 30 to 50\\% F1 drops on the test set, highlighting the importance of generalization.",
-      "published": "2026-05-06T17:29:14Z",
-      "updated": "2026-05-06T17:29:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.05159v1"
+      "summary": "Large language models (LLMs) are increasingly used as interactive agents, but optimizing them for long-horizon decision making remains difficult because current methods are largely purely reactive, which weakens both exploration and credit assignment over extended trajectories. In this work, we present Strategic Trajectory Abstraction (StraTA), a simple framework that introduces an explicit trajectory-level strategy into agentic reinforcement learning (RL). StraTA samples a compact strategy from the initial task state, conditions subsequent actions on that strategy, and trains strategy generation and action execution jointly with a hierarchical GRPO-style rollout design, further enhanced by diverse strategy rollout and critical self-judgment. Experiments on ALFWorld, WebShop, and SciWorld show that StraTA consistently improves both sample efficiency and final performance over strong baselines. StraTA reaches success rates of 93.1% on ALFWorld and 84.2% on WebShop. On SciWorld, StraTA attains a 63.5% overall score, outperforming frontier closed-source models.",
+      "published": "2026-05-07T17:51:16Z",
+      "updated": "2026-05-07T17:51:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06642v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.06869v2",
-      "title": "Uncovering Cross-Objective Interference in Multi-Objective Alignment",
+      "id": "http://arxiv.org/abs/2605.06641v1",
+      "title": "GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation",
       "authors": [
-        "Yining Lu",
-        "Meng Jiang"
+        "Ziyu Zhai",
+        "Siyou Li",
+        "Juexi Shao",
+        "Juntao Yu"
       ],
-      "summary": "We study a persistent failure mode in multi-objective alignment for large language models (LLMs): training improves performance on only a subset of objectives while causing others to degrade. We formalize this phenomenon as cross-objective interference and conduct the first systematic study across scalarization algorithms, showing that interference is pervasive and exhibits strong model dependence. To explain this phenomenon, we derive a local covariance law showing that an objective improves when its reward exhibits positive covariance with the scalarized score. We extend this analysis to clipped surrogate objectives used in modern alignment, demonstrating that the covariance law remains valid under mild conditions despite clipping. Building on this analysis, we propose Covariance Targeted Weight Adaptation (CTWA), a plug-and-play method that maintains positive covariance between objective rewards and the training signal to effectively mitigate cross-objective interference. Finally, we complement these local improvement conditions with a global convergence analysis under the Polyak--Łojasiewicz condition, establishing when non-convex scalarized optimization achieves global convergence and how cross-objective interference depends on specific model geometric properties.",
-      "published": "2026-02-06T16:55:27Z",
-      "updated": "2026-05-06T17:20:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.06869v2"
+      "summary": "Developing ceramic glazes is a costly, time-consuming process of trial and error due to complex chemistry, placing a significant burden on independent artists. While recent advances in multimodal AI offer a modern solution, the field lacks the large-scale datasets required to train these models. We propose GlazyBench, the first dataset for AI-assisted glaze design. Comprising 23,148 real glaze formulations, GlazyBench supports two primary tasks: predicting post-firing surface properties, such as color and transparency, from raw materials, and generating accurate visual representations of the glaze based on these properties. We establish comprehensive baselines for property prediction using traditional machine learning and large language models, alongside image generation benchmarks using deep generative and large multimodal models. Our experiments demonstrate promising yet challenging results. GlazyBench pioneers a new research direction in AI-assisted material design, providing a standardized benchmark for systematic evaluation.",
+      "published": "2026-05-07T17:51:13Z",
+      "updated": "2026-05-07T17:51:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06641v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.05134v1",
-      "title": "Low-Cost Black-Box Detection of LLM Hallucinations via Dynamical System Prediction",
+      "id": "http://arxiv.org/abs/2605.06638v1",
+      "title": "Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key",
       "authors": [
-        "Dan Wilson",
-        "Mohamed Akrout"
+        "Tianle Wang",
+        "Zhaoyang Wang",
+        "Guangchen Lan",
+        "Xinpeng Wei",
+        "Sipeng Zhang",
+        "Guanwen Qiu",
+        "Abulhair Saparov"
       ],
-      "summary": "Large Language Models (LLMs) frequently generate plausible but non-factual content, a phenomenon known as hallucination. While existing detection methods typically rely on computationally expensive sampling-based consistency checks or external knowledge retrieval, we propose a new method that treats the LLM as a black-box dynamical system. By projecting LLM responses into a high-dimensional manifold via an embedding model, we characterize the resulting vector sequences as observable realizations of the model's latent state-space dynamics. Leveraging Koopman operator theory, we fit the transition operators for both factual and hallucinated regimes and define a differential residual score based on their respective prediction errors. To accommodate varying user requirements and domain-specific sensitivities, we introduce a preference-aware calibration mechanism that optimizes the classification threshold based on a small set of demonstrations. This approach enables low-cost hallucination detection in a single-sample pass, avoiding the need for secondary sampling or external grounding. Extensive testing across three data benchmarks demonstrates that our method achieves state-of-the-art performance with reduced resource overhead.",
-      "published": "2026-05-06T17:07:29Z",
-      "updated": "2026-05-06T17:07:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.05134v1"
+      "summary": "Reinforcement learning (RL) has been applied to improve large language model (LLM) reasoning, yet the systematic study of how training scales with task difficulty has been hampered by the lack of controlled, scalable environments. We introduce ScaleLogic, a synthetic logical reasoning framework that offers independent control over two axes of difficulty: the depth of the required proof planning (i.e., the horizon) and the expressiveness of the underlying logic. Our proposed framework supports a wide range of logics: from simple implication-only logic (\"if-then\") towards more expressive first-order reasoning with conjunction (\"and\"), disjunction (\"or\"), negation (\"not\"), and universal quantification (\"for all\"). Using this framework, we show that the RL training compute $T$ follows a power law with respect to reasoning depth $D$ ($T \\propto D^γ$, $R^{2} > 0.99$), and that the scaling exponent $γ$ increases monotonically with logical expressiveness, from $1.04$ to $2.60$. On downstream mathematics and general reasoning benchmarks, more expressive training settings yield both larger performance gains (up to $+10.66$ points) and more compute-efficient transfer compared to less expressive settings, demonstrating that what a model is trained on, not just how much it is trained, shapes downstream transfer. We further show that the power-law relationship holds across multiple RL methods, and curriculum-based training substantially improves scaling efficiency.",
+      "published": "2026-05-07T17:48:42Z",
+      "updated": "2026-05-07T17:48:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06638v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.02475v2",
-      "title": "Shadow-Loom: Causal Reasoning over Graphical World Models of Narratives",
+      "id": "http://arxiv.org/abs/2605.06635v1",
+      "title": "Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents",
       "authors": [
-        "David Wilmot"
+        "Hailey Onweller",
+        "Elias Lumer",
+        "Austin Huber",
+        "Pia Ramchandani",
+        "Vamse Kumar Subbiah",
+        "Corey Feld"
       ],
-      "summary": "Stories hold a reader's attention because they have causes, secrets, and consequences. Shadow-Loom is an experimental open-source framework that turns a narrative into a versioned graphical world model and lets two engines act on it: a causal physics grounded in Pearl's ladder of causation and a recently proposed counterfactual calculus over Ancestral Multi-World Networks; and a narrative physics that scores the same graph against four structural reader-states -- mystery, dramatic irony, suspense, and surprise -- in the tradition of Sternberg's curiosity/suspense/surprise triad, with suspense formalised in the structural-affect line of work on story comprehension and computational suspense. Large language models are used only at the boundary: extraction, rendering, and audit; identification, intervention, and counterfactual reasoning are carried out in typed code over the graph. The system is offered as a research artefact rather than as a benchmarked NLP model; code, fixtures, and pipeline are released open source.",
-      "published": "2026-05-04T11:18:14Z",
-      "updated": "2026-05-06T17:03:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.02475v2"
+      "summary": "Large language models (LLMs) power deep research agents that synthesize information from hundreds of web sources into cited reports, yet these citations cannot be reliably verified. Current approaches either trust models to self-cite accurately, risking bias, or employ retrieval-augmented generation (RAG) that does not validate source accessibility, relevance, or factual consistency. We introduce the first source attribution evaluation framework that uses a reproducible AST parser to extract and evaluate inline citations from LLM-generated Markdown reports at scale. Unlike methods that verify claims in isolation, our framework closes the loop by retrieving the actual cited content, enabling human or model evaluators to judge each citation against its source. Citations are evaluated along three dimensions. (1) Link Works verifies URL accessibility, (2) Relevant Content measures topical alignment, and (3) Fact Check validates factual accuracy against source content. We benchmark 14 closed-source and open-source LLMs across three evaluation dimensions using rubric-based LLM-as-a-judge evaluators calibrated through human review. Our results reveal that even the strongest frontier models maintain link validity above 94% and relevance above 80%, yet achieve only 39-77% factual accuracy, while fewer than half of open-source models successfully generate cited reports in a one-shot setting. Ablation studies on research depth show that Fact Check accuracy drops by approximately 42% on average across two frontier models as tool calls scale from 2 to 150, demonstrating that more retrieval does not produce more accurate citations. These findings reveal a critical disconnect between surface-level citation quality and factual reliability, and our framework provides the evaluation infrastructure to assess the disconnect.",
+      "published": "2026-05-07T17:46:45Z",
+      "updated": "2026-05-07T17:46:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06635v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.09504v2",
-      "title": "Seeing the Goal, Missing the Truth: Human Accountability for AI Bias",
+      "id": "http://arxiv.org/abs/2510.08539v4",
+      "title": "On the optimization dynamics of RLVR: Gradient gap and step size thresholds",
       "authors": [
-        "Sean Cao",
-        "Wei Jiang",
-        "Hui Xu"
+        "Joe Suk",
+        "Yaqi Duan"
       ],
-      "summary": "This research explores how human-defined goals influence the behavior of Large Language Models (LLMs) through purpose-conditioned cognition. Using financial prediction tasks, we show that revealing the downstream use (e.g., predicting stock returns or earnings) of LLM outputs leads the LLM to generate biased sentiment and competition measures, even though these measures are intended to be downstream task-independent. Goal-aware prompting shifts these intermediate measures toward the disclosed downstream objective, producing in-sample overfitting. Specifically, purpose leakage improves performance on data prior to the LLM's knowledge cutoff, but provides no advantage after the cutoff. This bias is strong enough that regularization of prompt instructions cannot fully address this form of overfitting. We further show that the bias can arise from users' unintentional conversational context that hints at the purpose. Overall, we document that AI bias due to \"seeing the goal\" is not an algorithmic flaw, but stems from human accountability in research design.",
-      "published": "2026-02-10T08:01:45Z",
-      "updated": "2026-05-06T16:55:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.09504v2"
+      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR), which uses simple binary feedback to post-train large language models, has found significant empirical success. However, a principled understanding of why it works is lacking. This paper builds a theoretical foundation for RLVR by analyzing its training process at both the full-response (trajectory) and token levels. Central to our analysis is a new quantity called the Gradient Gap, which formalizes the direction of improvement from low-reward to high-reward regions of the response space. We prove that convergence critically depends on aligning the update direction with this Gradient Gap. Moreover, we derive a sharp step-size threshold based on the magnitude of the Gradient Gap: below it, learning converges, whereas above it, performance collapses. Our theory further predicts how the critical step size must scale with response length and the success rate, thereby explaining why practical heuristics such as length normalization improve stability and showing that, with a fixed learning rate, the success rate can stagnate strictly below $100\\%$. Importantly, our theory holds flexibly for any policy-gradient algorithm and so characterizes the dynamics of popular approaches such as REINFORCE and GRPO. We validate these predictions through controlled bandit simulations and language model experiments on post-training Qwen2.5-Math-7B with GRPO.",
+      "published": "2025-10-09T17:53:41Z",
+      "updated": "2026-05-07T17:44:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.08539v4"
     },
     {
-      "id": "http://arxiv.org/abs/2605.05125v1",
-      "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation",
+      "id": "http://arxiv.org/abs/2605.06632v1",
+      "title": "Crafting Reversible SFT Behaviors in Large Language Models",
       "authors": [
-        "Olivia Jullian Parra",
-        "Sara Zoccheddu",
-        "David Catalan Cerezo",
-        "Tom Forzy",
-        "Franziska Ulrich",
-        "William Sutcliffe",
-        "Jakob Martin Burgstaller",
-        "Oliver Senn",
-        "Patrick Owen",
-        "Nicola Serra"
+        "Yuping Lin",
+        "Pengfei He",
+        "Yue Xing",
+        "Yingqian Cui",
+        "Jiayuan Ding",
+        "Subhabrata Mukherjee",
+        "Hui Liu",
+        "Zhen Xiang"
       ],
-      "summary": "Target trial emulation (TTE) enables causal questions to be studied with observational data when randomized controlled trials (RCTs) are infeasible. Yet treatment-effect methods often address causal estimation, missingness, and temporal structure separately, limiting their robustness in electronic health records (EHRs), where time-varying confounding and missing-not-at-random (MNAR) biomarkers can reach 50%--80%. We propose a two-stage pipeline for treatment effect estimation from incomplete longitudinal EHRs. First, CausalFlow-T, a directed acyclic graph (DAG)-constrained normalizing flow with long short-term memory (LSTM)-encoded patient history, performs exact invertible counterfactual inference, avoiding approximation errors from variational inference and separating confounding through explicit causal structure. Ablations on four synthetic and one semi-synthetic benchmark with known counterfactuals show that DAG constraints and exact inference address distinct failure modes: neither compensates for the other. Second, because CausalFlow-T requires completed inputs, we introduce an LLM-driven evolutionary imputer that proposes executable imputation operators rather than individual entries, and evaluate it with three large language model (LLM) backends, including two open-source models. Across 30%--80% MNAR missingness, this imputer achieves the best pooled rank over biomarker and causal metrics, leading in point-wise accuracy and temporal extrapolation while preserving average treatment effect (ATE) recovery as statistical baselines degrade. On Swiss primary-care EHRs from adults with type 2 diabetes initiating a GLP-1 receptor agonist or SGLT-2 inhibitor, the pipeline estimates a per-protocol weight-loss difference of -0.98 kg [95% CI -1.01, -0.96] favoring GLP-1 receptor agonists, consistent with randomized evidence and obtained from realistically incomplete real-world EHRs.",
-      "published": "2026-05-06T16:53:08Z",
-      "updated": "2026-05-06T16:53:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.05125v1"
+      "summary": "Supervised fine-tuning (SFT) induces new behaviors in large language models, yet imposes no structural constraint on how these behaviors are distributed within the model. Existing behavior interpretation methods, such as circuit attribution approaches, identify sparse subnetworks correlated with SFT-induced behaviors post-hoc. However, such correlations do not imply *causal necessity*, limiting the ability to selectively control SFT-induced behaviors at inference time. We pursue an alternative by asking: can an SFT-induced behavior be deliberately compressed into a sparse, mechanistically necessary subnetwork, termed a *carrier*, while remaining controllable at inference time without weight modification? We propose (a) **Loss-Constrained Dual Descent (LCDD)**, which constructs such carriers by jointly optimizing routing masks and model weights under an explicit utility budget, and (b) **SFT-Eraser**, a soft prompt optimized via activation matching on extracted carrier channels, to reverse the SFT-induced behavior. Across safety, fixed-response, and style behaviors on multiple model families, LCDD yields sparse carriers that preserve target behaviors while enabling strong reversion when triggered by SFT-Eraser. Ablations further establish that the sparse structure is the key precondition for reversal: the same trigger optimization fails on standard SFT models, confirming that structure rather than trigger design is the operative factor. These results provide direct evidence that the learned carriers are causally necessary for the behaviors, pointing to a new direction for systematically localizing and selectively suppressing SFT-induced behaviors in deployed models.",
+      "published": "2026-05-07T17:44:07Z",
+      "updated": "2026-05-07T17:44:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06632v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.15486v2",
-      "title": "A Universal Large Language Model -- Drone Command and Control Interface",
+      "id": "http://arxiv.org/abs/2605.06623v1",
+      "title": "MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems",
       "authors": [
-        "Javier N. Ramos-Silva",
-        "Peter J. Burke"
+        "Zhexuan Wang",
+        "Xuebo Liu",
+        "Li Wang",
+        "Zifei Shan",
+        "Yutong Wang",
+        "Zhenxi Song",
+        "Min Zhang"
       ],
-      "summary": "The use of artificial intelligence (AI) for drone control can have a transformative impact on drone capabilities, especially when real world information can be integrated with drone sensing, command, and control, part of a growing field of physical AI. Large language models (LLMs) can be advantageous if trained at scale on general knowledge, but especially and in particular when the training data includes information such as detailed map geography topology of the entire planet, as well as the ability to access real time situational data such as weather. However, challenges remain in the interface between drones and LLMs in general, with each application requiring a tedious, labor intensive effort to connect the LLM trained knowledge to drone command and control. Here, we solve that problem, using an interface strategy that is LLM agnostic and drone agnostic, providing the first universal, versatile, comprehensive and easy to use drone control interface. We do this using the new model context protocol (MCP) standard, an open standard that provides a universal way for AI systems to access external data, tools, and services. We develop and deploy a cloud based Linux machine hosting an MCP server that supports the Mavlink protocol, an ubiquitous drone control language used almost universally by millions of drones including Ardupilot and PX4 framework.We demonstrate flight control of a real unmanned aerial vehicle. In further testing, we demonstrate extensive flight planning and control capability in a simulated drone, integrated with a Google Maps MCP server for up to date, real time navigation information. This demonstrates a universal approach to integration of LLMs with drone command and control, a paradigm that leverages and exploits virtually all of modern AI industry with drone technology in an easy to use interface that translates natural language to drone control.",
-      "published": "2026-01-21T21:37:54Z",
-      "updated": "2026-05-06T16:49:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.15486v2"
+      "summary": "Large language model (LLM)-based Multi-agent systems (MAS) have shown promise in tackling complex collaborative tasks, where agents are typically orchestrated via role-specific prompts. While the quality of these prompts is pivotal, jointly optimizing them across interacting agents remains a non-trivial challenge, primarily due to the misalignment between local agent objectives and holistic system goals. To address this, we introduce MASPO, a novel framework designed to automatically and iteratively refine prompts across the entire system. A core innovation of MASPO is its joint evaluation mechanism, which assesses prompts not merely by their local validity, but by their capacity to facilitate downstream success for successor agents. This effectively bridges the gap between local interactions and global outcomes without relying on ground-truth labels. Furthermore, MASPO employs a data-driven evolutionary beam search to efficiently navigate the high-dimensional prompt space. Extensive empirical evaluations across 6 diverse tasks demonstrate that MASPO consistently outperforms state-of-the-art prompt optimization methods, achieving an average accuracy improvement of 2.9. We release our code at https://github.com/wangzx1219/MASPO.",
+      "published": "2026-05-07T17:35:26Z",
+      "updated": "2026-05-07T17:35:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06623v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.05121v1",
-      "title": "Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction",
+      "id": "http://arxiv.org/abs/2605.06619v1",
+      "title": "Algospeak, Hiding in the Open: The Trade-off Between Legible Meaning and Detection Avoidance",
       "authors": [
-        "Yucheng Ruan",
-        "Ling Huang",
-        "Qika Lin",
-        "Kai He",
-        "Mengling Feng"
+        "Jan Fillies",
+        "Ronald E. Robertson",
+        "Jeffrey Hancock"
       ],
-      "summary": "Automated mental health prediction using textual data has shown promising results with deep learning and large language models. However, deploying these models in high-stakes real-world settings remains challenging, as existing approaches largely rely on semantic representations and often produce overconfident predictions under ambiguous, noisy, or shifted data. Moreover, most methods lack reliable uncertainty estimation, undermining trust in risk-sensitive mental health applications. To address these limitations, we formulate the task as a multi-view learning problem that integrates semantic information from encoder-only models with higher-level reasoning information from decoder-only models, where reasoning-aware representations and uncertainty modeling are obtained in a trustworthy manner. To ensure reliable fusion, we adopt an evidential learning framework based on Subjective Logic to explicitly model uncertainty and introduce an evidential fusion strategy that balances complementary views while discounting unreliable evidence. Benchmarking on three real-world datasets, Dreaddit, SDCNL, and DepSeverity, reports accuracies of 0.835, 0.731, and 0.751, respectively, demonstrating its potential for reliable mental health prediction. Additional experiments on robustness to noise and case studies for interpretability confirm that our proposed framework not only improves predictive performance but also provides trustworthy uncertainty estimates and human-understandable reasoning signals, making it suitable for risk-sensitive applications in mental health assessment.",
-      "published": "2026-05-06T16:49:17Z",
-      "updated": "2026-05-06T16:49:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.05121v1"
+      "summary": "As large language models (LLMs) increasingly mediate both content generation and moderation, linguistic evasion strategies known as Algospeak have intensified the coevolution between evaders and detectors. This research formalizes the underlying dynamics grounded in a joint action model: when Algospeak increases, detectability and understandability decrease. Further, the concept of Majority Understandable Modulation (MUM) is introduced and defined as the modulation level at which additional evasive alteration increases detector evasion but loses comprehension for the majority of recipients. To empirically probe this trade-off, we introduce a reproducible framework that can be used to create meaning-preserving, Algospeak-style variants, based on an existing taxonomy and with tunable modulation levels. Using COVID-19 disinformation as a first proof-by-example setting, we construct a reference dataset of 700 modulated items, drawn from twenty base sentences across five modulation levels and seven strategies. We then run two linked evaluations with seven different language models: one testing for interpretation through meaning recovery and one for disinformation detection through classification. Curve fitting over modulation levels yields an estimate of the Majority Understandable Modulation threshold and enables sensitivity analyses across strategies and models, see Figure 1. Results reveal the characteristic relationships between understandability and modulation. This study lays the groundwork for understanding the dynamics behind Algospeak and provides the framework, dataset, and experimental setups described.",
+      "published": "2026-05-07T17:34:01Z",
+      "updated": "2026-05-07T17:34:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.06619v1"
     }
   ]
 }
