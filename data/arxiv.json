@@ -1,200 +1,180 @@
 {
-  "generated_at_utc": "2026-05-11T03:27:36Z",
+  "generated_at_utc": "2026-05-12T02:52:47Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.08083v1",
-      "title": "LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling",
+      "id": "http://arxiv.org/abs/2605.10318v1",
+      "title": "Extending Confidence-Based Text2Cypher with Grammar and Schema Aware Filtering",
       "authors": [
-        "Tong Zheng",
-        "Haolin Liu",
-        "Chengsong Huang",
-        "Huiwen Bao",
-        "Sheng Zhang",
-        "Rui Liu",
-        "Runpeng Dai",
-        "Ruibo Chen",
-        "Chenxi Liu",
-        "Tianyi Xiong",
-        "Xidong Wu",
-        "Hongming Zhang",
-        "Heng Huang"
+        "Makbule Gulcin Ozsoy"
       ],
-      "summary": "Test-time scaling (TTS) has become an effective approach for improving large language model performance by allocating additional computation during inference. However, existing TTS strategies are largely hand-crafted: researchers manually design reasoning patterns and tune heuristics by intuition, leaving much of the computation-allocation space unexplored. We propose an environment-driven framework, AutoTTS, that changes what researchers design: from individual TTS heuristics to environments where TTS strategies can be discovered automatically. The key to AutoTTS lies in environment construction: the discovery environment must make the control space tractable and provide cheap, frequent feedback for TTS search. As a concrete instantiation, we formulate width--depth TTS as controller synthesis over pre-collected reasoning trajectories and probe signals, where controllers decide when to branch, continue, probe, prune, or stop and can be evaluated cheaply without repeated LLM calls. We further introduce beta parameterization to make the search tractable and fine-grained execution trace feedback to improve discovery efficiency by helping the agent diagnose why a TTS program fails. Experiments on mathematical reasoning benchmarks show that the discovered strategies improve the overall accuracy--cost tradeoff over strong manually designed baselines. The discovered strategies generalize to held-out benchmarks and model scales, while the entire discovery costs only $39.9 and 160 minutes. Our data, and code will be open-source at https://github.com/zhengkid/AutoTTS.",
-      "published": "2026-05-08T17:59:40Z",
-      "updated": "2026-05-08T17:59:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.08083v1"
+      "summary": "Large language models (LLMs) allow users to query databases using natural language by translating questions into executable queries. Despite strong progress on tasks such as Text2SQL, Text2SPARQL, and Text2Cypher, most existing methods focus on better prompting, fine-tuning, or iterative refinement. However, they often do not explicitly enforce structural constraints, such as syntactic validity and schema consistency. This can reduce reliability, since generated queries must satisfy both syntax rules and database schema constraints to be executable. In this work, we study how structured constraints can be used in test-time inference for Text2Cypher. We focus on post-generation validation to improve query correctness. We extend a confidence-based inference framework with a sequential filtering process that combines confidence scoring, grammar validation, and schema constraints before final aggregation. This lets us analyze how different constraint types affect generated queries. Our experiments with two instruction-tuned models show that grammar-based filtering improves syntactic validity. Schema-aware filtering further improves execution quality by enforcing consistency with the database structure. However, stronger filtering also increases the number of empty predictions and reduces execution coverage. Overall, we show that adding simple structural checks at test time improves the reliability of Text2Cypher generation, and we provide a clearer view of how syntax and schema constraints contribute differently.",
+      "published": "2026-05-11T10:18:13Z",
+      "updated": "2026-05-11T10:18:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.10318v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.08063v1",
-      "title": "Flow-OPD: On-Policy Distillation for Flow Matching Models",
+      "id": "http://arxiv.org/abs/2510.03761v2",
+      "title": "You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models",
       "authors": [
-        "Zhen Fang",
-        "Wenxuan Huang",
-        "Yu Zeng",
-        "Yiming Zhao",
-        "Shuang Chen",
-        "Kaituo Feng",
-        "Yunlong Lin",
-        "Lin Chen",
-        "Zehui Chen",
-        "Shaosheng Cao",
-        "Feng Zhao"
+        "Richard A. Dubniczky",
+        "Bertalan Borsos",
+        "Tamas Bisztray",
+        "Norbert Tihanyi"
       ],
-      "summary": "Existing Flow Matching (FM) text-to-image models suffer from two critical bottlenecks under multi-task alignment: the reward sparsity induced by scalar-valued rewards, and the gradient interference arising from jointly optimizing heterogeneous objectives, which together give rise to a 'seesaw effect' of competing metrics and pervasive reward hacking. Inspired by the success of On-Policy Distillation (OPD) in the large language model community, we propose Flow-OPD, the first unified post-training framework that integrates on-policy distillation into Flow Matching models. Flow-OPD adopts a two-stage alignment strategy: it first cultivates domain-specialized teacher models via single-reward GRPO fine-tuning, allowing each expert to reach its performance ceiling in isolation; it then establishes a robust initial policy through a Flow-based Cold-Start scheme and seamlessly consolidates heterogeneous expertise into a single student via a three-step orchestration of on-policy sampling, task-routing labeling, and dense trajectory-level supervision. We further introduce Manifold Anchor Regularization (MAR), which leverages a task-agnostic teacher to provide full-data supervision that anchors generation to a high-quality manifold, effectively mitigating the aesthetic degradation commonly observed in purely RL-driven alignment. Built upon Stable Diffusion 3.5 Medium, Flow-OPD raises the GenEval score from 63 to 92 and the OCR accuracy from 59 to 94, yielding an overall improvement of roughly 10 points over vanilla GRPO, while preserving image fidelity and human-preference alignment and exhibiting an emergent 'teacher-surpassing' effect. These results establish Flow-OPD as a scalable alignment paradigm for building generalist text-to-image models.",
-      "published": "2026-05-08T17:50:15Z",
-      "updated": "2026-05-08T17:50:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.08063v1"
+      "summary": "The widespread use of preprint repositories such as arXiv has accelerated the communication of scientific results but also introduced overlooked security risks. Beyond PDFs, these platforms provide unrestricted access to original source materials, including LaTeX sources, auxiliary code, figures, and embedded comments. In the absence of sanitization, submissions may disclose sensitive information that adversaries can harvest using open-source intelligence. In this work, we present the first large-scale security audit of preprint archives, analyzing more than 1.2 TB of source data from 100,000 arXiv submissions. We introduce LaTeXpOsEd, a four-stage framework that integrates pattern matching, logical filtering, traditional harvesting techniques, and large language models (LLMs) to uncover hidden disclosures within non-referenced files and LaTeX comments. To evaluate LLMs' secret-detection capabilities, we introduce LLMSec-DB, a benchmark on which we tested 25 state-of-the-art models. Our analysis uncovered thousands of PII leaks, GPS-tagged EXIF files, publicly available Google Drive and Dropbox folders, editable private SharePoint links, exposed GitHub and Google credentials, and cloud API keys. We also uncovered confidential author communications, internal disagreements, and conference submission credentials, exposing information that poses serious reputational risks to both researchers and institutions. We urge the research community and repository operators to take immediate action to close these hidden security gaps. To support open science, we release all scripts and methods from this study but withhold sensitive findings that could be misused, in line with ethical principles. The source code and related material are available at the project website https://github.com/LaTeXpOsEd",
+      "published": "2025-10-04T10:03:17Z",
+      "updated": "2026-05-11T10:09:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.03761v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.08033v1",
-      "title": "Weak Order on the MacNeille Completion of Bruhat Order",
+      "id": "http://arxiv.org/abs/2605.10291v1",
+      "title": "Generative AI Fuels Solo Entrepreneurship, but Teams Still Lead at the Top",
       "authors": [
-        "Colin Defant"
+        "Hyunso Kim",
+        "Hyo Kang",
+        "Jaeyong Song"
       ],
-      "summary": "Let $\\mathrm{Mac}(W)$ be the MacNeille completion of the Bruhat order of a Coxeter group $W$. We introduce an action of the $0$-Hecke monoid of type $W$ on $\\mathrm{Mac}(W)$, which allows us to define a weak order and a descent set statistic on $\\mathrm{Mac}(W)$. When $W$ is of type $A$, we recover constructions of Hamaker and Reiner, which were originally formulated in terms of monotone triangles and alternating sign matrices. Using this action, we prove that certain unions of Knutson--Miller subword complexes are vertex-decomposable. By specializing to type $A$, we prove a conjecture of Escobar, Klein, and Weigandt regarding Cohen--Macaulay ASM varieties. Along the way, we also exhibit a counterexample to a conjecture of Hamaker and Reiner regarding the poset topology of intervals in the ASM weak order. Finally, when $W$ is finite and irreducible, we use our $0$-Hecke action to introduce a noninvertible dynamical system on $\\mathrm{Mac}(W)$ that we call the MacNeille pop-stack operator, and we prove that the maximum number of iterations of this operator needed to reach the bottom state is $h-1$, where $h$ is the Coxeter number of $W$. This article is meant to serve as a case study in using large language models to automate the workflow of mathematical research. The proof of the conjecture of Escobar--Klein--Weigandt and the disproof of the conjecture of Hamaker--Reiner were obtained autonomously by ChatGPT 5.4 Pro. Other aspects of the paper were obtained mostly by the author, but ChatGPT expedited the process. We provide a detailed account of this interaction, and we speculate on what allowed the model to be successful.",
-      "published": "2026-05-08T17:23:19Z",
-      "updated": "2026-05-08T17:23:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.08033v1"
+      "summary": "Recent advances in generative artificial intelligence (AI) are reshaping who enters entrepreneurship, but not who reaches the top of the quality distribution. Using data on over 160,000 product launches on Product Hunt, we find that entrepreneurial entry increased sharply following the public release of ChatGPT-3.5, driven disproportionately by solo entrepreneurs. This shift toward solo entry is particularly pronounced in categories that historically favored team-based ventures. However, much of this growth reflects low-commitment, experimental entry and does not translate into greater representation among the highest-quality outcomes. Team-based ventures are increasingly dominant in the top tiers of platform rankings. These findings suggest that generative AI lowers barriers to solo entrepreneurship while reinforcing team-based advantages.",
+      "published": "2026-05-11T09:53:44Z",
+      "updated": "2026-05-11T09:53:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.10291v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.00886v4",
-      "title": "Position: Agent Should Invoke External Tools ONLY When Epistemically Necessary",
+      "id": "http://arxiv.org/abs/2605.10286v1",
+      "title": "AgentRx: A Benchmark Study of LLM Agents for Multimodal Clinical Prediction Tasks",
       "authors": [
-        "Hongru Wang",
-        "Cheng Qian",
-        "Manling Li",
-        "Jiahao Qiu",
-        "Boyang Xue",
-        "Mengdi Wang",
-        "Heng Ji",
-        "Amos Storkey",
-        "Kam-Fai Wong"
+        "Baraa Al Jorf",
+        "Farah E. Shamout"
       ],
-      "summary": "As large language models evolve into tool-augmented agents, a central question remains unresolved: when is external tool use actually justified? Existing agent frameworks typically treat tools as ordinary actions and optimize for task success or reward, offering little principled distinction between epistemically necessary interaction and unnecessary delegation. This position paper argues that agents should invoke external tools only when epistemically necessary. Here, epistemic necessity means that a task cannot be completed reliably via the agent's internal reasoning over its current context, without any external interaction. We introduce the Theory of Agent (ToA), a framework that treats agents as making sequential decisions about whether remaining uncertainty should be resolved internally or delegated externally. From this perspective, common agent failure modes (e.g., overthinking and overacting) arise from miscalibrated decisions under uncertainty rather than deficiencies in reasoning or tool execution alone. We further discuss implications for training, evaluation, and agent design, highlighting that unnecessary delegation not only causes inefficiency but can impede the development of internal reasoning capability. Our position provides a normative criterion for tool use that complements existing decision-theoretic models and is essential for building agents that are not only correct, but increasingly intelligent.",
-      "published": "2025-06-01T07:52:16Z",
-      "updated": "2026-05-08T17:19:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.00886v4"
+      "summary": "Building effective clinical decision support systems requires the synthesis of complex heterogeneous multimodal data. Such modalities include temporal electronic health records data, medical images, radiology reports, and clinical notes. Large language model (LLM)-based agents have shown impressive performance in various healthcare tasks, especially those involving textual modalities. Considering the fragmentation of healthcare data across hospital systems, collaborative agent frameworks present a promising direction to mitigate data sharing challenges. However, the effectiveness of LLM agents for multimodal clinical risk prediction remains largely unexamined. In this work, we conduct a systematic evaluation of LLM-based agents for clinical prediction tasks using large-scale real-world data. We assess performance in unimodal and multimodal settings and quantify performance gaps between single agent and multi-agent systems. Our findings highlight that single agent frameworks outperform naive multi-agent systems, are better at handling multimodal data, and are better calibrated. This underscores a critical need for improving multi-agent collaboration to better handle heterogeneous inputs. By open-sourcing our code and evaluation framework, this work offers a new benchmark to support future developments relating to agentic systems in healthcare.",
+      "published": "2026-05-11T09:46:41Z",
+      "updated": "2026-05-11T09:46:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.10286v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.02073v2",
-      "title": "Enhanced LLM Reasoning by Optimizing Reward Functions with Search-Driven Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2506.12090v2",
+      "title": "ChatbotManip: A Dataset to Facilitate Evaluation and Oversight of Manipulative Chatbot Behaviour",
       "authors": [
-        "Arash Ahmadi",
-        "Sarah Sharif",
-        "Yaser",
-        "Banad"
+        "Jack Contro",
+        "Simrat Deol",
+        "Yulan He",
+        "Martim Brandão"
       ],
-      "summary": "Mathematical reasoning is a key benchmark for large language models. Reinforcement learning is a standard post-training mechanism for improving the reasoning capabilities of large language models, yet performance remains sensitive to the design of the reward function that drives policy optimization. This paper introduces a search-driven framework that treats the reward specification itself as an object of optimization. The setting of interest is one in which the base model is held fixed and the reward specification is the primary remaining design lever. Candidate reward functions are generated by a frontier language model, validated automatically, screened through 500-step Group Relative Policy Optimization (GRPO) training runs on a Llama-3.2-3B-Instruct base model with Low-Rank Adaptation (LoRA), and ranked by F1 on the GSM8K test set. Ranked summaries from prior rounds are then fed back into the next round of generation. Over five rounds, the search produces 50 candidate rewards. The mean F1 rises from 0.596 in Round 1 to 0.632 in Round 5, and the top individual reward reaches F1 = 0.787. Seven ensemble configurations of top-ranked rewards are evaluated. The best ensemble achieves F1 = 0.795 (95% bootstrap CI [0.756, 0.832]) and accuracy 0.660 [0.635, 0.686], a 0.19 absolute F1 gain over a base-rewards-only GRPO baseline (F1 = 0.609). Pairwise McNemar tests with Bonferroni correction show all five-or-more-reward configurations are statistically indistinguishable at α = 0.05/21. A three-seed re-training of the best ensemble yields F1 of 0.785. A randomly drawn 5-reward control collapses to F1 = 0.047, which shows that the ranked-feedback loop, not the additive signal of having more rewards, drives the gain.",
-      "published": "2026-05-03T22:01:25Z",
-      "updated": "2026-05-08T17:11:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.02073v2"
+      "summary": "This paper introduces ChatbotManip, a novel dataset for studying manipulation in Chatbots. It contains simulated generated conversations between a chatbot and a (simulated) user, where the chatbot is explicitly asked to showcase manipulation tactics, persuade the user towards some goal, or simply be helpful. We consider a diverse set of chatbot manipulation contexts, from consumer and personal advice to citizen advice and controversial proposition argumentation. Each conversation is annotated by human annotators for both general manipulation and specific manipulation tactics. Our research reveals three key findings. First, Large Language Models (LLMs) can be manipulative when explicitly instructed, with annotators identifying manipulation in approximately 84\\% of such conversations. Second, even when only instructed to be ``persuasive'' without explicit manipulation prompts, LLMs frequently default to controversial manipulative strategies, particularly gaslighting and fear enhancement. Third, small fine-tuned open source models, such as BERT+BiLSTM have a performance comparable to zero-shot classification with larger models like Gemini 2.5 pro in detecting manipulation, but are not yet reliable for real-world oversight. Our work provides important insights for AI safety research and highlights the need of addressing manipulation risks as LLMs are increasingly deployed in consumer-facing applications.",
+      "published": "2025-06-11T14:29:43Z",
+      "updated": "2026-05-11T09:46:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.12090v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.08011v1",
-      "title": "Abductive Reasoning with Probabilistic Commonsense",
+      "id": "http://arxiv.org/abs/2507.15518v5",
+      "title": "HAMLET: A Hierarchical and Adaptive Multi-Agent Framework for Live Embodied Theatrics",
       "authors": [
-        "Joseph Cotnareanu",
-        "Chiara Roverato",
-        "Han Zhou",
-        "Didier Chetelat",
-        "Yingxue Zhang",
-        "Mark Coates"
+        "Shufan Jiang",
+        "Sizhou Chen",
+        "Chios Chen",
+        "Chi Zhang",
+        "Xiao-Lei Zhang",
+        "Xuelong Li"
       ],
-      "summary": "Recent efforts to improve the reasoning abilities of Large Language Models (LLMs) have focused on integrating formal logic solvers within neurosymbolic frameworks. A key challenge is that formal solvers lack commonsense world knowledge, preventing them from making reasoning steps that humans find obvious. Prior methods address this by using LLMs to supply missing commonsense assumptions, but these approaches implicitly assume universal agreement on such commonsense facts. In reality, commonsense beliefs vary across individuals. We propose a probabilistic framework for abductive commonsense reasoning that explicitly models this variation, aiming to determine whether most people would judge a statement as true or false. We introduce Probabilistic Abductive CommonSense (PACS), a novel algorithm that uses an LLM and a formal solver to sample proofs as observations of individuals' distinct commonsense beliefs, and aggregates conclusions across these samples. Empirically, PACS outperforms chain-of-thought reasoning, prior neurosymbolic methods, and search-based approaches across multiple benchmarks.",
-      "published": "2026-05-08T17:01:52Z",
-      "updated": "2026-05-08T17:01:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.08011v1"
+      "summary": "Creating an immersive and interactive theatrical experience is a long-term goal in the field of interactive narrative. The emergence of large language models (LLMs) provides a new path to achieve this goal. However, existing drama generation methods often produce LLMs that lack initiative and cannot interact with the physical scene, while typically requiring detailed input that diminishes the immersion of live performance. To address these challenges, we propose HAMLET, a hierarchical adaptive multi-agent framework focused on drama creation and real-time online performance. Given a simple topic, the framework initially generates a narrative blueprint to guide the subsequent improvisational performance. During online performance, each actor is equipped with an adaptive reasoning module that enables decision-making based on their personas, memories, goals during complex group chat scenarios. Beyond dialogue, actor agents engage in embodied interactions by changing the state of scene props through actions such as opening a letter or picking up a weapon, which are broadcast to update the global environmental context. To objectively assess the quality of live embodied theatrics, we establish a comprehensive evaluation method and introduce HAMLETJudge, a specialized critic model for automated evaluation. Experimental results demonstrate that HAMLET excels in creating expressive, coherent, and physically interactive theatrical experiences in an autonomous manner.",
+      "published": "2025-07-21T11:36:39Z",
+      "updated": "2026-05-11T09:43:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.15518v5"
     },
     {
-      "id": "http://arxiv.org/abs/2605.08003v1",
-      "title": "SphereVAD: Training-Free Video Anomaly Detection via Geodesic Inference on the Unit Hypersphere",
+      "id": "http://arxiv.org/abs/2601.16097v2",
+      "title": "Incremental Multilingual Text2Cypher with Adapter Combination",
       "authors": [
-        "Chao Huang",
-        "Penfei Wei",
-        "Wei Wang",
-        "Jie Wen",
-        "Zhihua Wang",
-        "Li Shen",
-        "Wenqi Ren",
-        "Xiaochun Cao"
+        "Makbule Gulcin Ozsoy"
       ],
-      "summary": "Video anomaly detection (VAD) aims to automatically identify events that deviate from normal patterns in untrimmed surveillance videos. Existing methods universally depend on large-scale annotations or task-specific training procedures, severely limiting their rapid deployment to novel scenes. We observe that intermediate-layer features of pre-trained multimodal large language models (MLLMs) already encode rich anomaly semantics, yet existing approaches rely on the language output pathway and fail to exploit the geometric discriminability latent in these representations. Based on this finding, we propose SphereVAD, a fully training-free, zero-shot VAD framework that recasts anomaly discrimination as von Mises-Fisher (vMF) likelihood-ratio geodesic inference on the unit hypersphere, unleashing latent discriminability through principled geometric reasoning rather than learning new representations. Specifically, SphereVAD first applies Frechet mean centering to unfold feature distributions and eliminate domain biases, then employs Holistic Scene Attention (HSA) to reinforce feature consistency using cross-video priors, and finally performs vMF-guided Spherical Geodesic Pulling (SGP) to align ambiguous segments with directional prototypes on the spherical manifold. This training-free pipeline requires only minimal synthetic images for calibration. SphereVAD establishes new state-of-the-art results among training-free approaches on three major benchmarks and remains competitive with fully supervised baselines. Code will be available upon acceptance.",
-      "published": "2026-05-08T16:57:38Z",
-      "updated": "2026-05-08T16:57:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.08003v1"
+      "summary": "Large Language Models enable users to access database using natural language interfaces using tools like Text2SQL, Text2SPARQL, and Text2Cypher, which translate user questions into structured database queries. While these systems improve database accessibility, most research focuses on English with limited multilingual support. This work investigates a scalable multilingual Text2Cypher, aiming to support new languages without re-running full fine-tuning, avoiding manual hyper-parameter tuning, and maintaining performance close to joint multilingual fine-tuning. We train language-specific LoRA adapters for English, Spanish, and Turkish and combined them via uniform linear merging or learned fusion MLP with dynamic gating. Experimental results show that the fusion MLP recovers around 75\\% of the accuracy gains from joint multilingual fine-tuning while requiring only a smaller subset of the data, outperforming linear merging across all three languages. This approach enables incremental language expansion to new languages by requiring only one LoRA adapter and a lightweight MLP retraining. Learned adapter fusion offers a practical alternative to expensive joint fine-tuning, balancing performance, data efficiency, and scalability for multilingual Text2Cypher task.",
+      "published": "2026-01-22T16:46:57Z",
+      "updated": "2026-05-11T09:42:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.16097v2"
     },
     {
-      "id": "http://arxiv.org/abs/2510.01685v2",
-      "title": "How Do Language Models Compose Functions?",
+      "id": "http://arxiv.org/abs/2506.04289v3",
+      "title": "Relational reasoning and inductive bias in transformers and large language models",
       "authors": [
-        "Apoorv Khandelwal",
-        "Ellie Pavlick"
+        "Jesse Geerts",
+        "Andrew Liu",
+        "Stephanie Chan",
+        "Claudia Clopath",
+        "Kimberly Stachenfeld"
       ],
-      "summary": "While large language models (LLMs) appear to be increasingly capable of solving compositional tasks, it is an open question whether they do so using compositional mechanisms. In this work, we investigate how feedforward LLMs solve two-hop factual recall tasks, which can be expressed compositionally as $g(f(x))$. We first confirm that modern LLMs continue to suffer from the \"compositionality gap\", i.e. their ability to compute both $z = f(x)$ and $y = g(z)$ does not entail their ability to compute the composition $y = g(f(x))$. We then decode residual stream representations and identify two processing mechanisms: one which solves tasks $\\textit{compositionally}$, computing $f(x)$ along the way to $g(f(x))$, and one which solves them $\\textit{directly}$, without any detectable signature of the intermediate variable $f(x)$. Finally, we find that embedding space geometry is strongly related to which mechanism is employed, where the idiomatic mechanism is dominant when tasks are represented by translations from $x$ to $g(f(x))$ in the embedding spaces. We fully release our data and code at: https://github.com/apoorvkh/composing-functions.",
-      "published": "2025-10-02T05:21:34Z",
-      "updated": "2026-05-08T16:56:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.01685v2"
+      "summary": "Transformer-based models have demonstrated remarkable reasoning abilities, but the mechanisms underlying relational reasoning remain poorly understood. We investigate how transformers perform \\textit{transitive inference}, a classic relational reasoning behavior from psychology which elicits inference about indirectly related items (e.g., if $A > B$ and $B > C$, then $A > C$). We compare in-weights learning (IWL) and in-context learning (ICL) behaviors and mechanisms on these tasks, and fine profoundly different patterns of generalization. IWL models learn a linear embedding, which leads to transitive inference as well as other behavioral effects present in humans and animals. ICL models, in contrast, are capable of learning to generalize transitively, but only do so when it is necessitated by the training data, otherwise learning a match-and-copy strategy. Interestingly, pre-training ICL models on in-context linear regression tasks that provide them with a latent linear representation is sufficient to make the ICL behaviors and internal representations qualitatively and quantitatively more like IWL. In order to test whether the same inference patterns are present across in large language models, we leverage a congruency paradigm which allows us to differentially probe IWL and ICL generalization patterns without access to their training data. We indeed see IWL reasoning leads to more transitive generalization than ICL. Moreover, we find that prompting the ICL models to use a linear mental map led to increased transitive inference over different geometric prompts. Together, these results reveal that both the training regime and the geometric structure of induced representations critically determine transformers capacity for transitive inference.",
+      "published": "2025-06-04T10:15:05Z",
+      "updated": "2026-05-11T09:35:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.04289v3"
     },
     {
-      "id": "http://arxiv.org/abs/2602.10995v2",
-      "title": "A Human-Centric Framework for Data Attribution in Large Language Models",
+      "id": "http://arxiv.org/abs/2506.15787v6",
+      "title": "SLR: Automated Synthesis for Scalable Logical Reasoning",
       "authors": [
-        "Amelie Wührl",
-        "Mattes Ruckdeschel",
-        "Kyle Lo",
-        "Anna Rogers"
+        "Lukas Helff",
+        "Ahmad Omar",
+        "Felix Friedrich",
+        "Antonia Wüst",
+        "Hikaru Shindo",
+        "Rupert Mitchell",
+        "Tim Woydt",
+        "Patrick Schramowski",
+        "Wolfgang Stammer",
+        "Kristian Kersting"
       ],
-      "summary": "In the current Large Language Model (LLM) ecosystem, creators have little agency over how their data is used, and LLM users may find themselves unknowingly plagiarizing existing sources. Attribution of LLM-generated text to LLM input data could help with these challenges, but so far we have more questions than answers: what elements of LLM outputs require attribution, what goals should it serve, how should it be implemented? We contribute a human-centric data attribution framework, which situates the attribution problem within the broader data economy. Specific use cases for attribution, such as creative writing assistance or fact-checking, can be specified via a set of parameters (including stakeholder objectives and implementation criteria). These criteria are up for negotiation by the relevant stakeholder groups: creators, LLM users, and their intermediaries (publishers, platforms, AI companies). The outcome of domain-specific negotiations can be implemented and tested for whether the stakeholder goals are achieved. The proposed approach provides a bridge between methodological NLP work on data attribution, governance work on policy interventions, and economic analysis of creator incentives for a sustainable equilibrium in the data economy.",
-      "published": "2026-02-11T16:20:50Z",
-      "updated": "2026-05-08T16:44:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.10995v2"
+      "summary": "We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR automatically synthesizes (i) an instruction prompt for an inductive reasoning task, (ii) a validation program, executable on model outputs to provide verifiable rewards, and (iii) the latent ground-truth rule. This process is fully automated, scalable, requires no human annotations, and offers precise control over task difficulty. Using SLR, we create SLR-Bench, a benchmark comprising 19k prompts organized into 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs demonstrate improved performance but incur very high test-time computation, with costs exceeding $300 for just 1,000 prompts. Finally, curriculum learning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. Moreover, these reasoning capabilities generalize to a wide range of established benchmarks, underscoring the effectiveness of SLR for downstream reasoning.",
+      "published": "2025-06-18T18:10:30Z",
+      "updated": "2026-05-11T09:25:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.15787v6"
     },
     {
-      "id": "http://arxiv.org/abs/2605.07982v1",
-      "title": "GLiGuard: Schema-Conditioned Classification for LLM Safeguard",
+      "id": "http://arxiv.org/abs/2605.10247v1",
+      "title": "Teaching LLMs to See Graphs: Unifying Text and Structural Reasoning",
       "authors": [
-        "Urchade Zaratiana",
-        "Mary Newhauser",
-        "George Hurn-Maloney",
-        "Ash Lewis"
+        "Dario Vajda"
       ],
-      "summary": "Ensuring safe, policy-compliant outputs from large language models requires real-time content moderation that can scale across multiple safety dimensions. However, state-of-the-art guardrail models rely on autoregressive decoders with 7B--27B parameters, reformulating what is fundamentally a classification problem as sequential text generation, a design choice that incurs high latency and scales poorly to multi-aspect evaluation. In this work, we introduce \\textbf{GLiGuard}, a 0.3B-parameter schema-conditioned bidirectional encoder adapted from GLiNER2 for LLM content moderation. The key idea is to encode task definitions and label semantics directly into the input sequence as structured token schemas, enabling simultaneous evaluation of prompt safety, response safety, refusal detection, 14 fine-grained harm categories, and 11 jailbreak strategies in a single non-autoregressive forward pass. This schema-conditioned design lets supported task and label blocks be composed directly in the input schema at inference time. Across nine established safety benchmarks, GLiGuard achieves F1 scores competitive with 7B--27B decoder-based guards despite being 23--90$\\times$ smaller, while delivering up to 16$\\times$ higher throughput and 17$\\times$ lower latency. These results suggest that compact bidirectional encoders can approach the accuracy of much larger guard models while drastically reducing inference cost. Code and models are available at https://github.com/fastino-ai/GLiGuard.",
-      "published": "2026-05-08T16:44:07Z",
-      "updated": "2026-05-08T16:44:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.07982v1"
+      "summary": "Using Large Language Models (LLMs) to process graph-structured data is an active research area, yet current state-of-the-art approaches typically rely on multi-step pipelines with Graph Neural Network (GNN) encoders that compress rich textual attributes into solitary tokens, creating a significant semantic bottleneck. In this paper, we introduce the Graph Transformer Language Model (GTLM), a novel architecture that enables pretrained LLMs to natively process graph topologies while entirely eliminating this compressive bottleneck. GTLM is exceptionally parameter-efficient: by injecting graph-aware attention biases directly into the LLM's attention modules, it introduces only 0.015% additional parameters relative to the base model. We theoretically prove that our bidirectional attention prefix preserves node permutation equivariance while maintaining exact backward compatibility with the pretrained base model. Extensive evaluations demonstrate that a 1B-parameter GTLM matches or exceeds the performance of 7B-parameter state-of-the-art models on standard Text-Attributed Graph benchmarks, while significantly surpassing baselines on GraphQA. Finally, we demonstrate that GTLM attention heads implicitly learn to simulate message passing, explaining its superior performance on algorithmic tasks. This paradigm shift enables true algorithmic reasoning within LLMs and provides a scalable foundation for next-generation GraphRAG and relational deep learning.",
+      "published": "2026-05-11T09:19:55Z",
+      "updated": "2026-05-11T09:19:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.10247v1"
     },
     {
-      "id": "http://arxiv.org/abs/2502.07143v3",
-      "title": "Ask Patients with Patience: Enabling LLMs for Human-Centric Medical Dialogue with Grounded Reasoning",
+      "id": "http://arxiv.org/abs/2504.02343v2",
+      "title": "Toward General and Robust LLM-enhanced Text-attributed Graph Learning",
       "authors": [
-        "Jiayuan Zhu",
-        "Jiazhen Pan",
-        "Yuyuan Liu",
-        "Fenglin Liu",
-        "Junde Wu"
+        "Zihao Zhang",
+        "Xunkai Li",
+        "Rong-Hua Li",
+        "Zhenjun Li",
+        "Bing Zhou",
+        "Guoren Wang"
       ],
-      "summary": "The severe shortage of medical doctors limits access to timely and reliable healthcare, leaving millions underserved. Large language models (LLMs) offer a potential solution but struggle in real-world clinical interactions. Many LLMs are not grounded in authoritative medical guidelines and fail to transparently manage diagnostic uncertainty. Their language is often rigid and mechanical, lacking the human-like qualities essential for patient trust. To address these challenges, we propose Ask Patients with Patience (APP), a multi-turn LLM-based medical assistant designed for grounded reasoning, transparent diagnoses, and human-centric interaction. APP enhances communication by eliciting user symptoms through empathetic dialogue, significantly improving accessibility and user engagement. It also incorporates Bayesian active learning to support transparent and adaptive diagnoses. The framework is built on verified medical guidelines, ensuring clinically grounded and evidence-based reasoning. To evaluate its performance, we develop a new benchmark that simulates realistic medical conversations using patient agents driven by profiles extracted from real-world consultation cases. We compare APP against SOTA one-shot and multi-turn LLM baselines. The results show that APP improves diagnostic accuracy, reduces uncertainty, and enhances user experience. By integrating medical expertise with transparent, human-like interaction, APP bridges the gap between AI-driven medical assistance and real-world clinical practice.",
-      "published": "2025-02-11T00:13:52Z",
-      "updated": "2026-05-08T16:41:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2502.07143v3"
+      "summary": "Recent advancements in Large Language Models (LLMs) and the proliferation of Text-Attributed Graphs (TAGs) across various domains have positioned LLM-enhanced TAG learning as a critical research area. By utilizing rich graph descriptions, this paradigm leverages LLMs to generate high-quality embeddings, thereby enhancing the representational capacity of Graph Neural Networks (GNNs). However, the field faces significant challenges: (1) the absence of a unified framework to systematize the diverse optimization perspectives arising from the complex interactions between LLMs and GNNs, and (2) the lack of a robust method capable of handling real-world TAGs, which often suffer from texts and edge sparsity, leading to suboptimal performance. To address these challenges, we propose UltraTAG, a unified pipeline for LLM-enhanced TAG learning. UltraTAG provides a unified comprehensive and domain-adaptive framework that not only organizes existing methodologies but also paves the way for future advancements in the field. Building on this framework, we propose UltraTAG-S, a robust instantiation of UltraTAG designed to tackle the inherent sparsity issues in real-world TAGs. UltraTAG-S employs LLM-based text propagation and text augmentation to mitigate text sparsity, while leveraging LLM-augmented node selection techniques based on PageRank and edge reconfiguration strategies to address edge sparsity. Our extensive experiments demonstrate that UltraTAG-S significantly outperforms existing baselines, achieving improvements of 2.12\\% and 17.47\\% in ideal and sparse settings, respectively. Moreover, as the data sparsity ratio increases, the performance improvement of UltraTAG-S also rises, which underscores the effectiveness and robustness of UltraTAG-S.",
+      "published": "2025-04-03T07:24:18Z",
+      "updated": "2026-05-11T09:16:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.02343v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.02204v2",
-      "title": "When Eavesdroppers Reason: Agentic Eavesdropping Attacks on Semantic Communication",
+      "id": "http://arxiv.org/abs/2605.10235v1",
+      "title": "Route Before Retrieve: Activating Latent Routing Abilities of LLMs for RAG vs. Long-Context Selection",
       "authors": [
-        "Shunpu Tang",
-        "Qianqian Yang",
-        "Zhiguo Shi",
-        "Jiming Chen",
-        "Xuemin Shen"
+        "Yiwen Chen",
+        "Kuan Li",
+        "Fuzhen Zhuang",
+        "Deqing Wang",
+        "Zhao Zhang",
+        "Liwen Zhang",
+        "Yong Jiang",
+        "Shuai Wang",
+        "Minhao Cheng"
       ],
-      "summary": "Semantic communication (SemCom) has emerged as a promising paradigm for next-generation networks. However, its typical end-to-end joint source--channel coding (JSCC) architecture also raises serious privacy concerns. To guide future secure SemCom design, it is important to understand how serious such leakage can be. Nevertheless, existing eavesdropping attacks mainly rely on fixed-configuration solvers and often require instantaneous wiretap channel state information (CSI) to achieve effective privacy inference. This may lead future secure SemCom designs to overlook potentially severe risks. To address this, we propose a large language model (LLM)-orchestrated agentic eavesdropper. Specifically, the proposed eavesdropper forms a closed-loop workflow with three functional agents. The optimization agent adaptively performs joint semantic-and-channel inversion to recover private information from the intercepted signal without requiring wiretap CSI. The perception agent evaluates the effectiveness of the optimization agent and assesses whether the recovered private semantics are reasonable, providing feedback to the optimization agent. The refinement agent further analyzes the recovered content and uses a generative prior to refine promising candidates into more realistic and complete private reconstructions while preserving consistency with the intercepted signal. Simulation results over a MIMO Rayleigh fading channel show that the proposed eavesdropper achieves more than $75\\%$ eavesdropping success rate at $\\mathrm{SNR}\\geq 5$~dB even without wiretap CSI, highlighting a severe privacy threat that future secure SemCom systems must address.",
-      "published": "2026-05-04T04:08:24Z",
-      "updated": "2026-05-08T16:34:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.02204v2"
+      "summary": "Recent advances in large language models (LLMs) have expanded the context window to beyond 128K tokens, enabling long-document understanding and multi-source reasoning. A key challenge, however, lies in choosing between retrieval-augmented generation (RAG) and long-context (LC) strategies: RAG is efficient but constrained by retrieval quality, while LC supports global reasoning at higher cost and with position sensitivity. Existing methods such as Self-Route adopt failure-driven fallback from RAG to LC, but remain passive, inefficient, and hard to interpret. We propose Pre-Route, a proactive routing framework that performs structured reasoning before answering. Using lightweight metadata (e.g., document type, length, initial snippet), Pre-Route enables task analysis, coverage estimation, and information-need prediction, producing explainable and cost-efficient routing decisions. Our study shows three key findings: (i) LLMs possess latent routing ability that can be reliably elicited with guidelines, allowing single-sample performance to approach that of multi-sample (Best-of-N) results; (ii) linear probes reveal that structured prompts sharpen the separability of the \"optimal routing dimension\" in representation space; and (iii) distillation transfers this reasoning structure to smaller models for lightweight deployment. Experiments on LaRA (in-domain) and LongBench-v2 (OOD) confirm that Pre-Route outperforms Always-RAG, Always-LC, and Self-Route baselines, achieving superior overall cost-effectiveness.",
+      "published": "2026-05-11T09:10:55Z",
+      "updated": "2026-05-11T09:10:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.10235v1"
     }
   ]
 }
