@@ -1,180 +1,196 @@
 {
-  "generated_at_utc": "2026-05-12T02:52:47Z",
+  "generated_at_utc": "2026-05-13T02:57:29Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.10318v1",
-      "title": "Extending Confidence-Based Text2Cypher with Grammar and Schema Aware Filtering",
+      "id": "http://arxiv.org/abs/2605.12492v1",
+      "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
       "authors": [
-        "Makbule Gulcin Ozsoy"
+        "Kexuan Shi",
+        "Hanxuan Li",
+        "Zeju Qiu",
+        "Yandong Wen",
+        "Simon Buchholz",
+        "Weiyang Liu"
       ],
-      "summary": "Large language models (LLMs) allow users to query databases using natural language by translating questions into executable queries. Despite strong progress on tasks such as Text2SQL, Text2SPARQL, and Text2Cypher, most existing methods focus on better prompting, fine-tuning, or iterative refinement. However, they often do not explicitly enforce structural constraints, such as syntactic validity and schema consistency. This can reduce reliability, since generated queries must satisfy both syntax rules and database schema constraints to be executable. In this work, we study how structured constraints can be used in test-time inference for Text2Cypher. We focus on post-generation validation to improve query correctness. We extend a confidence-based inference framework with a sequential filtering process that combines confidence scoring, grammar validation, and schema constraints before final aggregation. This lets us analyze how different constraint types affect generated queries. Our experiments with two instruction-tuned models show that grammar-based filtering improves syntactic validity. Schema-aware filtering further improves execution quality by enforcing consistency with the database structure. However, stronger filtering also increases the number of empty predictions and reduces execution coverage. Overall, we show that adding simple structural checks at test time improves the reliability of Text2Cypher generation, and we provide a clearer view of how syntax and schema constraints contribute differently.",
-      "published": "2026-05-11T10:18:13Z",
-      "updated": "2026-05-11T10:18:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.10318v1"
+      "summary": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically examine its design choices, and analyze its convergence behavior along with several key properties. Empirical results show that Pion offers a stable and competitive alternative to standard optimizers for both LLM pretraining and finetuning.",
+      "published": "2026-05-12T17:59:34Z",
+      "updated": "2026-05-12T17:59:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12492v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.03761v2",
-      "title": "You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models",
+      "id": "http://arxiv.org/abs/2605.12484v1",
+      "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
       "authors": [
-        "Richard A. Dubniczky",
-        "Bertalan Borsos",
-        "Tamas Bisztray",
-        "Norbert Tihanyi"
+        "Rishabh Tiwari",
+        "Kusha Sareen",
+        "Lakshya A Agrawal",
+        "Joseph E. Gonzalez",
+        "Matei Zaharia",
+        "Kurt Keutzer",
+        "Inderjit S Dhillon",
+        "Rishabh Agarwal",
+        "Devvrit Khatri"
       ],
-      "summary": "The widespread use of preprint repositories such as arXiv has accelerated the communication of scientific results but also introduced overlooked security risks. Beyond PDFs, these platforms provide unrestricted access to original source materials, including LaTeX sources, auxiliary code, figures, and embedded comments. In the absence of sanitization, submissions may disclose sensitive information that adversaries can harvest using open-source intelligence. In this work, we present the first large-scale security audit of preprint archives, analyzing more than 1.2 TB of source data from 100,000 arXiv submissions. We introduce LaTeXpOsEd, a four-stage framework that integrates pattern matching, logical filtering, traditional harvesting techniques, and large language models (LLMs) to uncover hidden disclosures within non-referenced files and LaTeX comments. To evaluate LLMs' secret-detection capabilities, we introduce LLMSec-DB, a benchmark on which we tested 25 state-of-the-art models. Our analysis uncovered thousands of PII leaks, GPS-tagged EXIF files, publicly available Google Drive and Dropbox folders, editable private SharePoint links, exposed GitHub and Google credentials, and cloud API keys. We also uncovered confidential author communications, internal disagreements, and conference submission credentials, exposing information that poses serious reputational risks to both researchers and institutions. We urge the research community and repository operators to take immediate action to close these hidden security gaps. To support open science, we release all scripts and methods from this study but withhold sensitive findings that could be misused, in line with ethical principles. The source code and related material are available at the project website https://github.com/LaTeXpOsEd",
-      "published": "2025-10-04T10:03:17Z",
-      "updated": "2026-05-11T10:09:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.03761v2"
+      "summary": "Large language models (LLMs) are trained for downstream tasks by updating their parameters (e.g., via RL). However, updating parameters forces them to absorb task-specific information, which can result in catastrophic forgetting and loss of plasticity. In contrast, in-context learning with fixed LLM parameters can cheaply and rapidly adapt to task-specific requirements (e.g., prompt optimization), but cannot by itself typically match the performance gains available through updating LLM parameters. There is no good reason for restricting learning to being in-context or in-weights. Moreover, humans also likely learn at different time scales (e.g., System 1 vs 2). To this end, we introduce a fast-slow learning framework for LLMs, with model parameters as \"slow\" weights and optimized context as \"fast\" weights. These fast \"weights\" can learn from textual feedback to absorb the task-specific information, while allowing slow weights to stay closer to the base model and persist general reasoning behaviors. Fast-Slow Training (FST) is up to 3x more sample-efficient than only slow learning (RL) across reasoning tasks, while consistently reaching a higher performance asymptote. Moreover, FST-trained models remain closer to the base LLM (up to 70% less KL divergence), resulting in less catastrophic forgetting than RL-training. This reduced drift also preserves plasticity: after training on one task, FST trained models adapt more effectively to a subsequent task than parameter-only trained models. In continual learning scenarios, where task domains change on the fly, FST continues to acquire each new task while parameter-only RL stalls.",
+      "published": "2026-05-12T17:58:20Z",
+      "updated": "2026-05-12T17:58:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12484v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.10291v1",
-      "title": "Generative AI Fuels Solo Entrepreneurship, but Teams Still Lead at the Top",
+      "id": "http://arxiv.org/abs/2605.12456v1",
+      "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
       "authors": [
-        "Hyunso Kim",
-        "Hyo Kang",
-        "Jaeyong Song"
+        "Tom Sander",
+        "Hongyan Chang",
+        "Tomáš Souček",
+        "Tuan Tran",
+        "Valeriu Lacatusu",
+        "Sylvestre-Alvise Rebuffi",
+        "Alexandre Mourachko",
+        "Surya Parimi",
+        "Christophe Ropers",
+        "Rashel Moritz",
+        "Vanessa Stark",
+        "Hady Elsahar",
+        "Pierre Fernandez"
       ],
-      "summary": "Recent advances in generative artificial intelligence (AI) are reshaping who enters entrepreneurship, but not who reaches the top of the quality distribution. Using data on over 160,000 product launches on Product Hunt, we find that entrepreneurial entry increased sharply following the public release of ChatGPT-3.5, driven disproportionately by solo entrepreneurs. This shift toward solo entry is particularly pronounced in categories that historically favored team-based ventures. However, much of this growth reflects low-commitment, experimental entry and does not translate into greater representation among the highest-quality outcomes. Team-based ventures are increasingly dominant in the top tiers of platform rankings. These findings suggest that generative AI lowers barriers to solo entrepreneurship while reinforcing team-based advantages.",
-      "published": "2026-05-11T09:53:44Z",
-      "updated": "2026-05-11T09:53:44Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.10291v1"
+      "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
+      "published": "2026-05-12T17:44:41Z",
+      "updated": "2026-05-12T17:44:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12456v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.10286v1",
-      "title": "AgentRx: A Benchmark Study of LLM Agents for Multimodal Clinical Prediction Tasks",
+      "id": "http://arxiv.org/abs/2605.12452v1",
+      "title": "The Algorithmic Caricature: Auditing LLM-Generated Political Discourse Across Crisis Events",
       "authors": [
-        "Baraa Al Jorf",
-        "Farah E. Shamout"
+        "Gunjan",
+        "Sidahmed Benabderrahmane",
+        "Talal Rahwan"
       ],
-      "summary": "Building effective clinical decision support systems requires the synthesis of complex heterogeneous multimodal data. Such modalities include temporal electronic health records data, medical images, radiology reports, and clinical notes. Large language model (LLM)-based agents have shown impressive performance in various healthcare tasks, especially those involving textual modalities. Considering the fragmentation of healthcare data across hospital systems, collaborative agent frameworks present a promising direction to mitigate data sharing challenges. However, the effectiveness of LLM agents for multimodal clinical risk prediction remains largely unexamined. In this work, we conduct a systematic evaluation of LLM-based agents for clinical prediction tasks using large-scale real-world data. We assess performance in unimodal and multimodal settings and quantify performance gaps between single agent and multi-agent systems. Our findings highlight that single agent frameworks outperform naive multi-agent systems, are better at handling multimodal data, and are better calibrated. This underscores a critical need for improving multi-agent collaboration to better handle heterogeneous inputs. By open-sourcing our code and evaluation framework, this work offers a new benchmark to support future developments relating to agentic systems in healthcare.",
-      "published": "2026-05-11T09:46:41Z",
-      "updated": "2026-05-11T09:46:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.10286v1"
+      "summary": "Large Language Models (LLMs) can generate fluent political text at scale, raising concerns about synthetic discourse during crises and social conflict. Existing AI-text detection often focuses on sentence-level cues such as perplexity, burstiness, or token irregularities, but these signals may weaken as generative systems improve. We instead adopt a Computational Social Science perspective and ask whether synthetic political discourse behaves like an observed online population. We construct a paired corpus of 1,789,406 posts across nine crisis events: COVID-19, the Jan. 6 Capitol attack, the 2020 and 2024 U.S. elections, Dobbs/Roe v. Wade, the 2020 BLM protests, U.S. midterms, the Utah shooting, and the U.S.-Iran war. For each event, we compare observed discourse from social platforms with synthetic discourse generated for the same context. We evaluate four dimensions: emotional intensity, structural regularity, lexical-ideological framing, and cross-event dependency, using mean gaps and dispersion evidence. Across events, synthetic discourse is fluent but population-level unrealistic. It is generally more negative and less dispersed in sentiment, structurally more regular, and lexically more abstract than observed discourse. Observed discourse instead shows broader emotional variation, longer-tailed structural distributions, and more context-specific, colloquial lexical markers. These differences are event-dependent: larger for fast-moving, decentralized crises and smaller for formal or institutionally mediated events. We summarize them with a simple event-level measure, the Caricature Gap. Our findings suggest that the main limitation of synthetic political discourse is not grammar or fluency, but reduced population realism. Population-level auditing complements traditional text-detection and provides a CSS framework for evaluating the social realism of generated discourse.",
+      "published": "2026-05-12T17:42:03Z",
+      "updated": "2026-05-12T17:42:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12452v1"
     },
     {
-      "id": "http://arxiv.org/abs/2506.12090v2",
-      "title": "ChatbotManip: A Dataset to Facilitate Evaluation and Oversight of Manipulative Chatbot Behaviour",
+      "id": "http://arxiv.org/abs/2605.12446v1",
+      "title": "ORCE: Order-Aware Alignment of Verbalized Confidence in Large Language Models",
       "authors": [
-        "Jack Contro",
-        "Simrat Deol",
-        "Yulan He",
-        "Martim Brandão"
+        "Chen Li",
+        "Xiaoling Hu",
+        "Songzhu Zheng",
+        "Jiawei Zhou",
+        "Chao Chen"
       ],
-      "summary": "This paper introduces ChatbotManip, a novel dataset for studying manipulation in Chatbots. It contains simulated generated conversations between a chatbot and a (simulated) user, where the chatbot is explicitly asked to showcase manipulation tactics, persuade the user towards some goal, or simply be helpful. We consider a diverse set of chatbot manipulation contexts, from consumer and personal advice to citizen advice and controversial proposition argumentation. Each conversation is annotated by human annotators for both general manipulation and specific manipulation tactics. Our research reveals three key findings. First, Large Language Models (LLMs) can be manipulative when explicitly instructed, with annotators identifying manipulation in approximately 84\\% of such conversations. Second, even when only instructed to be ``persuasive'' without explicit manipulation prompts, LLMs frequently default to controversial manipulative strategies, particularly gaslighting and fear enhancement. Third, small fine-tuned open source models, such as BERT+BiLSTM have a performance comparable to zero-shot classification with larger models like Gemini 2.5 pro in detecting manipulation, but are not yet reliable for real-world oversight. Our work provides important insights for AI safety research and highlights the need of addressing manipulation risks as LLMs are increasingly deployed in consumer-facing applications.",
-      "published": "2025-06-11T14:29:43Z",
-      "updated": "2026-05-11T09:46:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.12090v2"
+      "summary": "Large language models (LLMs) often produce answers with high certainty even when they are incorrect, making reliable confidence estimation essential for deployment in real-world scenarios. Verbalized confidence, where models explicitly state their confidence in natural language, provides a flexible and user-facing uncertainty signal that can be applied even when token logits are unavailable. However, existing verbalized-confidence methods often optimize answer generation and confidence generation jointly, which can cause confidence-alignment objectives to interfere with answer accuracy. In this work, we propose a decoupled and order-aware framework for verbalized confidence calibration. Our method first generates an answer and then estimates confidence conditioned on the fixed question--answer pair, allowing confidence optimization without directly perturbing the answer-generation process. To align confidence with correctness likelihood, we construct a sampling-based surrogate from multiple model completions and optimize rank-based reinforcement learning objectives that encourage responses with higher estimated correctness likelihood to receive higher verbalized confidence. Experiments on reasoning and knowledge-intensive benchmarks show that our method improves calibration and failure prediction performance while largely preserving answer accuracy. These results demonstrate that verbalized confidence can be more reliably aligned by decoupling confidence estimation from answer generation and optimizing the relative ordering of confidence across responses.",
+      "published": "2026-05-12T17:39:43Z",
+      "updated": "2026-05-12T17:39:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12446v1"
     },
     {
-      "id": "http://arxiv.org/abs/2507.15518v5",
-      "title": "HAMLET: A Hierarchical and Adaptive Multi-Agent Framework for Live Embodied Theatrics",
+      "id": "http://arxiv.org/abs/2510.04056v2",
+      "title": "QuiLL: An LLM-Based Vulnerability Assessment Framework for the Wild",
       "authors": [
-        "Shufan Jiang",
-        "Sizhou Chen",
-        "Chios Chen",
-        "Chi Zhang",
-        "Xiao-Lei Zhang",
-        "Xuelong Li"
+        "Rijha Safdar",
+        "Danyail Mateen",
+        "Syed Taha Ali",
+        "Wajahat Hussain"
       ],
-      "summary": "Creating an immersive and interactive theatrical experience is a long-term goal in the field of interactive narrative. The emergence of large language models (LLMs) provides a new path to achieve this goal. However, existing drama generation methods often produce LLMs that lack initiative and cannot interact with the physical scene, while typically requiring detailed input that diminishes the immersion of live performance. To address these challenges, we propose HAMLET, a hierarchical adaptive multi-agent framework focused on drama creation and real-time online performance. Given a simple topic, the framework initially generates a narrative blueprint to guide the subsequent improvisational performance. During online performance, each actor is equipped with an adaptive reasoning module that enables decision-making based on their personas, memories, goals during complex group chat scenarios. Beyond dialogue, actor agents engage in embodied interactions by changing the state of scene props through actions such as opening a letter or picking up a weapon, which are broadcast to update the global environmental context. To objectively assess the quality of live embodied theatrics, we establish a comprehensive evaluation method and introduce HAMLETJudge, a specialized critic model for automated evaluation. Experimental results demonstrate that HAMLET excels in creating expressive, coherent, and physically interactive theatrical experiences in an autonomous manner.",
-      "published": "2025-07-21T11:36:39Z",
-      "updated": "2026-05-11T09:43:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2507.15518v5"
+      "summary": "Large Language Models (LLMs) have demonstrated exceptional progress in multiple domains of software engineering including software vulnerability detection. Using LLMs to automate vulnerability detection in the wild is an important and relatively under-explored problem. In this paper we propose QuiLL, the first comprehensive evaluation framework for real-world vulnerability detection. Our solution consists of an end-to-end pipeline that draws together cutting-edge LLM optimization techniques and strategies specifically catering to the complexities of real-world vulnerability detection. Our specific contributions include (i) diverse prompt designs for vulnerability detection and reasoning (ii) a real-world vector data store constructed from the National Vulnerability Database to provide dynamic in-context learning, and (iii) a novel scoring metric which quantifies accuracy and reasoning quality of model predictions. QuiLL enables researchers to easily and systematically benchmark and compare the vulnerability detection capabilities of various LLMs and assess their readiness for deployment in actual code production pipelines.",
+      "published": "2025-10-05T06:34:30Z",
+      "updated": "2026-05-12T17:38:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.04056v2"
     },
     {
-      "id": "http://arxiv.org/abs/2601.16097v2",
-      "title": "Incremental Multilingual Text2Cypher with Adapter Combination",
+      "id": "http://arxiv.org/abs/2504.12326v3",
+      "title": "Reconstructing Sepsis Trajectories from Clinical Case Reports using LLMs: the Textual Time Series Corpus for Sepsis",
       "authors": [
-        "Makbule Gulcin Ozsoy"
+        "Shahriar Noroozizadeh",
+        "Jeremy C. Weiss"
       ],
-      "summary": "Large Language Models enable users to access database using natural language interfaces using tools like Text2SQL, Text2SPARQL, and Text2Cypher, which translate user questions into structured database queries. While these systems improve database accessibility, most research focuses on English with limited multilingual support. This work investigates a scalable multilingual Text2Cypher, aiming to support new languages without re-running full fine-tuning, avoiding manual hyper-parameter tuning, and maintaining performance close to joint multilingual fine-tuning. We train language-specific LoRA adapters for English, Spanish, and Turkish and combined them via uniform linear merging or learned fusion MLP with dynamic gating. Experimental results show that the fusion MLP recovers around 75\\% of the accuracy gains from joint multilingual fine-tuning while requiring only a smaller subset of the data, outperforming linear merging across all three languages. This approach enables incremental language expansion to new languages by requiring only one LoRA adapter and a lightweight MLP retraining. Learned adapter fusion offers a practical alternative to expensive joint fine-tuning, balancing performance, data efficiency, and scalability for multilingual Text2Cypher task.",
-      "published": "2026-01-22T16:46:57Z",
-      "updated": "2026-05-11T09:42:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.16097v2"
+      "summary": "Clinical case reports and discharge summaries may be the most complete and accurate summarization of patient encounters, yet they are finalized, i.e., timestamped after the encounter. Complementary structured data streams become available sooner but suffer from incompleteness. To train models and algorithms on more complete and temporally fine-grained data, we construct a pipeline to phenotype, extract, and annotate time-localized findings within case reports using large language models. We apply our pipeline to generate an open-access textual time series corpus for Sepsis-3 comprising 2,139 case reports from the PubMed-Open Access (PMOA) Subset. To validate our system, we apply it to PMOA and timeline annotations from i2b2/MIMIC-IV and compare the results to physician-expert annotations. We show high recovery rates of clinical findings (event match rates: GPT-5--0.93, Llama 3.3 70B Instruct--0.76) and strong temporal ordering (concordance: GPT-5--0.965, Llama 3.3 70B Instruct--0.908). Our work characterizes the ability of LLMs to time-localize clinical findings in text, illustrating the limitations of LLM use for temporal reconstruction and providing several potential avenues of improvement via multimodal integration.",
+      "published": "2025-04-12T03:07:44Z",
+      "updated": "2026-05-12T17:30:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.12326v3"
     },
     {
-      "id": "http://arxiv.org/abs/2506.04289v3",
-      "title": "Relational reasoning and inductive bias in transformers and large language models",
+      "id": "http://arxiv.org/abs/2602.08813v2",
+      "title": "Robust Policy Optimization to Prevent Catastrophic Forgetting",
       "authors": [
-        "Jesse Geerts",
-        "Andrew Liu",
-        "Stephanie Chan",
-        "Claudia Clopath",
-        "Kimberly Stachenfeld"
+        "Mahdi Sabbaghi",
+        "George Pappas",
+        "Adel Javanmard",
+        "Hamed Hassani"
       ],
-      "summary": "Transformer-based models have demonstrated remarkable reasoning abilities, but the mechanisms underlying relational reasoning remain poorly understood. We investigate how transformers perform \\textit{transitive inference}, a classic relational reasoning behavior from psychology which elicits inference about indirectly related items (e.g., if $A > B$ and $B > C$, then $A > C$). We compare in-weights learning (IWL) and in-context learning (ICL) behaviors and mechanisms on these tasks, and fine profoundly different patterns of generalization. IWL models learn a linear embedding, which leads to transitive inference as well as other behavioral effects present in humans and animals. ICL models, in contrast, are capable of learning to generalize transitively, but only do so when it is necessitated by the training data, otherwise learning a match-and-copy strategy. Interestingly, pre-training ICL models on in-context linear regression tasks that provide them with a latent linear representation is sufficient to make the ICL behaviors and internal representations qualitatively and quantitatively more like IWL. In order to test whether the same inference patterns are present across in large language models, we leverage a congruency paradigm which allows us to differentially probe IWL and ICL generalization patterns without access to their training data. We indeed see IWL reasoning leads to more transitive generalization than ICL. Moreover, we find that prompting the ICL models to use a linear mental map led to increased transitive inference over different geometric prompts. Together, these results reveal that both the training regime and the geometric structure of induced representations critically determine transformers capacity for transitive inference.",
-      "published": "2025-06-04T10:15:05Z",
-      "updated": "2026-05-11T09:35:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.04289v3"
+      "summary": "Large language models are commonly trained through multi-stage post-training: first via RLHF, then fine-tuned for other downstream objectives. Yet even small downstream updates can compromise earlier learned behaviors (e.g., safety), exposing a brittleness known as catastrophic forgetting. This suggests standard RLHF objectives do not guarantee robustness to future adaptation. To address it, most prior work designs downstream-time methods to preserve previously learned behaviors. We argue that preventing this requires pre-finetuning robustness: the base policy should avoid brittle high-reward solutions whose reward drops sharply under standard fine-tuning. We propose Fine-tuning Robust Policy Optimization (FRPO), a robust RLHF framework that optimizes reward not only at the current policy, but across a KL-bounded neighborhood of policies reachable by downstream adaptation. The key idea is to ensure reward stability under policy shifts via a max-min formulation. By modifying GRPO, we develop an algorithm with no extra computation, and empirically show it substantially reduces safety degradation across multiple base models and downstream fine-tuning regimes (SFT and RL) while preserving downstream task performance. We further study a math-focused RL setting, demonstrating that FRPO preserves accuracy under subsequent fine-tuning.",
+      "published": "2026-02-09T15:50:05Z",
+      "updated": "2026-05-12T17:22:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.08813v2"
     },
     {
-      "id": "http://arxiv.org/abs/2506.15787v6",
-      "title": "SLR: Automated Synthesis for Scalable Logical Reasoning",
+      "id": "http://arxiv.org/abs/2605.12422v1",
+      "title": "Predicting Disagreement with Human Raters in LLM-as-a-Judge Difficulty Assessment without Using Generation-Time Probability Signals",
       "authors": [
-        "Lukas Helff",
-        "Ahmad Omar",
-        "Felix Friedrich",
-        "Antonia Wüst",
-        "Hikaru Shindo",
-        "Rupert Mitchell",
-        "Tim Woydt",
-        "Patrick Schramowski",
-        "Wolfgang Stammer",
-        "Kristian Kersting"
+        "Yo Ehara"
       ],
-      "summary": "We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR automatically synthesizes (i) an instruction prompt for an inductive reasoning task, (ii) a validation program, executable on model outputs to provide verifiable rewards, and (iii) the latent ground-truth rule. This process is fully automated, scalable, requires no human annotations, and offers precise control over task difficulty. Using SLR, we create SLR-Bench, a benchmark comprising 19k prompts organized into 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs demonstrate improved performance but incur very high test-time computation, with costs exceeding $300 for just 1,000 prompts. Finally, curriculum learning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. Moreover, these reasoning capabilities generalize to a wide range of established benchmarks, underscoring the effectiveness of SLR for downstream reasoning.",
-      "published": "2025-06-18T18:10:30Z",
-      "updated": "2026-05-11T09:25:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2506.15787v6"
+      "summary": "Automatic generation of educational materials using large language models (LLMs) is becoming increasingly common, but assigning difficulty levels to such materials still requires substantial human effort. LLM-as-a-Judge has therefore attracted attention, yet disagreement with human raters remains a major challenge. We propose a method for predicting which LLM-generated difficulty ratings are likely to disagree with human raters, so that such cases can be sent for re-rating. Unlike prior approaches, our method does not rely on generation-time probability signals, which must be collected during rating generation and are often difficult to compare across LLMs. Instead, exploiting the fact that difficulty is an ordinal scale, we use a separate embedding space, such as ModernBERT, and identify disagreement candidates based on the geometric consistency of the rating set. Experiments on English CEFR-based sentence difficulty assessment with GPT-OSS-120B and Qwen3-235B-A22B showed that the proposed method achieved higher AUC for predicting disagreement with human raters than probability-based baselines.",
+      "published": "2026-05-12T17:16:30Z",
+      "updated": "2026-05-12T17:16:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12422v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.10247v1",
-      "title": "Teaching LLMs to See Graphs: Unifying Text and Structural Reasoning",
+      "id": "http://arxiv.org/abs/2605.12421v1",
+      "title": "Formalize, Don't Optimize: The Heuristic Trap in LLM-Generated Combinatorial Solvers",
       "authors": [
-        "Dario Vajda"
+        "Haoyu Wang",
+        "Yuliang Song",
+        "Tao Li",
+        "Zhiwei Deng",
+        "Yaqing Wang",
+        "Deepak Ramachandran",
+        "Eldan Cohen",
+        "Dan Roth"
       ],
-      "summary": "Using Large Language Models (LLMs) to process graph-structured data is an active research area, yet current state-of-the-art approaches typically rely on multi-step pipelines with Graph Neural Network (GNN) encoders that compress rich textual attributes into solitary tokens, creating a significant semantic bottleneck. In this paper, we introduce the Graph Transformer Language Model (GTLM), a novel architecture that enables pretrained LLMs to natively process graph topologies while entirely eliminating this compressive bottleneck. GTLM is exceptionally parameter-efficient: by injecting graph-aware attention biases directly into the LLM's attention modules, it introduces only 0.015% additional parameters relative to the base model. We theoretically prove that our bidirectional attention prefix preserves node permutation equivariance while maintaining exact backward compatibility with the pretrained base model. Extensive evaluations demonstrate that a 1B-parameter GTLM matches or exceeds the performance of 7B-parameter state-of-the-art models on standard Text-Attributed Graph benchmarks, while significantly surpassing baselines on GraphQA. Finally, we demonstrate that GTLM attention heads implicitly learn to simulate message passing, explaining its superior performance on algorithmic tasks. This paradigm shift enables true algorithmic reasoning within LLMs and provides a scalable foundation for next-generation GraphRAG and relational deep learning.",
-      "published": "2026-05-11T09:19:55Z",
-      "updated": "2026-05-11T09:19:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.10247v1"
+      "summary": "Large Language Models (LLMs) struggle to solve complex combinatorial problems through direct reasoning, so recent neuro-symbolic systems increasingly use them to synthesize executable solvers. A central design question is how the LLM should represent the solver, and whether it should also attempt to optimize search. We introduce CP-SynC-XL, a benchmark of 100 combinatorial problems (4,577 instances), and evaluate three solver-construction paradigms: native algorithmic search (Python), constraint modeling through a Python solver API (Python + OR-Tools), and declarative constraint modeling (MiniZinc + OR-Tools). We find a consistent representational divergence: Python + OR-Tools attains the highest correctness across LLMs, while MiniZinc + OR-Tools has lower absolute coverage despite using the same OR-Tools back-end. Native Python is the most likely to return a schema-valid solution that fails verification, whereas solver-backed paths preserve higher conditional fidelity. On the heuristic axis, prompting for search optimization yields only small median speed-ups (1.03-1.12x) and a strongly bimodal effect: many instances slow down, and correctness drops sharply on a long tail of problems. A paired code-level audit traces these regressions to a recurring heuristic trap. Under an efficiency-oriented prompt, the LLM may replace complete search with local approximations (Python), inject unverified bounds (Python + OR-Tools), or add redundant declarative machinery that overwhelms or over-constrains the model (MiniZinc + OR-Tools). These findings support a conservative design principle for LLM-generated combinatorial solvers: use the LLM primarily to formalize variables, constraints, and objectives for verified solvers, and separately check any LLM-authored search optimization before use.",
+      "published": "2026-05-12T17:15:45Z",
+      "updated": "2026-05-12T17:15:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12421v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.02343v2",
-      "title": "Toward General and Robust LLM-enhanced Text-attributed Graph Learning",
+      "id": "http://arxiv.org/abs/2605.12419v1",
+      "title": "ORBIT: Preserving Foundational Language Capabilities in GenRetrieval via Origin-Regulated Merging",
       "authors": [
-        "Zihao Zhang",
-        "Xunkai Li",
-        "Rong-Hua Li",
-        "Zhenjun Li",
-        "Bing Zhou",
-        "Guoren Wang"
+        "Neha Verma",
+        "Nikhil Mehta",
+        "Shao-Chuan Wang",
+        "Naijing Zhang",
+        "Alicia Tsai",
+        "Li Wei",
+        "Lukasz Heldt",
+        "Lichan Hong",
+        "Ed Chi",
+        "Xinyang Yi"
       ],
-      "summary": "Recent advancements in Large Language Models (LLMs) and the proliferation of Text-Attributed Graphs (TAGs) across various domains have positioned LLM-enhanced TAG learning as a critical research area. By utilizing rich graph descriptions, this paradigm leverages LLMs to generate high-quality embeddings, thereby enhancing the representational capacity of Graph Neural Networks (GNNs). However, the field faces significant challenges: (1) the absence of a unified framework to systematize the diverse optimization perspectives arising from the complex interactions between LLMs and GNNs, and (2) the lack of a robust method capable of handling real-world TAGs, which often suffer from texts and edge sparsity, leading to suboptimal performance. To address these challenges, we propose UltraTAG, a unified pipeline for LLM-enhanced TAG learning. UltraTAG provides a unified comprehensive and domain-adaptive framework that not only organizes existing methodologies but also paves the way for future advancements in the field. Building on this framework, we propose UltraTAG-S, a robust instantiation of UltraTAG designed to tackle the inherent sparsity issues in real-world TAGs. UltraTAG-S employs LLM-based text propagation and text augmentation to mitigate text sparsity, while leveraging LLM-augmented node selection techniques based on PageRank and edge reconfiguration strategies to address edge sparsity. Our extensive experiments demonstrate that UltraTAG-S significantly outperforms existing baselines, achieving improvements of 2.12\\% and 17.47\\% in ideal and sparse settings, respectively. Moreover, as the data sparsity ratio increases, the performance improvement of UltraTAG-S also rises, which underscores the effectiveness and robustness of UltraTAG-S.",
-      "published": "2025-04-03T07:24:18Z",
-      "updated": "2026-05-11T09:16:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.02343v2"
+      "summary": "Despite the rapid advancements in large language model (LLM) development, fine-tuning them for specific tasks often results in the catastrophic forgetting of their general, language-based reasoning abilities. This work investigates and addresses this challenge in the context of the Generative Retrieval (GenRetrieval) task. During GenRetrieval fine-tuning, we find this forgetting occurs rapidly and correlates with the distance between the fine-tuned and original model parameters. Given these observations, we propose ORBIT, a novel approach that actively tracks the distance between fine-tuned and initial model weights, and uses a weight averaging strategy to constrain model drift during GenRetrieval fine-tuning when this inter-model distance exceeds a maximum threshold. Our results show that ORBIT retains substantial text and retrieval performance by outperforming both common continual learning baselines and related regularization methods that also employ weight averaging.",
+      "published": "2026-05-12T17:14:04Z",
+      "updated": "2026-05-12T17:14:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12419v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.10235v1",
-      "title": "Route Before Retrieve: Activating Latent Routing Abilities of LLMs for RAG vs. Long-Context Selection",
+      "id": "http://arxiv.org/abs/2512.17738v2",
+      "title": "When the Gold Standard Isn't Necessarily Standard: Challenges of Evaluating the Translation of User-Generated Content",
       "authors": [
-        "Yiwen Chen",
-        "Kuan Li",
-        "Fuzhen Zhuang",
-        "Deqing Wang",
-        "Zhao Zhang",
-        "Liwen Zhang",
-        "Yong Jiang",
-        "Shuai Wang",
-        "Minhao Cheng"
+        "Lydia Nishimwe",
+        "Benoît Sagot",
+        "Rachel Bawden"
       ],
-      "summary": "Recent advances in large language models (LLMs) have expanded the context window to beyond 128K tokens, enabling long-document understanding and multi-source reasoning. A key challenge, however, lies in choosing between retrieval-augmented generation (RAG) and long-context (LC) strategies: RAG is efficient but constrained by retrieval quality, while LC supports global reasoning at higher cost and with position sensitivity. Existing methods such as Self-Route adopt failure-driven fallback from RAG to LC, but remain passive, inefficient, and hard to interpret. We propose Pre-Route, a proactive routing framework that performs structured reasoning before answering. Using lightweight metadata (e.g., document type, length, initial snippet), Pre-Route enables task analysis, coverage estimation, and information-need prediction, producing explainable and cost-efficient routing decisions. Our study shows three key findings: (i) LLMs possess latent routing ability that can be reliably elicited with guidelines, allowing single-sample performance to approach that of multi-sample (Best-of-N) results; (ii) linear probes reveal that structured prompts sharpen the separability of the \"optimal routing dimension\" in representation space; and (iii) distillation transfers this reasoning structure to smaller models for lightweight deployment. Experiments on LaRA (in-domain) and LongBench-v2 (OOD) confirm that Pre-Route outperforms Always-RAG, Always-LC, and Self-Route baselines, achieving superior overall cost-effectiveness.",
-      "published": "2026-05-11T09:10:55Z",
-      "updated": "2026-05-11T09:10:55Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.10235v1"
+      "summary": "User-generated content (UGC) is characterised by frequent use of non-standard language, from spelling errors to expressive choices such as slang, character repetitions, and emojis. This makes evaluating UGC translation challenging: what counts as a \"good\" translation depends on the desired standardness level of the output. To explore this, we examine the human translation guidelines of four UGC datasets, and derive a taxonomy of twelve non-standard phenomena and five translation actions (NORMALISE, COPY, TRANSFER, OMIT, CENSOR). Our analysis reveals notable differences in how UGC is treated, resulting in a spectrum of standardness in reference translations. We show that translation scores of large language models are highly sensitive to prompts with explicit UGC translation instructions, and that they improve when they align with the dataset guidelines. We argue that fair evaluation requires both models and metrics to be aware of translation guidelines. Finally, we call for clear guidelines during dataset creation and for the development of controllable, guideline-aware evaluation frameworks for UGC translation.",
+      "published": "2025-12-19T16:17:23Z",
+      "updated": "2026-05-12T17:13:10Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.17738v2"
     }
   ]
 }
