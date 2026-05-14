@@ -1,196 +1,181 @@
 {
-  "generated_at_utc": "2026-05-13T02:57:29Z",
+  "generated_at_utc": "2026-05-14T03:22:21Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.12492v1",
-      "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+      "id": "http://arxiv.org/abs/2605.13846v1",
+      "title": "WARDEN: Endangered Indigenous Language Transcription and Translation with 6 Hours of Training Data",
       "authors": [
-        "Kexuan Shi",
-        "Hanxuan Li",
-        "Zeju Qiu",
-        "Yandong Wen",
-        "Simon Buchholz",
-        "Weiyang Liu"
+        "Ziheng Zhang",
+        "Yunzhong Hou",
+        "Naijing Liu",
+        "Liang Zheng"
       ],
-      "summary": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically examine its design choices, and analyze its convergence behavior along with several key properties. Empirical results show that Pion offers a stable and competitive alternative to standard optimizers for both LLM pretraining and finetuning.",
-      "published": "2026-05-12T17:59:34Z",
-      "updated": "2026-05-12T17:59:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12492v1"
+      "summary": "This paper introduces WARDEN, an early language model system capable of transcribing and translating Wardaman, an endangered Australian indigenous language into English. The significant challenge we face is the lack of large-scale training data: in fact, we only have 6 hours of annotated audio. Therefore, while it is common practice to train a single model for transcription and translation using large datasets (like English to French), this practice is no longer viable in the Wardaman to English context. To tackle the low-resource challenge, we design WARDEN to have separate transcription and translation models: WARDEN first turns a Wardaman audio input into phonemic transcription, and then the transcription into English translation. Further, we propose two useful techniques to enhance performance. For transcription, we initialize the Wardaman token from Sundanese, a language that shares similar phonemes with Wardaman, to accelerate fine-tuning of the transcription model. For translation, we compile a Wardaman-English dictionary from expert annotations, and provide this domain-specific knowledge to a large language model (LLM) to reason and decide the final output. We empirically demonstrate that this two-stage design works better than data-hungry unified approaches in extremely low data settings. Using a mere 6 hours of annotated data, WARDEN outperforms larger open-source and proprietary models and establishes a strong baseline. Data and code are available.",
+      "published": "2026-05-13T17:59:52Z",
+      "updated": "2026-05-13T17:59:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13846v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12484v1",
-      "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
+      "id": "http://arxiv.org/abs/2605.13817v1",
+      "title": "Neurosymbolic Auditing of Natural-Language Software Requirements",
       "authors": [
-        "Rishabh Tiwari",
-        "Kusha Sareen",
-        "Lakshya A Agrawal",
-        "Joseph E. Gonzalez",
-        "Matei Zaharia",
-        "Kurt Keutzer",
-        "Inderjit S Dhillon",
-        "Rishabh Agarwal",
-        "Devvrit Khatri"
+        "Bethel Hall",
+        "William Eiers"
       ],
-      "summary": "Large language models (LLMs) are trained for downstream tasks by updating their parameters (e.g., via RL). However, updating parameters forces them to absorb task-specific information, which can result in catastrophic forgetting and loss of plasticity. In contrast, in-context learning with fixed LLM parameters can cheaply and rapidly adapt to task-specific requirements (e.g., prompt optimization), but cannot by itself typically match the performance gains available through updating LLM parameters. There is no good reason for restricting learning to being in-context or in-weights. Moreover, humans also likely learn at different time scales (e.g., System 1 vs 2). To this end, we introduce a fast-slow learning framework for LLMs, with model parameters as \"slow\" weights and optimized context as \"fast\" weights. These fast \"weights\" can learn from textual feedback to absorb the task-specific information, while allowing slow weights to stay closer to the base model and persist general reasoning behaviors. Fast-Slow Training (FST) is up to 3x more sample-efficient than only slow learning (RL) across reasoning tasks, while consistently reaching a higher performance asymptote. Moreover, FST-trained models remain closer to the base LLM (up to 70% less KL divergence), resulting in less catastrophic forgetting than RL-training. This reduced drift also preserves plasticity: after training on one task, FST trained models adapt more effectively to a subsequent task than parameter-only trained models. In continual learning scenarios, where task domains change on the fly, FST continues to acquire each new task while parameter-only RL stalls.",
-      "published": "2026-05-12T17:58:20Z",
-      "updated": "2026-05-12T17:58:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12484v1"
+      "summary": "Natural-language software requirements are often ambiguous, inconsistent, and underspecified; in safety-critical domains, these defects propagate into formal models that verify the wrong specification and into implementations that ship unsafe behavior. We show that large language models, equipped with an SMT solver, can audit such requirements: translating them into formal logic, detecting ambiguity through stochastic variation in the generated formalization, and exposing inconsistency, vacuousness, and safety violations through solver queries on the resulting specification. We present VERIMED, a neurosymbolic pipeline that operationalizes this idea for medical-device software requirements, and report two findings. First, stochastic variation across independent formalizations is a signal of ambiguity: requirements that admit multiple plausible interpretations produce SMT-inequivalent formalizations, and bidirectional SMT equivalence checking turns this disagreement into a solver-checkable test. Second, the usefulness of symbolic feedback depends on its granularity: in counterexample-guided repair on a hemodialysis question-answering benchmark, concrete SMT counterexamples raise verified accuracy from 55.4% to 98.5%. Over an extensive experimental evaluation on open-source hemodialysis safety requirements, we show that the LLM-based approach in VERIMED successfully reduces ambiguity-sensitive requirements and enables rigorous auditing of software requirements through SMT-based queries.",
+      "published": "2026-05-13T17:43:13Z",
+      "updated": "2026-05-13T17:43:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13817v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12456v1",
-      "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
+      "id": "http://arxiv.org/abs/2605.12344v2",
+      "title": "Optimized but Unowned: How AI-Authored Goals Undermine the Motivation They Are Meant to Drive",
       "authors": [
-        "Tom Sander",
-        "Hongyan Chang",
-        "Tomáš Souček",
-        "Tuan Tran",
-        "Valeriu Lacatusu",
-        "Sylvestre-Alvise Rebuffi",
-        "Alexandre Mourachko",
-        "Surya Parimi",
-        "Christophe Ropers",
-        "Rashel Moritz",
-        "Vanessa Stark",
-        "Hady Elsahar",
-        "Pierre Fernandez"
+        "Vivienne Bihe Chi",
+        "Roman Rietsche",
+        "Andreas Göldi",
+        "Lyle Ungar",
+        "Sharath Chandra Guntuku"
       ],
-      "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
-      "published": "2026-05-12T17:44:41Z",
-      "updated": "2026-05-12T17:44:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12456v1"
+      "summary": "As AI tools become embedded in productivity and self-improvement contexts, a pressing question emerges: what happens when AI does the goal-setting for us? While large language models can generate goals that are objectively well-formed, the motivational consequences of delegating this cognitively and emotionally significant task remain unknown. In a preregistered experiment (N = 470), we compared self-authored goals against LLM-authored goals derived from a personal reflection. Although LLM-generated goals scored higher on SMART criteria (specificity, measurability, achievability, relevance, and time-boundedness; d = 2.26), participants in the LLM condition reported lower psychological ownership (d = 1.38), commitment (d = 1.19), and perceived importance (d = 1.13). At two-week follow-up, 72.8% of self-authored participants had acted on two or more of their goals, compared to 46.6% in the LLM condition. Mediation analyses identified psychological ownership as the mechanism: it mediated the authorship effect on every downstream motivational and behavioral outcome, while objective goal quality did not. Critically, individuals low in trait self-efficacy, those most likely to seek AI assistance, experienced the steepest ownership erosion. These findings reveal a quality-motivation dissociation in AI-assisted goal-setting and identify authorship preservation as a design priority for AI tools deployed in identity-relevant, behavior-dependent tasks.",
+      "published": "2026-05-12T16:21:02Z",
+      "updated": "2026-05-13T17:38:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12344v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12452v1",
-      "title": "The Algorithmic Caricature: Auditing LLM-Generated Political Discourse Across Crisis Events",
+      "id": "http://arxiv.org/abs/2604.23336v2",
+      "title": "Efficient Rationale-based Retrieval: On-policy Distillation from Generative Rerankers based on JEPA",
       "authors": [
-        "Gunjan",
-        "Sidahmed Benabderrahmane",
-        "Talal Rahwan"
+        "Teng Chen",
+        "Sheng Xu",
+        "Feixiang Guo",
+        "Xiaoyu Wang",
+        "Qingqing Gu",
+        "Hongyan Li",
+        "Luo Ji"
       ],
-      "summary": "Large Language Models (LLMs) can generate fluent political text at scale, raising concerns about synthetic discourse during crises and social conflict. Existing AI-text detection often focuses on sentence-level cues such as perplexity, burstiness, or token irregularities, but these signals may weaken as generative systems improve. We instead adopt a Computational Social Science perspective and ask whether synthetic political discourse behaves like an observed online population. We construct a paired corpus of 1,789,406 posts across nine crisis events: COVID-19, the Jan. 6 Capitol attack, the 2020 and 2024 U.S. elections, Dobbs/Roe v. Wade, the 2020 BLM protests, U.S. midterms, the Utah shooting, and the U.S.-Iran war. For each event, we compare observed discourse from social platforms with synthetic discourse generated for the same context. We evaluate four dimensions: emotional intensity, structural regularity, lexical-ideological framing, and cross-event dependency, using mean gaps and dispersion evidence. Across events, synthetic discourse is fluent but population-level unrealistic. It is generally more negative and less dispersed in sentiment, structurally more regular, and lexically more abstract than observed discourse. Observed discourse instead shows broader emotional variation, longer-tailed structural distributions, and more context-specific, colloquial lexical markers. These differences are event-dependent: larger for fast-moving, decentralized crises and smaller for formal or institutionally mediated events. We summarize them with a simple event-level measure, the Caricature Gap. Our findings suggest that the main limitation of synthetic political discourse is not grammar or fluency, but reduced population realism. Population-level auditing complements traditional text-detection and provides a CSS framework for evaluating the social realism of generated discourse.",
-      "published": "2026-05-12T17:42:03Z",
-      "updated": "2026-05-12T17:42:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12452v1"
+      "summary": "Unlike traditional fact-based retrieval, rationale-based retrieval typically necessitates cross-encoding of query-document pairs using large language models, incurring substantial computational costs. To address this limitation, we propose Rabtriever, which independently encodes queries and documents, while providing comparable cross query-document comprehension capabilities to rerankers. We start from training a LLM-based generative reranker, which puts the document prior to the query and prompts the LLM to generate the relevance score by log probabilities. We then employ it as the teacher of an on-policy distillation framework, with Rabtriever as the student to reconstruct the teacher's contextual-aware query embedding. To achieve this effect, Rabtriever is first initialized from the teacher, with parameters frozen. The Joint-Embedding Predictive Architecture (JEPA) paradigm is then adopted, which integrates a lightweight, trainable predictor between LLM layers and heads, projecting the query embedding into a new hidden space, with the document embedding as the latent vector. JEPA then minimizes the distribution difference between this projected embedding and the teacher embedding. To strengthen the sampling efficiency of on-policy distillation, we also add an auxiliary loss on the reverse KL of LLM logits, to reshape the student's logit distribution. Rabtriever optimizes the teacher's quadratic complexity on the document length to linear, verified both theoretically and empirically. Experiments show that Rabtriever outperforms different retriever baselines across diverse rationale-based tasks, including empathetic conversations and robotic manipulations, with minor accuracy degradation from the reranker. Rabtriever also generalizes well on traditional retrieval benchmarks such as MS MARCO and BEIR, with comparable performance to the best retriever baseline.",
+      "published": "2026-04-25T14:45:33Z",
+      "updated": "2026-05-13T17:26:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2604.23336v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12446v1",
-      "title": "ORCE: Order-Aware Alignment of Verbalized Confidence in Large Language Models",
+      "id": "http://arxiv.org/abs/2605.13801v1",
+      "title": "Improving Reproducibility in Evaluation through Multi-Level Annotator Modeling",
       "authors": [
-        "Chen Li",
-        "Xiaoling Hu",
-        "Songzhu Zheng",
-        "Jiawei Zhou",
-        "Chao Chen"
+        "Deepak Pandita",
+        "Flip Korn",
+        "Chris Welty",
+        "Christopher M. Homan"
       ],
-      "summary": "Large language models (LLMs) often produce answers with high certainty even when they are incorrect, making reliable confidence estimation essential for deployment in real-world scenarios. Verbalized confidence, where models explicitly state their confidence in natural language, provides a flexible and user-facing uncertainty signal that can be applied even when token logits are unavailable. However, existing verbalized-confidence methods often optimize answer generation and confidence generation jointly, which can cause confidence-alignment objectives to interfere with answer accuracy. In this work, we propose a decoupled and order-aware framework for verbalized confidence calibration. Our method first generates an answer and then estimates confidence conditioned on the fixed question--answer pair, allowing confidence optimization without directly perturbing the answer-generation process. To align confidence with correctness likelihood, we construct a sampling-based surrogate from multiple model completions and optimize rank-based reinforcement learning objectives that encourage responses with higher estimated correctness likelihood to receive higher verbalized confidence. Experiments on reasoning and knowledge-intensive benchmarks show that our method improves calibration and failure prediction performance while largely preserving answer accuracy. These results demonstrate that verbalized confidence can be more reliably aligned by decoupling confidence estimation from answer generation and optimizing the relative ordering of confidence across responses.",
-      "published": "2026-05-12T17:39:43Z",
-      "updated": "2026-05-12T17:39:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12446v1"
+      "summary": "As generative AI models such as large language models (LLMs) become more pervasive, ensuring the safety, robustness, and overall trustworthiness of these systems is paramount. However, AI is currently facing a reproducibility crisis driven by unreliable evaluations and unrepeatable experimental results. While human raters are often used to assess models for utility and safety, they introduce divergent biases and subjective opinions into their annotations. Overcoming this variance is exceptionally challenging because very little data exists to study how experimental repeatability actually improves as the annotator pool grows. Standard evaluation practices typically rely on a small number of annotations per item (often 3 to 5) and lack the persistent rater identifiers necessary to model individual variance across items. In this work, we introduce a multi-level bootstrapping approach to realistically model annotator behavior. Leveraging datasets with a large number of ratings and persistent rater identifiers, we analyze the tradeoffs between the number of items ($N$) and the number of responses per item ($K$) required to achieve statistical significance.",
+      "published": "2026-05-13T17:22:27Z",
+      "updated": "2026-05-13T17:22:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13801v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.04056v2",
-      "title": "QuiLL: An LLM-Based Vulnerability Assessment Framework for the Wild",
+      "id": "http://arxiv.org/abs/2605.13793v1",
+      "title": "An LLM-Based System for Argument Reconstruction",
       "authors": [
-        "Rijha Safdar",
-        "Danyail Mateen",
-        "Syed Taha Ali",
-        "Wajahat Hussain"
+        "Paulo Pirozelli",
+        "Victor Hugo Nascimento Rocha",
+        "Fabio G. Cozman",
+        "Douglas Aldred"
       ],
-      "summary": "Large Language Models (LLMs) have demonstrated exceptional progress in multiple domains of software engineering including software vulnerability detection. Using LLMs to automate vulnerability detection in the wild is an important and relatively under-explored problem. In this paper we propose QuiLL, the first comprehensive evaluation framework for real-world vulnerability detection. Our solution consists of an end-to-end pipeline that draws together cutting-edge LLM optimization techniques and strategies specifically catering to the complexities of real-world vulnerability detection. Our specific contributions include (i) diverse prompt designs for vulnerability detection and reasoning (ii) a real-world vector data store constructed from the National Vulnerability Database to provide dynamic in-context learning, and (iii) a novel scoring metric which quantifies accuracy and reasoning quality of model predictions. QuiLL enables researchers to easily and systematically benchmark and compare the vulnerability detection capabilities of various LLMs and assess their readiness for deployment in actual code production pipelines.",
-      "published": "2025-10-05T06:34:30Z",
-      "updated": "2026-05-12T17:38:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.04056v2"
+      "summary": "Arguments are a fundamental aspect of human reasoning, in which claims are supported, challenged, and weighed against one another. We present an end-to-end large language model (LLM)-based system for reconstructing arguments from natural language text into abstract argument graphs. The system follows a multi-stage pipeline that progressively identifies argumentative components, selects relevant elements, and uncovers their logical relations. These elements are represented as directed acyclic graphs consisting of two component types (premises and conclusions) and three relation types (support, attack, and undercut). We conduct two complementary experiments to evaluate the system. First, we perform a manual evaluation on arguments drawn from an argumentation theory textbook to assess the system's ability to recover argumentative structure. Second, we conduct a quantitative evaluation on benchmark datasets, allowing comparison with prior work by mapping our outputs to established annotation schemes. Results show that the system can adequately recover argumentative structures and, when adapted to different annotation schemes, achieve reasonable performance across benchmark datasets. These findings highlight the potential of LLM-based pipelines for scalable argument reconstruction.",
+      "published": "2026-05-13T17:13:45Z",
+      "updated": "2026-05-13T17:13:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13793v1"
     },
     {
-      "id": "http://arxiv.org/abs/2504.12326v3",
-      "title": "Reconstructing Sepsis Trajectories from Clinical Case Reports using LLMs: the Textual Time Series Corpus for Sepsis",
+      "id": "http://arxiv.org/abs/2602.04804v2",
+      "title": "OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models",
       "authors": [
-        "Shahriar Noroozizadeh",
-        "Jeremy C. Weiss"
+        "Yue Ding",
+        "Yiyan Ji",
+        "Jungang Li",
+        "Xuyang Liu",
+        "Xinlong Chen",
+        "Junfei Wu",
+        "Bozhou Li",
+        "Bohan Zeng",
+        "Yang Shi",
+        "Yushuo Guan",
+        "Yuanxing Zhang",
+        "Jiaheng Liu",
+        "Qiang Liu",
+        "Pengfei Wan",
+        "Liang Wang"
       ],
-      "summary": "Clinical case reports and discharge summaries may be the most complete and accurate summarization of patient encounters, yet they are finalized, i.e., timestamped after the encounter. Complementary structured data streams become available sooner but suffer from incompleteness. To train models and algorithms on more complete and temporally fine-grained data, we construct a pipeline to phenotype, extract, and annotate time-localized findings within case reports using large language models. We apply our pipeline to generate an open-access textual time series corpus for Sepsis-3 comprising 2,139 case reports from the PubMed-Open Access (PMOA) Subset. To validate our system, we apply it to PMOA and timeline annotations from i2b2/MIMIC-IV and compare the results to physician-expert annotations. We show high recovery rates of clinical findings (event match rates: GPT-5--0.93, Llama 3.3 70B Instruct--0.76) and strong temporal ordering (concordance: GPT-5--0.965, Llama 3.3 70B Instruct--0.908). Our work characterizes the ability of LLMs to time-localize clinical findings in text, illustrating the limitations of LLM use for temporal reconstruction and providing several potential avenues of improvement via multimodal integration.",
-      "published": "2025-04-12T03:07:44Z",
-      "updated": "2026-05-12T17:30:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2504.12326v3"
+      "summary": "Omni-modal Large Language Models (Omni-LLMs) have demonstrated strong capabilities in audio-video understanding tasks. However, their reliance on long multimodal token sequences leads to substantial computational overhead. Despite this challenge, token compression methods designed for Omni-LLMs remain limited. To bridge this gap, we propose OmniSIFT (Omni-modal Spatio-temporal Informed Fine-grained Token compression), a modality-asymmetric token compression framework tailored for Omni-LLMs. Specifically, OmniSIFT adopts a two-stage compression strategy: (i) a spatio-temporal video pruning module that removes video redundancy arising from both intra-frame structure and inter-frame overlap, and (ii) a vision-guided audio selection module that filters audio tokens. The entire framework is optimized end-to-end via a differentiable straight-through estimator. Extensive experiments on five representative benchmarks demonstrate the efficacy and robustness of OmniSIFT. Notably, for Qwen2.5-Omni-7B, OmniSIFT introduces only 4.85M parameters while maintaining lower latency than training-free baselines such as OmniZip. With merely 25% of the original token context, OmniSIFT consistently outperforms all compression baselines and even surpasses the performance of the full-token model on several tasks.",
+      "published": "2026-02-04T17:51:05Z",
+      "updated": "2026-05-13T17:11:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.04804v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.08813v2",
-      "title": "Robust Policy Optimization to Prevent Catastrophic Forgetting",
+      "id": "http://arxiv.org/abs/2605.13785v1",
+      "title": "Amplification to Synthesis: A Comparative Analysis of Cognitive Operations Before and After Generative AI",
       "authors": [
-        "Mahdi Sabbaghi",
-        "George Pappas",
-        "Adel Javanmard",
-        "Hamed Hassani"
+        "Liz Cho",
+        "Dongwook Yoon"
       ],
-      "summary": "Large language models are commonly trained through multi-stage post-training: first via RLHF, then fine-tuned for other downstream objectives. Yet even small downstream updates can compromise earlier learned behaviors (e.g., safety), exposing a brittleness known as catastrophic forgetting. This suggests standard RLHF objectives do not guarantee robustness to future adaptation. To address it, most prior work designs downstream-time methods to preserve previously learned behaviors. We argue that preventing this requires pre-finetuning robustness: the base policy should avoid brittle high-reward solutions whose reward drops sharply under standard fine-tuning. We propose Fine-tuning Robust Policy Optimization (FRPO), a robust RLHF framework that optimizes reward not only at the current policy, but across a KL-bounded neighborhood of policies reachable by downstream adaptation. The key idea is to ensure reward stability under policy shifts via a max-min formulation. By modifying GRPO, we develop an algorithm with no extra computation, and empirically show it substantially reduces safety degradation across multiple base models and downstream fine-tuning regimes (SFT and RL) while preserving downstream task performance. We further study a math-focused RL setting, demonstrating that FRPO preserves accuracy under subsequent fine-tuning.",
-      "published": "2026-02-09T15:50:05Z",
-      "updated": "2026-05-12T17:22:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.08813v2"
+      "summary": "Cognitive operations are a rising concern in the geopolitical sphere, a quiet yet rigorous fight for public perception and decision making. While such operations have been extensively studied in the context of bot-driven amplification, the emergence of generative AI introduces a new set of capabilities that may have fundamentally altered how these operations are designed and executed. The possible evolution of cognitive operation via generative AI puts nation states vulnerable without proper mitigation strategies. To address this, we compared behavioral and linguistic coordination patterns in X (formerly Twitter) datasets from the 2016 and 2024 U.S. presidential elections. Utilizing a combined corpus of over 133,000 posts, we applied post-type distribution, semantic clustering, temporal synchrony analysis, and Jaccard-based lexical overlap measures. Findings suggest that the 2024 corpus exhibits a distinct pattern from 2016. Original content rose from 59% to 93% with retweets virtually disappeared; lexical overlap collapsed from a mean Jaccard score of 0.99 to 0.27, with posts converging on the same subject matter expressed in markedly different words; and temporal coordination shifted from pervasive cross-semantic synchrony to narratively concentrated co-occurrence. Taken together, these patterns point toward an operational logic organized around active content generation and narrative-specific targeting - characteristics consistent with generative AI involvement. These findings offer an empirical baseline for future research investigating generative AI's role in the cognitive operation pipeline, and as a practical reference point for security practitioners developing detection frameworks calibrated to the post-generative AI threat environment.",
+      "published": "2026-05-13T17:06:52Z",
+      "updated": "2026-05-13T17:06:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13785v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12422v1",
-      "title": "Predicting Disagreement with Human Raters in LLM-as-a-Judge Difficulty Assessment without Using Generation-Time Probability Signals",
+      "id": "http://arxiv.org/abs/2605.13773v1",
+      "title": "(How) Do Large Language Models Understand High-Level Message Sequence Charts?",
       "authors": [
-        "Yo Ehara"
+        "Mohammad Reza Mousavi"
       ],
-      "summary": "Automatic generation of educational materials using large language models (LLMs) is becoming increasingly common, but assigning difficulty levels to such materials still requires substantial human effort. LLM-as-a-Judge has therefore attracted attention, yet disagreement with human raters remains a major challenge. We propose a method for predicting which LLM-generated difficulty ratings are likely to disagree with human raters, so that such cases can be sent for re-rating. Unlike prior approaches, our method does not rely on generation-time probability signals, which must be collected during rating generation and are often difficult to compare across LLMs. Instead, exploiting the fact that difficulty is an ordinal scale, we use a separate embedding space, such as ModernBERT, and identify disagreement candidates based on the geometric consistency of the rating set. Experiments on English CEFR-based sentence difficulty assessment with GPT-OSS-120B and Qwen3-235B-A22B showed that the proposed method achieved higher AUC for predicting disagreement with human raters than probability-based baselines.",
-      "published": "2026-05-12T17:16:30Z",
-      "updated": "2026-05-12T17:16:30Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12422v1"
+      "summary": "Large Language Models (LLMs) are being employed widely to automate tasks across the software development life-cycle. It is, however, unclear whether these tasks are performed consistently with respect to the semantics of the artefacts being handled. This question is particularly under-researched concerning architectural design specification. In this paper, we address this question for High-Level Message Sequence Charts (HMSCs). These are visual models with a rigorous formal semantics that have been used for various purposes, including as a foundation for Sequence Diagrams in the Unified Modelling Language (UML). We examine whether LLMs \"understand\" the semantics of HMSCs by examining three LLMs (Gemini-3, GPT-5.4, and Qwen-3.6) on how they perform 129 semantic tasks ranging from querying basic semantic constructs in HMSCs (i.e., events and their ordering) to semantic-preserving abstractions and compositions, and calculating the set of traces and trace-equivalent labelled transition systems. The results show that LLMs only have a modest understanding of the formal semantics of HMSCs (ca. 52% overall accuracy), with great variability across different semantic concepts: while LLMs seem to understand the basic semantic concepts of MSCs (ca. 88% accuracy), they struggle with semantic reasoning in tasks involving abstraction and composition (ca. 36% accuracy) and traces and LTSs (ca. 42% accuracy). In particular, all three LLMs struggle with the notions of co-region and explicit causal dependencies and never employed them in semantic-preserving transformations.",
+      "published": "2026-05-13T16:50:51Z",
+      "updated": "2026-05-13T16:50:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13773v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12421v1",
-      "title": "Formalize, Don't Optimize: The Heuristic Trap in LLM-Generated Combinatorial Solvers",
+      "id": "http://arxiv.org/abs/2605.13772v1",
+      "title": "Where Does Reasoning Break? Step-Level Hallucination Detection via Hidden-State Transport Geometry",
       "authors": [
-        "Haoyu Wang",
-        "Yuliang Song",
-        "Tao Li",
-        "Zhiwei Deng",
-        "Yaqing Wang",
-        "Deepak Ramachandran",
-        "Eldan Cohen",
-        "Dan Roth"
+        "Tyler Alvarez",
+        "Ali Baheri"
       ],
-      "summary": "Large Language Models (LLMs) struggle to solve complex combinatorial problems through direct reasoning, so recent neuro-symbolic systems increasingly use them to synthesize executable solvers. A central design question is how the LLM should represent the solver, and whether it should also attempt to optimize search. We introduce CP-SynC-XL, a benchmark of 100 combinatorial problems (4,577 instances), and evaluate three solver-construction paradigms: native algorithmic search (Python), constraint modeling through a Python solver API (Python + OR-Tools), and declarative constraint modeling (MiniZinc + OR-Tools). We find a consistent representational divergence: Python + OR-Tools attains the highest correctness across LLMs, while MiniZinc + OR-Tools has lower absolute coverage despite using the same OR-Tools back-end. Native Python is the most likely to return a schema-valid solution that fails verification, whereas solver-backed paths preserve higher conditional fidelity. On the heuristic axis, prompting for search optimization yields only small median speed-ups (1.03-1.12x) and a strongly bimodal effect: many instances slow down, and correctness drops sharply on a long tail of problems. A paired code-level audit traces these regressions to a recurring heuristic trap. Under an efficiency-oriented prompt, the LLM may replace complete search with local approximations (Python), inject unverified bounds (Python + OR-Tools), or add redundant declarative machinery that overwhelms or over-constrains the model (MiniZinc + OR-Tools). These findings support a conservative design principle for LLM-generated combinatorial solvers: use the LLM primarily to formalize variables, constraints, and objectives for verified solvers, and separately check any LLM-authored search optimization before use.",
-      "published": "2026-05-12T17:15:45Z",
-      "updated": "2026-05-12T17:15:45Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12421v1"
+      "summary": "Large language models hallucinate during multi-step reasoning, but most existing detectors operate at the trace level: they assign one confidence score to a full output, fail to localize the first error, and often require multiple sampled completions. We frame hallucination instead as a property of the hidden-state trajectory produced during a single forward pass. Correct reasoning moves through a stable manifold of locally coherent transitions; a first error appears as a localized excursion in transport cost away from this manifold. We operationalize this view with a label-conditioned teacher that builds a trace-specific contrastive PCA lens and scores each step with seven geometric transition features, and a deployable BiLSTM student distilled from the teacher that operates on raw hidden states without inference-time labels. We prove that contrastive PCA is the optimal projection for a transport-separation objective between first error and correct states, and that single-pass first error localization holds whenever the first error creates a positive transport margin over preceding correct transitions. On ProcessBench, PRM800K, HaluEval, and TruthfulQA, both models outperform entropy-based, probing-based, and attention-based baselines in-domain; the teacher transfers stably across language models and datasets, while the student collapses under shift, a gap our distillation theory predicts. These results recast step-level hallucination detection as a problem of trajectory dynamics and identify the central obstacle to deployment: preserving the contrastive transport margin under distribution shift.",
+      "published": "2026-05-13T16:48:48Z",
+      "updated": "2026-05-13T16:48:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13772v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12419v1",
-      "title": "ORBIT: Preserving Foundational Language Capabilities in GenRetrieval via Origin-Regulated Merging",
+      "id": "http://arxiv.org/abs/2601.17187v2",
+      "title": "High-Rate Quantized Matrix Multiplication I",
       "authors": [
-        "Neha Verma",
-        "Nikhil Mehta",
-        "Shao-Chuan Wang",
-        "Naijing Zhang",
-        "Alicia Tsai",
-        "Li Wei",
-        "Lukasz Heldt",
-        "Lichan Hong",
-        "Ed Chi",
-        "Xinyang Yi"
+        "Or Ordentlich",
+        "Yury Polyanskiy"
       ],
-      "summary": "Despite the rapid advancements in large language model (LLM) development, fine-tuning them for specific tasks often results in the catastrophic forgetting of their general, language-based reasoning abilities. This work investigates and addresses this challenge in the context of the Generative Retrieval (GenRetrieval) task. During GenRetrieval fine-tuning, we find this forgetting occurs rapidly and correlates with the distance between the fine-tuned and original model parameters. Given these observations, we propose ORBIT, a novel approach that actively tracks the distance between fine-tuned and initial model weights, and uses a weight averaging strategy to constrain model drift during GenRetrieval fine-tuning when this inter-model distance exceeds a maximum threshold. Our results show that ORBIT retains substantial text and retrieval performance by outperforming both common continual learning baselines and related regularization methods that also employ weight averaging.",
-      "published": "2026-05-12T17:14:04Z",
-      "updated": "2026-05-12T17:14:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12419v1"
+      "summary": "This paper investigates the problem of quantized matrix multiplication (MatMul), which has become crucial for the efficient deployment of large language models (LLMs). We consider a Generic MatMul setting, where both matrices must be quantized (weight+activation quantization) without specific apriori (calibration) statistical information about the factors. We review the fundamental information-theoretic tradeoff between quantization rate and distortion (high-rate theory), and contrast those with the performance of popular quantization schemes (absmax INT and floating-point (FP)), for which we also derive accurate heuristic approximations. Part II of this paper studies the weight-only quantization setup where second-order statistics of the activation matrices are available at the encoder.",
+      "published": "2026-01-23T21:32:44Z",
+      "updated": "2026-05-13T16:41:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.17187v2"
     },
     {
-      "id": "http://arxiv.org/abs/2512.17738v2",
-      "title": "When the Gold Standard Isn't Necessarily Standard: Challenges of Evaluating the Translation of User-Generated Content",
+      "id": "http://arxiv.org/abs/2605.13762v1",
+      "title": "EconAI: Dynamic Persona Evolution and Memory-Aware Agents in Evolving Economic Environments",
       "authors": [
-        "Lydia Nishimwe",
-        "Benoît Sagot",
-        "Rachel Bawden"
+        "Annie Liu",
+        "Zane Cao",
+        "Lang Chen",
+        "Zongxin Xu",
+        "Zigan Wang"
       ],
-      "summary": "User-generated content (UGC) is characterised by frequent use of non-standard language, from spelling errors to expressive choices such as slang, character repetitions, and emojis. This makes evaluating UGC translation challenging: what counts as a \"good\" translation depends on the desired standardness level of the output. To explore this, we examine the human translation guidelines of four UGC datasets, and derive a taxonomy of twelve non-standard phenomena and five translation actions (NORMALISE, COPY, TRANSFER, OMIT, CENSOR). Our analysis reveals notable differences in how UGC is treated, resulting in a spectrum of standardness in reference translations. We show that translation scores of large language models are highly sensitive to prompts with explicit UGC translation instructions, and that they improve when they align with the dataset guidelines. We argue that fair evaluation requires both models and metrics to be aware of translation guidelines. Finally, we call for clear guidelines during dataset creation and for the development of controllable, guideline-aware evaluation frameworks for UGC translation.",
-      "published": "2025-12-19T16:17:23Z",
-      "updated": "2026-05-12T17:13:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.17738v2"
+      "summary": "The integration of large language models (LLMs) in economic simulations has significantly enhanced agent-based modeling, yet existing frameworks struggle to capture the interplay between short-term optimization and long-term strategic planning. Conventional approaches rely on static data-driven predictions, failing to incorporate adaptive behaviors influenced by economic sentiment, market volatility, and individual goals. To address these limitations, we introduce a novel EconAI framework, incorporating economic sentiment indexing (ESI), memory weighting, and dynamic decision-making mechanisms. By quantifying economic belief, adjusting historical data influence, and linking work-consumption behaviors, EconAI achieves a more human-like decision process, where agents adapt their actions based on both market signals and long-term objectives. It is the first LLM-powered simulation system that can simulate the macro/microeconomic environment and interactions in a unified framework. Empirical evaluations show that EconAI improves stability in economic responses, better replicates real-world employment-consumption cycles, and enhances overall decision robustness. This advancement marks a crucial step towards more realistic, adaptive economic agent simulations.",
+      "published": "2026-05-13T16:41:21Z",
+      "updated": "2026-05-13T16:41:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.13762v1"
     }
   ]
 }
