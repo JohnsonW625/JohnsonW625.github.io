@@ -1,191 +1,200 @@
 {
-  "generated_at_utc": "2026-05-21T03:36:36Z",
+  "generated_at_utc": "2026-05-23T02:52:40Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.21486v1",
-      "title": "Quantifying Hyperparameter Transfer and the Importance of Embedding Layer Learning Rate",
+      "id": "http://arxiv.org/abs/2605.22823v1",
+      "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs",
       "authors": [
-        "Dayal Singh Kalra",
-        "Maissam Barkeshli"
+        "Jongseo Lee",
+        "Hyuntak Lee",
+        "Sunghun Kim",
+        "Sooa Kim",
+        "Jihoon Chung",
+        "Jinwoo Choi"
       ],
-      "summary": "Hyperparameter transfer allows extrapolating optimal optimization hyperparameters from small to large scales, making it critical for training large language models (LLMs). This is done either by fitting a scaling law to the hyperparameters or by a judicious choice of parameterization, such as Maximal Update ($μ$P), that renders optimal hyperparameters approximately scale invariant. In this paper, we first develop a framework to quantify hyperparameter transfer through three metrics: (1) the quality of the scaling law fit, (2) the robustness to extrapolation errors, and (3) the asymptotic loss penalty due to choice of parameterization. Next, we investigate through a comprehensive series of ablations why $μ$P appears to offer high-quality learning rate transfer relative to standard parameterization (SP), as existing theory is inadequate. We find that the overwhelming benefit of $μ$P relative to SP when training with AdamW arises simply from maximizing the learning rate of the embedding layer. In SP, the embedding layer learning rate acts as a bottleneck that induces training instabilities; increasing it by a factor of width to match $μ$P dramatically smooths out training while improving hyperparameter transfer. We also find that weight decay improves the scaling law fits, while, in the fixed token-per-parameter setting, it hurts the robustness of the extrapolation.",
-      "published": "2026-05-20T17:59:40Z",
-      "updated": "2026-05-20T17:59:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21486v1"
+      "summary": "Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance. Code: https://github.com/KHU-VLL/DeltaDirect",
+      "published": "2026-05-21T17:59:56Z",
+      "updated": "2026-05-21T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22823v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.21479v1",
-      "title": "WikiVQABench: A Knowledge-Grounded Visual Question Answering Benchmark from Wikipedia and Wikidata",
+      "id": "http://arxiv.org/abs/2605.22811v1",
+      "title": "GS-QA: A Benchmark for Geospatial Question Answering",
       "authors": [
-        "Basel Shbita",
-        "Pengyuan Li",
-        "Anna Lisa Gentile"
+        "Majid Saeedan",
+        "Muhammad Shihab Rashid",
+        "Ahmed Eldawy",
+        "Vagelis Hristidis"
       ],
-      "summary": "Visual Question Answering (VQA) benchmarks have largely emphasized perception-based tasks that can be solved from visual content alone. In contrast, many real-world scenarios require external knowledge that is not directly observable in the image to answer correctly. We introduce WikiVQABench, a human-curated knowledge-grounded VQA benchmark constructed by systematically combining Wikipedia images, their associated article captions, and structured knowledge from Wikidata. Our pipeline uses large language models (LLMs) to generate candidate multiple-choice image-question-answer sets. All generated instances are subsequently reviewed and curated by human annotators to ensure factual correctness, visual-text consistency, and that each question requires external knowledge in addition to visual evidence for correct resolution. WikiVQABench comprises a substantial collection of Wikipedia images with curated multiple-choice questions designed to benchmark knowledge-aware vision-language models (VLMs). Evaluation of fifteen VLMs (256M-90B parameters) reveals a wide performance range (24.7%-75.6% accuracy), demonstrating that the benchmark effectively discriminates model capabilities on knowledge-intensive reasoning. The dataset and benchmarking code are publicly available.",
-      "published": "2026-05-20T17:58:24Z",
-      "updated": "2026-05-20T17:58:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21479v1"
+      "summary": "Recent advances in Large Language Models (LLMs) have led to dramatic improvements in question answering (QA). To address the challenge of evaluating QA systems, standardized benchmarks have been introduced. This work focuses on the problem of geospatial QA, where a large collection of geospatial data is available in the form of a spatial database or other forms. Existing work on geospatial QA benchmarks has various limitations, including a small number of questions, limited spatial predicates, narrow output types, and no multi-source reasoning. We present GS-QA, an extensible geospatial QA benchmark with 2,800 question-answer pairs across 28 templates on top of OpenStreetMap and Wikipedia data, covering a wide range of spatial objects, predicates (including directional and towards filtering), and answer types (entity names, locations, distances, directions, counts, and aggregated areas/lengths). A key feature of GS-QA is that some questions require combining information from multiple sources, e.g., geospatial information from OSM and factual information from Wikipedia. GS-QA includes a comprehensive evaluation methodology that combines text-based QA measures with geospatial-specific measures such as distance error and angular error. We implemented nine LLM-based geospatial QA baselines using three LLMs (GPT-4o, Claude Sonnet 4.6, and Ministral-3) with combinations of direct prompting, retrieval-augmented generation, and text-to-SQL. Our results show that existing solutions perform reasonably well on simple spatial predicates with entity name outputs, but accuracy degrades significantly for questions involving complex spatial predicates, numeric output types, and multi-source reasoning, demonstrating that geospatial QA remains a challenging open problem warranting further research.",
+      "published": "2026-05-21T17:57:38Z",
+      "updated": "2026-05-21T17:57:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22811v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.15156v2",
-      "title": "MeMo: Memory as a Model",
+      "id": "http://arxiv.org/abs/2605.22786v1",
+      "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems",
       "authors": [
-        "Ryan Wei Heng Quek",
-        "Sanghyuk Lee",
-        "Alfred Wei Lun Leong",
-        "Arun Verma",
-        "Alok Prakash",
-        "Nancy F. Chen",
-        "Bryan Kian Hsiang Low",
-        "Daniela Rus",
-        "Armando Solar-Lezama"
+        "Sadia Asif",
+        "Mohammad Mohammadi Amiri",
+        "Momin Abbas",
+        "Prasanna Sattigeri",
+        "Karthikeyan Natesan Ramamurthy"
       ],
-      "summary": "Large language models (LLMs) achieve strong performance across a wide range of tasks, but remain frozen after pretraining until subsequent updates. Many real-world applications require timely, domain-specific information, motivating the need for efficient mechanisms to incorporate new knowledge. In this paper, we introduce MeMo (Memory as a Model), a modular framework that encodes new knowledge into a dedicated memory model while keeping the LLM parameters unchanged. Compared to existing methods, MeMo offers several advantages: (a) it captures complex cross-document relationships, (b) it is robust to retrieval noise, (c) it avoids catastrophic forgetting in the LLM, (d) it does not require access to the LLM's weights or output logits, enabling plug-and-play integration with both open and proprietary closed-source LLMs, and (e) its retrieval cost is independent of corpus size at inference time. Our experimental results on three benchmarks, BrowseComp-Plus, NarrativeQA, and MuSiQue, show that MeMo achieves strong performance compared to existing methods across diverse settings.",
-      "published": "2026-05-14T17:51:34Z",
-      "updated": "2026-05-20T17:53:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.15156v2"
+      "summary": "Large language model (LLM)-based multi-agent systems increasingly rely on intermediate communication to coordinate complex tasks. While most existing systems communicate through natural language, recent work shows that latent communication, particularly through transformer key-value (KV) caches, can improve efficiency and preserve richer task-relevant information. However, KV caches also encode contextual inputs, intermediate reasoning states, and agent-specific information, creating an opaque channel through which sensitive content may propagate across agents without explicit textual disclosure. To address this, we introduce \\textbf{LCGuard} (Latent Communication Guard), a framework for safe KV-based latent communication in multi-agent LLM systems. LCGuard treats shared KV caches as latent working memory and learns representation-level transformations before cache artifacts are transmitted across agents. We formalize representation-level sensitive information leakage operationally through reconstruction: a shared cache artifact is unsafe if an adversarial decoder can recover agent-specific sensitive inputs from it. This leads to an adversarial training formulation in which the adversary learns to reconstruct sensitive inputs, while LCGuard learns transformations that preserve task-relevant semantics and reduce reconstructable information. Empirical evaluations across multiple model families and multi-agent benchmarks show that LCGuard consistently reduces reconstruction-based leakage and attack success rates while maintaining competitive task performance compared to standard KV-sharing baselines.",
+      "published": "2026-05-21T17:42:12Z",
+      "updated": "2026-05-21T17:42:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22786v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.21468v1",
-      "title": "You Only Need Minimal RLVR Training: Extrapolating LLMs via Rank-1 Trajectories",
+      "id": "http://arxiv.org/abs/2605.22782v1",
+      "title": "Boundedness of total Cartier indices for rational singularities in families",
       "authors": [
-        "Zhepei Wei",
-        "Xinyu Zhu",
-        "Wei-Lin Chen",
-        "Chengsong Huang",
-        "Jiaxin Huang",
-        "Yu Meng"
+        "Jihao Liu",
+        "Ruicheng Hu",
+        "Sheng Qin"
       ],
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) has become a dominant paradigm for improving reasoning in large language models (LLMs), yet the underlying geometry of the resulting parameter trajectories remains underexplored. In this work, we demonstrate that RLVR weight trajectories are extremely low-rank and highly predictable. Specifically, we find that the majority of downstream performance gains are captured by a rank-1 approximation of the parameter deltas, where the magnitude of this projection evolves near-linearly with training steps. Motivated by this, we propose a simple and compute-efficient method RELEX (REinforcement Learning EXtrapolation), which estimates the rank-1 subspace from a short observation window and extrapolates future checkpoints via linear regression, with no learned model required. Across three models (i.e., Qwen2.5-Math-1.5B, Qwen3-4B-Base, and Qwen3-8B-Base), RELEX produces checkpoints that match or exceed RLVR performance on both in-domain and out-of-domain benchmarks, requiring as few as 15% steps of full RLVR training. Remarkably, RELEX is able to extrapolate far beyond the observation window at no training cost, predicting checkpoints up to 10-20$\\times$ beyond the observed prefix with continued improvement (e.g., observe only the first 50 steps and extrapolate to 1000 steps). Our ablation analysis confirms the minimalist sufficiency of RELEX: neither increasing the subspace rank nor employing non-linear modeling yields further gains in extrapolation. Finally, we show that RELEX's success stems from a \"denoising\" effect: by projecting updates onto the rank-1 subspace, the model discards stochastic optimization noise that would otherwise degrade performance during extrapolation. Our code is available at https://github.com/weizhepei/RELEX.",
-      "published": "2026-05-20T17:53:20Z",
-      "updated": "2026-05-20T17:53:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21468v1"
+      "summary": "We show that the total Cartier index of varieties with rational singularities in a bounded family is bounded. This solves a problem of Han and Jiang. The overall structure of the proof, which treats the surface case and the higher-dimensional case separately, was originated by generative AI, particularly the Rethlas system, and was substantially corrected and elaborated by hand.",
+      "published": "2026-05-21T17:36:42Z",
+      "updated": "2026-05-21T17:36:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22782v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.21467v1",
-      "title": "DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards",
+      "id": "http://arxiv.org/abs/2605.22779v1",
+      "title": "FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection",
       "authors": [
-        "Kaiyi Zhang",
-        "Wei Wu",
-        "Yankai Lin"
+        "Huanchi Wang",
+        "Zihang Huang",
+        "Yifang Tian",
+        "Kristina Dzeparoska",
+        "Hans-Arno Jacobsen",
+        "Alberto Leon-Garcia"
       ],
-      "summary": "Reinforcement learning from verifiable rewards (RLVR) has emerged as a central technique for improving the reasoning capabilities of large language models. Despite its effectiveness, how response-level rewards translate into token-level probability changes remains poorly understood. We introduce a discriminator view of RLVR updates, showing that the policy-gradient update direction implicitly acts as a linear discriminator over token-gradient vectors and thereby determines which token probabilities are increased or decreased during learning. Under standard sequence-level RLVR, this discriminator is constructed from positive- and negative-side centroids formed by advantage-weighted averaging of token-gradient vectors. However, such centroid construction can be dominated by shared high-frequency patterns, such as formatting tokens, diluting sparse yet discriminative directions that better distinguish high-reward responses from low-reward ones. To address this limitation, we propose $\\textbf{DelTA}$, a discriminative token credit assignment method that estimates token coefficients to amplify side-specific token-gradient directions and downweight shared or weakly discriminative ones. These coefficients reweight a self-normalized RLVR surrogate, making the effective side-wise centroids more contrastive and thereby reshaping the RLVR update direction. On seven mathematical benchmarks, DelTA outperforms the strongest same-scale baselines by 3.26 and 2.62 average points on Qwen3-8B-Base and Qwen3-14B-Base, respectively. Additional results on code generation, a different backbone, and out-of-domain evaluations further demonstrate the generalization ability of DelTA.",
-      "published": "2026-05-20T17:53:09Z",
-      "updated": "2026-05-20T17:53:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21467v1"
+      "summary": "Production systems generate millions of log lines daily, yet most anomaly detectors operate at the session or window-level, flagging groups of lines rather than identifying the specific message responsible. This coarse granularity forces operators to inspect many routine lines per alert. Message-level detection offers finer granularity, but remains challenging. A single event template may correspond to both normal and anomalous messages, failures arise from heterogeneous subsystems, and line-level labeling at scale is impractical. Although large language models (LLMs) can reason over log semantics, applying them to every line is too costly for continuous monitoring. We present FAME (Failure-Aware Mixture-of-Experts), a label-efficient message-level mixture-of-experts framework that uses an LLM only once offline. We annotate at most K labeled lines per template to derive binary normal/anomaly indicators and representative examples. The LLM proposes a partition of templates into failure domains, and a certification step validates the proposal before training. FAME trains a lightweight router and domain experts that run on-premise and output anomaly predictions and failure-domain labels. On BGL, FAME achieves F1 = 98.16 at K = 100 reducing annotation effort by 76x and detects 86.3% of anomalies from unseen EventIDs. On Thunderbird, FAME reaches F1 = 99.95 with perfect recall.",
+      "published": "2026-05-21T17:34:53Z",
+      "updated": "2026-05-21T17:34:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22779v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.04905v3",
-      "title": "Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches",
+      "id": "http://arxiv.org/abs/2605.22771v1",
+      "title": "Reducing Political Manipulation with Consistency Training",
       "authors": [
-        "Yicheng Tao",
-        "Yuante Li",
-        "Yao Qin",
-        "Yepang Liu"
+        "Long Phan",
+        "Devin Kim",
+        "Alexander Pan",
+        "Alice Blair",
+        "Adam Khoja",
+        "Dan Hendrycks"
       ],
-      "summary": "Recent advances in large language models (LLMs) have significantly improved automated code generation. While existing approaches have achieved strong performance at the function and file levels, real-world software engineering requires reasoning over entire repositories, including cross-file dependencies, evolving execution environments, and global semantic consistency. This challenge has led to the emergence of Repository-Level Code Generation (RLCG), where models must retrieve, organize, and utilize repository-scale context to generate coherent and executable code changes. To address these challenges, Retrieval-Augmented Generation (RAG) has become an increasingly important paradigm for repository-level code intelligence. In this survey, we present a comprehensive review of Retrieval-Augmented Code Generation (RACG), with a particular focus on repository-level approaches. Rather than viewing RACG as a static ``retrieve-then-generate'' pipeline, we characterize it as a coupled and evolving process involving context construction, retrieval optimization, generation, and environment interaction. We organize existing methods through a unified analytical framework spanning retrieval substrate, control regime, and evaluation setting. Based on this framework, we systematically examine retrieval strategies, graph-based and non-graph-based retrieval paradigms, training-driven optimizations, and autonomous agent architectures. We further summarize widely used datasets, benchmarks, and system configurations, and discuss key challenges including scalability, reliability, efficiency, and the necessity boundary between RACG and long-context LLMs. Through this survey, we aim to provide a structured understanding of the rapidly evolving RACG landscape and highlight promising directions for future AI-powered software engineering research.",
-      "published": "2025-10-06T15:20:03Z",
-      "updated": "2026-05-20T17:52:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.04905v3"
+      "summary": "Large language models (LLMs) exhibit systematic political bias across a variety of sensitive contexts. We find that LLMs handle counterpart topics from opposing political sides asymmetrically. We refer to this phenomenon as covert political bias and identify 7 categories of techniques through which it operates. We propose two metrics for covert bias: Sentiment Consistency measures symmetry in rhetoric and framing across paired political prompts; Helpfulness Consistency measures symmetric depth and engagement. To reduce both types of covert bias, we introduce Political Consistency Training (PCT), an RL training method with two complementary paradigms: Sentiment Consistency Training and Helpfulness Consistency Training. We show that PCT preserves overall helpfulness, substantially reduces covert political bias, and generalizes to held-out benchmarks. We release our work at https://political-manipulation.ai",
+      "published": "2026-05-21T17:32:40Z",
+      "updated": "2026-05-21T17:32:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22771v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.22812v2",
-      "title": "Stable Personas: Dual-Assessment of Temporal Stability in LLM-Based Human Simulation",
+      "id": "http://arxiv.org/abs/2605.22769v1",
+      "title": "Understanding Data Temporality Impact on Large Language Models Pre-training",
       "authors": [
-        "Jana Gonnermann-Müller",
-        "Jennifer Haase",
-        "Nicolas Leins",
-        "Thomas Kosch",
-        "Sebastian Pokutta"
+        "Pilchen Hippolyte",
+        "Fabre Romain",
+        "Signe Talla Franck",
+        "Perez Patrick",
+        "Grave Edouard"
       ],
-      "summary": "Large Language Models (LLMs) acting as artificial agents offer the potential for scalable behavioral research, yet their validity depends on whether LLMs can maintain stable personas across extended conversations. We address this point using a dual-assessment framework measuring both self-reported characteristics and observer-rated persona expression. Across two experiments testing four persona conditions (default, high, moderate, and low ADHD presentations), seven LLMs, and three semantically equivalent persona prompts, we examine between-conversation stability (3,473 conversations) and within-conversation stability (1,370 conversations and 18 turns). Self-reports remain highly stable both between and within conversations. However, observer ratings reveal a tendency for persona expressions to decline during extended conversations. These findings suggest that persona-instructed LLMs produce stable, persona-aligned self-reports, an important prerequisite for behavioral research, while identifying this regression tendency as a boundary condition for multi-agent social simulation.",
-      "published": "2026-01-30T10:38:52Z",
-      "updated": "2026-05-20T17:52:10Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.22812v2"
+      "summary": "Large language models (LLMs) are typically trained on shuffled corpora, yielding models whose knowledge is frozen at train time and whose temporal grounding remains poorly understood. In this work, we study the impact of pre-training dynamics on the acquisition of time-sensitive factual knowledge, focusing specifically on data ordering. Our main contributions are twofold. First, we introduce a comprehensive benchmark of over 7,000 temporally grounded questions and an evaluation protocol that enables analysis of whether models correctly associate facts with their corresponding time periods. Second, we pretrain 6B-parameter models on temporally ordered Common Crawl snapshots and compare them against standard shuffled pre-training. Our results show that sequentially trained models match shuffled baselines on general language understanding and common knowledge while consistently exhibiting more up-to-date and temporally precise knowledge. Temporally ordered pre-training yields improved factual freshness, while shuffled pre-training peaks on older data, possibly due to increased factual repetition. These findings, along with the release of our code at https://github.com/kyutai-labs/kairos , checkpoints, and datasets at https://huggingface.co/collections/kyutai/kairos provide a foundation for future research on continual learning for LLMs.",
+      "published": "2026-05-21T17:31:17Z",
+      "updated": "2026-05-21T17:31:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22769v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.21465v1",
-      "title": "Leveraging LLMs for Grammar Adaptation: A Study on Metamodel-Grammar Co-Evolution",
+      "id": "http://arxiv.org/abs/2605.22763v1",
+      "title": "Advancing Mathematics Research with AI-Driven Formal Proof Search",
       "authors": [
-        "Weixing Zhang",
-        "Bowen Jiang",
-        "Rahul Sharma",
-        "Regina Hebig",
-        "Daniel Strüber"
+        "George Tsoukalas",
+        "Anton Kovsharov",
+        "Sergey Shirobokov",
+        "Anja Surina",
+        "Moritz Firsching",
+        "Gergely Bérczi",
+        "Francisco J. R. Ruiz",
+        "Arun Suggala",
+        "Adam Zsolt Wagner",
+        "Eric Wieser",
+        "Lei Yu",
+        "Aja Huang",
+        "Miklós Z. Horváth",
+        "Andrew Ferrauiolo",
+        "Henryk Michalewski",
+        "Codrut Grosu",
+        "Thomas Hubert",
+        "Matej Balog",
+        "Pushmeet Kohli",
+        "Swarat Chaudhuri"
       ],
-      "summary": "In model-driven engineering, metamodel evolution leads to the need to adapt corresponding grammars to maintain consistency, which typically requires tedious manual work. Existing rule-based methods can achieve partial automation but have limitations when handling complex grammar scenarios. This paper proposes a Large Language Model-based approach that automatically applies adaptations to new grammars after evolution by learning grammar adaptations from previous versions. We evaluated this approach on six real-world Xtext domain-specific languages, using four DSLs as a training set to develop prompting strategies, two DSLs as a test set for validation, and conducting a longitudinal case study on QVTo. The evaluation used three Large Language Models (Claude Sonnet 4.5, ChatGPT 5.1, Gemini 3) and measured grammar adaptation quality from three dimensions: grammar rule-level adaptation consistency, output similarity, and metamodel conformance. Results show that on the test set, all three LLMs achieved 100% adaptation consistency and output similarity, while the rule-based approach achieved only 84.21% on DOT and 62.50% on Xcore. In the QVTo longitudinal study, the LLM-based approach successfully reused learned adaptations across all three evolution steps without manual grammar editing, while the rule-based approach required manual adjustments in two of three transitions. However, on large-scale grammars (EAST-ADL, 297 rules), LLMs' adaptation consistency was far below 90%. This study demonstrates the advantages of LLM-based approaches in handling complex grammar scenarios, while revealing their limitations in large-scale grammar adaptation.",
-      "published": "2026-05-20T17:51:51Z",
-      "updated": "2026-05-20T17:51:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21465v1"
+      "summary": "Large language models (LLMs) increasingly excel at mathematical reasoning, but their unreliability limits their utility in mathematics research. A mitigation is using LLMs to generate formal proofs in languages like Lean. We perform the first large-scale evaluation of this method's ability to solve open problems. Our most capable agent autonomously resolved 9 of 353 open Erdős problems at the per-problem cost of a few hundred dollars, proved 44/492 OEIS conjectures, and is being deployed in combinatorics, optimization, graph theory, algebraic geometry, and quantum optics research. A basic agent alternating LLM-based generation with Lean-based verification replicated the Erdős successes but proved costlier on the hardest problems. These findings demonstrate the power of AI-aided formal proof search and shed light on the agent designs that enable it.",
+      "published": "2026-05-21T17:24:57Z",
+      "updated": "2026-05-21T17:24:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22763v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.21463v1",
-      "title": "Mem-$π$: Adaptive Memory through Learning When and What to Generate",
+      "id": "http://arxiv.org/abs/2605.12456v2",
+      "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
       "authors": [
-        "Xiaoqiang Wang",
-        "Chao Wang",
-        "Hadi Nekoei",
-        "Christopher Pal",
-        "Alexandre Lacoste",
-        "Spandana Gella",
-        "Bang Liu",
-        "Perouz Taslakian"
+        "Tom Sander",
+        "Hongyan Chang",
+        "Tomáš Souček",
+        "Tuan Tran",
+        "Valeriu Lacatusu",
+        "Sylvestre-Alvise Rebuffi",
+        "Alexandre Mourachko",
+        "Surya Parimi",
+        "Christophe Ropers",
+        "Rashel Moritz",
+        "Vanessa Stark",
+        "Hady Elsahar",
+        "Pierre Fernandez"
       ],
-      "summary": "We present Mem-$π$, a framework for adaptive memory in large language model (LLM) agents, where useful guidance is generated on demand rather than retrieved from external memory stores. Existing memory-augmented agents typically rely on similarity-based retrieval from episodic memory banks or skill libraries, returning static entries that often misalign with the current context. In contrast, Mem-$π$ uses a dedicated language or vision-language model with its own parameters, separate from the downstream agent, to generate context-specific guidance for complex tasks. Conditioned on the current agent context, the model jointly decides when to produce guidance and what guidance to produce. We train it with a decision-content decoupled reinforcement learning (RL) objective, enabling it to abstain when generation would not help and otherwise produce concise, useful guidance. Across diverse agentic benchmarks spanning web navigation, terminal-based tool use, and text-based embodied interaction, Mem-$π$ consistently outperforms retrieval-based and prior RL-optimized memory baselines, achieving over 30% relative improvement on web navigation tasks.",
-      "published": "2026-05-20T17:51:05Z",
-      "updated": "2026-05-20T17:51:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.21463v1"
+      "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
+      "published": "2026-05-12T17:44:41Z",
+      "updated": "2026-05-21T17:19:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.12456v2"
     },
     {
-      "id": "http://arxiv.org/abs/2511.09557v4",
-      "title": "Understanding and Improving Communication Performance in Multi-node LLM Inference",
+      "id": "http://arxiv.org/abs/2605.22735v1",
+      "title": "Shokurov's global index conjecture for threefold foliations",
       "authors": [
-        "Prajwal Singhania",
-        "Siddharth Singh",
-        "Lannie Dalton Hough",
-        "Akarsh Srivastava",
-        "Harshitha Menon",
-        "Charles Fredrick Jekel",
-        "Abhinav Bhatele"
+        "Jihao Liu",
+        "Sheng Qin"
       ],
-      "summary": "As large language models (LLMs) continue to grow in size, distributed inference has become increasingly important. Model-parallel strategies must now efficiently scale not only across multiple GPUs but also across multiple nodes. In this work, we present a detailed performance study of multi-node distributed inference using LLMs on GPU-based supercomputers. We conduct experiments with several state-of-the-art inference engines alongside YALIS, a research-oriented prototype engine designed for controlled experimentation. We analyze the strong-scaling behavior of different model-parallel schemes and identify key bottlenecks. Because all-reduce operations are a common performance bottleneck, we develop NVRAR, a hierarchical all-reduce algorithm based on recursive doubling with NVSHMEM. NVRAR achieves up to 1.9$\\times$-3.6$\\times$ lower latency than NCCL for message sizes between 128 KB and 2 MB on HPE Slingshot and InfiniBand interconnects. Integrated into YALIS, NVRAR achieves up to a 1.72$\\times$ reduction in end-to-end batch latency for the Llama 3.1 405B model in multi-node decode-heavy workloads using tensor parallelism.",
-      "published": "2025-11-12T18:59:26Z",
-      "updated": "2026-05-20T17:50:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2511.09557v4"
+      "summary": "We prove Shokurov's global index conjecture for foliations in dimension at most three. This answers a question of the first author, Meng, and Xie in dimension three. The main result of this paper is partially obtained by generative AI, particularly the Rethlas system.",
+      "published": "2026-05-21T17:05:24Z",
+      "updated": "2026-05-21T17:05:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22735v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.26603v2",
-      "title": "Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence",
+      "id": "http://arxiv.org/abs/2605.22732v1",
+      "title": "Beyond Acoustic Emotion Recognition: Multimodal Pathos Analysis in Political Speech Using LLM-Based and Acoustic Emotion Models",
       "authors": [
-        "Eziyo Ehsani",
-        "Luca Giamattei",
-        "Ivano Malavolta",
-        "Roberto Pietrantuono"
+        "Juergen Dietrich"
       ],
-      "summary": "The migration of Large Language Models (LLMs) from cloud clusters to edge devices promises enhanced privacy and offline accessibility, but this transition encounters a harsh reality: the physical constraints of mobile batteries, thermal limits, and, most importantly, memory constraints. To navigate this landscape, we constructed a replicable and reproducible experimental pipeline to profile the complex interplay between energy consumption, latency, and quality of LLMs on mobile devices. We harness this pipeline to conduct an empirical case study on a flagship Android device, capturing granular metrics across eight LLMs ranging from 0.5B to 9B parameters without requiring root access, ensuring our findings reflect realistic user conditions. The findings highlight the trade-offs between generation quality, performance, power and resource consumption, revealing which LLMs offer the best balance across metrics and under different conditions. Besides, we uncovered a counter-intuitive quantization energy paradox: while modern importance-aware quantization successfully reduces memory footprints to fit larger models into RAM, we found it yields negligible energy savings compared to standard mixed-precision methods. This proves that for battery life, the architecture of the model, not its quantization scheme, is the decisive factor. We further identified that Mixture-of-Experts (MoE) architectures defy the standard size-energy trend, offering the storage capacity of a 7B model while maintaining the lower energy profile of a 1B to 2B model. Finally, an analysis of these multi-objective trade-offs reveals a pragmatic sweet spot of mid-sized models, such as Qwen2.5-3B, that effectively balance response quality with sustainable energy consumption.",
-      "published": "2026-03-27T17:00:25Z",
-      "updated": "2026-05-20T17:48:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.26603v2"
+      "summary": "We investigate whether acoustic emotion recognition models can serve as proxies for the Pathos dimension in political speech analysis, as operationalised by the TRUST multi-agent large language model (LLM) pipeline. Using a Bundestag plenary speech by Felix Banaszak (51 segments, 245 s) as a case study, we compare three analysis modalities: (1) emotion2vec_plus_large, an acoustic speech emotion recognition (SER) model whose continuous Arousal and Valence values are derived via post-hoc Russell Circumplex projection; (2) Gemini 2.5 Flash, an LLM analysing the full speech audio together with its transcript in an open-ended, context-aware fashion; and (3) TRUST-Pathos scores from a three-advocate LLM supervisor ensemble. Spearman rank correlations reveal that Gemini Valence correlates strongly with TRUST-Pathos (rho = +0.664, p < 0.001), whereas emotion2vec Valence does not (rho = +0.097, p = 0.499). We further demonstrate, via a systematic quality evaluation of the Berlin Database of Emotional Speech (EMO-DB) using Gemini in an open-ended annotation paradigm, that standard SER benchmark corpora suffer from acted speech, cultural bias, and category incompatibility. Our results suggest that LLM-based multimodal analysis captures semantically defined political emotion substantially better than acoustic models alone, while acoustic features remain informative for low-level Arousal estimation. Future work will extend this approach to video-based analysis incorporating facial expression and gaze.",
+      "published": "2026-05-21T17:03:37Z",
+      "updated": "2026-05-21T17:03:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22732v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.06511v3",
-      "title": "Evolutionary Generation of Multi-Agent Systems",
+      "id": "http://arxiv.org/abs/2605.22731v1",
+      "title": "Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation",
       "authors": [
-        "Yuntong Hu",
-        "Yuting Zhang",
-        "Matthew Trager",
-        "Yi Zhang",
-        "Shuo Yang",
-        "Wei Xia",
-        "Stefano Soatto"
+        "Dong Nie"
       ],
-      "summary": "Large language model (LLM)-based multi-agent systems (MAS) show strong promise for complex reasoning, planning, and tool-augmented tasks, but designing effective MAS architectures remains labor-intensive, brittle, and hard to generalize. Existing automatic MAS generation methods either rely on code generation, which often leads to executability and robustness failures, or impose rigid architectural templates that limit expressiveness and adaptability. We propose Evolutionary Generation of Multi-Agent Systems (EvoMAS), which formulates MAS generation as structured configuration generation. EvoMAS performs evolutionary generation in configuration space. Specifically, EvoMAS selects initial configurations from a pool, applies feedback-conditioned mutation and crossover guided by execution traces, and iteratively refines both the candidate pool and an experience memory. We evaluate EvoMAS on diverse benchmarks, including BBEH, SWE-Bench, and WorkBench, covering reasoning, software engineering, and tool-use tasks. EvoMAS consistently improves task performance over both human-designed MAS and prior automatic MAS generation methods, while producing generated systems with higher executability and runtime robustness. EvoMAS outperforms the agent evolution method EvoAgent by +10.5 points on BBEH reasoning and +7.1 points on WorkBench. With Claude-4.5-Sonnet, EvoMAS also reaches 79.1% on SWE-Bench-Verified, matching the top of the leaderboard. Code is available at https://github.com/amazon-science/EvoMAS",
-      "published": "2026-02-06T09:01:35Z",
-      "updated": "2026-05-20T17:21:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.06511v3"
+      "summary": "Large language model post-training methods such as supervised fine-tuning (SFT), reinforcement learning (RL), and distillation are often analyzed through their loss functions: maximum likelihood, policy gradients, forward KL, reverse KL, or related objective-level variants. We study a complementary factor: the state distribution on which supervision is applied. For an autoregressive policy, a state is a prompt plus generated prefix. SFT trains on fixed dataset states, while RL and on-policy distillation (OPD) train on states induced by the current learner. We formalize post-training as state-distribution shaping and run a controlled smallscale study using Qwen3-0.6B-Base on GSM8K, with TruthfulQA and MMLU as retention evaluations. Our results show three phenomena. First, a mild SFT run improves GSM8K with little forgetting, while a stress SFT run causes substantial retention loss. Second, OPD from a degraded SFT teacher surpasses that teacher on GSM8K, TruthfulQA, and MMLU, despite using the teacher as its only supervision source. Third, a lightweight on-policy RL run improves GSM8K while preserving retention. These results support a state-centric view of post-training: the source and locality of training states can be as important as the form of the supervision signal.",
+      "published": "2026-05-21T17:03:22Z",
+      "updated": "2026-05-21T17:03:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.22731v1"
     }
   ]
 }
