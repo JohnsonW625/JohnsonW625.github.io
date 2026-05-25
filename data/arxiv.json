@@ -1,200 +1,191 @@
 {
-  "generated_at_utc": "2026-05-23T02:52:40Z",
+  "generated_at_utc": "2026-05-25T03:42:38Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2605.22823v1",
-      "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs",
+      "id": "http://arxiv.org/abs/2605.23901v1",
+      "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
       "authors": [
-        "Jongseo Lee",
-        "Hyuntak Lee",
-        "Sunghun Kim",
-        "Sooa Kim",
-        "Jihoon Chung",
-        "Jinwoo Choi"
+        "Xu Ouyang",
+        "Deyi Liu",
+        "Yuhang Cai",
+        "Jing Liu",
+        "Yuan Yang",
+        "Chen Zheng",
+        "Thomas Hartvigsen",
+        "Yiyuan Ma"
       ],
-      "summary": "Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance. Code: https://github.com/KHU-VLL/DeltaDirect",
-      "published": "2026-05-21T17:59:56Z",
-      "updated": "2026-05-21T17:59:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22823v1"
+      "summary": "Existing scaling laws for Large Language Models (LLMs), predominantly monotonic power laws, fail to explain emerging non-monotonic phenomena such as catastrophic overtraining and quantization-induced degradation, where performance deteriorates despite increased compute. We propose the Shannon Scaling Law, a unified theoretical framework that models LLM training as information transmission over a noisy channel, grounded in the Shannon-Hartley theorem. By mapping model parameters to channel bandwidth and training tokens to signal power, our formulation explicitly captures the interaction between learning signal and intrinsic noise. This perspective reveals a fundamental Shannon capacity for LLMs: scaling model size or data without preserving a sufficient signal-to-noise ratio (SNR) inevitably amplifies noise, inducing a transition from monotonic improvement to U-shaped performance degradation. We validate our theory through experiments on Pythia and OLMo2 under perturbations, including Gaussian noise, quantization and supervised fine-tuning on math, QA and code tasks. The Shannon Scaling Law consistently outperforms classical scaling laws and recent perturbation-aware laws, achieving strong $R^2$ scores and accurately capturing loss basins missed by prior approaches. It also extrapolates: fitted on $\\leq$6.9B Pythia models with $\\leq$180B tokens, it predicts the unseen 12B model up to 307B tokens at pooled $R^2{=}0.847$, while monotonic baselines collapse.",
+      "published": "2026-05-22T17:59:38Z",
+      "updated": "2026-05-22T17:59:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23901v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22811v1",
-      "title": "GS-QA: A Benchmark for Geospatial Question Answering",
+      "id": "http://arxiv.org/abs/2605.23897v1",
+      "title": "ETCHR: Editing To Clarify and Harness Reasoning",
       "authors": [
-        "Majid Saeedan",
-        "Muhammad Shihab Rashid",
-        "Ahmed Eldawy",
-        "Vagelis Hristidis"
+        "Beichen Zhang",
+        "Yuhong Liu",
+        "Jinsong Li",
+        "Yuhang Zang",
+        "Jiaqi Wang",
+        "Dahua Lin"
       ],
-      "summary": "Recent advances in Large Language Models (LLMs) have led to dramatic improvements in question answering (QA). To address the challenge of evaluating QA systems, standardized benchmarks have been introduced. This work focuses on the problem of geospatial QA, where a large collection of geospatial data is available in the form of a spatial database or other forms. Existing work on geospatial QA benchmarks has various limitations, including a small number of questions, limited spatial predicates, narrow output types, and no multi-source reasoning. We present GS-QA, an extensible geospatial QA benchmark with 2,800 question-answer pairs across 28 templates on top of OpenStreetMap and Wikipedia data, covering a wide range of spatial objects, predicates (including directional and towards filtering), and answer types (entity names, locations, distances, directions, counts, and aggregated areas/lengths). A key feature of GS-QA is that some questions require combining information from multiple sources, e.g., geospatial information from OSM and factual information from Wikipedia. GS-QA includes a comprehensive evaluation methodology that combines text-based QA measures with geospatial-specific measures such as distance error and angular error. We implemented nine LLM-based geospatial QA baselines using three LLMs (GPT-4o, Claude Sonnet 4.6, and Ministral-3) with combinations of direct prompting, retrieval-augmented generation, and text-to-SQL. Our results show that existing solutions perform reasonably well on simple spatial predicates with entity name outputs, but accuracy degrades significantly for questions involving complex spatial predicates, numeric output types, and multi-source reasoning, demonstrating that geospatial QA remains a challenging open problem warranting further research.",
-      "published": "2026-05-21T17:57:38Z",
-      "updated": "2026-05-21T17:57:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22811v1"
+      "summary": "Multimodal Large Language Models have advanced visual reasoning, yet a purely textual chain of thought remains a bottleneck for questions that require fine-grained focus or view transformations. The ''think with images'' paradigm narrows this gap, but existing approaches are either constrained by fixed predefined toolkits or produce noisy intermediate images from unified multimodal methods. We pursue a third option: using a dedicated image editing model and decouple it with an understanding model. However, off-the-shelf image editors fail as reasoning assistants with two complementary gaps: a language-side gap, where editors trained as passive instruction-followers cannot map an abstract question to an appropriate visual transformation, and a generation-side gap, where edit correctness degrades as reasoning depth grows. Guided by this analysis, we introduce ETCHR (Editing To Clarify and Harness Reasoning), a question-conditioned, reasoning-aware image editor decoupled from the downstream understanding model and trained with a two-stage recipe targeted at the two gaps: Reasoning Imitation via supervised fine-tuning on edit trajectories, followed by Reasoning Enhancement with VLM-derived rewards for edit correctness and downstream reasoning accuracy. Since the editor is decoupled, ETCHR plugs into different open- and closed-source MLLMs in a training-free manner. Across five task families (fine-grained perception, chart understanding, logic reasoning, jigsaw restoration, and 3D understanding), ETCHR raises average Pass@1 from 55.95 to 60.77 (+4.82) with Qwen3-VL-8B, from 65.08 to 70.55 (+5.47) with Gemini-3.1-Flash-Lite, and from 76.55 to 81.16 (+4.61) with the 1T-parameter MoE model Kimi K2.5.",
+      "published": "2026-05-22T17:58:28Z",
+      "updated": "2026-05-22T17:58:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23897v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22786v1",
-      "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems",
+      "id": "http://arxiv.org/abs/2605.23883v1",
+      "title": "PGT: Procedurally Generated Tasks for improving visual grounding in MLLMs",
       "authors": [
-        "Sadia Asif",
-        "Mohammad Mohammadi Amiri",
-        "Momin Abbas",
-        "Prasanna Sattigeri",
-        "Karthikeyan Natesan Ramamurthy"
+        "Rim Assouel",
+        "Amir Bar",
+        "Michal Drozdzal",
+        "Adriana Romero-Soriano"
       ],
-      "summary": "Large language model (LLM)-based multi-agent systems increasingly rely on intermediate communication to coordinate complex tasks. While most existing systems communicate through natural language, recent work shows that latent communication, particularly through transformer key-value (KV) caches, can improve efficiency and preserve richer task-relevant information. However, KV caches also encode contextual inputs, intermediate reasoning states, and agent-specific information, creating an opaque channel through which sensitive content may propagate across agents without explicit textual disclosure. To address this, we introduce \\textbf{LCGuard} (Latent Communication Guard), a framework for safe KV-based latent communication in multi-agent LLM systems. LCGuard treats shared KV caches as latent working memory and learns representation-level transformations before cache artifacts are transmitted across agents. We formalize representation-level sensitive information leakage operationally through reconstruction: a shared cache artifact is unsafe if an adversarial decoder can recover agent-specific sensitive inputs from it. This leads to an adversarial training formulation in which the adversary learns to reconstruct sensitive inputs, while LCGuard learns transformations that preserve task-relevant semantics and reduce reconstructable information. Empirical evaluations across multiple model families and multi-agent benchmarks show that LCGuard consistently reduces reconstruction-based leakage and attack success rates while maintaining competitive task performance compared to standard KV-sharing baselines.",
-      "published": "2026-05-21T17:42:12Z",
-      "updated": "2026-05-21T17:42:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22786v1"
+      "summary": "Despite remarkable progress in Multimodal Large Language Models (MLLMs), these models still struggle with fine-grained understanding tasks. In this work, we propose Procedurally Generated Tasks (PGT), a simple data-driven framework that serves a dual purpose: inducing fine-grained visual understanding and acting as a low-cost diagnostic tool to identify the source of perception failures. By overlaying unambiguous geometric primitives on images, PGT generate additional dense supervision that disentangles visual grounding capability from semantic priors. Extensive experiments on relational, quantitative, and 3D/depth understanding benchmarks show that PGT yields remarkable gains across diverse architectures. Instruction tuning MLLMs on LLaVA-v1.5-Instruct augmented with PGT data results in improvements of up to +20% on the What'sUp benchmark and +13.3% on CV-Bench-2D, while maintaining general perception capabilities. Moreover, finetuning state-of-the-art MLLMs on PGT data leads to boosts of up to +5.5% on What'sUp and +8.3% on CV-Bench-2D. These findings demonstrate that PGT effectively address the bottleneck of fine-grained perception, revealing that many spatial reasoning deficits stem from inadequate supervision signals rather than inherent architectural or resolution limitations.",
+      "published": "2026-05-22T17:45:01Z",
+      "updated": "2026-05-22T17:45:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23883v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22782v1",
-      "title": "Boundedness of total Cartier indices for rational singularities in families",
+      "id": "http://arxiv.org/abs/2603.20088v2",
+      "title": "Towards an Evaluation Methodology for AI in Second Language Education: Lessons Learned from Developing L2-Bench",
       "authors": [
-        "Jihao Liu",
-        "Ruicheng Hu",
-        "Sheng Qin"
+        "James Edgell",
+        "Wm. Matthew Kennedy",
+        "Isaac Pattis",
+        "Ben Knight",
+        "Danielle Carvalho",
+        "Elizabeth Wonnacott"
       ],
-      "summary": "We show that the total Cartier index of varieties with rational singularities in a bounded family is bounded. This solves a problem of Han and Jiang. The overall structure of the proof, which treats the surface case and the higher-dimensional case separately, was originated by generative AI, particularly the Rethlas system, and was substantially corrected and elaborated by hand.",
-      "published": "2026-05-21T17:36:42Z",
-      "updated": "2026-05-21T17:36:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22782v1"
+      "summary": "The rapid adoption of large language models in AI-powered language education has created an urgent need for evaluations that assess pedagogical effectiveness, particularly in language learning--one of the most common LLM use cases (Tamkin et al. 2024; Costa-Gomes et al. 2025). With only narrowly defined task-specific evaluations of AI system capabilities in second language (L2) education existing in the literature, we require more holistic approaches in this AI for education space. To address this gap, we describe the iteration of the methodology we developed to build L2-Bench, a novel, context-specific evaluation benchmark grounded in a validated \"language learning experience designer\" construct to assess AI capabilities across L2 education contexts. Our methodology integrates pedagogical theory, sociotechnical AI evaluation methods, and operationalizes a hierarchical taxonomy to structure an expert-curated dataset of over 1,000 authentic rubric-scored task-response pairs with measurement and scoring pipeline. We report the results of a pilot validation exercise (N = 39) on an initial sample of our dataset (tasks were validated as authentic [M = 4.23/5], but criteria scores were lower [M = 3.94], with universally poor inter-annotator agreement despite good internal consistency), alongside the experimental design for our follow-up practitioner data validation study as we iterate and scale to the full dataset. Ultimately, this research not only offers methodological lessons towards a more context-specific AI evaluations ecosystem, but also works towards better design of reproducible evaluations for AI systems deployed to educational contexts",
+      "published": "2026-03-20T16:13:03Z",
+      "updated": "2026-05-22T17:33:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.20088v2"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22779v1",
-      "title": "FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection",
+      "id": "http://arxiv.org/abs/2605.23867v1",
+      "title": "Human Decision-Making with Persuasive and Narrative LLM Explanations",
       "authors": [
-        "Huanchi Wang",
-        "Zihang Huang",
-        "Yifang Tian",
-        "Kristina Dzeparoska",
-        "Hans-Arno Jacobsen",
-        "Alberto Leon-Garcia"
+        "Laura R. Marusich",
+        "Mary Grace Kozuch Dhooghe",
+        "Jonathan Z. Bakdash",
+        "Murat Kantarcioglu"
       ],
-      "summary": "Production systems generate millions of log lines daily, yet most anomaly detectors operate at the session or window-level, flagging groups of lines rather than identifying the specific message responsible. This coarse granularity forces operators to inspect many routine lines per alert. Message-level detection offers finer granularity, but remains challenging. A single event template may correspond to both normal and anomalous messages, failures arise from heterogeneous subsystems, and line-level labeling at scale is impractical. Although large language models (LLMs) can reason over log semantics, applying them to every line is too costly for continuous monitoring. We present FAME (Failure-Aware Mixture-of-Experts), a label-efficient message-level mixture-of-experts framework that uses an LLM only once offline. We annotate at most K labeled lines per template to derive binary normal/anomaly indicators and representative examples. The LLM proposes a partition of templates into failure domains, and a certification step validates the proposal before training. FAME trains a lightweight router and domain experts that run on-premise and output anomaly predictions and failure-domain labels. On BGL, FAME achieves F1 = 98.16 at K = 100 reducing annotation effort by 76x and detects 86.3% of anomalies from unseen EventIDs. On Thunderbird, FAME reaches F1 = 99.95 with perfect recall.",
-      "published": "2026-05-21T17:34:53Z",
-      "updated": "2026-05-21T17:34:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22779v1"
+      "summary": "Large language models (LLMs) have the potential to aid and improve human decision-making in classification tasks, not only by providing fairly accurate predictions, but also in their ability to generate cogent narrative explanations of those predictions. Prior work has demonstrated that people generally find AI narrative explanations to be understandable, trustworthy, and convincing for changing beliefs and opinions; however, less is known about the impact of narrative explanations on objective human decision-making performance. Here we conduct a large-scale human behavioral experiment to evaluate decision-making performance with LLM-generated narrative explanations of varying persuasiveness. We found the degree of persuasiveness, or lack thereof, for LLM-based explanations did not meaningfully impact decision accuracy over a simple AI prediction alone, in agreement with typical results with explainable AI based on feature importance. We found evidence that narratives increased reliance on AI, but both when the AI prediction was correct and incorrect. Exploratory analyses also indicated that the more persuasive narratives may have had a detrimental effect on decision response times and the ability to discriminate between a correct and incorrect AI prediction. Overall, this work indicates that including narrative explanations with AI predictions may involve tradeoffs for decision-making performance, and more work is needed to determine how and when narrative explanations impact human decision-making.",
+      "published": "2026-05-22T17:25:02Z",
+      "updated": "2026-05-22T17:25:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23867v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22771v1",
-      "title": "Reducing Political Manipulation with Consistency Training",
+      "id": "http://arxiv.org/abs/2605.23859v1",
+      "title": "Natural Yet Challenging to Detect: Robust In-the-Wild TTS through EMA and Dual-Scoring Prompt Selection -- Submission for WildSpoof 2026 TTS Track",
       "authors": [
-        "Long Phan",
-        "Devin Kim",
-        "Alexander Pan",
-        "Alice Blair",
-        "Adam Khoja",
-        "Dan Hendrycks"
+        "Renhe Sun",
+        "Jiayi Zhou",
+        "Haolin He",
+        "Yueying Feng",
+        "Jian Liu"
       ],
-      "summary": "Large language models (LLMs) exhibit systematic political bias across a variety of sensitive contexts. We find that LLMs handle counterpart topics from opposing political sides asymmetrically. We refer to this phenomenon as covert political bias and identify 7 categories of techniques through which it operates. We propose two metrics for covert bias: Sentiment Consistency measures symmetry in rhetoric and framing across paired political prompts; Helpfulness Consistency measures symmetric depth and engagement. To reduce both types of covert bias, we introduce Political Consistency Training (PCT), an RL training method with two complementary paradigms: Sentiment Consistency Training and Helpfulness Consistency Training. We show that PCT preserves overall helpfulness, substantially reduces covert political bias, and generalizes to held-out benchmarks. We release our work at https://political-manipulation.ai",
-      "published": "2026-05-21T17:32:40Z",
-      "updated": "2026-05-21T17:32:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22771v1"
+      "summary": "In this technical report, we describe our submission for the WildSpoof Challenge TTS Track: Text-to-Speech with In-the-Wild Data. We introduce F5-TTS-DPS, a model built upon the F5-TTS architecture. Our approach integrates Exponential Moving Average (EMA) into supervised fine-tuning to stabilize training and improve generalization. To enhance synthesis fidelity, we leverage large language models (LLMs) and large audio language models (LALMs) for dual-scoring prompt selection, filtering reference audio and text prompts to ensure quality while addressing alignment issues in noisy datasets. Experimental evaluation demonstrates that F5-TTS-DPS achieves strong performance with UTMOS of 3.20 and speaker similarity of 0.51 on the development set. More importantly, our model achieves the best a-DCF scores of 0.1582, 0.5233, and 0.2562 across three advanced SASV systems among all submissions, indicating our synthesized speech is the most difficult to detect and exhibits the highest degree of naturalness and authenticity. Combined with competitive WER performance, these results validate the effectiveness of our approach in generating natural-sounding speech with strong spoofing capabilities.",
+      "published": "2026-05-22T17:18:50Z",
+      "updated": "2026-05-22T17:18:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23859v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22769v1",
-      "title": "Understanding Data Temporality Impact on Large Language Models Pre-training",
+      "id": "http://arxiv.org/abs/2605.23857v1",
+      "title": "Strong Teacher Not Needed? On Distillation in LLM Pretraining",
       "authors": [
-        "Pilchen Hippolyte",
-        "Fabre Romain",
-        "Signe Talla Franck",
-        "Perez Patrick",
-        "Grave Edouard"
+        "Taiming Lu",
+        "Zhuang Liu"
       ],
-      "summary": "Large language models (LLMs) are typically trained on shuffled corpora, yielding models whose knowledge is frozen at train time and whose temporal grounding remains poorly understood. In this work, we study the impact of pre-training dynamics on the acquisition of time-sensitive factual knowledge, focusing specifically on data ordering. Our main contributions are twofold. First, we introduce a comprehensive benchmark of over 7,000 temporally grounded questions and an evaluation protocol that enables analysis of whether models correctly associate facts with their corresponding time periods. Second, we pretrain 6B-parameter models on temporally ordered Common Crawl snapshots and compare them against standard shuffled pre-training. Our results show that sequentially trained models match shuffled baselines on general language understanding and common knowledge while consistently exhibiting more up-to-date and temporally precise knowledge. Temporally ordered pre-training yields improved factual freshness, while shuffled pre-training peaks on older data, possibly due to increased factual repetition. These findings, along with the release of our code at https://github.com/kyutai-labs/kairos , checkpoints, and datasets at https://huggingface.co/collections/kyutai/kairos provide a foundation for future research on continual learning for LLMs.",
-      "published": "2026-05-21T17:31:17Z",
-      "updated": "2026-05-21T17:31:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22769v1"
+      "summary": "Knowledge distillation generally assumes a strong-to-weak relationship where stronger teachers yield better students. In this work, we examine this assumption about distillation in large language model pretraining. By varying architecture sizes and training token budgets, we create strong-to-weak, same-level, and weak-to-strong teacher-student relationships, and study distillation's effectiveness under each. We find that the teacher need not be strong: with proper mixing of the language modeling and knowledge distillation losses, even small and undertrained teachers improve larger students. At the same time, a stronger teacher is not always better: pushing the teacher further, through more parameters or more training tokens, can saturate or even reverse the distillation gains. We further observe that distillation improves generalization (out-of-distribution and downstream performance) more readily than in-domain fitting. Together, these results challenge the common belief that distillation pretraining always requires a strong teacher.",
+      "published": "2026-05-22T17:16:35Z",
+      "updated": "2026-05-22T17:16:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23857v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22763v1",
-      "title": "Advancing Mathematics Research with AI-Driven Formal Proof Search",
+      "id": "http://arxiv.org/abs/2605.23826v1",
+      "title": "Decomposing Queries into Tool Calls for Long-Video Keyframe Retrieval",
       "authors": [
-        "George Tsoukalas",
-        "Anton Kovsharov",
-        "Sergey Shirobokov",
-        "Anja Surina",
-        "Moritz Firsching",
-        "Gergely Bérczi",
-        "Francisco J. R. Ruiz",
-        "Arun Suggala",
-        "Adam Zsolt Wagner",
-        "Eric Wieser",
-        "Lei Yu",
-        "Aja Huang",
-        "Miklós Z. Horváth",
-        "Andrew Ferrauiolo",
-        "Henryk Michalewski",
-        "Codrut Grosu",
-        "Thomas Hubert",
-        "Matej Balog",
-        "Pushmeet Kohli",
-        "Swarat Chaudhuri"
+        "Michal Shlapentokh-Rothman",
+        "Prachi Garg",
+        "Yu-Xiong Wang",
+        "Derek Hoiem"
       ],
-      "summary": "Large language models (LLMs) increasingly excel at mathematical reasoning, but their unreliability limits their utility in mathematics research. A mitigation is using LLMs to generate formal proofs in languages like Lean. We perform the first large-scale evaluation of this method's ability to solve open problems. Our most capable agent autonomously resolved 9 of 353 open Erdős problems at the per-problem cost of a few hundred dollars, proved 44/492 OEIS conjectures, and is being deployed in combinatorics, optimization, graph theory, algebraic geometry, and quantum optics research. A basic agent alternating LLM-based generation with Lean-based verification replicated the Erdős successes but proved costlier on the hardest problems. These findings demonstrate the power of AI-aided formal proof search and shed light on the agent designs that enable it.",
-      "published": "2026-05-21T17:24:57Z",
-      "updated": "2026-05-21T17:24:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22763v1"
+      "summary": "Keyframe selection is a direct way to provide verifiable visual evidence for long-video question answering (QA). Queries differ in what they require, and finding the right frames depends on knowing what to look for. Existing keyframe selectors either score every frame against a single query, or decompose the query into a fixed schema evaluated by a single visual tool. We propose ToolMerge, a keyframe retrieval method based on decomposition and merging: an Large Language Model (LLM) based planner decomposes the query into tool calls and specifies how their per-tool rankings are merged using boolean operators. To evaluate retrieval directly, we construct Molmo-2 Moments (M2M), a benchmark in which every question is anchored to a specific time interval by construction. Across QA, question retrieval, and caption retrieval, ToolMerge is competitive with prior keyframe selectors, most notably on caption retrieval, outperforming other methods by 5%. Code and data can be found at https://github.com/michalsr/ToolMerge .",
+      "published": "2026-05-22T16:29:51Z",
+      "updated": "2026-05-22T16:29:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23826v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12456v2",
-      "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
+      "id": "http://arxiv.org/abs/2605.23820v1",
+      "title": "Inferential Privacy Leakage in Anonymized Conversational AI Logs",
       "authors": [
-        "Tom Sander",
-        "Hongyan Chang",
-        "Tomáš Souček",
-        "Tuan Tran",
-        "Valeriu Lacatusu",
-        "Sylvestre-Alvise Rebuffi",
-        "Alexandre Mourachko",
-        "Surya Parimi",
-        "Christophe Ropers",
-        "Rashel Moritz",
-        "Vanessa Stark",
-        "Hady Elsahar",
-        "Pierre Fernandez"
+        "S M Mehedi Zaman",
+        "Kiran Garimella"
       ],
-      "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
-      "published": "2026-05-12T17:44:41Z",
-      "updated": "2026-05-21T17:19:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12456v2"
+      "summary": "Hundreds of millions of users now hold detailed, multi-turn conversations with ChatGPT and similar LLM assistants. We measure two privacy-relevant features of these conversations on a corpus of complete ChatGPT histories donated by over 1,000 users in four Global South countries (Brazil, India, Nigeria, Pakistan). First, on explicit disclosure: 34.5% of user messages contain personal information across a twenty-category taxonomy, with the median user first revealing identifying content within the first 14% of their conversation history. Second, on inference beyond explicit disclosure: we restrict to a cohort whose conversations contain no messages flagged by an LLM-based filter for explicit demographic self-identification (a separate NER pass marks PII for the disclosure audit but does not drive cohort exclusion). On this filtered cohort, an off the shelf large language model still recovers each user's age, gender, and country at weighted F1 of 0.84, 0.90, and 0.88, respectively, with the median user identified from the first 5% of their conversation history. Reading the model's natural-language reasoning traces, we identify four recurring stereotype patterns that drive both successful inference and an asymmetric error distribution concentrating on women in technical fields, older users with contemporary skills, and Global South tech professionals. We also compare ChatGPT against the same users' Google Search and YouTube histories as inference surfaces, and find it competitive with these older substrates that have driven behavioral advertising for two decades. Message-level PII removal is insufficient on its own as a privacy intervention for conversational AI data.",
+      "published": "2026-05-22T16:22:14Z",
+      "updated": "2026-05-22T16:22:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23820v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22735v1",
-      "title": "Shokurov's global index conjecture for threefold foliations",
+      "id": "http://arxiv.org/abs/2602.01694v3",
+      "title": "Beyond the Single Turn: Reframing Refusals as Dynamic Experiences Embedded in the Context of Mental Health Support Interactions with LLMs",
       "authors": [
-        "Jihao Liu",
-        "Sheng Qin"
+        "Ningjing Tang",
+        "Alice Qian",
+        "Qiaosi Wang",
+        "Esther Howe",
+        "Blake Bullwinkel",
+        "Paola Pedrelli",
+        "Jina Suh",
+        "Hoda Heidari",
+        "Hong Shen"
       ],
-      "summary": "We prove Shokurov's global index conjecture for foliations in dimension at most three. This answers a question of the first author, Meng, and Xie in dimension three. The main result of this paper is partially obtained by generative AI, particularly the Rethlas system.",
-      "published": "2026-05-21T17:05:24Z",
-      "updated": "2026-05-21T17:05:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22735v1"
+      "summary": "Content Warning: This paper contains participant quotes and discussions related to mental health challenges, emotional distress, and suicidal ideation. Large language models (LLMs) are increasingly used for mental health support, yet the model safeguards -- particularly refusals to engage with sensitive content -- remain poorly understood from the perspectives of users and mental health professionals (MHPs) and have been reported to cause real-world harms. This paper presents findings from a sequential mixed-methods study examining how LLM refusals are experienced and interpreted in mental health support interactions. Through surveys (N=53) and in-depth interviews (N=16) with individuals using LLMs for mental health support and MHPs, we reveal that refusals are not isolated, single-turn system behaviors but rather constitute dynamic, multi-phase experiences: pre-refusal expectation formation, refusal triggering and encounter, refusal message framing, resource referral provision, and post-refusal outcomes. We contribute a multi-phase framework for evaluating refusals beyond binary policy compliance accuracy and design recommendations for future refusal mechanisms. These findings suggest that understanding LLM refusals requires moving beyond single-turn interactions toward recognizing them as holistic experiences embedded within users' support-seeking trajectories and the broader LLM design pipeline.",
+      "published": "2026-02-02T06:08:04Z",
+      "updated": "2026-05-22T16:18:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.01694v3"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22732v1",
-      "title": "Beyond Acoustic Emotion Recognition: Multimodal Pathos Analysis in Political Speech Using LLM-Based and Acoustic Emotion Models",
+      "id": "http://arxiv.org/abs/2605.23809v1",
+      "title": "Advanced AI Service Provisioning in O-RAN through LLM Engine Integration",
       "authors": [
-        "Juergen Dietrich"
+        "Seyed Bagher Hashemi Natanzi",
+        "Pranshav Gajja",
+        "Bo Tang",
+        "Vijay K. Shah"
       ],
-      "summary": "We investigate whether acoustic emotion recognition models can serve as proxies for the Pathos dimension in political speech analysis, as operationalised by the TRUST multi-agent large language model (LLM) pipeline. Using a Bundestag plenary speech by Felix Banaszak (51 segments, 245 s) as a case study, we compare three analysis modalities: (1) emotion2vec_plus_large, an acoustic speech emotion recognition (SER) model whose continuous Arousal and Valence values are derived via post-hoc Russell Circumplex projection; (2) Gemini 2.5 Flash, an LLM analysing the full speech audio together with its transcript in an open-ended, context-aware fashion; and (3) TRUST-Pathos scores from a three-advocate LLM supervisor ensemble. Spearman rank correlations reveal that Gemini Valence correlates strongly with TRUST-Pathos (rho = +0.664, p < 0.001), whereas emotion2vec Valence does not (rho = +0.097, p = 0.499). We further demonstrate, via a systematic quality evaluation of the Berlin Database of Emotional Speech (EMO-DB) using Gemini in an open-ended annotation paradigm, that standard SER benchmark corpora suffer from acted speech, cultural bias, and category incompatibility. Our results suggest that LLM-based multimodal analysis captures semantically defined political emotion substantially better than acoustic models alone, while acoustic features remain informative for low-level Arousal estimation. Future work will extend this approach to video-based analysis incorporating facial expression and gaze.",
-      "published": "2026-05-21T17:03:37Z",
-      "updated": "2026-05-21T17:03:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22732v1"
+      "summary": "The Open Radio Access Network (O-RAN) architecture allows AI to be embedded directly into the RAN through modular xApps and rApps, yet creating these applications collecting data, training models, writing code, and deploying them safely remains slow and largely manual. Large Language Models (LLMs) offer strong reasoning and code-generation capabilities but are unsuited for the fast, deterministic inference required in real-time RAN control. We present a proof-of-concept Dual-Brain architecture that combines both strengths: an LLM-based orchestrator translates operator intents into data-collection policies and deployment code, while an automated ML engine, NeuralSmith, trains lightweight classifiers on demand via an API. We describe the architecture and provisioning workflow, share practical insights from a containerized O-RAN 5G~SA testbed, and discuss open research directions.",
+      "published": "2026-05-22T16:12:39Z",
+      "updated": "2026-05-22T16:12:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2605.23809v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.22731v1",
-      "title": "Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation",
+      "id": "http://arxiv.org/abs/2412.14642v4",
+      "title": "Speak-to-Structure: Evaluating LLMs in Open-domain Natural Language-Driven Molecule Generation",
       "authors": [
-        "Dong Nie"
+        "Jiatong Li",
+        "Junxian Li",
+        "Weida Wang",
+        "Yunqing Liu",
+        "Changmeng Zheng",
+        "Yatao Bian",
+        "Dongzhan Zhou",
+        "Xiao-yong Wei",
+        "Qing Li"
       ],
-      "summary": "Large language model post-training methods such as supervised fine-tuning (SFT), reinforcement learning (RL), and distillation are often analyzed through their loss functions: maximum likelihood, policy gradients, forward KL, reverse KL, or related objective-level variants. We study a complementary factor: the state distribution on which supervision is applied. For an autoregressive policy, a state is a prompt plus generated prefix. SFT trains on fixed dataset states, while RL and on-policy distillation (OPD) train on states induced by the current learner. We formalize post-training as state-distribution shaping and run a controlled smallscale study using Qwen3-0.6B-Base on GSM8K, with TruthfulQA and MMLU as retention evaluations. Our results show three phenomena. First, a mild SFT run improves GSM8K with little forgetting, while a stress SFT run causes substantial retention loss. Second, OPD from a degraded SFT teacher surpasses that teacher on GSM8K, TruthfulQA, and MMLU, despite using the teacher as its only supervision source. Third, a lightweight on-policy RL run improves GSM8K while preserving retention. These results support a state-centric view of post-training: the source and locality of training states can be as important as the form of the supervision signal.",
-      "published": "2026-05-21T17:03:22Z",
-      "updated": "2026-05-21T17:03:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.22731v1"
+      "summary": "Recently, Large Language Models (LLMs) have demonstrated great potential in natural language-driven molecule discovery. However, existing datasets and benchmarks for molecule-text alignment are predominantly built on one-to-one mappings, measuring LLMs' ability to retrieve a single, pre-defined answer, rather than their creative potential to generate diverse, yet equally valid, molecular candidates. To address this critical gap, we propose Speak-to-Structure (S^2-Bench), the first benchmark to evaluate LLMs in open-domain natural language-driven molecule generation. S^2-Bench is specifically designed for one-to-many relationships, challenging LLMs to exhibit genuine molecular understanding and open-ended generation capabilities. Our benchmark includes three key tasks: molecule editing (MolEdit), molecule optimization (MolOpt), and customized molecule generation (MolCustom), each probing a different aspect of molecule discovery. We also introduce OpenMolIns, a large-scale instruction tuning dataset that enables Llama3.1-8B to surpass the most powerful LLMs like GPT-4o and Claude-3.5 on S^2-Bench. Our comprehensive evaluation of 31 LLMs shifts the focus from simple pattern recall to realistic molecular design, paving the way for more capable LLMs in natural language-driven molecule discovery. Our codes and datasets are fully accessible through the Github Repository: https://github.com/phenixace/S2-TOMG-Bench and Huggingface Datasets: https://huggingface.co/datasets/phenixace/S2-TOMG-Bench.",
+      "published": "2024-12-19T08:51:16Z",
+      "updated": "2026-05-22T16:03:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.14642v4"
     }
   ]
 }
