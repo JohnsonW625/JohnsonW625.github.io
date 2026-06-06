@@ -1,198 +1,215 @@
 {
-  "generated_at_utc": "2026-06-01T03:58:44Z",
+  "generated_at_utc": "2026-06-06T03:23:54Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2501.04661v3",
-      "title": "Beyond Memorization: Assessing Semantic Generalization in Large Language Models Using Phrasal Constructions",
+      "id": "http://arxiv.org/abs/2602.05843v2",
+      "title": "OdysseyArena: Benchmarking Large Language Models For Long-Horizon, Active and Inductive Interactions",
       "authors": [
-        "Wesley Scivetti",
-        "Melissa Torgbi",
-        "Austin Blodgett",
-        "Mollie Shichman",
-        "Taylor Hudson",
-        "Claire Bonial",
-        "Harish Tayyar Madabushi"
+        "Hang Yan",
+        "Fangzhi Xu",
+        "Qiushi Sun",
+        "Jinyang Wu",
+        "Zixian Huang",
+        "Muye Huang",
+        "Jingyang Gong",
+        "Zichen Ding",
+        "Kanzhi Cheng",
+        "Yian Wang",
+        "Xinyu Che",
+        "Zeyi Sun",
+        "Jian Zhang",
+        "Zhangyue Yin",
+        "Haoran Luo",
+        "Ben Kao",
+        "Qika Lin"
       ],
-      "summary": "The web-scale of pretraining data has created an important evaluation challenge: to disentangle linguistic competence on cases well-represented in pretraining data from generalization to out-of-domain language, specifically the dynamic, real-world instances less common in pretraining data. To this end, we construct a diagnostic evaluation to systematically assess natural language understanding in LLMs by leveraging Construction Grammar (CxG). CxG provides a psycholinguistically grounded framework for testing generalization, as it explicitly links syntactic forms to abstract, non-lexical meanings. Our novel inference evaluation dataset consists of English phrasal constructions, for which speakers are known to be able to abstract over commonplace instantiations in order to understand and produce creative instantiations. Our evaluation dataset uses CxG to evaluate two central questions: first, if models can 'understand' the semantics of sentences for instances that are likely to appear in pretraining data less often, but are intuitive and easy for people to understand. Second, if LLMs can deploy the appropriate constructional semantics given constructions that are syntactically identical but with divergent meanings. Our results demonstrate that state-of-the-art models, including GPT-o1, exhibit a performance drop of over 40% on our second task, revealing a failure to generalize over syntactically identical forms to arrive at distinct constructional meanings in the way humans do. We make our novel dataset and associated experimental data, including prompts and model responses, publicly available.",
-      "published": "2025-01-08T18:15:10Z",
-      "updated": "2026-05-29T17:59:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2501.04661v3"
+      "summary": "The rapid advancement of Large Language Models (LLMs) has catalyzed the development of autonomous agents capable of navigating complex environments. However, existing evaluations primarily adopt a deductive paradigm, where agents execute tasks based on explicitly provided rules and static goals, often within limited planning horizons. Crucially, this neglects the inductive necessity for agents to discover latent transition laws from experience autonomously, which is the cornerstone for enabling agentic foresight and sustaining strategic coherence. To bridge this gap, we introduce OdysseyArena, which re-centers agent evaluation on long-horizon, active, and inductive interactions. We formalize and instantiate four primitives, translating abstract transition dynamics into concrete interactive environments. Building upon this, we establish OdysseyArena-Lite for standardized benchmarking, providing a set of 120 tasks to measure an agent's inductive efficiency and long-horizon discovery. Pushing further, we introduce OdysseyArena-Challenge to stress-test agent stability across extreme interaction horizons (e.g., > 200 steps). Extensive experiments on 15+ leading LLMs reveal that even frontier models exhibit a deficiency in inductive scenarios, identifying a critical bottleneck in the pursuit of autonomous discovery in complex environments. Our code and data are available at https://github.com/xufangzhi/Odyssey-Arena",
+      "published": "2026-02-05T16:31:43Z",
+      "updated": "2026-06-04T17:59:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.05843v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.10117v5",
-      "title": "Biases in the Blind Spot: Detecting What LLMs Fail to Mention",
+      "id": "http://arxiv.org/abs/2606.06485v1",
+      "title": "PAR3D: A Unified 3D-MLLM with Part-Aware Representation for Scene Understanding",
       "authors": [
-        "Iván Arcuschin",
-        "David Chanin",
-        "Adrià Garriga-Alonso",
-        "Oana-Maria Camburu"
+        "Shaohui Dai",
+        "Yansong Qu",
+        "You Shen",
+        "Shengchuan Zhang",
+        "Liujuan Cao"
       ],
-      "summary": "Large Language Models (LLMs) often provide chain-of-thought (CoT) reasoning traces that appear plausible, but may hide internal biases. We call these unverbalized biases. Monitoring models via their stated reasoning is therefore unreliable, and existing bias evaluations typically require predefined categories and hand-crafted datasets. In this work, we introduce a fully automated, black-box pipeline for detecting task-specific unverbalized biases. Given a task dataset, the pipeline uses LLM autoraters to generate candidate bias concepts. It then tests each concept on progressively larger input samples by generating positive and negative variations, and applies statistical techniques for multiple testing and early stopping. A concept is flagged as an unverbalized bias if it yields statistically significant performance differences while not being cited as justification in the model's CoTs. We evaluate our pipeline across seven LLMs on three decision tasks (hiring, loan approval, and university admissions). Our technique automatically discovers previously unknown biases in these models (e.g., Spanish fluency, English proficiency, writing formality). In the same run, the pipeline also validates biases that were manually identified by prior work (gender, race, religion, ethnicity). More broadly, our proposed approach provides a practical, scalable path to automatic, more efficient, and broader task-specific unverbalized bias discovery.",
-      "published": "2026-02-10T18:59:56Z",
-      "updated": "2026-05-29T17:54:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.10117v5"
+      "summary": "Recent advances in 3D multimodal large language models (3D-MLLMs) have enabled unified solutions for 3D scene understanding tasks, including visual question answering, captioning, and referring segmentation. However, existing 3D-MLLMs remain largely object-centric, limiting their ability to model fine-grained part structures that are essential for embodied interaction with 3D environments. In this work, we present PAR3D, a unified part-aware 3D-MLLM framework that enables models to understand, reason about, and ground both objects and their parts in 3D scenes. To enable training and evaluation of part-aware 3D scene understanding, we introduce ScenePart, a synthetic 3D scene dataset with part-level annotations and language instructions. We further develop Part-Aware 3D Representation Learning to enrich 3D visual representations with fine-grained part-level semantics, and propose Hierarchical Segmentation Query Generation to ground part targets via hierarchical object-part queries. Extensive experiments show that our method substantially improves part-level question answering and referring segmentation, while also achieving strong performance across object-level vision-language tasks.",
+      "published": "2026-06-04T17:59:04Z",
+      "updated": "2026-06-04T17:59:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06485v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.11683v3",
-      "title": "Boundary-Guided Policy Optimization for Memory-efficient RL of Diffusion Large Language Models",
+      "id": "http://arxiv.org/abs/2606.06473v1",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
       "authors": [
-        "Nianyi Lin",
-        "Jiajie Zhang",
-        "Lei Hou",
-        "Juanzi Li"
+        "Shangheng Du",
+        "Xiangchao Yan",
+        "Jinxin Shi",
+        "Zongsheng Cao",
+        "Shiyang Feng",
+        "Zichen Liang",
+        "Boyuan Sun",
+        "Tianshuo Peng",
+        "Yifan Zhou",
+        "Xin Li",
+        "Jie Zhou",
+        "Liang He",
+        "Bo Zhang",
+        "Lei Bai"
       ],
-      "summary": "A key challenge in applying reinforcement learning (RL) to diffusion large language models (dLLMs) is the intractability of their likelihood functions, which are essential for the RL objective, necessitating corresponding approximation during training. While existing methods approximate the log-likelihoods by their evidence lower bounds (ELBOs) via customized Monte Carlo (MC) sampling, they incur significant memory overhead due to the need to retain all MC samples for the gradient computation of non-linear terms in the RL objective, and thus restrict feasible sample sizes, leading to imprecise likelihood approximations and distorted RL objective. To address this, we propose \\emph{Boundary-Guided Policy Optimization} (BGPO), a memory-efficient RL algorithm that maximizes a specially constructed lower bound of the ELBO-based objective. This lower bound is carefully designed to satisfy two key properties: (1) Linearity: it is a linear sum where each term depends only on a single MC sample, thereby enabling gradient accumulation across samples and ensuring constant memory usage; (2) Equivalence: Both the value and gradient of this lower bound are equal to those of the ELBO-based objective in on-policy training, making it also an effective approximation for the original RL objective. These properties allow BGPO to adopt a large MC sample size, improving likelihood approximations and RL objective estimation, which in turn leads to enhanced performance. Experiments show that BGPO significantly outperforms previous RL algorithms for dLLMs in math problem solving, code generation, and planning tasks. Our codes and models are available at \\href{https://github.com/THU-KEG/BGPO}{https://github.com/THU-KEG/BGPO}.",
-      "published": "2025-10-13T17:47:50Z",
-      "updated": "2026-05-29T17:51:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.11683v3"
+      "summary": "Large language model (LLM) agents are increasingly applied to long-horizon tasks such as scientific discovery and machine learning engineering (MLE), where sustained self-evolution becomes a key capability. However, existing MLE agents suffer from inter-branch information isolation, memoryless search, and lack of hierarchical control, which together hinder long-horizon optimization. We present MLEvolve, an LLM-based self-evolving multi-agent framework for end-to-end machine learning algorithm discovery. By extending tree search to Progressive MCGS, MLEvolve enables cross-branch information flow through graph-based reference edges and gradually shifts the search from broad exploration to focused exploitation with an entropy-inspired progressive schedule. To allow the agent to evolve with accumulated experience, we introduce Retrospective Memory, which combines a cold-start domain knowledge base with a dynamic global memory for task-specific experience retrieval and reuse. For stable long-horizon iteration, we further decouple strategic planning from code generation with adaptive coding modes. Evaluation on MLE-Bench shows that MLEvolve achieves state-of-the-art performance across multiple dimensions including average medal rate and valid submission rate under a 12-hour budget (half the standard runtime). Moreover, MLEvolve also outperforms specialized algorithm discovery methods including AlphaEvolve on mathematical algorithm optimization tasks, demonstrating strong cross-domain generalization. Our code is available at https://github.com/InternScience/MLEvolve.",
+      "published": "2026-06-04T17:55:59Z",
+      "updated": "2026-06-04T17:55:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06473v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.31584v1",
-      "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+      "id": "http://arxiv.org/abs/2606.06464v1",
+      "title": "Human Adults and LLMs as Scientists: Who Benefits from Active Exploration?",
       "authors": [
-        "Nianyi Lin",
-        "Jiajie Zhang",
-        "Lei Hou",
-        "Juanzi Li"
+        "Mandana Samiei",
+        "Eunice Yiu",
+        "Anthony GX-Chen",
+        "Dongyan Lin",
+        "Jocelyn Shen",
+        "Blake A. Richards",
+        "Alison Gopnik",
+        "Doina Precup"
       ],
-      "summary": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content. Reinforcement learning with verifiable rewards (RLVR) has shown promise for this task, yet existing methods are limited by low-confusability distractors and sparse, outcome-only reward signals that cannot supervise intermediate reasoning steps. To address these issues, we introduce \\textsc{LongTraceRL}. For data construction, we generate multi-hop questions via knowledge graph random walks and leverage search agent trajectories to build \\emph{tiered distractors}: documents the agent read but did not cite (high confusability) and documents that appeared in search results but were never opened (low confusability), producing training contexts that are far more challenging than those built by random sampling or one-shot search. For reward design, we propose a \\emph{rubric reward} that uses the gold entities along each reasoning chain as fine-grained, entity-level process supervision. This rubric reward is applied only to responses with correct final answers (positive-only strategy), distinguishing the reasoning quality among correct responses and preventing reward hacking. Experiments on three reasoning LLMs (4B--30B) across five long-context benchmarks demonstrate that \\textsc{LongTraceRL} consistently outperforms strong baselines and encourages comprehensive, evidence-grounded reasoning. Codes, datasets and models are available at \\href{https://github.com/THU-KEG/LongTraceRL}{https://github.com/THU-KEG/LongTraceRL}.",
-      "published": "2026-05-29T17:51:40Z",
-      "updated": "2026-05-29T17:51:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.31584v1"
+      "summary": "A long-standing finding in the causal learning literature is that adults struggle to identify conjunctive causal rules, where an effect requires the simultaneous presence of multiple causes, while performing better in disjunctive settings. However, most demonstrations of this ``conjunctive handicap'' rely on passive observation paradigms with limited evidence, where learners have no control over evidence generation. This paper asks whether this bias persists when adults are granted agency through active exploration. Using a modified ``blicket detector'' task, adult participants freely intervened to identify causal objects under conjunctive or disjunctive rule structures. We show that active exploration substantially improves adults' conjunctive causal reasoning, although conjunctive rules still require more tests to infer than disjunctive rules. We further compare human performance to a range of large language models in the same setting. While some state-of-the-art models approach human-level performance on hypothesis inference accuracy, they often exhibit less efficient exploration strategies and similar conjunctive-disjunctive performance gaps.",
+      "published": "2026-06-04T17:53:36Z",
+      "updated": "2026-06-04T17:53:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06464v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.16278v2",
-      "title": "Learning to Reason with Insight for Informal Theorem Proving",
+      "id": "http://arxiv.org/abs/2602.07253v4",
+      "title": "From Out-of-Distribution Detection to Hallucination Detection: A Geometric View",
       "authors": [
-        "Yunhe Li",
-        "Hao Shi",
-        "Bowen Deng",
-        "Wei Wang",
-        "Mengzhe Ruan",
-        "Hanxu Hou",
-        "Zhongxiang Dai",
-        "Siyang Gao",
-        "Chao Wang",
-        "Shuang Qiu",
-        "Linqi Song"
+        "Litian Liu",
+        "Reza Pourreza",
+        "Yubing Jian",
+        "Yao Qin",
+        "Roland Memisevic"
       ],
-      "summary": "Although most of the automated theorem-proving approaches depend on formal proof systems, informal theorem proving can align better with large language models' (LLMs) strength in natural language processing. In this work, we identify a primary bottleneck in informal theorem proving as a lack of insight, namely the difficulty of recognizing the core techniques required to solve complex problems. To address this, we propose $\\texttt{DeepInsight}$, a unified training framework designed to cultivate this essential reasoning skill and enable LLMs to perform insightful reasoning. Our framework consists of three components: (1) $\\texttt{DeepInsightTheorem}$, a hierarchical dataset that structures informal proofs by explicitly extracting core techniques and proof sketches alongside the final proof; (2) a Progressive Multi-Stage SFT strategy that mimics the human learning process, teaching the model proof writing, planning, and insight identification; and (3) $\\texttt{InsightPO}$, a policy optimization method that assigns structured rewards over this insight hierarchy. Our experiments on challenging mathematical benchmarks demonstrate that this insight-aware generation strategy significantly outperforms baselines. These results demonstrate that teaching models to identify and apply core techniques can substantially improve their mathematical reasoning.",
-      "published": "2026-04-17T17:36:21Z",
-      "updated": "2026-05-29T17:46:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.16278v2"
+      "summary": "Detecting hallucinations in large language models is a critical open problem with significant implications for safety and reliability. While existing hallucination detection methods achieve strong performance in question-answering tasks, they remain less effective on tasks requiring reasoning. In this work, we revisit hallucination detection through the lens of out-of-distribution (OOD) detection, a well-studied problem in areas like computer vision. Treating next-token prediction in language models as a classification task allows us to apply OOD techniques, provided appropriate modifications are made to account for the structural differences in large language models. We show that OOD-based approaches yield training-free, single-sample-based detectors, achieving strong accuracy in hallucination detection for reasoning tasks. Overall, our work suggests that reframing hallucination detection as OOD detection provides a promising and scalable pathway toward language model safety.",
+      "published": "2026-02-06T23:05:48Z",
+      "updated": "2026-06-04T17:49:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.07253v4"
     },
     {
-      "id": "http://arxiv.org/abs/2605.31574v1",
-      "title": "Can Generative AI help people navigate Radical Moral Disagreements? The CONSIDER prototype",
+      "id": "http://arxiv.org/abs/2606.06454v1",
+      "title": "Scaffold, Not Vocabulary? A Controlled, Two-Tier, Pre-Registered Study of a Popperian Code-Generation Skill",
       "authors": [
-        "William Hohnen-Ford",
-        "Sarah Chen",
-        "Kathryn B. Francis",
-        "Madeline G. Reinecke",
-        "Ilina Singh",
-        "David Lyreskog"
+        "Mehmet Iscan"
       ],
-      "summary": "Radical Moral Disagreements (RMDs) are highly polarising topics that are increasingly censored in everyday life, with growing evidence suggesting that this polarisation carries measurable costs to public mental health. To address these challenges, some researchers have proposed Large Language Models (LLMs) as a means to support more democratic deliberation and better moral reasoning. Yet existing tools are poorly calibrated to help people navigate RMDs, because of their intense and divisive characteristics. This paper introduces CONSIDER, a prototype for a one-to-one AI tool for RMD navigation. Drawing on Mill's account of the epistemic value of disagreement, CONSIDER aims at value clarification through structured disagreement with an opposing LLM-generated opinion. We describe CONSIDER's design logic and analyse potential risks posed by such tools to guide future development.",
-      "published": "2026-05-29T17:43:56Z",
-      "updated": "2026-05-29T17:43:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.31574v1"
+      "summary": "Large language models increasingly write, review, and judge code, and a fast-growing practice equips them with prompt 'skills' that ask the model to reason like a scientist. A prominent example tells the model to act as a Popperian falsificationist, and such skills are reported to improve generated code. But these gains are almost always read off an LLM-as-a-judge, an instrument with documented positional, self-preference, and stylistic biases. We ask: if it appears to help, is the gain from the skill's Popperian content, or from the structure any scaffold imposes? We pre-register a two-tier ablation with three controls: a length-matched placebo, a labels-only scaffold that keeps the Popperian headers but strips the procedure, and an execution oracle (HumanEval+ unit tests), plus a vocabulary-halo sentinel and a same-model self-judge audit. On a frontier model (Claude Sonnet 4.6, N=163) all conditions sit near the benchmark ceiling and do not separate, so the pre-registered +5-point improvement is not supported (a ceiling-limited non-detection). On a small model (Qwen2.5-Coder-0.5B, N=164) structured arms lift best-of-eight correctness by 20-22 points, but the full skill shows no separable benefit over a labels-only scaffold (aggregate F@8=L@8 vs V@8=34.8%), and the placebo trails by only 2.4 points. A 0.5B self-judge applying the Popperian rubric does not beat random selection and concentrates 60% of its picks on one index. In the two settings tested, the skill's Popperian procedural content adds no separable execution-correctness benefit beyond a labels-only scaffold, so the gains track scaffold structure. We contribute a calibrated negative result and a reusable disambiguation protocol; the finding bounds an engineering claim about one prompt-skill family and is not an evaluation of Popperian methodology in general.",
+      "published": "2026-06-04T17:49:00Z",
+      "updated": "2026-06-04T17:49:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06454v1"
     },
     {
-      "id": "http://arxiv.org/abs/2512.13996v2",
-      "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+      "id": "http://arxiv.org/abs/2606.06453v1",
+      "title": "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents",
       "authors": [
-        "Can Jin",
-        "Hongwu Peng",
-        "Mingcan Xiang",
-        "Qixin Zhang",
-        "Xiangchi Yuan",
-        "Amit Hasan",
-        "Ohiremen Dibua",
-        "Yifan Gong",
-        "Yan Kang",
-        "Dimitris N. Metaxas"
+        "Zhuoming Chen",
+        "Xinrui Zhong",
+        "Qilong Feng",
+        "Ranajoy Sadhukhan",
+        "Yang Zhou",
+        "Michael Qizhe Shieh",
+        "Zhihao Jia",
+        "Beidi Chen"
       ],
-      "summary": "Sparse Mixture-of-Experts architectures are essential for scaling model capacity efficiently, yet the standard Top-$k$ routing imposes a rigid sparsity pattern that ignores the intrinsic variance in token difficulty and layer-specific computational needs. Top-$p$ routing is more adaptive because it selects experts until their cumulative routing probability reaches a threshold, allowing confident tokens to use fewer experts and ambiguous tokens to recruit more. However, we demonstrate that existing naive Top-$p$ implementations with fixed global probability thresholds provide only marginal gains over Top-$k$, suffer from hyperparameter sensitivity, and result in uncontrolled computational costs. In this paper, we propose **DTop-$p$**, a sparsity-controllable dynamic routing mechanism that learns the Top-$p$ probability threshold with a Proportional-Integral controller and uses dynamic routing normalization to support layer-wise expert selection under a global sparsity constraint. Extensive experiments on Large Language Models and Diffusion Transformers demonstrate that **DTop-$p$** consistently outperforms both Top-$k$ and fixed Top-$p$ baselines while matching the average FLOPs of Top-$k$ MoE. Our analysis confirms that **DTop-$p$** exhibits strong scaling properties across expert granularity, total expert capacity, model size, and dataset size, offering a robust and efficient MoE framework for foundation model pre-training.",
-      "published": "2025-12-16T01:28:57Z",
-      "updated": "2026-05-29T17:30:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.13996v2"
+      "summary": "Sparse attention is becoming increasingly important for serving large language models (LLMs) as generation lengths continue to grow. However, deploying and evaluating new sparse attention algorithms at scale remains highly engineering-intensive, slowing both human researchers and AI agents in exploring the sparse attention design. To address this challenge, we present Vortex, a system that combines a Python-embedded frontend language atop a page-centric tensor abstraction for expressing a broad range of sparse attention algorithms, with an efficient backend tightly integrated into modern LLM serving stacks. Vortex enables rapid prototyping, deployment, and evaluation of sparse attention algorithms, effectively translating their theoretical efficiency gains into real-world throughput improvements. As a result, Vortex substantially accelerates the design and iteration of sparse attention algorithms. First, AI agents use Vortex to automatically generate and refine diverse algorithms, the best reaching up to $3.46\\times$ higher throughput than full attention while preserving accuracy. Second, Vortex extends sparse attention to emerging architectures and very large models that are otherwise hard to experiment with, reaching up to $4.7\\times$ higher throughput on the MLA-based GLM-4.7-Flash and $1.37\\times$ on the 229B-parameter MiniMax-M2.7 on NVIDIA B200 GPUs.",
+      "published": "2026-06-04T17:48:17Z",
+      "updated": "2026-06-04T17:48:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06453v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.31561v1",
-      "title": "What Am I Missing? Question-Answering as Hidden State Probing",
+      "id": "http://arxiv.org/abs/2606.06447v1",
+      "title": "Latent Reasoning with Normalizing Flows",
       "authors": [
-        "Chu Fei Luo",
-        "Samuel Dahan",
-        "Xiaodan Zhu"
+        "Guancheng Tu",
+        "Xiangjun Fu",
+        "Suhao Yu",
+        "Yao Tang",
+        "Haoqiang Kang",
+        "Lianhui Qin",
+        "Yizhe Zhang",
+        "Jiatao Gu"
       ],
-      "summary": "Test-time reasoning has become a significant field of study since the introduction of chain-of-thought reasoning in large language models (LLMs). However, the mechanisms of this reasoning process are still under-explored -- from the same input prompt, and even the same partial solution, LLMs can produce varied answers if sampled multiple times. We propose to leverage question-asking as an inference-time intervention that articulates information about the model's hidden state. To achieve that, we present a student-teacher setting where a student asks questions to a teacher. We train a probe on the student's hidden state before and after asking a question and find it is predictive of the trajectory's final correctness, even before generating the teacher's answer. This suggests there is a meaningful signal from the self-diagnosis that occurs during question generation rather than information transfer from the teacher. We then frame question-asking as a sequential decision problem, using this probe as a quality score, and define a gating policy to ask questions that maximize likelihood of correctness. We find that the success of question-asking as an intervention is largely dependent on the model's self-consistency. Our empirical results show a gap between detection and recovery; while our gating policy captures model correctness and uncertainty, interventions are equally likely to harm correct trajectories as they are to recover incorrect ones. This gap between diagnosis and correction has broader implications on language models' capacity for self-refinement under uncertainty.",
-      "published": "2026-05-29T17:27:07Z",
-      "updated": "2026-05-29T17:27:07Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.31561v1"
+      "summary": "Large language models often improve reasoning by generating explicit chain-of-thought (CoT), demonstrating the importance of intermediate computation. However, textual CoT forces this computation through a discrete, serial, and communication-oriented token stream: each reasoning step must be verbalized before the model can proceed, even when the underlying update is semantic, uncertain, or only partially formed. Latent reasoning offers a higher-bandwidth alternative by performing intermediate computation in compact continuous states before committing to text. Yet existing latent-reasoning methods often sacrifice key advantages that make CoT effective in autoregressive language models, including native left-to-right generation, probabilistic sampling, compatibility with KV-cache decoding, and tractable likelihood estimation. We propose NF-CoT, a latent reasoning framework that preserves these advantages by modeling continuous thoughts with normalizing flows. NF-CoT instantiates a TARFlow-style normalizing flow inside the LLM backbone, defining a tractable probability model over compact continuous thoughts distilled from explicit CoT. Continuous-thought positions are generated by an NF head, while text positions are generated by the standard LM head within the same causal stream. This design provides exact likelihoods for latent thoughts, enables probabilistic left-to-right decoding with the original KV cache, and supports direct policy-gradient optimization in the latent reasoning space. On code-generation benchmarks, NF-CoT improves pass rates over explicit-CoT and prior latent-reasoning baselines while substantially reducing intermediate-reasoning cost.",
+      "published": "2026-06-04T17:44:17Z",
+      "updated": "2026-06-04T17:44:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06447v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.12440v3",
-      "title": "MedFact: Benchmarking the Fact-Checking Capabilities of Large Language Models on Chinese Medical Texts",
+      "id": "http://arxiv.org/abs/2606.06444v1",
+      "title": "USAD 2.0: Scaling Representation Distillation for Universal Audio Understanding",
       "authors": [
-        "Jiayi He",
-        "Yangmin Huang",
-        "Qianyun Du",
-        "Xiangying Zhou",
-        "Zhiyang He",
-        "Jiaxue Hu",
-        "Xiaodong Tao",
-        "Lixian Lai"
+        "Heng-Jui Chang",
+        "Alexander H. Liu",
+        "Saurabhchand Bhati",
+        "Mrudula Athi",
+        "Anton Ratnarajah",
+        "Amit Chhetri",
+        "James Glass"
       ],
-      "summary": "Deploying Large Language Models (LLMs) in medical applications requires fact-checking capabilities to ensure patient safety and regulatory compliance. We introduce MedFact, a challenging Chinese medical fact-checking benchmark with 2,116 expert-annotated instances from diverse real-world texts, spanning 13 specialties, 8 error types, 4 writing styles, and 5 difficulty levels. Construction uses a hybrid AI-human framework where iterative expert feedback refines AI-driven, multi-criteria filtering to ensure high quality and difficulty. We evaluate 20 leading LLMs on veracity classification and error localization, and results show models often determine if text contains errors but struggle to localize them precisely, with top performers falling short of human performance. Our analysis reveals the \"over-criticism\" phenomenon, a tendency for models to misidentify correct information as erroneous, which can be exacerbated by advanced reasoning techniques such as multi-agent collaboration and inference-time scaling. MedFact highlights the challenges of deploying medical LLMs and provides resources to develop factually reliable medical AI systems.",
-      "published": "2025-09-15T20:46:21Z",
-      "updated": "2026-05-29T17:23:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.12440v3"
+      "summary": "Audio encoders are critical to modern audio applications as large language models (LLMs) increasingly rely on a single encoder for diverse inputs. While self-supervised learning (SSL) has yielded strong domain-specific encoders like speech or music experts, multi-domain approaches like USAD and SPEAR remain limited in coverage and evaluation. Recent studies also suggest supervised encoders align better with audio LLMs. We present USAD 2.0, a universal encoder integrating knowledge from both SSL and supervised foundation models. USAD 2.0 introduces domain-aware distillation to address teacher mismatch, extends coverage to the music domain, and adds second-stage supervised distillation for downstream use. We further scale the model to one billion parameters via depth scaling. Experiments show USAD 2.0 achieves strong or state-of-the-art performance across probing and LLM-based evaluations.",
+      "published": "2026-06-04T17:42:05Z",
+      "updated": "2026-06-04T17:42:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06444v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.11134v2",
-      "title": "Spurious Correlation Learning in Preference Optimization: Mechanisms, Consequences, and Mitigation via Tie Training",
+      "id": "http://arxiv.org/abs/2606.06443v1",
+      "title": "Revising Context, Shifting Simulated Stance: Auditing LLM-Based Stance Simulation in Online Discussions",
       "authors": [
-        "Christian Moya",
-        "Alex Semendinger",
-        "Guang Lin",
-        "Elliott Thornley"
+        "Xinnong Zhang",
+        "Wanting Shan",
+        "Hanjia Lyu",
+        "Zhongyu Wei",
+        "Jiebo Luo"
       ],
-      "summary": "Preference learning methods like Direct Preference Optimization (DPO) are known to induce reliance on spurious correlations, leading to sycophancy and length bias in today's language models and potentially severe goal misgeneralization in future systems. In this work, we provide a unified theoretical analysis of this phenomenon, characterizing the mechanisms of spurious learning, its consequences on deployment, and a provable mitigation strategy. Focusing on log-linear policies, we show that standard preference-learning objectives induce reliance on spurious features at the population level through two channels: mean spurious bias and causal-spurious correlation leakage. We then show that this reliance creates an irreducible vulnerability to distribution shift: more data from the same training distribution fails to reduce the model's dependence on spurious features. To address this, we propose tie training, a data augmentation strategy using ties (equal-utility preference pairs) to introduce data-driven regularization. We demonstrate that this approach selectively reduces spurious learning without degrading causal learning. Finally, we validate our theory on log-linear models and provide empirical evidence that both the spurious learning mechanisms and the benefits of tie training persist for neural networks and large language models.",
-      "published": "2026-05-11T18:41:12Z",
-      "updated": "2026-05-29T17:16:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.11134v2"
+      "summary": "Large language models are increasingly used to simulate social media users and infer how individuals may respond to online discussions. However, it remains unclear whether these simulations reflect precise user-specific beliefs or whether they are highly sensitive to semantically independent changes in conversational contexts. In this work, we study counterfactual context revision as a framework for auditing LLM-based stance simulation. Given an original online conversation, we first infer a target user's stance toward a specific topic. We then apply controlled revision strategies to the conversational context and simulate the user's stance again under the revised context. We compare text-only revision strategies with a multimodal one that incorporates meme-based context and evaluate two main effectiveness metrics, i.e., average directional stance shift and stance transition rate. The results reveal effective and robust stance transitions in both text-only and multimodal strategies across different polarization-preference mechanisms. Our study contributes an evaluation framework for understanding the context sensitivity of LLM-based stance simulation. More broadly, it highlights both the promise and risk of using LLMs to simulate online opinion dynamics.",
+      "published": "2026-06-04T17:41:54Z",
+      "updated": "2026-06-04T17:41:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06443v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.31550v1",
-      "title": "Semantic Triplet Restoration: A Novel Protocol for Hierarchical Table Understanding in Large Language Models",
+      "id": "http://arxiv.org/abs/2606.06428v1",
+      "title": "Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation",
       "authors": [
-        "Yibin Zhao",
-        "Fangxin Shang",
-        "Dingrui Yang",
-        "Yuqi Wang"
+        "Hanxu Hu",
+        "Zdeněk Šnajdr",
+        "Pinzhen Chen",
+        "Jannis Vamvas",
+        "Rico Sennrich"
       ],
-      "summary": "Table question answering requires models to recover semantic relations encoded implicitly by two-dimensional layout, merged cells, and hierarchical headers. Current pipelines typically use HTML or Markdown as intermediate table representations, but these layout-oriented serializations introduce markup overhead and require large language models to infer header-cell alignments from row and column spans. We propose Semantic Triplet Restoration (STR), a protocol that rewrites each cell as an atomic fact <item path, feature path, value>, where the item path specifies the row-wise entity, the feature path specifies the hierarchical attribute, and the value contains the cell content. We also present TripletQL, a lightweight query-aware router that uses STR to select an appropriate rendering or filtered subset of triplets for each question. Across four Chinese and English table-QA benchmarks, STR matches or improves upon HTML-based baselines while reducing input tokens. The relative benefit grows for smaller language models and longer table contexts, suggesting that explicit semantic representations are especially useful under constrained inference budgets. Code and data are available at https://github.com/Phoenix-ni/STR.git .",
-      "published": "2026-05-29T17:10:25Z",
-      "updated": "2026-05-29T17:10:25Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.31550v1"
+      "summary": "Prior work has shown that large language models (LLMs) can translate unseen or low-resource languages by undergoing continued training or even by encoding a grammar book in their context. However, both methods typically overfit specific languages, with limited zero-shot transfer at test time. To translate extremely low-resource languages at scale, we argue that LLMs must acquire the meta-skill of utilizing in-context linguistic knowledge rather than memorizing specific languages. In this paper, we propose a reinforcement learning (RL) approach to unseen language translation given rich linguistic context, using a surface-level translation metric (chrF) as the reward. Empirically, despite the lightweight reward, our RL-trained models effectively extract and apply relevant linguistic information from the provided context, leading to better translations on completely unseen languages than in-context learning or supervised fine-tuning. Our analyses suggest that outcome-based RL can extend beyond conventional reasoning tasks like math and coding to serve as a recipe for language learning from context.",
+      "published": "2026-06-04T17:32:06Z",
+      "updated": "2026-06-04T17:32:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06428v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.03415v3",
-      "title": "LLMs Lean on Priors, Not Programming Language Semantics",
+      "id": "http://arxiv.org/abs/2606.06425v1",
+      "title": "Annotation of Positive vs Negative User Interactions for Social Sign Prediction",
       "authors": [
-        "Aditya Thimmaiah",
-        "Jiyang Zhang",
-        "Jayanth Srinivasa",
-        "Junyi Jessy Li",
-        "Milos Gligoric"
+        "Biancamaria Bombino",
+        "Chiara Boldrini",
+        "Andrea Passarella",
+        "Marco Conti"
       ],
-      "summary": "Recent work asks whether large language models (LLMs) condition their reasoning on explicit rules rather than statistical regularities from pretraining. Program execution provides a canonical instance: formal semantics define behavior through symbolic transition rules that can be systematically altered under distribution shift. We investigate whether LLMs can condition their reasoning on formal semantics through program execution and introduce PLSemanticsBench, pairing featherweight C programs with two semantic systems -- small-step operational semantics and K semantics -- and probing four capabilities: composing rules for final states, selecting rules when state is unmutated, sustaining such conditioning over long traces, and following supplied rules under novel semantics. To decouple semantic reasoning from syntactic familiarity, we redefine familiar operators to induce symbol-meaning conflict and introduce novel symbols defined only through the supplied rules, and stress-test models on Human-Written, LLM-Translated, and Fuzzer-Generated splits with increasing structural complexity. Across 11 frontier LLMs, strong final-state accuracy under standard semantics (up to 90%) drops sharply -- by as much as 40--60% points -- under semantic mutations and increasing structural complexity. Only a handful of models achieve non-zero long-horizon conditioning accuracy, and even the best systems reach just 35%. Together, these results suggest that contemporary LLMs often rely on pretrained lexical associations rather than systematically conditioning on supplied formal rules. PLSemanticsBench is publicly available at https://EngineeringSoftware.github.io/PLSemanticsBench.",
-      "published": "2025-10-03T18:23:26Z",
-      "updated": "2026-05-29T17:06:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.03415v3"
+      "summary": "Inferring the sign of social relationships from online interactions is a fundamental challenge in social network analysis. Existing approaches typically rely on sentiment analysis to label individual interactions as positive or negative, then aggregate these labels to assign a sign to the relationship. However, sentiment analysis captures the valence of the content being discussed rather than the nature of the relational exchange itself, a conflation that can lead to systematic misclassification. In this paper, we propose a methodology that addresses this limitation by leveraging Large Language Models (LLMs) in a zero-shot setting to identify interaction-level relational signals (specifically, personal praise and personal attacks directed at the interlocutor) as more direct indicators of positive and negative social ties. We evaluate four models spanning open-weight and proprietary architectures (Qwen2.5:7b, Gemma2:9b, GPT-4o, GPT-5.4-mini) across three prompt designs of increasing complexity, on two human-annotated datasets of approximately 298 and 340 texts respectively. Results show that zero-shot LLMs achieve good classification performance on both tasks without any task-specific training data, establishing a practical baseline for relational annotation. Performance differs across tasks: attack detection is robust to prompt design and model choice, while praise detection is more sensitive to both, reflecting the greater subjectivity of positive relational gestures. These findings lay the groundwork for integrating LLM-based relational annotation into sign prediction pipelines.",
+      "published": "2026-06-04T17:29:42Z",
+      "updated": "2026-06-04T17:29:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.06425v1"
     }
   ]
 }
