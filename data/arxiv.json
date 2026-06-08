@@ -1,215 +1,190 @@
 {
-  "generated_at_utc": "2026-06-07T03:51:20Z",
+  "generated_at_utc": "2026-06-08T03:56:11Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2602.05843v2",
-      "title": "OdysseyArena: Benchmarking Large Language Models For Long-Horizon, Active and Inductive Interactions",
+      "id": "http://arxiv.org/abs/2606.07516v1",
+      "title": "Counterintuitive problems in discrete probability",
       "authors": [
-        "Hang Yan",
-        "Fangzhi Xu",
-        "Qiushi Sun",
-        "Jinyang Wu",
-        "Zixian Huang",
-        "Muye Huang",
-        "Jingyang Gong",
-        "Zichen Ding",
-        "Kanzhi Cheng",
-        "Yian Wang",
-        "Xinyu Che",
-        "Zeyi Sun",
-        "Jian Zhang",
-        "Zhangyue Yin",
-        "Haoran Luo",
-        "Ben Kao",
-        "Qika Lin"
+        "Luca Avena",
+        "Gianmarco Bet",
+        "Bernardo Busoni"
       ],
-      "summary": "The rapid advancement of Large Language Models (LLMs) has catalyzed the development of autonomous agents capable of navigating complex environments. However, existing evaluations primarily adopt a deductive paradigm, where agents execute tasks based on explicitly provided rules and static goals, often within limited planning horizons. Crucially, this neglects the inductive necessity for agents to discover latent transition laws from experience autonomously, which is the cornerstone for enabling agentic foresight and sustaining strategic coherence. To bridge this gap, we introduce OdysseyArena, which re-centers agent evaluation on long-horizon, active, and inductive interactions. We formalize and instantiate four primitives, translating abstract transition dynamics into concrete interactive environments. Building upon this, we establish OdysseyArena-Lite for standardized benchmarking, providing a set of 120 tasks to measure an agent's inductive efficiency and long-horizon discovery. Pushing further, we introduce OdysseyArena-Challenge to stress-test agent stability across extreme interaction horizons (e.g., > 200 steps). Extensive experiments on 15+ leading LLMs reveal that even frontier models exhibit a deficiency in inductive scenarios, identifying a critical bottleneck in the pursuit of autonomous discovery in complex environments. Our code and data are available at https://github.com/xufangzhi/Odyssey-Arena",
-      "published": "2026-02-05T16:31:43Z",
-      "updated": "2026-06-04T17:59:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.05843v2"
+      "summary": "This manuscript contains a collection of counterintuitive problems in discrete probability, together with detailed solutions. The dataset was constructed as part of a broader research project investigating the capabilities of the latest-generation Large Language Models (LLMs) in solving discrete probability problems, in order to assess whether LLMs tend to make systematic reasoning errors associated with known cognitive biases. The problems collected here are specifically designed to challenge heuristic reasoning strategies that often lead to intuitively appealing but mathematically incorrect conclusions. The dataset combines several types of problems. Some are adapted from classical probabilistic paradoxes and cognitive-bias literature, while others originate from recreational mathematics sources or were developed by ourselves following similar principles. The primary purpose of this document is to provide a transparent and publicly accessible reference for the problems used in our experimental evaluation of language models, as well as providing detailed human-made solutions. At the same time, we believe that this collection may also prove useful for future research on probabilistic reasoning, cognitive biases, and the evaluation of reasoning capabilities in artificial intelligence systems.",
+      "published": "2026-06-05T17:59:46Z",
+      "updated": "2026-06-05T17:59:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07516v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06485v1",
-      "title": "PAR3D: A Unified 3D-MLLM with Part-Aware Representation for Scene Understanding",
+      "id": "http://arxiv.org/abs/2606.07515v1",
+      "title": "How reliable are LLMs when it comes to playing dice?",
       "authors": [
-        "Shaohui Dai",
-        "Yansong Qu",
-        "You Shen",
-        "Shengchuan Zhang",
-        "Liujuan Cao"
+        "Luca Avena",
+        "Gianmarco Bet",
+        "Bernardo Busoni"
       ],
-      "summary": "Recent advances in 3D multimodal large language models (3D-MLLMs) have enabled unified solutions for 3D scene understanding tasks, including visual question answering, captioning, and referring segmentation. However, existing 3D-MLLMs remain largely object-centric, limiting their ability to model fine-grained part structures that are essential for embodied interaction with 3D environments. In this work, we present PAR3D, a unified part-aware 3D-MLLM framework that enables models to understand, reason about, and ground both objects and their parts in 3D scenes. To enable training and evaluation of part-aware 3D scene understanding, we introduce ScenePart, a synthetic 3D scene dataset with part-level annotations and language instructions. We further develop Part-Aware 3D Representation Learning to enrich 3D visual representations with fine-grained part-level semantics, and propose Hierarchical Segmentation Query Generation to ground part targets via hierarchical object-part queries. Extensive experiments show that our method substantially improves part-level question answering and referring segmentation, while also achieving strong performance across object-level vision-language tasks.",
-      "published": "2026-06-04T17:59:04Z",
-      "updated": "2026-06-04T17:59:04Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06485v1"
+      "summary": "We investigate the probabilistic reasoning capabilities of large language models through a controlled benchmarking study on discrete probability problems. We constructed two datasets, respectively a set of standard exercises and a set of counterintuitive exercises, designed to trigger heuristic reasoning, and evaluated 8 state-of-the-art models, each tested with and without Chain-of-Thought prompting. Models achieve an average accuracy of 0.96 on standard problems but only 0.59 on counterintuitive ones. We further provide empirical evidence of token bias: performance drops by over 20% when canonical formulations are replaced by disguised variants. Embedding misleading suggestions in the prompt reduces performance by up to 34%, with no model proving immune. Taken together, the reported findings suggest that current LLMs are not yet genuine probabilistic reasoners, despite their success in advanced mathematical problems.",
+      "published": "2026-06-05T17:59:42Z",
+      "updated": "2026-06-05T17:59:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07515v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06473v1",
-      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
+      "id": "http://arxiv.org/abs/2606.07502v1",
+      "title": "Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings",
       "authors": [
-        "Shangheng Du",
-        "Xiangchao Yan",
-        "Jinxin Shi",
-        "Zongsheng Cao",
-        "Shiyang Feng",
-        "Zichen Liang",
-        "Boyuan Sun",
-        "Tianshuo Peng",
-        "Yifan Zhou",
-        "Xin Li",
-        "Jie Zhou",
-        "Liang He",
-        "Bo Zhang",
-        "Lei Bai"
+        "Songhao Wu",
+        "Zhongxin Chen",
+        "Yuxuan Liu",
+        "Heng Cui",
+        "Cong Li",
+        "Rui Yan"
       ],
-      "summary": "Large language model (LLM) agents are increasingly applied to long-horizon tasks such as scientific discovery and machine learning engineering (MLE), where sustained self-evolution becomes a key capability. However, existing MLE agents suffer from inter-branch information isolation, memoryless search, and lack of hierarchical control, which together hinder long-horizon optimization. We present MLEvolve, an LLM-based self-evolving multi-agent framework for end-to-end machine learning algorithm discovery. By extending tree search to Progressive MCGS, MLEvolve enables cross-branch information flow through graph-based reference edges and gradually shifts the search from broad exploration to focused exploitation with an entropy-inspired progressive schedule. To allow the agent to evolve with accumulated experience, we introduce Retrospective Memory, which combines a cold-start domain knowledge base with a dynamic global memory for task-specific experience retrieval and reuse. For stable long-horizon iteration, we further decouple strategic planning from code generation with adaptive coding modes. Evaluation on MLE-Bench shows that MLEvolve achieves state-of-the-art performance across multiple dimensions including average medal rate and valid submission rate under a 12-hour budget (half the standard runtime). Moreover, MLEvolve also outperforms specialized algorithm discovery methods including AlphaEvolve on mathematical algorithm optimization tasks, demonstrating strong cross-domain generalization. Our code is available at https://github.com/InternScience/MLEvolve.",
-      "published": "2026-06-04T17:55:59Z",
-      "updated": "2026-06-04T17:55:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06473v1"
+      "summary": "Large language models exhibit impressive zero-shot capabilities across a wide range of downstream tasks. However, they struggle to function as off-the-shelf embedding models, leading to suboptimal performance on massive text embedding benchmarks. In this paper, we identify a potential cause underlying this deficiency. Our motivation stems from an unexpected observation: text embeddings tend to align with frequent but uninformative tokens when projected onto the vocabulary space. We argue that this excessive expression of high-frequency tokens suppresses the model's ability to capture nuanced semantics. To address this, we introduce EmbedFilter, a simple linear transformation designed to refine text embeddings derived from LLMs directly. Specifically, we uncover that the unembedding matrix within LLMs encodes a latent space that is actively writing these frequent tokens into embedding space. By filtering out this subspace, EmbedFilter suppress the influence of high-frequency tokens, thereby enhancing semantic representations. As a compelling byproduct, this enables an inherent dimensionality reduction, lowering index storage and speedup retrieval while fully preserving the refined embedding quality. Our experiments across multiple LLM backbones demonstrate that LLMs equipped with EmbedFilter achieve superior zero-shot downstream performance even with significantly reduced embedding dimensions. We hope our findings provide deeper insights into the mechanisms of LLM-based representations and inspire more principled designs to improve text embeddings training. Our code is available at https://github.com/CentreChen/EmbFilter.",
+      "published": "2026-06-05T17:54:32Z",
+      "updated": "2026-06-05T17:54:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07502v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06464v1",
-      "title": "Human Adults and LLMs as Scientists: Who Benefits from Active Exploration?",
+      "id": "http://arxiv.org/abs/2606.07500v1",
+      "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
       "authors": [
-        "Mandana Samiei",
-        "Eunice Yiu",
-        "Anthony GX-Chen",
-        "Dongyan Lin",
-        "Jocelyn Shen",
-        "Blake A. Richards",
-        "Alison Gopnik",
-        "Doina Precup"
+        "Fatema Siddika",
+        "Md Anwar Hossen",
+        "Tanwi Mallick",
+        "Ali Jannesari"
       ],
-      "summary": "A long-standing finding in the causal learning literature is that adults struggle to identify conjunctive causal rules, where an effect requires the simultaneous presence of multiple causes, while performing better in disjunctive settings. However, most demonstrations of this ``conjunctive handicap'' rely on passive observation paradigms with limited evidence, where learners have no control over evidence generation. This paper asks whether this bias persists when adults are granted agency through active exploration. Using a modified ``blicket detector'' task, adult participants freely intervened to identify causal objects under conjunctive or disjunctive rule structures. We show that active exploration substantially improves adults' conjunctive causal reasoning, although conjunctive rules still require more tests to infer than disjunctive rules. We further compare human performance to a range of large language models in the same setting. While some state-of-the-art models approach human-level performance on hypothesis inference accuracy, they often exhibit less efficient exploration strategies and similar conjunctive-disjunctive performance gaps.",
-      "published": "2026-06-04T17:53:36Z",
-      "updated": "2026-06-04T17:53:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06464v1"
+      "summary": "Continual learning in Large Language Models (LLMs) is hindered by the plasticity-stability dilemma, where acquiring new capabilities often leads to catastrophic forgetting of previous knowledge. Existing methods typically treat parameters uniformly, failing to distinguish between specific task knowledge and shared capabilities. We introduce Mixture of Sparse Experts for Task Agnostic Continual Learning (SETA), a framework that resolves the plasticity-stability conflict through adaptive sparse subspace decomposition into task-specific expert modules. Unlike standard updates, where tasks compete for the same parameters, SETA separates knowledge into unique experts, designed to isolate task-specific patterns, and shared experts, responsible for capturing common features. This structure is maintained through adaptive elastic anchoring and a routing-aware regularization that jointly protect shared knowledge at both the weight and routing levels and enable a unified gating network to automatically retrieve the correct expert combination during inference. Extensive experiments across diverse domain-specific benchmarks demonstrate that SETA achieves competitive or superior overall performance relative to state-of-the-art continual learning baselines, with particularly strong retention of early-task knowledge and improved backward transfer on LLaMA-2 7B and Qwen3-4B.",
+      "published": "2026-06-05T17:53:52Z",
+      "updated": "2026-06-05T17:53:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07500v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.07253v4",
-      "title": "From Out-of-Distribution Detection to Hallucination Detection: A Geometric View",
+      "id": "http://arxiv.org/abs/2504.00613v2",
+      "title": "LLM-Guided Search for Deletion-Correcting Codes",
       "authors": [
-        "Litian Liu",
-        "Reza Pourreza",
-        "Yubing Jian",
-        "Yao Qin",
-        "Roland Memisevic"
+        "Franziska Weindel",
+        "Reinhard Heckel"
       ],
-      "summary": "Detecting hallucinations in large language models is a critical open problem with significant implications for safety and reliability. While existing hallucination detection methods achieve strong performance in question-answering tasks, they remain less effective on tasks requiring reasoning. In this work, we revisit hallucination detection through the lens of out-of-distribution (OOD) detection, a well-studied problem in areas like computer vision. Treating next-token prediction in language models as a classification task allows us to apply OOD techniques, provided appropriate modifications are made to account for the structural differences in large language models. We show that OOD-based approaches yield training-free, single-sample-based detectors, achieving strong accuracy in hallucination detection for reasoning tasks. Overall, our work suggests that reframing hallucination detection as OOD detection provides a promising and scalable pathway toward language model safety.",
-      "published": "2026-02-06T23:05:48Z",
-      "updated": "2026-06-04T17:49:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.07253v4"
+      "summary": "Finding deletion-correcting codes of maximum size has been an open problem for over 70 years, even for a single deletion. We adapt FunSearch, a large language model (LLM)-guided evolutionary search, to discover functions that construct deletion-correcting codes at short code lengths. For a single deletion, our search finds a function that we prove constructs the conjectured-optimal Varshamov-Tenengolts code. For multiple deletions and quaternary edit codes, the discovered functions improve on prior explicit, search-based, and neural constructions but remain empirical heuristics without new theoretical insights. We study design choices for LLM-guided evolutionary search and find that, for our problem, compute is better allocated to sampling more functions than to longer reasoning traces per function, and that co-evolving natural language descriptions with code hurts search quality. We propose deduplicating logically identical functions during evolution, which we find critical for search diversity. Our results demonstrate the potential of LLM-guided evolutionary search for information theory and code design and represent the first application of such methods for constructing error-correcting codes. However, in our current formulation, evaluating a function scales exponentially with code length, limiting the approach to short codes.",
+      "published": "2025-04-01T10:11:32Z",
+      "updated": "2026-06-05T17:17:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.00613v2"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06454v1",
-      "title": "Scaffold, Not Vocabulary? A Controlled, Two-Tier, Pre-Registered Study of a Popperian Code-Generation Skill",
+      "id": "http://arxiv.org/abs/2606.07433v1",
+      "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs",
       "authors": [
-        "Mehmet Iscan"
+        "Jiahao Meng",
+        "Yue Tan",
+        "Qi Xu",
+        "Kuan Gao",
+        "Weisong Liu",
+        "Yanwei Li",
+        "Jason Li",
+        "Lingdong Kong",
+        "Haochen Wang",
+        "Qianyu Zhou",
+        "Jiangning Zhang",
+        "Guangliang Cheng",
+        "Yunhai Tong",
+        "Lu Qi",
+        "Minghsuan Yang"
       ],
-      "summary": "Large language models increasingly write, review, and judge code, and a fast-growing practice equips them with prompt 'skills' that ask the model to reason like a scientist. A prominent example tells the model to act as a Popperian falsificationist, and such skills are reported to improve generated code. But these gains are almost always read off an LLM-as-a-judge, an instrument with documented positional, self-preference, and stylistic biases. We ask: if it appears to help, is the gain from the skill's Popperian content, or from the structure any scaffold imposes? We pre-register a two-tier ablation with three controls: a length-matched placebo, a labels-only scaffold that keeps the Popperian headers but strips the procedure, and an execution oracle (HumanEval+ unit tests), plus a vocabulary-halo sentinel and a same-model self-judge audit. On a frontier model (Claude Sonnet 4.6, N=163) all conditions sit near the benchmark ceiling and do not separate, so the pre-registered +5-point improvement is not supported (a ceiling-limited non-detection). On a small model (Qwen2.5-Coder-0.5B, N=164) structured arms lift best-of-eight correctness by 20-22 points, but the full skill shows no separable benefit over a labels-only scaffold (aggregate F@8=L@8 vs V@8=34.8%), and the placebo trails by only 2.4 points. A 0.5B self-judge applying the Popperian rubric does not beat random selection and concentrates 60% of its picks on one index. In the two settings tested, the skill's Popperian procedural content adds no separable execution-correctness benefit beyond a labels-only scaffold, so the gains track scaffold structure. We contribute a calibrated negative result and a reusable disambiguation protocol; the finding bounds an engineering claim about one prompt-skill family and is not an evaluation of Popperian methodology in general.",
-      "published": "2026-06-04T17:49:00Z",
-      "updated": "2026-06-04T17:49:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06454v1"
+      "summary": "Video understanding is being rapidly transformed by multimodal large language models (MLLMs), as research moves from short clips to long, multimodal, and knowledge-intensive video scenarios. These scenarios require models to handle sparse evidence, long-range dependencies, multimodal alignment, and reliable inference under limited computational budgets. This work presents a human-view perspective on LLM-based video understanding, organized around three functional abilities: watching, remembering, and reasoning. Rather than treating video tasks as isolated benchmarks, this view provides a unified structure for analyzing how video MLLMs acquire evidence, preserve context, and produce grounded outputs. We introduce a formulation that characterizes video understanding systems by their perceptual representations, memory states, reasoning traces, and final predictions. Based on this formulation, we identify challenges in spatio-temporal perception, efficient long-video processing, memory modeling, streaming understanding, and faithful reasoning. Representative methods are organized by their roles in video MLLM systems. Watching covers fine-grained, comprehensive, audio-visual, and efficient perception. Remembering includes offline and streaming memory, while reasoning covers text-only reasoning and thinking with videos. We further examine application domains such as egocentric, sports, instructional, medical, and narrative videos, and cover training datasets and evaluation benchmarks across task types, supervision formats, modalities, and capability dimensions. Finally, we outline open problems and future directions for scalable, memory-aware, and evidence-grounded video intelligence. Related works will be continuously traced at https://github.com/marinero4972/Awesome-HumanView-VideoUnderstanding.",
+      "published": "2026-06-05T16:29:13Z",
+      "updated": "2026-06-05T16:29:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07433v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06453v1",
-      "title": "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents",
+      "id": "http://arxiv.org/abs/2606.07422v1",
+      "title": "The Masked Advantage: Uncovering Local-Language Access to Cultural Knowledge in LLMs",
       "authors": [
-        "Zhuoming Chen",
-        "Xinrui Zhong",
-        "Qilong Feng",
-        "Ranajoy Sadhukhan",
-        "Yang Zhou",
-        "Michael Qizhe Shieh",
-        "Zhihao Jia",
-        "Beidi Chen"
+        "Yang Zhang",
+        "Xiao Fei",
+        "Amr Mohamed",
+        "Sarah Almeida Carneiro",
+        "Mersin Konomi",
+        "Mingmeng Geng",
+        "Ahmed Asaad",
+        "Guokan Shang",
+        "Michalis Vazirgiannis"
       ],
-      "summary": "Sparse attention is becoming increasingly important for serving large language models (LLMs) as generation lengths continue to grow. However, deploying and evaluating new sparse attention algorithms at scale remains highly engineering-intensive, slowing both human researchers and AI agents in exploring the sparse attention design. To address this challenge, we present Vortex, a system that combines a Python-embedded frontend language atop a page-centric tensor abstraction for expressing a broad range of sparse attention algorithms, with an efficient backend tightly integrated into modern LLM serving stacks. Vortex enables rapid prototyping, deployment, and evaluation of sparse attention algorithms, effectively translating their theoretical efficiency gains into real-world throughput improvements. As a result, Vortex substantially accelerates the design and iteration of sparse attention algorithms. First, AI agents use Vortex to automatically generate and refine diverse algorithms, the best reaching up to $3.46\\times$ higher throughput than full attention while preserving accuracy. Second, Vortex extends sparse attention to emerging architectures and very large models that are otherwise hard to experiment with, reaching up to $4.7\\times$ higher throughput on the MLA-based GLM-4.7-Flash and $1.37\\times$ on the 229B-parameter MiniMax-M2.7 on NVIDIA B200 GPUs.",
-      "published": "2026-06-04T17:48:17Z",
-      "updated": "2026-06-04T17:48:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06453v1"
+      "summary": "Large language models are increasingly used to answer culturally grounded questions across languages, yet it remains unclear whether local cultural knowledge is better accessed through English or the local language. Existing evaluations face two key limitations: many rely on parallel template-based questions that may not reflect how cultural knowledge naturally appears, and raw accuracy conflates general language proficiency with language-conditioned knowledge access. We address these issues with a controlled framework built on real-world cultural questions collected from regional benchmarks and local sources. By crossing question type (culture-agnostic vs. culture-specific) with query language (English vs. local language), and estimating ability with a shared 1PL item response theory model, we separate proficiency from localized knowledge access. Across 13 locales and roughly 80 models, we find a consistent English advantage on culture-agnostic questions, indicating stronger English proficiency. However, after accounting for this proficiency gap, local languages show a positive knowledge-access advantage in nearly all locale-model settings. This advantage is often masked in raw accuracy but becomes more visible for frontier, regionally aligned, or language-adapted models. Our results suggest that weaker local-language performance does not necessarily imply weaker cultural knowledge; rather, local cultural knowledge may be more accessible through the local language but hidden by limited language proficiency.",
+      "published": "2026-06-05T16:16:59Z",
+      "updated": "2026-06-05T16:16:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07422v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06447v1",
-      "title": "Latent Reasoning with Normalizing Flows",
+      "id": "http://arxiv.org/abs/2606.07420v1",
+      "title": "Lost in Migration: Exposing Android Framework Vulnerabilities in Parallel Java-Kotlin Implementations",
       "authors": [
-        "Guancheng Tu",
-        "Xiangjun Fu",
-        "Suhao Yu",
-        "Yao Tang",
-        "Haoqiang Kang",
-        "Lianhui Qin",
-        "Yizhe Zhang",
-        "Jiatao Gu"
+        "Rui Li",
+        "Wenrui Diao",
+        "Debin Gao"
       ],
-      "summary": "Large language models often improve reasoning by generating explicit chain-of-thought (CoT), demonstrating the importance of intermediate computation. However, textual CoT forces this computation through a discrete, serial, and communication-oriented token stream: each reasoning step must be verbalized before the model can proceed, even when the underlying update is semantic, uncertain, or only partially formed. Latent reasoning offers a higher-bandwidth alternative by performing intermediate computation in compact continuous states before committing to text. Yet existing latent-reasoning methods often sacrifice key advantages that make CoT effective in autoregressive language models, including native left-to-right generation, probabilistic sampling, compatibility with KV-cache decoding, and tractable likelihood estimation. We propose NF-CoT, a latent reasoning framework that preserves these advantages by modeling continuous thoughts with normalizing flows. NF-CoT instantiates a TARFlow-style normalizing flow inside the LLM backbone, defining a tractable probability model over compact continuous thoughts distilled from explicit CoT. Continuous-thought positions are generated by an NF head, while text positions are generated by the standard LM head within the same causal stream. This design provides exact likelihoods for latent thoughts, enables probabilistic left-to-right decoding with the original KV cache, and supports direct policy-gradient optimization in the latent reasoning space. On code-generation benchmarks, NF-CoT improves pass rates over explicit-CoT and prior latent-reasoning baselines while substantially reducing intermediate-reasoning cost.",
-      "published": "2026-06-04T17:44:17Z",
-      "updated": "2026-06-04T17:44:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06447v1"
+      "summary": "Android has adopted Kotlin alongside Java across apps and core system components. During this shift, we observe parallel implementations in the Android Open Source Project (AOSP) where the same component is implemented in both Java and Kotlin. In principle, their functional purposes are identical. In practice, subtle semantic divergences can appear. Such divergences are not vulnerabilities by themselves, but they provide useful clues that may reveal flaws in surrounding enforcement logic. To the best of our knowledge, this paper presents the first systematic study of Java-Kotlin parallel implementations in the Android framework and examines their security implications. We design and build ParaDroid, an analysis framework that identifies parallel methods at scale and compares their behaviors. ParaDroid normalizes code into a bytecode-level intermediate representation, reconstructs class-to-source mappings, and uses large language models to reason about method semantics and identify behavioral divergences. Evaluated on AOSP Android 14-16, ParaDroid identified 329 parallel method pairs and 37 vulnerable divergences. We responsibly disclosed the exploitable issues to the Android Security Team. Three vulnerabilities and two bugs have been confirmed, and two CVE IDs have been assigned. Our results demonstrate that parallel Java-Kotlin code paths provide a practical surface for discovering security flaws in modern Android.",
+      "published": "2026-06-05T16:15:03Z",
+      "updated": "2026-06-05T16:15:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07420v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06444v1",
-      "title": "USAD 2.0: Scaling Representation Distillation for Universal Audio Understanding",
+      "id": "http://arxiv.org/abs/2606.07410v1",
+      "title": "A Comprehensive Anatomy of Human and DeepSeek-R1 LLM Mathematical Reasoning",
       "authors": [
-        "Heng-Jui Chang",
-        "Alexander H. Liu",
-        "Saurabhchand Bhati",
-        "Mrudula Athi",
-        "Anton Ratnarajah",
-        "Amit Chhetri",
-        "James Glass"
+        "Yuxiang Chen",
+        "Jun Wang"
       ],
-      "summary": "Audio encoders are critical to modern audio applications as large language models (LLMs) increasingly rely on a single encoder for diverse inputs. While self-supervised learning (SSL) has yielded strong domain-specific encoders like speech or music experts, multi-domain approaches like USAD and SPEAR remain limited in coverage and evaluation. Recent studies also suggest supervised encoders align better with audio LLMs. We present USAD 2.0, a universal encoder integrating knowledge from both SSL and supervised foundation models. USAD 2.0 introduces domain-aware distillation to address teacher mismatch, extends coverage to the music domain, and adds second-stage supervised distillation for downstream use. We further scale the model to one billion parameters via depth scaling. Experiments show USAD 2.0 achieves strong or state-of-the-art performance across probing and LLM-based evaluations.",
-      "published": "2026-06-04T17:42:05Z",
-      "updated": "2026-06-04T17:42:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06444v1"
+      "summary": "The emergence of \"Aha moments\" in large language models, particularly DeepSeek-R1-0120, has raised the question of whether these systems genuinely reason or merely imitate the appearance of reasoning. We conduct a comprehensive empirical comparison between model and human reasoning across all 30 problems from AIME 2025, exhaustively annotating 10,247 reasoning steps into five functional categories: Analysis, Inference, Branch, Backtrace, and Reflection. We find a clear structural difference. Human solutions maintain a compact alternation between analysis and deduction, whereas DeepSeek-R1 frequently revisits intermediate results, performs shallow and often unnecessary verification, and loops through local checks without meaningful logical progress. We describe this as topological mimicry: reproducing the surface form of reasoning without its functional role. Despite this, we identify two signals of genuine reasoning. First, successful traces exhibit stable use of branching and backtracking, while failed traces either underuse or overuse exploratory actions. Second, reflection is only effective when placed within deductive inference; reflections trapped in analysis loops focus on local numerical details while missing global logical errors. These findings suggest that current long-CoT models may be rewarded more for the appearance of reasoning than for genuine deductive progress. We discuss directions for improving evaluation and training, including measuring cross-trace stability, penalising \"spinning-wheel\" traces, encouraging deeper logical correction, and reallocating inference-time compute toward deduction and backtracking. Overall, reasoning quality depends not simply on how much reflection occurs, but on whether reflection appears consistently and at the appropriate logical scale.",
+      "published": "2026-06-05T15:57:42Z",
+      "updated": "2026-06-05T15:57:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07410v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06443v1",
-      "title": "Revising Context, Shifting Simulated Stance: Auditing LLM-Based Stance Simulation in Online Discussions",
+      "id": "http://arxiv.org/abs/2511.07380v2",
+      "title": "Mining Useful General Data for Low-Resource Domain Adaptation",
       "authors": [
-        "Xinnong Zhang",
-        "Wanting Shan",
-        "Hanjia Lyu",
-        "Zhongyu Wei",
-        "Jiebo Luo"
+        "Pingjie Wang",
+        "Hongcheng Liu",
+        "Yusheng Liao",
+        "Ziqing Fan",
+        "Yaxin Du",
+        "Shuo Tang",
+        "Yanfeng Wang",
+        "Yu Wang"
       ],
-      "summary": "Large language models are increasingly used to simulate social media users and infer how individuals may respond to online discussions. However, it remains unclear whether these simulations reflect precise user-specific beliefs or whether they are highly sensitive to semantically independent changes in conversational contexts. In this work, we study counterfactual context revision as a framework for auditing LLM-based stance simulation. Given an original online conversation, we first infer a target user's stance toward a specific topic. We then apply controlled revision strategies to the conversational context and simulate the user's stance again under the revised context. We compare text-only revision strategies with a multimodal one that incorporates meme-based context and evaluate two main effectiveness metrics, i.e., average directional stance shift and stance transition rate. The results reveal effective and robust stance transitions in both text-only and multimodal strategies across different polarization-preference mechanisms. Our study contributes an evaluation framework for understanding the context sensitivity of LLM-based stance simulation. More broadly, it highlights both the promise and risk of using LLMs to simulate online opinion dynamics.",
-      "published": "2026-06-04T17:41:54Z",
-      "updated": "2026-06-04T17:41:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06443v1"
+      "summary": "Adapting large language models (LLMs) to low-resource domains remains challenging due to the scarcity of domain-specific data. While in-domain data is limited, there exists a vast amount of general-domain data that shares similar question-answer formats and reasoning patterns with domain tasks. This observation raises an important question: can useful general-domain data be mined to improve low-resource domain adaptation? Our initial findings show that general-domain chain-of-thought data contains useful auxiliary signals for domain adaptation, even without careful selection. This observation motivates a new paradigm for domain adaptation beyond exclusive reliance on domain-specific data. To systematically identify the most beneficial general-domain samples, we propose NTK-Selector, motivated by the Neural Tangent Kernel's ability to capture alignment in training dynamics. Since directly applying NTK to pretrained LLMs is impractical, we introduce a Jacobian-free NTK approximation and empirically demonstrate stable NTK-like behavior during fine-tuning. Extensive experiments across medical, financial, legal, and psychological domains demonstrate that NTK-Selector consistently outperforms domain-only fine-tuning and existing data selection baselines. In particular, NTK-Selector achieves gains of +8.7 and +5.1 points on Llama3-8B-Instruct and Qwen3-8B, respectively, compared to only +0.8 and +0.9 points from domain-only fine-tuning.",
+      "published": "2025-11-10T18:41:23Z",
+      "updated": "2026-06-05T15:54:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.07380v2"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06428v1",
-      "title": "Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation",
+      "id": "http://arxiv.org/abs/2606.07392v1",
+      "title": "Online Pandora's Box for Contextual LLM Cascading",
       "authors": [
-        "Hanxu Hu",
-        "Zdeněk Šnajdr",
-        "Pinzhen Chen",
-        "Jannis Vamvas",
-        "Rico Sennrich"
+        "Alexandre Belloni",
+        "Yan Chen",
+        "Yehua Wei"
       ],
-      "summary": "Prior work has shown that large language models (LLMs) can translate unseen or low-resource languages by undergoing continued training or even by encoding a grammar book in their context. However, both methods typically overfit specific languages, with limited zero-shot transfer at test time. To translate extremely low-resource languages at scale, we argue that LLMs must acquire the meta-skill of utilizing in-context linguistic knowledge rather than memorizing specific languages. In this paper, we propose a reinforcement learning (RL) approach to unseen language translation given rich linguistic context, using a surface-level translation metric (chrF) as the reward. Empirically, despite the lightweight reward, our RL-trained models effectively extract and apply relevant linguistic information from the provided context, leading to better translations on completely unseen languages than in-context learning or supervised fine-tuning. Our analyses suggest that outcome-based RL can extend beyond conventional reasoning tasks like math and coding to serve as a recipe for language learning from context.",
-      "published": "2026-06-04T17:32:06Z",
-      "updated": "2026-06-04T17:32:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06428v1"
+      "summary": "Motivated by Large Language Model (LLM) cascading, we propose an online contextual Pandora's Box model for adaptively querying and selecting LLM APIs. In each period, a decision-maker observes a request context and faces a two-phase decision problem. In the query phase, the decision-maker sequentially queries APIs, where each query reveals a generated output and the decision-maker incurs an (output-dependent) cost. In the selection phase, the decision-maker selects one of the generated outputs to deploy and observes only the downstream reward of the deployed output. This output-mediated feedback structure differs from classical online contextual Pandora's Box models, in which opening a box directly reveals its reward. Rather than estimating the full conditional output and cost distributions of each API, we directly model the reservation index and develop a learning approach for the query phase. Specifically, we impose a parametric structure on the contextual reservation index functions induced by the classical Weitzman's policy. Our policy combines generalized method of moments (GMM) type estimation of these reservation indices with UCB-style confidence bounds for both these indices and the shared output-level reward evaluator. Under regularity conditions, we prove that the resulting policy achieves dimension-dependent $\\widetilde O(\\sqrt T)$ cumulative regret over a horizon of $T$ periods.",
+      "published": "2026-06-05T15:29:17Z",
+      "updated": "2026-06-05T15:29:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07392v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.06425v1",
-      "title": "Annotation of Positive vs Negative User Interactions for Social Sign Prediction",
+      "id": "http://arxiv.org/abs/2606.07367v1",
+      "title": "Self-evolving LLM agents with in-distribution Optimization",
       "authors": [
-        "Biancamaria Bombino",
-        "Chiara Boldrini",
-        "Andrea Passarella",
-        "Marco Conti"
+        "Yudi Zhang",
+        "Meng Fang",
+        "Zhenfang Chen",
+        "Mykola Pechenizkiy"
       ],
-      "summary": "Inferring the sign of social relationships from online interactions is a fundamental challenge in social network analysis. Existing approaches typically rely on sentiment analysis to label individual interactions as positive or negative, then aggregate these labels to assign a sign to the relationship. However, sentiment analysis captures the valence of the content being discussed rather than the nature of the relational exchange itself, a conflation that can lead to systematic misclassification. In this paper, we propose a methodology that addresses this limitation by leveraging Large Language Models (LLMs) in a zero-shot setting to identify interaction-level relational signals (specifically, personal praise and personal attacks directed at the interlocutor) as more direct indicators of positive and negative social ties. We evaluate four models spanning open-weight and proprietary architectures (Qwen2.5:7b, Gemma2:9b, GPT-4o, GPT-5.4-mini) across three prompt designs of increasing complexity, on two human-annotated datasets of approximately 298 and 340 texts respectively. Results show that zero-shot LLMs achieve good classification performance on both tasks without any task-specific training data, establishing a practical baseline for relational annotation. Performance differs across tasks: attack detection is robust to prompt design and model choice, while praise detection is more sensitive to both, reflecting the greater subjectivity of positive relational gestures. These findings lay the groundwork for integrating LLM-based relational annotation into sign prediction pipelines.",
-      "published": "2026-06-04T17:29:42Z",
-      "updated": "2026-06-04T17:29:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.06425v1"
+      "summary": "Large Language Models (LLMs) have recently emerged as powerful controllers for interactive agents in complex environments, yet training them to perform reliable long-horizon decision making remains a fundamental challenge. A key difficulty lies in credit assignment: agents often receive delayed rewards only at the end of episodes. In this paper, we propose Q-Evolve, a self-evolving framework for LLM agents that unifies automatic process-reward labeling and policy learning within a principled in-distribution reinforcement learning paradigm. In each evolving iteration, our method learns an in-distribution critic from a hybrid off-policy dataset that combines expert demonstrations with agent-generated trajectories, stabilizing Bellman backups in sparse-reward settings via a weighted Implicit Q-Learning objective. The learned value function is then used to derive step-wise process rewards through advantage estimation, enabling dense and reliable supervision without environment backtracking or human annotation. Leveraging these signals, we perform behavior-proximal policy optimization that evolves the agent over the data used for process reward labeling, allowing iterative self-improvement without exacerbating distribution shift. We evaluate our method on AlfWorld, WebShop, and ScienceWorld, showing Q-Evolve outperforms strong baselines in sample efficiency, robustness, and overall task performance. Our results demonstrate that stable agent self-evolution is achievable through the co-evolution of process-level supervision and policy, both grounded within a shared in-distribution learning loop.",
+      "published": "2026-06-05T15:09:52Z",
+      "updated": "2026-06-05T15:09:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.07367v1"
     }
   ]
 }
