@@ -1,195 +1,175 @@
 {
-  "generated_at_utc": "2026-06-15T04:12:00Z",
+  "generated_at_utc": "2026-06-27T03:21:32Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2606.14700v1",
-      "title": "RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space",
+      "id": "http://arxiv.org/abs/2606.27361v1",
+      "title": "Autoregressive Boltzmann Generators",
       "authors": [
-        "Xichen Pan",
-        "Aashu Singh",
-        "Satya Narayan Shukla",
-        "Xiangjun Fan",
-        "Shlok Kumar Mishra",
-        "Saining Xie"
+        "Danyal Rehman",
+        "Charlie B. Tan",
+        "Yoshua Bengio",
+        "Avishek Joey Bose",
+        "Alexander Tong"
       ],
-      "summary": "Large language models (LLMs) are widely used in text-to-image (T2I) systems, but they are typically limited to text encoding, while denoising is handled by newly trained generative backbones. The emergence of representation autoencoders (RAEs) shifts the generation target toward semantically structured visual representations, creating a latent space that is more compatible with pretrained LLM priors. Inspired by multimodal LLMs (MLLMs), where an MLP projector is sufficient to align clean visual representations with a pretrained LLM, we repurpose the MLLM itself as a noisy representation encoder, extending this mechanism from clean to noisy inputs. We present RepFusion, which uses the resulting MLLM outputs as the conditioning signal for a diffusion transformer. In controlled comparisons at similar inference budgets, RepFusion outperforms baselines that devote comparable capacity to newly initialized denoisers. These results demonstrate that MLLMs provide strong priors for denoising visual representations and that, by conditioning on evolving noisy representations, test-time compute can be productively spent on repeated MLLM conditioning in modern T2I systems.",
-      "published": "2026-06-12T17:59:51Z",
-      "updated": "2026-06-12T17:59:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14700v1"
+      "summary": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraints (discrete time) or computationally expensive likelihoods (continuous time). In this paper, we propose Autoregressive Boltzmann Generators (ArBG) -- a novel autoregressive modelling framework -- that overcomes these limitations by departing from the flow-based BG paradigm. ArBG circumvents the topological constraints of flows and enables sequential inference-time interventions, while offering enhanced scalability by leveraging architectures effective in Large Language Models. We empirically demonstrate that ArBG leads to significant improvements over flow-based models across all benchmarks, but particularly in larger peptide systems such as the 10-residue Chignolin. Furthermore, we introduce Robin, a 132 million parameter transferable model trained with the ArBG framework which improves over the previous state-of-the-art, reducing the zero-shot energy error, E-W$_2$, on 8-residue systems by over 60$\\%$. The code can be found at the following link: https://github.com/danyalrehman/autobg.",
+      "published": "2026-06-25T17:58:21Z",
+      "updated": "2026-06-25T17:58:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27361v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.14697v1",
-      "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
+      "id": "http://arxiv.org/abs/2606.27359v1",
+      "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
       "authors": [
-        "Sicheng Yang",
-        "Hangjie Yuan",
-        "Wenjun Zhang",
-        "Jinwang Wang",
-        "Yichen Qian",
-        "Weihua Chen",
-        "Fan Wang",
-        "Lei Zhu"
+        "Johannes Zenn",
+        "Jonas Geiping"
       ],
-      "summary": "Building trustworthy medical multimodal large language models (MLLMs) is critical for reliable clinical decision support. Existing medical hallucination benchmarks mainly focus on data collection, but often ignore where hallucinations originate within the reasoning process. We find that hallucination sources vary across samples: errors may arise from visual misrecognition, incorrect medical knowledge recall, or flawed reasoning integration. To enable source-level hallucination diagnosis, we introduce ClinHallu, a benchmark for stage-wise hallucination diagnosis in medical MLLM reasoning. ClinHallu contains 7,031 validated instances, where each instance is augmented with a structured reasoning trace decomposed into Visual Recognition, Knowledge Recall, and Reasoning Integration. We also use stage-replacement interventions to measure how correcting specific stages affects the final answer. Beyond evaluation, we show that trace-supervised fine-tuning reduces stage-wise hallucinations. ClinHallu provides a fine-grained hallucination testbed for diagnosing and mitigating reasoning failures in medical MLLMs. The benchmark is publicly available at https://github.com/alibaba-damo-academy/ClinHallu.",
-      "published": "2026-06-12T17:58:38Z",
-      "updated": "2026-06-12T17:58:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14697v1"
+      "summary": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with correctness? In this paper, we set out to quantify this relationship across decoding methods, models, and benchmarks at four levels: across decoding methods, across hyperparameters within a method, across prompt-answer pairs within a dataset, and across repeated responses to the same prompt. We find that higher sequence probability is often predictive of correctness across prompt-answer pairs within a fixed dataset. However, this relationship does not generally transfer to decoding decisions: increasing sequence probability by changing hyperparameters or methods does not reliably improve accuracy. Further, sequence probability is not a good indicator of correctness for responses to the same prompt. These findings clarify when decoding can and cannot be expected to improve correctness, and provide practical guidance for decoding, self-consistency, and verifier-free self-improvement.",
+      "published": "2026-06-25T17:58:02Z",
+      "updated": "2026-06-25T17:58:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27359v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.14691v1",
-      "title": "CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment",
+      "id": "http://arxiv.org/abs/2602.18364v3",
+      "title": "Quantum Maximum Likelihood Prediction via Hilbert Space Embeddings",
       "authors": [
-        "Jiayue Cao",
-        "Zhicong Lu",
-        "Xuehan Sun",
-        "Wei Jia",
-        "Hongling Zheng",
-        "Changyuan Tian",
-        "Zichuan Lin",
-        "Wenqian Lv",
-        "Nayu Liu"
+        "Sreejith Sreekumar",
+        "Nir Weinberger"
       ],
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) has successfully elicited the reasoning capabilities of large language models, motivating its extension to multimodal scenarios. Existing methods primarily focus on improving the visual coverage of reasoning traces and mitigating visual hallucinations, but underestimate the semantic inconsistency between the reasoning process and the final answer. In this paper, we delve into thinking-answer inconsistency in RLVR for large vision-language models (LVLMs), showing thorough analyses of rollouts collected throughout Group Relative Policy Optimization (GRPO) training process and post-RLVR evaluation outputs that this issue persists during training and remains present during inference. Motivated by the analysis, we propose Consistency-Oriented Reasoning Alignment (CORA), which introduces thinking-answer semantic consistency into RLVR through a lightweight plug-and-play consistency reward model, and further incorporates Hybrid Reward Advantage Splitting (HRAS) to stably coordinate task and consistency optimization. Extensive experiments across representative multimodal reasoning benchmarks and mainstream LVLMs show that CORA improves task performance while effectively mitigating thinking-answer inconsistency, leading to more faithful reasoning traces.",
-      "published": "2026-06-12T17:54:59Z",
-      "updated": "2026-06-12T17:54:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14691v1"
+      "summary": "Maximum likelihood prediction (MLP) is a core task at the heart of modern large language models. Here, we study a quantum version of this task for a simplified data model consisting of independent and identically distributed samples, as a first step. The quantum maximum likelihood predictor (QMLP) is obtained by embedding of empirical probability distributions into quantum states and performing a minimization of quantum relative entropy over a given class of states. We derive non-asymptotic performance guarantees for QMLP in terms of convergence rates and concentration inequalities, both in trace norm and quantum relative entropy. Our approach provides a unified framework to handle MLP within both classical and quantum LLMs. We also consider the related problem of quantum information projection and generalize the well known quantum Pythagorean theorem to mixture families which are not necessarily generated by a self-adjoint class. We further show that the Pythagorean inequality continues to hold in the infinite dimensional setting under additional regularity conditions.",
+      "published": "2026-02-20T17:16:38Z",
+      "updated": "2026-06-25T17:57:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18364v3"
     },
     {
-      "id": "http://arxiv.org/abs/2606.14672v1",
-      "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+      "id": "http://arxiv.org/abs/2606.27347v1",
+      "title": "Mapping Political-Elite Networks in Europe with a Multilingual Joint Entity-Relation Extraction Pipeline",
       "authors": [
-        "Shikun Liu",
-        "Mufei Li",
-        "Dongqi Fu",
+        "Kirill Solovev",
+        "Jana Lasser"
+      ],
+      "summary": "Whether political elites organise into rent-seeking coalitions that capture public resources or civic networks that sustain governance is a central question in comparative politics. Yet observing these complex, informal, and adversarial ties at scale has historically required intensive manual coding, while automated text-as-data methods have largely been limited to simple co-occurrence. Recent large language model (LLM) approaches offer a path forward but often rely on proprietary APIs, lack cross-lingual capability, and struggle with scalable entity resolution. We present a modular, fully open-weight pipeline for multilingual joint entity-relation extraction that builds signed, temporal knowledge graphs from massive unstructured news corpora. It combines span-based named-entity recognition (NER) with a three-stage linking cascade mapping mentions to language-independent Wikidata identifiers; a high-throughput, ontology-constrained mixture-of-experts model then uses guided decoding to extract directed, signed relationships grounded in a domain ontology. A full-coverage spot-check against a 3491-relation gold standard shows high textual correctness (68.2% strict to 93.7% lenient). Two large-scale case studies validate the pipeline against the public record. In Austria, it reconstructs a political party's complete lifecycle, dating internal fractures and tracking personnel into successor factions and court convictions. In a Polish corpus, it uncovers the overlapping economic and governance networks of state-enterprise patronage, alongside the structurally balanced, signed conflict network of the polarized Civic Platform (Platforma Obywatelska, PO)--Law and Justice (Prawo i Sprawiedliwość, PiS) duopoly. By bridging raw multilingual text and structured relational data, our framework provides a robust, replicable foundation for cross-national empirical computational social science.",
+      "published": "2026-06-25T17:51:59Z",
+      "updated": "2026-06-25T17:51:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27347v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27334v1",
+      "title": "Language-Based Digital Twins for Elderly Cognitive Assistance",
+      "authors": [
+        "Mohammad Mehdi Hosseini",
+        "Mohammad H. Mahoor",
+        "Hiroko H. Dodge"
+      ],
+      "summary": "Digital twins have emerged as a promising paradigm for personalized healthcare, enabling modeling of individual behavior and health trajectories. In cognitive health, early detection of Mild Cognitive Impairment (MCI) remains challenging, where language and conversational patterns serve as non-invasive biomarkers. In this work, we propose a language-based digital twin framework that leverages large language models (LLMs) to mimic the conversational behavior of elderly individuals by incorporating stylometric cues and contextual metadata. To evaluate fidelity and cognitive consistency, we introduce a multi-head conditional variational autoencoder (cVAE) that jointly measures reconstruction quality and predicts cognitive scores. Experiments on the I-CONECT dataset show that the digital twin preserves identity-specific characteristics and achieves reconstruction and MoCA prediction errors comparable to real data, while outperforming baseline GPT-generated responses. These results highlight the potential of language-based digital twins as a scalable and non-invasive approach for personalized and continuous cognitive health monitoring.",
+      "published": "2026-06-25T17:45:53Z",
+      "updated": "2026-06-25T17:45:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27334v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27316v1",
+      "title": "LLM-Based Examination of Eligibility Criteria from Securities Prospectuses at the German Central Bank",
+      "authors": [
+        "Serhii Hamotskyi",
+        "Akash Kumar Gautam",
+        "Christian Hänig"
+      ],
+      "summary": "Verifying the eligibility of securities as collateral is a key responsibility of the German Central Bank. However, manually verifying these assets against legal and financial criteria within lengthy, semi-structured, and often bilingual prospectuses is a resource-intensive task. While previous efforts utilized traditional Named Entity Recognition (NER) for information extraction, these methods can struggle with OCR noise, linguistic variance, and rigid span-based constraints, and the need for manually annotated training data for each relevant annotation type. In this paper, we present the first case study applying Large Language Models (LLMs) to the eligibility examination process, shifting the paradigm toward a generative Information Extraction pipeline. Our approach decomposes the task into extraction, normalization, and interpretation, allowing for greater flexibility in handling noisy text and interleaved German-English content. We further introduce a value-based evaluation methodology using LLM-as-a-judge, which offers a more semantic assessment than location-based metrics. Our results demonstrate that LLM-based systems achieve high precision (up to 91%) in document-level eligibility, exhibiting a conservative operating profile that minimizes false acceptance.",
+      "published": "2026-06-25T17:29:58Z",
+      "updated": "2026-06-25T17:29:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27316v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27287v1",
+      "title": "Prompt Injection in Automated Résumé Screening with Large Language Models: Single and Multi-Injection Settings",
+      "authors": [
+        "Preet Baxi",
+        "Jiannan Xu",
+        "Jane Yi Jiang",
+        "Stefanus Jasin"
+      ],
+      "summary": "Large language models (LLMs) are increasingly used to screen and rank job applicants, creating incentives for candidates to strategically manipulate algorithmic hiring systems. We study prompt injection in automated résumé screening, defined as subtle self-promotional text that introduces no new qualifications but is designed to influence LLM evaluations. Using controlled experiments, we show that prompt injection reliably improves applicant rankings when résumé quality is homogeneous and few candidates inject. However, its effectiveness rapidly diminishes as more candidates inject, collapsing when manipulation becomes widespread. When candidate quality is heterogeneous, prompt injection is less effective on average, but can occasionally allow lower-quality candidates to outrank higher-quality ones, raising fairness concerns. Overall, LLM-based screening is most vulnerable when manipulation is rare and candidate quality differences are small. Code and resources are publicly available at: https://github.com/preetb1199/Prompt_Injection_ACL26",
+      "published": "2026-06-25T17:04:51Z",
+      "updated": "2026-06-25T17:04:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27287v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27275v1",
+      "title": "How Surprising Is Historical Italian to Language Models? Tokenization Tax, Comprehension Tax, and a Simple Mitigation",
+      "authors": [
+        "Maria Levchenko"
+      ],
+      "summary": "Large language models (LLMs) are increasingly critical to digital library workflows, yet their ability to process historical language remains poorly understood. Historical difficulty is typically treated as a monolithic barrier, conflating orthographic variation, linguistic distance, and pretraining exposure. In this paper, we propose a diagnostic framework that decomposes this difficulty into four distinct dimensions: tokenization cost, predictive uncertainty (surprisal), semantic robustness, and context sensitivity. We evaluate this framework on three datasets spanning three centuries: (1) a newly curated corpus of 17th-century Italian texts (1610-1689) digitized from original page images; (2) canonical 19th-century Italian \"I Promessi Sposi\" serving as a high-exposure control; and (3) 18th-century Russian civil print books as a contrastive orthographic stress test. Our results reveal a distinct dissociation between encoding cost and comprehension. While Russian and early modern Italian incur comparable tokenization penalties (25-30% inflation), their predictive difficulty diverges sharply. 17th-century Italian is on average 2.4 times more surprising than its modern equivalent - with academic prose reaching 3.2 times - whereas Russian shows only a modest increase. But predictive uncertainty does not imply representational degradation: embedding similarity remains robust (> 0.85) across all datasets, confirming that models can represent historical meaning even when generation is unstable. Finally, we demonstrate that a minimal temporal context prompt reduces historical surprisal by approximately 60%, offering a simple, model-agnostic mitigation. These findings suggest that while historical text imposes a consistent encoding tax, digital libraries can safely deploy LLMs for semantic retrieval tasks, provided that generative applications are carefully adapted.",
+      "published": "2026-06-25T16:52:21Z",
+      "updated": "2026-06-25T16:52:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27275v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27264v1",
+      "title": "CORTEX: A Structured Reasoning Benchmark for Trustworthy 3D Chest CT MLLMs",
+      "authors": [
+        "Hashmat Shadab Malik",
+        "Anees Ur Rehman Hashmi",
+        "Numan Saeed",
+        "Muzammal Naseer",
+        "Salman Khan",
+        "Christoph Lippert"
+      ],
+      "summary": "Reasoning in multimodal large language models (MLLMs) has shown strong promise in medical imaging. However, this reasoning is usually free-form text judged only by its final answer, making it hard to interpret and verify, especially in 3D radiology, where a diagnosis should be traceable to evidence in the scan. Existing chest CT question-answering datasets compound this by reducing expert radiology reports to answer-only pairs, dropping the reasoning that links findings to conclusions and omitting the patient history clinicians rely on. As a result, reasoning-capable 3D chest CT MLLMs remain out of reach, as neither the structured supervision needed to train them nor the protocol needed to verify their reasoning yet exists. We introduce CORTEX (Clinically Organized Reasoning and sTructured EXplanation), a structured reasoning benchmark for 3D chest CT. For each question, CORTEX restores the missing reasoning as a four-stage diagnostic trace mirroring a radiologist's workflow: task understanding, visual observation, diagnostic reasoning, and answer synthesis. We generate these traces using frontier large language models with broad medical and general-domain knowledge, then filter and verify them with a stage-level evaluation protocol combining automated rubric scoring with expert radiologist review. Crucially, both the reasoning structure and evaluation rubrics are designed in close collaboration with clinicians. Built on CT-RATE, a large, publicly available chest CT dataset without reasoning annotations, CORTEX comprises 76,177 validated reasoning traces across open-ended VQA, closed-ended VQA, and report generation, providing both the structured supervision and the stage-level evaluation protocol needed to build and evaluate trustworthy reasoning models for 3D chest CT. Our dataset and evaluation code will be made publicly available upon acceptance.",
+      "published": "2026-06-25T16:47:05Z",
+      "updated": "2026-06-25T16:47:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27264v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27247v1",
+      "title": "RSPC: A Benchmark for Modeling Stress and Psychiatric Conditions in Digitally Mediated Relationships using Psychiatrist Annotations",
+      "authors": [
+        "Parmitha Vangapandu",
+        "Sai Ganesh Mokkapati",
+        "Sathwik Narkedimilli",
+        "MSVPJ Sathvik",
+        "Timothy Liu",
+        "Simon See",
+        "Johannes C. Eichstaedt"
+      ],
+      "summary": "In NLP, mental health conditions are often modeled as isolated phenomena, without interpersonal context. We use Reddit posts about long-distance relationships to capture both mental health distress and associated relational triggers. We introduce the Relational Stress and Psychiatry Corpus (RSPC) containing 1,799 Reddit posts annotated by psychiatrists for diagnostic categories, including the most prevalent mood disorders (anxiety and depression), relational stressor triggers, and indications of relationship phase. We benchmark seven fine-tuned transformer models and five large language models across multi-label disorder classification, relational trigger detection, and temporal phase prediction tasks. We find clear task-dependent differences between model families, with Claude-3-Haiku achieving the best disorder classification performance (Macro-F1 = 0.538) and GPT-4o obtaining the strongest relational trigger detection performance (Macro-F1 = 0.519), suggesting distinct model capabilities. We further find strong associations between anxiety disorders and chronic relational uncertainty. Overall, RSPC establishes a benchmark for NLP tasks that consider relational context and supports a shift from individual-centric to context-aware mental health modeling that captures the social and temporal dynamics of distress.",
+      "published": "2026-06-25T16:33:57Z",
+      "updated": "2026-06-25T16:33:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27247v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.27231v1",
+      "title": "A hardware-safety-gated system for LLM-written native ARTIQ control code on a trapped-ion platform",
+      "authors": [
+        "Duanyang Wang",
+        "Lu Qi",
+        "Yuanheng Xie",
+        "Norbert M. Linke",
+        "Kenneth R. Brown"
+      ],
+      "summary": "Large-language-model (LLM) agents can write and run experimental control code. This allows laboratory work to be conducted autonomously. However, this autonomy raises a safety problem that prior work has not addressed. Unchecked code can damage the apparatus, and there is no formal, per-operation boundary between human authorization/supervision, and agent decisions. We present a control system that places an LLM agent in the loop of a trapped-ion experiment while enforcing such a boundary. The agent controls the existing Advanced Real-Time Infrastructure for Quantum physics (ARTIQ) stack through tools provided by a Model Context Protocol (MCP) server. No tool call reaches the hardware unless it carries an authorization token bound to its exact contents. Tokens are issued in one of two ways: automatically, by running the agent's proposed script in an isolated hardware simulation (dax.sim) and checking every operation against preset per-device bounds, or manually by a human operator for sensitive actions. Within this boundary the agent develops its own experiments, rather than only calling pre-built routines. We deploy the system on a co-trapped $^{40}$Ca$^{+}$/$^{40}$CaOH$^{+}$ crystal, where the agent autonomously builds a full calibration stack and, with targeted operator guidance, closes a cross-instrument magnetic-field-stabilization loop. On a separate, independent $^{171}$Yb$^{+}$ platform, we confirm interface-level portability. We systematically test token-authorization mechanism with adversarial scripts that attempt to bypass it, mapping the precise boundary of its protection and prioritizing where to strengthen it next. Analyzing where the agent still requires human guidance, we find that its limits lie in metacognitive control, namely recognizing when a problem must be re-framed, rather than in domain knowledge.",
+      "published": "2026-06-25T16:19:23Z",
+      "updated": "2026-06-25T16:19:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.27231v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.18195v2",
+      "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs",
+      "authors": [
+        "Yifu Luo",
+        "Zeyu Chen",
         "Haoyu Wang",
-        "Yinglong Xia",
-        "Hong Li",
-        "Hong Yan",
-        "Pan Li"
+        "Xinhao Hu",
+        "Yuxuan Zhang",
+        "Zhizhou Sha",
+        "Shiwei Liu"
       ],
-      "summary": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured agent workflows, in which independent branches explore subtasks, retrieve evidence, or generate candidate solutions before a final synthesis step. Existing systems typically merge these branches by concatenating their textual outputs, which discards the parallel structure and incurs redundant prefill computation. In this work, we introduce Parallel-Synthesis, a plug-and-play framework that enables a synthesizer to directly consume the KV caches produced by parallel worker agents. Parallel-Synthesis combines a cache mapper that calibrates independently generated branch caches with a fine-tuned synthesizer adapter that enables generation from this non-sequential cache interface. We train Parallel-Synthesis using data that exposes the synthesizer to parallel cache contexts, teaches aggregation across cached branches, and distills reasoning behavior from standard text-concatenation-based synthesis. Across nine downstream datasets spanning math, science QA, code generation, GAIA, and multi-agent database diagnosis, Parallel-Synthesis matches or outperforms text-based synthesis on seven datasets and remains close on the other two. It also reduces time-to-first-token by 2.5x-11x, suggesting that direct cache-based synthesis is a promising interface for more native and efficient synthesis over parallel agent branches.",
-      "published": "2026-06-12T17:39:29Z",
-      "updated": "2026-06-12T17:39:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14672v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2606.14664v1",
-      "title": "The Self-Aware Body: A User-Centered Framework for Designing Therapeutic Sonic Interactions",
-      "authors": [
-        "Prithvi Ravi Kantan",
-        "Sofia Dahl",
-        "Erika G. Spaich"
-      ],
-      "summary": "This chapter presents a framework for designing therapeutic sonic interaction technologies, with a focus on movement sonification: the real-time conversion of bodily motion into sound that serves as feedback during motor rehabilitation. Despite growing evidence for their effectiveness, technologies implementing movement sonification are yet to be systematically adopted as part of clinical practice, potentially due to a lack of standardized development methodologies as well as inadequate integration of clinical stakeholder perspectives into interaction design. The framework addresses these barriers through three interconnected contributions. The first is a conceptual reframing of the design task as the calibration of sonic variability to the perceptual affordances of the listener and the demands of the clinical context. The second is a practical design platform inspired by professional audio mixing workflows, which imposes a structured and learnable signal-flow architecture on the interaction design process and enables rapid iterative exploration. The third is a user-centered development methodology adapted from healthcare intervention science, which grounds design decisions in engagement with the clinicians and patients who will use the resulting systems. The HearWalk biofeedback system for hemiparetic gait rehabilitation illustrates the framework, and the chapter concludes by examining where large language models and AI tools can meaningfully assist each stage of this design process, as well as where human clinical and perceptual expertise remains irreplaceable.",
-      "published": "2026-06-12T17:34:29Z",
-      "updated": "2026-06-12T17:34:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14664v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.01463v2",
-      "title": "Low-Burden LLM-Based Preference Learning: Personalizing Assistive Robots from Natural Language Feedback for Users with Paralysis",
-      "authors": [
-        "Keshav Shankar",
-        "Dan Ding",
-        "Wei Gao"
-      ],
-      "summary": "Physically Assistive Robots require personalized behaviors to ensure user safety and comfort. However, traditional preference learning methods, like exhaustive pairwise comparisons, cause substantial physical and cognitive fatigue for users with severe motor impairments. To solve this, we propose a low-burden, offline framework that translates unstructured natural language feedback directly into deterministic robotic control policies. To safely bridge the gap between ambiguous human speech and robotic code, our pipeline uses Large Language Models (LLMs) grounded in the Occupational Therapy Practice Framework. This clinical reasoning decodes subjective user reactions into explicit physical and psychological needs, which are then mapped into transparent decision trees. Before deployment, an automated \"LLM-as-a-Judge\" verifies the code's structural safety. We validated this system in a simulated meal preparation study with 10 adults with paralysis. Results show our natural language approach significantly reduces user workload compared to traditional baselines. Additionally, occupational therapists confirmed the generated policies are safe and accurately reflect user preferences.",
-      "published": "2026-04-01T23:17:10Z",
-      "updated": "2026-06-12T17:20:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.01463v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2606.14654v1",
-      "title": "Abstracting Cross-Domain Action Sequences into Interpretable Workflows",
-      "authors": [
-        "Gaurav Verma",
-        "Scott Counts"
-      ],
-      "summary": "Sequential or time-stamped interaction logs provide objective records of digital application usage, yet their granularity and noise often obscure meaningful insights into people's work. Such insights are essential for improving digital products in ways grounded in real-world user interactions. Prior research has applied deep learning models to cluster user actions into high-level activities, but these approaches are highly sensitive to noise and struggle to generalize across applications. To address this limitation, we introduce WorkflowView, a framework that uses large language models (LLMs) to abstract low-level action sequences into high-level activities. We establish the effectiveness and generality of our approach across three distinct, challenging sequential tasks and diverse domains: (a) zero-shot task description reconstruction from browser logs (achieving high semantic similarity, $μ_{sim} = 0.91$), (b) few-shot student dropout prediction using MOOC interaction logs (reaching weighted $F_1 = 0.90$ with only five few-shot examples), and (c) anonymized, privacy-preserving analysis of AI tool integration within document workflows in Microsoft Word. Our work demonstrates that LLM-based abstraction is a robust and efficient path forward for transforming low-level behavioral data into high-level, interpretable, and actionable insights. We also discuss practical considerations for deploying LLM-based inferences within logging infrastructures, including computational efficiency and user privacy.",
-      "published": "2026-06-12T17:19:15Z",
-      "updated": "2026-06-12T17:19:15Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14654v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.23336v3",
-      "title": "Efficient Rationale-based Retrieval: On-policy Distillation from Generative Rerankers based on JEPA",
-      "authors": [
-        "Teng Chen",
-        "Sheng Xu",
-        "Feixiang Guo",
-        "Xiaoyu Wang",
-        "Qingqing Gu",
-        "Hongyan Li",
-        "Luo Ji"
-      ],
-      "summary": "Unlike traditional fact-based retrieval, rationale-based retrieval typically necessitates cross-encoding of query-document pairs using large language models, incurring substantial computational costs. To address this limitation, we propose Rabtriever, which independently encodes queries and documents, while providing comparable cross query-document comprehension capabilities to rerankers. We start from training a LLM-based generative reranker, which puts the document prior to the query and prompts the LLM to generate the relevance score by log probabilities. We then employ it as the teacher of an on-policy distillation framework, with Rabtriever as the student to reconstruct the teacher's contextual-aware query embedding. To achieve this effect, Rabtriever is first initialized from the teacher, with parameters frozen. The Joint-Embedding Predictive Architecture (JEPA) paradigm is then adopted, which integrates a lightweight, trainable predictor between LLM layers and heads, projecting the query embedding into a new hidden space, with the document embedding as the latent vector. JEPA then minimizes the distribution difference between this projected embedding and the teacher embedding. To strengthen the sampling efficiency of on-policy distillation, we also add an auxiliary loss on the reverse KL of LLM logits, to reshape the student's logit distribution. Rabtriever optimizes the teacher's quadratic complexity on the document length to linear, verified both theoretically and empirically. Experiments show that Rabtriever outperforms different retriever baselines across diverse rationale-based tasks, including empathetic conversations and robotic manipulations, with minor accuracy degradation from the reranker. Rabtriever also generalizes well on traditional retrieval benchmarks such as MS MARCO and BEIR, with comparable performance to the best retriever baseline.",
-      "published": "2026-04-25T14:45:33Z",
-      "updated": "2026-06-12T16:55:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.23336v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2606.14607v1",
-      "title": "Empowering Student Debugging in Parallel Programming with Execution Traces and Large Language Models",
-      "authors": [
-        "God'salvation F. Oguibe",
-        "Vinodh Kumaran Jayakumar",
-        "Tongping Liu",
-        "Andrew Lan",
-        "Wei Wang"
-      ],
-      "summary": "Concurrent programming is a core component of Computer Science curricula, yet remains notoriously difficult for students to master due to its inherent complexity and the nondeterministic nature of concurrency bugs such as deadlocks and race conditions. In this work, we present ParaView, an educational tool designed to help students understand, debug, and correct concurrency issues in parallel programs written in C/C++. ParaView provides transparent execution recording and visualization to make parallel execution observable and comprehensible. We evaluated ParaView through a series of debugging and implementation tasks, with 17 students participating. Results showed a significant improvement in debugging and implementation successes compared to previous course iterations. A student survey confirmed that most participants found ParaView helpful. To further support learning outside the classroom, we explored using Large Language Models (LLMs) to analyze concurrency bugs and suggest fixes. While LLMs were highly effective in identifying bugs and explaining execution traces, the correctness of their bug fixes varied, especially for more complex synchronization patterns. Our findings suggest that recording-visualization tools like ParaView, complemented by artificial intelligence (AI), can improve teaching and learning of concurrent programming.",
-      "published": "2026-06-12T16:30:41Z",
-      "updated": "2026-06-12T16:30:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14607v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2512.18021v3",
-      "title": "Shuttling Compiler for Trapped-Ion Quantum Computers Based on Large Language Models",
-      "authors": [
-        "Fabian Kreppel",
-        "Reza Salkhordeh",
-        "Ferdinand Schmidt-Kaler",
-        "André Brinkmann"
-      ],
-      "summary": "We present the first shuttling compiler based on large language models (LLMs) for trapped-ion quantum computers, where qubits are shuttled between segments for gate execution and qubit storage. We fine-tune pre-trained LLMs on examples from linear and branched one-dimensional shuttling architectures. Thus, we obtain a layout-independent compilation strategy that learns the required shuttling operations directly from data. Using benchmark circuits with up to 16 qubits, such fine-tuned LLMs can now generate valid schedules for shuttling architectures. Notably, we also obtain a valid schedule for a previously unseen four-way junction layout. This demonstrates that trained LLMs can generalize to layouts not encountered during training. For various architectures, LLM-based schedules improve upon state-of-the-art baseline compiler results, reducing the shuttling effort by up to 15%.",
-      "published": "2025-12-19T19:29:09Z",
-      "updated": "2026-06-12T16:29:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.18021v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2606.14602v1",
-      "title": "What Robots Do Matters More Than What They Look Like: Task Context Shapes Trust in Educational HRI",
-      "authors": [
-        "Anna-Maria Velentza",
-        "Konstantina Nikou",
-        "Anne-Gwenn Bosser",
-        "Nikolaos Fachantidis"
-      ],
-      "summary": "Socially assistive robots (SARs) are increasingly deployed in educational and information-sharing contexts, supported by advances in large language models that enable fluent real-time interaction. Despite the growing diversity of robot embodiments, it remains unclear whether a single robot appearance is appropriate across different interaction tasks or whether trust depends primarily on contextual factors. In this study, we examine how robot appearance and task type jointly influence trust in robots. Using a within-subjects video-based experiment (N = 81), participants evaluated three robots with distinct appearances while performing three educationally relevant tasks: teaching, procedural instruction, and personal-information discussion. Results from repeated-measures analyses show a strong main effect of task on trust, with participants reporting the highest trust during instructional guidance, moderate trust during teaching activities, and significantly lower trust when robots requested personal information. In contrast, robot appearance showed no significant main effect, and the interaction between appearance and task was marginal. These findings suggest that trust in human-robot interaction is shaped more strongly by task context than by physical embodiment alone. By focusing on future educators as end users, this work contributes empirical evidence toward task-aware robot deployment in educational environments and highlights the importance of aligning robot roles and behaviors with interaction goals rather than relying solely on anthropomorphic design.",
-      "published": "2026-06-12T16:23:49Z",
-      "updated": "2026-06-12T16:23:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.14602v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2601.05106v5",
-      "title": "Token-Level LLM Collaboration via FusionRoute",
-      "authors": [
-        "Nuoya Xiong",
-        "Yuhang Zhou",
-        "Hanqing Zeng",
-        "Zhaorun Chen",
-        "Furong Huang",
-        "Shuchao Bi",
-        "Lizhu Zhang",
-        "Zhuokai Zhao"
-      ],
-      "summary": "Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.",
-      "published": "2026-01-08T16:53:16Z",
-      "updated": "2026-06-12T16:10:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.05106v5"
+      "summary": "On-policy self-distillation (OPSD) has proven effective for post-training large language models (LLMs), yet its application to diffusion LLMs (dLLMs) remains unexplored. Existing OPSD methods are inherently autoregressive-centric. They inject privileged information via left-to-right prefix conditioning with token-level divergence supervision, a design that fundamentally conflicts with the arbitraryorder generation of dLLMs. We introduce d-OPSD, the first OPSD framework tailored for dLLMs. Our approach makes two core contributions. First, we reframe self-teacher construction by using self-generated answers as suffix conditioning, enabling the student model to learn from \"self future-experience\" rather than privileged prefixes. Second, we shift supervision from token-level to step-level, aligning training with the iterative denoising process of dLLMs. Experiments across four reasoning benchmarks show that d-OPSD consistently outperforms RLVR and SFT baselines with superior sample efficiency, requiring only around 10% of the optimization steps by RLVR and opening a promising pathway for dLLM posttraining. The code is available at https://github.com/xingzhejun/d-OPSD.",
+      "published": "2026-06-16T17:24:57Z",
+      "updated": "2026-06-25T16:08:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.18195v2"
     }
   ]
 }
