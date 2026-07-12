@@ -1,226 +1,202 @@
 {
-  "generated_at_utc": "2026-07-09T02:53:31Z",
+  "generated_at_utc": "2026-07-12T02:39:02Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2607.07708v1",
-      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+      "id": "http://arxiv.org/abs/2607.08768v1",
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
       "authors": [
-        "Chen Tang",
-        "Yizhou Wang",
-        "Jianyu Wu",
-        "Lintao Wang",
-        "Shixiang Tang",
-        "Pengze Li",
-        "Encheng Su",
-        "Jun Yao",
-        "Jiabei Xiao",
-        "Yuqi Shi",
-        "Jielan Li",
-        "Hongxia Hao",
-        "Zhangyang Gao",
-        "Fang Wu",
-        "Ben Fei",
-        "Xiangyu Yue",
-        "Pan Tan",
-        "Bozitao Zhong",
-        "Jinouwen Zhang",
-        "Aoran Wang",
-        "Yan Lu",
-        "Jiaheng Liu",
-        "Xinzhu Ma",
-        "Liang Hong",
-        "Mingyue Zheng",
-        "Phil Torr",
-        "Bowen Zhou",
-        "Wanli Ouyang",
-        "Lei Bai"
+        "Zhekai Chen",
+        "Chengqi Duan",
+        "Kaiyue Sun",
+        "Bohao Li",
+        "Yuqing Wang",
+        "Manyuan Zhang",
+        "Xihui Liu"
       ],
-      "summary": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.",
-      "published": "2026-07-08T17:59:59Z",
-      "updated": "2026-07-08T17:59:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07708v1"
+      "summary": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it difficult to identify the root causes of agent failures. To address these limitations, we introduce UniClawBench, the first capability-driven benchmark designed to evaluate proactive agents in dynamic, real-world settings. UniClawBench is built around five foundational model capabilities: Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, and Cross-Platform Coordination. Based on these capabilities, we design 400 bilingual real-world tasks. Unlike previous benchmarks that rely on static, pre-recorded answers, our benchmark evaluates agents in live Docker containers using fine-grained, step-by-step completion checkpoints. Furthermore, we design a closed-loop evaluation strategy comprising an executor agent, a hidden supervisor agent, and a user agent to simulate realistic multi-turn human feedback without leaking grading criteria. To disentangle base model capabilities from framework-level design choices, we evaluate state-of-the-art models under multiple agent frameworks. Through comprehensive comparisons across both models and frameworks, we show how base model capabilities and agent framework designs jointly shape performance in real-world environments. To facilitate future research, we make our benchmark and code publicly available at https://github.com/HKU-MMLab/UniClawBench.",
+      "published": "2026-07-09T17:59:32Z",
+      "updated": "2026-07-09T17:59:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08768v1"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07702v1",
-      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+      "id": "http://arxiv.org/abs/2606.15920v2",
+      "title": "OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing",
       "authors": [
-        "Ying Chang",
-        "Jiahang Xu",
-        "Xuan Feng",
-        "Chenyuan Yang",
-        "Peng Cheng",
-        "Yuqing Yang"
+        "Zebang Cheng",
+        "Shuimu Chen",
+        "Boxue Yang",
+        "Yuanshen Guan",
+        "Jingyi Chen",
+        "Zheng Lian",
+        "Xiaojiang Peng",
+        "Fei Ma",
+        "LaiZhong Cui",
+        "Qi Tian"
       ],
-      "summary": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .",
-      "published": "2026-07-08T17:57:27Z",
-      "updated": "2026-07-08T17:57:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07702v1"
+      "summary": "Reinforcement learning for multimodal large language models (MLLMs) is often hindered by severe reward sparsity in complex reasoning tasks. This challenge is particularly pronounced in human-centered scenarios involving states, emotions, intentions, and behaviors, where heterogeneous multimodal signals and subjective human factors make high-quality chain-of-thought (CoT) annotations expensive and difficult to obtain. Although many multimodal datasets provide expert-annotated ground-truth labels, directly using these labels for supervised fine-tuning may encourage shortcut learning in multimodal perception and provides limited transparency for safety-critical human--AI interaction. To address these limitations, we propose OmniOPSD, a Rationale-Privileged On-Policy Self-Distillation framework that uses frontier-generated rationales as teacher-side privileged evidence rather than student imitation targets. OmniOPSD uses frontier-generated evidence-aware rationales only as training-time privileged evidence context for a local teacher. The student samples its own rollout from the original multimodal input, while the rationale-privileged teacher scores the same tokens and provides dense token-level supervision. Thus, the student learns on its own trajectory distribution without directly imitating frontier-model completions, and inference requires no labels, rationales, CoT annotations, or closed-source model access. Experiments on MER-UniBench show that OmniOPSD achieves state-of-the-art performance with an average score of $84.19$, and ablations further support the value of rationale-privileged teacher guidance.",
+      "published": "2026-06-14T16:51:22Z",
+      "updated": "2026-07-09T17:53:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.15920v2"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07696v1",
-      "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+      "id": "http://arxiv.org/abs/2607.08745v1",
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
       "authors": [
-        "Victor Giannakouris",
-        "Immanuel Trummer"
+        "Siddharth Damodharan",
+        "Radhika Gupta",
+        "Ali Alshami",
+        "Ryan Rabinowitz",
+        "Jugal Kalita"
       ],
-      "summary": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that database file formats, while complex, are fully specified by their source code and documentation, artifacts that Large Language Models (LLMs) can ingest to regenerate operator-specific table reading components without human-engineered parsing logic. Jailbreak leverages LLM-assisted code synthesis for database storage decoding, turning a traditionally opaque format into a directly queryable artifact. We evaluate Jailbreak on PostgreSQL and MySQL storage files, targeting analytical snapshot scenarios common in read replicas and offline processing pipelines. The generated reader produces Apache Arrow buffers consumable directly by most of the widely known query engines, including DuckDB, Apache Spark, and GPU-accelerated frameworks such as cuDF and Spark RAPIDS. We validate correctness against JDBC/ODBC-based baselines using the TPC-H benchmark across all query results, and demonstrate significant performance improvements in end-to-end analytical throughput, achieving up to 27x speedups. Our results showcase that LLM-assisted storage reader synthesis is a viable and generalizable methodology for breaking data lock-in across database systems, with applications beyond PostgreSQL and MySQL for any system whose file format is available to the LLM from documentation or source code.",
-      "published": "2026-07-08T17:55:00Z",
-      "updated": "2026-07-08T17:55:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07696v1"
+      "summary": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reason about safety-critical incidents remains challenging. To address this gap, we present AUTOPILOT-VQA, an incident-centric visual question answering benchmark for dashcam video understanding. The dataset evaluates different systems through structured questions designed around real-world driving incidents and near-incidents. The benchmark covers diverse safety-relevant categories, including weather and lighting conditions, traffic environment, road layout, road surface state, signage, involved entities, accident occurrence, impact location, and avoidability-related reasoning. By requiring models to answer grounded questions about both contextual scene properties and event-level incident details, AUTOPILOT-VQA moves beyond object recognition toward temporally grounded, safety-aware reasoning. The dataset is released as part of the AUTOPILOT CVPR 2026 competition and provides a standardized benchmark for assessing the reliability of autonomous driving systems in different scenarios. Our benchmark support developments for more interpretable, robust, and safety-conscious vision-language systems for real-world autonomous driving.",
+      "published": "2026-07-09T17:46:24Z",
+      "updated": "2026-07-09T17:46:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08745v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.24978v6",
-      "title": "Agentic Exploration of Physics Models",
+      "id": "http://arxiv.org/abs/2607.08740v1",
+      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
       "authors": [
-        "Maximilian Nägele",
-        "Florian Marquardt"
+        "Emanuele Quinto",
+        "Carlo Andrea Rozzi",
+        "Francesco Zanitti"
       ],
-      "summary": "The process of scientific discovery relies on an interplay of observations, analysis, and hypothesis generation. Machine learning is increasingly being adopted to address individual aspects of this process. However, it remains an open challenge to fully automate the heuristic, iterative loop required to discover the laws of an unknown system by exploring it through experiments and analysis, without tailoring the approach to the specifics of a given task. Here, we introduce SciExplorer, an agent that leverages large language model tool-use capabilities to enable exploration of systems without any domain-specific blueprints, and apply it to physical systems that are initially unknown to the agent. We test SciExplorer on a broad set of models spanning mechanical dynamical systems, wave evolution, and quantum many-body physics. Despite using a minimal set of tools, primarily based on code execution, we observe impressive performance on tasks such as recovering equations of motion from observed dynamics and inferring Hamiltonians from expectation values. The demonstrated effectiveness of this setup opens the door toward similar scientific exploration in other domains, without the need for fine-tuning or task-specific instructions.",
-      "published": "2025-09-29T16:07:05Z",
-      "updated": "2026-07-08T17:52:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.24978v6"
+      "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execution concerns. This paper proposes a Lisp-inspired but language-independent conceptual model: symbolic forms, object identity, and live-image thinking are used as explanatory lenses, not implementation commitments. In this model, workflow definitions, workflow instances, inference records, context snapshots, and dependency relations are represented as persistent knowledge objects in a shared knowledge substrate. Its central semantic distinction is between derive and infer: derive is deterministic computation over available state; infer is mediated LLM judgment under declared context and executor-controlled capability policy. The result is a preliminary conceptual account of semantic persistence: workflows do not merely produce knowledge and leave traces, but can themselves be represented as inspectable, resumable, and reviewable knowledge objects, while formal transition semantics remain future work.",
+      "published": "2026-07-09T17:40:46Z",
+      "updated": "2026-07-09T17:40:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08740v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.13817v2",
-      "title": "What's on My Network? Using Large Language Models to Identify Real-World IoT Devices at Scale",
+      "id": "http://arxiv.org/abs/2607.08734v1",
+      "title": "The Illusion of Equivalency: Statistical Characterization of Quantization Effects in LLMs",
       "authors": [
-        "Rameen Mahmood",
-        "Tousif Ahmed",
-        "Sai Teja Peddinti",
-        "Danny Yuxing Huang"
+        "Baha Rababah",
+        "Cuneyt Gurcan Akcora",
+        "Carson K. Leung"
       ],
-      "summary": "The growth of IoT devices in shared environments has outpaced our ability to identify them, posing urgent risks to privacy, safety, and accountability. This challenge is especially pronounced in open-world environments, where network traffic metadata is often sparse, noisy, or adversarial. To address this problem, we introduce a semantic inference pipeline that reframes device identification as a language modeling task over real-world network metadata. As this approach depends on reliable supervision, we first construct high-fidelity vendor labels for the IoT Inspector dataset, the largest real-world corpus of its kind, using an ensemble of large language models guided by mutual-information and entropy-based stability scores. We then instruction-tune a quantized LLaMA 3.1 8B model on this dataset using curriculum learning to support generalization under sparsity and long-tail vendor distributions. Our model achieves 98.69% top-1 and 90.73% macro accuracy across 2,015 vendors, while remaining robust to missing fields, protocol drift, and adversarial manipulation. We also evaluate the model on an independent IoT testbed dataset, assess explanation quality, and conduct adversarial tests to probe robustness under spoofed and obfuscated input. These results position instruction-tuned LLMs as a scalable, interpretable foundation for trustworthy device identification at scale.",
-      "published": "2025-09-24T05:33:48Z",
-      "updated": "2026-07-08T17:47:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.13817v2"
+      "summary": "Post-training quantization is widely used to deploy large language models in resource-constrained settings, yet its evaluation relies almost exclusively on accuracy and perplexity. We show that these metrics fail to capture behavioral changes induced by quantization. We introduce correctness agreement, a decision-level metric that measures overlap in correct predictions between a base model and its quantized variants, independent of absolute accuracy. Across multiple models and quantization schemes from 8-bit to 2-bit, we find that behavioral divergence emerges under moderate quantization even when task performance appears preserved. To explain this effect, we analyze quantization as a structural operator on attention weights and quantify layer-wise distortions using statistical and distributional measures. Our results reveal non-linear breakpoints at low bit-widths and show that query and key projections are consistently more sensitive than value and output projections. These findings expose an illusion of equivalence between base and quantized models and motivate behavioral evaluation beyond conventional performance metrics.",
+      "published": "2026-07-09T17:35:02Z",
+      "updated": "2026-07-09T17:35:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08734v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.29483v2",
-      "title": "Fog Computing and Large Language Models: A vision for mutual beneficiaries",
+      "id": "http://arxiv.org/abs/2602.13723v5",
+      "title": "Compiling Large Multi-Modal Requirement Documents into Runnable Software Systems: From an Agentic Test-Driven Perspective",
       "authors": [
-        "Satish Narayana Srirama"
+        "Weiyu Kong",
+        "Yun Lin",
+        "Xiwen Teoh",
+        "Duc-Minh Nguyen",
+        "Ruofei Ren",
+        "Jiaxin Chang",
+        "Haoxu Hu",
+        "Haoyu Chen"
       ],
-      "summary": "Fog computing utilizes proximal computational resources for sensor data processing and actuation, and addresses the latency, network load, and privacy issues of cloud-centric Internet of Things. On the other hand, Large Language Models (LLMs) are a type of deep learning AI models, which are trained on enormous text data, that perform various natural language processing tasks such as translation, question answering, text summarization, and code generation. LLMs are generally cloud-centric, requiring abundant GPU memory and computing capabilities, again face the same issues that led to fog computing. This pushes the necessity for LLM support in the proximity on fog infrastructure, requiring LLM optimizations such as parameter-weight quantization, pruning, low-rank adaptation etc. Meanwhile, fog computing also gets benefit from LLM's ability for code generation, in the dynamic deployment of fog-based applications. The paper addresses how both fog computing and LLMs can be mutual beneficiaries, discussing the state-of-the-art and future research scope.",
-      "published": "2026-06-28T16:27:55Z",
-      "updated": "2026-07-08T17:45:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.29483v2"
+      "summary": "Large Language Models (LLMs) have significantly improved programming efficiency by translating natural language into code, yet their performance deteriorates when handling large-scale, multi-modal requirement documents containing hundreds of scenarios, often producing incorrect implementations or missing critical constraints. To address this challenge, we propose ARC (Agentic Requirement Compilation), a framework that compiles DSL-based requirement documents into runnable web systems while automatically generating modular software architecture, comprehensive test suites, and traceability across requirements, design, and code. ARC adopts a bidirectional test-driven agentic workflow, combining a top-down architecture design phase with a bottom-up implementation phase to ensure that generated code satisfies synthesized tests. We evaluate ARC on six runnable web system benchmarks and the AppForge benchmark of 101 mobile app generation tasks. Across three independent trials, ARC consistently outperforms state-of-the-art LLM-based baselines, achieving 50.6% more GUI tests passed on average for web systems, a 100% compilation success rate, and a 68.3% test pass rate on AppForge. A user study with 21 participants further shows that users with limited programming experience can write DSL-based requirement documents containing up to 174 scenarios within an average of 5.6 hours to generate maintainable runnable systems, including a real-world ticket-booking application of approximately 10K lines of code.",
+      "published": "2026-02-14T11:07:58Z",
+      "updated": "2026-07-09T17:16:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.13723v5"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07673v1",
-      "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
+      "id": "http://arxiv.org/abs/2607.08706v1",
+      "title": "Directional AI Advice: Experimental Evidence from Healthcare",
       "authors": [
-        "Hyunjae Kim",
-        "Dain Kim",
-        "Pan Xiao",
-        "Serina S. Applebaum",
-        "Younjoon Chung",
-        "Xuguang Ai",
-        "Yu Yin",
-        "Roy Jiang",
-        "Yuexi Du",
-        "Yawen Wei",
-        "Yiming Kong",
-        "Tuo Guo",
-        "Zhiyuan Cao",
-        "Mengmeng Du",
-        "Yuelei Fu",
-        "Yan Hu",
-        "Rui Shi",
-        "Gui Yang",
-        "Kevin W. Jin",
-        "Yuntian Liu",
-        "Yuxuan Tian",
-        "Jonathan Marquez",
-        "Zhen Chen",
-        "Sheng Zhang",
-        "Hoifung Poon",
-        "Hua Xu",
-        "Jaewoo Kang",
-        "Qingyu Chen"
+        "Yuyu Chen",
+        "Hongbin Li",
+        "Lingsheng Meng",
+        "Xinyao Qiu",
+        "Qingxu Yang"
       ],
-      "summary": "Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-quality clinical data. Although PubMed Central (PMC) offers a complementary source of expert-authored image-text data, existing PMC-derived resources remain limited in fidelity, reproducibility, and clinical validation. We introduce MedPMC, an automated, continuously updatable framework that transforms permissively licensed literature into high-fidelity infrastructure for medical multimodal models. Applied to 6.1 million PMC articles, MedPMC curated 11 million medical image-text pairs. Component evaluations showed strong performance for initial screening (F1 = 93.2), multi-panel figure detection (F1 = 96.5), figure separation (mAP = 89.8), caption separation and alignment (F1 = 81.4; ROUGE-L = 85.3), and medical figure classification (F1 = 96.5). Manual review by five annotators, three with medical training, found 95.3% of MedPMC images medically relevant, versus 19.7% in a prior PMC-derived dataset. Across 26 benchmarks spanning 11 specialties, a MedPMC-trained CLIP-style model improved average zero-shot AUC by 7.1 percentage points over the strongest architecture-matched biomedical CLIP baseline despite using fewer than half as many image-text pairs. As the vision encoder in a multimodal large language model, it improved medical visual question-answering by 1.9 and 16.9 percentage points across two benchmarks. In 10,524 Yale New Haven Health System dermatology photographs, it improved morphology-to-image retrieval Recall@5 by 11.7 percentage points. These findings show that high-fidelity literature curation strengthens medical multimodal foundation models across benchmark and clinical settings. We publicly release the framework, corpus, benchmarks, and pretrained models.",
-      "published": "2026-07-08T17:26:49Z",
-      "updated": "2026-07-08T17:26:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07673v1"
+      "summary": "Generative AI is fast becoming the first place people turn for expert advice. The advice it provides can be directional rather than neutral, shaped in part by the choices of its designers and regulators. When clients consult AI before meeting an expert, they carry this directional advice into a relationship that once rested on the expert's judgment alone. We study its consequences in healthcare through a large-scale preregistered field experiment at a Chinese hospital, where we randomize patients' access to an AI chatbot before their outpatient visit. Examination of the conversation logs shows that the chatbot routinely cautions against the use of medications, especially Traditional Chinese Medicine and antibiotics, while issuing clean recommendations for diagnostic testing, consistent with the liability-driven guardrails encoded in AI training. This directionality propagates into clinical practice. Prescription rates decline among treated patients while diagnostic testing increases, and these effects are more pronounced among physicians who are receptive to patient input and those with more intensive prescribing styles. Beyond shifting healthcare utilization, survey results show that AI access reduces patient compliance and satisfaction, shifting the balance of authority between patients and physicians.",
+      "published": "2026-07-09T17:14:20Z",
+      "updated": "2026-07-09T17:14:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08706v1"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07670v1",
-      "title": "Does Bielik Know What It Doesn't Know? Activation Dispersion Separates Entity Familiarity from Factual Reliability Across Model Scale",
+      "id": "http://arxiv.org/abs/2607.08698v1",
+      "title": "How YouTube Frames ChatGPT Use in Education: An Epistemic Network Analysis with Supporting Multimodal Metadata",
       "authors": [
-        "Grzegorz Brzezinka"
+        "Shayla Sharmin",
+        "Mohammad Al-Ratrout",
+        "Mohammad Fahim Abrar",
+        "Roghayeh Leila Barmaki"
       ],
-      "summary": "Large language models hallucinate most about entities they have never seen. We ask whether a model's activations betray entity familiarity before a single answer token is generated, and whether that signal predicts the factual reliability of the answers. On four Polish Bielik models (1.5B-11B parameters), we probe four entity domains (athletes, cities, writers, musicians), each with 42 well-known, 42 obscure-but-real, and 42 fabricated entities addressed by a one-sentence question (504 prompts per model). Two unsupervised, single-forward-pass dispersion measures over post-SwiGLU MLP activations, inverse participation ratio and spectral entropy, separate known from fabricated entities at AUROC 0.95-1.00 across all domains and scales; a supervised linear probe reaches 0.99-1.00. Both clear selection-aware permutation floors of about 0.70-0.74 (empirical p<=1e-3), survive held-out layer selection (0.93-0.99), and persist on real names (known vs. obscure-but-real: 0.96-1.00). The signal transfers across entity types (mean off-diagonal AUROC 0.92-0.99); a matched-template counterfactual shows the only large drops are template-caused, not entity-type effects, and the signal is diffuse across heads. This representational signal is already at ceiling at 1.5B, whereas behavioral factual reliability scales sharply: 0, 2, 10, and 19 of 42 known athletes are answered fully correctly by the 1.5B, 4.5B, 7B, and 11B models under a strict judge. Within known entities, separating correct from hallucinated answers is much harder (probe 0.93; dispersion no better than a first-token-entropy baseline). A five-sample semantic-entropy baseline reaches only 0.71-0.83 at 5x the inference cost. Despite this internal awareness, the models almost never abstain: an audit of 2,520 answers finds 2 refusals and 1 hedge. Entity familiarity and factual reliability are distinct phenomena on different scaling curves.",
-      "published": "2026-07-08T17:24:43Z",
-      "updated": "2026-07-08T17:24:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07670v1"
+      "summary": "We examine educational YouTube videos through multimodal metadata, such as transcripts, titles, thumbnails, and viewer comments, to investigate how ChatGPT is framed across creator groups and how those framings relate to audience response and platform reach. Little is known about how large language models are presented to learners in informal, creator-driven public discourse. Following PRISMA, we selected 52 videos for analysis. We identified three structurally distinct discourse groups: (G1) videos that positioned ChatGPT as a conceptual scaffold for thinking, (G2) videos oriented toward retrieval practice and skill-building, and (G3) videos that framed ChatGPT as a tool for output generation. Epistemic Network Analysis revealed statistically significant group differences with large effect sizes. Multimodal metadata consistently reflected these distinctions across transcript discourse, titles, and thumbnails. Viewers of learning-oriented content described ChatGPT as a thinking partner or tutor, whereas viewers of output-oriented content raised concerns about over-reliance, surface-level learning, and cognitive offloading. G3 achieved comparable platform reach to G2, yet with substantially weaker learning-oriented framing. This may suggest that output-oriented content competes for visibility despite lower pedagogical depth. These findings reveal a structural tension in self-directed AI learning: content that prioritizes quick outputs reaches far more learners than content that promotes deep engagement. This gap raises critical questions about whose vision of AI literacy scales and what learners are actually left with.",
+      "published": "2026-07-09T16:55:46Z",
+      "updated": "2026-07-09T16:55:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08698v1"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07669v1",
-      "title": "DiaLLM: An Investigation into the Robustness-Generation Gap in English Dialect Adaptation",
+      "id": "http://arxiv.org/abs/2607.08674v1",
+      "title": "Do Transformations Reveal the Truth? Generative Residual Learning for Generalized AI-Generated Image Detection",
       "authors": [
-        "Jordan Painter",
-        "Dipankar Srirag",
-        "Adarsh Kappiyath",
-        "Diptesh Kanojia",
-        "Aditya Joshi",
-        "Lu Yin"
+        "Kutub Uddin",
+        "Nusrat Tasnim",
+        "Awais Khan",
+        "Mohammad Umar Farooq",
+        "Khalid Malik"
       ],
-      "summary": "Large language models increasingly \\emph{understand} dialectal English, yet still \\emph{produce} only standard, US-leaning English, leaving dialectal generation, the harder half of the problem, largely unaddressed. We introduce \\textbf{DiaLLM}, which continually pretrains three open-weight language model families on the International Corpus of English and applies implicit and explicit post-training paradigms, each combined with three model alignment strategies, giving the first controlled comparison of these components across Australian, Indian, and Northern British English. Our results reveal that dialectal robustness and generation are \\emph{dissociated}: benchmarks are shaped by continual pretraining and SFT, while alignment visibly reshapes generation in ways benchmarks do not capture. Explicit variety-targeted adaptation produces output reliably recognised as dialectal and preferred over broad alignment, yet the method that most aggressively optimises the dialectal reward is not preferred by human evaluators. Independent linguistic analysis corroborates this reward-quality gap, most clearly on two of the three families. No single alignment method dominates, and closing the gap will require richer reward designs and continued investment in dialectal resources. We release all code, checkpoints, and preference datasets.",
-      "published": "2026-07-08T17:24:27Z",
-      "updated": "2026-07-08T17:24:27Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07669v1"
+      "summary": "The rapid advancement of generative AI has enabled the creation of highly realistic deepfake media, posing significant threats, including misinformation, digital identity theft, fraud, and manipulation of public opinion. AI-generated image (AIGI) detection is reliably challenging due to the diversity of generative methods and the subtle artifacts they leave behind. In this work, we propose GenRes, a novel framework for generative residual learning via a neural tensor network, which models fine-grained relational features between original and transformed samples to enhance generalization. To address scenarios involving multiple generative transformations, we introduce GenRes++, which employs a learnable attention mechanism to aggregate relational features across multiple transformed samples and enables the model to focus on the most informative cues. Both models leverage PE-Core as a feature extractor, providing generalized and semantically rich embeddings that improve cross-domain performance and enable the detection of AIGI generated by unseen methods. Comprehensive experiments on multiple benchmark datasets demonstrate that the proposed GenRes++ approach outperforms existing methods.",
+      "published": "2026-07-09T16:36:54Z",
+      "updated": "2026-07-09T16:36:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08674v1"
     },
     {
-      "id": "http://arxiv.org/abs/2607.07666v1",
-      "title": "A hierarchical memory architecture overcomes context limits in long-horizon multi-agent computational modeling",
+      "id": "http://arxiv.org/abs/2607.08665v1",
+      "title": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
       "authors": [
-        "Shivendra G. Tewari",
-        "Holly Kimko"
+        "Teng-Ruei Chen"
       ],
-      "summary": "Large language models (LLMs) demonstrate remarkable reasoning capabilities, yet their stateless architecture fundamentally limits deployment in long-horizon research workflows requiring multi-session continuity and quantitative rigor. Here we present Ensemble QSP, a multi-agent framework featuring a three-layer hierarchical memory architecture that keeps injected context bounded and constant in project duration (mid-term project state: median 301 tokens, max 4,050, across 104 runs) by capping each state category and evicting completed work, enabling continuous autonomous operation without context degradation. The system orchestrates five specialist worker agents under domain-expert principal investigators, enforcing physical constraints through physics-based checklists and structured-domain knowledge. Comprehensive benchmarking demonstrates robust autonomous pharmacokinetic-pharmacodynamic model selection without human intervention, consistent result quality across both lower-cost and frontier LLMs, improved PK parameter recovery relative to single-agent baselines, and stable model selection across linguistically diverse prompts of the same task. Feature-level ablation across physiologically based pharmacokinetic (PBPK) models spanning a broad complexity range shows that PI-agent oversight improves debugging efficiency while preserving final accuracy across conditions. The architecture is structurally domain-agnostic, adding a new scientific domain requires only a new PI agent configuration.",
-      "published": "2026-07-08T17:22:28Z",
-      "updated": "2026-07-08T17:22:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.07666v1"
+      "summary": "Routing among large language models (LLMs) trades response quality against serving cost, motivated by the reported gap between deployed routers and a per-instance oracle. Recent analysis shows that test-time resampling can recover per-instance selection headroom that no single-commit router captures; however, that guarantee holds only under an idealized oracle equipped with correctness labels and an unconstrained budget, neither of which a deployed system has. To the best of our knowledge, no previous work treats resampling the committed model and rerouting to an alternative model as competing uses of a single per-query cost budget. Therefore, this work formulates budget-aware test-time model selection: given a per-query budget and an imperfect verifier, allocate each unit of budget between resampling and rerouting so that expected correctness is maximized. An online resample-or-reroute (RoR) allocation policy driven by estimated marginal correctness per unit cost is proposed, and its behavior is grounded in the recoverability asymmetry between selection and sampling. Replay experiments on newly regenerated multi-draw correctness tensors from an eleven-model open-weight pool over four benchmarks of differing difficulty show that the proposed RoR policy attains a favorable cost-quality Pareto front relative to single-route, one-commit-router, budget-aware best-of-K, cascade, and random-allocation baselines for the tested pools, with the largest gains on the most heterogeneous benchmark; an ablation further shows the gains are verifier-gated, shrinking as verifier quality degrades, and robustness replays under a provider price vector and a label-free agreement verifier delineate where the conclusions carry over.",
+      "published": "2026-07-09T16:34:15Z",
+      "updated": "2026-07-09T16:34:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08665v1"
     },
     {
-      "id": "http://arxiv.org/abs/2510.09595v3",
-      "title": "LiveOIBench: Can Large Language Models Outperform Human Contestants in Informatics Olympiads?",
+      "id": "http://arxiv.org/abs/2607.08662v1",
+      "title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
       "authors": [
-        "Kaijian Zou",
-        "Aaron Xiong",
-        "Yunxiang Zhang",
-        "Frederick Zhang",
-        "Yueqi Ren",
-        "Jirong Yang",
-        "Ayoung Lee",
-        "Shitanshu Bhushan",
-        "Lu Wang"
+        "Xiaoshuai Song",
+        "Liancheng Zhang",
+        "Kangzhi Zhao",
+        "Yutao Zhu",
+        "Zhongyuan Wang",
+        "Guanting Dong",
+        "Jinghan Yang",
+        "Han Li",
+        "Kun Gai",
+        "Ji-Rong Wen",
+        "Zhicheng Dou"
       ],
-      "summary": "Competitive programming problems are increasingly used to evaluate the coding capabilities of large language models (LLMs) due to their complexity and ease of verification. Yet, current coding benchmarks face limitations such as a lack of exceptionally challenging problems, insufficient test case coverage, and reliance on online platform APIs that limit accessibility. To address these issues, we introduce LiveOIBench, a large-scale competitive programming benchmark featuring 403 expert-curated problems, averaging 60 official test cases each, drawn from 72 contests across 14 Informatics Olympiads held between 2023 and 2025. LiveOIBench has four key features: (1) expert-designed tasks with detailed subtask rubrics and extensive test cases; (2) direct comparison to elite human contestants; (3) continuous updates to reduce contamination risk; and (4) a fully offline, reproducible evaluation system. Benchmarking 34 popular general-purpose and reasoning LLMs, we find that GPT-5 achieves an 81.76th percentile, still falling short of top human contestants, while among the open-weight models, GPT-OSS-120B reaches only the 60th percentile. Reasoning-trace analyses indicate that robust reasoning models prioritize precise problem analysis over excessive exploration. Finally, analyses across release dates, task familiarity, and code similarity find minimal evidence of data contamination in our benchmark. Our leaderboard, code, and data are available at: https://liveoibench.github.io/.",
-      "published": "2025-10-10T17:54:24Z",
-      "updated": "2026-07-08T17:08:31Z",
-      "pdf_url": "https://arxiv.org/pdf/2510.09595v3"
+      "summary": "Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks. A single ReAct-style agent is constrained by one long trajectory and limited context, making it difficult to handle depth and coverage simultaneously. Existing multi-agent systems improve search coverage through parallel execution and aggregation, but still exhibit clear limitations in recursive depth, collaboration adaptability, and evidence-grounded expansion. We propose WebSwarm, a progressive recursive delegation framework that jointly constructs task decomposition, recursive expansion, and agent collaboration during inference. WebSwarm dynamically instantiates agentic search nodes, each coupling a local objective with a search mode that specifies how the node should organize search and collaboration. Each node can either solve its objective itself or further delegate child nodes; after solving, it returns evidence and results upward, enabling parent nodes to further expand, revise, or aggregate the search process. To guide this process, WebSwarm first probes how task-relevant information is organized on the web to ground subsequent node expansion, and reuses process-level experience across homogeneous sibling nodes. Experiments on BrowseComp-Plus, WideSearch, DeepWideSearch, and GISA show that WebSwarm consistently outperforms single-agent and multi-agent baselines on deep, wide, and interleaved deep-and-wide tasks. Further analyses of ablation, task difficulty, web tool efficiency, and model generalization explain WebSwarm's effectiveness and provide insights for multi-agent search systems.",
+      "published": "2026-07-09T16:28:49Z",
+      "updated": "2026-07-09T16:28:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08662v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.00086v3",
-      "title": "RIMRULE: Improving Tool-Using Language Agents via MDL-Guided Rule Learning",
+      "id": "http://arxiv.org/abs/2607.08646v1",
+      "title": "UltraX: Refining Pre-Training Data at Scale with Adaptive Programmatic Editing",
       "authors": [
-        "Xiang Gao",
-        "Yuguang Yao",
-        "Qi Zhang",
-        "Kaiwen Dong",
-        "Avinash Baidya",
-        "Ruocheng Guo",
-        "Hilaf Hasson",
-        "Kamalika Das"
+        "Xinlong Zhao",
+        "Dongsheng Liu",
+        "Hengyu Zhao",
+        "Zixuan Fu",
+        "Zheng Wang",
+        "Jie Cai",
+        "Jie Zhou",
+        "Qiang Ma",
+        "Xuanhe Zhou",
+        "Xu Han",
+        "Yudong Wang",
+        "Zhiyuan Liu"
       ],
-      "summary": "Large language models (LLMs) often struggle to use tools reliably in domain-specific settings, where APIs may be idiosyncratic, under-documented, or tailored to private workflows. This highlights the need for effective adaptation to task-specific tools. We propose RIMRULE, a neuro-symbolic approach for LLM adaptation based on dynamic rule injection. Compact, interpretable rules are distilled from failure traces and injected into the prompt during inference to improve task performance. These rules are proposed by the LLM itself and consolidated using a Minimum Description Length (MDL) objective that favors generality and conciseness. Each rule is stored in both natural language and a structured symbolic form, supporting efficient retrieval at inference time. Experiments on tool-use benchmarks show that this approach improves accuracy on both seen and unseen tools without modifying LLM weights. It outperforms prompting-based adaptation methods and complements finetuning. Moreover, rules learned from one LLM can be reused to improve others, including long reasoning LLMs, highlighting the portability of symbolic knowledge across architectures.",
-      "published": "2025-12-31T19:40:10Z",
-      "updated": "2026-07-08T16:51:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.00086v3"
+      "summary": "As available training data approaches its physical limit, gains from Scaling Laws have begun to diminish. Consequently, improving Large Language Models (LLMs) now depends less on data expansion and more on higher-quality data utilization. However, in the context of large-scale corpora, existing refinement methodologies face significant limitations in quality, efficiency, and reliability: Rule-based approaches are constrained by fixed heuristics and struggle with instance-level variations; LLM-based approaches improve quality but fail to meet the efficiency and reliability requirements of large-scale data processing. To address these challenges, we propose UltraX, a function-calling refinement framework for large-scale pre-training data that completes the editing function space by introducing insertion in addition to deletion and modification, enabling fine-grained instance-level editing. Specifically, UltraX builds a reliable program-supervision generation pipeline. In this pipeline, dataset-adaptive prompt optimization first guides an expert LLM to produce high-quality end-to-end refined texts, and Line Alignment Mapping and Dynamic Context Replacement then convert original-refined text pairs into structured program supervision. Meanwhile, UltraX improves supervision quality and stabilizes the training distribution with low-confidence example filtering and ratio-controlled sampling by operation combination. During inference and execution, it normalizes and validates model outputs through sliding-window prediction, global operation aggregation, and systematic post-processing, improving the stability and reliability of large-scale execution. Experiments show that UltraX achieves the highest average performance across all corpora and also matches or surpasses baselines with fewer training tokens, demonstrating stronger data efficiency and refinement reliability.",
+      "published": "2026-07-09T16:18:07Z",
+      "updated": "2026-07-09T16:18:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2607.08646v1"
     }
   ]
 }
