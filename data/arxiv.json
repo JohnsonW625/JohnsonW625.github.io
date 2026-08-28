@@ -1,185 +1,213 @@
 {
-  "generated_at_utc": "2026-08-27T07:25:46Z",
+  "generated_at_utc": "2026-08-28T09:40:38Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2608.26103v1",
-      "title": "Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization",
+      "id": "http://arxiv.org/abs/2608.27456v1",
+      "title": "UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City",
       "authors": [
-        "Jiaming Zhou",
-        "Qihang Zhang",
-        "Gangwei Xu",
-        "Cunxin Fan",
-        "Yujie Zhao",
-        "Ruilin Wang",
-        "Yiming Luo",
-        "Shuai Yang",
-        "Xing Zhu",
-        "Yujun Shen",
-        "Junwei Liang",
-        "Yinghao Xu"
+        "Tianjie Ju",
+        "Zheng Wu",
+        "Yueqing Sun",
+        "Yuhan Cui",
+        "Bobo Li",
+        "Shengqiong Wu",
+        "Pengzhou Cheng",
+        "Haodong Zhao",
+        "Zongru Wu",
+        "Xinbei Ma",
+        "Doris Zhang",
+        "Kunling Li",
+        "Mong-Li Lee",
+        "Wynne Hsu",
+        "Hao Fei",
+        "Qi Gu",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
       ],
-      "summary": "Zero-shot cross-task generalization, where a policy must execute manipulation tasks never seen during training, remains a central challenge in robot learning. In large language models, a novel task can be performed simply by specifying it in the context, without any parameter update. This form of in-context learning (ICL) turns generalization into a problem of task specification. To achieve cross-task generalization, we bring this paradigm to robotic manipulation, and argue that the natural task specification for manipulation is a human video: unlike language, it provides rich visual cues about the intended task evolution. We present Zero-WAM, a causal video-action model that executes unseen tasks by following in-context human video guidance. To address the scarcity of task-rich paired human-robot data, we propose an automatic pipeline that converts task-sampled robot trajectories into semantically matched human videos, yielding HumanGen, a dataset of 74.2K human-robot ICL pairs across 8.6K tasks. For model training, we further introduce an in-context future chunk prediction (IFP) objective that suppresses shortcuts learned from seen tasks and forces the policy to draw task information from the video prompt. On seven unseen tasks in RoboTwin 2.0 simulation, Zero-WAM achieves a 47.0% average success rate, an absolute improvement of 29.5 percentage points over the strongest video-action baseline. In real-world evaluations, it follows human video guidance to generalize to unseen task configurations involving multi-object scenes, long-horizon manipulation, and fine-grained insertion.",
-      "published": "2026-08-26T17:59:34Z",
-      "updated": "2026-08-26T17:59:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26103v1"
+      "summary": "Multimodal large language models (MLLMs) can interpret a street view, but urban agency depends on whether such local evidence remains useful after the agent starts to move. In this paper, we investigate how far current MLLM agents can turn local urban perception into reliable action in a complicated real-scale city. We propose UrbanGround, the first sandbox to make this question testable in a physically constrained replica of Hong Kong built from territory-wide 3D geospatial data. UrbanGround supports closed-loop interaction from a first-person view and provides an interactive map for navigation. Agents can directly enter the 3D city and explore from a first-person view. Our analysis follows the growth of the spatial problem through three research questions. We first test whether an agent can ground a local scene well enough to answer spatial questions after active observation. Then we ask whether that grounding supports navigation as destinations become farther away and less explicit. Finally, we examine whether the resulting behavior survives changes in route availability and pedestrian motion. Contemporary MLLM agents usually show useful atomic abilities in visual recognition and short-range spatial reasoning, while orientation and pedestrian-aware movement remain unreliable. Their central failure emerges over extended exploration, where local abilities do not compose into sustained goal-directed behavior and errors accumulate without effective correction. We hope UrbanGround will support broader study of how far current MLLM agents can explore reliably in complex, open-ended urban environments.",
+      "published": "2026-08-27T17:59:33Z",
+      "updated": "2026-08-27T17:59:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27456v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26089v1",
-      "title": "From Producing to Validating: How AI Is Deskilling Freelancers",
+      "id": "http://arxiv.org/abs/2608.27455v1",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
       "authors": [
-        "Nakul Rajpal"
+        "Yufan Wu",
+        "Yinghui He",
+        "Zhengyi Hu",
+        "Lang Wei",
+        "Ruichen Li",
+        "Qifan Yang",
+        "Ting Zhu"
       ],
-      "summary": "Generative AI is promoted as a way to enhance knowledge work, yet its benefits and drawbacks fall unevenly across the workforce. Freelance and gig workers, who commonly lack the upskilling pathways available to traditional employees, face heightened risks to both skill development and job security as AI adoption advances. We review empirical evidence on AI's impact on knowledge-worker workflows and upskilling, then predict the primary and downstream effects of AI adoption among clients and workers in the freelance economy. We anchor this in two cases of the same shift, machine-translation post-editing and software development. We argue that freelancers are the leading edge of a change that also reaches salaried HCI practitioners, and we close with questions for the platforms and clients that mediate this work, and for HCI researchers.",
-      "published": "2026-08-26T17:51:34Z",
-      "updated": "2026-08-26T17:51:34Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26089v1"
+      "summary": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
+      "published": "2026-08-27T17:59:30Z",
+      "updated": "2026-08-27T17:59:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27455v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26086v1",
-      "title": "TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development",
+      "id": "http://arxiv.org/abs/2608.27449v1",
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
       "authors": [
-        "Jiarui Yan",
-        "Weiwei Sun",
-        "Sijie Li",
-        "Wenhan Li",
-        "Yiming Yang"
+        "Dewu Zheng",
+        "Ruizhe Ye",
+        "Yanlin Wang",
+        "Yang Ye",
+        "Hongyu Zhang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jianxing Yu",
+        "Zibin Zheng"
       ],
-      "summary": "Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, and on most competitions still finishes below strong human competitors. Outcome-based benchmarks record this gap but not its cause, because they grade the final submission and discard the development process behind it. We introduce TraceML, which pairs human and agent work on the same competitions under one version-level schema: 4,465 human Kaggle trajectories across 134 competitions, seven of which are also worked by two agent scaffolds, giving 430 paired human and 207 agent trajectories. Every code version carries its score, its timestamp, and labels for the action taken, its intent, the edit size, and the score effect. Read this way, the gap becomes concrete. Experts alternate data work, validation, model changes, and ensembling, and return to approaches they had set aside. Each agent scaffold instead collapses into a narrow loop: Codex spends its steps re-weighting ensembles and tuning submissions, MLEvolve mutates its model in place, and neither pivots at the human rate nor reopens abandoned work. A short planning prompt distilled from human practice moves the behaviors it names toward the human profile and lifts scores, but the effort profile stays agent-shaped: instruction closes only the part of the gap that reduces to instructions. We release the corpus, the schema, the labelers, and the extraction pipeline at https://huggingface.co/datasets/jerryyan/TraceML.",
-      "published": "2026-08-26T17:50:13Z",
-      "updated": "2026-08-26T17:50:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26086v1"
+      "summary": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-quality supervision: successful trajectories may still contain ineffective, redundant, or risky steps. Directly using such trajectories for SFT can introduce noisy supervision and encourage models to imitate undesirable problem-solving behaviors. Therefore, we propose SWE-Prime, a multi-granularity, two-stage SFT data selection method that progressively filters training data at the trajectory and segment levels. Specifically, the first stage performs trajectory-level screening based on process quality, result quality, and data representativeness, selecting a high-quality and representative subset of successful trajectories. The second stage performs segment-level selection by grouping consecutive steps into semantic segments and assessing each segment based on its contribution to the final solution, learnability, and potential risks. During SFT, all segments remain in the sequence to preserve context, while only selected segments contribute to the loss computation. Experiments on SWE-Bench Pro and SWE-Bench Verified show that training on the 10% trajectory subset selected by SWE-Prime outperforms training on the full resolved dataset, yielding relative performance gains of up to 12.2% and 24.2%, respectively.",
+      "published": "2026-08-27T17:58:10Z",
+      "updated": "2026-08-27T17:58:10Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27449v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26049v1",
-      "title": "RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models",
+      "id": "http://arxiv.org/abs/2608.27448v1",
+      "title": "TTPO: Test-Time Policy Optimization",
       "authors": [
-        "Mahshid Rezakhani",
-        "Kimia Azar",
-        "Hadi Kamali"
+        "Aozhe Wang",
+        "Zhengxi Lu",
+        "Jianze Wang",
+        "Shangke Lv",
+        "Ying Liu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Hua Yang",
+        "Qianglong Chen",
+        "Yongliang Shen"
       ],
-      "summary": "The rapid advancement of large language models (LLMs) is driving a shift toward automated register transfer level (RTL) code generation, enabling designers to translate high-level specs. into synthesizable hardware. However, this reliance on pre-trained (3rd-party) fine-tuned models may introduce critical trust issues, as the training data and adaptation process of these models are often opaque. Thus, adversaries (even model providers) may embed hidden backdoor threats during fine-tuning, allowing malicious behavior, e.g., hardware Trojans, to be triggered by seemingly benign prompts given by victim user at inference time. In this paper, we introduce RTLGuard, to mitigate such a trust issue in AI-enabled IC supply chain. Rather than prohibitive computational cost of full-parameter retraining, RTLGuard leverages a teacher-student framework designed to sanitize compromised RTL generation models by (1) fine-tuning a small-scale, \"clean\" teacher model on a limited set of trusted RTL data, (2) guiding the poisoned target model via a composite teacher-student objective, and (3) incorporating feature alignment and knowledge distillation to suppress malicious behaviors. Our experiments across various LLM architectures demonstrate that RTLGuard significantly reduces the Attack Success Rate (ASR) while preserving the functional correctness and synthesizability of the generated RTL code.",
-      "published": "2026-08-26T17:23:48Z",
-      "updated": "2026-08-26T17:23:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26049v1"
+      "summary": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
+      "published": "2026-08-27T17:58:10Z",
+      "updated": "2026-08-27T17:58:10Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27448v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26016v1",
-      "title": "Bayesian Optimization for Self-Driving Materials Laboratories: From Algorithms to Physics-Informed Workflows",
+      "id": "http://arxiv.org/abs/2608.27442v1",
+      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
       "authors": [
-        "Yuki K. Wakabayashi",
-        "Takuma Otsuka"
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "Kefeng Duan",
+        "Hongyu Zhang",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Zibin Zheng"
       ],
-      "summary": "Self-driving laboratories (SDLs) are transforming materials research by closing the loop among synthesis, characterization, data analysis and experimental decision making. Bayesian optimization (BO) is a decision engine for these loops because it can select experiments from scarce and noisy data while balancing exploitation and exploration. Yet real materials campaigns often depart from the standard black-box setting, involving failed or missing experiments, noise and drift, mixed variables, constraints, multiple objectives, variable cost and fidelity, transfer from historical data, batch or asynchronous operation, and prior physics knowledge. This review presents BO for materials SDLs through the lens of these practical challenges. We summarize Gaussian-process-based BO and the formulation of materials goals as quantitative objectives, then discuss major choices in surrogate modelling and acquisition. Particular emphasis is placed on physics-informed Bayesian optimization (PIBO), in which domain knowledge enters through representations, priors, kernels, acquisition functions, and constraints. We survey achievements enabled by BO and related active-learning approaches across semiconductors, catalysis, chemical reactions, batteries, alloys, functional materials and quantum materials, highlighting advances beyond parameter optimization, including new materials and synthesis routes, improved functional performance, and reusable scientific knowledge. We conclude by outlining open problems for BO-driven materials SDLs, including nonstationarity, multimodal observations, adaptive problem formulation, and scientific reasoning by humans, large language models and research agents. Addressing these challenges may advance SDLs beyond efficient optimization toward interpretable and knowledge-generating experimentation.",
-      "published": "2026-08-26T16:59:49Z",
-      "updated": "2026-08-26T16:59:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26016v1"
+      "summary": "In real-world software development, code review typically involves iterative interactions between developers and reviewers to improve software quality, making the process costly and time-consuming. Although recent work explores large language models (LLMs) for automated code review, most approaches oversimplify code review into a single-round, static decision task, which fails to capture the multi-round interactive nature and the complex problem-solving processes inherent in realistic review scenarios. To bridge this gap, we introduce MCR-Bench, the first defect state-aware benchmark designed for realistic multi-round code review. MCR-Bench covers five commonly-used programming languages and consists of 2,269 real-world multi-round code review tasks, each of which is annotated with fine-grained defect information and cross-round state labels. Each task in MCR-Bench is equipped with fine-grained defect metadata (e.g., description, type, severity) alongside dynamic state annotations, capturing the complete evolutionary trajectory of a defect throughout the multi-round process. We obtain several findings through extensive experiments on MCR-Bench with mainstream LLMs. (1) Limited overall capability: experiments reveal that mainstream LLMs exhibit limited overall performance in defect detection and defect lifecycle state tracking, with performance degrading significantly as the number of interaction rounds increases; (2) Defect-sensitive performance: LLMs' performance varies substantially across different defect types and severity levels, with semantically complex or low-salience defects being significantly more likely to be missed; (3) Underlying Failure Mechanisms: our in-depth error analysis dissects the distinct drivers of false positives and false negatives, revealing critical weaknesses such as cross-round temporal misalignment and inadequate long-range memory.",
+      "published": "2026-08-27T17:56:24Z",
+      "updated": "2026-08-27T17:56:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27442v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26013v1",
-      "title": "VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following",
+      "id": "http://arxiv.org/abs/2608.27427v1",
+      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
       "authors": [
-        "Min Zeng",
-        "Guanxin Tan",
-        "Libin Cen",
-        "Yawei Wen",
-        "Rui Hu",
-        "Liuyang Bian",
-        "Xiaolong Chen",
-        "Xiaoxin Chen"
+        "Yisen Xi"
       ],
-      "summary": "Multimodal instruction-following models require training data that is accurate, diverse, verifiable, and challenging. Existing synthesis pipelines typically follow a one-pass generate-and-filter paradigm, discarding feedback from failed samples, verifier outcomes, and target-model errors. We present VISA (Visual Instruction Synthesis Agent), an agentic framework that reformulates multimodal instruction synthesis as a self-evolving loop. At each round, VISA analyzes an image to filter incompatible constraints and discover new verifiable ones, samples diversity- and difficulty-aware constraint sets from persistent memory, generates candidate instructions, and verifies the resulting samples with executable tools and structured large language model judges. Failed samples trigger diagnostic-guided recovery, while accepted samples are probed against the target model to estimate difficulty. The resulting verifier signals and target-model failure profiles are written back to memory, allowing subsequent rounds to adaptively expand the constraint space, reduce template repetition, and focus on unresolved model weaknesses. The same verifier contracts further provide reward signals for reinforcement learning without a separately trained reward model. Experiments on MM-IFEval show that VISA consistently improves multimodal instruction following over strong baselines, while preserving general multimodal capability across seven public benchmarks.",
-      "published": "2026-08-26T16:55:58Z",
-      "updated": "2026-08-26T16:55:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26013v1"
+      "summary": "Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A single trust domain does not satisfy both cheaply. We present Persona-Execution Separation (PES): persona and execution reside in different trust domains, connected by a governed contract bridge. The persona is singly-homed and may drift; execution is faceless and audited. Status summaries may return; data bodies remain in the restrictive domain except a graded data-loss-prevention (DLP) exception; identity stays continuous. An approval matrix, DLP, and audit enforce the crossing. PES follows from three goals---free drift, execution traceability, and decoupling. Under LLM representational indistinguishability, any single-domain mechanism that meets all three must re-introduce typed change objects, an external gate, and a stable audit anchor: PES rebuilt at higher coupling cost. A development/pilot case in a regulated digital-employee platform records five decisions over one month, each with a rejected alternative. A mechanism check on the shipped implementation found no execution-side re-validation under persona perturbation (five model configurations) and no persona fingerprint on hard-asserted fields. A probe of a recovered pre-separation build found the governed execution path decoupled from the persona by omission, not by construction; a later wiring change could reverse that isolation, which PES makes an audited architectural rule. The pattern applies when multi-user deployment, execution audit, and expected persona churn hold jointly.",
+      "published": "2026-08-27T17:50:07Z",
+      "updated": "2026-08-27T17:50:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27427v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26008v1",
-      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "id": "http://arxiv.org/abs/2608.27417v1",
+      "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information",
       "authors": [
-        "Tongyan Hu",
-        "Bryan Hooi"
+        "Chanho Park",
+        "Daehyeon Choi",
+        "Jihyun Lee",
+        "Minhyuk Sung"
       ],
-      "summary": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
-      "published": "2026-08-26T16:52:06Z",
-      "updated": "2026-08-26T16:52:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26008v1"
+      "summary": "Vision-language models (VLMs) can locate an image region referred to by a text prompt and route the corresponding visual evidence to the output, yet the internal mechanism behind this behavior is not understood. Inspired by retrieval heads in large language models, we ask whether VLMs contain an analogous mechanism for visual retrieval. We answer affirmatively by introducing Visual Retrieval Heads (VRHs), a small subset of attention heads (about 1.7-2.6%) that are causally responsible for grounding text descriptions to image regions. To find them, we recast existing head-scoring methods under a unified design space over query tokens, key aggregation, and cross-sample aggregation. We then show that scoring attention from output prediction tokens with a sum over the ground-truth referent region most reliably identifies causal heads. Across eleven VLMs and five referring-expression benchmarks, masking only the top 20 VRHs reduces grounding accuracy by up to 80 percentage points, while masking the same number of random heads has little effect. Beyond replicating the causal-sparse-universal triad established for text retrieval heads, VRHs exhibit several properties not previously reported: they generalize across visual reference tasks, remaining causal on attribute, spatial, counting, and visual-math benchmarks despite being discovered through bounding-box prediction; they are functionally specific, preserving output format while corrupting localization; and they are architecturally shared, transferring causally across VLMs that share an LLM backbone but differ in vision encoder, projector, and instruction tuning.",
+      "published": "2026-08-27T17:43:58Z",
+      "updated": "2026-08-27T17:43:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27417v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.25999v1",
-      "title": "Distinct dynamics of conceptual and referential disruptions in human reading and large language model processing",
+      "id": "http://arxiv.org/abs/2608.27409v1",
+      "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
       "authors": [
-        "Rui He",
-        "Nihal Altay",
-        "Wolfram Hinzen"
+        "Siye Wu",
+        "Kai Yang",
+        "Yuchen Cai",
+        "Xin Xu",
+        "Peng-Yuan Wang",
+        "Jiaxuan Wang",
+        "Jiashun Liu",
+        "Jiafei Lyu",
+        "Yangkun Chen",
+        "Saiyong Yang",
+        "Yanghua Xiao"
       ],
-      "summary": "Linguistic meaning is grounded in conceptual content, from which reference to particular entities emerges as words enter discourse. To examine the processing dynamics associated with these two dimensions of meaning, we selectively disrupted conceptual or referential information in short narratives and traced the resulting effects in human self-paced reading and in the predictive and representational processing of large language models. In human reading, conceptual disruptions produced a strong but localized processing cost, emerging immediately after the distorted word, reaching an early maximum, and then declining rapidly. Referential disruptions produced weaker effects, which decreased more gradually across subsequent words, and were more strongly modulated by sentence boundaries. In the language model, both disruptions emerged immediately at the manipulated word. Contextual model surprisal showed a pattern closely paralleling human reading: conceptual disruption produced a larger, more locally concentrated effect that decayed rapidly, whereas referential disruption produced a smaller and more gradual downstream effect. Output-layer representations showed a different pattern: referential disruption produced a larger initial displacement, while both distortions were subsequently characterized by power-law decay. Together, these results provide convergent evidence for distinguishable processing dynamics of two types of meaning: conceptual information imposes a more locally concentrated integration cost, whereas referential information engages a more distributed process of maintaining discourse-level identity.",
-      "published": "2026-08-26T16:47:48Z",
-      "updated": "2026-08-26T16:47:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.25999v1"
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) improves specific capabilities of large language models, but covering multiple capabilities often involves training separate domain experts and subsequently consolidating them. We organize three fusion paradigms by the artefacts they reuse: Merge combines expert task vectors, Mix RL pools their datasets, and multi-teacher on-policy distillation (MOPD) uses both. Because they have largely been studied in isolation, how they compare and how to choose among them remain unclear. We compare all three using shared experts and data across model scales and a multi-domain benchmark suite. Although their average performance differs by at most 1.4 points, the gap reaches 8.6 points on a single benchmark, with domain-level variation tracking cross-domain relations visible in task-vector geometry. Training dynamics expose distinct constraints: Mix RL depends on domain mixture proportions, MOPD remains bounded by its teachers, and Merge compresses all expert updates into one. All three improve single-sample accuracy without measurable gains in solution coverage or losses in held-out capabilities. These results yield a practical guideline: use Merge when experts already exist and cheap fusion is paramount; Mix RL when training a unified model without experts, with domain proportions adjusted for cross-domain transfer; and MOPD when preserving domain-specific gains matters more than surpassing teachers or minimizing end-to-end cost.",
+      "published": "2026-08-27T17:38:04Z",
+      "updated": "2026-08-27T17:38:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27409v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.25411v2",
-      "title": "Heimdall: Formally Verified Automated Migration of Legacy eBPF Programs to Rust",
+      "id": "http://arxiv.org/abs/2608.27402v1",
+      "title": "How Language Models Organize and Structure Moral Knowledge",
       "authors": [
-        "Vishnu Asutosh Dasu",
-        "Monika Santra",
-        "Md Rafi Ur Rashid",
-        "Ashish Kumar",
-        "Saeid Tizpaz-Niari",
-        "Gang Tan"
+        "Orion Reblitz-Richardson"
       ],
-      "summary": "Extended Berkeley Packet Filter (eBPF) programs are kernel extensions used for networking, observability, and security enforcement in the Linux kernel. The in-kernel eBPF verifier checks low-level memory safety and termination on eBPF programs, but it does not enforce many higher-level source-level properties, such as initialization discipline, schema consistency, or error handling. We document nine classes of source-level bugs that compile, pass the kernel verifier, and can silently corrupt data, leak kernel memory to userspace, or yield incorrect enforcement outcomes. To harden such verifier-accepted buggy programs and support safe migration, we present Heimdall, an automated pipeline that uses large language models to translate legacy libbpf C programs to Aya Rust. Heimdall iteratively repairs compilation and kernel-verifier failures, rejects unsafe escape hatches in Rust-Aya with a static analysis safety engine, and proves per-program equivalence to the original via symbolic execution and Z3-based equivalence checking. Across 115 eBPF programs, Heimdall generates 109 formally proven-equivalent translations (94.8%). In the process, Heimdall identifies nine bugs in real-world eBPF programs and fixes all of them, two of which leak randomized kernel addresses to userspace and break KASLR. Eight of the nine have also been acknowledged and fixed upstream by the developers. Heimdall is the first system to automate memory-safe-language migration of production eBPF programs with per-program formal guarantees that the migration preserves observable behavior.",
-      "published": "2026-05-25T04:23:29Z",
-      "updated": "2026-08-26T16:46:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.25411v2"
+      "summary": "How do large language models (LLMs) organize moral knowledge? Models detect moral content broadly, but detection is a low bar. We ask whether they go further, distinguishing moral foundations from one another and organizing the relationships between them geometrically. We train six independent linear probes on open-weight language models, one per Moral Foundations Theory (MFT) category (care/harm, fair/cheat, lib/oppress, loy/betray, auth/subv, sanc/degrade), and examine how the resulting directions relate to each other in representation space. We find the directions neither collapse into a single moral detector nor isolate from one another. Rather, they span a near-maximal number of independent dimensions while sharing a positive common component. The shared component is the signature of integration, and it is moral-specific relative to a matched non-moral concept battery built identically (mean pairwise cosine 0.26 vs. 0.013). The geometry is consistent across architectures and scale and reaches its integration regime early in pre-training, well before probe accuracy saturates. The structure the model discovers shows no evidence of the individualizing/binding distinction predicted by Moral Foundations Theory (an underpowered test: only 20 candidate partitions exist) but rather reflects corpus statistics. Extending to moral dilemmas, each dilemma direction partially composes from its component foundations, at 2.7x a mismatched-pair baseline, while the majority of its variance encodes conflict-specific structure. The model represents moral tension itself, not a pre-resolved judgment.",
+      "published": "2026-08-27T17:30:30Z",
+      "updated": "2026-08-27T17:30:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27402v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.25992v1",
-      "title": "ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs",
+      "id": "http://arxiv.org/abs/2608.27382v1",
+      "title": "Token-Level Advertising",
       "authors": [
-        "Somgyuan Li",
-        "Ahmed M. Abdelmoniem",
-        "Shiqiang Wang"
+        "Hanbing Liu",
+        "Bowei Zhang",
+        "Changyuan Yu",
+        "Yinyu Ye",
+        "Qi Qi"
       ],
-      "summary": "Multi-agent large language model (LLM) workflows have emerged as a powerful paradigm for solving complex, open-ended tasks through collaborative reasoning among specialized LLM agents, but they incur substantial operating costs due to repeated LLM invocations and long-horizon context accumulation. Existing cascade routing methods make one-shot, query-level decisions and cannot adapt to the dynamic, state-dependent nature of multi-step workflows, in which the right LLM at each step depends on evolving task progress, remaining task difficulty, and cost-efficiency requirements. We present ProgRouter, an online progress-guided routing framework that adaptively selects LLM agents across workflow steps to preserve task-solving quality while adhering to time and cost budgets. ProgRouter introduces a multi-view task progress scorer that combines coarse workflow outcome regimes with fine-grained signals on subtask completion, progress trends, and workflow state quality. Then, a dual-path task progress predictor and an adaptive meta-gating mechanism estimate the progress gain for each candidate routed LLM. ProgRouter makes online step-wise routing decisions that balance progress gain, task time budgets, and long-term operating cost efficiency. Experiments on HumanEval Plus, MBPP, MATH-500, and ASQA, spanning agentic code generation, mathematical reasoning, and retrieval-augmented long-form question answering, demonstrate that ProgRouter reduces the operating cost relative to key baselines while maintaining strong task-solving performance.",
-      "published": "2026-08-26T16:42:02Z",
-      "updated": "2026-08-26T16:42:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.25992v1"
+      "summary": "Generative AI is transforming how people access information, challenging traditional advertising mechanisms built around predefined slots. Towards generation-native advertising, we propose the Latent Advertiser Mixture Auction (LAMA), a token-level advertising mechanism that embeds advertiser influence directly into the generation process. Advertisers report local continuation values that induce advertiser-specific next-token policies, from which the platform decodes through a latent mixture while updating an allocation posterior. We show that LAMA satisfies Markov DSIC and IR, and achieves near-optimal KL-regularized welfare. We further develop a learning-based implementation that reconstructs the required reports online from learned local advantages and root values. Proof-of-concept experiments on real-world commercial-search query splits show that LAMA improves platform welfare and revenue while maintaining user-facing response quality, providing initial evidence for the feasibility of generation-native advertising.",
+      "published": "2026-08-27T17:18:27Z",
+      "updated": "2026-08-27T17:18:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.27382v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.25990v1",
-      "title": "Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon",
+      "id": "http://arxiv.org/abs/2608.01979v2",
+      "title": "ET-Prune: Evidence-Aware Dynamic Budgeting for Visual Token Pruning in Text-Rich MLLMs",
       "authors": [
-        "Xiaodong Wu",
-        "Wenyi Yu",
-        "Chao Zhang",
-        "Philip Woodland"
+        "Zizhong Ding",
+        "Junxian Li",
+        "Kai Liu",
+        "Shaoqiu Zhang",
+        "Xiao Xiao",
+        "Linghe Kong",
+        "Yulun Zhang"
       ],
-      "summary": "Orthogonal optimisers such as Muon can substantially accelerate large language model pretraining relative to Adam, yet the mechanism remains incompletely understood. We investigate this through an out-of-sample spectral probing analysis of Transformer loss landscapes. At checkpoints along real training trajectories, we decompose each momentum buffer into its singular directions and estimate the loss-optimal step size along each direction on held-out data. The resulting spectral profile is anisotropic yet stable across batches and training stages, and consistent across the optimisers and model scales: a volatile head operating at the Edge-of-Stability supports a much smaller step size than the tolerant bulk, which permits substantially larger steps. This profile provides a unified spectral allocation account of why Muon outperforms Adam, which outperforms SGD. It also exposes a limitation of Muon's uniform scaling: it still underutilises the bulk. Guided by this finding, we introduce Spectral-Aware Muon (SAMuon), which holds the head at the Muon scale and amplifies the bulk using a static spectral prior. We provide two variants: the complete SAMuon follows the measured profile using a low-rank randomised SVD and the simplified SAMuon-lite uses a two-level approximation via rank-one power iteration. Neither method adds persistent optimiser state or notable extra FLOPs beyond Muon at scale, and the idealised exact-whitening versions of both retain Muon's asymptotic convergence rate under standard assumptions. Across \"modded-nanogpt\" models from 124M to 1B parameters, both variants outperform tuned AdamW and Muon (Scion implementation) baselines in all evaluated model-scale and batch-size configurations. SAMuon requires 13.3% to 24.0% fewer training tokens to reach the same validation loss as Muon, while SAMuon-lite retains most of this gain with near-zero wall-clock overhead.",
-      "published": "2026-08-26T16:41:12Z",
-      "updated": "2026-08-26T16:41:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.25990v1"
+      "summary": "Visual token pruning reduces the inference cost of multimodal large language models, but a fixed token ratio is poorly matched to text-rich inputs. In OCR-centric tasks, decisive evidence can be a small number, label, or field whose relevance is specified by the question; indiscriminate pruning can erase that evidence while retaining visually salient but irrelevant regions. We present ET-Prune, a training-free framework that casts pruning as evidence allocation. It derives question-conditioned evidence from a decoder-side partial query-key block, safeguards text-like spatial regions, and converts evidence uncertainty and density into a sample-specific token floor. Three progressive middle-layer events then move the sequence toward this budget, retaining more tokens for diffuse or text-dense evidence and pruning concentrated evidence more aggressively. At the observed point estimates from one deterministic pass per configuration, ET-Prune leads or ties among pruned methods in all six backbone-benchmark comparisons at roughly half tokens. On OCRBench-v2, it leads the strongest pruned baselines by 1.80 and 0.68 percentage points on Qwen3-VL-8B and InternVL3.5-8B, respectively, while retaining about half of the visual tokens; on MMBench v1.1, it reaches 0.8467 circular exact-matching accuracy versus 0.8437 for Vanilla at 54.45% average visual-token retention. These results show a favorable observed quality-cost trade-off for evidence-aware dynamic budgeting in text-rich multimodal inference.",
+      "published": "2026-08-03T09:42:34Z",
+      "updated": "2026-08-27T17:18:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.01979v2"
     },
     {
-      "id": "http://arxiv.org/abs/2608.25986v1",
-      "title": "Multi-Granularity Context-Enhanced RAG over Multimodal Knowledge Graphs",
+      "id": "http://arxiv.org/abs/2608.24797v3",
+      "title": "Fröberg's Conjecture for Quintics and Septics in Four Variables",
       "authors": [
-        "Zongyu Wu",
-        "Yilong Wang",
-        "Xiaochen Wang",
-        "Minhua Lin",
-        "Zhichao Xu",
-        "Fenglong Ma",
-        "Xiang Zhang",
-        "Suhang Wang"
+        "Qihang Wang",
+        "Dongming Zhang"
       ],
-      "summary": "Retrieval-augmented generation (RAG) is widely used to mitigate hallucination issues in large language models (LLMs) and multimodal large language models (MLLMs). In particular, knowledge graph (KG)-based RAG leverages structured knowledge to provide (M)LLMs with high-quality external information. Building on these works, recent studies have explored multimodal knowledge graphs (MMKGs) as knowledge bases for GraphRAG. This enables Graph RAG to integrate knowledge across multiple modalities, thereby further enhancing its performance. However, existing MMKG-based RAG methods generally follow a common pipeline in which different modalities are largely processed independently before being fusion. As a result, textual context is only used to a limited extent during visual information extraction and subsequent multimodal knowledge fusion. This brings a semantic gap between images and text which limits the multimodal GraphRAG performance. To address this issue, we propose a novel framework for constructing a Context-Enhanced MMKG (CEMMKG) to better support multimodal GraphRAG. The proposed CEMMKG enriches each image with complementary textual context at both local and global scopes. Local context goes beyond the surrounding text by incorporating sentences that are semantically related to the image, while global context provides a summary of the entire passage. We further introduce a multi-granularity design for the local context, allowing it to capture semantically relevant information at different levels of detail. Extensive experiments on the selected vision-centric dataset validate that CEMMKG is effective in leveraging contextual information to improve MMKG-based RAG performance. Moreover, its effectiveness across different MMKG-based RAG methods demonstrates its broad applicability.",
-      "published": "2026-08-26T16:38:02Z",
-      "updated": "2026-08-26T16:38:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.25986v1"
+      "summary": "Let $k$ be a field of characteristic zero and let $S=k[x_1,x_2,x_3,x_4]$. We prove Fröberg's predicted Hilbert series for ideals generated by $r$ general forms of equal degree $d$ for every $r\\geq1$ in each of the two cases $d=5$ and $d=7$. Relative to the classical cases $r\\leq5$ and the equal-degree theorem through degree $d+2$ of Boij--Dannetun--Lundqvist, the generator-count ranges requiring new input are $6\\leq r\\leq11$ for quintics and $6\\leq r\\leq21$ for septics. The proof reduces each slice to finitely many endpoint ranks of Macaulay multiplication matrices. For quintics, ten exact endpoint computations based on twenty-one sparse forms suffice. For septics, a nested family of 120 integral forms supplies fifteen endpoint computations. In every endpoint certificate for these new ranges, an explicitly recorded maximal minor is nonzero modulo $2$, hence is a nonzero integer. The case $r=5$ is the classical strong Lefschetz instance; for quintics we also record a matching modular rank and Koszul bound. Zariski openness then gives the result over every characteristic-zero field. The unrestricted Fröberg conjecture remains outside the scope of the paper. The main results of this paper were obtained through a generative-AI workflow using OpenAI GPT-5.6 Sol, Anthropic Claude Fable 5, and Grok 4.6. Further details appear in the disclosure at the end of the paper.",
+      "published": "2026-08-25T16:40:55Z",
+      "updated": "2026-08-27T17:05:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.24797v3"
     }
   ]
 }
