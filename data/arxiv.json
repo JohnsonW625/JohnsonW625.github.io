@@ -1,203 +1,186 @@
 {
-  "generated_at_utc": "2026-08-31T03:48:57Z",
+  "generated_at_utc": "2026-09-09T03:13:27Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2608.28576v1",
-      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+      "id": "http://arxiv.org/abs/2609.09090v1",
+      "title": "Measuring LLM Sycophancy under Sustained Multi-Turn Pressure",
       "authors": [
-        "Chengpiao Huang",
-        "Kaizheng Wang"
+        "Leyuan Tang",
+        "Kangda Wei",
+        "Tianyu Jiang",
+        "Ruihong Huang"
       ],
-      "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
-      "published": "2026-08-28T17:52:33Z",
-      "updated": "2026-08-28T17:52:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28576v1"
+      "summary": "Large language models (LLMs) may abandon correct positions when users push back, exhibiting a failure mode known as sycophancy. Existing evaluations typically use short, pre-specified conversations and may therefore miss failures that emerge under sustained, adaptive disagreement. We introduce SPINE, a benchmark in which an LLM proxy plays a persistent but mistaken user and adaptively challenges a target model for up to 25 turns. We evaluate four production systems and three Olmo3-7b variants on 100 false-presupposition and 100 unethical-query items. Our experimental results show that collapse rates increase with conversation length for every model, short-horizon protocols underestimate sycophancy and resistance under sustained pressure remains unreliable across current models. By analyzing models with accessible reasoning traces, we surprisingly found that the correct position often remains represented in a reasoning trace when the response concedes, suggesting that the model chooses to please a user and sycophancy is not due to lack of knowledge or ignorance. Ablations show that adaptive LLM proxy exposes more sycophantic collapse than pre-generated scripts. Among all tactics, emotional appeals is the most associated with inducing LLM sycophantic behavior. The code and data are released at https://anonymous.4open.science/r/SPINE",
+      "published": "2026-09-08T17:35:04Z",
+      "updated": "2026-09-08T17:35:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09090v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28560v1",
-      "title": "A Formal Limitation on Learning Human Language From Textual Corpora",
+      "id": "http://arxiv.org/abs/2609.09087v1",
+      "title": "PrivEscalate: Measuring and Augmenting the Threat of LLM-Automated Linux Privilege Escalation",
       "authors": [
-        "Emily Cheng",
-        "Ryan Cotterell"
+        "Yixuan Liu",
+        "Zilong Zhen",
+        "Yin Wu",
+        "Yi Li"
       ],
-      "summary": "Can a listener recover what a speaker means from the form of an utterance alone? We answer this question information-theoretically, and for a listener given by any featurizer of text, including the hidden states of contemporary large language models. Modeling language use as a joint distribution over meanings, contexts, and utterances, we derive upper bounds on the probability that a decoder recovers a speaker's intended meaning from a representation of the utterance. The bounds are governed by the uncertainty that form leaves about meaning, which splits into an irreducible part and a part that only (extralinguistic) context, but never the utterance alone, can resolve. Because these quantities are intrinsic to language, no representation, however much text or supervision produced it, can surpass them; the bounds hold whether the space of meanings is discrete or continuous. Experiments on artificial languages, Mandarin zero-pronoun resolution, and color reference provide empirical evidence in support of the theory.",
-      "published": "2026-08-28T17:38:24Z",
-      "updated": "2026-08-28T17:38:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28560v1"
+      "summary": "As Large Language Model (LLM) agents increasingly automate offensive operations across the cyber kill chain, their efficacy in complex local post-exploitation tasks remains inadequately quantified. Among these, Linux privilege escalation is a key step between initial access and full system compromise. However, existing evaluations for this task are limited by small sample sizes (fewer than 15 scenarios), lacking the scale to compare model capabilities under executable verification. To address this, we present PrivEscalate, a large-scale benchmark for Linux privilege escalation, comprising 531 Dockerized scenarios spanning 14 sub-categories. We additionally derive 329 parameterized variants to measure sensitivity to environmental distractors. Evaluating six LLMs across three agent architectures reveals: (i) model capability is heterogeneous across vulnerability classes, with no single model dominating across the high-prevalence classes, motivating multi-dimensional risk assessments; (ii) LLM successes are sensitive to environmental perturbation, so configuration rotation can disrupt some exploit attempts but does not eliminate the measured risk; and (iii) agent architectures can materially change success rates and reorder model rankings, though the magnitude is model-dependent. Leveraging these insights, we develop PrivEscAgent, a domain-specialized wrapper that augments a generic ReAct agent with deterministic enumeration, category matching, and step planning. PrivEscAgent improves over prior Linux privilege-escalation agent baselines without underlying LLM modifications. We release PrivEscalate as an open-source, Dockerized measurement instrument supporting LLM agent evaluation, defensive tool validation, and red-team training.",
+      "published": "2026-09-08T17:34:02Z",
+      "updated": "2026-09-08T17:34:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09087v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.21359v2",
-      "title": "Does Finetuning with Scientific Data Increase Hallucinations? A Multi-domain Factuality Evaluation of LLMs",
+      "id": "http://arxiv.org/abs/2608.24492v2",
+      "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
       "authors": [
-        "Raia Abu Ahmad",
-        "Nikolas Rauscher",
-        "Ekaterina Borisova",
-        "Fabio Barth",
-        "Georg Rehm",
-        "Sebastian Möller"
+        "Mohit Singh Chauhan",
+        "Vipin Gyanchandani",
+        "Dylan Bouchard"
       ],
-      "summary": "Large language models (LLMs) are increasingly used to communicate and explain scientific concepts, yet their tendency to hallucinate poses significant risks in this high stakes use-case. Prior scientific hallucination evaluation work remains largely restricted to the biomedical domain, treats hallucination as a binary task, and has not examined the growing family of scientifically fine-tuned LLMs. We address these gaps with SciFactCheck, a benchmark of 2,500 prompts across five scientific domains, paired with a modular evaluation framework targeting three factuality hallucination types: unverifiability, overclaim, and attribution. Using a controlled minimal-pairing design, we evaluate 18 LLMs by comparing each scientifically fine-tuned model against its general-purpose base. Our results indicate that 1. Scientifically fine-tuned models exhibit degraded factual reliability across all hallucination types and scientific domains, and 2. Fine-tuned models are internally less confident yet linguistically more assertive. A human pilot study further reveals that current fact-checking tools show only modest agreement with expert judgments on scientific content, and that defining scientifically check-worthy claims remains contested even among human annotators. Our findings fundamentally challenge current methods of domain-specific fine-tuning for factuality and call for developing improved verification infrastructure for scientific content.",
-      "published": "2026-06-19T12:03:02Z",
-      "updated": "2026-08-28T17:34:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.21359v2"
+      "summary": "Uncertainty quantification (UQ) methods are widely used for hallucination detection in large language models (LLMs) in closed-book settings where ground-truth evidence is unavailable at inference time. Prior work has proposed combining UQ signals via learned ensembles, but empirical investigations into the robustness of these ensembles are limited. We study a supervised ensembling framework that trains a classifier over heterogeneous UQ-based scorer outputs on a small, domain-specific dataset of labeled LLM responses, then applies it to out-of-sample hallucination classification without retrieval, tools, or reference documents. Across four LLMs, nine datasets, and three generation regimes (short-form QA, long-form generation, and code generation), we provide a systematic robustness analysis along three axes: sample efficiency, in-domain dataset transfer, and generation regime dependence. We find that supervised ensembles outperform the best individual scorer in 30 of 32 settings, with gains realized from as few as 100 labeled instances. Ensembles retain most of their advantage in cases of in-domain transfer under distribution shift, outperforming the best non-ensemble scorer in 23 of 28 transfer settings. Sampling-based black-box ensembles are nearly as effective as full ensembles, while single-generation white-box ensembles offer limited benefit.",
+      "published": "2026-08-25T12:43:07Z",
+      "updated": "2026-09-08T17:33:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2608.24492v2"
     },
     {
-      "id": "http://arxiv.org/abs/2502.12119v5",
-      "title": "PRISM: Self-Pruning Intrinsic Selection Method for Training-Free Multimodal Data Selection",
+      "id": "http://arxiv.org/abs/2609.09085v1",
+      "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
       "authors": [
-        "Jinhe Bi",
-        "Aniri",
-        "Zengjie Jin",
-        "Yifan Wang",
-        "Danqi Yan",
-        "Wenke Huang",
-        "Xiaowen Ma",
-        "Sikuan Yan",
-        "Artur Hecker",
-        "Mang Ye",
-        "Xun Xiao",
-        "Hinrich Schuetze",
-        "Volker Tresp",
-        "Yunpu Ma"
+        "Raito Kiya",
+        "Satoki Ohashi",
+        "Kosuke Sato",
+        "Go Kamoda",
+        "Ryosuke Takahashi",
+        "Yuji Yamamoto",
+        "Daiki Shiono",
+        "Keisuke Sakaguchi",
+        "Goro Kobayashi"
       ],
-      "summary": "Visual instruction tuning adapts pre-trained Multimodal Large Language Models (MLLMs) to follow human instructions for real-world applications. However, the rapid growth of these datasets introduces significant redundancy, leading to increased computational costs. Existing methods for selecting instruction data aim to prune this redundancy, but predominantly rely on computationally demanding techniques such as proxy-based inference or training-based metrics. Consequently, the substantial computational costs incurred by these selection processes often exacerbate the very efficiency bottlenecks they are intended to resolve, posing a significant challenge to the scalable and effective tuning of MLLMs. To address this challenge, we first identify a critical, yet previously overlooked, factor: the anisotropy inherent in visual feature distributions. We find that this anisotropy induces a \\textit{Global Semantic Drift}, and overlooking this phenomenon is a key factor limiting the efficiency of current data selection methods. Motivated by this insight, we devise \\textbf{PRISM}, the first training-free framework for efficient visual instruction selection. PRISM surgically removes the corrupting influence of global background features by modeling the intrinsic visual semantics via implicit re-centering. Empirically, PRISM reduces the end-to-end time for data selection and model tuning to just 30\\% of conventional pipelines. More remarkably, it achieves this efficiency while simultaneously enhancing performance, surpassing models fine-tuned on the full dataset across eight multimodal and three language understanding benchmarks, culminating in a 101.7\\% relative improvement over the baseline. The code is available for access via \\href{https://github.com/bibisbar/PRISM}{this repository}.",
-      "published": "2025-02-17T18:43:41Z",
-      "updated": "2026-08-28T17:31:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2502.12119v5"
+      "summary": "Large Language Models (LLMs) often exhibit \"Attention Sink\" (AS) and the accompanying \"Massive Activations\" (MAs) at the initial position of a sequence. These phenomena frequently co-occur, and MAs can pose challenges for low-bit quantization. In this study, we analyze the factors underlying AS and MAs that emerge at the initial position regardless of the token occupying it. Our experiments suggest that self-concentration of attention, resulting from the causal mask, and the subsequent Value-non-mixing in attention outputs contribute to AS and MAs. These findings provide new empirical evidence on the internal dynamics of LLMs, offering insights that may inform future quantization strategies and advance our understanding of the internal mechanisms of attention layers.",
+      "published": "2026-09-08T17:32:31Z",
+      "updated": "2026-09-08T17:32:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09085v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28534v1",
-      "title": "InstructMesh: Selective Refinement of Generative 3D Models for Fabrication",
+      "id": "http://arxiv.org/abs/2609.09059v1",
+      "title": "PlayTrain: An Efficient Reinforcement Learning Framework for LLM-Generated Adaptable JavaScript Games",
       "authors": [
-        "Faraz Faruqi",
-        "Ahmed Katary",
-        "Demircan Tas",
-        "Theresa Hradilak",
-        "Ning Zhang",
-        "Jiaji Li",
-        "Fabian Manhardt",
-        "Martin Nisser",
-        "Vrushank Phadnis",
-        "Ruofei Du",
-        "Federico Tombari",
-        "Megan Hofmann",
-        "Stefanie Mueller"
+        "Ryan Truong",
+        "Lance Ying",
+        "Samuel J. Gershman",
+        "Kazuki Irie"
       ],
-      "summary": "Recent advances in generative AI allow users to create 3D models from text or images. However, these models prioritize visual plausibility over geometric accuracy, often generating results with flaws that compromise their intended use post-fabrication. We present InstructMesh, an interactive post-generation refinement tool that enables selective repair of generative 3D models through region selection and targeted operations, such as opening or sealing voids, or adjusting local thickness. Users can invoke edit operations via natural language prompts or slider controls. By operating directly on the intermediate latent representation, InstructMesh allows users to apply robust geometric corrections without requiring expert modeling skills. To inform our design, we first analyze common fabrication-related failure modes in outputs from state-of-the-art generative tools. We then conduct two user studies, demonstrating that novices can identify and perform fabrication-relevant repairs on generative outputs using InstructMesh, and revealing user preference for hybrid interfaces that combine slider controls with natural language input.",
-      "published": "2026-08-28T17:09:42Z",
-      "updated": "2026-08-28T17:09:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28534v1"
+      "summary": "While many video-game environments (VGEs) have played crucial roles in advancing reinforcement learning (RL), developing novel VGEs or modifying existing ones to support new features, has been a laborious process requiring extensive hand-coding. Here we present PlayTrain, an RL framework that combines the abilities of large language models (LLMs) to robustly generate JavaScript (JS) games from a minimal human prompt, and an efficient pipeline that can run any JS game in a standard 'gym' environment. Not only are recent LLMs particularly good at writing JS code, but the JS format also allows users to easily play generated VGEs, while PlayTrain enables us to train RL agents on the exact same games. We demonstrate multiple use cases of PlayTrain, including cloning well-known Atari and ProcGen games in simple JS, where PlayTrain trains pixel-based agents end-to-end at over 1M agent-decisions per second on a single GPU node; and creating modified versions thereof (e.g., that support novel test sets, procedural generation logics, or game dynamics). Through PlayTrain, we reimagine RL VGE development: all we need is a single JS file, generated and modified through an LLM. We discuss promising future RL research directions that PlayTrain unlocks.",
+      "published": "2026-09-08T17:15:39Z",
+      "updated": "2026-09-08T17:15:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09059v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28532v1",
-      "title": "xTRUCE: A Provably Safe Arbiter for Multi-xApp Conflict Mitigation in Agentic O-RAN",
+      "id": "http://arxiv.org/abs/2609.09054v1",
+      "title": "Training-Free Task Vectors for LLM Behavioral Control",
       "authors": [
-        "Le Xia",
-        "Rose Qingyang Hu",
-        "Paul S. Kudyba",
-        "Zhenlin An",
-        "Haijian Sun"
+        "Gabriel J. Perin",
+        "Lucas Boscaini",
+        "André Araujo",
+        "Nina S. T. Hirata"
       ],
-      "summary": "The open radio access network (O-RAN) is evolving toward agentic operation, where large language model (LLM)-driven xApps/rApps generate control proposals under operator intents. However, such proposals may be conflicting, infeasible, or hallucinated, and no existing system jointly provides proposal-independent safety, priority-aware reconciliation, and traceable feedback. To this end, we propose a provably safe arbiter, namely xTRUCE, in the near-real-time (Near-RT) RAN intelligent controller for mitigating multi-xApp conflicts in gNB control. We first develop a structured xApp proposal interface and a three-layer constraint hierarchy that places physical limits and operator-defined rules above relaxable performance targets, alongside a dual-timescale control action space. A two-stage arbitration mechanism then minimizes target shortfalls in the operator-priority order to finalize safe E2 actions within the Near-RT latency budget, while returning conflict certificates to xApps and the operator for renegotiation. Finally, we implement xTRUCE in a multi-cell O-RAN use case, and evaluate its multi-process prototype through simulations with live API-backed LLM xApps and over-the-air experiments on OpenAirInterface/FlexRIC-based O-RAN stacks. Results show that xTRUCE ensures gNB control safety with $100\\%$ protected services despite severe proposal hallucinations, achieves priority-consistent performance satisfaction under overload, efficiently guides LLM intent renegotiation via certificates, and keeps a delay-safe E2 control loop.",
-      "published": "2026-08-28T17:08:53Z",
-      "updated": "2026-08-28T17:08:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28532v1"
+      "summary": "Task vectors enable post-training model editing by identifying semantically meaningful directions in weight space, typically computed as the difference between a fine-tuned model and its pretrained initialization. However, this reliance on fine-tuning makes discovering such directions costly and limits the practicality of post-training model editing. To address this limitation, we introduce Training-Free Task Vectors (TFTVs), a novel method to compute task-vector-like directions without requiring fine-tuning. Our method maps activation steering vectors to rank-one weight-space edits using only forward-pass statistics, while satisfying arithmetic properties that directly support learning via addition, forgetting via subtraction, and the composition of multiple edits. Empirically, we evaluate TFTVs on large language model behavioral control tasks and show that they consistently amplify, suppress, and compose target behaviors while preserving general knowledge and problem-solving skills. We also validate our method against other editing and steering baselines, experimentally demonstrating that TFTVs achieve stronger trait control with better or competitive utility preservation. We hope our work opens new directions for the community in post-training model editing and broader training-free model control. Code is available on the project website: tftv-llm.github.io.",
+      "published": "2026-09-08T17:10:28Z",
+      "updated": "2026-09-08T17:10:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09054v1"
     },
     {
-      "id": "http://arxiv.org/abs/2509.19212v2",
-      "title": "Steering Multimodal Large Language Models Decoding for Context-Aware Safety",
+      "id": "http://arxiv.org/abs/2609.09038v1",
+      "title": "Do Reasoning Representations Help Humans Evaluate LLM Outputs?",
       "authors": [
-        "Zheyuan Liu",
-        "Zhangchen Xu",
-        "Guangyao Dou",
-        "Xiangchi Yuan",
-        "Zhaoxuan Tan",
-        "Radha Poovendran",
-        "Meng Jiang"
+        "Jaewoo Lim",
+        "Sungbok Shin",
+        "Sanghyun Hong"
       ],
-      "summary": "Multimodal Large Language Models (MLLMs) are increasingly deployed in real-world applications, yet their ability to make context-aware safety decisions remains limited. Existing methods often fail to balance oversensitivity (unjustified refusals of benign queries) and undersensitivity (missed detection of visually grounded risks), leaving a persistent gap in safety alignment. To address this issue, we introduce Safety-aware Contrastive Decoding (SafeCoDe), a lightweight and model-agnostic decoding framework that dynamically adjusts token generation based on multimodal context. SafeCoDe operates in two stages: (1) a contrastive decoding mechanism that highlights tokens sensitive to visual context by contrasting real and Gaussian-noised images, and (2) a global-aware token modulation strategy that integrates scene-level reasoning with token-level adjustment to adapt refusals according to the predicted safety verdict. Extensive experiments across diverse MLLM architectures and safety benchmarks, covering undersensitivity, oversensitivity, and general safety evaluations, show that SafeCoDe consistently improves context-sensitive refusal behaviors while preserving model helpfulness.",
-      "published": "2025-09-23T16:32:25Z",
-      "updated": "2026-08-28T16:48:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.19212v2"
+      "summary": "Reasoning representations are increasingly used as explanations for large language model outputs. Yet they are typically evaluated with model-centric criteria, such as answer accuracy and faithfulness, leaving it unclear whether they help people evaluate model responses. In this work, we study reasoning representations as human-facing interfaces rather than proxies for model reasoning ability. We conduct a controlled human study of six reasoning formats across tasks of varying complexity, supported by a web-based framework that randomizes task domains, problem instances, and representation order. The study collects fine-grained judgments of structural understanding, error detection and localization, and trust calibration. Our study shows a mismatch between perceived preference and support for human evaluation. Participants prefer planning- and decomposition-based representations, but simpler chain-of-thought traces better support verification, trust, and interpretability. Preferred representations also introduce calibration risks, with more false alarms on correct traces and high trust despite low willingness to verify.",
+      "published": "2026-09-08T17:03:57Z",
+      "updated": "2026-09-08T17:03:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09038v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.26587v2",
-      "title": "Surgical Alignment in Knowledge Graph Training for Clinical Diagnosis with Large Language Models",
+      "id": "http://arxiv.org/abs/2609.09004v1",
+      "title": "Evaluation of Contextual Understanding in Large Language Models",
       "authors": [
-        "Saksham Khatwani",
-        "He Cheng",
-        "Majid Afshar",
-        "Dmitriy Dligach",
-        "Yanjun Gao"
+        "Subavarshana Arumugam",
+        "Mamta Nallaretnam",
+        "Kithuni Wickramasinghe",
+        "Chamath Gunapala",
+        "Pragatheeswaran Vipulanandan",
+        "Uthayasanker Thayasivam",
+        "Kamal Premaratne"
       ],
-      "summary": "Biomedical knowledge graphs (KGs) offer structured medical knowledge that can ground large language model (LLM) reasoning in clinical diagnosis application, yet how KG signal should be integrated into LLMs remains an open question. We present a systematic study spanning five KG task formulations, three training paradigms, two KGs, and three base LLMs. At the task level, all paradigms improve over the non-finetuned baseline, but methods with comparable in-domain accuracy show substantially different knowledge transfer behavior. We introduce Gradient Intervention Density (GID) and Gradient Distortion (GD) to measure how broadly an optimizer modifies the pretrained model. GID and GD together reveal a clear divide: KG-judgment training under KL regularization produces sparse, localized updates (a regime we term as surgical alignment), while task-specific SFT produces dense ones. A controlled ablation shows that the objective and KL contribute to sparsity independently, and the paradigms that produce sparse updates also improve reasoning quality, even when their in-domain accuracy is lower than task-specific SFT. Assessing KG-LLM integration thus requires complementing accuracy with optimization-geometry diagnostics. Our implementation can be found at https://github.com/LARK-NLP-Lab/Surgical-Alignment.",
-      "published": "2026-08-27T03:57:52Z",
-      "updated": "2026-08-28T16:47:31Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.26587v2"
+      "summary": "Large Language Models (LLMs) demonstrate impressive performance across diverse NLP tasks, yet their ability to exhibit genuine contextual understanding remains uncertain. Traditional evaluation metrics such as perplexity, BiLingual Evaluation Understudy (BLEU), or surface-level accuracy fail to reveal how well LLMs extract, integrate, and reason over contextual information--a gap particularly critical in question answering, where models must align responses with contextually grounded knowledge rather than memorized associations. We propose a novel knowledge graph-based evaluation framework introducing Semantic Structural Similarity for KGs (S3KG), a hybrid similarity measure integrating structural and semantic similarity into a continuous evaluation score, alongside a diagnostic framework for categorizing reasoning errors. To validate this pipeline, we evaluate S3KG against established metrics on a curated question-answer (QA) benchmark, demonstrating its effectiveness in measuring correctness, faithfulness, and interpretability in LLM-generated responses.",
+      "published": "2026-09-08T16:41:50Z",
+      "updated": "2026-09-08T16:41:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09004v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28501v1",
-      "title": "A Guided Inquiry Approach to Students Co-Designing Generative AI Course Policies",
+      "id": "http://arxiv.org/abs/2609.09002v1",
+      "title": "Factorized and Vectorized Execution: Optimizing Analytical and Semantic Queries over Relations",
       "authors": [
-        "Ashish Hingle",
-        "Aditya Johri"
+        "Sunny Yasser",
+        "Anas Dorbani",
+        "Amine Mhedhbi"
       ],
-      "summary": "As generative AI (GenAI) use among students increases, educators face growing questions about how to support learning while addressing ethical and institutional concerns. This exploratory study examines a guided inquiry activity in which students co-designed a GenAI course policy. Students first developed individual policy proposals focused on appropriate and ethical use of GenAI, then collaboratively refined them by incorporating diverse stakeholder perspectives. The following research questions guided the study: 1) what practical factors do students prioritize in their GenAI use policies, and how do they justify these choices? and 2) how do participants reflect on the policy design process? Participants first completed readings, then used GenAI to brainstorm initial policy ideas. Next, they articulated their own perspectives through a written assignment and a course policy they designed individually. Finally, they incorporated diverse stakeholder perspectives by collaborating with peers to develop a collective policy. Analysis of student artifacts and group discussions showed that participants prioritized training for students and instructors, standardized procedures for disclosing AI use, and stronger institutional support. Participants also wanted greater involvement in GenAI-related decision-making. They described the policy design process as a way to engage with multiple perspectives and the inherent trade-offs involved in governing AI use. This study offers pedagogical insights into how policy co-design activities can surface student values, concerns, and sensemaking about GenAI in educational contexts.",
-      "published": "2026-08-28T16:33:35Z",
-      "updated": "2026-08-28T16:33:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28501v1"
+      "summary": "Many-to-many joins are central to analytical and semantic workloads such as fraud detection, network analysis, and recommendation, where insights arise from relationships between entities. These workloads often suffer from an explosion of intermediate results, sometimes orders of magnitude larger than the inputs. Factorized representations address this problem by exploiting conditional independence among attributes to encode intermediates more compactly. In some cases, they can reduce the output size asymptotically below the worst-case output size. However, adopting factorization in modern vectorized query processors remains challenging: factorized representations are hierarchical, whereas vectorized execution is built around flat, block-oriented processing. Prior approaches either rely on full materialization or support only restricted factorization layouts, sacrificing much of the benefits of both factorization and vectorization. We present FFX, a novel engine for Fast Factorized eXecution. FFX is the first pipelined engine to support arbitrary factorization schemes while preserving full vectorization. The engine introduces packed factorized vectors and operators that maintain cache-friendly, contiguous layouts. Beyond analytics, FFX also co-optimizes semantic operators by serializing factorized intermediates into compact prompts for large language models (LLMs), substantially reducing token usage and inference cost while maintaining output quality and, in some cases, improving it. Together, these contributions enable efficient execution of join-heavy analytical queries, including queries augmented with semantic operators.",
+      "published": "2026-09-08T16:40:36Z",
+      "updated": "2026-09-08T16:40:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.09002v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28496v1",
-      "title": "Ladders in Chaos: When, How, (and Perhaps Why) Does Test-Time Scaling Improve LLM Machine Translation",
+      "id": "http://arxiv.org/abs/2609.08981v1",
+      "title": "Transformers as In-Context Samplers: From Closed-Form Diffusion to Estimation-Free Sampling",
       "authors": [
-        "Di Wu",
-        "Sergey Troshin",
-        "Christof Monz",
-        "Antske Fokkens",
-        "Vlad Niculae"
+        "Arman Adibi",
+        "Alireza Jafari",
+        "Mohammad Ghavamzadeh",
+        "Hadi Daneshmand"
       ],
-      "summary": "Two forms of test-time scaling for Large Language Models (LLMs) have emerged as effective and widely adopted paradigms: sequential, in which later answer attempts depend on earlier ones, and parallel, such as i.i.d. sampling with reranking. In this study, we investigate their properties in translation. First, our study shows that sequential sampling has a higher performance ceiling, providing a more diverse and effective pool of samples, particularly under smaller sampling budgets. Second, we interrogate the nature of test-time scaling through a multidimensional manual analysis. Human analysis of the Best-of-$N$ translations demonstrates that sequential sampling substantially improves translation fluency and naturalness, but can degrade accuracy when inference budgets are large. Finally, we suggest an explanation of the mechanism through which sequential scaling improves machine translation. Our controlled analysis partially attributes the success of sequential self-improvement to the model's access to a larger target-side context. Ablation experiments on sequential sampling demonstrate its robustness across different sampling temperatures, while also revealing sensitivity to context construction, suggesting directions for future improvement.",
-      "published": "2026-08-28T16:22:39Z",
-      "updated": "2026-08-28T16:22:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28496v1"
+      "summary": "A growing body of work establishes that large language models are not mere statistical memorizers, but are capable of in-context learning: performing inference at test time using only examples provided in the prompt, without any parameter updates. Prior theoretical work has shown that this capability extends to supervised learning tasks such as linear regression. We prove that in-context learning extends further to \\emph{data generation}: frozen transformers can simulate iterative generative samplers from in-context samples. We first show that transformers can realize closed-form and smoothed closed-form diffusion samplers. The construction identifies a concrete generative role for softmax attention: it computes responsibility weights and weighted empirical averages, while feedforward layers implement Euler updates. To empirically relate these constructions to pretrained language models, we study \\emph{semantic-topic sampling}: prompts consisting of words drawn from a common semantic category, such as animals, foods, or cities. Across transformer layers, the normalized hidden states exhibit a two-stage geometry: they move toward a uniform spherical reference in intermediate layers and then return to structured, topic-dependent representations near the output. We further measure an interacting-particle energy on these hidden-state clouds and observe the same U-shape pattern. We then prove that transformers can approximate an energy-based sampler, constructing the same U-shape energy across the layers.",
+      "published": "2026-09-08T16:25:11Z",
+      "updated": "2026-09-08T16:25:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.08981v1"
     },
     {
-      "id": "http://arxiv.org/abs/2605.12015v3",
-      "title": "SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces",
+      "id": "http://arxiv.org/abs/2609.08971v1",
+      "title": "NERVE Attacks: Breaking AI-Powered Brain-Computer Interfaces",
       "authors": [
-        "Chang Jin",
-        "An Wang",
-        "Zeming Wei",
-        "Kai Wang",
-        "Biaojie Zeng",
-        "Qiaosheng Zhang",
-        "Chao Yang",
-        "Jingjing Qu",
-        "Xia Hu",
-        "Xingcheng Xu"
+        "Zahra Tarkhani",
+        "Georgios Akkogiounoglou",
+        "Lorena Qendro",
+        "Isabel Tscherniak",
+        "Anil Madhavapeddy"
       ],
-      "summary": "Reusable skills are becoming a common interface for extending large language model agents, packaging procedural guidance with access to files, tools, memory, and execution environments. However, this modularity introduces attack surfaces that are largely missed by existing safety evaluations: even when the user request is benign, unsafe influence may reside in skill guidance, local artifacts, or execution-environment files that steer the agent toward unsafe actions. We present SkillSafetyBench, a runnable benchmark for evaluating such skill-facing safety failures. SkillSafetyBench includes 155 adversarial cases across 47 tasks, 6 risk domains, and 30 safety categories, each evaluated with a case-specific rule-based verifier. Experiments with multiple CLI agents and model backends show that non-user attacks can consistently induce unsafe behavior, with distinct failure patterns across domains, attack methods, and scaffold-model pairings. Our findings suggest that agent safety depends not only on model-level alignment, but also on how agents interpret skills, trust workflow context, and act through executable environments. The complete benchmark is available at https://github.com/AI45Lab/skill-safety-bench.",
-      "published": "2026-05-12T12:03:54Z",
-      "updated": "2026-08-28T16:19:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2605.12015v3"
+      "summary": "The rapid integration of AI into human-centred systems such as Brain-Computer Interfaces (BCIs) has created a poorly understood attack surface linking neural signals to physical systems. Exploits in this domain threaten cognitive autonomy, mental privacy, and physical safety, from neural data exfiltration to malicious control of BCI-tethered devices. We introduce the NERVE Attacks class, a systematic characterisation of five orthogonal attack dimensions that together span the complete BCI stack: Neuro-mimetic Forgery (N), Evasion via Desynchronization (E), Replay-based Hijacking (R), Vein Tapping (V), and Embedded Backdoors (E). To evaluate this class, we present EEGle, an AI-assisted extensible framework for systematic BCI security analysis. Our evaluation uncovers 17 novel neuro-specific attack instances and reveals a stealth-effectiveness spectrum unique to BCI backdoor design. We also show that generative AI lowers the barrier to entry for non-expert attackers and provide EEGle to the community for building and verifying the security of these deeply personal devices.",
+      "published": "2026-09-08T16:20:53Z",
+      "updated": "2026-09-08T16:20:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.08971v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.28490v1",
-      "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+      "id": "http://arxiv.org/abs/2609.08965v1",
+      "title": "PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving",
       "authors": [
-        "Jingjing Nie",
-        "Jiawei Guo",
-        "Krishna Meda",
-        "Haipeng Cai"
+        "Yuan Gao",
+        "Sebastian Müller",
+        "Mattia Piccinini",
+        "Marc Kaufeld",
+        "Yuchen Zhang",
+        "Finn Rasmus Schäfer",
+        "Qunying Song",
+        "Johannes Betz"
       ],
-      "summary": "Software and systems security workflows are typically procedural: analysts inspect heterogeneous artifacts, form hypotheses, invoke tools, interpret outputs, and revise plans. Large language model (LLM)-based agents, which can plan, use tools, retain state, and revise actions across multi-step workflows, are being rapidly adopted to automate this work. Given the consequences of delegating security decisions to autonomous systems, understanding how such agents are built, used, and assessed is crucial. Yet to this date, there remains a lack of systematic understanding of what has been done and how far we are in this field: the term \"agent\" is applied inconsistently, applications differ sharply in risk, and assessment protocols are often incomparable. To gain a comprehensive and coherent view of this area hence inform relevant future research, this paper provides a systematic literature review of the (1) technical approaches, including agent architecture, perception, memory, reasoning and planning, action space, orchestration, and self-improvement, (2) applications, with respect to the security tasks served, and (3) assessment, including the datasets, outcome and trajectory metrics, safety measures, and baselines considered, over the peer-reviewed literature spanning the emergence of this area (2023--2026). Our synthesis reveals a field that has built agents able to act but not yet agents whose authority is bounded or whose behavior is auditable. In addition to knowledge systematization, we also extend our insights into the limitations of and challenges faced by current approach, application, and assessment designs, which shed light on potentially promising future research directions.",
-      "published": "2026-08-28T16:19:01Z",
-      "updated": "2026-08-28T16:19:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.28490v1"
+      "summary": "Ensuring the safety of autonomous driving is a critical challenge. Scenario-based testing is a systematic process used to validate Autonomous Driving Systems (ADSs), but it remains a fragmented modular pipeline in which scenario generation, retrieval, modification, ADS execution, and results analysis are performed by separate tools with little interaction. Large Language Model (LLM) agents have shown promise across ADS sub-systems such as perception, planning, and control. However, no prior work covers the whole scenario-based testing pipeline for ADSs with a unified LLM-agent framework. We present PlannerForge, an LLM-agent framework that extends all scenario-based testing stages (from Scenario Generation to ADS Assessment) and adds two further LLM-enhanced stages: ADS Enhancement and ADS Benchmarking. We evaluate PlannerForge with 10 off-the-shelf LLMs across all tasks (Generation, Selection, Modification, Module Routing, Planner Testing, and Enhancement) under 5 prompt conditions. Best-per-task scores range from 0.88 to 1.00, and open-source 20-35B backends match commercial APIs on most tasks. Open-source models such as Qwen3.6:35B match commercial APIs on three of the five tasks. Chaining the modules end-to-end retains 83% / 78% of seed queries (commercial / open). It outperforms Scenario Factory 2.0 (Finkeldei et al., 2025) on natural-language generation (193 vs. 144 executable of 200) and realises 92-96% of requested city, road and vehicle attributes. It outperforms BM25 (Robertson and Zaragoza, 2009) at rank 1 selection (92.0% vs. 67.5%) and From-Words-to-Collisions (Gao et al., 2025) on physically valid edits (>=94% vs. 31%). At N=400, cost-tuning lifts planner success from 50.4% to 70.2% and cuts collisions from 19.0% to 8.4%, without domain-specific fine-tuning.",
+      "published": "2026-09-08T16:19:06Z",
+      "updated": "2026-09-08T16:19:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.08965v1"
     }
   ]
 }
