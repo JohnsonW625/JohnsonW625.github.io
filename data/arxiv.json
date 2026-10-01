@@ -1,188 +1,198 @@
 {
-  "generated_at_utc": "2026-09-10T03:12:55Z",
+  "generated_at_utc": "2026-10-01T04:18:28Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2609.10537v1",
-      "title": "Towards Tackling Application Logic Flaws through Autonomous Formal-Logic Modeling and Automated Reasoning",
+      "id": "http://arxiv.org/abs/2609.40361v1",
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
       "authors": [
-        "Yiwei Fang",
-        "Yichen Liu",
-        "Ze Jin",
-        "Haoqiang Wang",
-        "Qixu Liu",
-        "Luyi Xing"
+        "Tian Xia",
+        "Minghao Liu",
+        "Yiqing Liang",
+        "Laixi Shi",
+        "Jiayun Wang"
       ],
-      "summary": "Logic flaws pose significant challenges in the design and implementation of modern, semantically rich systems and applications, impacting security, privacy, and trust. These flaws are inherently tied to business-specific semantics and threat models, making their discovery and reasoning difficult and hard to scale. Real-world systems often exhibit diverse application features, complex protocol logic, and domain-specific threat models, necessitating substantial human effort and domain expertise for effective security analysis. In this paper, we introduce LL-Verifier, a novel, automated framework for identifying logic vulnerabilities built on (1) large language models for autonomous modeling, and (2) logic model checkers for rigorous reasoning. LL-Verifier processes natural language inputs, in particular protocol descriptions and security goals, to automatically generate formal logic models and properties expressed in a new logic language built on a generic logic language Maude, optimized for modeling arbitrary application-level semantics. These formal models are then converted into logical state machines, enabling exhaustive, rigorous verification through logic level model checking. This approach streamlines the analysis of diverse, application-level protocols deployed in real-world scenarios, offering automated, exhaustive, and precise reasoning within their logical constraints. We evaluated the high effectiveness, efficiency, and practicality of LL-Verifier by applying it to 27 access control protocols of widely used IoT devices, which come with vendor-specific logic flows and semantics. While LL-verifier tackles a hard problem in application security, i.e., automatic logic flaws discovery, our analysis uncovers a range of sophisticated logic vulnerabilities in IoT protocols and devices with serious security and privacy implications.",
-      "published": "2026-09-09T17:58:58Z",
-      "updated": "2026-09-09T17:58:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10537v1"
+      "summary": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+      "published": "2026-09-30T17:59:56Z",
+      "updated": "2026-09-30T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40361v1"
     },
     {
-      "id": "http://arxiv.org/abs/2604.10701v2",
-      "title": "Bringing Value Models Back: Generative Critics for Value Modeling in LLM Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2609.40360v1",
+      "title": "Semifactual Credit-Augmented Policy Optimization",
       "authors": [
-        "Zikang Shan",
-        "Han Zhong",
-        "Liwei Wang",
-        "Li Zhao"
+        "Junshu Pan",
+        "Zhizhang Fu",
+        "Shulin Huang",
+        "Yiran Ding",
+        "Zifan Cheng",
+        "Wenqi Shao",
+        "Qiaosheng Zhang",
+        "Yue Zhang"
       ],
-      "summary": "Credit assignment is a central challenge in reinforcement learning (RL). Classical actor-critic methods address this challenge through fine-grained advantage estimation based on a learned value function. However, learned value models are often avoided in modern large language model (LLM) RL because conventional discriminative critics are difficult to train reliably. We revisit value modeling and argue that this difficulty is partly due to limited expressiveness. In particular, representation complexity theory suggests that value functions can be hard to approximate under the one-shot prediction paradigm used by existing value models, and our scaling experiments show that such critics do not improve reliably with scale. Motivated by this observation, we propose Generative Actor-Critic (GenAC), which replaces one-shot scalar value prediction with a generative critic that performs chain-of-thought reasoning before producing a value estimate. We further introduce In-Context Conditioning, which helps the critic remain calibrated to the current actor throughout training. GenAC improves value approximation, ranking reliability, and out-of-distribution generalization, and these gains translate into stronger downstream RL performance than both value-based and value-free baselines. Overall, our results suggest that stronger value modeling is a promising direction for improving credit assignment in LLM reinforcement learning.",
-      "published": "2026-04-12T15:54:11Z",
-      "updated": "2026-09-09T17:53:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.10701v2"
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underlying problem and its answer. Our analysis reveals substantial variation in token-level sensitivity and shows that suppressing high-drift token candidates during decoding improves reasoning accuracy without updating model weights. These findings highlight a limitation of Group Relative Policy Optimization (GRPO), which assigns the same outcome-derived advantage to every response token and may reinforce potential spurious dependence alongside useful reasoning. Motivated by this observation, we introduce Semifactual Credit-Augmented Policy Optimization (SCAPO), a causally inspired variant of GRPO that incorporates semifactual stability into token-level credit assignment. SCAPO measures token probability drift for fixed responses under semifactual interventions and uses normalized stability scores to reduce advantages for relatively unstable tokens during early training, while granting no additional credit for stability alone. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024-2026 accuracy over GRPO by 5.63 and 4.17 percentage points, respectively. At both model scales, SCAPO achieves the best results on most evaluated mathematics benchmarks and all evaluated out-of-distribution benchmarks among the compared methods. These results suggest that semifactual stability provides an effective training signal for improving reasoning and generalization through finer-grained credit assignment in RLVR. The code is available at https://github.com/DtYXs/SCAPO.",
+      "published": "2026-09-30T17:59:56Z",
+      "updated": "2026-09-30T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40360v1"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10520v1",
-      "title": "Private communication via zero-private-capacity quantum channels",
+      "id": "http://arxiv.org/abs/2609.40340v1",
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
       "authors": [
-        "Chengkai Zhu",
-        "Xin Wang"
+        "Young-Jun Lee",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Minki Kang",
+        "Seungyeon Jwa",
+        "Jonghyun Choi",
+        "Seungho Han",
+        "Dongyeop Kang"
       ],
-      "summary": "Private communication over a noisy quantum channel requires reliable transmission to the receiver and secrecy from the environment. Whether two channels with zero private capacity can jointly enable private communication is a longstanding open problem in quantum information theory. Here we resolve this problem by exhibiting a four-level channel and a qubit erasure channel with half erasure probability, each with zero private capacity, whose joint use achieves more than 0.0001903 private bits per product use. The encoding gives the receiver a linear information gain with at most quadratic environmental leakage, enabling privacy through a fixed joint measurement and classical coding. This superactivation, impossible for independent classical memoryless wiretap channels, shows that a channel's private capacity alone does not determine its value for secure communication. The initial activation example was identified through interactions with large language models, and the result has been formalized in Lean 4.",
-      "published": "2026-09-09T17:51:54Z",
-      "updated": "2026-09-09T17:51:54Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10520v1"
+      "summary": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+      "published": "2026-09-30T17:58:28Z",
+      "updated": "2026-09-30T17:58:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40340v1"
     },
     {
-      "id": "http://arxiv.org/abs/2603.03538v5",
-      "title": "Verify to Amplify: Improving Reasoning via Learned Chain-of-Thought Verification",
+      "id": "http://arxiv.org/abs/2609.40335v1",
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
       "authors": [
-        "Maria-Florina Balcan",
-        "Avrim Blum",
-        "Kiriaki Fragkia",
-        "Zhiyuan Li",
-        "Dravyansh Sharma"
+        "Razan El Mais",
+        "Ali Chehab",
+        "Ibrahim Issa",
+        "Razane Tajeddine"
       ],
-      "summary": "Large Language Models (LLMs) using chain-of-thought have demonstrated great potential for solving complex reasoning and planning tasks. Despite these advances, LLM-generated outputs remain susceptible to errors, making verification important for reliable reasoning systems. Learned verifiers can increase trust, enforce safety constraints, and ensure alignment with personal preferences, while also providing feedback to improve generation. This raises a central challenge: when learned verifiers are used to guide generation, the feedback loop between generator and verifier may induce a distribution shift. This is particularly salient for process reward models, a prominent class of learned verifiers that score or classify individual steps in a chain-of-thought reasoning trace. Motivated by this challenge, we propose a new online learning framework for chain-of-thought verifiers that, given a problem statement and a reasoning trace, check the correctness of each reasoning step given the preceding steps. Highlighting the asymmetric role of soundness errors (accepting an incorrect reasoning step) and completeness errors (flagging a correct step as wrong), we introduce novel notions of dimension that characterize their optimal tradeoff. We then show how our learned verifiers can boost the accuracy of a weak generator. Assuming that the generator can produce a correct next step with a small success probability, we show how to learn a strong generator with small error and abstention rates. Our results also allow learning from offline data when queries to an expert verifier can be simulated from a small set of correct reasoning traces. However, we establish a separation between our approach and learning from offline expert demonstrations: we show that learning from offline demonstrations cannot in general achieve the soundness-completeness guarantees produced by our interactive learning approach.",
-      "published": "2026-03-03T21:50:14Z",
-      "updated": "2026-09-09T17:46:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.03538v5"
+      "summary": "Differentially Private Stochastic Gradient Descent (DP-SGD) is a leading approach for privacy-preserving fine-tuning of large language models (LLMs). Many decoder-only LLMs employ weight tying between input and output embeddings, a design choice originally introduced for parameter efficiency and improved language modeling performance in the non-private setting. However, the impact of weight tying under differentially private training remains largely unexplored. In this work, we investigate the role of weight tying in the DP setting using GPT2 and DistilGPT2 as representative decoder-only architectures. Interestingly, we find that untied embeddings consistently outperform weight-tied models under DP-SGD, achieving gains of up to 4.74% points in accuracy on SST-2, QNLI, and QQP. Beyond improved utility, untying embeddings enables the use of memory-efficient ghost clipping for DP-SGD. By contrast, weight tying introduces shared-parameter interactions that complicate standard ghost norm computation and largely negate its computational advantages. As a result, untied models achieve over 60% lower memory usage while preserving the benefits of ghost clipping. Our results indicate that untied embeddings provide a more effective and scalable design for differentially private training of decoder-only LLMs and highlight the need to revisit standard LLM architectural choices in the privacy-preserving setting.",
+      "published": "2026-09-30T17:57:43Z",
+      "updated": "2026-09-30T17:57:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40335v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.24191v2",
-      "title": "'Ghaib in Translation' aka Unseen Harm: Measuring Cross-Script Safety Inconsistency with 'Missed-in-Urdu' Scores in LLM Hate Speech Detection",
+      "id": "http://arxiv.org/abs/2609.28470v2",
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
       "authors": [
-        "Fawzia Zehra",
-        "Kara-Isitt",
-        "Sonal Khosla",
-        "Stephen Swift"
+        "Curtis Northcutt",
+        "Inaara Hasmani",
+        "Kevin Feng",
+        "Trevor Khangi",
+        "Andreas Plesner",
+        "Jonas Mueller"
       ],
-      "summary": "Urdu, the world's tenth most spoken language with 246 million speakers, remains almost entirely absent from mainstream LLM safety evaluation and nine years of WOAH proceedings. To investigate whether this absence has measurable consequences for content moderation reliability, five large language models, GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash, Qwen-2.5, and Llama-3.1, were tested across six datasets spanning Nastaliq Urdu, Roman Urdu, English, and code-switched Urdu-English. Across the five Urdu-script datasets, label instability between original-script and English-translation classification ranged from 15.9% (Gemini 2.5 Flash) to 31.6% (Qwen-2.5), with a 'Missed-in-Urdu' rate, content flagged as harmful in English translation but passed as normal in the original script, ranging from 2.4% to 9.9% (median 4.3%). A complete enumeration of all 205 papers across nine ALW/WOAH editions via the ACL Anthology API confirms zero dedicated Urdu papers across the entire period. Results indicate that current LLMs provide uneven safety assurance across Urdu's script varieties, with smaller open-weight models showing substantially higher instability and missed-harm rates than frontier closed models.",
-      "published": "2026-08-25T07:58:40Z",
-      "updated": "2026-09-09T16:54:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.24191v2"
+      "summary": "Artificial intelligence offers an unprecedented opportunity to augment human capabilities, yet progress at the frontier has focused primarily on advancing model capabilities. We introduce StudentBench, a suite of AI teaching evaluations and a public platform that enables large-scale data collection with over 175,000 student-AI messages to study whether large language models (LLMs) produce learning gains equivalent to human tutoring. Using StudentBench, we measured learning gains on Quantitative and Verbal GRE questions across 2,383 human participants receiving AI tutoring, human tutoring, or no tutoring. We establish that AI tutoring is statistically equivalent to expert human tutoring for GRE learning gains (p = .015), and in five of the seven GRE domains, the best performing AI tutor surpassed the human tutor, on average. In a second study, expert human tutors compared LLM-generated lesson plans and practice problems through 2,028 pairwise rubric evaluations. Together, the two studies clearly separate AI tutors across: (1) lesson planning, (2) practice-problem creation, (3) conversational pedagogy, (4) cost, and (5) engagement. Surprisingly, one AI tutor achieved learning gains equivalent to human tutoring (p = .044) at 918 times lower cost (USD 0.0052 for AI versus USD 4.81 for human, per percentage point gained). For Quantitative GRE sessions, faster AI replies correlated with more student messages, more messages with more correct practice, and more correct practice with larger learning gains (all p < .002). To support future research, we open-source the de-identified data collected in our studies.",
+      "published": "2026-09-23T17:57:45Z",
+      "updated": "2026-09-30T17:56:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.28470v2"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10441v1",
-      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "id": "http://arxiv.org/abs/2609.40303v1",
+      "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
       "authors": [
-        "Hongming Zhang",
-        "Zhaozhen Gu",
-        "Fengshuo Bai",
-        "Ming Hao",
-        "Qingyang Zhang",
-        "Yuanyuan Wang",
-        "Shiyang Tang",
-        "Yanna Wang",
-        "Bo Xu"
+        "Kirill Brilliantov",
+        "Alejandro Hernández-Cano",
+        "Emmanuel Abbé"
       ],
-      "summary": "While Large Language Models (LLMs) have demonstrated impressive capabilities, they often struggle with extremely long contexts due to fixed context limits. To address this, sequential approaches like MemAgent extend the effective context by reading text in segments and iteratively updating a fixed-size memory. However, this sequential paradigm suffers from high latency and requires costly reinforcement learning (RL) training, which can lead to overfitting on specific datasets. To overcome these limitations, we propose ConvMem, a training-free, highly parallelizable framework that reformulates long-context reasoning as a hierarchical convolution. Inspired by CNNs, ConvMem treats an LLM prompted with a specific query as a convolutional kernel. This kernel summarizes text segments hierarchically, shortening the reasoning path from a linear chain into a logarithmic tree. Specifically, ConvMem integrates \\textit{Configurable Strides} and \\textit{Skip Connections} to ensure robust evidence capture and propagation, while employing \\textit{Multi-Kernel Convolution} to decompose complex queries into disentangled semantic channels. This design not only mitigates error accumulation but also enables massive parallelization across both text segments and reasoning threads. Experiments on RULER-HotpotQA and RULER-2WikiMultiHopQA demonstrate that ConvMem outperforms training-free baselines and avoids the risk of overfitting to parametric priors often observed in RL-trained models on out-of-distribution tasks.",
-      "published": "2026-09-09T16:53:02Z",
-      "updated": "2026-09-09T16:53:02Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10441v1"
+      "summary": "Recent autonomous machine learning engineering (MLE) agents have made significant progress on public leaderboards. Often motivated by progress stagnation over long-horizon cycles and limited Large Language Model (LLM) primitives, modern MLE agents are deployed on top of increasingly elaborate machinery: multi-agent orchestrators, dedicated retrieval subagents, and more. While such harnesses expand, the use of more primitive but improved coding agents - where LLMs have direct access to the execution environment through read, write, and bash primitives - has received little attention in the field. In this paper we find that, under an equal time budget and the same frontier LLM backbone, open-source state-of-the-art harnesses provide no advantages over a single session of a minimal-harness coding agent baseline, pointing to the backbone as the primary driver for performance. Via a series of large-scale systematic ablation studies, we argue that the machinery layers become redundant in the coding agent setting. We conclude that the effort spent elaborating hand-crafted harnesses around strong models yields poor returns for current MLE benchmarks.",
+      "published": "2026-09-30T17:51:30Z",
+      "updated": "2026-09-30T17:51:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40303v1"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10439v1",
-      "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
+      "id": "http://arxiv.org/abs/2609.40296v1",
+      "title": "Open Capacity Pooling in Agentic Supply Chains: Coordination-Directed LLM Discovery and Distributed Re-optimization",
       "authors": [
-        "Ravi Ranjan",
-        "Olivera Kotevska",
-        "Agoritsa Polyzou"
+        "Yujia Xu",
+        "Walid Klibi",
+        "Benoit Montreuil"
       ],
-      "summary": "Large Language Models (LLMs) can memorize and reproduce sensitive, copyrighted, or otherwise undesirable training content, creating privacy, safety, and regulatory concerns. Machine unlearning offers a practical alternative to full retraining, but many existing methods apply broad or fixed parameter updates that can degrade utility and remain brittle under deployment changes such as post-training quantization, where forgotten knowledge may partially re-emerge. We propose Forgetting Only What Matters via Unlearning Layers (FOM-UL), a layer-level unlearning framework that selects transformer layers using a forget-to-retain significance score. This score identifies layers with high influence on the forget set and low sensitivity to the retain set, allowing FOM-UL to concentrate updates where they are most effective while leaving most of the model unchanged. This targeted update strategy improves the forgetting-utility trade-off and provides an empirical path toward quantization-resilient unlearning by reducing the chance that small, diffuse updates are erased by low-bit rounding. Across TOFU, KnowUnDo, and MUSE-style evaluations, FOM-UL reduces residual memorization compared with strong GA, NPO, KLD, SURE, ReLearn, and LUNAR-based baselines while preserving retain-set utility close to the vanilla model. Under 8-bit and 4-bit post-training quantization, FOM-UL maintains stronger memorization suppression and utility preservation than competing methods, and adversarial prompt evaluations show lower recovery of forgotten content. Overall, FOM-UL provides an efficient unlearning strategy that improves targeted forgetting, utility preservation, and deployment robustness without claiming formal guarantees of erasure.",
-      "published": "2026-09-09T16:50:41Z",
-      "updated": "2026-09-09T16:50:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10439v1"
+      "summary": "Disruptions can exhaust a supply chain network's capacity, yet outside capacity is hard to use: incumbent models are private, provider profiles are unstructured, and offers stay hidden until costly engagement. We formulate open capacity pooling, making network membership a disruption-response decision. The alternating direction method of multipliers (ADMM) coordinates incumbents without sharing models, and residual capacity gaps direct search over profiles indexed by a large language model (LLM). Verification reveals offers, reduced-cost screening admits them, and warm-started ADMM re-optimizes. The procedure is optimal if every eligible offer is revealed at exact prices, heuristic otherwise. Across 200 synthetic episodes, full-information opening recovers 24.6% of capacity-scarcity cost. With 40 contacts, coordination-directed need selection and LLM ranking capture 32.0% of this value, versus 4.7% for undirected, unranked contact. LLM reading of all profiles performs within five points of a complete structured registry and error-free extraction and finds four times as many compatible providers as keyword search among 10,000 records. What profiles omit is the exact capacity each provider's single offer covers, and requests for other capacity fail; registering offers in the same index raises captured value without a contact limit from 46.8% to 98.6%, keeping net value positive at every tested contact charge.",
+      "published": "2026-09-30T17:50:30Z",
+      "updated": "2026-09-30T17:50:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40296v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.21658v2",
-      "title": "Towards LLM-Powered Automation of a Dark Matter Constraint Repository",
+      "id": "http://arxiv.org/abs/2602.13194v3",
+      "title": "Semantic Chunking and the Entropy of Natural Language",
       "authors": [
-        "Lanqing Yuan",
-        "Karthik Ramanathan"
+        "Weishun Zhong",
+        "Doron Sivan",
+        "Tankut Can",
+        "Mikhail Katkov",
+        "Misha Tsodyks"
       ],
-      "summary": "Dark matter constraint repositories are critical community infrastructure, yet the most widely-used are volunteer-maintained, a sustainability risk as results accelerate. Limits are typically published as figures rather than machine-readable records, compounding the burden. We present a large language model (LLM) pipeline that monitors arXiv, extracts limit curves, integrates them as code, and opens pull requests for human review. On a 329-paper benchmark of measured limits graded against the upstream-curated repository, it identifies the coupling type for 98.1% of gradable papers. The 81% yielding a comparable extraction reach a median residual of 0.17 dex from a single model read, and 51% of all papers land within a factor of two of the curator's curve. The LLM is confined to perception; arithmetic, unit conversion, and the guards that reject mis-extractions are deterministic, testable code. Deployed, the pipeline has generated limit proposals, but none have merged: governance of AI-generated scientific data is itself unsolved.",
-      "published": "2026-06-19T18:01:38Z",
-      "updated": "2026-09-09T16:46:26Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.21658v2"
+      "summary": "Humans and large language models can predict next letter or word from its prior context much better than random guessing, indicating strong redundancy of language viewed as a stochastic process. Quantitatively this redundancy was estimated by Shannon to be around 80\\%, which means that every letter of a printed English text conveys approximately 1 bit of information and not 4.8 bits that 27 letters (including spaces) could potentially carry. This estimate was later confirmed by using autoregressive token probabilies computed by large language models. However, the statistical organization of language that give rise to such a large redundancy remains unclear. Here we introduce a statistical framework of language linking its redundancy to the hierarchical semantic organization of text. To this end, we use large language models to recursively segment any given text into semantically coherent chunks, inducing a ``semantic tree'' that spans the whole range of text organization, beginning from its main idea to individual tokens (words). For a large corpus of texts of a particular type, say fiction stories, the resulting ensemble of semantic trees is characterized by specific statistical regularities, giving rise to a ``structural'' entropy rate defined in this study. Surprisingly, we discovered that for several datasets considered in this work, semantic tree entropy rate was quite close to LLM-measured quantity and exhibited a similar trend across corpus. In particular, simpler texts like children stories exhibit lower branching in their semantic trees and correspondingly lower entropy rates, whereas fiction and poetry exhibit progressively larger branching factors and greater entropy rates. These results suggest that hierarchical semantic organization of texts is an important factor in their overall information transmission rates.",
+      "published": "2026-02-13T18:58:10Z",
+      "updated": "2026-09-30T17:48:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.13194v3"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10421v1",
-      "title": "Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support",
+      "id": "http://arxiv.org/abs/2410.02343v2",
+      "title": "Listening to the Wise Few: Query-Key Alignment Unlocks Latent Correct Answers in Large Language Models",
       "authors": [
-        "Jonathan A. Handler",
-        "Marlene I. Robles-Granda",
-        "Jacob E. Mefford",
-        "Jeremy S. McGarvey",
-        "Gregory S. Podolej",
-        "Colleen J. Klein",
-        "Matthew D. Dalstrom",
-        "William F. Bond"
+        "Eduard Tulchinskii",
+        "Kristian Kuznetsov",
+        "Laida Kushnareva",
+        "Anastasia Voznyuk",
+        "Andrei Andriiainen",
+        "Irina Piontkovskaya",
+        "Evgeny Burnaev",
+        "Serguei Barannikov"
       ],
-      "summary": "Background: Emergency Department (ED) return visits are commonly reviewed for quality assurance, but are often limited (e.g., to revisits within 48-72 hours) to increase actionable finding yield while minimizing chart review burden. Those limitations may lead to missed quality improvement opportunities. Methods: We conducted an exploratory, retrospective study of randomly selected ED visits to a multihospital health system having an ED revisit within 1-14 days to the same health system. Given only each visit's primary diagnosis, raters (2-3 clinicians and GPT-4 large language model [LLM]) assessed characteristics of the diagnosis pairs, including the \"target\": whether a pair warranted further assessment. Informed by rater response analyses, an algorithm leveraging an LLM-populated knowledge graph (\"KGA\") was created to automatically screen for potentially concerning pairs, then preliminarily assessed. Results: 99 diagnosis pairs were included. GPT-4 responses poorly correlated to clinician raters, rating nearly all (94%) pairs as warranting follow-up (4.4-13.3 times more than clinicians). However, prompt engineering was minimal. Among clinician raters, revisit medical gravity was consistently significantly associated with the target, while a differential diagnosis/complication composite was significantly associated on unadjusted, but not adjusted (though less powered) analysis. The KGA achieved 83-100% positive predictive value for at least one clinician rater determining further assessment was warranted based on the diagnosis pair. Conclusion: These results can inform next steps for improving screening with LLMs like ChatGPT. Further research is warranted to validate this preliminary work's finding that the KGA may enable enhancing the scope and yield of screening without substantially increasing reviewer workload.",
-      "published": "2026-09-09T16:37:35Z",
-      "updated": "2026-09-09T16:37:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10421v1"
+      "summary": "Large language models (LLMs) routinely fail to output the correct option in multiple-choice question answering (MCQA) while encoding the answer internally. We expose this latent knowledge via the Query--Key (QK) score, defined for an attention head as the inner product between the last-token query and the key at the end-of-line token following option $i$, evaluated before rotary positional embedding is applied. Its argmax identifies a universal class of select-and-copy heads in middle layers that perform option selection through semantic query--key alignment, mechanistically distinct from induction and copy-suppression heads (Olsson et al., 2022): they are invariant to label symbols, and solve a synthetic task with zero surface overlap---properties no positional-copy account explains and that critically require stripping RoPE. Across 24 models from 1.5B to 72B parameters (LLaMA-2/3/3.1/3.3, Qwen-2.5, Gemma, Phi-3.5, DeepSeek-R1-Distill), a single head's QK-score exceeds the model's own zero-shot accuracy by up to $+27.4$ pp on HellaSwag and $+49.8$ pp on HaluDialogue; causal zero-ablation collapses MCQA accuracy to near-random. To remove any dependence on labeled validation data, we introduce an unsupervised HeadScore that ranks heads from unlabeled inputs and recovers the supervised top-$k$ heads on every tested model. Against four positional-debiasing baselines (e.g., PriDe, Wiegrefe, Wang), QK-score is complementary by construction: debiasing re-weights output logits, whereas QK-score reads the model's selection from a middle-layer head before decoding. We release a one-line drop-in HeadScore script and per-model head indices, making every result one-command reproducible across all 24 models and four benchmarks.",
+      "published": "2024-10-03T09:53:48Z",
+      "updated": "2026-09-30T17:47:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.02343v2"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10412v1",
-      "title": "Towards Scalable and Cost-Efficient Vulnerability Detection: A Study on Automatic Query Generation",
+      "id": "http://arxiv.org/abs/2609.40258v1",
+      "title": "Large Language Model-Guided Evolutionary Discovery of Native Neural Architectures for Spiking Sequence Modeling",
       "authors": [
-        "Ivana Clairine Irsan",
-        "Ratnadira Widyasari",
-        "Huihui Huang",
-        "Ting Zhang",
-        "Yue Liu",
-        "Ouh Eng Lieh",
-        "Shar Lwin Khin",
-        "Kang Hong Jin",
-        "David Lo"
+        "Ruoyu Zhao",
+        "Jiaqi Wu",
+        "Chenyu Zhu",
+        "Zhichao Lu"
       ],
-      "summary": "Static analysis remains a cornerstone of software security, yet the effectiveness of tools such as CodeQL is often limited by the substantial manual effort required to develop high-coverage query suites. While large language models (LLMs) have emerged as a potential solution for automated code reasoning, their practical utility in generating structured, executable security queries remains underexplored. In this paper, we conduct an empirical study to evaluate the ability of LLMs to synthesize CodeQL queries using vulnerability data from the National Vulnerability Database. Through this investigation, we explore the potential of using LLMs as an automatic CodeQL query generator. Subsequently, we systematically evaluate the performance of various LLM architectures across a diverse set of real-world vulnerabilities, measuring their ability to improve detection coverage and precision. Our findings reveal that LLM-generated queries significantly enhance the baseline CodeQL queries, yielding 82% improvement in average F1-score. Furthermore, we provide a detailed cost- benefit analysis showing that while direct LLM-based scanning of entire repositories is often computationally and financially prohibitive, leveraging LLMs to synthesize CodeQL queries offers a scalable and cost-effective alternative for large-scale vulnerability detection. Our results suggest that LLMs can effectively bridge the gap between unstructured vulnerability reports and formal static analysis specifications, offering a scalable path toward comprehensive automated vulnerability detection.",
-      "published": "2026-09-09T16:31:20Z",
-      "updated": "2026-09-09T16:31:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10412v1"
+      "summary": "Spiking neural networks (SNNs) offer low-energy sequence modeling through sparse, event-driven computation. However, interactions among spike encoding, neuronal dynamics, and information propagation complicate architecture design. Existing SNN sequence models often adapt artificial neural network (ANN) architectures designed for real-valued activations, potentially underusing spike-based communication and temporal state updates, motivating automated discovery of native SNN architectures. Most evolutionary neural architecture search (ENAS) methods operate within predefined configuration spaces, limiting discovery to mechanisms expressible within those spaces. We introduce OpenArchEvo, which uses large language models (LLMs) to evolve executable architecture code in an open program space under spiking-projection constraints. In this space, code differences need not reflect architectural novelty, while direct performance evaluation requires costly training. We construct a three-view representation spanning code, design rationale, and a behavioral fingerprint to support novelty estimation and performance prediction. The search treats predicted performance and estimated novelty as two objectives, using surrogate predictions to select candidates for expensive training evaluations. With an estimated candidate-training cost of 132 V100 GPU-days, the search uncovers multiple native SNN architectures, exemplified by three designs featuring mechanisms such as spike-activity-dependent control of state updates and residual pathways. The discovered NeuroGate surpasses the ANN DeltaNet on WikiText-103, and the discovered architectures reduce estimated architecture-level arithmetic energy by up to 50.6x (LoopMem) relative to a common dense Transformer (ANN) baseline. All code and all discovered architectures will be made publicly available soon.",
+      "published": "2026-09-30T17:41:01Z",
+      "updated": "2026-09-30T17:41:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40258v1"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10397v1",
-      "title": "Retrofitting Code Using LLMs to Support Exceptional Behavior",
+      "id": "http://arxiv.org/abs/2609.40247v1",
+      "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
       "authors": [
-        "Linghan Zhong",
-        "Jiyang Zhang",
-        "Jayanth Srinivasa",
-        "Junyi Jessy Li",
-        "Milos Gligoric"
+        "Luping Wang",
+        "Weigao Chen",
+        "Yifei Wu",
+        "Yonghe Zhang",
+        "Rui Zhang",
+        "Wenchao Wu",
+        "Jiyu Luo",
+        "Haoran Geng",
+        "Xin Yang",
+        "Chen Cao",
+        "Yuemin Wu",
+        "Cheng Huang",
+        "Guodong Yang",
+        "Liping Zhang"
       ],
-      "summary": "Exception Related Code (ERC), which includes throw statements, conditions (if statements) that guard those throw statements, and try/catch blocks, is an essential component of software systems, allowing developers to detect and handle exceptional states that deviate from the expected program behavior. However, manually writing ERC across large codebases is tedious. We propose a novel task: retrofitting existing code with ERC. Namely, given code (without ERC) and Exceptional Behavior Tests (EBTs) (e.g., check if method throws InvalidArgumentException if null is given as the value to the argument) we aim to automatically generate missing ERC, such that the given tests pass. We design and implement Exception Coder (EXCODER) that performs context engineering to help Large Language Models (LLMs) tackle this task. EXCODER integrates static and dynamic program analysis with LLMs by providing the extracted contextual information to the LLMs. To evaluate EXCODER, we build a benchmark constructed from GitHub Java repositories, where we systematically remove ERC in 304 methods from 75 projects. Our results demonstrate that EXCODER provides an effective, though imperfect, solution to this problem in automated code generation, offering developers the first way to implement ERC following test-driven development. When combined with Qwen 2.5 Coder 32b, EXCODER achieves pass@1, 5, and 10 rates of 85.92% (12.56 percentage points over baseline), 86.18% (12.82 p.p. over baseline), and 86.51% (13.15 p.p. over baseline), respectively, on developer-written test suites. Our manual inspection of the generated code further reveals limitations of EXCODER, pointing to directions for future work.",
-      "published": "2026-09-09T16:18:47Z",
-      "updated": "2026-09-09T16:18:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10397v1"
+      "summary": "Model-as-a-service platforms call for continuous optimization as complex serving conditions expose inefficiencies missed before deployment. Detailed always-on profiling can incur substantial overhead, while lightweight collection omits information needed for diagnosis. We present Herschel, a continuous optimization system for production large language model (LLM) inference. Our key insight is that adaptive, on-demand profiling can provide rich full-stack evidence without continuous collection. Herschel safely attaches to and detaches from selected running processes without engine changes or restarts, and adapts coverage as investigations reveal missing evidence. Herschel reconstructs operator executions and cross-process dependencies to identify inefficiency mechanisms and suggest solutions using applicable reference fixes. AI agents implement and test engine and kernel changes under controlled conditions that preserve the triggering workload and dependencies, with expert review before deployment. Controlled tests show active-collection overhead below 0.5% for time to first token and 7% for time per output token. Bounded windows, typically 30 s, avoid the continuous cost of always-on tracing. Over six months, Herschel collected approximately 17,000 traces across over 120 model variants and more than 10 accelerator types, identifying inefficiency patterns in 23% of the traces. Representative findings guide widely deployed optimizations, including restructured synchronization, removal of unused computation, and improved operator implementations.",
+      "published": "2026-09-30T17:36:45Z",
+      "updated": "2026-09-30T17:36:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40247v1"
     },
     {
-      "id": "http://arxiv.org/abs/2609.10355v1",
-      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "id": "http://arxiv.org/abs/2609.40241v1",
+      "title": "Decision-Oriented Recommendation Reranking: An Empirical Study of Jev",
       "authors": [
-        "Killian Steunou",
-        "Yannis Tevissen",
-        "Mounîm A. El Yacoubi"
+        "Hanjia Lyu",
+        "Yinglong Xia"
       ],
-      "summary": "Video understanding has rapidly evolved toward video large language models (VideoLLMs): systems that couple video representations with pretrained large language models and condition generation on a textual prompt. Their strong performance on captioning, question answering, retrieval and temporal grounding comes at a computation and memory cost that grows with frame count and context length, limiting deployment in real-time, mobile and resource-constrained settings. This survey covers inference-efficiency mechanisms for visual and audiovisual VideoLLMs that report concrete reductions in parameter count, FLOPs per input, latency, memory, or visual and audio token count. We analyze bottlenecks across frame sampling, modality encoding, connector-level token reduction, and LLM prefilling and decoding. We organize methods by the pipeline stage at which they act, covering VideoLLMs developed since late 2022 together with earlier frame-sampling and vision-encoder mechanisms that remain components of current pipelines. We assemble literature-reported accuracy--cost comparisons under shared host models and input protocols wherever available, distinguish them from heterogeneous cross-paper evidence, and identify gaps in audiovisual efficiency and standardized evaluation. We maintain a repository at https://github.com/momentslab/awesome-efficient-videollm.",
-      "published": "2026-09-09T15:50:39Z",
-      "updated": "2026-09-09T15:50:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.10355v1"
+      "summary": "Large language models (LLMs) have shown promise for recommendation reranking, but their use introduces an important tradeoff between recommendation quality and serving efficiency. We investigate whether a decision-oriented model provides a useful alternative when the reranking task is fundamentally a structured choice among predefined candidate items. Specifically, we conduct a controlled empirical study of Jev, described by TypeSafe AI as a ``System One Model,'' for personalized recommendation reranking and compare it with recommendation-specific models and pointwise and listwise Qwen rerankers across multiple Amazon Reviews domains and candidate-set sizes, evaluating both recommendation effectiveness and observed serving latency. Our results show that Jev maintains strong recommendation effectiveness relative to the evaluated baselines while exhibiting substantially more gradual latency growth than the pointwise Qwen rerankers, although its observed serving latency remains substantially higher than that of recommendation-specific models. Together, these characteristics place Jev in a distinct quality--latency operating regime across candidate sizes and domains. These findings motivate further investigation of decision-oriented models for recommendation and other ranking tasks with structured output spaces.",
+      "published": "2026-09-30T17:33:43Z",
+      "updated": "2026-09-30T17:33:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.40241v1"
     }
   ]
 }
