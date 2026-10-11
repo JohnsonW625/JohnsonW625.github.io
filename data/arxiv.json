@@ -1,179 +1,239 @@
 {
-  "generated_at_utc": "2026-10-05T04:11:59Z",
+  "generated_at_utc": "2026-10-11T04:09:38Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2610.03702v1",
-      "title": "LESSER: Post-Training Data Selection with Output-Layer Gradients",
+      "id": "http://arxiv.org/abs/2610.12458v1",
+      "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
       "authors": [
-        "Lyuxin David Zhang",
-        "Eric Wong",
-        "Surbhi Goel",
-        "Anton Xue"
-      ],
-      "summary": "The choice of post-training data for large language models substantially affects downstream performance. Gradient-based data selection is a popular approach that ranks training data by how well their gradients align with those of a small validation set. However, ranking with full-parameter gradients requires an expensive backward pass on every sample, making computation intractable for large candidate pools. This raises a natural question: can we approximate full-gradient features at a fraction of the cost? Conveniently, we find that output-layer gradients suffice for effective data selection, yet require only the cheaper forward pass. We implement this as LESSER, a drop-in wrapper for selection methods that reduces the feature-extraction FLOP cost by $9.7\\times$ for SFT and $3.0\\times$ for RL benchmarks, while tracking full-gradient performance on downstream tasks. Empirically, we find that even when output-layer and full gradients rank individual samples differently, they select batches with aligned gradients.",
-      "published": "2026-10-02T17:55:42Z",
-      "updated": "2026-10-02T17:55:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03702v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2604.14128v3",
-      "title": "Rhetorical Questions in LLM Representations: A Linear Probing Study",
-      "authors": [
-        "Louie Hong Yao",
-        "Vishesh Anand",
-        "Yuan Zhuang",
-        "Tianyu Jiang"
-      ],
-      "summary": "Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them remains unclear. We analyze rhetorical questions in LLM representations using linear probes on two social-media datasets with different discourse contexts, and find that rhetorical signals emerge early and are most stably captured by last-token representations. Rhetorical questions are linearly separable from information-seeking questions within datasets, and remain detectable under cross-dataset transfer, reaching AUROC around 0.7-0.8. However, we demonstrate that transferability does not simply imply a shared representation. Probes trained on different datasets produce different rankings when applied to the same target corpus, with overlap among the top-ranked instances often below 0.2. Qualitative analysis shows that these divergences correspond to distinct rhetorical phenomena: some probes capture discourse-level rhetorical stance embedded in extended argumentation, while others emphasize localized, syntax-driven interrogative acts. Together, these findings suggest that rhetorical questions in LLM representations are encoded by multiple linear directions emphasizing different cues, rather than a single shared direction.",
-      "published": "2026-04-15T17:50:56Z",
-      "updated": "2026-10-02T17:40:47Z",
-      "pdf_url": "https://arxiv.org/pdf/2604.14128v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2610.03639v1",
-      "title": "Do Large Language Models Know Colombian Law? A Reliability Benchmark for the Colombian Legal System",
-      "authors": [
-        "Rubén Manrique",
-        "Michelle Castellanos",
-        "Jorge Morales",
-        "Juan David Gutiérrez",
-        "Antonio Barreto Rozo",
-        "Joaquín Vélez Navarro"
-      ],
-      "summary": "Large language models (LLMs) are increasingly used to support legal practice, education, and research, yet their reliability in national legal systems outside the United States remains largely undocumented. We introduce an expert-validated benchmark for evaluating LLM reliability on the Colombian legal system. The benchmark comprises 1,042 items spanning ten areas of law and three question formats (closed multiple-choice, semi-open, and open-ended IRAC), built through a human-in-the-loop pipeline with multi-stage expert review. We evaluate 15 contemporary proprietary and open-weight models with format-appropriate metrics. Accuracy on closed questions ranges widely, from 0.905 (Gemini 3.1 Pro) to 0.577, but on free-text legal answers factual correctness never exceeds 0.45 (on a 0-1 scale) for any model. We find a dissociation between answer relevancy and correctness (Spearman rho = -0.46): models reliably sound responsive while frequently being wrong, a pattern of particular concern for non-expert users. Closed-question accuracy and free-text correctness are strongly rank-correlated (rho = 0.94), so cheap multiple-choice screening predicts model ranking but overstates absolute reliability. An independent rubric-based LLM judge and blind human expert scoring both reproduce the free-text ranking (rho >= 0.88). The judge further reveals that only about half of the norms models cite are correct; the rest are wrong or non-existent. Reliability varies systematically by legal area and follows an inverted-U across question complexity. Our results indicate that current LLMs require expert supervision for Colombian legal tasks, and that grounding answers in authoritative sources is a promising path to higher reliability. We release the benchmark construction pipeline to support reproducible evaluation.",
-      "published": "2026-10-02T17:27:41Z",
-      "updated": "2026-10-02T17:27:41Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03639v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2608.30258v3",
-      "title": "Stratified Consistency Distillation for Natural Language Formalization",
-      "authors": [
-        "Zhichao Hou",
-        "Ferhat Erata",
-        "Joe Lilien",
-        "MohamadAli Torkamani"
-      ],
-      "summary": "Neurosymbolic reasoning has shown promising success in addressing complex reasoning tasks by combining large language models (LLMs) and symbolic solvers. While this approach shows promise, a fundamental challenge remains: improving the accuracy of translations from natural language to logical formulas. Current methods predominantly rely on prompt engineering, which is difficult to scale across different domains and input formats. Drawing inspiration from the success of fine-tuning in other model adaptation and alignment applications, we propose a fine-tuning-based Stratified Consistency Distillation approach: (1) We generate K logical translations per input using a frontier LLM and cluster them by semantic equivalence (2) Based on the entropy level, we apply majority voting (low entropy), LLM-as-a-Judge (medium entropy), or unification/abstention (high entropy), and (3) fine-tune a smaller model using the selected pseudo-labels. Our experiments show significant and consistent improvements in both Pass@K and our novel Equivalent Logical Similarity metrics, demonstrating the potential of advancing logical translation through consistency distillation.",
-      "published": "2026-08-31T05:08:08Z",
-      "updated": "2026-10-02T17:23:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.30258v3"
-    },
-    {
-      "id": "http://arxiv.org/abs/2610.03591v1",
-      "title": "HazardWeaver: Scientific Route Selection for Hazard Analysis Agents",
-      "authors": [
-        "Wangshu Zhu",
-        "Xueqi Cheng",
-        "Liang Wu",
-        "Yushun Dong"
-      ],
-      "summary": "Understanding and assessing natural hazards is essential for disaster preparedness and risk reduction. Recent advances in large language models have spurred growing interest in AI agents for hazard analysis, particularly their ability to integrate scientific data, models, and tools into automated workflows. However, effective automation requires agents to determine which scientific methods are appropriate for a given event and executable with the available data and tools. As new evidence and execution results become available, these conditions can change, requiring agents to reconsider their choices. We formulate this problem as state-dependent scientific route selection and introduce HazardWeaver. Specifically, HazardWeaver first leverages the Hazard Knowledge Compiler to extract evidence-linked conditions governing scientific applicability, then its Hazard Capability Graph represents executable scientific capabilities and checks compatibility between their inputs and outputs. Using these complementary representations, the Hazard Weaver Agent component selects applicable and executable routes, carries out their workflows, and revises its decisions as the analysis state changes. To evaluate both the scientific outputs and the decisions that produce them, we introduce the Hazard Weaver Benchmark, comprising 141 instances across seven single-hazard domains and four multi-hazard interaction classes. The benchmark accommodates multiple valid scientific routes and evaluates output correctness, route validity, and justified abstention. Extensive experiments on this benchmark show that HazardWeaver outperforms existing agent systems, with the largest gains on tasks with multiple eligible scientific routes. Our code is publicly available at https://github.com/LabRAI/HazardWeaver.",
-      "published": "2026-10-02T16:59:19Z",
-      "updated": "2026-10-02T16:59:19Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03591v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2610.03565v1",
-      "title": "Writerslogic at PAN 2026: Process over Content for Robust Detection under Domain Shift",
-      "authors": [
-        "David L. Condrey"
-      ],
-      "summary": "We describe the Writerslogic systems for three PAN at CLEF 2026 shared tasks (Reasoning Trajectory Detection, Voight-Kampff Generative AI Detection, and Multi-Author Writing Style Analysis), unified by a shared analytical framework: feature robustness under distribution shift is governed by support overlap between training and test distributions, not by training-set effect size. This yields a taxonomy (domain-anchored, domain-portable, domain-invariant) that explains why generator-specific features die under domain shift while vocabulary fingerprints (hapax ratio, Yule's K, Heaps' exponent), compression measures, and character n-grams survive. On Reasoning Trajectory Detection, where training was entirely mathematics and 84 percent of test was unseen domains, the framework guided system design to 1st place in source detection (0.85 macro F1 via Opus-Sonnet agreement) and 3rd place in safety classification (0.66 macro F1 via query-refusal decomposition). For Voight-Kampff, we built a calibrated ensemble of DeBERTa-v2 (ONNX), multi-seed LightGBM with 44 domain-portable stylometric features, and SVM on n-gram TF-IDF, combined via learned stacking with isotonic calibration; the best configuration achieved 0.891 on the PAN 2026 test set with balanced sub-metrics (0.853 to 0.902 across all evaluation dimensions). For Multi-Author Writing Style Analysis, we describe a system fusing spectral clustering over character n-gram similarity graphs, normalized compression distance for local boundary detection, and SmolLM-135M perplexity for neural change-point detection; a platform mix-up meant our run never reached the official evaluation, so we report the design and its a priori predictions. Across all three tasks, features measuring generation process properties are designed to outperform features measuring generated content properties under domain shift.",
-      "published": "2026-10-02T16:44:14Z",
-      "updated": "2026-10-02T16:44:14Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03565v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2609.38256v2",
-      "title": "Framing the Narrative: Ideological Mimicry in Large Language Models",
-      "authors": [
-        "Olivia Macmillan-Scott",
-        "Michael Jacobs",
-        "Nils Metternich",
-        "Mirco Musolesi"
-      ],
-      "summary": "Large language models (LLMs) are increasingly used to answer questions about politically contentious issues, yet evaluations typically treat a model's stance as a relatively stable property. Real users, however, communicate political signals through their terminology, assumptions, and personal context. We investigate whether such signals produce ideological mimicry: systematic shifts in the political stance expressed by an LLM toward the position conveyed by the interaction. If LLMs adapt their responses to these signals, they risk creating personalised political information environments in which users with opposing views receive systematically different accounts of the same issue, potentially reinforcing existing divisions. We build the Poli-SHIFT dataset and evaluation framework and assess seven open-weight LLMs across ten contentious political topics in the United States, United Kingdom, and Australia, systematically manipulating contested terminology, politically valenced premises, and user information, and eliciting responses in both multiple-choice and open-text formats. Across models, we find robust evidence that prompt framing shapes the political stance of LLM outputs. Changing terminology alone reverses which side of an issue a model supports in 16.9% of matched comparisons. Stated political ideology also systematically shifts responses toward the user's position. These findings show that political stance is not a fixed property of LLMs; the views expressed are conditional on the interaction with the user. As LLMs become increasingly personalised sources of information, such interaction-dependent adaptation could contribute to political information environments that reinforce users' existing perspectives.",
-      "published": "2026-09-29T10:50:56Z",
-      "updated": "2026-10-02T16:43:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.38256v2"
-    },
-    {
-      "id": "http://arxiv.org/abs/2603.03202v5",
-      "title": "Code2Math: Can Your Code Agent Evolve Math Problems Through Exploration?",
-      "authors": [
-        "Dadi Guo",
-        "Yuejin Xie",
-        "Qingyu Liu",
-        "Weixian Huang",
-        "Jiayu Liu",
-        "Zhiyuan Fan",
-        "Qihan Ren",
+        "Zhongyu Yang",
+        "Jiale Tao",
+        "Ruitao Chen",
+        "Zuhao Yang",
+        "Yingfang Yuan",
+        "Xueliang Zhao",
+        "Auden",
+        "Kai Wang",
         "Shuai Shao",
-        "Tianyi Zhou",
-        "Jianjie Feng",
-        "Wenze Su",
-        "Yujiu Yang",
-        "Dongrui Liu",
-        "Yi R. Fung"
+        "Biao Wang",
+        "Steve Yves",
+        "Qinglin Lu"
       ],
-      "summary": "As large language models (LLMs) advance their mathematical capabilities toward the IMO and research level, the scarcity of challenging, high-quality problems has become a significant bottleneck for training, evaluation and self-evolution of LLMs. Simultaneously, recent code agents have demonstrated sophisticated skills in agentic coding and reasoning, suggesting that code execution can serve as a scalable environment for mathematical experimentation. In this paper, we investigate the potential of code agents to autonomously evolve existing math problems into more complex variations. We introduce a multi-agent framework designed to perform problem evolution while validating the solvability and increased difficulty of the generated problems. Our experiments demonstrate that, given sufficient test-time exploration, code agents can synthesize new, solvable problems that are structurally distinct from and more challenging than the originals. This work provides empirical evidence that code-driven agents can serve as a viable mechanism for synthesizing high-difficulty mathematical reasoning problems within scalable computational environments. Code and data is available at https://github.com/TarferSoul/Code2Math.",
-      "published": "2026-03-03T17:55:10Z",
-      "updated": "2026-10-02T16:36:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.03202v5"
+      "summary": "Multimodal large language models (MLLMs) are rapidly evolving toward continuous audio--visual reasoning, creating an urgent need for evaluations that expose their capability limits. Audio--visual captioning is an ideal diagnostic task, yet current benchmarks face a coupled trade-off: whole-caption scores provide coverage without localization, local probes provide localization without coverage, and unconstrained LLM judges introduce instability. We introduce OmniCapBench (Omni-Video Caption Benchmark), a benchmark that reframes audio--visual caption evaluation as a deep-structured diagnostic framework. OmniCapBench shifts the prediction target from free-form text to sets of atomic, verifiable evaluation units across three tracks: entity references, visual shots, and audio events, enabling reliable scoring with deterministic constraint checks and localized LLM-based semantic comparisons. With 786 densely annotated videos, OmniCapBench effectively distinguishes MLLM perception errors, including temporal grounding failures, identity drift, cross-modal misalignment, and hallucinated descriptions. Evaluating frontier MLLMs reveals strong local perception but weak long-horizon audio--visual reasoning, particularly in identity drift and cross-modal misalignment, providing a fine-grained roadmap for omnimodal development.",
+      "published": "2026-10-08T17:59:21Z",
+      "updated": "2026-10-08T17:59:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12458v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.03551v1",
-      "title": "Objects Without Morphisms: What LLMs for Mathematics Do Not Represent",
+      "id": "http://arxiv.org/abs/2610.12427v1",
+      "title": "FastBench: Can Streaming VLMs Perceive High-Dynamic Real-World Streams?",
       "authors": [
-        "Yanli Wang",
-        "Suijin Wang",
-        "Xiaopeng Yuan",
-        "Haohan Wang"
+        "Yuxuan Hu",
+        "Weikang Shi",
+        "Yang Bo",
+        "Xudong Lu",
+        "Xintong Guo",
+        "Shuhan Li",
+        "Yuyang He",
+        "Huankang Guan",
+        "Peiwen Sun",
+        "Yunqiao Yang",
+        "Wenbo Li",
+        "Rui Liu",
+        "Hongsheng Li"
       ],
-      "summary": "Large language models (LLMs) have reached expert-level performance on competition mathematics largely through the volume of search placed around them: candidate solutions are sampled in quantity and retained only when an external criterion accepts them. Such a procedure improves the outcome that survives it while leaving untouched what the model represents. We examine that question where no external criterion exists: translating statements between the dialects of neighbouring subfields, where fidelity turns on the level of generality at which content is asserted. The source leaves that level implicit in its vocabulary, so a faithful translation must recover it from the relation between the theories. We introduce an instrument that codes truth, content and scope in separate blind queues, with a judge-free measure of whether a rewrite states the hypothesis implicit in its source, and establish its sensitivity with a planted-positive control. Across seven models from four families, translating towards the general framing widens the domain of quantification in 60.6% of rewrites and narrows it in none; translating towards the concrete framing narrows it in 28.3% and widens it in 0.3%. The hypothesis that would prevent it is stated in 21.6% of model rewrites and 4.2% of human statements. Capability does not govern the asymmetry: it appears in every model tested, and the most capable widens least. It replicates on the half of the benchmark held out by a pre-registered rule, and on statements written by mathematicians. Instructing a model to state every hypothesis it requires raises that rate but not its sensitivity to direction. We argue that these systems have acquired an object-level correspondence between subfield vocabularies without the constraint under which a translation between theories carries hypotheses to hypotheses.",
-      "published": "2026-10-02T16:33:32Z",
-      "updated": "2026-10-02T16:33:32Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03551v1"
+      "summary": "Streaming Video Large Language Models (VLMs) enable continuous video understanding, yet existing benchmarks focus on low-dynamic scenarios. Under bounded context budgets, models must balance temporal history, spatial resolution, and temporal granularity; sparse sampling at 1--2 FPS misses fast events. We introduce FastBench to evaluate high-dynamic perception in real-world video streams. Its trajectory-grounded pipeline combines QA generation from high-FPS clips, filtering of questions answerable at 2 FPS, answer verification using SAM3 and CoTracker3 trajectories, and three rounds of human inspection. FastBench contains 306 QA pairs across eight domains, six capabilities, and forward, instant, and backward temporal scopes, with human-annotated evidence intervals. We also present ProactiveFrame, a training-free baseline that adjusts incoming frame rates through text tokens. A dual-tier sliding window retains recent high-FPS observations while downsampling older ones into sparse history. Experiments reveal substantial limitations: the strongest model, Gemini-3.5-Flash, scores only 50.7%. Denser sampling improves Qwen3-VL-8B from 32.9% at 2 FPS to 44.6% at 24 FPS, but gains saturate as history is compressed. ProactiveFrame outperforms sparse uniform sampling by 5.4 and 1.5 percentage points, yet remains well below oracle-guided focusing, showing that current VLMs struggle to determine from the stream alone when finer temporal perception is needed. FastBench provides a testbed for high-dynamic streaming video understanding. Code and data: https://github.com/Ashone3/FastBench.",
+      "published": "2026-10-08T17:55:20Z",
+      "updated": "2026-10-08T17:55:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12427v1"
     },
     {
-      "id": "http://arxiv.org/abs/2607.26984v2",
-      "title": "Using large language models to probe the limits of atom-centered structural descriptors",
+      "id": "http://arxiv.org/abs/2610.12417v1",
+      "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
       "authors": [
-        "Michelangelo Domina",
-        "Michele Ceriotti"
+        "Zheyu Fan",
+        "Yue Zhang",
+        "Mingkai Deng",
+        "Kangrui Wang",
+        "Qineng Wang",
+        "Canyu Chen",
+        "Jie Hao",
+        "Xing Fan",
+        "Chenlei Guo",
+        "Eric P. Xing",
+        "Mohit Bansal",
+        "Manling Li"
       ],
-      "summary": "Mapping an atomic structure to a compact set of geometric descriptors is an essential step in any machine-learning application to atomic-scale modeling. A powerful and widely-used approach can be understood as a discretization of the histogram of pair distances, triangles, etc., that results in a hierarchy of symmetry-invariant atom-centered descriptors. Unfortunately, the lower rungs on this hierarchy (two, three, four-neighbor clusters) were found to be incomplete, with symmetry-unrelated pairs of structures having exactly the same descriptors. However, all the ``degeneracies'' reported so far are resolved by considering larger clusters of neighbors to build the descriptors. We report examples of 3D structures that are indistinguishable even if one considers clusters of up to seven neighbors, and to arbitrary order when considering a practical level of discretization of the descriptors, discovered with the assistance of large language models. The key ingredients in their construction can be traced to results that have been known for decades in different communities: the model was able to find the references and recognize their significance for the problem at hand. We believe this experiment exposes an extremely fruitful usage pattern for AI in science: translating results between different communities and application domains, accelerating the process by which serendipitous discoveries in a field become breakthroughs in another.",
-      "published": "2026-07-29T14:40:59Z",
-      "updated": "2026-10-02T16:28:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2607.26984v2"
+      "summary": "Multimodal large language models (MLLMs) struggle with spatial, embodied, physical, and temporal reasoning. We hypothesize that these failures reflect a shared deficit in visual transition reasoning, and test whether this capability can serve as a shared training primitive, one that different models can learn from different supervision sources and reuse across different tasks, with a systematic training recipe. Existing benchmarks document these deficits separately but do not support controlled comparisons across scenes, actions, and reasoning operations. We therefore introduce WOVEN, a training source and benchmark for visual transition reasoning that organizes transition supervision by scene, action, and reasoning type, using diverse, realistic rollouts from video-pretrained generative models: 36,076 examples across 20 scene types, 5 action types, and 8 reasoning types. We first evaluate 38 frontier MLLMs (e.g., GPT-5.4 and Qwen3-VL-235B-A22B) and find a substantial and systematic deficit: even the strongest models fall far below humans, and the failures recur across model families and persist with scale. We then train MLLMs at multiple scales on WOVEN and find that they learn a shared capability that transfers broadly: training subsets of only about 2,000 items each collectively improve 22 of 26 external benchmarks by up to 27.3 percentage points, and WOVEN data can replace 30-50% of a task's own training data with comparable accuracy. Controlled comparisons further yield a training recipe for visual world modeling, validated prospectively on held-out benchmarks: select supervision by the reasoning operation it teaches rather than by the actions, scenes, or domains it shows, and prefer larger changes to the visual state for robustness. Our work establishes visual transition reasoning as a reusable foundation for systematic visual world-model training in MLLMs.",
+      "published": "2026-10-08T17:52:03Z",
+      "updated": "2026-10-08T17:52:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12417v1"
     },
     {
-      "id": "http://arxiv.org/abs/2512.19905v3",
-      "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling",
+      "id": "http://arxiv.org/abs/2610.12415v1",
+      "title": "ORCAGen: Orchestrating Context-Aware Malware Deception with RAG-Guided Generative AI",
       "authors": [
-        "Indranil Halder",
-        "Cengiz Pehlevan"
+        "Shihab Ahmed",
+        "Md Sajidul Islam Sajid",
+        "Teryl Taylor",
+        "Frederico Araujo",
+        "Tariqul Islam"
       ],
-      "summary": "Recent developments in large language models have shown advantages in reallocating a notable share of computational resource from training time to inference time. However, the principles behind inference time scaling are not well understood. In this paper, we introduce an analytically tractable model of inference-time scaling: Bayesian linear regression with a reward-weighted sampler, where the reward is determined from a linear model, modeling LLM-as-a-judge scenario. We study this problem in the high-dimensional regime, where the deterministic equivalents dictate a closed-form expression for the posterior predictive mean and variance. We analyze the generalization error when training data are sampled from a teacher model. We draw $k$ inference-time samples and select via softmax at a temperature applied to a quadratic reward. When the reward is not too different from the teacher, the generalization error decreases monotonically with increasing inference time samples $k$. However, the specific reward that optimizes inference-time selection generally differs from the teacher. In contrast, substantial reward misspecification induces a finite optimal $k$ beyond which more sampling can increase the generalization error. For fixed $k$, there exists an optimal sampling temperature. We experimentally verify these facts in large language model inference with an additional large language model as a judge. In the \"best-of-$k$\" limit with the teacher as reward, we theoretically show that the generalization error decays as $Θ(1/k^2)$ and determine the leading coefficient via extreme value theory. These formulas delineate domains where scaling inference-time computation is provably preferable to collecting more data. Finally, we demonstrate that when task difficulty increases, the previously mentioned advantage of inference-time compute degrades.",
-      "published": "2025-12-22T22:13:06Z",
-      "updated": "2026-10-02T16:16:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.19905v3"
+      "summary": "Malware defenses often remove or isolate suspicious programs as quickly as possible. While effective for containment, this approach can also waste an opportunity to observe attacker behavior and deploy targeted countermeasures. ORCAGen takes a different approach: it uses GenAI to build malware-specific deception playbooks offline, validates them before deployment, and enforces only the verified logic at runtime. ORCAGen combines Retrieval-Augmented Generation (RAG) with structured prompt engineering to generate both proof-of-concept (PoC) malware and corresponding deception orchestration code. A curated knowledge base (KB) of malware procedures and active defense strategies grounds the generation process, helping the LLM produce threat-specific and executable deception logic rather than generic or hallucinated outputs. The generated PoC malware provides a safe and reproducible way to test whether a deception strategy can disrupt, redirect, or suppress targeted malware behavior before the strategy is added to the runtime playbook. We evaluate ORCAGen across GPT-4o, GPT-5.5, Gemini 3.5 Flash, Qwen3-Coder, and Claude Sonnet 4.5 using execution success, hallucination rate, refinement effort, deception effectiveness, and runtime overhead. The evaluation covers synthesized malware scenarios and 150 real-world malware samples across keyloggers, information stealers, and ransomware. Across the evaluated scenarios, GPT-5.5 required the fewest refinements and produced no observed hallucinated APIs, while Gemini 3.5 Flash achieved the lowest response time and runtime overhead. The results show that RAG-guided structured prompting can support the scalable construction of malware-specific deception playbooks that remain lightweight and deterministic during runtime enforcement.",
+      "published": "2026-10-08T17:51:11Z",
+      "updated": "2026-10-08T17:51:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12415v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.03529v1",
-      "title": "Divergence controls entropy in distillation",
+      "id": "http://arxiv.org/abs/2610.08966v2",
+      "title": "Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models",
       "authors": [
-        "Nicolas Zucchet",
-        "Scott W. Linderman"
+        "Xingang Guo",
+        "Jing Gu",
+        "Brian Jang",
+        "Renxiong Wang",
+        "Utkarsh Tyagi",
+        "Daniel Quigley",
+        "Steven Li",
+        "David Yan",
+        "Daniel Yue Zhang",
+        "Darvin Yi",
+        "Forrest Huang",
+        "HiJae Kim",
+        "Tianyi Zhang",
+        "Jared Lichtarge",
+        "Jihua Huang",
+        "Le Xue",
+        "Manan Tomar",
+        "Qiuyi Richard Zhang",
+        "Ruofei Yu",
+        "Seth Neel",
+        "Yaning Hu",
+        "Marcella Valentine",
+        "Xinzhe Jiang",
+        "Daniel Evans",
+        "Chenguang Wang",
+        "Dustin Tran",
+        "Tong Zhao",
+        "Yinfei Yang",
+        "Yunzhong He"
       ],
-      "summary": "Distillation has become a core primitive of large language model training, but its properties are not yet well understood. We take an entropic perspective, studying how the entropy of the student depends on the data and the divergence that define the distillation objective. We prove that forward KL inflates the entropy of the student above that of the teacher. Since cross-entropy training is a special case, this yields an identity that we verify quantitatively in pretraining and supervised finetuning. Other divergences come with no such guarantee: reverse KL deflates entropy until the gap between student and teacher gets too large, and interpolating between the two changes entropy smoothly early in training but abruptly at convergence. The lower entropy of on-policy distillation comes from token-level reverse KL, not from on-policy sampling. The divergence therefore acts as an implicit entropy regularizer, whose role is clearest in self-distillation: as conditioning on privileged information deflates entropy, the divergence hyperparameters that work best are those that compensate for it.",
-      "published": "2026-10-02T16:15:53Z",
-      "updated": "2026-10-02T16:15:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.03529v1"
+      "summary": "Humans perceive far more in a scene than what is explicitly depicted: a single glance captures past causes and future trajectories; a quick peek determines if a vehicle can fit between two parked cars; a few seconds of video reveals who holds authority in a room; and a fleeting clip highlights subtle abstract patterns like unwritten rules or hidden labels. This capacity reflects a form of humanity's sixth sense: an intuitive reasoning mechanism that recovers implicit information beyond raw sensory perception. Crucially, this rapid, zero-shot visual intuition underpins everyday navigation and social interaction, making it a vital capability for Multimodal Large Language Models (MLLMs) deployed alongside people. Existing visual benchmarks, however, target either deliberate expert-level analysis in academic and mathematical domains or low-level perception, leaving the intuitive reasoning that people perform largely untested. To bridge this gap, we introduce Humanity's Sixth Sense (HSS), a benchmark for intuitive visual reasoning. HSS spans diverse image and video inputs, organizes items under a structured taxonomy, and pairs each with human-written prompts probing the implicit temporal, spatial, social, and abstract structure that people infer at a glance. Frontier MLLMs fall short of human performance: participants reach 93.1% accuracy, while the strongest model, GPT-6-astra, reaches only 53.6% even at maximum reasoning effort. Despite excelling in many complex tasks that require advanced perception and knowledge, current models still struggle significantly on these visual tasks that are intuitive for humans. We further explore agentic setup that apply dynamic visual manipulation to HSS, which narrows but does not close the gap. HSS establishes intuitive visual reasoning as a measurable axis and directs attention to a capability that scaling on current benchmarks has so far left behind.",
+      "published": "2026-10-06T18:31:35Z",
+      "updated": "2026-10-08T17:39:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.08966v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.12391v1",
+      "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
+      "authors": [
+        "Jialu Wang",
+        "Ruichen Zhang",
+        "Xiaoou Liu",
+        "Hua Wei",
+        "Tianlong Chen"
+      ],
+      "summary": "Multimodal large language models (MLLMs) often struggle to identify and use geometric relations in diagrams. Recent methods address this challenge by converting geometric entities, relations, and constraints into explicit textual representations for the model to reason over. However, effective formalization is highly non-trivial: on Geometry3K, structure injection fixes 28 errors but introduces 13 new ones among 200 examples. Redundant relations can distract the model, while ambiguous references to diagram elements can lead it to apply constraints incorrectly. This suggests that the key challenge is not merely extracting more geometric facts, but organizing them into representations that support downstream reasoning. To fully exploit the power of formalization, we further propose GeoReform, a reflective formalization evolution framework that treats formalization as an optimizable policy rather than a fixed parser output. GeoReform executes the full reasoning pipeline, collects failed rollouts, diagnoses defects in the current representation, and mutates the policy to better select, ground, group, and present geometric entities, relations, constraints, and targets. On Geometry3K, GeoReform improves Qwen3VL-2B accuracy from 42.0\\% to 56.0\\%. Extensive experiments and analyses across geometry reasoning benchmarks demonstrate that effective formalization is crucial for improving multimodal geometry reasoning.",
+      "published": "2026-10-08T17:39:12Z",
+      "updated": "2026-10-08T17:39:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12391v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.12390v1",
+      "title": "Long Text to Predictive Features: LLM-Guided Blockwise Feature Engineering via Executable Program Search",
+      "authors": [
+        "Ziming Dai",
+        "Dabiao Ma",
+        "Ziheng Guo",
+        "Jack Dong",
+        "Zimu Zhou"
+      ],
+      "summary": "Industrial risk-control systems typically rely on structured-data models for efficient prediction, yet substantial valuable information remains embedded in unstructured long text. Extracting this information through manual feature engineering is labor-intensive, while requiring a large language model (LLM) to process every real-time input may not meet practical deployment requirements. To address this challenge, we propose LLM-BlockFE, an LLM-guided offline feature construction framework that converts long text into executable feature programs, thereby avoiding LLM calls during online inference. LLM-BlockFE constructs feature programs by incrementally appending immutable code blocks and evaluates candidate features using a downstream model. To address the tendency of conventional greedy search to become trapped in suboptimal solutions, our method introduces a block-level rollback mechanism based on depth-calibrated credit allocation and advances multiple independent search trajectories in an interleaved manner, reducing redundant exploration by sharing fixed descriptions of each trajectory's exploration direction. After the search, the resulting programs are frozen and deployed to extract structured features for downstream prediction models. Across two public and two private datasets, LLM-BlockFE achieves absolute AUC improvements of 0.0069 to 0.0358 over the strongest baseline on each dataset in the full-dataset comparison. Post-launch monitoring across five deployed financial risk-control applications shows absolute KS improvements of 0.02 to 1.56 percentage points over the existing manually designed strategy.",
+      "published": "2026-10-08T17:39:11Z",
+      "updated": "2026-10-08T17:39:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12390v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.39882v2",
+      "title": "LLM Persona Unlearning",
+      "authors": [
+        "Kemou Li",
+        "Zhuan Shi",
+        "Qizhou Wang",
+        "Fengpeng Li",
+        "Negar Rostamzadeh",
+        "Golnoosh Farnadi",
+        "Jiantao Zhou"
+      ],
+      "summary": "Pre-training equips large language models (LLMs) with a broad repertoire of behavioral patterns associated with roles, styles, values, and goals. Post-training teaches conditional enactment and makes a helpful Assistant the default, but it does not erase alternative modes from the weights; explicit prompts can therefore elicit personas that repeatedly shape judgment, language, and action. In open-weight settings, runtime controls can be removed, motivating persona unlearning: a weight-level edit that makes a designated persona difficult to elicit and enact on unseen contexts. We introduce PersonaUnlearnBench, a model-specific paired benchmark spanning six LLMs from three families and five personas, with aligned forget/retain sets, held-out instruction paraphrases, and four-axis evaluation. The benchmark shows that standard unlearning methods cannot reliably erase the target persona without sacrificing meaningful generation or general utility. We therefore propose PaCE, which compares target and desirable responses to the same questions to locate an internal behavior direction, then trains target-prompt states away from the target mode and toward the matched desirable response. Experiments show that PaCE consistently suppresses target personas with high response quality and useful counterpart behavior, at moderate utility cost. These results establish persona unlearning as a distinct behavior-level editing problem and a practical route toward persistent control of latent LLM response policies.",
+      "published": "2026-09-30T14:55:52Z",
+      "updated": "2026-10-08T17:28:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.39882v2"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.12361v1",
+      "title": "Cited but Not Consulted: A Counterfactual Audit of Legal Chain-of-Thought Faithfulness",
+      "authors": [
+        "Saisab Sadhu",
+        "Shreeyans Arora",
+        "Pratinav Seth"
+      ],
+      "summary": "Large language models increasingly justify legal decisions by naming the statute or precedent behind a verdict, treated as evidence that the decision follows from it. We test this directly: holding case facts fixed, we substitute the named legal authority for an unrelated one and decode a model's evolving verdict from its hidden states. Across seven open-weight models (8B-70B) and four benchmarks spanning judicial and contractual reasoning, when explicitly required to justify a verdict by naming the governing authority, models name the correct one in 66.7%-100% of generations, while the verdict changing when the authority changes is far less consistent: 0.0%-21.7% on CaseHOLD, 30.0%-76.7% on ECHR and SCOTUS, and 43.3%-50.0% on ContractNLI. Neither scale nor a purpose-built legal-reasoning model (a best-effort LoRA reproduction; Section 6) closes this gap. A red-teaming evaluation on five core models finds compliance with an adversarial instruction hidden in the case facts (73.3%-96.4%) exceeds verdict-swap sensitivity by a wide margin, holding without exception across model rankings. Naming a legal authority is thus a poor proxy for a verdict's dependence on it, while the same verdict remains separately vulnerable to adversarial manipulation. Both findings replicate across checks ruling out prompt-wording noise and confounded sampling, and bear directly on the use of generated legal explanations as compliance or audit artefacts.",
+      "published": "2026-10-08T17:26:17Z",
+      "updated": "2026-10-08T17:26:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12361v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.12345v1",
+      "title": "Overcoming Prior Barriers: Supervised Fine-Tuning under Long-Tail Distribution",
+      "authors": [
+        "Haohui Wang",
+        "Jiahao Xu",
+        "Wangzhi Zhan",
+        "Tong Zeng",
+        "Dongqi Fu",
+        "Hong Li",
+        "Swastik Roy",
+        "Naren Ramakrishnan",
+        "Chris North",
+        "Jian Kang",
+        "Yujun Yan",
+        "Dawei Zhou"
+      ],
+      "summary": "Supervised fine-tuning (SFT) adapts pretrained large language models (LLMs) to downstream tasks, but the required concepts can receive substantially different levels of pretrained support. Frequent concepts are more likely to be well learned, whereas rare concepts may remain weakly represented. We introduce a novel notion named prior barrier to quantify how strongly the pretrained model supports competing concepts over the target concept. We observe that prior barriers follow a long-tail distribution, placing head and tail concepts at different starting points for SFT: head concepts face lower prior barriers, whereas tail concepts require additional instructions to overcome their higher prior barriers. Our theoretical analysis further derives a predictive risk bound for SFT under long-tail prior barriers, explicitly characterizing how the prior barrier and accumulated SFT evidence jointly determine predictive performance. Motivated by this prior barrier-dependent demand, we propose PASS, an adaptive SFT instruction selection method that constructs reference-derived concepts and estimates the distinguishing evidence provided by each instruction, and adaptively allocates the selection budget toward concepts that remain insufficiently covered under the current selection. In this way, PASS jointly considers which instructions can provide useful evidence and where additional supervision is needed under a limited budget. Experiments show that our method consistently outperforms seven state-of-the-art instruction selection methods on four backbone-budget settings. An ablation study further shows that PASS's adaptive allocation consistently improves over uniform allocation.",
+      "published": "2026-10-08T17:16:45Z",
+      "updated": "2026-10-08T17:16:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12345v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.08064v3",
+      "title": "Risk-Conditioned Fine-Tuning of Large Language Models",
+      "authors": [
+        "Zixuan Liu",
+        "Fangzheng Wu",
+        "Brian Summa",
+        "Zizhan Zheng"
+      ],
+      "summary": "Large Language Models (LLMs) are increasingly deployed in settings where rare but severe harmful generations can have significant consequences. Existing Risk-Averse RLHF addresses this issue by optimizing Conditional Value-at-Risk (CVaR), but it trains policies for fixed risk levels and therefore cannot adjust the desired degree of risk aversion at inference time. In this paper, we propose risk-conditioned RLHF, a framework that trains a single policy that provides a continuous risk-control interface, enabling users to select different degrees of risk aversion without retraining or deploying multiple risk-specific models. Experiments across multiple benchmarks demonstrate that a single risk-conditioned policy can adapt to different risk levels at inference time, enabling more flexible and risk-aware LLM deployment.",
+      "published": "2026-09-08T00:12:05Z",
+      "updated": "2026-10-08T17:15:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.08064v3"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.12338v1",
+      "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+      "authors": [
+        "Neha Verma",
+        "Sungwon Kim",
+        "Kenton Murray",
+        "Kevin Duh"
+      ],
+      "summary": "While caching key-value (KV) states accelerates Large Language Model (LLM) decoding, this cache can dominate memory usage at long context lengths. One solution is to compress this memory by exploiting inter-layer cache similarities. However, most existing techniques necessitate architectural changes to LLMs and incur substantial overhead. In this work, we propose a symmetry-aware value cache merging strategy that reduces cache memory while avoiding both harmful performance degradation and architectural overhead during decoding. Furthermore, we show that this approach can be exploited alongside existing cache compression techniques, composing with high-ratio quantization or key cache pruning to reach compression ratios that neither method reaches alone, with minimal additional cost. Ultimately, our findings reveal a major source of underutilized capacity in the value cache, offering a simple yet highly effective direction for scaling context windows under memory constraints.",
+      "published": "2026-10-08T17:14:28Z",
+      "updated": "2026-10-08T17:14:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.12338v1"
     }
   ]
 }
