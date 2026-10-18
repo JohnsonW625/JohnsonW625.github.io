@@ -1,224 +1,223 @@
 {
-  "generated_at_utc": "2026-10-12T04:27:55Z",
+  "generated_at_utc": "2026-10-18T03:09:02Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2603.18048v3",
-      "title": "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models",
+      "id": "http://arxiv.org/abs/2610.22367v1",
+      "title": "Discovering state-of-the-art quantum circuits with large language models",
       "authors": [
-        "Jiaqi Xiong",
-        "Yunjia Qi",
-        "Qi Cao",
-        "Yu Zheng",
-        "Yutong Zhang",
-        "Ziteng Wang",
-        "Ruofan Liao",
-        "Weisheng Xu",
-        "Sichen Liu"
+        "Andi Gu",
+        "Alek H. Kemeny",
+        "Susanne F. Yelin",
+        "Mikhail D. Lukin"
       ],
-      "summary": "Recent Audio Multimodal Large Language Models (Audio MLLMs) demonstrate impressive performance on speech benchmarks, yet it remains unclear whether these models genuinely process acoustic signals or rely on text-based semantic inference. To systematically study this question, we introduce DEAF (Diagnostic Evaluation of Acoustic Faithfulness), a benchmark of over 2,700 conflict stimuli spanning three acoustic dimensions: emotional prosody, background sounds, and speaker identity. Then, we design a controlled multi-level evaluation framework that progressively increases textual influence, ranging from semantic conflicts in the content to misleading prompts and their combination, allowing us to disentangle content-driven bias from prompt-induced sycophancy. We further introduce diagnostic metrics to quantify model reliance on textual cues over acoustic signals. Our evaluation of seven Audio MLLMs reveals a consistent pattern of text dominance: models are sensitive to acoustic variations, yet predictions are predominantly driven by textual inputs, revealing a gap between high performance on standard speech benchmarks and genuine acoustic understanding.",
-      "published": "2026-03-17T15:52:26Z",
-      "updated": "2026-10-09T17:56:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.18048v3"
+      "summary": "Significant efforts are currently being directed toward the implementation of large-scale quantum information processors, but realizing useful quantum advantage also requires the development of efficient quantum algorithms. While for many practical problems the dominant resource costs are associated with a small set of computational primitives, optimizing them in the quantum setting presents unique challenges, including a reversibility constraint absent from ordinary classical computation. Here we introduce an evolutionary framework in which large language models (LLMs) propose circuit designs and an independent evaluator verifies and scores them. We apply this framework to tasks spanning numerical computation, chemistry, optimization, quantum simulation, and number theory. In seven of the eight tasks, the discovered circuits significantly reduce both Toffoli and qubit counts relative to the state of the art. In the eighth, the search discovers a new reversible architecture for prime-field modular inversion. By handling reversibility differently, the architecture makes divsteps -- a classical algorithm previously impractical for reversible integer arithmetic -- viable and substantially improves the Toffoli-qubit trade-off for modular inversion. These results open the door for evaluator-guided LLM co-design of new algorithmic structures for quantum computation.",
+      "published": "2026-10-15T17:59:20Z",
+      "updated": "2026-10-15T17:59:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22367v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13920v1",
-      "title": "A Comprehensive JWST Slitless Spectroscopic Census of $\\sim$12,000 Emission-Line Galaxies at Redshift $0\\sim9$ in COSMOS",
+      "id": "http://arxiv.org/abs/2610.22360v1",
+      "title": "Grounding Generative Verification in 3D Content",
       "authors": [
-        "Shuqi Fu",
-        "Zijian Zhang",
-        "Danyang Jiang",
-        "Jie Chen",
-        "Linhua Jiang",
-        "Chenxi Bao",
-        "Yihe Wang",
-        "Ronaldo Laishram"
+        "Shuanglin Li",
+        "Jiaying Lin",
+        "Shuquan Ye"
       ],
-      "summary": "Emission-line galaxies provide key diagnostics of star formation, chemical enrichment, and AGN activity across cosmic time. We present a systematic census of emission-line sources using JWST/NIRCam wide-field slitless spectroscopy (WFSS) from the COSMOS-3D program, which covers a large contiguous area of 0.33 deg$^2$ and provides F444W grism spectroscopy over $3.9$--$5.1\\ μ$m. By combining slitless spectroscopy with deep multi-band imaging data, we construct a homogeneous spectroscopic sample of 12,275 objects at redshift 0--9. The typical $3σ$ line-flux limit reaches $3.2\\times10^{-18}\\ {\\rm erg\\ s^{-1}\\ cm^{-2}}$. To address source confusion inherent to slitless spectroscopy, we develop a multi-step identification framework that combines information from spectra, images, spectral energy distributions, and spatial distributions. We introduce convolutional neural network and large language model to emulate the human identification process and improve efficiency. The resulting catalog provides spectroscopic redshifts, emission-line measurements, and derived physical properties for all sources. The F444W WFSS enables the detection of multiple emission lines, including primarily [O III], H$α$, He I $\\lambda10830$, [S III] $λ\\lambda9531,9069$, Pa$β$, Pa$α$, Br$β$, PAH, Br$α$, allowing a continuous census of galaxies across cosmic time. We construct composite spectra in several redshift bins and detect a variety of faint spectral features that are difficult to identify in individual spectra, including higher-order hydrogen recombination lines, CO absorption bands, and [Fe II] lines. This catalog provides a key reference dataset for studies of galaxy evolution and AGN activity, and demonstrates the power of WFSS for constructing large, unbiased spectroscopic samples over wide areas. The full catalog will be publicly available online upon publication.",
-      "published": "2026-10-09T17:53:18Z",
-      "updated": "2026-10-09T17:53:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13920v1"
+      "summary": "Recent advances in multimodal large language models (MLLMs) and 3D generation have expanded 3D understanding and synthesis. However, beyond visual fidelity, task-specific correctness grounded in 3D evidence remains a major challenge. We argue that building reliable 3D systems requires not only stronger generation and reasoning, but also verification feedback that identifies unmet requirements and explains their violations, allowing systems to reflect on and refine their outputs. Such feedback must integrate multi-view observations and distinguish genuine inconsistencies from projection-dependent appearances. We make three contributions. First, we introduce 3DVerifierBench, a benchmark spanning 10 tasks that evaluates decisions, rejection explanations, and responses to controlled changes in specifications and candidates. A human study reveals a 21.6 percentage-point gap between humans and the strongest tested model, GPT-6 Astra, while explanation-aware analysis exposes weaknesses in rejection reliability. Second, we analyze verification across fine-grained factual categories, exposing errors in values and target binding. We develop a scalable pipeline combining multi-view fact extraction, controlled 3D editing, and native annotations to produce 14,126 training examples with contradiction explanations and linked counterfactuals. Third, we examine how verification could support 3D generation through candidate selection and recursive refinement. In human-labeled sixteen-candidate pools, oracle selection improves complete factual success from 26.7% to 90.0%. In a separate eight-input study, human-guided recursive refinement satisfies all seven requirements for every input, compared with three under parallel Oracle@8. Together, our benchmark, analysis, and data pipeline establish a foundation for models to reflect on 3D content through reliable verification feedback.",
+      "published": "2026-10-15T17:59:01Z",
+      "updated": "2026-10-15T17:59:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22360v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.07418v2",
-      "title": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
+      "id": "http://arxiv.org/abs/2610.22344v1",
+      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
       "authors": [
-        "Valentin Liévin",
-        "Samuel Schmidgall",
-        "Tim Strother",
-        "Alex Bijamov",
-        "Akshay Goel",
-        "Anil Palepu",
-        "Chunjong Park",
-        "Vahid Balazadeh",
-        "Min Woo Sun",
-        "Marius Guerard",
-        "Justin Chen",
-        "Dave Steiner",
-        "Vikram Dhillon",
-        "Ibrahim Azar",
-        "Akhil Mehta",
-        "Nicholas Spetsieris",
-        "Shilpan Shah",
-        "Maen Abdelrahim",
-        "Amit Dahiya",
-        "Yun Liu",
-        "Katherine Chou",
-        "Yossi Matias",
-        "Avinatan Hassidim",
-        "Dale R. Webster",
-        "Quoc V. Le",
-        "Raia Hadsell",
-        "Joelle Barral",
-        "Carey Radebaugh",
-        "Aleksandra Faust",
-        "Shekoofeh Azizi",
-        "Mike Schaekermann",
-        "Po-Hsuan Cameron Chen",
-        "Tao Tu",
-        "David Racz",
-        "Lin Yang"
+        "Shangheng Du",
+        "Jinxin Shi",
+        "Shuaiyu Zhang",
+        "Yiming Wu",
+        "Junpeng Zhao",
+        "Shiyang Feng",
+        "Xin Li",
+        "Liang He",
+        "Xiangchao Yan",
+        "Bo Zhang"
       ],
-      "summary": "In medical education, physicians convert academic knowledge into clinical expertise through residency: years of training across thousands of encounters, with diverse sources of feedback and progressively greater autonomy. Much of clinical reasoning relies on the patient encounter, a dialogue in which a clinician elicits history, refines diagnostic hypotheses, and decides management under uncertainty. While large language models (LLMs) excel on static medical benchmarks, methods to optimize the full sequence of clinical decisions remain underdeveloped. We present ResidencyRL, a reinforcement learning (RL) method for training clinical artificial intelligence (AI) agents through simulated multi-turn clinical encounters (up to 60 dialogue turns and 8 tool calls per trajectory). ResidencyRL pairs the policy agent with LLM simulators capable of complex, adversarial behaviors, training against a structured reward aligned to diagnostic accuracy, management quality, communication, documentation, and safety. On held-out evaluations, the ResidencyRL agent improves diagnostic accuracy by 7.0% under adversarial conditions (88.0% vs. 81.0%) and reduces missed red flag rates by 31%, demonstrating rigorous mitigation of premature closure. Blinded expert clinicians validated these gains, preferring the trained agent in 87.6% of side-by-side comparisons. The procedural competencies transfer to unseen benchmarks: the agent outperforms the base model across all six clinical axes of the AMIE multi-visit benchmark, and shows consistent directional improvements on AgentClinic and CRAFT-MD. Our findings demonstrate that sequential clinical decision-making can be effectively learned through multi-turn RL in simulation, yielding robust, generalizable capabilities, paving the way towards clinical mastery. Prospective validation with real-world workflows remains necessary to establish clinical utility.",
-      "published": "2026-08-07T17:04:41Z",
-      "updated": "2026-10-09T17:41:01Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.07418v2"
+      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a practical path toward this pursuit through complex orchestration that manages long-horizon experimentation, while recent MLE systems adopt model-directed interaction, allowing models to autonomously organize experiments and adapt optimization strategies based on execution feedback. However, feedback from each experiment reflects several preceding decisions, and a long MLE run contains many such costly experiments. Training must therefore select useful supervision from long interaction trajectories and learn from intermediate outcomes. We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model. We design the Kaggle-MLE Factory to construct executable tasks and an interaction harness for model-directed experimentation. Hierarchical agentic SFT transfers general tool-use and coding capabilities to MLE through outcome-guided supervision. Windowed Interaction RL (WIRL) treats the multi-turn decisions between successive experiment results as an execution window and assigns it a shared outcome-based reward. Asynchronous collection and policy correction support policy updates before the trajectory ends. On MLE-Bench Lite, MLExpert improves the average medal rate of the base model from 37.9% to 72.7%, achieving performance comparable to larger frontier models such as Kimi-K3 and GLM-5.3. Further experiments show that MLExpert improves performance on NatureBench Lite, agent scaffold optimization, and algorithm optimization, suggesting that the learned optimization capability generalizes to other tasks.",
+      "published": "2026-10-15T17:56:32Z",
+      "updated": "2026-10-15T17:56:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22344v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13895v1",
-      "title": "Task Context Shapes Component Roles in Language Models",
+      "id": "http://arxiv.org/abs/2610.22333v1",
+      "title": "Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?",
       "authors": [
-        "Sovesh Mohapatra",
-        "Dani S Bassett"
+        "Trizal Garg",
+        "Sibayan Mitra",
+        "Arya Karanjkar",
+        "Advait Singh",
+        "Jagat Sesh Challa",
+        "Yash Sinha",
+        "Siddharth Mehrotra",
+        "Dhruv Kumar",
+        "Pratham Yogish Maliya"
       ],
-      "summary": "Large language models reuse the same attention heads across tasks, but identifying these shared heads does not explain what they do differently in each task. A natural source of inspiration is task-dependent interactions among shared brain regions, which motivate a network view of language-model computation. Here, we compare fixed model components across tasks using identical graph facts, statements specifying which directed connections are present. We measure how interventions affect attention heads and the activation state in later layers (influence), as well as the answer (importance). Task changes redistribute the influence in five open-weight models spanning four families and 1.5-14 billion parameters. In Gemma-2-9B and Qwen3-14B, an activation edit changes an early internal activation vector and switches which fact the model reads while the written instruction stays fixed. The same heads then respond to different graph facts and influence later components differently. For each prompt, we construct two linear response maps, one before the edit and one after it. Each map predicts a later head's response from a measured change in an earlier head. For a separate factual intervention, the map for the corresponding condition reduces mean squared prediction error by 53.6% in Gemma and 5.0% in Qwen compared with the average of the two maps. These findings show that task context changes both which graph facts the shared components respond to and how their outputs affect later computation. A network account may help explain how models use shared parameters to perform different computations. Measurements of task-dependent influence could also guide interventions intended to alter one behavior while preserving others.",
-      "published": "2026-10-09T17:40:53Z",
-      "updated": "2026-10-09T17:40:53Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13895v1"
+      "summary": "Large language models (LLMs) can often tell when they are being tested. This ability, known as evaluation awareness, can lead models to act more cautiously during safety evaluations than in real use. Existing work has studied evaluation awareness almost entirely in English, although models serve users in many languages. Indic languages are spoken by over a billion people, yet evaluation awareness remains almost entirely unstudied in them. We test four instruction-tuned models from three families in five Indic languages alongside English. A set of cues varies whether the model is told that it is monitored and whether the monitoring is a safety test. Models refuse harmful requests more often when they are told that they are being tested. This increase appears in all four models and all six languages. In Indic languages, refusal of harmful requests rises by 14.4 percentage points on average. The test cue also brings Indic refusal of harmful requests level with English, but raises refusal of benign Indic requests from 6.9% to 11.3%. We release all 47,880 judged responses to support further work. These results suggest that safety evaluations in Indic languages may not reflect how models treat their everyday users.",
+      "published": "2026-10-15T17:53:33Z",
+      "updated": "2026-10-15T17:53:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22333v1"
     },
     {
-      "id": "http://arxiv.org/abs/2601.05500v6",
-      "title": "The Illusion of AI Expertise Under Uncertainty: A Probabilistic Paradigm to Interpret Results Under Ground Truth Variation",
+      "id": "http://arxiv.org/abs/2610.22330v1",
+      "title": "Designing Transformers for Continuous Diffusion Language Models",
       "authors": [
-        "Aparna Elangovan",
-        "Lei Xu",
-        "Mahsa Elyasi",
-        "Ismail Akdulum",
-        "Mehmet Aksakal",
-        "Enes Gurun",
-        "Brian Hur",
-        "Saab Mansour",
-        "Ravid Shwartz Ziv",
-        "Karin Verspoor",
-        "Dan Roth"
+        "Weijian Luo",
+        "Yujian Chen",
+        "Hao Jiang",
+        "Guang Cheng",
+        "Tianyang Hu"
       ],
-      "summary": "Benchmarking the capabilities of AI systems, including Large Language Models (LLMs) and Vision Models, typically ignores the impact of uncertainty in the underlying ground truth answers from experts. This ambiguity is not just limited to human preferences, but is also consequential even in safety critical domains such as medicine where uncertainty is pervasive. In this paper, we introduce a probabilistic paradigm to theoretically explain how high certainty in ground truth answers is almost always necessary for even an expert to achieve high scores. In contrast, in datasets with high variation in ground truth answers, the expert performance drops substantially resulting in almost no difference between a random labeller and an expert. This characteristic also manifests when comparing models, where uncertainty obfuscates differences between poor and high performing models. Therefore, ignoring uncertainty in ground truth evaluation data can result in the misleading conclusion that a non-expert has similar performance to that of an expert. Given ground truth answer variability and commonly used F1 and accuracy metrics, we bring forth a simple and explainable probabilistic coin toss model to estimate expected accuracyand expected F1 and compare the estimated scores with those that experts (human or model) achieve across multiple domains -- including radiology and models such as GPT-5 and Gemini-3. The results lead to the recommendation that stratification by the probability of the ground truth answer becomes critical when expert performance is relatively low. Under stratified evaluation, performance comparison becomes more reliable in high certainty bins, mitigating the effect of the key confounding factor --- uncertainty.",
-      "published": "2026-01-09T03:19:37Z",
-      "updated": "2026-10-09T17:38:00Z",
-      "pdf_url": "https://arxiv.org/pdf/2601.05500v6"
+      "summary": "Continuous diffusion language models (CDLMs) offer an alternative approach to parallel language generation; however, most existing studies directly use transformer architectures from either causal large language models (LLMs) or Diffusion Transformers (DiTs) for image generation, which were not optimized for CDLMs. In this paper, we conduct a systematic study on Transformer architectures for CDLMs and introduce Language Diffusion Transformer (LangDiT), combining feature and query-key normalization, wider noise conditioning, likelihood-shortcut gradient routing and calibration, and confidence-gated training self-conditioning. LangDiT significantly reduces generation perplexity in matched LangFlow comparisons, establishing a new state of the art in continuous language generation across different model formulations. Using LangFlow as a representative CDLM, LangDiT as a plug-and-play backbone leads to a new state-of-the-art model with a generation perplexity (GenPPL) of 21.72 using 1024 NFEs and 44.72 GenPPL using 128 NFEs on the unconditional generation of 1024-token sequences on the OpenWebText dataset. When adapted to Plaid-style CDLM formulations, LangDiT results in a new leading GenPPL of 11.33 using 1024 denoising NFEs, and 27.51 GenPPL using 128 denoising NFEs. These gains are achieved while retaining each model's underlying representation, training objective, and inference sampler, isolating transformer architecture as a fundamental source of improvement. Our study identifies architectural design as an important source of improvement in continuous diffusion language models.",
+      "published": "2026-10-15T17:52:31Z",
+      "updated": "2026-10-15T17:52:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22330v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13885v1",
-      "title": "Necessary conditions for benchmarking next-generation AI in materials discovery",
+      "id": "http://arxiv.org/abs/2610.22324v1",
+      "title": "Training Reasoning Models to Generate Diverse Scientific Ideas",
       "authors": [
-        "Daniel E Widdowson",
-        "Tatiana V Kurlina",
-        "Olga D Anosova",
-        "Vitaliy A Kurlin"
+        "Manya Wadhwa",
+        "Pranav Narayanan Venkit",
+        "Hiroaki Hayashi",
+        "Yu Li",
+        "Tuhin Chakrabarty",
+        "Chien-Sheng Wu"
       ],
-      "summary": "Current AI predicts materials by speeding up energy minimisation and training on large databases. However, scaling data generation prevents manual analysis by domain experts. If novelty is evaluated by chemical compositions or traditional representations in Crystallographic Information Files, or standard structure matchers based on manually chosen thresholds, one can easily generate millions of ``new'' compositions or files without discovering truly novel materials. This paper uses a hierarchy of crystal invariants to continuously trace and quantify structural novelty based on the new mathematical definition of a crystal structure and asymptotic guarantees for invariant descriptors. The invariant-based analysis through cascade computations on a modest computer exposes the unexpected scale of duplication in the world's largest materials databases, shown here in the high-profile case of GNoME datasets. To prevent current ``embarrassment of over-prediction'', we propose necessary conditions for next-generation AI that should be automatically enforced before claiming any new materials.",
-      "published": "2026-10-09T17:30:08Z",
-      "updated": "2026-10-09T17:30:08Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13885v1"
+      "summary": "One of the first steps of a research pipeline is generating ideas. Large Language Models (LLMs) are increasingly used to automate this step, but most of this work optimizes the quality of individual ideas, while overlooking diversity. In our work, we study document-grounded ideation, focusing on increasing the diversity of LLM generated ideas and ensuring they are high quality. Given prior papers, a model must propose a set of ideas that are each high-quality and clearly distinct from one another, while also being grounded in the input documents. To optimize for this, we propose training with a set-level reinforcement learning objective. In our setup, in a single generation, the model writes K structured idea cards grounded in the source papers, and the set is scored jointly, where each idea's quality is weighted by its distance from the ideas written before it. This teaches the model to steer each new idea away from its predecessors. We show that our trained 8B model achieves higher creative utility (a measure combining quality and diversity) than Claude Opus 4.8 and GPT-6 Astra on our contamination-free benchmark. In a pilot human study with four experts, our sets are judged as promising as Claude Opus 4.8's and contain marginally more unique ideas. When a coding agent runs proof-of-concept experiments on the ideas, our model's success@k is comparable to Claude Opus 4.8's, so we see that the added diversity does not cost any executability.",
+      "published": "2026-10-15T17:52:12Z",
+      "updated": "2026-10-15T17:52:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22324v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.07573v3",
-      "title": "PLUTO: An Agentic AI Tool for Interactive Spacecraft Rendezvous Trajectory Design",
+      "id": "http://arxiv.org/abs/2610.22316v1",
+      "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
       "authors": [
-        "Eleanor Brosius",
-        "Yuji Takubo",
-        "Daniele Gammelli",
-        "Simone D'Amico",
-        "Marco Pavone"
+        "Leyang Shen",
+        "Yaxin Gong",
+        "Yang Zhang",
+        "Chenxiao Fan",
+        "Jiakai Wang",
+        "Dong Wang",
+        "Yang Liu",
+        "Fuli Feng",
+        "Chun Kai Ling",
+        "Tat-Seng Chua"
       ],
-      "summary": "Modern space missions require trajectory design methods capable of efficiently adapting to diverse mission objectives and operational constraints. Despite the maturity of non-convex trajectory optimization techniques, their broader adoption remains limited by the substantial domain expertise required to tailor problem formulations across varying mission scenarios. Recent advances in large language model (LLM) reasoning and agentic AI coding capabilities offer a promising pathway to improving the accessibility of advanced trajectory optimization techniques. This paper introduces PLUTO (Plain Language Understanding for Trajectory Optimization), an interactive trajectory design framework that integrates agentic AI coding tools within a sequential convex programming (SCP) architecture. The proposed system maps high-level semantic inputs to well-defined mathematical constraints while preserving a structured representation suitable for SCP. These constraints are processed through an auto-convexification pipeline and incorporated directly into executable optimal control formulations, thereby systematically connecting user intent and trajectory generation. Visual constraint verification and scenario parameterization further support an intuitive environment for trajectory design across a wide range of application scenarios. Within an evaluation of 50 natural-language rendezvous mission prompts spanning 10 constraint types, PLUTO generated a trajectory for every prompt, and 94% of the resulting trajectories satisfied both the quantitative and qualitative requirements of the mission intent. Ultimately, this work explores the potential of agentic AI to bridge the gap between advanced optimization algorithms and engineer-focused trajectory design workflows.",
-      "published": "2026-10-06T01:07:42Z",
-      "updated": "2026-10-09T17:02:05Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.07573v3"
+      "summary": "Large language model (LLM)-based agents and multi-agent systems increasingly tackle complex tasks through long-horizon tool use and inter-agent collaboration. However, these systems are prone to deviating from the overall goal as execution unfolds, which wastes execution resources and leads to undesired outcomes, a failure termed goal drift. In this work, we propose a steering agent that supervises execution on the fly and steers the system back on track when drift occurs. The steering agent observes the execution context, deciding when to intervene with a low-cost fast path and how to intervene with a high-cost slow path. To unlock its steering intelligence, the ability to assess goal drift and generate effective interventions, we jointly train the two paths with reinforcement learning, combining a pairwise ranking objective with group-relative policy optimization (GRPO). Experiments on information-seeking search tasks show that the steering agent provides effective supervision for both single-agent and multi-agent systems, improving their performance and efficiency. The learned steering intelligence generalizes to out-of-domain tasks, transfers to unseen executors, and supports controllable intervention frequency without retraining.",
+      "published": "2026-10-15T17:51:17Z",
+      "updated": "2026-10-15T17:51:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22316v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13823v1",
-      "title": "Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing",
+      "id": "http://arxiv.org/abs/2610.22312v1",
+      "title": "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?",
       "authors": [
-        "Oktie Hassanzadeh",
-        "Dharmashankar Subramanian"
+        "Zixiang Xu",
+        "Zirui Song",
+        "Wanrong Zheng",
+        "Chiyu Zhang",
+        "Yue Huang",
+        "Yuyang Peng",
+        "Kexin Zhang",
+        "Jinkun Chen",
+        "Xiuying Chen",
+        "Xiangliang Zhang",
+        "Yan Liu",
+        "Laurent Itti",
+        "Frank Shyu",
+        "Xiaoqiang Luo",
+        "Sandeep Pandey",
+        "Xi Liu",
+        "Luke Simon",
+        "Xiyang Hu",
+        "Yue Zhao"
       ],
-      "summary": "Semantic query engines ask a large language model (LLM) to judge individual rows, and benchmarks compare these engines on the quality of a few executions at temperature 0. We measure how much another execution changes. We re-execute the text and tabular workloads of SemBench, LRO-Bench, and UDA-Bench through their own harnesses, log every one of 1.2 million model calls, and reanalyze SemBench's published executions. At temperature 0, between 0.07% and 10.2% of rows change their operator output over five executions, depending on the model, and up to 24.0% on one task. Plans amplify these changes exponentially in the number of rows an answer exposes, as a possible-worlds model predicts: on UDA-Bench, a few percent of extracted values change, but about two thirds of the answers do. In SemBench's published results, 21% of text results change quality between executions, including on engines whose plans are deterministic. Several per-query system comparisons, and 16 of 28 tests of LRO-Bench's implementation recommendations, are not settled by the executions the benchmarks run. Changing rows are rows on which models disagree with each other; identical requests within one execution disagree as often as across executions; and one execution's decision margin or reasoning length predicts which rows change. Voting reduces the variance but does not remove it, and a calibrated cascade keeps its guarantee while the rows it returns change. We derive reporting rules for benchmarks and design rules for engines.",
-      "published": "2026-10-09T16:34:13Z",
-      "updated": "2026-10-09T16:34:13Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13823v1"
+      "summary": "Spatial instructions describe how to move objects, transform regions, or modify their surroundings. When several operations are applied in sequence, each acts on a configuration shaped by earlier changes. How accurately can large language models (LLMs) predict the resulting spatial state? We introduce Grid-Bench, an executable benchmark in which eight families of operations transform discrete worlds represented as two-, three-, and four-dimensional grids. Given an initial grid, explicit rules, and an event history expressed as text, a model predicts the complete final grid. Reference execution makes every predicted value checkable, supporting comparisons across spatial operations, history lengths, and workloads. Evaluating six LLMs shows that complete-state accuracy falls sharply as histories grow, with substantial divergence among models that perform similarly on single events. Models with similar exact-match accuracy can nevertheless differ substantially in the number of incorrect cells on shared instances. Even over long histories, some models recover many correct changes beyond what copying the initial state would yield. Grid-Bench makes both complete recovery and these differences in returned states directly measurable across a range of spatial conditions.",
+      "published": "2026-10-15T17:50:57Z",
+      "updated": "2026-10-15T17:50:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22312v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13811v1",
-      "title": "QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code",
+      "id": "http://arxiv.org/abs/2610.22298v1",
+      "title": "AI Consilium: a Benchmark of LLM Clinical Multidisciplinary Second Opinions",
       "authors": [
-        "Meriem Terki",
-        "Nouhaila Innan",
-        "Minghao Shao",
-        "Muhammad Kashif",
-        "Alberto Marchisio",
-        "Muhammad Shafique"
+        "Alexey A. Bokov",
+        "Ivan I. Panin",
+        "Nikolay B. Nechaev",
+        "Mikhail Yu. Valkov",
+        "Valeria Yu. Chernina",
+        "Natalia Gombolevskaya",
+        "Ayyaz Hussain",
+        "Vladimir M. Agafonov",
+        "Victor A. Gombolevskiy",
+        "Aleksandr V. Nesterov",
+        "Iaroslav R. Bespalov",
+        "Ivan V. Oseledets",
+        "Dmitry V. Dylov"
       ],
-      "summary": "Large language models (LLMs) have shown strong results in classical code generation and are increasingly used to write the unit tests that safeguard that code. Whether they can do the same for quantum software is less clear, because quantum programs are probabilistic, depend on numerical tolerances, and are judged by domain-specific checkers, so a well-formed test can still disagree with the benchmark's verdict. Existing quantum benchmarks measure whether a model produces a correct solution, but not whether its tests can distinguish correct implementations from faulty ones. We introduce QTestBench, a framework that evaluates LLM-generated quantum test suites against independent benchmark checkers, never treating the tests themselves as ground truth. For each task, QTestBench prompts models to produce syntactic, semantic, and behavioral tests, injects candidate solutions at runtime, and compares each test verdict with the checker's label under three validation cohorts, each answering a distinct diagnostic question. We benchmark five LLMs on eight PennyLane QHack challenges and ten Qiskit HumanEval tasks. Generated suites almost always execute, but discrimination lags behind: the best generator reaches a test quality of 0.71 on QHack and 0.34 on Qiskit HumanEval, so executability alone overstates test quality. Oracle-verified synthetic mutants stabilize bug-detection estimates when natural faulty solutions are scarce, as on three of ten Qiskit tasks that yield none. QTestBench offers a reproducible, cross-framework benchmark for the trustworthiness of LLM-generated quantum tests.",
-      "published": "2026-10-09T16:23:46Z",
-      "updated": "2026-10-09T16:23:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13811v1"
+      "summary": "Large language models (LLMs) can generate differential diagnoses for complex cases, but a useful second opinion must also be factually grounded, clinically coherent, actionable, and safe. We developed a multidimensional benchmark using 300 diagnostically resolved NEJM--MedQA cases: 110 for physician reference ratings and Judge calibration and 190 for held-out evaluation. Eight single-model pipelines generated independent role-specific opinions and interactive-consilium reports under free-form and structured clinical-reasoning conditions. A physician-calibrated LLM Judge evaluated 3,040 final reports and the corresponding structured primary-role outputs. Model identity separated report quality more strongly than response format. Structured final reports had higher overall mean scores in seven of eight model pipelines, with their clearest advantage in management (2.740 vs. 2.436). Compared with the structured pre-consilium primary-role opinion, the complete structured synthesis had higher pooled scores across all five shared criteria, with the largest increases in problem prioritization, factual grounding, and reasoning coherence. GPT-5.6-Sol led every evaluated component and reached consensus in the fewest review rounds. These findings show that the benchmark can distinguish model capability, the contribution of multidisciplinary synthesis, criterion-specific effects of response structure, deliberation dynamics, and inference requirements within one common-case evaluation.",
+      "published": "2026-10-15T17:46:37Z",
+      "updated": "2026-10-15T17:46:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22298v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13810v1",
-      "title": "Tracing and Taming Hallucinated Terms via Subsequence-Association Filtering and Breadth-Aware Selection for LLM Query Expansion",
+      "id": "http://arxiv.org/abs/2610.22297v1",
+      "title": "Private Retrieval Augmented Generation via Random Projection",
       "authors": [
-        "Amit Kumar Jaiswal",
-        "Sagar Uprety",
-        "Prayag Tiwari"
-      ],
-      "summary": "Large language models (LLMs) are now a standard source of query expansion terms but they hallucinate. They inject non existent entities and off-topic terms that add ranking noise and can hurt strong retrievers. Existing remedies such as corpus grounding, mutual verification and preference alignment treat hallucinated terms as an undifferentiated nuisance to be filtered by agreement heuristics, without a mechanistic account of why a given term appears or a principled criterion for how many terms to keep. We propose Subsequence-Association Filtered, breadth-aware query expansion (SAFE-QE), a training-free, retriever agnostic method that draws on the subsequence-association account of hallucination. We score each candidate expansion term by its corpus conditioned cross-context reproducibility, terms that reappear under randomised query contexts yet lack support in the pseudo-relevant set are flagged as products of dominant hallucinatory associations and down-weighted. Drawing on the characterisation of language generation as a trade-off between consistency (no hallucination) and breadth (coverage), we cast term selection as constrained coverage maximisation over the pseudo-relevant set, keeping a set that is approximately broad but consistent and stable across resampling. We also introduce the Hallucinated Expansion Term Rate, a query side faithfulness metric that counts injected expansion terms no relevant document supports. We evaluate our approach on benchmarked TREC and BEIR collections. Our SAFE-QE is statistically indistinguishable from generative and corpus-steered expansion on nDCG@10 while injecting fewer unsupported terms 4.3 per query against 27.8 for Query2doc and 57.5 for HyDE and on a strong learned sparse retriever, where every expansion method regresses. Faithfulness is therefore available at no measurable cost in ranking quality.",
-      "published": "2026-10-09T16:22:16Z",
-      "updated": "2026-10-09T16:22:16Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13810v1"
-    },
-    {
-      "id": "http://arxiv.org/abs/2509.00303v5",
-      "title": "Access Paths for Efficient Ordering with Large Language Models",
-      "authors": [
-        "Fuheng Zhao",
-        "Jiayue Chen",
-        "Yiming Pan",
+        "Dixi Yao",
         "Tahseen Rabbani",
-        "Sohaib",
-        "Divyakant Agrawal",
-        "Amr El Abbadi",
-        "Paritosh Aggarwal",
-        "Anupam Datta",
-        "Dimitris Tsirogiannis"
+        "Tian Li"
       ],
-      "summary": "In this work, we present the \\texttt{LLM ORDER BY} semantic operator as a logical abstraction and conduct a systematic study of its physical implementations. First, we propose several improvements to existing semantic sorting algorithms and introduce a semantic-aware external merge sort algorithm. Our extensive evaluation reveals that no single implementation offers universal optimality on all datasets. From our evaluations, we observe a general scaling relationship between sorting cost and the ordering quality for comparison-based algorithms. Building on these insights, we design a budget-aware optimizer that utilizes heuristic rules, LLM-as-Judge evaluation, and consensus aggregation to dynamically select the near-optimal access path for LLM ORDER BY. In our extensive evaluations, our optimizer consistently achieves ranking accuracy on par with or superior to the best static methods across all benchmarks. We believe that this work provides foundational insights into the principled optimization of semantic operators essential for building robust, large-scale LLM-powered analytic systems.",
-      "published": "2025-08-30T01:44:36Z",
-      "updated": "2026-10-09T15:39:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2509.00303v5"
+      "summary": "Retrieval-Augmented Generation (RAG) enhances the capabilities of large language models (LLMs) by querying external structured knowledge. However, it can also introduce privacy risks by leaking sensitive information from the retrieval datastore. We propose a simple method to preserve datastore privacy in RAG systems via random projection. By applying the same projection to both datastore embeddings and query embeddings, our method provably preserves semantic similarity between queries and retrieved items while substantially mitigating data extraction attacks. Across multiple RAG architectures and datasets, we show that this lightweight approach achieves superior retrieval and generation performance compared to prior methods which leverage formal differential privacy (DP) guarantees, while exhibiting comparable empirical privacy under strong attack models. Our results for the first time suggest that random projection can serve as a competitive and practical baseline for privacy-preserving RAG systems.",
+      "published": "2026-10-15T17:45:51Z",
+      "updated": "2026-10-15T17:45:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22297v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.13721v1",
-      "title": "Artificial Intelligence-Assisted Systems Biology Reconstruction of Diabetic Bone Marrow Dysfunction",
+      "id": "http://arxiv.org/abs/2610.22293v1",
+      "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
       "authors": [
-        "Paolo Madeddu"
+        "Arnav Chavan",
+        "Kusha Sareen",
+        "Rishabh Tiwari",
+        "Abhranil Chandra",
+        "Johan Obando-Ceron",
+        "Kurt Keutzer",
+        "Scott Niekum",
+        "Inderjit S Dhillon",
+        "Devvrit Khatri"
       ],
-      "summary": "This study aimed to reconstruct a regulatory network suitable for systems biology analysis of diabetic bone marrow. Three artificial intelligence large language models independently analysed 18 Discovery and 43 Validation publications. Investigator guided integration produced a frozen network of 62 biological entities and 79 directed interactions. Open source software Gephi created a visual representation before and after main node removal. The plausibility of the reconstructed interactions was tested against independent curated knowledge resources, including the Kyoto Encyclopedia of Genes and Genomes, connectomeDB2025, Reactome, and Gene Ontology. Further analysis examined physiological correspondence, missing edge sensitivity, and graph constrained interrogation. Functional modules encompassed endothelial perivascular support, stem cell retention and trafficking, neural circadian regulation, inflammatory myelopoiesis, metabolic stress, and epigenetic regulation. They intersected through shared effects on endothelial function and stem cell behaviour. The endothelium was the principal connecting node. Computational removal of the endothelial node increased network fragmentation and diameter, while average directed path length remained essentially unchanged. External resources supported 60/79 interactions (75.9%); 19 remained unresolved, with none classified as contradictory. Complementary assessments supported biological plausibility and faithful interrogation of the reconstructed network. This investigator led dialogue with artificial intelligence provides a foundation for a systems level understanding of diabetic bone marrow dysfunction. The approach may facilitate the generation of testable hypotheses and the identification of mechanistic targets for coordinated restoration of disrupted niche interactions.",
-      "published": "2026-10-09T15:19:24Z",
-      "updated": "2026-10-09T15:19:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.13721v1"
+      "summary": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs. Recent works connect forgetting to how far, and along which directions, fine-tuning moves the weights. On-policy methods such as reinforcement learning and on-policy distillation avoid updating the principal singular directions of weight matrices and thus forget less. In contrast, SFT concentrates updates along these directions and is susceptible to catastrophic forgetting. In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions. SST is optimizer-agnostic and composes well with fine-tuning recipes including SFT and self-distillation. SST combines tight subspace protection, dense gradient estimation, and a simple refresh mechanism, enabling stronger learning than prior orthogonal fine-tuning methods. With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance. This behavior strengthens with model and data size and nearly eliminates forgetting in the large-model regime. SST also keeps the model close to its base distribution, inducing $2$--$4\\times$ less KL drift than the baseline recipes. Overall, SST advances the learning--forgetting Pareto frontier, making it a practical default for fine-tuning pre-trained language models.",
+      "published": "2026-10-15T17:44:43Z",
+      "updated": "2026-10-15T17:44:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22293v1"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.22292v1",
+      "title": "CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty",
+      "authors": [
+        "Yuan-Chen Chang",
+        "Niklas Herbster",
+        "Gauthier Gidel",
+        "Tommaso Tosato"
+      ],
+      "summary": "Large language models (LLMs) are becoming prevalent in scenarios where honesty is critical. However, despite alignment training, these models still exhibit dishonest behaviour, such as outputting claims that contradict some knowledge or are not supported by what is accessible in context. We introduce Continuous Adversarial Training for Consistent Honesty (CATCH), inspired by a method originally developed to robustly refuse harmful queries. CATCH trains the model towards an honest answer and away from a dishonest one while maintaining the model's capabilities. We evaluate two architectures (Llama-3.3-70B-Instruct and Qwen3-3.6-27B). We show that trained with only hundreds of targets built from self-reporting scenarios, CATCH learns an honest behaviour that robustly generalizes and transfers across distinct benchmarks. It consistently reduces dishonesty under pressure on MASK, increases confessions in the multi-agent game of Among Us, and improves the discovery rates of the model's hidden behaviours in AuditBench. We show that CATCH outperforms prompting and supervised fine-tuning in improving honesty, and it is on par with state-of-the-art honesty activation steering. However, CATCH surpasses honesty steering in maintaining utility, thanks to a novel choice of utility data.",
+      "published": "2026-10-15T17:43:47Z",
+      "updated": "2026-10-15T17:43:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.22292v1"
     }
   ]
 }
