@@ -1,190 +1,178 @@
 {
-  "generated_at_utc": "2026-10-23T03:29:06Z",
+  "generated_at_utc": "2026-11-02T04:34:42Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2610.31662v1",
-      "title": "Reliable AI-Assisted Decisions via Selective Auditing",
+      "id": "http://arxiv.org/abs/2610.42149v1",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
       "authors": [
-        "Isaac Gibbs",
-        "Elise L. Han",
-        "Ryan J. Tibshirani",
-        "Tijana Zrnic"
+        "Byungwoo Jeon",
+        "Yoonwoo Jeong",
+        "Hyunseok Lee",
+        "Minsu Cho",
+        "Jinwoo Shin"
       ],
-      "summary": "We consider online monitoring of an AI system that produces a sequence of decisions. At each round, the system outputs a proposed decision together with a confidence score estimating the trustworthiness of the decision. The decision and confidence score need not be produced by the same model: for example, one agent may propose a decision, while a separate verifier agent evaluates it and outputs a correctness or safety score. Based on this information, we must decide whether to accept the AI decision automatically or consult an expert, such as a human auditor, who reviews the proposal and either accepts or corrects it. We formulate this task as an online constrained optimization problem in which the goal is to minimize the frequency of expert auditing while guaranteeing that the fraction of AI errors that go unaudited stays below a user-defined threshold. We derive a family of algorithms with provable error-control guarantees with no assumptions, including a method that is optimally efficient: it asymptotically attains the best achievable auditing rate for both adversarial and i.i.d. data streams. Experiments on screening harmful requests to large language models, qualitative text annotation, and data labeling show that our methods achieve valid error control in practice while substantially reducing the need for human auditing compared to baselines.",
-      "published": "2026-10-22T17:59:22Z",
-      "updated": "2026-10-22T17:59:22Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31662v1"
+      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+      "published": "2026-10-30T17:59:43Z",
+      "updated": "2026-10-30T17:59:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.42149v1"
     },
     {
-      "id": "http://arxiv.org/abs/2512.01775v2",
-      "title": "How Does RL Post-training Induce Skill Composition? A Case Study on Countdown",
+      "id": "http://arxiv.org/abs/2610.39060v2",
+      "title": "Tracing the Influence of Retrieved Literature on Scientific Ideation in LLMs",
       "authors": [
-        "Simon Park",
-        "Simran Kaur",
-        "Sanjeev Arora"
+        "Zhipin Wang",
+        "Koel Dutta Chowdhury",
+        "Christoph Leiter",
+        "Steffen Eger"
       ],
-      "summary": "While reinforcement learning (RL) successfully enhances reasoning in large language models, its role in fostering compositional generalization (the ability to synthesize novel skills from known components) is often conflated with mere length generalization. To this end, we study what RL post-training teaches about skill composition and how the composition structure affects the skill transfer. We focus on the Countdown task (given n numbers and a target, form an expression that evaluates to the target) and analyze model solutions as expression trees, where each subtree corresponds to a reusable subtask and thus can be viewed as a \"skill.\" Tracking tree shapes and their success rates over training, we find: (i) out-of-distribution (OOD) generalization to larger n and to unseen tree shapes, indicating compositional reuse of subtasks; (ii) the order of skill acquisition depends upon the composition structure---models master shallow balanced trees (workload is balanced between subtasks) before deep unbalanced ones, with persistent fragility on right-heavy structures for a fixed composition depth. Our diagnostic reveals what is learned, in what order, and where generalization fails, clarifying how RL-only post-training induces OOD generalization beyond what standard metrics such as pass@k reveal. To study the implications of our findings for real-world tasks, we present a preliminary study on formal theorem proving.",
-      "published": "2025-12-01T15:17:16Z",
-      "updated": "2026-10-22T17:59:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.01775v2"
+      "summary": "Large language models (LLMs) are increasingly used to generate research ideas from scientific literature. Existing systems combine literature retrieval with search, generation, and refinement, making it difficult to determine how the retrieval strategy itself shapes the ideas generated. We isolate this contribution by comparing five retrieval strategies and a No Literature baseline under a shared generation protocol, using 45,000 ideas across 15 machine learning topics and ten open-weight models. Relative to no literature basline, all five retrieval strategies reduce diversity among ideas generated from the same set of papers by $5.6\\%$--$17.9\\%$, while most increase diversity by $10.2\\%$--$18.1\\%$ when ideas from different sets are pooled. Effects on idea quality and novelty are modest on average but vary across topics. We further apply a JSD-based attribution method to trace the influence of individual input papers on each idea's motivation, core idea, approach, and validation. In $79.3\\%$ of ideas, only one or two distinct papers receive the highest attribution scores across these four parts. These leading sources often recur across ideas generated from the same set of papers, and groups with more varied source attribution contain more diverse ideas ($r=0.70$). These findings motivate various sets of literature and the use of attribution to guide the choice of sources for subsequent ideas.",
+      "published": "2026-10-28T23:45:23Z",
+      "updated": "2026-10-30T17:56:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.39060v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31657v1",
-      "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+      "id": "http://arxiv.org/abs/2610.42121v1",
+      "title": "Where ADS Crashes Differ: A Harmonized Comparison Against Human Baselines",
       "authors": [
-        "Sachin Gupta"
+        "Doyeon Jang"
       ],
-      "summary": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a public 47,837-ticket, eight-class corpus, we compare four trained non-LLM classifiers with four large language models under zero- and few-shot prompting. Under the illustrative cost model (c_ok, c_triage, c_wrong) = (0, 1, 5), TF-IDF with logistic regression and a threshold of 0.60 selected on calibration reduces test cost from 0.763 to 0.472, a 38.1% relative reduction (paired ratio-bootstrap 95% CI [35.7%, 40.4%]), while lowering wrong routes from 15.3% to 3.5%. Frozen calibration-selected policies also beat both always-route and always-defer on held-out test data in 14 of 16 settings in a post-hoc cost-parameter analysis. The strongest prompted configuration reaches 0.477 accuracy on a stratified 1,000-ticket test subset, versus 0.879 for fine-tuned DistilBERT on the same tickets. Isotonic lowers expected calibration error without reliably improving discrimination: GPT-4o-mini few-shot has one confidence value before and after recalibration and correctness AUROC 0.500. We therefore report correctness AUROC and tie-aware risk-coverage area alongside ECE. At the analytically derived break-even probability 0.80, seven prompted configurations defer all tickets; Haiku few-shot routes only 19/1,000. An LLM-only agreement control and margin/entropy rejection baselines further separate calibration from discrimination. The findings are scoped to this dataset, prompt design, model endpoints, and illustrative costs; the work is an evaluation framework, not a new abstention algorithm or universal deployment certification.",
-      "published": "2026-10-22T17:58:52Z",
-      "updated": "2026-10-22T17:58:52Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31657v1"
+      "summary": "Crash-rate comparisons between automated driving systems (ADS) and human drivers require an exposure denominator that only a few operators publish. We instead ask a composition question: given a crash, does the mix of crash types differ between ADS and human-driven vehicles? The question needs no mileage and can therefore cover every ADS operator. We assemble the NHTSA Standing General Order (SGO) ADS incident files across both file generations into 2,450 distinct in-scope incidents (2021-2026), of which 828 fall within the 2021-2024 window covered by the Crash Report Sampling System (CRSS), the national police-reported human comparator. A schema-constrained large language model (LLM) codes each SGO narrative into the CRSS crash-type taxonomy. Because SGO compels reporting far below the police-reporting threshold, we bracket reportability with an objective severity floor and a reasonable-person rubric, and claim a difference only where it survives both. Two composition differences hold under every reportability definition, tow definition and weighting of the human side, and under both definitions of driverless operation: turn-across-path crashes are under-represented among ADS crashes (0.23-0.46x the CRSS share under the primary driverless definition) and so are single-vehicle crashes (0.19-0.56x). In severity-floor rear-end crashes the ADS vehicle is the striking party at a quasi-induced-exposure ratio of 0.121 (95% CI [0.05, 0.23]) against a human baseline of 1.000. If the ADS vehicle is also struck more often than its exposure implies, this ratio overstates the ADS-human difference. We also document three pitfalls in the federal data: an operator-specific coding of driverless operation, a tow-away criterion confounded by fleet recovery practice, and an occupancy confound that accounts for about 42% of the apparent ADS-human severity gap.",
+      "published": "2026-10-30T17:53:28Z",
+      "updated": "2026-10-30T17:53:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.42121v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31614v1",
-      "title": "The Critical 2D KPZ Process",
+      "id": "http://arxiv.org/abs/2512.12063v2",
+      "title": "Instruction-Tuning Open-Weight Language Models for BPMN Model Generation",
       "authors": [
-        "Quentin Berger",
-        "Francesco Caravenna",
-        "Jeremy Clark",
-        "Alexander Dunlap",
-        "Yu Gu",
-        "Ziyang Liu",
-        "Shuta Nakajima",
-        "Rongfeng Sun",
-        "Li-Cheng Tsai",
-        "Zuodi Xie",
-        "Nikos Zygouras"
+        "Gökberk Çelikmasat",
+        "Atay Özgövde",
+        "Fatma Başak Aydemir"
       ],
-      "summary": "This work constructs a non-trivial solution to the ill-defined two-dimensional Kardar-Parisi-Zhang (KPZ) equation at criticality: a distribution-valued stochastic process on the plane, which we call the Critical 2D KPZ Process. It arises as the limit in law of centred log partition functions of two-dimensional Gaussian directed polymers at criticality, viewed as discretised KPZ solutions. It is also a measurable function of the Critical 2D Stochastic Heat Flow (SHF) via a renormalised Cole-Hopf transformation, obtained as the limit of the centred logarithm of the spatially mollified SHF as the smoothing is removed. The Critical 2D KPZ process is non-Gaussian and its covariance displays a log-log blow-up near the diagonal. Gaussian fluctuations emerge when averaging on shrinking spatial scales. The results presented here were obtained through extensive interactions with generative AI (ChatGPT 5.5, 5.6 and 6); see Appendix C for more details. The proof builds on key recent and older advances in our field, combined in novel ways with substantial AI input. We view this manuscript as a \"community project\" that represents more than a decade's collective effort. We have worked on making the presentation as accessible as possible, highlighting the main ideas and their relations to the literature.",
-      "published": "2026-10-22T17:40:36Z",
-      "updated": "2026-10-22T17:40:36Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31614v1"
+      "summary": "Domain models are central to software engineering, as they enable a shared understanding, guide implementation, and support automated analyses and model-driven development. Yet, despite these benefits, practitioners often skip modeling because it is time-consuming and demands scarce expertise. We address this barrier by investigating whether open-weight large language models, adapted via instruction tuning, can generate high-quality BPMN process models directly from natural language descriptions in a cost-effective and privacy-preserving way. We introduce InstruBPM, a reproducible approach that prepares paired text-diagram data and instruction tunes an open source large language model with parameter-efficient fine-tuning and quantization for on-prem deployment. We evaluate the tuned model through complementary perspectives: (i) text/code similarity using BLEU, ROUGE-L, and METEOR, (ii) structural fidelity using Relative Graph Edit Distance, (iii) guidelines conformance using external tool checks, and (iv) a small expert review. Using a curated subset of a multi-domain BPMN dataset, we compare the tuned model with untuned open-weight baselines and strong proprietary models under consistent prompting regimes. Our compact tuned model outperforms all baselines across sequence and structural metrics while requiring substantially fewer resources; guideline analysis and expert feedback further indicate that the generated diagrams largely follow BPMN best practices and are useful starting points that reduce modeling effort. Overall, instruction tuning improves structural accuracy and robustness compared to untuned baselines and reduces reliance on heavy prompt scaffolding. We publicly share the trained models and scripts to support reproducibility and further research.",
+      "published": "2025-12-12T22:07:51Z",
+      "updated": "2026-10-30T17:52:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.12063v2"
     },
     {
-      "id": "http://arxiv.org/abs/2602.16429v3",
-      "title": "TabAgent: Distilling LLM Agent Components into Cheap Classifiers",
+      "id": "http://arxiv.org/abs/2610.42116v1",
+      "title": "ACCT: Asymmetric Cross-LLM Context Transfer",
       "authors": [
-        "Ido Levy",
-        "Segev Shlomov",
-        "Avi Yaeli",
-        "Nir Mashkif",
-        "Asaf Adi",
-        "Yinon Goldshtein",
-        "Eilam Shapira",
-        "Leshem Choshen"
+        "Yuzhe Liu",
+        "Haolin Tian",
+        "Tonghan Wang"
       ],
-      "summary": "Agentic systems, AI architectures that autonomously execute multi-step workflows to achieve complex goals, are often built using repeated large language model (LLM) calls for closed-set decision tasks such as routing, shortlisting, gating, and verification. While convenient, this design makes deployments slow and expensive due to cumulative latency and token usage. We propose TabAgent, a framework for replacing generative decision components in closed-set selection tasks with a compact textual-tabular classifier trained on execution traces. TabAgent (i) extracts structured schema, state, and dependency features from trajectories (TabSchema), (ii) augments coverage with schema-aligned synthetic supervision (TabSynth), and (iii) scores candidates with a lightweight classifier (TabHead). On the long-horizon AppWorld benchmark, TabAgent maintains task-level success while eliminating shortlist-time LLM calls, reducing latency by approximately 95% and inference cost by 85-91%. Beyond tool shortlisting, TabAgent generalizes to other agentic decision heads, establishing a paradigm for learned discriminative replacements of generative bottlenecks in production agent architectures.",
-      "published": "2026-02-18T13:01:17Z",
-      "updated": "2026-10-22T17:39:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.16429v3"
+      "summary": "In real-world deployments, large language model (LLM) systems are increasingly evolving from single-model invocation toward heterogeneous deployments in which different models are dynamically invoked for inference. When the same context is reused across models, however, each newly selected target model typically has to process it again, repeatedly incurring substantial computational costs. Therefore, we propose ACCT (Asymmetric Cross-LLM Context Transfer), which targets KV cache transfer between models of different scales within the same model family. ACCT transforms the KV cache produced by a source model into sparse KV states that can be directly consumed by a target model, thereby enabling cross-model reuse of context computation and decoupling context computation from downstream inference. ACCT consists of three lightweight components: the Cartographer identifies query-relevant context tokens for each target layer and KV head; the Allocator determines how many context tokens each target layer and KV head retains under a shared total KV budget; and the Compiler transforms selected source KV into sparse target KV. The target model can therefore perform inference using the transferred KV without reprocessing the original context. We evaluate ACCT in two complementary settings comprising five general-capability benchmarks and six highly context-dependent tasks. Experiments show that ACCT matches or exceeds the target model's original inference performance even when reducing the KV cache size by 75%. At a context length of approximately 19K tokens, ACCT's KV conversion achieves a 6.5-21.2 times speedup over target context prefill. These results demonstrate the feasibility of transferring context computation across models under a limited KV budget.",
+      "published": "2026-10-30T17:50:49Z",
+      "updated": "2026-10-30T17:50:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.42116v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31600v1",
-      "title": "SympFormer: Inertial Attention Blocks from Damped Hamiltonian Dynamics on Spaces of Probability Measures",
+      "id": "http://arxiv.org/abs/2610.42112v1",
+      "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
       "authors": [
-        "Viktor Stein",
-        "Levin Maier",
-        "Wuchen Li",
-        "Gabriele Steidl"
+        "Leon Lufkin",
+        "Cutter Dawes",
+        "Alexander Speicher",
+        "Kamesh Krishnamurthy",
+        "Tomás Figliolia",
+        "Beren Millidge"
       ],
-      "summary": "The attention mechanism underpins modern large language models, yet their dynamics remain only partially understood. Recent perspectives interpret attention blocks as interacting particle systems, whose mean-field limits correspond to gradient flows of energy functionals on spaces of probability densities on $\\mathbb R^d$ equipped with Wasserstein-type metrics. We extend this viewpoint by deriving accelerated attention blocks from inertial, Nesterov-type damped Hamiltonian dynamics on these density spaces, developing the geometry and differential calculus needed to make the construction rigorous. In particular, we introduce a local-mobility geometry for the Otto-Wasserstein and softmax-Wasserstein settings, and a quotient Stein geometry that resolves the degeneracy of the linear-attention kernel to yield a well-defined metric and differential calculus. We provide rigorous foundations when softmax attention admits a gradient-flow formulation and when its inertial counterpart admits a damped Hamiltonian on explicitly characterized domains. For linear attention, we obtain a finite-dimensional solution theory with sharp conditions for global existence versus finite-time second-moment blow-up. We further prove a quantitative link between continuous moment blow-up and the discrete-layer depth at which token norms cross a prescribed threshold. Finally, motivated by the finite-token geometry, we propose geometric corrections to token and momentum updates. In decoder-only, nanoGPT-style experiments on TinyStories and OpenWebText, these corrections lower validation negative log-likelihood on next-token prediction relative to momentum-only controls.",
-      "published": "2026-10-22T17:32:11Z",
-      "updated": "2026-10-22T17:32:11Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31600v1"
+      "summary": "The quadratic scaling of attention is a fundamental bottleneck limiting the long-context capabilities of large language models (LLMs). A variety of approaches have attempted to circumvent this, but they either fail to match attention's expressiveness (e.g., sliding-window or linear attention variants with fixed-size state) or only achieve constant-factor speedups (e.g., sparse attention methods whose indexers themselves scale quadratically). In this paper, we derive an asymptotically subquadratic sparse attention method based on a hierarchical, tree-structured indexer, which we call Zyphra Hierarchical Attention (ZHA). ZHA constructs a tree of recursively compressed key summaries over the KV cache, which future queries traverse from the top down to retrieve a sparse subset of keys. Crucially, by iteratively growing the tree's depth, the total cost including routing and final attention grows sublinearly in sequence length, resulting in overall subquadratic (but superlinear) scaling for attention. We demonstrate that ZHA can be cheaply applied to existing pretrained models with only a short KL distillation training stage over a few billion tokens, and maintains performance on long-context retrieval and challenging reasoning, mathematical, and agentic coding evaluation tasks. Moreover, we show that our method is highly robust to tree geometry including very deep trees of up to 6 levels. Finally, we develop a detailed performance model and show that our approach scales subquadratically, dramatically outperforms competing methods beyond 1 million context, and ultimately has the potential to extend effective context windows to the hundreds of millions or billions of tokens.",
+      "published": "2026-10-30T17:48:37Z",
+      "updated": "2026-10-30T17:48:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.42112v1"
     },
     {
-      "id": "http://arxiv.org/abs/2608.09930v2",
-      "title": "Beyond Naturalness: Probing Automated Text-To-Speech Evaluators on Linguistically Grounded Dimensions",
+      "id": "http://arxiv.org/abs/2610.15620v2",
+      "title": "From Stages to States: Unified Iterative Reasoning for MLLMs",
       "authors": [
-        "Oluwanifemi Bamgbose",
-        "Jash Shah",
-        "Simon Rosen",
-        "Lindsay Devon Brin",
-        "Hoang H Nguyen",
-        "Anke Koelzer",
-        "Rachel Hansen",
-        "Tara Bogavelli",
-        "Fanny Riols"
+        "Chuang Yu",
+        "Xuefei Ma",
+        "Yuanhao Feng",
+        "Wuxiong Zeng",
+        "Bo Wang",
+        "Minghong Cai",
+        "Dongming Wu",
+        "Fei Zhou",
+        "Chen Tang",
+        "Wenwen Tong",
+        "Lewei Lu",
+        "Xiangyu Yue"
       ],
-      "summary": "Automated Text-to-Speech (TTS) evaluation methods (Mean Opinion Score (MOS) predictors and Audio Large Language Model (Audio-LLM) judges) are expected to reflect human perception, yet it is unclear how well they capture the distinct aspects of speech that listeners actually perceive. We deconstruct \"naturalness\" into a linguistically grounded annotation schema spanning 10 distinct perceptual dimensions, and use it to construct the first dimension-level meta-evaluation benchmark for TTS, comprising 860 utterances annotated by trained linguist raters. Results from benchmarking four MOS predictors and four Audio-LLM judges reveal that MOS predictors are more sensitive to acoustic signal-level properties at the prosodic and paralinguistic levels, while Audio-LLM judges show selective, prompt-dependent detection that favors word-level errors and does not generalize across all dimensions. Neither class reliably captures a breadth of linguistically structured, human-perceptible speech errors. Our dataset, annotation schema, and evaluation code are publicly released to support more targeted and interpretable TTS evaluation.",
-      "published": "2026-08-10T17:59:51Z",
-      "updated": "2026-10-22T17:31:03Z",
-      "pdf_url": "https://arxiv.org/pdf/2608.09930v2"
+      "summary": "Multimodal Chain-of-Thought (MCoT) substantially enhances the complex reasoning capabilities of Multimodal Large Language Models (MLLMs) by explicitly modeling intermediate reasoning processes. However, most learning-based MCoT methods follow a stage-centric paradigm, where different reasoning behaviors are assigned to predefined stages and optimized separately. This results in fragmented reasoning and a training-inference reasoning-state gap. To address these limitations, we propose ReState, a unified iterative reasoning framework that reformulates multimodal reasoning from a stage-driven pipeline into a state-driven dynamic process. It comprises two complementary components: Unified Reasoning State Modeling (URSM) and Closed-Loop Reasoning-State Learning (CRSL). URSM unifies reasoning construction, correct reasoning preservation, and erroneous reasoning correction as reasoning-state transitions within a shared state space, enabling these heterogeneous reasoning behaviors to be learned jointly. CRSL further incorporates self-generated historical reasoning states during training and recursively updates the current state during inference, thereby mitigating the reasoning-state gap and enabling iterative self-refinement without requiring an additional reflection module, critic, or independent correction stage. Furthermore, we construct VersaCoT-10K, a high-quality CoT dataset spanning eight visual reasoning domains, which provides diverse supervision for multi-domain reasoning and reasoning-state refinement. Extensive experiments demonstrate that ReState exhibits strong adaptability across different MLLM backbones and achieves strong performance on multiple public reasoning benchmarks, supporting the shift from stage-centric reasoning toward state-centric reasoning. Our data and code are available at https://restate-project.github.io",
+      "published": "2026-10-11T13:46:43Z",
+      "updated": "2026-10-30T17:40:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.15620v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31588v1",
-      "title": "VERA: A Responsible AI Dashboard for Assessing LLM Deployments in Light of the EU AI Act",
+      "id": "http://arxiv.org/abs/2610.37826v2",
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
       "authors": [
-        "Robin Quériaux",
-        "Solveig Bachellery",
-        "Léa Déléris",
-        "Saurabhsingh Rajput",
-        "Mariam Barry",
-        "Tushar Sharma",
-        "Jérôme Lebecq"
+        "Dingyi Kang",
+        "Bingzhe Li"
       ],
-      "summary": "Institutions that deploy large language models in regulated settings often need technical evidence of responsible AI practices before approving a deployment. COMPL-AI provides a technical interpretation of the EU AI Act that organises this evidence under six principle groups and eighteen technical requirements, twelve of which current benchmarks can measure. The benchmark suites that produce this evidence are typically operated from a command line, while the staff who approve deployments are non-engineers. We present VERA, an open-source self-hosted dashboard deployed to facilitate responsible AI processes within a large European bank. A reviewer selects a model and runs public benchmarks against it. VERA scores the twelve requirements that current benchmarks can measure and instruments the energy consumed by each evaluation, adding run-level evidence for environmental impact. We run four served open-weight models through the requirement pipeline, and the dashboard displays a score for each measurable requirement. A within-subject study then compares how participants read these benchmark results: from the raw output files in one condition, and through the VERA dashboard in the other. The dashboard reduced the time needed to perform the responsible AI assessment, reducing the time required from 56 seconds using raw files to 30 seconds using our dashboard, on average. Our dashboard scored highly (4.36 out of 5) on usefulness in the survey conducted within the organization. The dashboard and the study material are released publicly to promote replicability and reproducibility in different organisational contexts.",
-      "published": "2026-10-22T17:23:39Z",
-      "updated": "2026-10-22T17:23:39Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31588v1"
+      "summary": "Retrieval-augmented generation (RAG) lets a large language model (LLM) answer questions by retrieving relevant passages from a large corpus. However, RAG struggles with multi-hop questions, which require chaining facts spread across several documents through intermediate entities that the question never mentions. Graph-based RAG methods retrieve once from the entities a question names and so rarely recover the full evidence chain. Iterative RAG methods recover it step by step, but their accuracy is limited by the many tasks they ask the LLM to perform, such as planning the sub-questions, deciding their dependencies, rewriting them as answers arrive, and keeping track of what is known. We propose DeFT-RAG, a RAG framework built on three components. First, DeFT-RAG generates one self-contained sub-question at a time from the original question and the sub-questions answered so far with their answers (QA pairs). Each sub-question names every entity it asks about, which removes the need to plan, track dependencies or rewrite, and lets the LLM focus on a single fine-grained task at a time. Second, DeFT-RAG moves the remaining LLM work outside the LLM: rule-based updates to a QA table that keeps track of what is known, and yes/no decisions made by a fine-tuned lightweight decision model. Third, DeFT-RAG caches the QA pairs and reuses an answer when a later question asks a sub-question with the same meaning. On MuSiQue, 2WikiMultiHopQA and HotpotQA, DeFT-RAG achieves the best accuracy among thirteen baselines with both gpt-4o-mini and Qwen3.6 as the backbone, while giving the LLM fewer input tokens than any other iterative method. With a QA cache shared across 1,000 MuSiQue questions, 23.1% of sub-questions are answered from the cache, which reduces LLM calls by 12.9% without lowering accuracy.",
+      "published": "2026-10-27T18:40:23Z",
+      "updated": "2026-10-30T17:12:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.37826v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31579v1",
-      "title": "Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration",
+      "id": "http://arxiv.org/abs/2610.42039v1",
+      "title": "Same Question, Different Answers: Auditing Persona-Dependent Variation in Six LLMs on Smoking-Cessation Advice",
       "authors": [
-        "Deepthika S",
-        "Pawni Yadav",
-        "B. Sankar"
+        "Artin Yousefi",
+        "Aizierjiang Aiersilan",
+        "Lorien C Abroms",
+        "David A Broniatowski"
       ],
-      "summary": "Research on sycophancy asks whether large language models (LLMs) bend towards what their users want to hear. We ask the reverse question: when an LLM is confident, consistent, and wrong, do users bend towards it? In a within-subjects experiment, 32 participants learned up to five science topics by chatting with five assistants built on the same model (GPT-5-mini). Unknown to participants, each assistant's briefing had 0, 25, 50, 75, or 100% of its facts replaced by plausible falsehoods, and every assistant spoke with full confidence. A surprise quiz after each topic offered the correct fact, the planted falsehood, and two distractors, with a confidence rating for every answer. Across 104 quizzes and 1,040 answers, scores fell from 7.4 to 2.9 out of 10, and the planted option was chosen on 60% of falsified items against 11% of correctly taught ones (odds ratio 12.5). Transcript coding showed that whenever the assistant stated a falsehood, it was adopted about 65% of the time at every falsification level. Absorbed falsehoods were held with high confidence (8.4/10), the modeled confidence advantage of right over wrong answers vanished, and the discrimination of confidence for correctness fell from an AUROC of 0.70 to chance, while post-task trust ratings barely moved. Participants tended to return to the chat more when the assistant was worse, but returning went with more absorption, not less, and 30% of all turns pasted quiz questions back to the source being checked. The assistant itself was almost never sycophantic and never conceded under pushback. We introduce a baseline-corrected Human Deference Index to quantify this human-side sycophancy and argue that trustworthiness is a property of the human-AI pair, that sycophancy evaluations should measure both directions, and that learning interfaces must make reliability legible claim by claim.",
-      "published": "2026-10-22T17:15:59Z",
-      "updated": "2026-10-22T17:15:59Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31579v1"
+      "summary": "Hundreds of millions of people now ask large language model (LLM) chatbots for health advice, which raises a question that is simple to pose and hard to answer: does everyone get the same advice? We audit six widely deployed LLMs from four providers on smoking cessation, a domain with codified clini- cal guidance and substantial public-health stakes, by putting the same four cessation questions to twelve user personas that differ in life stage, self-described expertise, and smoking history, for a total of 2,880 responses. What the models say depends on who appears to be asking. Every model named FDA-approved prescription cessation medications less often to teen personas than to adult personas, by 32 to 67 percentage points, and in five of six models a persona presenting health- care expertise received fewer facts than a persona presenting none. We then evaluate one deployable intervention: a short system prompt specifying a factual floor, the set of core med- ical facts every user should receive when they are relevant, while leaving tone, vocabulary, and framing free to adapt. The prompt narrows persona differences in every model, but its effect on overall fact coverage varies in both magnitude and direction across models, so a prompt validated on one system cannot be assumed to transfer to another. Two cautions frame these results. Equal mention rates are not always the correct clinical target, because prescription cessation pharmacother- apy is not recommended for minors, so a defensible factual floor must be age-aware rather than uniform. And because our personas vary on several attributes at once, we report scenario- level differences rather than isolated effects of age or expertise. We release all 2,880 responses and the analysis code.",
+      "published": "2026-10-30T17:03:35Z",
+      "updated": "2026-10-30T17:03:35Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.42039v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31574v1",
-      "title": "Rethinking Sequence Compression with Test-time Regression",
+      "id": "http://arxiv.org/abs/2610.11765v2",
+      "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
       "authors": [
-        "Sihan Yang",
-        "Jie Huang",
-        "Hanxuan Li",
-        "Yifan Guo",
-        "Weigao Sun",
-        "Yiran Zhong",
-        "Weiyang Liu"
+        "Dianqiao Lei",
+        "Kevin Qinghong Lin",
+        "Pan Lu",
+        "Philip Torr",
+        "James Zou"
       ],
-      "summary": "Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections remain underperforming. We revisit sequence compression through the lens of test-time regression: input tokens define a regression problem whose fitted coefficients form the compressed representation. Importantly, the regression problem is learned end-to-end via backpropagation, while its coefficients are computed efficiently in closed form during the forward pass. This leads to TTR-Compressor, a general alternative to conventional pooling and projection-based compression. We evaluate TTR-Compressor as the compressor for block-wise sparse attention and the visual token merger for multimodal large language models. On block-wise sparse attention, TTR-Compressor improves RULER performance over attention-based compressors by a large margin. For visual token merging, it consistently outperforms the standard MLP merger and matches its performance with 55.6% fewer visual tokens. These results establish test-time regression as an effective primitive for sequence compression in efficient language and multimodal models.",
-      "published": "2026-10-22T17:14:38Z",
-      "updated": "2026-10-22T17:14:38Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31574v1"
+      "summary": "Large Language Models (LLMs) increasingly ship with explicit \"thinking modes\", yet their counterpart, \"no-thinking\", has received far less attention. We study LLMs' no-thinking behavior along two axes. a. How to measure no-thinking? Prior work typically defines no-thinking through proxies such as a disabled thinking mode or the absence of long traces. These proxies are unreliable: disabled thinking modes may still emit reasoning, while long traces may contain filler rather than genuine inference. We instead normalize each response into a pre-answer trace and final answer, and evaluate it at three levels: (i) Empty-Thinking Rate for strict answer-only compliance; (ii) instruction-aware Question-Pre-answer Relevance for similarity between the question and pre-answer trace; and (iii) LLM-as-judge Explicit Inference Rate for visible explicit inference. Together, these metrics distinguish answer-only output, relevant but non-inferential text, and explicit inference. b. How does no-thinking vary across tasks and models? We evaluate six prompting interventions on six LLMs across Boolean, multiple-choice, and open-ended questions. We find that explicit no-think controls cannot reliably eliminate visible inference. Models instead exhibit \"Thinking Inertia\": explicit inference persists even under strict controls and becomes more prevalent as the answer space opens. Accuracy remains stable on Boolean and multiple-choice tasks, whereas open-ended tasks reveal a trade-off between answer-only compliance and task accuracy. Rewriting the same questions across answer spaces shows that supplying candidate answers makes answer-only responses easier to produce. These findings establish no-thinking as a non-trivial capability: stopping explicit reasoning cannot be assumed from model settings or instructions alone and deserves systematic evaluation alongside reasoning ability.",
+      "published": "2026-10-08T11:49:37Z",
+      "updated": "2026-10-30T16:58:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.11765v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31573v1",
-      "title": "Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure",
+      "id": "http://arxiv.org/abs/2610.01799v3",
+      "title": "SkillEvoLean: Mutation-enhanced skill evolution for Lean provers",
       "authors": [
-        "Pellegrino Casoria",
-        "Simon Pietro Romano"
+        "Kuo Zhou",
+        "Zixiong Yang",
+        "Lu Zhang"
       ],
-      "summary": "In the post-API landscape, social-media profiling has become inexpensive and automated: Large Language Models (LLMs) can extract structured information from unstructured content and deduce attributes users never disclosed. A person's true exposure is not what they post but what can be inferred from it. As these practices become routine, exposure to social engineering attacks becomes an operational certainty, demanding a shared framework for assessment and mitigation. We make this exposure measurable by quantifying how accurately a target can be profiled, and how far that profile enables social engineering attacks. Because no existing model fully spans this continuum, we unify Social Media Intelligence (SOCMINT) and Cyber Human Intelligence (Cyber-HUMINT), two individual-focused disciplines that evolved separately, into a single doctrine-grounded taxonomy of 38 capabilities across the Cyber Threat Intelligence lifecycle, where user profiling bridges passive collection and active engagement. Domain experts validated the taxonomy (Fleiss' $κ$ = 0.92). We operationalize its core path (extraction, inference, and susceptibility assessment) as an LLM-augmented multi-agent pipeline, evaluated on real participants' public data. Susceptibility is assessed indirectly: the pipeline predicts how each target would rank personalized engagement options, matching their actual choices significantly above chance. This ranking capacity captures the personalization on which tailored attacks depend. The underlying profiles are accurate: extraction reaches F1 = 97.3%, and inferred attributes score 4.73/5, both far above rule-based and NER-based baselines at negligible cost. The framework augments security analysts' tradecraft rather than replacing it and enables defenders to gauge their own exposure before an adversary does.",
-      "published": "2026-10-22T17:13:46Z",
-      "updated": "2026-10-22T17:13:46Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31573v1"
+      "summary": "Skill evolution offers a promising way to improve large language model agents without updating their parameters, but its use in formal theorem proving remains underexplored. Existing methods mainly target natural-language reasoning, improving skills by analyzing successful and failed trajectories and incrementally revising solving strategies. Although the Lean verifier provides reliable execution feedback, when all sampled trajectories fail, existing skill evolution methods lack successful trajectories from which to infer effective update directions. Furthermore, these methods also focus mainly on the root instruction file, thus underexploring the evolution of reference knowledge including mathematical concepts and proving techniques. To address these limitations, we propose a mutation-enhanced skill self-evolution framework for building skill-augmented Lean provers. The framework jointly evolves a high-level solving policy and its reference knowledge through progressive and mutation-based updates. Progressive evolution derives local improvements from successful and failed trajectories, while mutation is triggered when no complete proof can be generated, sampling mathematical concepts to produce and select new skill candidates under verifier feedback. We evaluate our method on MiniF2F, PutnamBench, the 2025 International Mathematical Olympiad (IMO 2025), and the 2026 USA Mathematical Olympiad (USAMO 2026). Under the same backbone model, trajectorysampling budget, and test-time compute, our method achieves proof success rates of 100.0%, 90.6%, 4/6, and 4/6, respectively, with GPT-5.5, outperforming the baseline methods. Further analysis shows that concept-guided mutation outperforms random-text-guided mutation by 6.9 and 8.2 percentage points on MiniF2F and PutnamBench, respectively, while solving one additional problem on both IMO 2025 and USAMO 2026.",
+      "published": "2026-10-01T14:42:54Z",
+      "updated": "2026-10-30T16:57:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.01799v3"
     },
     {
-      "id": "http://arxiv.org/abs/2610.31566v1",
-      "title": "CellTrack-Bench: Microscopic Cell Tracking Benchmark for Vision-Language Models",
+      "id": "http://arxiv.org/abs/2606.16562v2",
+      "title": "MIRAGE: Auditing Anti-Muslim Bias in Frontier LLMs Across Reasoning, Agentic, and Time-Coupled Conditions",
       "authors": [
-        "Ilan Theodoro",
-        "Jordão Bragantini",
-        "Loïc A. Royer"
+        "Noor Islam S. Mohammad",
+        "Tamim Sheikh"
       ],
-      "summary": "Large language models have shown outstanding performance on text-first tasks such as coding, math, and writing. Recent efforts are shifting models' training to include scientific problems that often live in highly specialized domains beyond text, such as protein structure and biological images. However, in these scenarios, their general-purpose accuracy compared with specialized algorithms remains in question. One such domain is cell tracking, which requires spatiotemporal awareness of cell dynamics. To evaluate this, we created a new benchmark, CellTrack-Bench, which assesses Vision-Language Models' (VLMs) cell-tracking-related performance against specialized trackers. The full benchmark draws from 15 standard cell-tracking datasets across four imaging modalities and comprises 1,537 problems corresponding to 9,041 cell-linking decisions. We selected a hard subset requiring greater reasoning effort by identifying failures shared across distinct algorithmic trackers. With this proposed dataset, we: (i) evaluated different environment harnesses for VLMs; (ii) benchmarked 9 frontier closed-source models and 13 open-weight models; and (iii) provided a detailed analysis of their failure modes. Code, the stored model outputs, and a pipeline that regenerates the benchmark from the source datasets are available at https://github.com/royerlab/celltrack-bench.",
-      "published": "2026-10-22T17:09:12Z",
-      "updated": "2026-10-22T17:09:12Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.31566v1"
+      "summary": "Five years after the discovery of persistent anti-Muslim bias in large language models, most evaluations remain confined to single-turn prompt completion, a setting that no longer reflects how frontier LLMs are deployed. We introduce \\textbf{MIRAGE} (Muslim-Identity Reasoning and Agentic Generation Evaluation), a benchmark of 1{,}200 prompts spanning three deployment-realistic conditions: direct completion, chain-of-thought reasoning, and simulated agentic decision-making across content moderation, lending triage, refugee claim summarization, and hiring screens. Across six frontier models, we find that (i) chain-of-thought reasoning \\emph{amplifies} rather than suppresses Muslim-violence associations by 12--34\\% relative to direct completion, (ii) agentic decisions exhibit a 9--22 percentage-point asymmetry between Muslim and matched non-Muslim cases on identical evidence, and (iii) bias is sharply time-coupled to retrieved news context, increasing 18--27\\% under recent-conflict retrieval. Existing prompt-based mitigations transfer poorly across our three conditions, suppressing direct-completion bias while leaving agentic asymmetry largely intact. We release MIRAGE and an open evaluation harness to support targeted mitigation research.",
+      "published": "2026-06-15T11:04:42Z",
+      "updated": "2026-10-30T16:56:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.16562v2"
     }
   ]
 }
