@@ -1,178 +1,186 @@
 {
-  "generated_at_utc": "2026-11-02T04:34:42Z",
+  "generated_at_utc": "2026-11-06T05:14:50Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2610.42149v1",
-      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "id": "http://arxiv.org/abs/2611.08486v1",
+      "title": "Do You Miss the Nights We Spent Crafting Figures? Rethinking Teaser and Framework Figures in the Age of Generative AI",
       "authors": [
-        "Byungwoo Jeon",
-        "Yoonwoo Jeong",
-        "Hyunseok Lee",
-        "Minsu Cho",
-        "Jinwoo Shin"
+        "Xiaoqi Zhao",
+        "Youwei Pang",
+        "Kailai Zhou"
       ],
-      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
-      "published": "2026-10-30T17:59:43Z",
-      "updated": "2026-10-30T17:59:43Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.42149v1"
+      "summary": "Scientific figures give research ideas a visual form through choices of abstraction, composition, and emphasis. Generative AI offers new ways to realize these choices, raising questions about explanatory clarity and purposeful visual expression. We examine these questions through a visual retrospective of 371 motivation and framework figures from 200 papers. The corpus comprises a quota-based main sample of 160 papers spanning four temporal periods and a separate purposive style-contrast sample of 40 papers. A single multimodal judge evaluates six dimensions of communication and design, with three repeated judgments per figure. We attempt source-constrained revisions of all 371 figures, of which 369 pass the recorded fidelity checks. Original-figure ratings show no uniform decline across periods. Revisions increase mean clarity ratings by 0.428 points and decrease aesthetic coherence ratings by 0.111 points on a five-point scale. Gains in the six-dimension average are larger for main-sample motivation figures than for frameworks. Case analyses show that added explanation can clarify comparisons while leaving typographic hierarchy and visual economy unresolved. These model-based findings support researcher-led design, with AI assisting exploration and authors retaining responsibility for explanatory purpose, composition, and scientific relationships. The accompanying atlas and evaluation records are available at https://ntu-ai4x.github.io/Rethinking_Figures/index_en.html.",
+      "published": "2026-11-05T18:59:33Z",
+      "updated": "2026-11-05T18:59:33Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08486v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.39060v2",
-      "title": "Tracing the Influence of Retrieved Literature on Scientific Ideation in LLMs",
+      "id": "http://arxiv.org/abs/2602.15219v3",
+      "title": "Multi-Agent Home Energy Management Assistant",
       "authors": [
-        "Zhipin Wang",
-        "Koel Dutta Chowdhury",
-        "Christoph Leiter",
-        "Steffen Eger"
+        "Wooyoung Jung"
       ],
-      "summary": "Large language models (LLMs) are increasingly used to generate research ideas from scientific literature. Existing systems combine literature retrieval with search, generation, and refinement, making it difficult to determine how the retrieval strategy itself shapes the ideas generated. We isolate this contribution by comparing five retrieval strategies and a No Literature baseline under a shared generation protocol, using 45,000 ideas across 15 machine learning topics and ten open-weight models. Relative to no literature basline, all five retrieval strategies reduce diversity among ideas generated from the same set of papers by $5.6\\%$--$17.9\\%$, while most increase diversity by $10.2\\%$--$18.1\\%$ when ideas from different sets are pooled. Effects on idea quality and novelty are modest on average but vary across topics. We further apply a JSD-based attribution method to trace the influence of individual input papers on each idea's motivation, core idea, approach, and validation. In $79.3\\%$ of ideas, only one or two distinct papers receive the highest attribution scores across these four parts. These leading sources often recur across ideas generated from the same set of papers, and groups with more varied source attribution contain more diverse ideas ($r=0.70$). These findings motivate various sets of literature and the use of attribution to guide the choice of sources for subsequent ideas.",
-      "published": "2026-10-28T23:45:23Z",
-      "updated": "2026-10-30T17:56:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.39060v2"
+      "summary": "Existing home energy management systems conceptualize occupants as passive recipients of energy information and control, which limits their ability to effectively support informed decision-making and sustained engagement. This paper presents Home Energy Management Assistant (HEMA), the first open-source, multi-agent system enabling sustained human-AI collaboration - multi-turn conversational interactions with preserved context - across diverse home energy management (HEM) tasks - from energy analysis and educational support to smart device control. HEMA combines large language model (LLM) reasoning capabilities with 36 purpose-built domain-specific tools through a three-layer architecture: a web-based conversational interface, a backend API server, and a multi-agent system. The system features three specialized agents - Analysis (energy consumption patterns and cost optimization), Knowledge (educational queries and rebate information), and Control (smart device management and scheduling) - coordinated through a self-consistency classifier that routes user queries using chain-of-thought reasoning. This architecture enables various energy analyses, adaptive explanations, and streamlined device control. HEMA also includes a comprehensive evaluation framework using an LLM-as-simulated-user methodology with 23 objective metrics across task performance, factual accuracy, interaction quality, and system efficiency, allowing systematic testing across diverse scenarios and user personas without requiring extensive human subject testing. Through demonstrations using real-world household energy consumption data, we show how HEMA supports informed decision-making and active engagement in HEM, highlighting its potential as a user-friendly, adaptable tool for residential deployment and as a research platform for HEM innovation.",
+      "published": "2026-02-16T21:55:42Z",
+      "updated": "2026-11-05T18:57:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.15219v3"
     },
     {
-      "id": "http://arxiv.org/abs/2610.42121v1",
-      "title": "Where ADS Crashes Differ: A Harmonized Comparison Against Human Baselines",
+      "id": "http://arxiv.org/abs/2611.08456v1",
+      "title": "Cognitive Tours: Making Understanding a Deliverable in AI-Assisted Development",
       "authors": [
-        "Doyeon Jang"
+        "Margaret-Anne Storey"
       ],
-      "summary": "Crash-rate comparisons between automated driving systems (ADS) and human drivers require an exposure denominator that only a few operators publish. We instead ask a composition question: given a crash, does the mix of crash types differ between ADS and human-driven vehicles? The question needs no mileage and can therefore cover every ADS operator. We assemble the NHTSA Standing General Order (SGO) ADS incident files across both file generations into 2,450 distinct in-scope incidents (2021-2026), of which 828 fall within the 2021-2024 window covered by the Crash Report Sampling System (CRSS), the national police-reported human comparator. A schema-constrained large language model (LLM) codes each SGO narrative into the CRSS crash-type taxonomy. Because SGO compels reporting far below the police-reporting threshold, we bracket reportability with an objective severity floor and a reasonable-person rubric, and claim a difference only where it survives both. Two composition differences hold under every reportability definition, tow definition and weighting of the human side, and under both definitions of driverless operation: turn-across-path crashes are under-represented among ADS crashes (0.23-0.46x the CRSS share under the primary driverless definition) and so are single-vehicle crashes (0.19-0.56x). In severity-floor rear-end crashes the ADS vehicle is the striking party at a quasi-induced-exposure ratio of 0.121 (95% CI [0.05, 0.23]) against a human baseline of 1.000. If the ADS vehicle is also struck more often than its exposure implies, this ratio overstates the ADS-human difference. We also document three pitfalls in the federal data: an operator-specific coding of driverless operation, a tow-away criterion confounded by fleet recovery practice, and an occupancy confound that accounts for about 42% of the apparent ADS-human severity gap.",
-      "published": "2026-10-30T17:53:28Z",
-      "updated": "2026-10-30T17:53:28Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.42121v1"
+      "summary": "Generative AI and agentic coding are accelerating software development, leading to concerns about technical debt. But two less visible forms of debt, cognitive debt and intent debt, are emerging as key risks to software health. Cognitive debt is the absence or erosion of a team's shared understanding where no one can confidently explain how a system works or predict the impact of a change. Intent debt is the lack of clearly articulated goals, constraints, and rationale that explain what the system is for and guide how it should evolve. This paper presents Cognitive Tours, a tool designed to mitigate and repair cognitive and intent debt. Cognitive Tours is a web-based prototype for creating and following curated paths connecting user needs, design decisions, code, tests, and open questions. AI-assisted skills help audit existing waypoints and tours for possible problems or staleness and suggest candidates for new ones; humans decide what matters, verify relationships, and construct the narrative. This division of work deliberately preserves productive friction: the sensemaking involved in selecting, explaining, and revising a tour, which is intended to foster and share understanding. Our demonstration uses a tour of Cognitive Tours itself to introduce the tool and illustrate its design decisions and interaction mechanisms. A proposed evaluation agenda concludes the paper. A demo is available at https://cognitive-tours-demo.vercel.app/",
+      "published": "2026-11-05T18:48:06Z",
+      "updated": "2026-11-05T18:48:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08456v1"
     },
     {
-      "id": "http://arxiv.org/abs/2512.12063v2",
-      "title": "Instruction-Tuning Open-Weight Language Models for BPMN Model Generation",
+      "id": "http://arxiv.org/abs/2609.30137v2",
+      "title": "Screen Before You Serve: Simulation for Production Customer Experience AI Agents at 140M Scale",
       "authors": [
-        "Gökberk Çelikmasat",
-        "Atay Özgövde",
-        "Fatma Başak Aydemir"
+        "Edesio Alcobaça",
+        "Kevin Rossell",
+        "Aman Gupta",
+        "Shao Tang",
+        "Jiwoo Hong",
+        "Pabel Carrillo-Mendoza",
+        "Wanderson Conceição Ferreira",
+        "Alvaro Tedeschi",
+        "Zayd Simjee",
+        "Shreya Rajpal",
+        "Bruno Finardi Hime",
+        "Christian Sousa",
+        "Luis Moneda",
+        "Herbert Fei",
+        "Daniel Silva",
+        "Rohan Ramanath"
       ],
-      "summary": "Domain models are central to software engineering, as they enable a shared understanding, guide implementation, and support automated analyses and model-driven development. Yet, despite these benefits, practitioners often skip modeling because it is time-consuming and demands scarce expertise. We address this barrier by investigating whether open-weight large language models, adapted via instruction tuning, can generate high-quality BPMN process models directly from natural language descriptions in a cost-effective and privacy-preserving way. We introduce InstruBPM, a reproducible approach that prepares paired text-diagram data and instruction tunes an open source large language model with parameter-efficient fine-tuning and quantization for on-prem deployment. We evaluate the tuned model through complementary perspectives: (i) text/code similarity using BLEU, ROUGE-L, and METEOR, (ii) structural fidelity using Relative Graph Edit Distance, (iii) guidelines conformance using external tool checks, and (iv) a small expert review. Using a curated subset of a multi-domain BPMN dataset, we compare the tuned model with untuned open-weight baselines and strong proprietary models under consistent prompting regimes. Our compact tuned model outperforms all baselines across sequence and structural metrics while requiring substantially fewer resources; guideline analysis and expert feedback further indicate that the generated diagrams largely follow BPMN best practices and are useful starting points that reduce modeling effort. Overall, instruction tuning improves structural accuracy and robustness compared to untuned baselines and reduces reliance on heavy prompt scaffolding. We publicly share the trained models and scripts to support reproducibility and further research.",
-      "published": "2025-12-12T22:07:51Z",
-      "updated": "2026-10-30T17:52:09Z",
-      "pdf_url": "https://arxiv.org/pdf/2512.12063v2"
+      "summary": "Customer experience (CX) agents use tools and large language models to address customer requests and guide conversational interactions with an organization's products. Improving these agents, especially in regulated industries, is difficult: they must detect intent, follow complex operational policies and use tools reliably. Manual end-to-end testing offers limited coverage, while live experiments expose customers to failures that can erode trust. We present a hypothesis-driven simulation workflow for screening candidate CX agents before deployment. Synthetic customers react to agent responses and simulated tool outputs enable multi-step agentic workflows without invoking production backends. We use the Snowglobe simulator on Nubank's Card Delivery agent and its expanded successor, Card Management - Nubank's highest-volume chat-support agent in Brazil. Across 4 deployed versions, simulated and production version-level binary evaluator scores show high correlation. Simulation-guided iteration increased transactional net promoter score (tNPS) by 36.69 points in a live A/B test. We also screened open-weight configurations in over 16,000 simulated conversations. In a subsequent live A/B test, the selected model increased self-service rate (SSR) by 8.82 percentage points to the highest level observed at Nubank, with no statistically significant change in tNPS. Simulation made broad exploration of models, reasoning settings, and prompts feasible without customer exposure, enabling production improvements that would have been impractical to pursue through live experimentation alone.",
+      "published": "2026-09-24T17:07:38Z",
+      "updated": "2026-11-05T18:38:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.30137v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.42116v1",
-      "title": "ACCT: Asymmetric Cross-LLM Context Transfer",
+      "id": "http://arxiv.org/abs/2611.08428v1",
+      "title": "The Power of Meta Access in the Software of the Future --- Demonstrated on LLM Chat UIs and Chat AI",
       "authors": [
-        "Yuzhe Liu",
-        "Haolin Tian",
-        "Tonghan Wang"
+        "Julian Kunkel",
+        "Ali Doosthosseini"
       ],
-      "summary": "In real-world deployments, large language model (LLM) systems are increasingly evolving from single-model invocation toward heterogeneous deployments in which different models are dynamically invoked for inference. When the same context is reused across models, however, each newly selected target model typically has to process it again, repeatedly incurring substantial computational costs. Therefore, we propose ACCT (Asymmetric Cross-LLM Context Transfer), which targets KV cache transfer between models of different scales within the same model family. ACCT transforms the KV cache produced by a source model into sparse KV states that can be directly consumed by a target model, thereby enabling cross-model reuse of context computation and decoupling context computation from downstream inference. ACCT consists of three lightweight components: the Cartographer identifies query-relevant context tokens for each target layer and KV head; the Allocator determines how many context tokens each target layer and KV head retains under a shared total KV budget; and the Compiler transforms selected source KV into sparse target KV. The target model can therefore perform inference using the transferred KV without reprocessing the original context. We evaluate ACCT in two complementary settings comprising five general-capability benchmarks and six highly context-dependent tasks. Experiments show that ACCT matches or exceeds the target model's original inference performance even when reducing the KV cache size by 75%. At a context length of approximately 19K tokens, ACCT's KV conversion achieves a 6.5-21.2 times speedup over target context prefill. These results demonstrate the feasibility of transferring context computation across models under a limited KV budget.",
-      "published": "2026-10-30T17:50:49Z",
-      "updated": "2026-10-30T17:50:49Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.42116v1"
+      "summary": "Chat remains the default surface for many large language model (LLM) tasks, even as agentic tools such as OpenCode excel at coding and automation. Yet the model sees the current dialogue but not the workspace around it. We explore meta access---giving the assistant a structured, permissioned view of the interface itself and propose a ladder of levels: feature tutoring; metadata, settings, and preference access; retrieval over summaries and messages, confirmed mutation, and full orchestration. Meta access can turn a chat client from many screens into one entry point for finding, navigating, organising, and operating it, while raising risks around grounding, privacy, prompt injection, and trust. General-purpose agentic harnesses are runtimes; because they can change their own settings, meta access becomes reflexive and needs a separate control-plane boundary. We ground this in the Meta Chat prototype of the Chat AI client. It builds bounded context from, e.g., summaries, settings, and relevant messages; links references to conversations, topics, and personas; supports confirmed, reversible changes; offers a browsable tutorial library; and recommends personas as user-started conversations. By exposing application state in structured form, meta access can extend screen readers from widget descriptions to semantic workspace operations. Meta access thus turns chat from a window onto one conversation into a control layer for the whole workspace, extending chat toward agentic capability without surrendering user control. As assistants become embedded in IDEs, dashboards, office suites, and operating systems, AI-era interfaces should expose a structured, permissioned model of their state and capabilities, ideally by opening their existing metamodels through a debugger-like interface.",
+      "published": "2026-11-05T18:22:24Z",
+      "updated": "2026-11-05T18:22:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08428v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.42112v1",
-      "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
+      "id": "http://arxiv.org/abs/2606.13668v2",
+      "title": "Influcoder: Distilling Decoders' Gradient Influence Rankings into an Encoder for Data Attribution",
       "authors": [
-        "Leon Lufkin",
-        "Cutter Dawes",
-        "Alexander Speicher",
-        "Kamesh Krishnamurthy",
-        "Tomás Figliolia",
-        "Beren Millidge"
+        "Dimitri Kachler",
+        "Damien Sileo",
+        "Pascal Denis"
       ],
-      "summary": "The quadratic scaling of attention is a fundamental bottleneck limiting the long-context capabilities of large language models (LLMs). A variety of approaches have attempted to circumvent this, but they either fail to match attention's expressiveness (e.g., sliding-window or linear attention variants with fixed-size state) or only achieve constant-factor speedups (e.g., sparse attention methods whose indexers themselves scale quadratically). In this paper, we derive an asymptotically subquadratic sparse attention method based on a hierarchical, tree-structured indexer, which we call Zyphra Hierarchical Attention (ZHA). ZHA constructs a tree of recursively compressed key summaries over the KV cache, which future queries traverse from the top down to retrieve a sparse subset of keys. Crucially, by iteratively growing the tree's depth, the total cost including routing and final attention grows sublinearly in sequence length, resulting in overall subquadratic (but superlinear) scaling for attention. We demonstrate that ZHA can be cheaply applied to existing pretrained models with only a short KL distillation training stage over a few billion tokens, and maintains performance on long-context retrieval and challenging reasoning, mathematical, and agentic coding evaluation tasks. Moreover, we show that our method is highly robust to tree geometry including very deep trees of up to 6 levels. Finally, we develop a detailed performance model and show that our approach scales subquadratically, dramatically outperforms competing methods beyond 1 million context, and ultimately has the potential to extend effective context windows to the hundreds of millions or billions of tokens.",
-      "published": "2026-10-30T17:48:37Z",
-      "updated": "2026-10-30T17:48:37Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.42112v1"
+      "summary": "With the growth of LLMs' (Large Language Models) capabilities, there has been an increasing push to curate high quality datasets by filtering samples in the training data. In general, Data Attribution (DA) methods aim to estimate how individual samples in a training dataset can precondition a model to generate certain outputs. As an example, one might be interested in which samples in the data could be the source of toxic behavior after training the LLM. Many methods quantify this conditioning through the paradigm of influence functions. While methods of this family are effective in its function, they lack the necessary processing speed and storage compactness to be practically implemented on large datasets. We propose a method, Influcoder, as a quick and cost-effective approach to influence-based Data Attribution at scale.",
+      "published": "2026-06-11T17:58:33Z",
+      "updated": "2026-11-05T18:19:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2606.13668v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.15620v2",
-      "title": "From Stages to States: Unified Iterative Reasoning for MLLMs",
+      "id": "http://arxiv.org/abs/2611.08412v1",
+      "title": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
       "authors": [
-        "Chuang Yu",
-        "Xuefei Ma",
-        "Yuanhao Feng",
-        "Wuxiong Zeng",
-        "Bo Wang",
-        "Minghong Cai",
-        "Dongming Wu",
-        "Fei Zhou",
-        "Chen Tang",
-        "Wenwen Tong",
-        "Lewei Lu",
-        "Xiangyu Yue"
+        "Yuanchuan Guo",
+        "Jiashun Jin",
+        "Zheng Tracy Ke",
+        "Bingcheng Sui"
       ],
-      "summary": "Multimodal Chain-of-Thought (MCoT) substantially enhances the complex reasoning capabilities of Multimodal Large Language Models (MLLMs) by explicitly modeling intermediate reasoning processes. However, most learning-based MCoT methods follow a stage-centric paradigm, where different reasoning behaviors are assigned to predefined stages and optimized separately. This results in fragmented reasoning and a training-inference reasoning-state gap. To address these limitations, we propose ReState, a unified iterative reasoning framework that reformulates multimodal reasoning from a stage-driven pipeline into a state-driven dynamic process. It comprises two complementary components: Unified Reasoning State Modeling (URSM) and Closed-Loop Reasoning-State Learning (CRSL). URSM unifies reasoning construction, correct reasoning preservation, and erroneous reasoning correction as reasoning-state transitions within a shared state space, enabling these heterogeneous reasoning behaviors to be learned jointly. CRSL further incorporates self-generated historical reasoning states during training and recursively updates the current state during inference, thereby mitigating the reasoning-state gap and enabling iterative self-refinement without requiring an additional reflection module, critic, or independent correction stage. Furthermore, we construct VersaCoT-10K, a high-quality CoT dataset spanning eight visual reasoning domains, which provides diverse supervision for multi-domain reasoning and reasoning-state refinement. Extensive experiments demonstrate that ReState exhibits strong adaptability across different MLLM backbones and achieves strong performance on multiple public reasoning benchmarks, supporting the shift from stage-centric reasoning toward state-centric reasoning. Our data and code are available at https://restate-project.github.io",
-      "published": "2026-10-11T13:46:43Z",
-      "updated": "2026-10-30T17:40:17Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.15620v2"
+      "summary": "The growing use of AI in mathematics raises a question: can we detect AI involvement in proofs, separately from AI assistance with writing? Historical arXiv papers, recent papers disclosing substantive AI use, and manuscripts released by OpenAI provide a rich empirical basis for studying this question. However, several challenges remain: lack of matched case-control pairs; potential incompleteness of disclosure; and lack of ready-to-use features designed to capture signals of AI involvement in proofs. To address these challenges, we construct five cohorts comprising 8,281 papers by combining existing manuscripts with those we produced using generative AI. These cohorts span different levels of AI involvement and include matched pairs of papers addressing the same research problems. We then introduce ProofTrace, a framework that represents each paper as a graph of immediate proof support (GIPS) and extracts interpretable features of mathematical organization. Our study yields three discoveries. First, principal-component projections of our features reveal a qualitative gradient of AI involvement, where AI-reworded papers remain close to human papers, the two AI-generated cohorts depart in broadly shared directions, and papers disclosing substantive AI use occupy intermediate positions which shifts toward AI-generated cohorts over time. Second, we identify recurring signatures of AI-generated proofs, such as fewer externally cited results, greater reliance on intermediate conclusions, and altered graph connectivity; many of these signatures persist under controls for research field, manuscript length, or graph size. Finally, in a separate detection experiment, ProofTrace distinguishes human-written papers from those disclosing substantive AI use. Its performance remains stable under AI rewording, whereas the performance of state-of-the-art text-based detectors declines sharply.",
+      "published": "2026-11-05T18:17:18Z",
+      "updated": "2026-11-05T18:17:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08412v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.37826v2",
-      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
+      "id": "http://arxiv.org/abs/2603.24562v3",
+      "title": "Scaling Recurrence-aware Foundation Models for Clinical Records via Next-Visit Prediction",
       "authors": [
-        "Dingyi Kang",
-        "Bingzhe Li"
+        "Xiang Gao",
+        "Haresh Rengaraj Rajamohan",
+        "Weicheng Zhu",
+        "Shih-Lun Huang",
+        "Long Chen",
+        "Gabe Schulman",
+        "Huizhen Jin",
+        "Shengduo Li",
+        "Yixuan Wang",
+        "Huidi Yang",
+        "Kyunghyun Cho",
+        "Cem M. Deniz",
+        "Narges Razavian"
       ],
-      "summary": "Retrieval-augmented generation (RAG) lets a large language model (LLM) answer questions by retrieving relevant passages from a large corpus. However, RAG struggles with multi-hop questions, which require chaining facts spread across several documents through intermediate entities that the question never mentions. Graph-based RAG methods retrieve once from the entities a question names and so rarely recover the full evidence chain. Iterative RAG methods recover it step by step, but their accuracy is limited by the many tasks they ask the LLM to perform, such as planning the sub-questions, deciding their dependencies, rewriting them as answers arrive, and keeping track of what is known. We propose DeFT-RAG, a RAG framework built on three components. First, DeFT-RAG generates one self-contained sub-question at a time from the original question and the sub-questions answered so far with their answers (QA pairs). Each sub-question names every entity it asks about, which removes the need to plan, track dependencies or rewrite, and lets the LLM focus on a single fine-grained task at a time. Second, DeFT-RAG moves the remaining LLM work outside the LLM: rule-based updates to a QA table that keeps track of what is known, and yes/no decisions made by a fine-tuned lightweight decision model. Third, DeFT-RAG caches the QA pairs and reuses an answer when a later question asks a sub-question with the same meaning. On MuSiQue, 2WikiMultiHopQA and HotpotQA, DeFT-RAG achieves the best accuracy among thirteen baselines with both gpt-4o-mini and Qwen3.6 as the backbone, while giving the LLM fewer input tokens than any other iterative method. With a QA cache shared across 1,000 MuSiQue questions, 23.1% of sub-questions are answered from the cache, which reduces LLM calls by 12.9% without lowering accuracy.",
-      "published": "2026-10-27T18:40:23Z",
-      "updated": "2026-10-30T17:12:48Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.37826v2"
+      "summary": "While large-scale pretraining has revolutionized language modeling, its potential remains underexplored in healthcare with structured electronic health records (EHRs). We present RAVEN, a novel generative pretraining strategy for sequential EHR data based on Recurrence-Aware next-Visit EveNt prediction. Leveraging a dataset of over one million unique individuals, our model learns to autoregressively generate tokenized clinical events for the next visit conditioned on patient history. We introduce regularization on predicting repeated events and highlight a key pitfall in EHR-based foundation model evaluations: repeated event tokens can inflate performance metrics when new onsets are not distinguished from subsequent occurrences. Furthermore, we empirically investigate the scaling behaviors in a data-constrained, compute-saturated regime, showing that simply increasing model size is suboptimal without commensurate increases in data volume. We evaluate our model via zero-shot prediction for forecasting the incidence of a diverse set of diseases, where it rivals fully fine-tuned representation-based Transformer models and outperforms both standard simulation-based next-token approaches and a prompted medical large language model baseline. Finally, without additional parameter updates, we show that RAVEN can generalize to an external patient cohort under lossy clinical code mappings and feature coverage gaps.",
+      "published": "2026-03-25T17:42:47Z",
+      "updated": "2026-11-05T18:10:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.24562v3"
     },
     {
-      "id": "http://arxiv.org/abs/2610.42039v1",
-      "title": "Same Question, Different Answers: Auditing Persona-Dependent Variation in Six LLMs on Smoking-Cessation Advice",
+      "id": "http://arxiv.org/abs/2611.08383v1",
+      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
       "authors": [
-        "Artin Yousefi",
-        "Aizierjiang Aiersilan",
-        "Lorien C Abroms",
-        "David A Broniatowski"
+        "Ali Mohammadi Ruzbahani",
+        "Abbas Yazdinejad",
+        "Hadis Karimipour"
       ],
-      "summary": "Hundreds of millions of people now ask large language model (LLM) chatbots for health advice, which raises a question that is simple to pose and hard to answer: does everyone get the same advice? We audit six widely deployed LLMs from four providers on smoking cessation, a domain with codified clini- cal guidance and substantial public-health stakes, by putting the same four cessation questions to twelve user personas that differ in life stage, self-described expertise, and smoking history, for a total of 2,880 responses. What the models say depends on who appears to be asking. Every model named FDA-approved prescription cessation medications less often to teen personas than to adult personas, by 32 to 67 percentage points, and in five of six models a persona presenting health- care expertise received fewer facts than a persona presenting none. We then evaluate one deployable intervention: a short system prompt specifying a factual floor, the set of core med- ical facts every user should receive when they are relevant, while leaving tone, vocabulary, and framing free to adapt. The prompt narrows persona differences in every model, but its effect on overall fact coverage varies in both magnitude and direction across models, so a prompt validated on one system cannot be assumed to transfer to another. Two cautions frame these results. Equal mention rates are not always the correct clinical target, because prescription cessation pharmacother- apy is not recommended for minors, so a defensible factual floor must be age-aware rather than uniform. And because our personas vary on several attributes at once, we report scenario- level differences rather than isolated effects of age or expertise. We release all 2,880 responses and the analysis code.",
-      "published": "2026-10-30T17:03:35Z",
-      "updated": "2026-10-30T17:03:35Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.42039v1"
+      "summary": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity. We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server. In FedReason, the LLM is called every ten rounds. It analyses the weights by running code in a restricted server-side sandbox, sees only the printed results, may score a few candidates on a 500-image proxy set, and submits a short Python aggregation program. The server applies the program until the next call and falls back to FedAvg whenever its output is invalid. Full weight tensors never leave the server. We evaluated FedReason with Claude Opus 5.5 on CIFAR-10 and CIFAR-100 with ResNet-18 under Dirichlet label skew, width-heterogeneous sub-models and Byzantine clients, in 168 runs against 14 baselines. Across 12 paired label-skew runs it beat FedAvg by 1.26 percentage points on average (10 wins), and a control that spends the same per-round proxy budget on choosing among standard rules by 1.08 points. It was the strongest server-side rule on CIFAR-100 but did not beat SCAFFOLD, which changes client training. With three of ten clients malicious, it excluded all sign-flipping clients from the first round and stayed about one point below FLTrust without training a root model. Without proxy feedback, accuracy fell from 73.8% to 38.8% in one seed. A 60-round run cost 0.79 USD in API fees on average.",
+      "published": "2026-11-05T18:00:58Z",
+      "updated": "2026-11-05T18:00:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08383v1"
     },
     {
-      "id": "http://arxiv.org/abs/2610.11765v2",
-      "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
+      "id": "http://arxiv.org/abs/2609.37820v2",
+      "title": "Information Games: Strategic Crowding and Firm Repositioning in Language-Model Space",
       "authors": [
-        "Dianqiao Lei",
-        "Kevin Qinghong Lin",
-        "Pan Lu",
-        "Philip Torr",
-        "James Zou"
+        "Marcus Gawronsky",
+        "Chun-Sung Huang"
       ],
-      "summary": "Large Language Models (LLMs) increasingly ship with explicit \"thinking modes\", yet their counterpart, \"no-thinking\", has received far less attention. We study LLMs' no-thinking behavior along two axes. a. How to measure no-thinking? Prior work typically defines no-thinking through proxies such as a disabled thinking mode or the absence of long traces. These proxies are unreliable: disabled thinking modes may still emit reasoning, while long traces may contain filler rather than genuine inference. We instead normalize each response into a pre-answer trace and final answer, and evaluate it at three levels: (i) Empty-Thinking Rate for strict answer-only compliance; (ii) instruction-aware Question-Pre-answer Relevance for similarity between the question and pre-answer trace; and (iii) LLM-as-judge Explicit Inference Rate for visible explicit inference. Together, these metrics distinguish answer-only output, relevant but non-inferential text, and explicit inference. b. How does no-thinking vary across tasks and models? We evaluate six prompting interventions on six LLMs across Boolean, multiple-choice, and open-ended questions. We find that explicit no-think controls cannot reliably eliminate visible inference. Models instead exhibit \"Thinking Inertia\": explicit inference persists even under strict controls and becomes more prevalent as the answer space opens. Accuracy remains stable on Boolean and multiple-choice tasks, whereas open-ended tasks reveal a trade-off between answer-only compliance and task accuracy. Rewriting the same questions across answer spaces shows that supplying candidate answers makes answer-only responses easier to produce. These findings establish no-thinking as a non-trivial capability: stopping explicit reasoning cannot be assumed from model settings or instructions alone and deserves systematic evaluation alongside reasoning ability.",
-      "published": "2026-10-08T11:49:37Z",
-      "updated": "2026-10-30T16:58:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.11765v2"
+      "summary": "When firms respond to new market opportunities, their capacity choices alter the future discounted free cash flows available to both competitors and investors. In competitive markets, these investment decisions publicized in news articles and analyst reports, measuring the changes in capital structure, product mix, firm leadership, risk exposure and operating procedure made by the firm. Modern search engines rely on Large Language Models to measure the relevancy of source documents to given search query. These measurements let researchers represent these news articles as clouds of dense vectors whose information geometry reflects the dissimilarity of firms over time. Building on Xu et al. (2022), we develop a model of costly competitive adjustment in which firms allocate capacity in which firms make firm capacity adjustment towards free cash flow shocks. Using a novel sandwich estimator, we analyse the sign and magnitude of this predicted adjustment using multi-agent simulation, and validate our findings on a sample of news and analyst reports from Nasdaq-listed companies between 2018-2022.",
+      "published": "2026-09-29T15:30:02Z",
+      "updated": "2026-11-05T17:56:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.37820v2"
     },
     {
-      "id": "http://arxiv.org/abs/2610.01799v3",
-      "title": "SkillEvoLean: Mutation-enhanced skill evolution for Lean provers",
+      "id": "http://arxiv.org/abs/2611.08367v1",
+      "title": "CascadeFilter: Cost-Efficient Semantic Filtering with Joint Threshold Selection",
       "authors": [
-        "Kuo Zhou",
-        "Zixiong Yang",
-        "Lu Zhang"
+        "Yanji He",
+        "Tao Zhong",
+        "Hongyang Chen",
+        "Xiaobo Zhang",
+        "Mingyu Yang",
+        "Wei Wang"
       ],
-      "summary": "Skill evolution offers a promising way to improve large language model agents without updating their parameters, but its use in formal theorem proving remains underexplored. Existing methods mainly target natural-language reasoning, improving skills by analyzing successful and failed trajectories and incrementally revising solving strategies. Although the Lean verifier provides reliable execution feedback, when all sampled trajectories fail, existing skill evolution methods lack successful trajectories from which to infer effective update directions. Furthermore, these methods also focus mainly on the root instruction file, thus underexploring the evolution of reference knowledge including mathematical concepts and proving techniques. To address these limitations, we propose a mutation-enhanced skill self-evolution framework for building skill-augmented Lean provers. The framework jointly evolves a high-level solving policy and its reference knowledge through progressive and mutation-based updates. Progressive evolution derives local improvements from successful and failed trajectories, while mutation is triggered when no complete proof can be generated, sampling mathematical concepts to produce and select new skill candidates under verifier feedback. We evaluate our method on MiniF2F, PutnamBench, the 2025 International Mathematical Olympiad (IMO 2025), and the 2026 USA Mathematical Olympiad (USAMO 2026). Under the same backbone model, trajectorysampling budget, and test-time compute, our method achieves proof success rates of 100.0%, 90.6%, 4/6, and 4/6, respectively, with GPT-5.5, outperforming the baseline methods. Further analysis shows that concept-guided mutation outperforms random-text-guided mutation by 6.9 and 8.2 percentage points on MiniF2F and PutnamBench, respectively, while solving one additional problem on both IMO 2025 and USAMO 2026.",
-      "published": "2026-10-01T14:42:54Z",
-      "updated": "2026-10-30T16:57:20Z",
-      "pdf_url": "https://arxiv.org/pdf/2610.01799v3"
+      "summary": "Semantic filtering selects records that satisfy a natural-language predicate and is an important operation in data analytics based on large language models (LLMs). Executing an expensive model on every document incurs substantial inference cost. Existing approaches reduce this cost by accepting predictions from cheaper models and forwarding uncertain records to an oracle. Task Cascades further varies document portions and operations, and provides an accuracy-guaranteed extension. However, its threshold calibration follows a prescribed adjustment sequence after cascade assembly, rather than minimizing cost over alternative combinations of stage thresholds. Motivated by this, we propose CascadeFilter, a three-stage semantic filtering method that jointly searches the thresholds for a small language model operating on extracted evidence and full documents, with unresolved records forwarded to the oracle. For a fixed cascade, we formulate threshold selection as minimizing token-aware cost subject to an oracle-relative error constraint, and select the least-cost certified configuration in a pre-specified grid. A finite-population calibration procedure bounds oracle-relative error after selection, using fixed-sequence tests on threshold tracks to allocate the multiple-testing budget. We further combine lexical and dense retrieval, reranking, and neighborhood-supported confidence to improve evidence extraction and routing. These components enhance the cascade while leaving its certification interface unchanged. Across six datasets and 13 evaluation settings, the reported results have the highest benchmark accuracy and macro-averaged F1 score in 12 settings each. These comparisons describe the reported operating points; the accuracy guarantee concerns agreement with the oracle.",
+      "published": "2026-11-05T17:45:57Z",
+      "updated": "2026-11-05T17:45:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08367v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.16562v2",
-      "title": "MIRAGE: Auditing Anti-Muslim Bias in Frontier LLMs Across Reasoning, Agentic, and Time-Coupled Conditions",
+      "id": "http://arxiv.org/abs/2611.08366v1",
+      "title": "Information Elicitation by Ordinal Agreement",
       "authors": [
-        "Noor Islam S. Mohammad",
-        "Tamim Sheikh"
+        "Yiling Chen",
+        "Shi Feng",
+        "Grant Schoenebeck",
+        "Fang-Yi Yu"
       ],
-      "summary": "Five years after the discovery of persistent anti-Muslim bias in large language models, most evaluations remain confined to single-turn prompt completion, a setting that no longer reflects how frontier LLMs are deployed. We introduce \\textbf{MIRAGE} (Muslim-Identity Reasoning and Agentic Generation Evaluation), a benchmark of 1{,}200 prompts spanning three deployment-realistic conditions: direct completion, chain-of-thought reasoning, and simulated agentic decision-making across content moderation, lending triage, refugee claim summarization, and hiring screens. Across six frontier models, we find that (i) chain-of-thought reasoning \\emph{amplifies} rather than suppresses Muslim-violence associations by 12--34\\% relative to direct completion, (ii) agentic decisions exhibit a 9--22 percentage-point asymmetry between Muslim and matched non-Muslim cases on identical evidence, and (iii) bias is sharply time-coupled to retrieved news context, increasing 18--27\\% under recent-conflict retrieval. Existing prompt-based mitigations transfer poorly across our three conditions, suppressing direct-completion bias while leaving agentic asymmetry largely intact. We release MIRAGE and an open evaluation harness to support targeted mitigation research.",
-      "published": "2026-06-15T11:04:42Z",
-      "updated": "2026-10-30T16:56:29Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.16562v2"
+      "summary": "Ordinal information is central to tasks ranging from conference peer review to Reinforcement Learning from Human Feedback for large language models. In many such settings, there is no objective ground truth against which reports can be directly verified, making incentive-compatible elicitation challenging. Peer-prediction mechanisms have been designed to achieve truthful elicitation despite the lack of ground-truth verification. However, existing peer-prediction methods do not provide incentives for agents to truthfully compress rich private information (e.g. reviews) into coarser ordinal reports (e.g. rankings) requested by the mechanisms. We propose a simple ordinal peer-prediction mechanism that rewards agents based on pairwise agreement, measured by Kendall tau. Under a broad class of Bayesian Stochastically Order Consistent models---which includes classical models such as Mallows and Thurstone---we prove that truthful reporting is stochastically dominant, and strongly truthful under index-equivariant strategies. This provides robust incentives even for agents with non-linear utility functions, such as risk aversion. Our mechanism further accommodates heterogeneous agents, top-K reports, and subset assignments, where each agent is scored against one randomly drawn peer. Experiments on synthetic Mallows and Thurstone data, together with a real-data stress test on the SUSHI preference dataset, show right-shifted truthful-payment distributions and the highest normalized sensitivity among tested baselines.",
+      "published": "2026-11-05T17:43:56Z",
+      "updated": "2026-11-05T17:43:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.08366v1"
     }
   ]
 }
