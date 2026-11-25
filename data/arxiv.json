@@ -1,186 +1,179 @@
 {
-  "generated_at_utc": "2026-11-06T05:14:50Z",
+  "generated_at_utc": "2026-11-25T07:05:37Z",
   "query": "(all:\"large language model\" OR all:\"generative ai\")",
   "max_results": 12,
   "count": 12,
   "papers": [
     {
-      "id": "http://arxiv.org/abs/2611.08486v1",
-      "title": "Do You Miss the Nights We Spent Crafting Figures? Rethinking Teaser and Framework Figures in the Age of Generative AI",
+      "id": "http://arxiv.org/abs/2611.33119v1",
+      "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
       "authors": [
-        "Xiaoqi Zhao",
-        "Youwei Pang",
-        "Kailai Zhou"
+        "Scott Piersall",
+        "Yang Gao",
+        "Shenyang Liu",
+        "Liqiang Wang"
       ],
-      "summary": "Scientific figures give research ideas a visual form through choices of abstraction, composition, and emphasis. Generative AI offers new ways to realize these choices, raising questions about explanatory clarity and purposeful visual expression. We examine these questions through a visual retrospective of 371 motivation and framework figures from 200 papers. The corpus comprises a quota-based main sample of 160 papers spanning four temporal periods and a separate purposive style-contrast sample of 40 papers. A single multimodal judge evaluates six dimensions of communication and design, with three repeated judgments per figure. We attempt source-constrained revisions of all 371 figures, of which 369 pass the recorded fidelity checks. Original-figure ratings show no uniform decline across periods. Revisions increase mean clarity ratings by 0.428 points and decrease aesthetic coherence ratings by 0.111 points on a five-point scale. Gains in the six-dimension average are larger for main-sample motivation figures than for frameworks. Case analyses show that added explanation can clarify comparisons while leaving typographic hierarchy and visual economy unresolved. These model-based findings support researcher-led design, with AI assisting exploration and authors retaining responsibility for explanatory purpose, composition, and scientific relationships. The accompanying atlas and evaluation records are available at https://ntu-ai4x.github.io/Rethinking_Figures/index_en.html.",
-      "published": "2026-11-05T18:59:33Z",
-      "updated": "2026-11-05T18:59:33Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08486v1"
+      "summary": "Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \\textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural-language skill specifications for MPI C code generation. \\textsc{MetaFORGE} combines correctness testing, compiler diagnostics, static-analysis findings, runtime measurements, and rank-level load-imbalance profiles into a scalar reward that drives textual-gradient refinement, while an external memory distills and retrieves reward-supported optimization knowledge across runs. Across six MPI tasks and three workload sizes, \\textsc{MetaFORGE} improves static-analysis quality, runtime, and load balance relative to zero-shot generation and generally exceeds the evaluated \\textsc{TextGrad} iterative baseline. A model-matched refinement ablation shows that the MetaFORGE advantage persists when its refinement model is reduced to \\texttt{gpt-4o}. An expanded retrieval ablation across all 18 task--workload configurations shows consistent runtime benefit and broad static-analysis and load-balance benefit from retrieved context. Leakage-controlled held-out and zero-update experiments further provide evidence that optimization knowledge persists in both the transferred skill and external memory under the evaluated protocol.",
+      "published": "2026-11-24T18:49:19Z",
+      "updated": "2026-11-24T18:49:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33119v1"
     },
     {
-      "id": "http://arxiv.org/abs/2602.15219v3",
-      "title": "Multi-Agent Home Energy Management Assistant",
+      "id": "http://arxiv.org/abs/2611.33111v1",
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
       "authors": [
-        "Wooyoung Jung"
+        "Yuxing Liu",
+        "Wei Zuo",
+        "Walid Krichene",
+        "Tong Zhang",
+        "Li Zhang"
       ],
-      "summary": "Existing home energy management systems conceptualize occupants as passive recipients of energy information and control, which limits their ability to effectively support informed decision-making and sustained engagement. This paper presents Home Energy Management Assistant (HEMA), the first open-source, multi-agent system enabling sustained human-AI collaboration - multi-turn conversational interactions with preserved context - across diverse home energy management (HEM) tasks - from energy analysis and educational support to smart device control. HEMA combines large language model (LLM) reasoning capabilities with 36 purpose-built domain-specific tools through a three-layer architecture: a web-based conversational interface, a backend API server, and a multi-agent system. The system features three specialized agents - Analysis (energy consumption patterns and cost optimization), Knowledge (educational queries and rebate information), and Control (smart device management and scheduling) - coordinated through a self-consistency classifier that routes user queries using chain-of-thought reasoning. This architecture enables various energy analyses, adaptive explanations, and streamlined device control. HEMA also includes a comprehensive evaluation framework using an LLM-as-simulated-user methodology with 23 objective metrics across task performance, factual accuracy, interaction quality, and system efficiency, allowing systematic testing across diverse scenarios and user personas without requiring extensive human subject testing. Through demonstrations using real-world household energy consumption data, we show how HEMA supports informed decision-making and active engagement in HEM, highlighting its potential as a user-friendly, adaptable tool for residential deployment and as a research platform for HEM innovation.",
-      "published": "2026-02-16T21:55:42Z",
-      "updated": "2026-11-05T18:57:51Z",
-      "pdf_url": "https://arxiv.org/pdf/2602.15219v3"
+      "summary": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of draft tokens in target verification, which is directly related to the gap $\\|p-q\\|_1$ between the target distribution $p$ and the draft distribution $q$. In this paper, we study draft calibration of speculative decoding to improve the speedup of speculative decoding, where we employ post-hoc methods to calibrate the draft distribution to mitigate the distribution gap. We observe that though current community open-source draft models may learn the top candidate token correctly, they are generally underconfident compared to the target model, suggesting a consistent distribution mismatch. To mitigate the effect of this mismatch on the acceptance rate of the draft models, we try various post-hoc calibration methods, including standard temperature scaling and token-wise calibration. Our results suggest that a standard temperature scaling applied to the draft distribution improves the acceptance length by up to approximately 10\\% with almost no additional cost across different tasks. Throughput analysis further verifies that this improvement in serving efficiency. Analysis of more general calibration methods reveals further potential room for improvement.",
+      "published": "2026-11-24T18:41:59Z",
+      "updated": "2026-11-24T18:41:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33111v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08456v1",
-      "title": "Cognitive Tours: Making Understanding a Deliverable in AI-Assisted Development",
+      "id": "http://arxiv.org/abs/2609.38005v4",
+      "title": "Diagnosing and Improving Probabilistic Reasoning in Large Language Models",
       "authors": [
-        "Margaret-Anne Storey"
+        "Huaman Sun",
+        "Dingcheng Wang",
+        "Jason Hartline",
+        "Jessica Hullman"
       ],
-      "summary": "Generative AI and agentic coding are accelerating software development, leading to concerns about technical debt. But two less visible forms of debt, cognitive debt and intent debt, are emerging as key risks to software health. Cognitive debt is the absence or erosion of a team's shared understanding where no one can confidently explain how a system works or predict the impact of a change. Intent debt is the lack of clearly articulated goals, constraints, and rationale that explain what the system is for and guide how it should evolve. This paper presents Cognitive Tours, a tool designed to mitigate and repair cognitive and intent debt. Cognitive Tours is a web-based prototype for creating and following curated paths connecting user needs, design decisions, code, tests, and open questions. AI-assisted skills help audit existing waypoints and tours for possible problems or staleness and suggest candidates for new ones; humans decide what matters, verify relationships, and construct the narrative. This division of work deliberately preserves productive friction: the sensemaking involved in selecting, explaining, and revising a tour, which is intended to foster and share understanding. Our demonstration uses a tour of Cognitive Tours itself to introduce the tool and illustrate its design decisions and interaction mechanisms. A proposed evaluation agenda concludes the paper. A demo is available at https://cognitive-tours-demo.vercel.app/",
-      "published": "2026-11-05T18:48:06Z",
-      "updated": "2026-11-05T18:48:06Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08456v1"
+      "summary": "Large language models (LLMs) are increasingly proposed as decision assistants who must reason probabilistically from available evidence under explicit decision costs. We propose a decision-theoretic framework that decomposes LLMs' decision loss into two components: forming accurate beliefs from provided evidence and translating those beliefs into actions that optimize a provided utility function. Using a synthetic benchmark with known ground truth, we apply the decomposition to characterize probabilistic reasoning in frontier and open-sourced models. We further evaluate whether RL interventions targeting beliefs, decisions, or both improve these components across three domains, whether improvements transfer across components and elicitation formats, and whether decision performance can improve without improvement in belief formation. We find that targeting one component of probabilistic reasoning improves the target without necessarily transferring to others, and that jointly targeting belief formation and decision-making improves both but hinges on matched formats between training and evaluation.",
+      "published": "2026-09-29T16:55:50Z",
+      "updated": "2026-11-24T18:37:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2609.38005v4"
     },
     {
-      "id": "http://arxiv.org/abs/2609.30137v2",
-      "title": "Screen Before You Serve: Simulation for Production Customer Experience AI Agents at 140M Scale",
+      "id": "http://arxiv.org/abs/2611.33078v1",
+      "title": "FOL-Proof: Verifying LLM Text-to-Logic Translations via Deterministic Semantics",
       "authors": [
-        "Edesio Alcobaça",
-        "Kevin Rossell",
-        "Aman Gupta",
-        "Shao Tang",
-        "Jiwoo Hong",
-        "Pabel Carrillo-Mendoza",
-        "Wanderson Conceição Ferreira",
-        "Alvaro Tedeschi",
-        "Zayd Simjee",
-        "Shreya Rajpal",
-        "Bruno Finardi Hime",
-        "Christian Sousa",
-        "Luis Moneda",
-        "Herbert Fei",
-        "Daniel Silva",
-        "Rohan Ramanath"
+        "Yisrael Clark",
+        "Guy Katz"
       ],
-      "summary": "Customer experience (CX) agents use tools and large language models to address customer requests and guide conversational interactions with an organization's products. Improving these agents, especially in regulated industries, is difficult: they must detect intent, follow complex operational policies and use tools reliably. Manual end-to-end testing offers limited coverage, while live experiments expose customers to failures that can erode trust. We present a hypothesis-driven simulation workflow for screening candidate CX agents before deployment. Synthetic customers react to agent responses and simulated tool outputs enable multi-step agentic workflows without invoking production backends. We use the Snowglobe simulator on Nubank's Card Delivery agent and its expanded successor, Card Management - Nubank's highest-volume chat-support agent in Brazil. Across 4 deployed versions, simulated and production version-level binary evaluator scores show high correlation. Simulation-guided iteration increased transactional net promoter score (tNPS) by 36.69 points in a live A/B test. We also screened open-weight configurations in over 16,000 simulated conversations. In a subsequent live A/B test, the selected model increased self-service rate (SSR) by 8.82 percentage points to the highest level observed at Nubank, with no statistically significant change in tNPS. Simulation made broad exploration of models, reasoning settings, and prompts feasible without customer exposure, enabling production improvements that would have been impractical to pursue through live experimentation alone.",
-      "published": "2026-09-24T17:07:38Z",
-      "updated": "2026-11-05T18:38:42Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.30137v2"
+      "summary": "Large Language Models (LLMs) are increasingly used to translate natural-language statements into first-order logic (FOL) to improve reasoning. However, LLMs are prone to errors, and so a semantically unfaithful FOL formula could corrupt downstream reasoning. We present FOL-Proof, a semantic firewall pipeline that validates LLM-generated FOL translations against independently derived linguistic interpretations. FOL-Proof operates by deterministically obtaining a pool of candidate translations via semantic analysis tools, such as the English Resource Grammar and Minimal Recursion Semantics; then applying an SMT solver to check each derived reading for logical equivalence to the LLM-generated formula. If the translation is faithful it is accepted; otherwise, it is rejected, or optionally repaired via repeated invocations to the LLM. The procedure is conservative: incomplete search, unsupported constructions, or inconclusive checks yield abstention rather than false rejection. We evaluated FOL-Proof on established benchmarks (ProofWriter, RuleTaker and PrOntoQA), and also on a new adversarial benchmark (LongFaithCheck). Our experiments show that FOL-Proof attains near perfect selective accuracy, while direct LLM judges and round-trip baselines show substantially worse performance.",
+      "published": "2026-11-24T18:13:28Z",
+      "updated": "2026-11-24T18:13:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33078v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08428v1",
-      "title": "The Power of Meta Access in the Software of the Future --- Demonstrated on LLM Chat UIs and Chat AI",
+      "id": "http://arxiv.org/abs/2611.33065v1",
+      "title": "Auditing the Judge: Human-Derived Bias Discovery, Quantification, and Mitigation in LLM Judges",
       "authors": [
-        "Julian Kunkel",
-        "Ali Doosthosseini"
+        "Hamin Koo",
+        "Chanjoo Jung",
+        "Fangzhao Wu",
+        "Jaehyung Kim"
       ],
-      "summary": "Chat remains the default surface for many large language model (LLM) tasks, even as agentic tools such as OpenCode excel at coding and automation. Yet the model sees the current dialogue but not the workspace around it. We explore meta access---giving the assistant a structured, permissioned view of the interface itself and propose a ladder of levels: feature tutoring; metadata, settings, and preference access; retrieval over summaries and messages, confirmed mutation, and full orchestration. Meta access can turn a chat client from many screens into one entry point for finding, navigating, organising, and operating it, while raising risks around grounding, privacy, prompt injection, and trust. General-purpose agentic harnesses are runtimes; because they can change their own settings, meta access becomes reflexive and needs a separate control-plane boundary. We ground this in the Meta Chat prototype of the Chat AI client. It builds bounded context from, e.g., summaries, settings, and relevant messages; links references to conversations, topics, and personas; supports confirmed, reversible changes; offers a browsable tutorial library; and recommends personas as user-started conversations. By exposing application state in structured form, meta access can extend screen readers from widget descriptions to semantic workspace operations. Meta access thus turns chat from a window onto one conversation into a control layer for the whole workspace, extending chat toward agentic capability without surrendering user control. As assistants become embedded in IDEs, dashboards, office suites, and operating systems, AI-era interfaces should expose a structured, permissioned model of their state and capabilities, ideally by opening their existing metamodels through a debugger-like interface.",
-      "published": "2026-11-05T18:22:24Z",
-      "updated": "2026-11-05T18:22:24Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08428v1"
+      "summary": "While Large Language Models (LLMs) are increasingly deployed as automated evaluators in evaluation and training pipelines, their judgements are often affected by systematic biases that conflict with human preferences. Although prior work has identified various biases and proposed methods for detecting and mitigating them, less attention has been paid to using human preferences to inform bias identification and mitigation. Moreover, these approaches rely heavily on pre-discovered bias lists, overlook bias strength, and depend on costly interventions. In this work, we propose HUB-J, an integrated framework based on human-derived bias factors that detects, quantifies, and mitigates biases in LLM-as-a-Judge systems. Our approach leverages human-LLM judgement disagreement cases to automatically discover interpretable bias factors, and utilizes agreement cases to quantify bias strength through controlled input modifications and resulting shifts in model decisions. Finally, building on these quantified biases, we introduce a lightweight, training-free regression-based mitigation strategy that estimates the influence of each bias factor on model judgments and corrects bias-influenced decisions by removing its estimated effect. Empirical results show that HUB-J uncovers both known and novel bias factors, reveals meaningful differences in model susceptibility, and consistently reduces bias-driven decision flips while generalizing across models.",
+      "published": "2026-11-24T18:05:47Z",
+      "updated": "2026-11-24T18:05:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33065v1"
     },
     {
-      "id": "http://arxiv.org/abs/2606.13668v2",
-      "title": "Influcoder: Distilling Decoders' Gradient Influence Rankings into an Encoder for Data Attribution",
+      "id": "http://arxiv.org/abs/2611.33050v1",
+      "title": "Worth the Wait? How Response Time and Streaming Shape Judgments of Generative AI Answers and Chatbot Engagement",
       "authors": [
-        "Dimitri Kachler",
-        "Damien Sileo",
-        "Pascal Denis"
+        "Zihan Chen",
+        "Di Zhu",
+        "Lei Nico Zheng"
       ],
-      "summary": "With the growth of LLMs' (Large Language Models) capabilities, there has been an increasing push to curate high quality datasets by filtering samples in the training data. In general, Data Attribution (DA) methods aim to estimate how individual samples in a training dataset can precondition a model to generate certain outputs. As an example, one might be interested in which samples in the data could be the source of toxic behavior after training the LLM. Many methods quantify this conditioning through the paradigm of influence functions. While methods of this family are effective in its function, they lack the necessary processing speed and storage compactness to be practically implemented on large datasets. We propose a method, Influcoder, as a quick and cost-effective approach to influence-based Data Attribution at scale.",
-      "published": "2026-06-11T17:58:33Z",
-      "updated": "2026-11-05T18:19:40Z",
-      "pdf_url": "https://arxiv.org/pdf/2606.13668v2"
+      "summary": "Answers from generative AI chatbots built on large language models (LLMs) now arrive at very different speeds: reasoning models deliberate before replying, while response caches can return a stored answer at once. Blind preference votes, which rank these models, are read as judgments of their text, and if delivery matters, faster answers are expected to gain. Research on the labor illusion and on how text appears on screen suggests instead that an answer which unfolds as it is written is credited over the same answer shown at once. We test these accounts with three sources of variation in natural use. First, compar:IA, a French government chatbot arena, answered repeated prompts, by a random draw, either with a fresh answer streamed as it was written or with a stored earlier answer from the same model, shown at once. Within the same prompt, a replay lowered an answer's chance of winning a decisive blind vote by 25.8 percentage points. The same stored text won 57% of its decisive votes when streamed and 29% when replayed, and voters called it less complete, more superficial and more often incorrect when replayed. Second, provider congestion slowed streamed answers. In 324,029 conversations, slower answers earned no detectable net credit in the vote, but a slower first exchange made visitors less likely to ask a follow-up question. Third, in 4,378,514 WildChat replies from everyday ChatGPT use, replies slowed by congestion made users less likely to continue. Delivery moved blind votes, in the direction opposite to the one the arena's designers expected, while waiting cost follow-up questions that a comparison between two answers cannot register when both are slow. The results bear on how AI services cache and stream answers, how they budget latency, and how preference leaderboards evaluate models.",
+      "published": "2026-11-24T17:57:00Z",
+      "updated": "2026-11-24T17:57:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33050v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08412v1",
-      "title": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
+      "id": "http://arxiv.org/abs/2610.37651v2",
+      "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
       "authors": [
-        "Yuanchuan Guo",
-        "Jiashun Jin",
-        "Zheng Tracy Ke",
-        "Bingcheng Sui"
+        "Zack Yu",
+        "Nicholas Lee",
+        "Minjae Lee",
+        "Lakshya A Agrawal",
+        "Luca Manolache",
+        "Wonjun Kang",
+        "Matei Zaharia",
+        "Michael W. Mahoney",
+        "Kurt Keutzer",
+        "Sehoon Kim",
+        "Amir Gholami"
       ],
-      "summary": "The growing use of AI in mathematics raises a question: can we detect AI involvement in proofs, separately from AI assistance with writing? Historical arXiv papers, recent papers disclosing substantive AI use, and manuscripts released by OpenAI provide a rich empirical basis for studying this question. However, several challenges remain: lack of matched case-control pairs; potential incompleteness of disclosure; and lack of ready-to-use features designed to capture signals of AI involvement in proofs. To address these challenges, we construct five cohorts comprising 8,281 papers by combining existing manuscripts with those we produced using generative AI. These cohorts span different levels of AI involvement and include matched pairs of papers addressing the same research problems. We then introduce ProofTrace, a framework that represents each paper as a graph of immediate proof support (GIPS) and extracts interpretable features of mathematical organization. Our study yields three discoveries. First, principal-component projections of our features reveal a qualitative gradient of AI involvement, where AI-reworded papers remain close to human papers, the two AI-generated cohorts depart in broadly shared directions, and papers disclosing substantive AI use occupy intermediate positions which shifts toward AI-generated cohorts over time. Second, we identify recurring signatures of AI-generated proofs, such as fewer externally cited results, greater reliance on intermediate conclusions, and altered graph connectivity; many of these signatures persist under controls for research field, manuscript length, or graph size. Finally, in a separate detection experiment, ProofTrace distinguishes human-written papers from those disclosing substantive AI use. Its performance remains stable under AI rewording, whereas the performance of state-of-the-art text-based detectors declines sharply.",
-      "published": "2026-11-05T18:17:18Z",
-      "updated": "2026-11-05T18:17:18Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08412v1"
+      "summary": "Large Language Models (LLMs) are increasingly used in multi-turn agentic workloads that require sustained interaction with complex environments. Existing reflective prompt optimizers such as GEPA learn from failed rollouts, but agentic failures can also come from prompt weaknesses, harness limitations, stochastic execution, or noisy judges. We argue that such failures may not provide useful learning signal, and may even be harmful; and thus it is essential to curate which tasks are provided to the prompt optimizer for better performance. We introduce GEPA-Curator, a framework that augments the prompt optimizer to select which agent experiences should shape prompt optimization. In particular, GEPA-Curator consists of two components: task curation, which filters out tasks that are likely to provide noisy or unreliable learning signals, and prior success retrieval, which selectively retrieves past successful trajectories for a task and provides them as additional context to the prompt optimizer. We evaluate GEPA-Curator on GoBrowse, ALFWorld, AppWorld, and $τ$-bench, using both Gemini 3.1 Pro and Claude Opus 5 as optimizer models. GEPA-Curator matches or exceeds the mean performance of both baselines, with gains of up to 20.7% over GEPA and 21.2% over ACE.",
+      "published": "2026-10-27T17:58:11Z",
+      "updated": "2026-11-24T17:54:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2610.37651v2"
     },
     {
-      "id": "http://arxiv.org/abs/2603.24562v3",
-      "title": "Scaling Recurrence-aware Foundation Models for Clinical Records via Next-Visit Prediction",
+      "id": "http://arxiv.org/abs/2611.33036v1",
+      "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
       "authors": [
-        "Xiang Gao",
-        "Haresh Rengaraj Rajamohan",
-        "Weicheng Zhu",
-        "Shih-Lun Huang",
-        "Long Chen",
-        "Gabe Schulman",
-        "Huizhen Jin",
-        "Shengduo Li",
-        "Yixuan Wang",
-        "Huidi Yang",
-        "Kyunghyun Cho",
-        "Cem M. Deniz",
-        "Narges Razavian"
+        "Hao Wu",
+        "Sipeng Chen",
+        "Weikai Li",
+        "Tianyi Chen",
+        "Qiancheng Yang",
+        "Hang Zhou",
+        "Yizhou Sun",
+        "Wei Wang",
+        "Xiao Luo"
       ],
-      "summary": "While large-scale pretraining has revolutionized language modeling, its potential remains underexplored in healthcare with structured electronic health records (EHRs). We present RAVEN, a novel generative pretraining strategy for sequential EHR data based on Recurrence-Aware next-Visit EveNt prediction. Leveraging a dataset of over one million unique individuals, our model learns to autoregressively generate tokenized clinical events for the next visit conditioned on patient history. We introduce regularization on predicting repeated events and highlight a key pitfall in EHR-based foundation model evaluations: repeated event tokens can inflate performance metrics when new onsets are not distinguished from subsequent occurrences. Furthermore, we empirically investigate the scaling behaviors in a data-constrained, compute-saturated regime, showing that simply increasing model size is suboptimal without commensurate increases in data volume. We evaluate our model via zero-shot prediction for forecasting the incidence of a diverse set of diseases, where it rivals fully fine-tuned representation-based Transformer models and outperforms both standard simulation-based next-token approaches and a prompted medical large language model baseline. Finally, without additional parameter updates, we show that RAVEN can generalize to an external patient cohort under lossy clinical code mappings and feature coverage gaps.",
-      "published": "2026-03-25T17:42:47Z",
-      "updated": "2026-11-05T18:10:50Z",
-      "pdf_url": "https://arxiv.org/pdf/2603.24562v3"
+      "summary": "Large language models (LLMs) provide a flexible interface for recommendation systems. However, their issued rankings require reliable instance-level uncertainty monitoring. In this scenario, comparing uncertainty quantification (UQ) methods becomes challenging because LLM rankers lack a standard item-classification head. Their scores may depend on option labels, prompts, generation procedures, and the available user and item evidence. Existing methods derive uncertainty from different sources and apply it at different stages of the recommendation process. Some methods evaluate an issued ranking, whereas others use uncertainty to change the ranking itself, making direct comparison difficult. Here we introduce a fixed-ranking benchmark which evaluates eight heterogeneous UQ signals as record-level monitors under a shared output contract. We evaluate these signals across four recommendation datasets and two LLM backbones under a shared fixed-ranking protocol. From the results, we draw three main observations. First, UQ method ordering changes across backbones even on the same reference instances. Second, ranking-aligned Top10Mass provides the strongest scalar Error@10 detection in several evaluation conditions, reflecting effective cutoff-aligned monitoring, while its advantage narrows for popularity-tail targets. Third, scalar UQ signals are weak at identifying which control has the larger clipped NDCG@10 difference, whereas source-specific signals, including Perturbation Rank Instability and simple listwise distances, provide stronger paired-control agreement, reflecting their sensitivity to the two controlled evidence sources. These findings motivate us to evaluate ranking-failure detection, robustness across recommendation conditions, and responses to controlled evidence changes as distinct properties of UQ.",
+      "published": "2026-11-24T17:48:54Z",
+      "updated": "2026-11-24T17:48:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33036v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08383v1",
-      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
+      "id": "http://arxiv.org/abs/2611.33031v1",
+      "title": "Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming?",
       "authors": [
-        "Ali Mohammadi Ruzbahani",
-        "Abbas Yazdinejad",
-        "Hadis Karimipour"
+        "Steffen Urban"
       ],
-      "summary": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity. We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server. In FedReason, the LLM is called every ten rounds. It analyses the weights by running code in a restricted server-side sandbox, sees only the printed results, may score a few candidates on a 500-image proxy set, and submits a short Python aggregation program. The server applies the program until the next call and falls back to FedAvg whenever its output is invalid. Full weight tensors never leave the server. We evaluated FedReason with Claude Opus 5.5 on CIFAR-10 and CIFAR-100 with ResNet-18 under Dirichlet label skew, width-heterogeneous sub-models and Byzantine clients, in 168 runs against 14 baselines. Across 12 paired label-skew runs it beat FedAvg by 1.26 percentage points on average (10 wins), and a control that spends the same per-round proxy budget on choosing among standard rules by 1.08 points. It was the strongest server-side rule on CIFAR-100 but did not beat SCAFFOLD, which changes client training. With three of ten clients malicious, it excluded all sign-flipping clients from the first round and stayed about one point below FLTrust without training a root model. Without proxy feedback, accuracy fell from 73.8% to 38.8% in one seed. A 60-round run cost 0.79 USD in API fees on average.",
-      "published": "2026-11-05T18:00:58Z",
-      "updated": "2026-11-05T18:00:58Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08383v1"
+      "summary": "We give four large language models (LLMs) of the Claude family the complete weights of a 20k-parameter CIFAR-10 CNN as text and ask them to produce a 4-bit network without tools, data or the ability to run inference. Standard round-to-nearest (RTN) quantization to 4 bit lowers the test accuracy from 81.4% to 60.4%. We design four evaluation protocols that differ in the input and task description given to the LLMs and analyze their responses. In the first two protocols the LLMs are given the float and the 4-bit RTN network and are told that the accuracy has dropped significantly. In the last two they receive only the float network and the task to quantize it, which tests whether they apply an optimization on their own or fall back to plain RTN. Our analysis shows that a frontier LLM can recover most of the lost accuracy. Given one answer per layer, Opus 5.5 raises the accuracy of the 4-bit network to 77.95% by balancing the rounding errors within each 3x3 kernel, reasoning over the integer weights without tools. This is 3.5 pp below the float network and 2.8 pp below AdaRound, which learns the rounding from calibration data. Given only the float network, the LLMs name error-cancelling corrections but do not apply them and fall back to plain RTN, at most with mildly clipped scales, which still lifts Fable 5.2's quantized network to 70.0%. We analyze in detail what the LLMs did and why it works. Code and prompts can be found at https://github.com/urbste/weight-space-programming-ptq",
+      "published": "2026-11-24T17:43:09Z",
+      "updated": "2026-11-24T17:43:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33031v1"
     },
     {
-      "id": "http://arxiv.org/abs/2609.37820v2",
-      "title": "Information Games: Strategic Crowding and Firm Repositioning in Language-Model Space",
+      "id": "http://arxiv.org/abs/2611.33030v1",
+      "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
       "authors": [
-        "Marcus Gawronsky",
-        "Chun-Sung Huang"
+        "Shivank Rajput",
+        "Himanshu Singh",
+        "A. V. Subramanyam"
       ],
-      "summary": "When firms respond to new market opportunities, their capacity choices alter the future discounted free cash flows available to both competitors and investors. In competitive markets, these investment decisions publicized in news articles and analyst reports, measuring the changes in capital structure, product mix, firm leadership, risk exposure and operating procedure made by the firm. Modern search engines rely on Large Language Models to measure the relevancy of source documents to given search query. These measurements let researchers represent these news articles as clouds of dense vectors whose information geometry reflects the dissimilarity of firms over time. Building on Xu et al. (2022), we develop a model of costly competitive adjustment in which firms allocate capacity in which firms make firm capacity adjustment towards free cash flow shocks. Using a novel sandwich estimator, we analyse the sign and magnitude of this predicted adjustment using multi-agent simulation, and validate our findings on a sample of news and analyst reports from Nasdaq-listed companies between 2018-2022.",
-      "published": "2026-09-29T15:30:02Z",
-      "updated": "2026-11-05T17:56:23Z",
-      "pdf_url": "https://arxiv.org/pdf/2609.37820v2"
+      "summary": "Large language models (LLMs) remain vulnerable to jailbreak attacks, where adversaries append optimized suffixes to otherwise benign looking prompts to bypass safety alignment. Existing optimization-based GCG-style attacks can be effective, but they are expensive at inference time, and suffer from poor transfer. We present, SALSA, a generative framework that learns a distribution over jailbreak suffixes from optimization-derived attack corpora. Once trained, the model supports efficient sampling-based attacks. On open-source targets, it achieves attack success rates comparable to state-of-the-art optimization baselines, while reducing generation time from 3.46s to 0.04s per prompt. In black-box transfer, it remains highly effective against proprietary systems, including 99% ASR on GPT-3.5-Turbo, and reaches 45% ASR on the substantially harder GPT-4o, more than doubling the strongest baseline at an equal sampling budget. We further offer an intuition for why generative sampling can preserve high attack success, when the learned suffix distribution is close to the distribution of optimization outputs. Overall, our results show that learning adversarial suffix distributions yields a scalable, and practically efficient foundation for continuous LLM vulnerability discovery.",
+      "published": "2026-11-24T17:43:09Z",
+      "updated": "2026-11-24T17:43:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33030v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08367v1",
-      "title": "CascadeFilter: Cost-Efficient Semantic Filtering with Joint Threshold Selection",
+      "id": "http://arxiv.org/abs/2611.33015v1",
+      "title": "PORTA: Systematic Discovery of Vulnerabilities in Identity Brokers",
       "authors": [
-        "Yanji He",
-        "Tao Zhong",
-        "Hongyang Chen",
-        "Xiaobo Zhang",
-        "Mingyu Yang",
-        "Wei Wang"
+        "Zixu Zhou",
+        "Xiangyu Guo",
+        "Ilya Grishchenko",
+        "David Lie"
       ],
-      "summary": "Semantic filtering selects records that satisfy a natural-language predicate and is an important operation in data analytics based on large language models (LLMs). Executing an expensive model on every document incurs substantial inference cost. Existing approaches reduce this cost by accepting predictions from cheaper models and forwarding uncertain records to an oracle. Task Cascades further varies document portions and operations, and provides an accuracy-guaranteed extension. However, its threshold calibration follows a prescribed adjustment sequence after cascade assembly, rather than minimizing cost over alternative combinations of stage thresholds. Motivated by this, we propose CascadeFilter, a three-stage semantic filtering method that jointly searches the thresholds for a small language model operating on extracted evidence and full documents, with unresolved records forwarded to the oracle. For a fixed cascade, we formulate threshold selection as minimizing token-aware cost subject to an oracle-relative error constraint, and select the least-cost certified configuration in a pre-specified grid. A finite-population calibration procedure bounds oracle-relative error after selection, using fixed-sequence tests on threshold tracks to allocate the multiple-testing budget. We further combine lexical and dense retrieval, reranking, and neighborhood-supported confidence to improve evidence extraction and routing. These components enhance the cascade while leaving its certification interface unchanged. Across six datasets and 13 evaluation settings, the reported results have the highest benchmark accuracy and macro-averaged F1 score in 12 settings each. These comparisons describe the reported operating points; the accuracy guarantee concerns agreement with the oracle.",
-      "published": "2026-11-05T17:45:57Z",
-      "updated": "2026-11-05T17:45:57Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08367v1"
+      "summary": "Identity brokers such as Keycloak, Vault, and Dex translate authentication proofs from an upstream identity provider into sessions for downstream services. Due to their central role in authentication and trust mediation, a single vulnerability in a broker compromises every downstream service behind it. In fact, recent incidents have demonstrated that even widely adopted platforms are not immune to such issues, highlighting the critical need for systematic analysis. To build such an analysis, this work first defines invariants for broker operation. These invariants are not completely covered by existing authentication specifications, primarily because brokers are unique in their duality, i.e., acting simultaneously as a relying party and an identity provider. The invariants capture the properties that identity brokers must uphold throughout their workflows, as all 60 previous CVEs we consider violate at least one invariant. Within these workflows, we further define high-level action categories. Equipped with this information, our automated tool PORTA leverages a large language model (LLM) to generate API invocation sequences corresponding to the high-level action categories, and oracle assertions aligned with the specified invariants. PORTA identifies 33 previously unreported security vulnerabilities in seven popular open-source brokers. We study these novel vulnerabilities and trace them to eight recurring patterns. We responsibly disclosed all discovered vulnerabilities: 29 have been confirmed, 14 patched, and 19 assigned CVE numbers, with 10 CVEs rated as critical.",
+      "published": "2026-11-24T17:33:24Z",
+      "updated": "2026-11-24T17:33:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33015v1"
     },
     {
-      "id": "http://arxiv.org/abs/2611.08366v1",
-      "title": "Information Elicitation by Ordinal Agreement",
+      "id": "http://arxiv.org/abs/2611.33012v1",
+      "title": "Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study",
       "authors": [
-        "Yiling Chen",
-        "Shi Feng",
-        "Grant Schoenebeck",
-        "Fang-Yi Yu"
+        "Neda Ghafouri"
       ],
-      "summary": "Ordinal information is central to tasks ranging from conference peer review to Reinforcement Learning from Human Feedback for large language models. In many such settings, there is no objective ground truth against which reports can be directly verified, making incentive-compatible elicitation challenging. Peer-prediction mechanisms have been designed to achieve truthful elicitation despite the lack of ground-truth verification. However, existing peer-prediction methods do not provide incentives for agents to truthfully compress rich private information (e.g. reviews) into coarser ordinal reports (e.g. rankings) requested by the mechanisms. We propose a simple ordinal peer-prediction mechanism that rewards agents based on pairwise agreement, measured by Kendall tau. Under a broad class of Bayesian Stochastically Order Consistent models---which includes classical models such as Mallows and Thurstone---we prove that truthful reporting is stochastically dominant, and strongly truthful under index-equivariant strategies. This provides robust incentives even for agents with non-linear utility functions, such as risk aversion. Our mechanism further accommodates heterogeneous agents, top-K reports, and subset assignments, where each agent is scored against one randomly drawn peer. Experiments on synthetic Mallows and Thurstone data, together with a real-data stress test on the SUSHI preference dataset, show right-shifted truthful-payment distributions and the highest normalized sensitivity among tested baselines.",
-      "published": "2026-11-05T17:43:56Z",
-      "updated": "2026-11-05T17:43:56Z",
-      "pdf_url": "https://arxiv.org/pdf/2611.08366v1"
+      "summary": "As clinical AI agents begin to interact with electronic health records (EHRs), large language models (LLMs) are increasingly used to evaluate their actions. But how reliably can these judges recognize clinically dangerous mistakes, especially when an agent appears to have completed its task successfully? We investigate this question using MedAgentBench by introducing controlled clinical errors into verified agent trajectories. The experiments include 416 faulty trajectories, eight error categories, and six open-weight LLM judges. By comparing each faulty trajectory with its correct counterpart, we measure whether judges genuinely recognize errors rather than simply flagging more actions as unsafe. The findings show that access to clinical evidence significantly improves judge reliability. When shown only the final answer, judges cannot distinguish errors that leave it unchanged, while flagging 56% of correct trajectories. With full trajectory information, the ability to distinguish unsafe actions from correct ones reaches a score of 0.75, and providing actual EHR responses improves discrimination by 0.39. Surprisingly, including the agent's reasoning does not improve overall performance and reduces detection of incorrectly reported clinical values by 0.18, which remain the hardest errors to detect. MedGemma performed worse than the general-purpose model and was the only judge to miss potentially dangerous medication overdoses. We also find that the benchmark's original grader accepts all 38 trajectories with an intentionally skipped laboratory check, while combining LLM judges with a rule-based checker informed by the full EHR record detects 97% of injected faults.",
+      "published": "2026-11-24T17:32:40Z",
+      "updated": "2026-11-24T17:32:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2611.33012v1"
     }
   ]
 }
